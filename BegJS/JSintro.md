@@ -1,5 +1,7 @@
 # Basic Elements of JavaScript
 
+## Lecture
+
 This section shows you some of the operators and syntax of Javascript and their uses.
 
 ## Data Types
@@ -119,24 +121,49 @@ a;                 	-> null
 a + a;              -> 0			// using null in a calculation does NOT give an error
 ```
 
-## Functions
 
-In JavaScript, functions are a way to define and store a set operation once so that we can perform it later without having to retype all of the attached logic:
 
+We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be the same variables, data types, if statements and functions.
+## Challenges
+
+#### Variables Challenge
+
+Here are a few exercises for you to practice using variables:
+
+- Set a variable called my_favorite_number equal to your favorite number.
+- What is your favorite number divided by 2?
+
+- Set another variable called someones_favorite equal to 13
+- Change the value of someones_favorite to 7
+- Subtract your favorite number from someones_favorite
+- Change the value of my favorite number to be 26 times its current value
+
+
+
+#### Strings Challenge
+
+Javascript comes with some built in ways to work with Strings. For this exercise, try out some of the string methods for yourself.
+
+##### Try locating a word in a string
+
+Locate
 ```
-function addOne(a) { return a+1; }
-addOne(1);          -> 2
-
-function add(a, b) { return a+b; }
-add(1, 2);          -> 3
-add("1", "2");		-> 12
-add(1, add(2,3));	-> 6
-
-function isAdult(age) { return age >= 18; }
-isAdult(17);		-> false
-isAdult(21);		-> true
-
-function greet() { return "Hello"; }						// defining a function that takes no parameters
-greet;				-> function greet() { return "Hello"; } // return the function itself
-greet();			-> "Hello"							  	// return the result of running the function
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
 ```
+What do you get back when you run this indexOf method on a string?
+What happens with this method if a word occurs twice in a string?
+Can you run this method on data types other than string?
+
+##### Find the length of a string
+You can call a method on a string by typing str.length (just like we did with indexOf above). Create a variable to hold a string and call .length on it to see what happens.
+What is returned by the .length method?
+What if there are spaces in the string?
+Can you call this method on other data types?
+
+
+#### Arithmetic Challenge
+
+Add, subtract, multiply and divide some numbers (any combination of numbers)
+Find the remainder of dividing two numbers using the modulo operator (%)
+Divide a number by 0
