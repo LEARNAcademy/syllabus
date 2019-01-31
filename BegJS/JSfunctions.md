@@ -1,5 +1,6 @@
-# Intro to Functions
 
+# Intro to Functions
+## Lecture
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
 This means there is a difference between creating or 'declaring' a function (creating the instructions), and running the function (following the instructions to perform a task). When we 'call' or 'run' a function, it means we go through that set of instructions and do the task.  
@@ -87,3 +88,50 @@ function create_a_secret_number(userNumber) {
 The only thing to do now is verify that our function actually works! Run all the examples and fix any bugs.
 This is another way that pseudo code will really help you out. If you have separated the logic from the code syntax, it is easier to see if the bug you found is a logic problem or a syntax problem.
 With the above implementation `create_a_secret_number(4)` returns "17.4". Not too bad!! Now that we have it working, we can figure out how to make it better. For instance, we probably want to do something about that decimal number later. How would you make this function better?
+
+## Challenges
+
+
+
+Below are exercises in writing functions. Beneath each prompt write the code to fulfill the exercise requirement.
+
+Exercise 1
+Write a function called marco that logs "polo" to the screen.
+
+Exercise 2
+Write a function called greeter that takes a name as an argument and logs a greeting with that name to the screen.
+
+Exercise 3
+Write a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even.
+
+Exercise 4
+Write a function called triple that takes an number as an argument and logs the result of that number multiplied by 3.
+
+Exercise 5
+Write a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+
+Exercise 6
+Write a function called divisibleBy that takes two numbers as arguments and logs whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+
+Exercise 7
+Consider this variable:
+var product = { name: "chair", price: 14.99 }
+Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
+
+Exercise 8
+Consider this function:
+function message(product, inBudget){
+  if(inBudget) {
+    return "Product is within budget"
+  } else {
+    return "Product is beyond budget"
+  }
+}
+And consider this variable:
+var product = { name: "OledMonitor", price: 300.00 }
+var budget = 275.00
+Write a function checkBudget that takes a product, budget and the message function as arguments, determines whether the product is within budget and returns the result of the message function.
+
+Exercise 9
+Refactor the previous exercise to replace "Product" in the return to the name of the product.
+For example, checkBudget(product, budget, message) ----> "OledMonitor is beyond budget"
