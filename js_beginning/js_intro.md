@@ -1,169 +1,246 @@
 # Basic Elements of JavaScript
 
-## Lecture
+## Overview
 
-This section shows you some of the operators and syntax of Javascript and their uses.
+JavaScript is a versatile and powerful scripting language used to make a webpage dynamic.
 
 ## Data Types
 
-There are
+JavaScript takes in information in a very specific way. JS is a loosely typed language, meaning the programmer does not have to declared the type of data contained in a variable.
 
-## Primitive Datatypes
+## Primitive Data Types
 
-Primitives
+The basic data types are:
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Undefined</li>
+<li>Null</li>
+<li>Symbol</li>
+</ul>
 
-#### Numbers
+### Numbers
+
+Numbers can be integers (positive, negative or zero) as well as fractions of a whole number written as a decimal called a float.
 
 ##### Arithmetic
 
-We can perform mathematical calculations with numbers in JavaScript just like we can with pen and paper or a calculator. Some of these operators, like `%` might look unfamiliar but are very useful. For example, `%` lets us find the remainder of a division operation.
+We can perform mathematical calculations with numbers in JavaScript.
 
 ```javascript
 1           -> 1
 1.0         -> 1
-2+2         -> 4
-2-2         -> 0
-2*2         -> 4
-2/2         -> 1
-2%2         -> 0
-3%2         -> 1
-0.1+0.2     -> 0.300000000004
-2/0         -> Infinity
--2/0        -> -Infinity
-Infinity + -Infinity	-> NaN
+
+addition
+2 + 2       -> 4
+0.1 + 0.2   -> 0.3
+3.7 + 5     -> 8.7
+
+subtraction
+2 - 2       -> 0
+
+multiplication
+2 * 2       -> 4
+
+division
+2 / 2       -> 1
+2 / 0       -> Infinity
+-2 / 0      -> -Infinity
+
+modulo
+2 % 2       -> 0
+3 % 2       -> 1
+18 % 5      -> 3
+
+exponents
+7 ** 2      -> 49
+```
+### Strings
+
+We can store words or other characters in JavaScript by surrounding characters with quotation marks.
+
+##### Concatenation
+
+When we use the + on strings it combines the strings in a process called concatenation.
+
+```
+"hell" + "o"        -> "hello"
+"hello " + "world"  -> "hello world"
+"3 + 4"             -> "3 + 4"
+"3 + 4" + "5"       -> "3 + 45"
 ```
 
-##### Relations
+##### Built-in String Functions/Methods
 
-We can compare values in JavaScript using the following operators. These operations return either a `true` or `false` value:
+The JavaScript language has some pre-made functionality called, built-in functions and methods that can be used on the strings.
 
 ```
-2 > 0          -> true
-0 >= 2         -> false
-2 != 0         -> true
-2 === 0        -> false
+"hello".charAt(1)       -> "e"
+"hello".length          -> 5
+"hello".includes("he")  -> true
 ```
 
-##### Boolean
+### Boolean
 
-Boolean expressions in JavaScript return `true` or `false` values like the following:
+Boolean expressions in JavaScript return `true` or `false`. Even though true and false are words they are not strings, they represent the value of true/false.
 
 ```
 true                 -> true
 false                -> false
-
-!true                -> false
-!false               -> true
-
-true === false       -> false
-true == false        -> false
-true != false        -> true
-true != true         -> false
-!(true === false)    -> true
-
-true  || false       -> true	// || is pronounced "or"
-false || false       -> false
-
-true && false        -> false	// && is pronouced "and"
-true && true         -> true
 ```
 
-## Text Strings
+##### Comparison Operators
 
-We can make strings in JavaScript by surrounding characters with quotation marks:
-
-```
-"hell" + "o"              -> "hello"
-"he'" + "ll"              -> "he'll"
-'he said: "hello"'        -> "he said: "hello""
-```
-
-## Functions/Methods on Strings
-
-In JavaScript, there are many built-in functions and methods that can be performed on strings to do some pretty cool things:
+Comparison operators will return a Boolean value.
 
 ```
-"hello".charAt(1)         -> "e";
-"hello".length            -> 5
-"hello".includes("hell")  -> true
+equality operator
+true == false       -> false
+3 == "3"            -> true
+
+strict comparison
+true === false      -> false
+3 === "3"           -> false
+```
+##### Relational operators
+Relational operators return a Boolean value
+
+```
+greater than
+2 > 0               -> true
+
+less than
+4 < 8               -> true
+
+greater than or equal to
+0 >= 2              -> false
+
+less than or equal to
+-4 <= 0.8           -> true
+```
+##### Logical Operators
+Logical operators can return any type of data but uses the principle of Boolean data type to determine the outcome.
+
+```
+and
+true && false       -> false
+true && true        -> true
+
+or
+true  || false      -> true
+false || false      -> false
+
+not
+!true               -> false
+!false              -> true
+true != false       -> true
+true != true        -> false
+!(true && false)    -> true
+!(true && false)    -> true
 ```
 
-## Mixing it up
+### Undefined
 
-JavaScript is a language that does what we call "type coercion", which means if we try to combine data types in an operation it will helpfully try to make sense of the operation anyway. This can lead to strange and unpredictable behavior:
+If a variable is created but not assigned a value, the variable is undefined.
+
+### Null
+
+Null is equal to nothing else in your program. It is not zero, it is not false, it is nothing.
+
+### Symbol
+
+Symbol is a new data type created for the JS update ECMAScript 2015. Symbols are unique and immutable, used for the key in a JS object.
+
+
+## Type Coercion
+
+Because JavaScript is a loosely typed language it does a funky thing called type coercion. If we combine data from different types, JS tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
 
 ```
-"2" + 2                   -> 22
-2 + "2"                   -> 22
-parseInt("2")             -> 2
-parseInt("2") + 2         -> 4
-true * 9                  -> 9
-false * 9                 -> 0
+"2" + 2             -> "22"
+!3                  -> false
+!0                  -> true
+true * 9            -> 9
+false * 9           -> 0
 ```
 
 ## Variables
 
-Variables allow us to store and reuse information across operations.
-Always, always, always use `var`; otherwise the identifier becomes a global variable.
+Just like in algebra, variables are used to store information. Variables must be declared and assigned a value using a single equals sign.
+
 
 ```
-var a;
-a                 	-> undefined	// undefined is the value a variable has before we assign it a value
-a + a;            	-> NaN			// using undefined in a calculation does NOT give an error
-a = 2;
-a; 					-> 2
-3 + a; 				-> 5
-a * a; 				-> 4
-a = "hello"
-a + a;             	-> "hellohello"
-a = null;							// null is a special value that represents that we do not have a value
-a;                 	-> null
-a + a;              -> 0			// using null in a calculation does NOT give an error
+variable declared
+var a               -> undefined
+var a + 5           -> NaN (not a number)
+
+variable declared and assigned
+var a = 2           -> 2
+a + 5               -> 7
+a * 7               -> 14
+a + a               -> 4
+
+variable reassigned
+var a = "hello "    -> "hello "
+a.length            -> 5
+a + a               -> "hello hello "
+a + 5               -> "hello 5"
+
+new variable
+var b = "world"     -> "world"
+a + b               -> "hello world"
+
+new variable using existing variables
+var c = a + b       -> "hello world"
+a                   -> "hello "
+b                   -> "world"
+c                   -> "hello world"
 ```
 
 
 
-We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be the same variables, data types, if statements and functions.
+We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
+
+
+
 ## Challenges
 
-#### Variables Challenge
-
-Here are a few exercises for you to practice using variables:
-
-- Set a variable called my_favorite_number equal to your favorite number.
-- What is your favorite number divided by 2?
-
-- Set another variable called someones_favorite equal to 13
-- Change the value of someones_favorite to 7
-- Subtract your favorite number from someones_favorite
-- Change the value of my favorite number to be 26 times its current value
-
-
-
-#### Strings Challenge
-
-Javascript comes with some built in ways to work with Strings. For this exercise, try out some of the string methods for yourself.
-
-##### Try locating a word in a string
-
-Locate
-```
-var str = "Please locate where 'locate' occurs!";
-var pos = str.indexOf("locate");
-```
-What do you get back when you run this indexOf method on a string?
-What happens with this method if a word occurs twice in a string?
-Can you run this method on data types other than string?
-
-##### Find the length of a string
-You can call a method on a string by typing str.length (just like we did with indexOf above). Create a variable to hold a string and call .length on it to see what happens.
-What is returned by the .length method?
-What if there are spaces in the string?
-Can you call this method on other data types?
-
+Open up a JS file in atom, run your program in terminal with node.
 
 #### Arithmetic Challenge
 
-Add, subtract, multiply and divide some numbers (any combination of numbers)
-Find the remainder of dividing two numbers using the modulo operator (%)
-Divide a number by 0
+<ul>
+<li>Add, subtract, multiple, and divide integers and floats</li>
+<li>Find the remainder of 33/6</li>
+<li>Calculate 5 to the power of 7</li>
+</ul>
+
+#### String Challenge
+
+<ul>
+<li>Find the length of a string containing your name</li>
+<li>Does your string include the letter "e"?</li>
+<li>Concat two strings and find the length</li>
+</ul>
+
+
+### Variables Challenge
+
+<ul>
+<li>Set a variable called favNum equal to your favorite number</li>
+<li>What is your favorite number divided by 2?</li>
+<li>Set another variable called otherNum equal to 13</li>
+<li>Divide favNum by otherNum</li>
+<li>Is otherNum greater than favNum?</li>
+</ul>
+
+<ul>
+<li>Save a string as a variable</li>
+<li>Find the length of the string</li>
+<li>Use the method charAt() to find what letter is at the 3rd index</li>
+</ul>
+
+<ul>
+<li>Try combining different data types to see what happens</li>
+</ul>
