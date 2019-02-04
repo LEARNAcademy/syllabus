@@ -3,38 +3,67 @@
 ## Lecture
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
-This means there is a difference between creating or 'declaring' a function (creating the instructions), and running the function (following the instructions to perform a task). When we 'call' or 'run' a function, it means we go through that set of instructions and do the task.  
+It is important to remember that there is a difference between a **function declaration** - creating the instructions, and a **function call** - following the instructions to perform a task.
 
-For example, look at this function declaration:
+
+For example, look at this **function declaration:**
+
+```JavaScript
+function greeting() {
+    return "Hello There"
+}
+````
+
+Notice the pieces of a function:
+
+1.  The keyword 'function'
+2.  The name of the function
+3.  Parentheses which can also take 'arguments'
+4.  Open and closing curly brackets
+5.  A set of instructions inside the curly brackets
+6.  A return statement right before the closing curly brackets
+
+
+Great! We have a function. But this function has not yet been used in our program because we do not have a function call.  A **function call** looks like this....
+```javascript
+greeting()
+```
+ Notice that we used the same name that we gave when we declared the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
+
+In order to see the output of our function, let's wrap our function call in a **console.log** like this..
+
+
+```JavaScript
+function greeting() {
+    return "Hello There"
+}
+
+console.log(greeting())
+
+output >> Hello There
 
 ```
-function name: make_a_sandwich
 
-// 1. Decide on the inner ingredients ( bacon, lettuce, tomato etc...)
 
-// 2. Wrap the inner ingredients in bread
+## Function Arguments
 
-// 3. Put on plate
+Functions often require some information in order to run. Pieces of outside information that is used when a function runs are called **arguments** to that function.  We put the arguments inside the parentheses of the function.
 
-// 4. Serve sandwich
+Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.  
+
+```JavaScript
+
+function greeting(name) {
+    return "Hello " + name
+}
+
+console.log(greeting("Sally"))
+
+output >> Hello Sally
 
 ```
 
-Great! We have a function. But -- no sandwich. Now, we need to follow our instructions to make a sandwich, all we have to do is say:
-```
-make_a_sandwich()
-```
-The above is a function 'call'. Notice that we used the same name that we gave when we declared the function. Calling the function by its name will tell the program to run through the steps declared in the make_a_sandwich function, which gets us a sandwich.
-
-## Two big things
-
-This brings us to the important bits about functions. Take a look at the two rules of functions:
-
-1. Functions often require some information in order to run (in the case of our make_a_sandwich function, it needs to know what kind of sandwhich to make). Pieces of outside information that are used when a function runs are called 'arguments' to that function.
-
-2. Functions must return something. In other words, a function that does some calculation or other work but never gives you back new information isn't very useful.
-
-Remember that functions have to be very explicit about how to do things, because computers can only follow the instructions.
+Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.  
 
 
 ## Pseudo Code
@@ -53,51 +82,79 @@ Writing pseudo code is a really good mental habit to get into, because it breaks
 This is great, because it means that while you are thinking up your logic, you aren't distracted by how to write it in code. And conversely, when you are writing code, you aren't also trying to think of what comes next.
 
 
-This is an example of using pseudo code:
 
-```javascript
-// TODO: Create a function that takes in a number between 1 & 10 (call this number: userNumber) and gives back a new, hard to guess number
+Let's look at an example using pseudo code and adding a conditional inside the function.
 
-	// 1. multiply the number by itself
+Exercise: Write a function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).  
 
-	// 2. add 42
+Here's what the pseudo code might look like:
+```Javascript
+//create a function called old_enough
 
-	// 3. multiply by .3
+//takes in 1 number as an arguments
 
-	// 4. return the result
+//if number is less than 21 retun 'can not drink' (if/else statment)
 
+//otherwise return 'allowed to drink'
 ```
+Now lets build the actual code around the pseudo code.
 
-Once we've decided what we need to do, it isn't so hard to create the code that does each of those things, we just tackle them step by step:
-
-```javascript
-function create_a_secret_number(userNumber) {
-  // 1. multiply the number by itself
-  var secretNumber = userNumber * userNumber
-  // 2. add 42
-  secretNumber = secretNumber + 42
-  // 3. multiply by .3
-  secretNumber = secretNumber * .3
-  // 4. return the result
-  return secretNumber
+```JavaScript
+//create a function called old_enough
+//takes in 1 number as an arguments
+function old_enough(number){
+    //if number is less than 21 retun 'can not drink'(if/else statment)
+    if(number < 21){
+        return "Can not drink"
+    //otherwise return 'allowed to drink'
+    } else {
+        return "Allowed to drink"
+    }
 }
+
+console.log(old_enough(25));
+output -> Allowed to drink
+
+console.log(old_enough(19));
+output -> "Can not drink"
+
+console.log(old_enough(12);
+output -> "Can not drink"
+
 ```
+
 
 ## Verify
 
-The only thing to do now is verify that our function actually works! Run all the examples and fix any bugs.
-This is another way that pseudo code will really help you out. If you have separated the logic from the code syntax, it is easier to see if the bug you found is a logic problem or a syntax problem.
-With the above implementation `create_a_secret_number(4)` returns "17.4". Not too bad!! Now that we have it working, we can figure out how to make it better. For instance, we probably want to do something about that decimal number later. How would you make this function better?
+Notice that we called 'old_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.  
+
+## Console.log  vs  Return
+Notice that we can call console.log as many times as we want and we can even call console.log inside functions like this...
+
+```JavaScript
+function greeting(name) {
+    console.log(name);
+    return "Hello " + name
+}
+
+console.log(greeting("Tom"))
+
+output -> "Tom"
+output -> "Hello Tom"
+
+```
+However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
+
+
 
 ## Challenges
-
 
 
 Below are exercises in writing functions.
 
 1.  Write a function called marco that logs "polo" to the screen.
 
-2.  Write a function called greeter that takes a name as an argument and logs a greeting with that name to the screen.
+2.  Write a function called greeting that takes a name as an argument and logs 'welcome <person's name here>''
 
 3.  Write a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even.
 
