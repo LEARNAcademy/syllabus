@@ -1,9 +1,5 @@
 # JavaScript Arrays, Loops & Iteration
 
-
-
-
-
 Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But often, we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an array, which is just a list of things grouped together.
 
 

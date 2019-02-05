@@ -1,8 +1,4 @@
-# JavaScript Decision Structures
-
-## Resources:
-
-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Conditionals from MDN </a>
+# JavaScript Conditionals
 
 ## Javascript Decisions:
 
@@ -48,6 +44,8 @@ if(credentialsValidator(userId, password) === false) {
 ```
 The code above runs a function that takes in a userId and password, and returns whether or not the credentials are valid. It just goes to show how if statements will show up in even very complex programs.
 
+
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Conditionals from MDN </a>
 
 #### If and Else
 
