@@ -18,7 +18,7 @@ pwd         present working directory, shows what directory you are in
 ls          list, tells you all the files available in this directory
 cd          change directory, follow this command with a name of a directory one level deeper
 cd ..       follow this command with the name of a directory one level out
-mkdir       make directly, follow this command with a name to create a new directory
+mkdir       make directory, follow this command with a name to create a new directory
 rmdir       remove directory, follow with a name to remove a directory
 touch       follow with a name to create a file
 open        follow with the full file name to open
@@ -31,7 +31,7 @@ clear       clear the terminal
 
 ## Tips and Shortcuts
 Mac: <br />
-`command tab` opens a new tab in terminal <br />
+`command t` opens a new tab in terminal <br />
 `command d` split pane <br />
 `tab` will autocomplete the directory or file name <br />
 `command +/-` will increase or decrease the font size <br />
