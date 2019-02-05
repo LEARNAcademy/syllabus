@@ -103,7 +103,7 @@ Now lets build the actual code around the pseudo code.
 //create a function called old_enough
 //takes in 1 number as an arguments
 function old_enough(number){
-    //if number is less than 21 retun 'can not drink'(if/else statment)
+    //if number is less than 21 return 'can not drink'(if/else statement)
     if(number < 21){
         return "Can not drink"
     //otherwise return 'allowed to drink'
