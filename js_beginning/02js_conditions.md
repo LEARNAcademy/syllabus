@@ -102,3 +102,8 @@ Write an if / else statement that considers two variables (numbers) and outputs 
 Write an if / else statement that considers a variable (number) and logs whether the number is odd or even.
 
 Write an if / else statement that considers a variable (fruit) and logs the color of that fruit.
+
+[Go to Javascript Functions](./03js_functions.md)
+
+
+[Back to Javascript Conditions](./02js_conditions.md)
