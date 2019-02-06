@@ -26,7 +26,8 @@ And consider this variable:
 
 ````JavaScript
 var product = { name: "OledMonitor", price: 300.00 }
-var budget = 275.00````
+var budget = 275.00
+```
 
 Write a function checkBudget that takes a product, budget and the message function as arguments, determines whether the product is within budget and returns the result of the message function.
 
@@ -35,3 +36,6 @@ Refactor the previous exercise to replace "Product" in the return to the name of
 For example
 
  checkBudget(product, budget, message) ----> "OledMonitor is beyond budget"
+
+
+[Go to ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
