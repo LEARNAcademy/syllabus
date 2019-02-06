@@ -6,7 +6,7 @@ JavaScript is a versatile and powerful scripting language used to make a webpage
 
 ## Data Types
 
-JavaScript takes in information in a very specific way. JS is a loosely typed language, meaning the programmer does not have to declared the type of data contained in a variable.
+JavaScript takes in information in a very specific way. JS is a loosely typed language, meaning the programmer does not have to declare the type of data contained in a variable.
 
 ## Primitive Data Types
 
@@ -180,6 +180,8 @@ var a = 2           -> 2
 a + 5               -> 7
 a * 7               -> 14
 a + a               -> 4
+var a = null        -> null
+
 
 variable reassigned
 var a = "hello "    -> "hello "

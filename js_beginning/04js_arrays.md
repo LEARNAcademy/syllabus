@@ -1,6 +1,8 @@
 # JavaScript Arrays, Loops & Iteration
 
-Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But often, we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an array, which is just a list of things grouped together.
+Until now we have dealt only with primitive data types. But what if we want to combine our data types?
+
+An array is a grouping of multiple pieces of information of many data types stored as a single variable. Arrays give us the structure to assign placement of pieces of data and the ability to perform one function on
 
 
 Array is the first example of a collection of data/value as a ordered set of variables.
