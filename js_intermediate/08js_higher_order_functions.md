@@ -160,8 +160,8 @@ var animal = toons.filter(value => value.animal === "dog")
 
 console.log(animal);
 
+```
 
-            ```
 ## .map() vs .filter()
 
 When deciding which higher-order function to use remember that .map() will do something to each item in an array and return the same number of items.  Whereas .filter() will return a new, smaller array 'filtered' based on your specified criteria.
