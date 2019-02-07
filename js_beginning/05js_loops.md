@@ -142,7 +142,7 @@ for(....create the loop condition ....) {
 Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word 'fizz'.  If a number is a multiple of five, replace it with the word 'buzz'.  If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 
 
-[Go to Javascript Functions, Loops and Arrays](./06js_functionLoopsArrays.md)
+[Go to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
 
 
 [Back to Javascript Arrays](./04js_arrays.md)
