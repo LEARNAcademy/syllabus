@@ -199,3 +199,8 @@ Write a function named pluralize that:
 ``` pluralizer(1, dog) ``` should return "1 dog" because the number one does not require a plural noun
 
 * Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
+
+[Go to Javascript Arrays](./04js_arrays.md)
+
+
+[Back to Javascript Functions](./02js_conditions.md)
