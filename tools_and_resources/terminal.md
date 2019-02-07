@@ -39,7 +39,9 @@ Mac: <br />
 
 Windows: <br />
 
+## nodeJS
 
+Node is a JavaScript runtime
 
 ## Extras
 There are programs that help add a bit of flare to your terminal. One we like at Learn is a shell called ZSH (Z shell).

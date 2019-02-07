@@ -20,6 +20,8 @@ if(this = true) {
 All conditional must have an `if` statement. If the set condition is true the program will continue to run. If the condition is not true, nothing will happen.
 
 ```javascript
+var carOn = true
+
 if(true) {
     console.log("I'm running!");
 }
@@ -27,6 +29,8 @@ if(true) {
 If we want our code to execute something if the `if` condition is not true we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
 
 ```javascript
+var carOn = false
+
 if(true) {
     console.log("I'm running");
 } else {
@@ -36,28 +40,43 @@ if(true) {
 If we want more options in our decision structure we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
 
 ```javascript
+var carOn = true
+
 if(true) {
   console.log("I'm running");
 } else if(false) {
   console.log("I'm not running");
 } else {
-  console.log("There was an error");
+  console.log("The car is broken");
 }
 ```
 
-Another example:
+Example: Write an `if/else` statement that takes two variables of fruit and logs the one that is more letters
 
 ```javascript
-var name = prompt("What is your name?")
+var fruit1 = "orange"
+var fruit2 = "apple"
 
-if (name === "Socrates") {
-    console.log("Hi Socrates!");
-} else if(name === "Plato") {
-    console.log("Hi Plato!");
-} else if(name === "Aristotle") {
-    console.log("Hi Aristotle!");
+if (fruit1.length > fruit2.length) {
+    console.log(fruit1 + " has more letters");
+} else if(fruit1.length < fruit2.length) {
+    console.log(fruit2 + " has more letters");
 } else {
-    console.log("Hey there!");
+    console.log("They have the same letters");
+}
+```
+Example: Write an `if/else` statement that takes a variable of a number from 0 to 100 and logs the number of digits
+```javascript
+var number = 9
+
+if(number === 100) {
+    console.log(number + " is a triple digit number");
+} else if(number > 9 && number < 100) {
+    console.log(number + " is a double digit number");
+} else if(number >= 0 && number <= 9){
+    console.log(number + " is a single digit number");
+} else {
+    console.log("please enter a number from 0 to 100");
 }
 ```
 
@@ -69,7 +88,6 @@ Some further reading and resources here: <a href="https://developer.mozilla.org/
 
 Make sure you try different options and change the variables to ensure properly working code.
 
-#### If/Else
 <ol>
     <li>Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.</li>
 
@@ -86,5 +104,6 @@ Make sure you try different options and change the variables to ensure properly 
 #### Stretch Challenges
 <ol>
     <li>Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available"</li>
+
     <li>Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`)</li>
 </ol>
