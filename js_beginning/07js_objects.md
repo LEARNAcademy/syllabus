@@ -39,3 +39,7 @@ For example
 
 
 [Go to ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
+
+[Back to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
+
+[Back to Syllabus](../README.md)
