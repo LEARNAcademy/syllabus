@@ -145,4 +145,4 @@ Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, r
 [Go to Javascript Functions, Loops and Arrays](./06js_functionLoopsArrays.md)
 
 
-[Back to Javascript Arrais](./05js_arrays.md)
+[Back to Javascript Arrays](./04js_arrays.md)
