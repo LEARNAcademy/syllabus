@@ -1,6 +1,10 @@
 # Intro to Programming
 
-## How to ask a tech question?
+<a href id="#tech">How to ask a tech question</a> <br />
+<a href id="#pair">Pair Programming</a> <br />
+
+
+## How to ask a tech question? <a id="tech"></a>
 
 Coding is tough. You will run into problems and you will get stuck. Communicating the problem you are experiencing can be as big of a challenge as fixing the problem itself. Here are some helpful tips when you run into problems and get stuck.
 
@@ -22,7 +26,7 @@ At Learn we utilize a method of collaboration called pair programming. This mean
 
 ### Driver and Navigator
 
-The `driver` is the one with their hands on the keyboard. They are responsible for entering information and following the instructions given by the `navigator`. It is important to switch roles every 10-20 minutes. Communication is vital!
+The `driver` is the one with their hands on the keyboard. They are responsible for entering information and following the instructions given by the `navigator`. It is important to switch roles every 10-20 minutes and take frequent breaks. Communication is vital!
 
 
 <ul>
@@ -44,3 +48,6 @@ The `driver` is the one with their hands on the keyboard. They are responsible f
 `Model` - PostgreSQL, persistence storage, database <br />
 `View` - HTML, CSS, JavaScript, React, "frontend" the aspect of code that you see, click, and navigate, about 20% of the code<br />
 `Controller` - Ruby, Ruby on Rails, "backend" the logic, functions, algorithms "under the hood" <br />
+
+
+## Node on the command line
