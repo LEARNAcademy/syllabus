@@ -103,6 +103,28 @@ Write a Javascript function to filter false, null, 0 and blank values from an ar
 * filterArrayValues([58, '', 'abcd', true, null, false, 0])
 * should return [58, "abcd", true]
 
+## Hi/Low Game
+
+#### Goal
+
+* Create a function that plays the following game: The computer picks a secret random integer between 1 and 100 (both inclusive), and repeatedly asks the user for guesses.
+* If the user's guess is too high or too low, the computer notifies them of that
+* Otherwise, if the user guesses the secret number correctly, the computer displays a winning message and the game is over.
+
+Hint: See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">Math.random()</a>
+#### Stretch goal 1
+
+Create an HTML page and link your javascript file.  You can use prompt() and alert()
+
+#### Stretch goal 2
+
+
+If the user has not guessed the secret number in seven tries, the user loses.
+
+
+
+
+
 #### Palindrome
 Create a function that takes in a string and returns whether the string is a palindrome (same forward and backwards).
 

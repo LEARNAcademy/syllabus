@@ -241,3 +241,17 @@ var numbers2 = [2, 4, 6, 8, 10]
 * Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
 
 * Sort all the names in reverse alphabetical order.
+
+## Magic 8 Ball
+
+#### Story
+* As a user I can enter a question and get a random answer to my question.
+
+#### Goal:
+* Create an array with the following answers: Yup!, Fuhgeddaboudit, Maybe, Ask: what would your mother do?, Ask: what would an Australian do, then do the opposite, Your answer here.
+* Set a variable called question so you can test different questions.
+* Create a random number to select one of the answers (hint: use Math.random().
+* Output the random answer.
+
+#### Stretch goal:
+* Create an html page linked to the javascript file - you can use prompt() and alert() for input and output.
