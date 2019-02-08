@@ -22,8 +22,8 @@ All conditional must have an `if` statement. If the set condition is true the pr
 ```javascript
 var carOn = true
 
-if(true) {
-    console.log("I'm running!");
+if(carOn === true) {
+    console.log("The engine is running.");
 }
 ```
 If we want our code to execute something if the `if` condition is not true we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
@@ -31,10 +31,10 @@ If we want our code to execute something if the `if` condition is not true we ad
 ```javascript
 var carOn = false
 
-if(true) {
-    console.log("I'm running");
+if(carOn === true) {
+    console.log("The engine is running.");
 } else {
-    console.log("I'm not running");
+    console.log("The engine is off.");
 }
 ```
 If we want more options in our decision structure we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
@@ -42,12 +42,12 @@ If we want more options in our decision structure we can add an `else if` statem
 ```javascript
 var carOn = true
 
-if(true) {
-  console.log("I'm running");
-} else if(false) {
-  console.log("I'm not running");
+if(carOn === true) {
+  console.log("The engine is running.");
+} else if(carOn === false) {
+  console.log("The engine is off.");
 } else {
-  console.log("The car is broken");
+  console.log("The car is broken.");
 }
 ```
 
