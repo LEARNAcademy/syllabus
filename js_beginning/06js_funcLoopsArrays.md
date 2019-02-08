@@ -69,20 +69,75 @@ Write a function that takes in an array of numbers and letters and returns a new
 
 * var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
 
+Create a function that finds the highest number.
+ * `highestNumber([1,4,2])` should return 4
+
+ * Hint: create a variable called max, and assign it a reasonable start value; then use a for loop: if an element is higher than max, change max.
+
+Create a function that finds the lowest number.
+ * `lowestNumber([1,4,2])` should return 1
+
+Create a function that calculate the sum.
+ * `sum([1,2,3])` should return 6
+ * `sum([])` should return 0
+
+Create a function that calculate the mean value.
+ * `mean([1,2,3])` should return 2
+
+Create a function that finds the index of the highest number.
+ * `indexHighestNumber([1,4,2])` should return 1
+
+
 ## Epic Challenges
 
+
+#### Pre-fill
+Write a Javascript function called fillArray to create a specified number of elements with a pre-filled numeric values in an array.
+
+fillArray(6, 0) should return [0, 0, 0, 0, 0, 0]
+fillArray(4, 11) should return [11, 11, 11, 11]
+
+#### Clean Function
+Write a Javascript function to filter false, null, 0 and blank values from an array.
+
+* filterArrayValues([58, '', 'abcd', true, null, false, 0])
+* should return [58, "abcd", true]
+
+## Hi/Low Game
+
+#### Goal
+
+* Create a function that plays the following game: The computer picks a secret random integer between 1 and 100 (both inclusive), and repeatedly asks the user for guesses.
+* If the user's guess is too high or too low, the computer notifies them of that
+* Otherwise, if the user guesses the secret number correctly, the computer displays a winning message and the game is over.
+
+Hint: See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">Math.random()</a>
+#### Stretch goal 1
+
+Create an HTML page and link your javascript file.  You can use prompt() and alert()
+
+#### Stretch goal 2
+
+
+If the user has not guessed the secret number in seven tries, the user loses.
+
+
+
+
+
+#### Palindrome
 Create a function that takes in a string and returns whether the string is a palindrome (same forward and backwards).
 
 * var str = "damon nomad"
 * expected output -> "Yes damon nomad is a palindrome"
 
-
+#### Vowels Removed
 Create a function that takes in a string and returns a new string with all the vowels removed.
 
 * var str = "javascript is awesome"
 * expected output -> "jvscrpt s wsm"
 
-
+#### Merge Arrays
 Create a function that merges two arrays, takes in two arrays as arguments returns one array with no duplicate values.
 
 * var arr1 = [3, 7, 10, 5, 4, 3]

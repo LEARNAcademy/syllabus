@@ -122,21 +122,16 @@ So the result should be: [ODD, 2, ODD, 4, ODD, 6 ....]
 
 5.  Use a for loop to log each number from the numbers variable above in reverse.
 
-6.  Your friend is training for a marathon and you are going to help them. They are running on a track, but often lose count of how many loops they have done. You need to create a for loop to log their progress as they run. Create the code to satisfy the pseudo code below:
 
-```JavaScript
+### The Odd and Even
 
-//Initial number of laps is 0
-//Track size: 1/4 mile
-//Goal: Run 8 miles
+Write a JavaScript function that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
+Sample Output :
+"0 is even"
+"1 is odd"
+"2 is even"
 
-for(....create the loop condition ....) {
-      log laps until your friend has run their 8 miles
-}
 
-//EXTRA: For extra challenge, add code that logs an encouraging message to your friend at the 4, 6, and 7 mile markers
-
-```
 ### Fizz Buzz
 
 Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word 'fizz'.  If a number is a multiple of five, replace it with the word 'buzz'.  If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
