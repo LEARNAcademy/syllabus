@@ -21,3 +21,7 @@ This is your introduction to programming through the Javascript programming lang
 3) [Javascript Pig Latin Project](./js_intermediate/03js_pig_latin_mob.md)
 4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+
+## Unit Four: Ruby
+
+1) [Ruby Intro](./ruby/01rb_intro.md)
