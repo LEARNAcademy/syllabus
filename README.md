@@ -11,3 +11,9 @@ This is your introduction to programming through the Javascript programming lang
 5) [Javascript Loops](./js_beginning/05js_loops.md)
 6) [Javascript Functions, Loops and Arrays](./js_beginning/06js_funcLoopsArrays.md)
 7) [Javascript Objects](./js_beginning/07js_objects.md)
+
+
+
+## Unit Two: Intermediate Javascript 
+
+1) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
