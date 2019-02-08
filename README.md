@@ -17,3 +17,7 @@ This is your introduction to programming through the Javascript programming lang
 ## Unit Two: Intermediate Javascript 
 
 1) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
+2) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
+3) [Javascript Pig Latin Project](./js_intermediate/03js_pig_latin_mob.md)
+4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
+5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
