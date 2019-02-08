@@ -122,3 +122,7 @@ letters[0];
 letters[4];
 ```
 Just like with strings, we count array elements starting with zero. So the zeroth element of the array is `l`, and the fourth element is `o`.
+
+[Go to Javascript Loops](./05js_loops.md)
+
+[Back to Javascript Functions](./05js_functions.md)

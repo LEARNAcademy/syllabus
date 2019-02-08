@@ -105,5 +105,13 @@ Make sure you try different options and change the variables to ensure properly 
 <ol>
     <li>Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available"</li>
 
+
     <li>Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`)</li>
 </ol>
+
+
+[Go to Javascript Functions](./03js_functions.md)
+
+
+[Back to Javascript Intro](./01js_intro.md)
+
