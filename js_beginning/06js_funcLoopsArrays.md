@@ -71,18 +71,32 @@ Write a function that takes in an array of numbers and letters and returns a new
 
 ## Epic Challenges
 
+
+#### Pre-fill
+Write a Javascript function called fillArray to create a specified number of elements with a pre-filled numeric values in an array.
+
+fillArray(6, 0) should return [0, 0, 0, 0, 0, 0]
+fillArray(4, 11) should return [11, 11, 11, 11]
+
+#### Clean Function
+Write a Javascript function to filter false, null, 0 and blank values from an array.
+
+* filterArrayValues([58, '', 'abcd', true, null, false, 0])
+* should return [58, "abcd", true]
+
+#### Palindrome
 Create a function that takes in a string and returns whether the string is a palindrome (same forward and backwards).
 
 * var str = "damon nomad"
 * expected output -> "Yes damon nomad is a palindrome"
 
-
+#### Vowels Removed
 Create a function that takes in a string and returns a new string with all the vowels removed.
 
 * var str = "javascript is awesome"
 * expected output -> "jvscrpt s wsm"
 
-
+#### Merge Arrays
 Create a function that merges two arrays, takes in two arrays as arguments returns one array with no duplicate values.
 
 * var arr1 = [3, 7, 10, 5, 4, 3]

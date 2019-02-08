@@ -137,6 +137,16 @@ for(....create the loop condition ....) {
 //EXTRA: For extra challenge, add code that logs an encouraging message to your friend at the 4, 6, and 7 mile markers
 
 ```
+
+### The Odd and Even
+
+Write a JavaScript function that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
+Sample Output :
+"0 is even"
+"1 is odd"
+"2 is even"
+
+
 ### Fizz Buzz
 
 Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word 'fizz'.  If a number is a multiple of five, replace it with the word 'buzz'.  If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.

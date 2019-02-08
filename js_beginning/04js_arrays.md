@@ -137,7 +137,7 @@ var letters2 = ["d", "a", "y"]
 console.log(letters.concat(letters2))
 ["m", "o", "n", "d", "a", "y"]
 ```
-Notice that we get the ouput that we want but because .concat() is an accessor method, we need a way to use our combined array later in our program.  We do this by setting it to a variable.
+Notice that we get the output that we want but because **.concat()** is an accessor method, we need a way to use our combined array later in our program.  We do this by setting it to a variable.
 
 ```JavaScript
 var letters = ["m", "o", "n"]
@@ -149,25 +149,95 @@ console.log(combined);
 ["m", "o", "n", "d", "a", "y"]
 ```
 
-```javascript
-var letters = ["m", "o", "n"]
-var letters2 = ["d", "a", "y"]
+In this next example we are setting a variable called 'join' and using the **.join("")** method.  This takes our array and turns it into a string.  You can also see that we need to put quotes in the parentheses of the method.  What happens if you put a space between the quotes?  What if we put a symbol like '$' ?
 
-var combined = letters.concat(letters2)
-console.log(combined);
-["m", "o", "n", "d", "a", "y"]
+
+
+```javascript
+
+var combined = ["m", "o", "n", "d", "a", "y"]
 
 var joined = combined.join("")
 console.log(joined);
-monday
+"monday"
 
-var array2 = joined.split("")
-console.log(array2);
+```
+In this next example we will take our string and turn it back into an array using the **.split()** method.  We will also save this new array into a variable.  
+
+```JavaScript
+var joined = "monday"
+
+var newArr = joined.split("")
+console.log(newArr);
 ["m", "o", "n", "d", "a", "y"]
 
-console.log(array2.indexOf("d"))
-3
-
-console.log(array2.lastIndexOf("o"));
-1
 ```
+
+And finally, let's look at **.indexOf** and **lastIndexOf**.
+
+```javascript
+
+var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
+
+console.log(array2.indexOf("t"))
+6
+
+console.log(array2.lastIndexOf("y"));
+4
+```
+# Challenges
+Array Methods Practice
+
+ Below are exercises in using array methods. Beneath each prompt write the code to fulfill the exercise requirement.
+
+**Exercise 1** -  Consider this variable:
+
+ var groceryList2 = ["chips", "dip", "cookies"]
+
+ * Write the code that will add "soda" to the end of the original array.
+
+**Exercise 2** - Consider this variable:
+
+var numbers2 = [2, 4, 6, 8, 10]
+* Write the code that will add the number 0 to the beginning of the original array.
+
+**Exercise 3** - Consider this variable:
+
+ var groceryList1 = ["apples", "carrots", "oatmeal"]
+
+ * Write the code that will add "granola" to the end of array without altering the original array.
+
+**Exercise 4** - Consider this variable:
+
+ var numbers1 = [1, 2, 3, 4, 5]
+ * Write the code that will add the number 0 to the beginning of the array without altering the original array.
+
+
+
+ **Exercise 5** - Consider this variable:
+
+ var numbers3 = [2, 13, 6, 8, 4, 2]
+ * Write the code that finds the index of the first appearance of the number 2.
+
+ * Write the code that finds the index of the last appearance of the number 2.
+
+**Exercise 6** - Consider this variable:
+
+ var chars = ["y", "a", "r", "r", "a"]
+ * Write the code that brings all the letters in the chars array together into a string.
+
+ *  Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
+
+ * Write the code that brings all the letters in the charsReversed array together into a string with a hyphen between each letter.
+
+ * Write the code that brings all the letters in the charsReversed Array together into a string without separators.
+
+**Exercise 7** - Create an array with your siblings names, and an array with your parents names.
+
+* Sort your siblings names in alphabetical order.
+
+* Sort your parents names in reverse alphabetical order.
+
+* Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
+
+* Sort all the names in reverse alphabetical order.
