@@ -392,39 +392,6 @@ nums.each_with_index() { |element, index| puts index }
 nums.each_with_index() do |element, index|
    puts index.to_s +   + element.to_s
 end
-if, else
-Ruby has quite a few more ways of branching than Javascript does, but they're simpler to use on the whole.
-
-There is a simple if-else construct similar to Javascript.
-
-x = 1
-if x == 3
-  puts "Huh?"
-else
-  puts "Just confused now."
-end
-elsif
-When you need more than an either/or. elsif indicates an alternative to the preceding if and any other preceding elsif statements. So, you start off with the if, have any number of elsif alternatives, and end with an else to capture all the leftover possibilities. In Javascript it was spelled out as: else if.
-
-x = 1
-if x == 2
-  puts "Double huh?"
-elsif x == 1
-  puts "That's right."
-else
-  puts "Just confused now."
-end
-We write elsif rather than Javascript's else if and you don't need the parentheses, but its otherwise pretty similar.
-
-unless
-There's also an unless, which is just like if !(...). The unless keyword is just if in reverse. Its a conditional statement that executes only if the condition is false, instead of true.
-
-x = 1
-unless x > 1
-  puts "Okay"
-else
-  puts "Huh?"
-end
 
 # => Okay
 The statement above with an if statement would have to look like below to get the same output.
@@ -450,8 +417,9 @@ Okay
 Derek Banas' Ruby Tutorial Ruby in One Video
 
 
-Ruby Basics Challenge
-Arithmetic Challenge
+## Ruby Basics Challenge
+
+### Arithmetic Challenge
 Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, 1 and 1.0 are different types of things with slightly different behaviors.
 
 Just as you did with Javascript, try these, both with integers and floats:
@@ -469,7 +437,8 @@ Set another variable called someones_favorite equal to 13
 Change the value of someones_favorite to 7
 Subtract your favorite number from someones
 Change the value of my favorite number to be 26 times its current value
-Strings Challenge
+
+### Strings Challenge
 For this exercise, try out some of the Ruby string methods for yourself.
 
 .upcase
