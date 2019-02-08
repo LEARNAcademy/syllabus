@@ -246,3 +246,8 @@ Open up a JS file in atom, run your program in terminal with node.
 <ul>
 <li>Try combining different data types to see what happens</li>
 </ul>
+
+[Go to Javascript Conditions](./02js_conditions.md)
+
+
+[Back to Syllabus](../README.md)

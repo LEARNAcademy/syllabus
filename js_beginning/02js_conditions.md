@@ -1,104 +1,117 @@
 # JavaScript Decision Structures
 
-## Resources:
-
-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Conditionals from MDN </a>
-
-## Javascript Decisions:
+## Javascript Decisions
 
 Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
 
-One of the tools that helps us break down problems is the if/else decision structure. Think of the logic behind a simple switch, like a light switch or turning something on or off. In code we can create logic that says,
-``` if one thing happens, do this. Otherwise, do this other thing```
+One of the tools that helps us break down problems is the `if/else` decision structure. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says,
+`if one thing is true, do this, Otherwise, do this other thing.`
 In fact, the javascript code for creating these decision structures reads almost like our sentence did:
 ```
-if(one thing is true) {
-  	do this
+if(this = true) {
+    console.log(do this thing)
 } else {
-	do this other thing
-}
-
-```
-Don't mind all those curly brackets and parentheses so much right now, they will become second nature in no time.
-
-## Some Examples
-
-Consider what is going on in the following example. The first if statement will create a popup box with the message "I'm running", but the second if statement won't do anything, because the if condition in parentheses must be true in order to run the logic inside.
-
-```javascript
-if(true) {
-  alert("I'm running!");
-}
-
-if(false) {
-  alert("I'm running");
-}
-
-```
-
-If statements might seem too simple to use in real applications. But take a look at the code below, can you follow what it is doing?
-
-```javascript
-if(credentialsValidator(userId, password) === true) {
-  alert("Credentials accepted");
-}
-if(credentialsValidator(userId, password) === false) {
-  alert("Credentials are not valid");
+    console.log(do this other thing)
 }
 ```
-The code above runs a function that takes in a userId and password, and returns whether or not the credentials are valid. It just goes to show how if statements will show up in even very complex programs.
 
+## If/Else
 
-#### If and Else
-
-If statements allow us to perform an action only when a certain condition is true. But what if we want to handle more possibilities than that?
-
-If we want to trigger one action when a condition is true, and another when the condition is false, we can use the "else" block:
+All conditional must have an `if` statement. If the set condition is true the program will continue to run. If the condition is not true, nothing will happen.
 
 ```javascript
-var a = true;
-if(a) {
-  alert("a is true");
+var carOn = true
+
+if(carOn === true) {
+    console.log("The engine is running.");
+}
+```
+If we want our code to execute something if the `if` condition is not true we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
+
+```javascript
+var carOn = false
+
+if(carOn === true) {
+    console.log("The engine is running.");
 } else {
-  alert("a is false");
+    console.log("The engine is off.");
 }
 ```
+If we want more options in our decision structure we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
 
-Notice that the else block doesn't specify a condition in parentheses like if does. This is because the else is simply what happens if the condition specified in the "if" part is false. You can have an "if" statement by itself, but not an else.
-
-
-#### If, else, and else-if
-
-With "if" and "else", we can specify two actions - the first is what should happen if something is true, the second is what should happen if the condition is false. But what if we need a third option?
-
-Here is an example:
 ```javascript
-var number = 40
+var carOn = true
 
-if(number > 50) {
-  console.log("The number is greater than 50")
-} else if(number < 50) {
-  console.log("The number is less than 50")
+if(carOn === true) {
+  console.log("The engine is running.");
+} else if(carOn === false) {
+  console.log("The engine is off.");
 } else {
-  console.log("The number is 50")
+  console.log("The car is broken.");
 }
-
 ```
 
+Example: Write an `if/else` statement that takes two variables of fruit and logs the one that is more letters
 
+```javascript
+var fruit1 = "orange"
+var fruit2 = "apple"
+
+if (fruit1.length > fruit2.length) {
+    console.log(fruit1 + " has more letters");
+} else if(fruit1.length < fruit2.length) {
+    console.log(fruit2 + " has more letters");
+} else {
+    console.log("They have the same letters");
+}
+```
+Example: Write an `if/else` statement that takes a variable of a number from 0 to 100 and logs the number of digits
+```javascript
+var number = 9
+
+if(number === 100) {
+    console.log(number + " is a triple digit number");
+} else if(number > 9 && number < 100) {
+    console.log(number + " is a double digit number");
+} else if(number >= 0 && number <= 9){
+    console.log(number + " is a single digit number");
+} else {
+    console.log("please enter a number from 0 to 100");
+}
+```
+
+## Resources:
+
+Some further reading and resources here: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Conditionals from MDN</a>
 
 ## Challenges
 
-#### If/Else
+Make sure you try different options and change the variables to ensure properly working code.
 
-Write an if / else statement that logs "eat food" if you are hungry and "keep working" if you are not hungry.
+<ol>
+    <li>Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.</li>
 
-Write an if / else statement that logs "drink coffee" if you are tired and "keep going" if you are not tired.   
+    <li>Write an `if/else` statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.</li>
 
-Write an if / else statement that logs "in budget" if a price is lower than $250.  
+    <li>Write an `if/else` statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.</li>
 
-Write an if / else statement that considers two variables (numbers) and outputs the larger number.
+    <li>Write an `if/else` statement that takes two variables of numbers and outputs the larger number, or logs equal if the numbers are the same.</li>
 
-Write an if / else statement that considers a variable (number) and logs whether the number is odd or even.
+    <li>Write an `if/else` statement that takes a variable of a number and logs whether the number is odd, even, or zero.</li>
 
-Write an if / else statement that considers a variable (fruit) and logs the color of that fruit.
+</ol>
+
+#### Stretch Challenges
+<ol>
+    <li>Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available"</li>
+
+
+    <li>Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`)</li>
+</ol>
+
+
+[Go to Javascript Functions](./03js_functions.md)
+
+
+[Back to Javascript Intro](./01js_intro.md)
+
