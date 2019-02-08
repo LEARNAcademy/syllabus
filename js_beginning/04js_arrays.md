@@ -4,8 +4,6 @@ Until now we have dealt only with primitive data types. But what if we want to c
 
 An array is a grouping of multiple pieces of information of many data types stored as a single variable. Arrays give us the structure to assign placement of pieces of data and the ability to perform one function on
 
-Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But often, we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an array, which is just a list of things grouped together.
-
 
 Array is the first example of a collection of data/value as a ordered set of variables.
 An array is linear list of elements/variables that can be accessed with an integer index.
