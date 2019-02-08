@@ -41,7 +41,7 @@ Windows: <br />
 
 ## nodeJS
 
-Node is a JavaScript runtime
+NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node must be installed on our machines. NodeJS allows us to run JS files through terminal. Super handy! After Node is installed you can cd into the folder of your JS file and run `node filename.js` which will run your JS file will render any console.log() in your terminal.
 
 ## Extras
 There are programs that help add a bit of flare to your terminal. One we like at Learn is a shell called ZSH (Z shell).
