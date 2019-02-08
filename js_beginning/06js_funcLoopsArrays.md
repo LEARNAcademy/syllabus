@@ -69,6 +69,25 @@ Write a function that takes in an array of numbers and letters and returns a new
 
 * var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
 
+Create a function that finds the highest number.
+ * `highestNumber([1,4,2])` should return 4
+
+ * Hint: create a variable called max, and assign it a reasonable start value; then use a for loop: if an element is higher than max, change max.
+
+Create a function that finds the lowest number.
+ * `lowestNumber([1,4,2])` should return 1
+
+Create a function that calculate the sum.
+ * `sum([1,2,3])` should return 6
+ * `sum([])` should return 0
+
+Create a function that calculate the mean value.
+ * `mean([1,2,3])` should return 2
+
+Create a function that finds the index of the highest number.
+ * `indexHighestNumber([1,4,2])` should return 1
+
+
 ## Epic Challenges
 
 
