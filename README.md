@@ -15,14 +15,18 @@ This is your introduction to programming through the Javascript programming lang
 
 ## Unit Two: Intermediate Javascript 
 
+This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
+
 1) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
 2) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
-3) [Javascript Pig Latin Project](./js_intermediate/03js_pig_latin_mob.md)
+3) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
 
 
 ## Unit Three: React
+
+React is a powerful Javascript library used to build more complicated web applications. 
 
 1) [React Intro](./react/01react_intro_to_react.md/)
 2) [React Components, State and Props](./react/02react_components_state_props.md/)
@@ -30,6 +34,8 @@ This is your introduction to programming through the Javascript programming lang
 
 
 ## Unit Four: Ruby
+
+Ruby is a backend, object-oriented proramming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
 1) [Ruby Intro](./ruby/01rb_intro.md)
 2) [Ruby Conditions](./ruby/02rb_conditions.md)
