@@ -27,7 +27,7 @@ clear       clear the terminal
 
 ## Tips and Shortcuts
 `command t` opens a new tab in terminal <br />
-`command k` clears the terminal
+`command k` clears the terminal <br />
 `command d` split pane <br />
 `tab` will autocomplete the directory or file name <br />
 `command +/-` will increase or decrease the font size <br />
