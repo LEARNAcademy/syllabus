@@ -37,3 +37,23 @@ NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node must
 
 ## Extras
 There are programs that help add a bit of flare and functionality to your terminal. One we like at Learn is a shell called ZSH (Z shell). Find out more <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank">here.</a>
+
+
+## Working in Terminal
+
+* Open a terminal. 
+* Change the look
+* Show what directory you are in.
+* List out all directories available.
+* Get to the desktop directory.
+* Create a new directory and get into the newly created directory.
+* Open the directory in a window.
+* Open the directory in Atom.
+* Go back to the desktop directory.
+* Drag and Drop for a directories path.
+* Show passed commands used
+* Clear the Terminal
+* Arrow up
+* Increase the Terminal text size
+* Move cursor to beginning of text
+
