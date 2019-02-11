@@ -27,10 +27,18 @@ clear       clear the terminal
 
 ## Tips and Shortcuts
 `command t` opens a new tab in terminal <br />
+`command k` clears the terminal
 `command d` split pane <br />
 `tab` will autocomplete the directory or file name <br />
 `command +/-` will increase or decrease the font size <br />
 `up arrow` prints the last command entered, use the up/down arrows to scroll through commands history <br />
+
+## Changing the look
+
+* Shell
+* New Window
+* Choose style
+
 
 ## nodeJS
 NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node must be installed on our machines. NodeJS allows us to run JS files through terminal. Super handy! After Node is installed you can cd into the folder of your JS file and run `node filename.js` which will run your JS file will render any console.log() in your terminal. To install nodeJS use a package manager system such as Homebrew (for Mac).
