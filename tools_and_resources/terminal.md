@@ -27,13 +27,41 @@ clear       clear the terminal
 
 ## Tips and Shortcuts
 `command t` opens a new tab in terminal <br />
+`command k` clears the terminal <br />
 `command d` split pane <br />
 `tab` will autocomplete the directory or file name <br />
 `command +/-` will increase or decrease the font size <br />
 `up arrow` prints the last command entered, use the up/down arrows to scroll through commands history <br />
+
+## Changing the look
+
+* Shell
+* New Window
+* Choose style
+
 
 ## nodeJS
 NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node must be installed on our machines. NodeJS allows us to run JS files through terminal. Super handy! After Node is installed you can cd into the folder of your JS file and run `node filename.js` which will run your JS file will render any console.log() in your terminal. To install nodeJS use a package manager system such as Homebrew (for Mac).
 
 ## Extras
 There are programs that help add a bit of flare and functionality to your terminal. One we like at Learn is a shell called ZSH (Z shell). Find out more <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank">here.</a>
+
+
+## Working in Terminal
+
+* Open a terminal. 
+* Change the look
+* Show what directory you are in.
+* List out all directories available.
+* Get to the desktop directory.
+* Create a new directory and get into the newly created directory.
+* Open the directory in a window.
+* Open the directory in Atom.
+* Go back to the desktop directory.
+* Drag and Drop for a directories path.
+* Show passed commands used
+* Clear the Terminal
+* Arrow up
+* Increase the Terminal text size
+* Move cursor to beginning of text
+

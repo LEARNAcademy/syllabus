@@ -47,6 +47,12 @@ Ruby is a backend, object-oriented proramming language. Here you will learn the 
 8) [Ruby Text Based Story Game Challenge](./ruby/08rb_textbased_story.md)
 
 
-## Unit Five: Ruby on Rails
+## Unit Five: Ruby on Rails and Postgres
 
+Rails is full-stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
+1) [Rails Intro to Routes, Controllers and View](./rails/01rails_routes_controllers_views.md)
+2) [Rails Forms, Layout and Flash](./rails/02rails_forms_layont_flash_messages.md)
+3) [Intro to Postgres](./rails/03rails_intro_postgres.md)
+4) [SQL Joins](./rails/04rails_sql_joins.md)
+5) [SQL CRUD and Foreign Keys](./rails/05rails_sql_crud_foreign_keys.md)
