@@ -28,7 +28,7 @@ var person = {
 person.getData();   -> "Alex Keaton-123456789"
 ```
 
-## Classes make declaring Objects easier
+## Classes
 
 Classes are like blueprints for objects, with a special 'constructor' function that you can use to create them:
 
@@ -171,9 +171,9 @@ squirrels.push(new Squirrel())
 squirrels[0].storeNut()
 squirrels[0].storeNut()
 
-squirrels.map((squirrel, index)=>{
-  console.log("Squirrel ", index, "nut count: ", squirrel.nutCount)
-})
+for(var i=0; i < squirrels.length; i++){
+  console.log("Squirrel ", i, "nut count: ", squirrels[i].nutCount)
+}
 
 ```
 ```result
@@ -218,7 +218,7 @@ console.log("all rolls ", roller.rolls)
 ## Some Conventions
 
 * Class names are always capitalized
-* Class names are camelCased
+* Class names are PascalCased (like camelCase, but the first word is capitalized)
 * instances of classes are always lowercase
 
 ## Resources
