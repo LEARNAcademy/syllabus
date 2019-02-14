@@ -256,12 +256,12 @@ Write a class that accepts a product, and budget in its constructor.  Add a func
 * "This product is beyond budget."
 
 Here is some sample data:
-````JavaScript
+```javascript
 var product = { name: "OledMonitor", price: 300.00 }
 var budget = 275.00
 ```
 
-Then ....
+Then:
 
 Refactor the previous exercise to replace "Product" in the return to the name of the product.
 
