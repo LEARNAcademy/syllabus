@@ -249,31 +249,28 @@ var product = { name: "chair", price: 14.99 }
 Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
 #### Exercise 2
-Consider this function:
 
-```JavaScript
-function message(product, inBudget){
-  if (inBudget) {
-    return "Product is within budget"
-  } else {
-    return "Product is beyond budget"
-  }
-}````
-And consider this variable:
+Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
 
+* "This product is in budget."
+* "This product is beyond budget."
+
+Here is some sample data:
 ````JavaScript
 var product = { name: "OledMonitor", price: 300.00 }
 var budget = 275.00
 ```
 
-Write a function checkBudget that takes a product, budget and the message function as arguments, determines whether the product is within budget and returns the result of the message function.
+Then ....
 
 Refactor the previous exercise to replace "Product" in the return to the name of the product.
 
-For example
+For example:
 
- checkBudget(product, budget, message) ----> "OledMonitor is beyond budget"
-
+```javascript
+ checkBudget(product, budget, message)
+ ----> "OledMonitor is beyond budget"
+```
 #### Exercise 3
 
 Write a program to get the volume of a Cylinder with four decimal places using object classes.
