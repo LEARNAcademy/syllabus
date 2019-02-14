@@ -58,7 +58,7 @@ Write a function that takes in an array and returns a new array with all numbers
 Write a function that takes in an array and returns a new array with only odd numbers.
 
 * var arr2 = [2, 7, 3, 5, 8, 10, 13]
-* expected output = [7, 3, 5, 10, 13]
+* expected output = [7, 3, 5, 13]
 
 Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
 
