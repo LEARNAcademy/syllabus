@@ -1,5 +1,4 @@
-# Objects through Closures
-
+# Working with and thinking about Objects
 ## Object with Data
 
 Creating an object in JSON:
