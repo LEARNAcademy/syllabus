@@ -188,12 +188,37 @@ create_a_sentence("hello", "to", "world")
 // ==> "Hello to world"
 ```
 
-But, this is very fragile code. Our function breaks if passed more than 3 words. We can fix this problem and make a much better function using the spread operator. What code could you write make this work?
-```
-const words = ["the", "answer", "is", "42"]
+But, this is very fragile code. Our function breaks if passed more than 3 words. We can fix this problem and make a much better function using the spread operator.
 
-// your code here
+
+```JavaScript
+
+create_a_sentence(...words){
+    return words.join(" ")
+}
+
+console.log(create_a_sentence("hello", "yall", "what's", "up", "doc"))
+
+
+
+
+
+
 
 ```
 
 If you want to see a function with the spread operator working - look here <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js">at this dedupe function challenge</a> - a challenge from last week, re-written to make use of spread syntax
+
+# Challenges
+
+Redo these challenges from last week using ES6 Syntax.  See how many you can incorporate into each challenge.  
+
+#### Exercises:
+Write an arrow function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).  (use ES6 string interpolation).
+
+
+
+Write an arrow function named greaterNum that:
+* takes 2 arguments, both numbers.
+* uses ES6 string interpolation that returns whichever number is the greater (higher) number.
+* Test the function 2 times with different number pairs
