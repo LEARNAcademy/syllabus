@@ -5,7 +5,7 @@
 Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
 
 One of the tools that helps us break down problems is the `if/else` decision structure. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says,
-`if one thing is true, do this, Otherwise, do this other thing.`
+`if one thing is true, do this, otherwise, do this other thing.`
 In fact, the javascript code for creating these decision structures reads almost like our sentence did:
 ```
 if(this = true) {
@@ -88,30 +88,24 @@ Some further reading and resources here: <a href="https://developer.mozilla.org/
 
 Make sure you try different options and change the variables to ensure properly working code.
 
-<ol>
-    <li>Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.</li>
+1) Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.
 
-    <li>Write an `if/else` statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.</li>
+2) Write an `if/else` statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.
 
-    <li>Write an `if/else` statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.</li>
+3) Write an `if/else` statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.
 
-    <li>Write an `if/else` statement that takes two variables of numbers and outputs the larger number, or logs equal if the numbers are the same.</li>
+4) Write an `if/else` statement that takes two variables of numbers and outputs the larger number, or logs equal if the numbers are the same.
 
-    <li>Write an `if/else` statement that takes a variable of a number and logs whether the number is odd, even, or zero.</li>
-
-</ol>
+5) Write an `if/else` statement that takes a variable of a number and logs whether the number is odd, even, or zero.
 
 #### Stretch Challenges
-<ol>
-    <li>Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available"</li>
+
+1) Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
+
+2) Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`).
 
 
-    <li>Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`)</li>
-</ol>
-
-
-[Go to Javascript Functions](./03js_functions.md)
+[Go to next lesson: Javascript Functions](./03js_functions.md)
 
 
 [Back to Javascript Intro](./01js_intro.md)
-
