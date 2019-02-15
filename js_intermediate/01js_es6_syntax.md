@@ -200,25 +200,39 @@ create_a_sentence(...words){
 console.log(create_a_sentence("hello", "yall", "what's", "up", "doc"))
 
 
-
-
-
-
-
 ```
 
 If you want to see a function with the spread operator working - look here <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js">at this dedupe function challenge</a> - a challenge from last week, re-written to make use of spread syntax
 
 # Challenges
 
-Redo these challenges from last week using ES6 Syntax.  See how many you can incorporate into each challenge.  
+Redo these challenges from last week using ES6 Syntax.  See how many new elements you can incorporate into each challenge.  
 
 #### Exercises:
-Write an arrow function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).  (use ES6 string interpolation).
+
+1) Write an arrow function called old_enough that takes in 1 number as an argument and returns whether or not the person is allowed to drink (over 21).  (use ES6 string interpolation).
 
 
 
-Write an arrow function named greaterNum that:
+2) Write an arrow function named greaterNum that:
 * takes 2 arguments, both numbers.
 * uses ES6 string interpolation that returns whichever number is the greater (higher) number.
 * Test the function 2 times with different number pairs
+
+3) Consider this object:
+
+```javaScript
+var person = {
+  name: "Alex Keaton",
+  phone: 123456789,
+  getData() { return this.name+"-"+this.phone }
+};
+```
+Use object destructuring to create two variables - a name variable and a phone variable.
+
+4)  Write an arrow function that uses spread operators and takes in any number of letters and returns those letters as one word.  
+
+5)  Can you come up with a function that uses all 3 of these?
+* Arrow Functions
+* String Interpolation
+* Object Destructuring
