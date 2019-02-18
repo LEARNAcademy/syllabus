@@ -65,7 +65,7 @@ Write a function that takes in a string and returns a new string with every lett
 * var sent = "Hello There"
 * expected output = "HELLO THERE"
 
-Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeOf() method.
+Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeof method.
 
 * var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
 
