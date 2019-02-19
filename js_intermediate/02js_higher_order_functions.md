@@ -181,10 +181,10 @@ Write an anonymous function that takes in an array and returns a new array with 
 Write an anonymous function that takes in an array and returns a new array with only odd numbers.
 
 * var arr2 = [2, 7, 3, 5, 8, 10, 13]
-* expected output = [7, 3, 5, 10, 13]
+* expected output = [7, 3, 5, 13]
 
 
-Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeOf() method.
+Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeof() method.
 
 * var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
 
