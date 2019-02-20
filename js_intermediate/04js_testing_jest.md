@@ -102,7 +102,7 @@ Ran all test suites matching /jestpractice.test.js/i.
 Here's our challenge and corresponding test.
 
 ```javaScript
-//Write an if / else statement that logs "eat food" if you are hungry and "keep working" if you are not hungry.
+//Write a function that logs "eat food" if you are hungry and "keep working" if you are not hungry.
 
 
 describe("eatOrWork", () => {
