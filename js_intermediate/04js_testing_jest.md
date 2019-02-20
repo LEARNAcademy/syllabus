@@ -251,7 +251,7 @@ Use the following exercises to **write your test first**, make it fail(red), the
 9) Write the test for a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even. Write the function and make the test pass.
 
 
-10) Write the test for a function called triple that takes an number as an argument and returns the result of that number multiplied by 2. Write the function and make the test pass.
+10) Write the test for a function called double that takes an number as an argument and returns the result of that number multiplied by 2. Write the function and make the test pass.
 
 
 11) Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other. Write the function and make the test pass.
