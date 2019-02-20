@@ -76,7 +76,7 @@ Now we can build our function...
 
 ```javaScript
 
-    hello = () => {
+    const hello = () => {
         return "hi"
     }
 
@@ -149,7 +149,7 @@ Notice that we now have 2 tests - one passes and one fails.  Our first function 
 
 ```javaScript
 
-eatOrWork = (str) => {
+const eatOrWork = (str) => {
     if(str === "hungry"){
         return "eat food"
     } else if(str === "not hungry") {
@@ -194,7 +194,7 @@ Notice how we defined two variables inside the test - groceryList1 and result.  
 Here's the function that would make this test pass.
 
 ```javaScript
-addGranola = (arr1) => {
+const addGranola = (arr1) => {
     var arr2 = arr1.concat("granola")
     return arr2
 }
@@ -212,7 +212,7 @@ addGranola = (arr1) => {
 
 From your terminal(in your project folder) type...
 
-
+* yarn init -y
 * yarn add jest
 
 
