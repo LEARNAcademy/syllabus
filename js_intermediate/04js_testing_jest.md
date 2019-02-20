@@ -228,35 +228,35 @@ Now Build your function that satisfies your test and run yarn jest again.  Your 
 
 Use the following exercises to **write your test first**, make it fail(red), then write your function on the same file below the test and make it pass(green).  You can put all of these challenges (tests and functions) on one file.
 
-1) Write a function returns "drink coffee" if you are tired and "keep working" if you are not tired.  Then write the test.
+1) Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.  Write the function and make the test pass.
 
-2) Write a function returns "relax" if you are stressed and "keep going" if you are not stressed.  Then write the test.
+2) Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed. Write the function and make the test pass.
 
-3) Write a function that returns "in budget" if a price is lower than $300.  Then write the test.
+3) Write the test for a function that returns "in budget" if a price is lower than $300.  Write the function and make the test pass.
 
-4) Write a functions that takes in two arguments(numbers) and returns the smaller number. Then write the test.
+4) Write the test for a function that takes in two arguments(numbers) and returns the smaller number. Write the function and make the test pass.
 
-5) Write a functions that takes in one argument(number) and returns whether the number is odd. Then write the test.
+5) Write the test for a function that takes in one argument(number) and returns whether the number is odd. Write the function and make the test pass.
 
-6) Write a function that takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape. Then write the test.
+6) Write the test for a function that takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape. Write the function and make the test pass.
 
-7) Write a function called Rick that returns "Morty".
+7) Write the test for a function called Rick that returns "Morty".  Write the function and make the test pass.
 
-8) Write a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
-
-
-9) Write a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even.
+8) Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen. Write the function and make the test pass.
 
 
-10) Write a function called triple that takes an number as an argument and returns the result of that number multiplied by 2.
+9) Write the test for a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even. Write the function and make the test pass.
 
 
-11) Write a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+10) Write the test for a function called triple that takes an number as an argument and returns the result of that number multiplied by 2. Write the function and make the test pass.
 
 
-12) Write a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+11) Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other. Write the function and make the test pass.
+
+
+12) Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5". Write the function and make the test pass.
 
 
 13) Consider this variable:
 var product = { name: "chair", price: 14.99 }
-Write a function called describeProduct takes product as an argument and returns "The product is a chair. It costs $14.99".
+Write the test for a function called describeProduct takes product as an argument and returns "The product is a chair. It costs $14.99". Write the function and make the test pass.
