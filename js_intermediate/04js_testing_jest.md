@@ -211,8 +211,7 @@ https://github.com/sapegin/jest-cheat-sheet#test-structure
 ### Set up
 * Create a folder on your desktop
 * cd into your folder
-* touch a file with the extension
-* .test.js
+* touch a file with the extension .test.js
 * type atom .
 
 From your terminal(in your project folder) type...
