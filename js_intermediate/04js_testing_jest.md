@@ -201,6 +201,9 @@ const addGranola = (arr1) => {
 
 ```
 
+#### Jest Cheat Sheet 
+https://github.com/sapegin/jest-cheat-sheet#test-structure
+
 # Challenges
 
 ### Set up
