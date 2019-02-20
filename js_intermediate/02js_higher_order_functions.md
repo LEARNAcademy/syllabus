@@ -200,7 +200,7 @@ var animals = [
 ```
 * Create an anonymous function that takes in any array of objects and returns a new array with only those of type cat.
 
-* Using the same array of objects above.  Create an anonymous function that returns a new array with only the names of the animals.
+* Using the same array of objects above. Create an anonymous function that returns a new array with only the names of the animals.
 
 ## Epic Challenges
 
