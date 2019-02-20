@@ -55,7 +55,7 @@ Mob programming is a scaled up version of pair programming. There is still a dri
 
 **Some Best Practices**
 * Change drivers every 30 minutes
-* Make sure everyone understands what's going on at all sometimes
+* Make sure everyone understands what's going on at all times
 * Take responsibility to stay engaged - ask questions, contribute ideas
 * Take breaks together
 * Help teammates stay engaged "Do you have any ideas.  Does that make sense to you?"
