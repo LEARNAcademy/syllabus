@@ -110,6 +110,7 @@ describe("eatOrWork", () => {
         expect(eatOrWork("hungry")).toBe("eat food")
         expect(eatOrWork("not hungry")).toBe("keep working")
     })
+ })
 ```
 
 We run a our test and it will fail.(Red)
@@ -188,6 +189,7 @@ describe("addGranola", () => {
     test ("adds granola to the end of an array", () => {
         expect(addGranola(groceryList1)).toEqual(result)
     })
+})
 ```
 Notice how we defined two variables inside the test - groceryList1 and result.  Then we used these variables in our expect method.  
 
