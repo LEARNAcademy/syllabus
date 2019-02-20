@@ -216,9 +216,9 @@ From your terminal(in your project folder) type...
 * yarn add jest
 
 
-Write your first test.  From your terminal type...
+Write your first test.  From your terminal(make sure you are still in your project folder) type...
 
-* yarn jest 'name of your file here'
+* yarn jest
 
 Jest will run the code on that file.  Your test will fail (Red).
 
@@ -226,7 +226,7 @@ Now Build your function that satisfies your test and run yarn jest again.  Your 
 
 ## Exercises
 
-Use the following exercises to write your test first, make it fail(red), then write your function on the same file below the test and make it pass(green).  You can put all of these challenges (tests and functions) on one file.
+Use the following exercises to **write your test first**, make it fail(red), then write your function on the same file below the test and make it pass(green).  You can put all of these challenges (tests and functions) on one file.
 
 1) Write a function returns "drink coffee" if you are tired and "keep working" if you are not tired.  Then write the test.
 
