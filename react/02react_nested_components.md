@@ -98,6 +98,18 @@ Next, we will define another component class:
  
 With that call to the Content component within the App component's render, we now have a nested component. This pattern allows us to start building more complex applications. But at this stage it helps to have some project structure built into our application. For that we'll turn to create-react-app.
 
+## Challenge
+
+The goal of the following challenge is to for you to practice nesting components and getting familiar with class based component syntax.
+
+Clone your starter code [here](https://github.com/learn-academy-2019-alpha/react-intro-challenge)
+
+Here are your stories:
+
+- As a user, I see a Header component with the name of you cohort
+- As a user, I can see a Content component that contains a list of all your classmates
+- As a user, I can see a Footer component with the names of you and your partner 
+
 [Go to Create React App](./03react_create_react_app.md)
 
 
