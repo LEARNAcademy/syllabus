@@ -6,21 +6,19 @@
 
 React is a Javascript library for building user interfaces.  We can use it to
 build webpages, mobile web pages, and even native mobile applications.  It is
-component based, which means that we use it to build many small parts, and then
-join them together to form entire applications.  This turns out to be extremely
-scalable.  It was created from Facebook as that application grew and
+component based, which means that we use it to build many small parts, and then join them together to form entire applications.  This turns out to be extremely scalable.  It was created from Facebook as that application grew and
 became more dynamic.
 
 ## Read the docs
 
-React has great documentation for just starting with the framework, and as you grow into bigger and more complex applications.  You'll want to bookmark their documentation, and refer to it often.
+React has great documentation for just starting with the framework, and as you grow into bigger and more complex applications. You'll want to bookmark their documentation and refer to it often.
 
 [React Documentation](https://facebook.github.io/react/)
 
 ## React Components
 
 We'll start with an app that is composed of just a single component, and from
-there build out more useful and engaging features for our users.  Everything in React is a component, from the outer most container of the whole page, to a single line of text or button, its all components, and every component that is visible on the page has a render function.
+there build out more useful and engaging features for our users. Everything in React is a component, from the outer most container of the whole page, to a single line of text or button, its all components, and every component that is visible on the page has a render function.
 
 There a different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with class components.
 
@@ -76,7 +74,7 @@ Here we start with the class definition of our component. Notice that it extends
 
 The final lines in script define a container and tell React to render our component in the container.
 
-This is the barest React application. It is composed of a single component. Recall though that a page in a typical React application is composed of many components. As our application grows in compexity, we will begin to require nested components.
+This is the barest React application. It is composed of a single component. Recall though that a page in a typical React application is composed of many components. As our application grows in complexity, we will begin to require nested components.
 
 [Go to Nested Components](./02react_nested_components.md)
 
