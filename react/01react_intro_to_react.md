@@ -1,6 +1,6 @@
 # Intro to React: React Components
 
-# [React Video](https://player.vimeo.com/video/229416697
+# [React Video](https://player.vimeo.com/video/229416697)
 
 ## What is React?
 
