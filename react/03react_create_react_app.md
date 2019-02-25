@@ -21,7 +21,7 @@ $ cd sample-app
 $ yarn start
 ```
 
-Check your browser.  You've created your first ReactJS app!
+Check your browser.
 
 There are some instructions there to help us get started.  Let's open 'src/App.js' and see what it contains.  Go ahead and leave the server that we started with `npm start` running, and open a new terminal window.  Every time we save our work, the server will notice the changes, and reload the page.  Pretty neat!
 
