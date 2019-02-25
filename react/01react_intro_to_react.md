@@ -1,9 +1,6 @@
 # Intro to React: React Components
 
-# [React Video](https://player.vimeo.com/video/229416697)
-
-<a href="https://player.vimeo.com/video/229416697" target="_blank"><img src="https://player.vimeo.com/video/229416697"
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>)
+# [React Video](https://player.vimeo.com/video/229416697
 
 ## What is React?
 
