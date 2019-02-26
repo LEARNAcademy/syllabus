@@ -216,7 +216,7 @@ In the terminal,
 * type atom .
 * take out any starter code you want to remove
 
-As a user I can see a square on the square on the screen with the word 'off' in the middle.
+As a user I can see a square on the screen with the word 'off' in the middle.
 
 As a user I can click anywhere on the square. When I click the square the words change from 'off' to 'on' and then back 'off' again.
 
