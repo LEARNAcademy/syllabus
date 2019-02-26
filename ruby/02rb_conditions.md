@@ -71,19 +71,7 @@ a = gets.chomp
 Hello World #irb waits for user input on this line and for you to hit return to store it.
 # => "Hello World"
 ```
-**String Interpolation**
 
-It is essential to be able to replace placeholders within a string with values they represent. In the programming paradigm, this is called "string interpolation". In Ruby, string interpolation is extremely easy.
-````RUBY
-a = 1
-b = 4
-puts "The number #{a} is less than #{a + b}"
-The number 1 is less than 5
-This only works with "", not '' strings:
-
-puts 'The number #{a} is less than #{a + b}'
-The number #{a} is less than #{a + b}
-```
 **Defining Methods**
 
 Simple Method

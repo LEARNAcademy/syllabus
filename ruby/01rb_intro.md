@@ -132,6 +132,20 @@ There are all kinds of neat things you can do with strings in Ruby. For example:
 ````
 Notice the last example: You can absolutely chain methods in Ruby.
 
+**String Interpolation**
+
+It is essential to be able to replace placeholders within a string with values they represent. In the programming paradigm, this is called "string interpolation". In Ruby, string interpolation is extremely easy.
+````RUBY
+a = 1
+b = 4
+puts "The number #{a} is less than #{a + b}"
+The number 1 is less than 5
+This only works with "", not '' strings:
+
+puts 'The number #{a} is less than #{a + b}'
+The number #{a} is less than #{a + b}
+```
+
 **Simple Variables**
 
 Ruby's variables behave a lot like the ones in Javascript. Note that you don't need to remember the var busywork before you first use a variable. So in that essence Ruby doesn't care about declaring variables, they spring up into existence the first time they are seen in the code.
@@ -146,6 +160,8 @@ Example in IRB:
 > x = x + ' bar'    # => "foo bar"
 > x                 # => "foo bar"
 ````
+
+
 **Arrays**
 
 Arrays are ordered collections of objects. A variable, for instance, can hold only one item at a time. Arrays can hold multiple items. These items are called elements of the array. Arrays can hold objects of any data type and each element can be referred to by an index. Arrays are zero based, so the index of the first element is zero.
