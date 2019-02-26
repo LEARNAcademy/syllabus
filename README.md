@@ -29,7 +29,7 @@ This section is building on Javascript foundations and introducing more advanced
 React is a powerful Javascript library used to build more complicated web applications. 
 
 1) [React Intro](./react/01react_intro_to_react.md/)
-2) [React Components, State and Props](./react/02react_components_state_props.md/)
+2) [React Components, State and Props](./react/04react_components_state_props.md/)
 3) [React TicTacToe Mob Challenge](./react/03react_tictactoe.md/)
 
 

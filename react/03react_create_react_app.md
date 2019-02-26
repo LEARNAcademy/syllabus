@@ -295,3 +295,11 @@ Use `create-react-app` to create a new React project.
 - As a user, I can see a component with the title of your app (ie. Top 5 Favorite TV Shows)
 - As a user, I can see a component with a list of your favorites
 - As a user, I can see a component containing a little blurb about each item on the list
+
+[Go to Create React App](./05react_state.md)
+
+
+[Back to Intro to React](./01react_intro_to_react.md)
+
+
+[Back to Syllabus](../README.md)
