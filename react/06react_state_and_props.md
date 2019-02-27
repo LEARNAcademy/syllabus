@@ -84,3 +84,9 @@ class App extends React.Component{
 Here we've stripped state back to an array of names. Then, in order to render our components, we code a map to go over the names in the people array and return a GreetPerson component for each name.
 
 Now, as we add things to state, the component updates without any more code!
+
+
+#### Where to go from here
+[Passing Methods as Props](./07react_functional_props.md)
+
+[Back to React Props](./05react_props.md)
