@@ -5,6 +5,7 @@
 Ruby has quite a few more ways of branching than Javascript does, but they're simpler to use on the whole.
 
 There is a simple if-else construct similar to Javascript.
+
 ````Ruby
 x = 1
 if x == 3
@@ -12,7 +13,8 @@ if x == 3
 else
   puts "Just confused now."
 end
-```
+````
+
 **elsif**
 
 When you need more than an either/or. elsif indicates an alternative to the preceding if and any other preceding elsif statements. So, you start off with the if, have any number of elsif alternatives, and end with an else to capture all the leftover possibilities. In Javascript it was spelled out as: else if.
@@ -26,7 +28,7 @@ elsif x == 1
 else
   puts "Just confused now."
 end
-```
+````
 We write elsif rather than Javascript's else if and you don't need the parentheses, but its otherwise pretty similar.
 
 **unless**
@@ -39,7 +41,7 @@ unless x > 1
 else
   puts "Huh?"
 end
-```
+````
 
 **Defining Methods**
 
@@ -54,7 +56,7 @@ Example:
 def hi
   puts "Hello World!"
 end
-```
+````
 The code def hi, defines the method and gives it the name of hi. In between is the body, the code that I want to execute, and then the end tells Ruby we are done defining the method.
 
 Now we can call the method repeatedly.
@@ -70,7 +72,7 @@ Hello World!
 >hi
 Hello World!
 =>nil
-```
+````
 When defining methods with variables within them, those variables stay local to just that method.
 ````RUBY
 def hi
@@ -84,7 +86,7 @@ end
     NameError: undefined local variable or method `me' for main:Object
     from (irb):2
     from /Users/adam/.rvm/rubies/ruby-2.2.1/bin/irb:11:in `<main>'
-    ```
+````
 **Method with Parameters**
 
 Methods can also take parameters:
@@ -92,14 +94,14 @@ Methods can also take parameters:
 def add(a, b)
   a + b
 end
-```
+````
 Ruby simply returns the value of the last line of a method (no return needed or wanted in general).
 
 To call the method:
 ````RUBY
 > add(1, 2)   # => 3
 > add 1, 3    # => 4
-```
+````
 Parentheses are optional (but please use them to make your code easier to read).
 
 
@@ -122,7 +124,7 @@ Hello World # => nil
 puts "Hello World"
 Hello World
 # => nil
-```
+````
 In the example you can see differences and the newline the puts method adds.
 
 **Input**
@@ -139,7 +141,7 @@ a = gets
 Hello World #irb waits for user input on this line and for you to hit return to store it.
 # => "Hello World\n"
 
-```
+````
 How come the new line \n at the end of Hello World? Its because gets takes the string that you typed along with the RETURN key pressed to end your input.
 
 How do we get rid of it? Ruby has another method for just such an occasion. Its called chomp. The chomp method gives you back the string, but without the terminating newline \n.
@@ -149,7 +151,7 @@ Example:
 a = gets.chomp
 Hello World #irb waits for user input on this line and for you to hit return to store it.
 # => "Hello World"
-```
+````
 
 
 **Loops and Blocks**
@@ -173,7 +175,7 @@ We saw this already in an earlier lesson. If you want to repeat some code a cert
   "hello"
   # => 5
   >
-  ```
+  ````
 Just as with Javascript, every function or method we call returns some sort of value. Ruby's built-in functions generally try hard to find something useful to return, and often they do this by giving you the last value they worked with. So in this case, a times loop returns how many times it ran.
 
 **.each Loop**
@@ -190,7 +192,7 @@ Ruby's each also lets you do something with every element of an array.
   # => [1, 2, 3]
 
 > a   # => [1, 2, 3]
-```
+````
 Note the original array is untouched.
 
 
@@ -202,7 +204,7 @@ returns a new array filled with whatever gets returned by the block each time it
 > a = [1, 2, 3]
 > a.map { |n| n * n } # => [1, 4, 9]
 > a                   # => [1, 2, 3]
-```
+````
 Note the original array is untouched
 
 **Blocks**
@@ -214,7 +216,7 @@ nums.each() do |element|
    puts element
    # Place more lines here
 end
-```
+````
 These blocks are equivalent. Use the {...} for one line blocks and the do ... end for multi-line blocks.
 
 Blocks can have multiple parameters:
@@ -226,7 +228,7 @@ nums.each_with_index() do |element, index|
 end
 
 # => Okay
-```
+````
 The statement above with an if statement would have to look like below to get the same output.
 ````RUBY
 x = 1
@@ -237,7 +239,7 @@ else
 end
 
 ~> Okay
-```
+````
 I think if I was going to have an else there, I would switch the above example to use an if
 
 You can write if or unless at the end of a line, in which case it controls whether that line is executed.
@@ -249,7 +251,7 @@ puts "Huh?" unless x == 1
 puts "Okay" if x > 0
 Okay
 # => nil
-```
+````
 
 
 **Hash**
@@ -257,25 +259,25 @@ Okay
 Now on to hashes. A hash is a collection of unique keys and their values, in other words, it's like a dictionary of key value pairs and can be easily created by using its implicit form:
 ````RUBY
 burger_rating = { "Bacon Burger" => 10, "Guacamole Burger" => 9 }
-```
+````
 Hashes allow an alternate syntax form where your keys are always symbols. Instead of
 ````RUBY
 order_form = { :number_of_tacos => 10, :meat_type => "Carne Asada" }
-```
+````
 You could write it as:
 
 ````RUBY
 order_form = { number_of_tacos: 10, meat_type: "Carne Asada" }
-```
+````
 Each named key is a symbol you can access in the hash:
 ````RUBY
 order_form[:number_of_tacos]  # => 10
-```
+````
 A Hash can also be created through its ::new method:
 ````RUBY
 burger_rating = Hash.new
 burger_rating["Double Cheese Burger"] = 10
-```
+````
 
 Hashes have a default value that is returned when accessing keys that do not exist in the hash. If no default is set nil is used. You can set the default value by sending it as an argument to ::new
 
@@ -292,7 +294,7 @@ If no block is given, an enumerator is returned instead.
 
     The Bacon Burger has a rating of 10
     The Quacamole Burger has a rating of 9
-    ```
+ ````
 
 
 ## Challenges:
@@ -333,13 +335,13 @@ Tests:
 ````Ruby
 same("joe", "joe") -> true
 same("joe", "joe1") -> false
-```
+````
 Challenge: Write a function called long_enough that checks whether a String is at least six characters long, and returns true if it is, and false otherwise.
 Tests:
 ```ruby
 long_enough("12345") -> false
 long_enough("123456") -> true
-```
+````
 Challenge Write a function called does_not_contain_special which checks to see if !, #, $ is not contained in a given String.
 Tests:
 ```Ruby
@@ -347,7 +349,7 @@ does_not_contain_special("Hello Friend") -> true
 does_not_contain_special("A#C") -> false
 does_not_contain_special("A!C") -> false
 does_not_contain_special("A$C") -> false
-```
+````
 Challenge Write a method called contains_special which checks to see if !, #, $ is contained in a given String.
 
 Tests:
@@ -356,7 +358,7 @@ contains_special("Hello Friend") -> false
 contains_special("A#C") -> true
 contains_special("A!C") -> true
 contains_special("A$C") -> true
-```
+````
 Challenge Write a method that inputs user ID and password from the user, and then tells the user if the they are acceptable.
 Write a main method called validate_password that:
 
@@ -371,7 +373,7 @@ Task: Write a function using basic functions on String to see if a given String 
 ```ruby
 has_digit("abc") -> false
 has_digit("a1c") -> true
-```
+````
 Super Stretch Goal
 
 Password has to contain a lower and an uppercase letter.
@@ -380,4 +382,4 @@ Tests:
 has_upper_and_lowercase("abc") -> false
 has_upper_and_lowercase("aBc") -> true
 has_upper_and_lowercase("123") -> false
-```
+````
