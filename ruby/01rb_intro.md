@@ -68,6 +68,38 @@ What you are doing is trying to enter your statement again, before you get a new
 
 If you are stuck in the middle of an incorrect statement and want to start over, press Ctrl-C and you will get a clean > prompt.
 
+**Object Orientation**
+
+Ruby is an object-oriented language. Ruby is so object-oriented that a common Ruby mantra is: "Everything is an object."
+
+But what does that mean?
+
+It's a bit tricky to explain what an "object" is; but, loosely speaking, it's a thing that you send a message to. All the action in Ruby happens because you send a message to an object.
+
+In order for an object to respond meaningfully to a message, it must somehow possess internal knowledge of that message a pre-existing, primed response, saying what should happen when this particular message arrives.
+
+This primed response is called a method. In other words, a method is simply a set of instructions saying what an object should do in response to a particular message.
+
+To send a particular message to an object is to call that method of the object.
+
+**Calling Methods on Objects. The DOT!**
+
+
+In Ruby, you call a method to an object using the dot-notation: first the name of the object, then a dot, then the method. For example, if we had an object called Dog, we could call the method for it to bark like this:
+````RUBY
+dog.bark
+```
+That's a legal Ruby program in theory, but in fact it wont do anything useful all by itself. Right now, if you were to run that as a Ruby program, Ruby would give you an error message. That's because we dont have an object called Dog. And even if we did, it wouldnt necessarily know how to bark because there is no method called bark.
+
+Let's try it with a real Ruby object like "Hello". You will notice that "hello" is a string. A string is an object that Ruby knows. So that means the string has a pre-existing, primed responses to certain messages.
+
+Example:
+````RUBY
+Hello.upcase
+```
+The string "hello" knows when the upcase method is called on it, it needs to change all letters to an upper case.
+
+
 RUBY STYLE GUIDE
 Correct styling conventions for Ruby made for code that is easy to read. You can find a maintained Ruby Styling Guide here: Ruby Styling Guide.
 
