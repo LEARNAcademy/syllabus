@@ -1,4 +1,4 @@
-# Ruby Decision Structures
+# Ruby Conditions, Methods, Loops, Hashes
 
 ## If/Else
 
