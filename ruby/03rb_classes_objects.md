@@ -1,6 +1,30 @@
 # OBJECT ORIENTED PROGRAMMING IN RUBY
 We've been talking throughout this class about how everything in Ruby is an object, but it can be difficult to visualize what that means when it comes to building a program. Let's take a moment with your Car challenge to take apart how Ruby's object-oriented behavior actually impacts you as a programmer.
 
+
+**Given Classes**
+
+We've established everything in Ruby is an object; and just like real world objects you can make them do something; "." means calling a method on (doing something to) an object.
+
+Examples:
+````RUBY
+hello.length
+hello.upcase
+```
+Every object in Ruby belongs to a class: (another way of saying: each object is an instance of class). To find out what class an object is a part of you can call .class on any object and it will tell you. Once you know it is easy to Google the class of Ruby and see the methods/capabilities of the class.
+````RUBY
+hello.class
+1.class
+1.0.class
+true.class
+Class.class
+```
+Do this for yourself to see the Ruby documentation:
+Google: Ruby String class
+Google: Ruby Fixnum class
+
+Be sure to select the documentation for the version of Ruby you have installed (to find out use: ruby --version).
+
 Classes are made up of Nouns and Verbs
 Take a look at your Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @wheels and @model_year -- are what make your object what it is: the class Vehicle (also a noun). The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
 
