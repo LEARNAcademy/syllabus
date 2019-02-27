@@ -16,7 +16,7 @@ So how do we accomplish an application like this?  The answer is passing a funct
 
 ### Reviewing Scope
 
-Concider this code:
+Consider this code:
 
 ```javascript
 function getGreeter(){
