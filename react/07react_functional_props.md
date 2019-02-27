@@ -129,3 +129,9 @@ Let's look at an example to help make this clear:
 
 Notice that we only need to maintain state in the parent App component.  You can begin to think of state in your application like an upsidedown tree.  It flows from a few smart parent components through all of the nested child components.
 
+
+#### Where To From Here?
+
+[Practice with the Dice Roller](./08dice_roller.md)
+
+[Back to State and Props](./06react_state_and_props.md)
