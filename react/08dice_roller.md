@@ -15,4 +15,4 @@ Using a well thought out state tree and nested component structure, construct an
 ### Where to from here
 [More Practice with Treasure Hunt](./09react_treasure_hunt.md)
 
-[Back to Methods as Props](./07react_functional_props.mdt)
+[Back to Methods as Props](./07react_functional_props.md)
