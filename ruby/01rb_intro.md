@@ -95,7 +95,7 @@ Let's try it with a real Ruby object like "Hello". You will notice that "hello" 
 
 Example:
 ````RUBY
-Hello.upcase
+"Hello".upcase
 ````
 The string "hello" knows when the upcase method is called on it, it needs to change all letters to an upper case.
 
