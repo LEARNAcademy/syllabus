@@ -88,7 +88,7 @@ To send a particular message to an object is to call that method of the object.
 In Ruby, you call a method to an object using the dot-notation: first the name of the object, then a dot, then the method. For example, if we had an object called Dog, we could call the method for it to bark like this:
 ````RUBY
 dog.bark
-```
+````
 That's a legal Ruby program in theory, but in fact it wont do anything useful all by itself. Right now, if you were to run that as a Ruby program, Ruby would give you an error message. That's because we dont have an object called Dog. And even if we did, it wouldnt necessarily know how to bark because there is no method called bark.
 
 Let's try it with a real Ruby object like "Hello". You will notice that "hello" is a string. A string is an object that Ruby knows. So that means the string has a pre-existing, primed responses to certain messages.
@@ -96,7 +96,7 @@ Let's try it with a real Ruby object like "Hello". You will notice that "hello" 
 Example:
 ````RUBY
 Hello.upcase
-```
+````
 The string "hello" knows when the upcase method is called on it, it needs to change all letters to an upper case.
 
 
@@ -108,7 +108,7 @@ Numbers
 Integers
 Integer operators and arithmetic in Ruby are very similar to what you've seen so far in Javascript:
 
-`````RUBY
+````RUBY
 
 > 1 + 3   # => 4
 > 2 * 2   # => 4
@@ -176,7 +176,7 @@ This only works with "", not '' strings:
 
 puts 'The number #{a} is less than #{a + b}'
 The number #{a} is less than #{a + b}
-```
+````
 
 **Simple Variables**
 
@@ -221,7 +221,7 @@ Examples in IRB:
 > nums.length   # => 89
 
 > [1, 2, 3] << 99 # => [1, 2, 3, 99]
-```
+````
 The append operator, <<, (a.k.a. "the shovel") basically sticks something at the end of the array. The difference here is that we dont have to specify an index position when using the append operator.
 
 It's good to note that the num array is not permanently changed by calling the method reverse on it. It returns a new array with the elements reversed.
@@ -261,7 +261,7 @@ For this exercise, try out some of the Ruby string methods for yourself.
 .reverse
 .include?
 .capitalize
-```
+````
 * create a variable and put it into a string using string interpolation
 
 **Arrays Challenge**
