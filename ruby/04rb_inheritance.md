@@ -25,6 +25,7 @@ This style of programming is called object oriented, even if the programming to 
 Ruby Inheritance <
 Since inheritance is a relation between two classes, to create the relation we use <. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
 
+```RUBY
 class Fruit
 
   def initialize  color
@@ -39,10 +40,12 @@ class Fruit
     true
   end
 end
+```
 Now we will create a new class called Apple and have it inherit from Fruit.
 
 And since we are inheriting from the Fruit class, which initializes an instance variable, and requires a parameter, we have to do the same with our Apple class. So we create an initialize method, and pass in the parameter as super. Using super will call the original method from Fruit and pass in the parameter.
 
+```RUBY
 class Apple < Fruit
 
   def initialize color
@@ -62,3 +65,4 @@ apple_one.is_sweet
 => true
 apple_one.spoils
 => "Spoils in 7 days"
+```
