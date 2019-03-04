@@ -270,7 +270,3 @@ For this exercise, try out some of the Ruby string methods for yourself.
 * From that array, extract your top 3 movies in a new array
 * Find an expression that tells you how many elements are in the array
 * Reverse an array, try out slices, how to rotate them, and how to get a random element from the array
-
-[Go to Ruby Conditions, Methods, Loops and Hashes](./02rb_cond_methods_loops_hashes.md)
-
-[Back to Syllabus](../README.md)

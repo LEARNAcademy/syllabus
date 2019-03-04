@@ -383,7 +383,3 @@ has_upper_and_lowercase("abc") -> false
 has_upper_and_lowercase("aBc") -> true
 has_upper_and_lowercase("123") -> false
 ````
-
-[Go to Ruby Classes and Objects](./03rb_classes_objects.md)
-
-[Back to Intro](./01rb_intro.md)
