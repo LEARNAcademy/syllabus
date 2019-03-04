@@ -1,8 +1,9 @@
-INHERITANCE
-Class
+# INHERITANCE
+
+## Class
 Class can be an abstract concept when you first come across it. Let's try to clear up what class is and how it behaves. To start, "class definition" describes the structure and behavior of a set of objects.
 
-Inheritance
+## Inheritance
 Inheritance is a relationship between two classes. For instance, an Apple "is a" Fruit. Apple and Fruit have an inheritance relationship based on their shared features.
 Fruit is the Superclass,"super"/bigger, because it encompasses more things (like other classes or Fruits) and is the broader class definition.
 
@@ -11,7 +12,7 @@ Apple would be a good example of a class further down the inheritance hierarchy.
 Inheritance means that classes inherit the external interface of the superclasses. That is a slightly complicated way of saying that, in Ruby, classes can access and use their superclass' methods. The "private parts" of those methods -- the instance variables -- are not inherited (only the methods in a class can access them).
 
 
-has-a, has-many
+## has-a, has-many
 Aggregation/composition/contains, has-a (uses): one class uses another class
 Has-a: singular; have-many: plural, implying a collection (for instance, array).
 Classes are related through storage or operation, but not more/less.
@@ -22,9 +23,10 @@ Objects, meaning instances of a class, are realizations of a class that can be i
 
 This style of programming is called object oriented, even if the programming to some extent focuses on classes.
 
-Ruby Inheritance <
+## Ruby Inheritance <
 Since inheritance is a relation between two classes, to create the relation we use <. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
 
+```RUBY
 class Fruit
 
   def initialize  color
@@ -39,10 +41,12 @@ class Fruit
     true
   end
 end
+```
 Now we will create a new class called Apple and have it inherit from Fruit.
 
 And since we are inheriting from the Fruit class, which initializes an instance variable, and requires a parameter, we have to do the same with our Apple class. So we create an initialize method, and pass in the parameter as super. Using super will call the original method from Fruit and pass in the parameter.
 
+```RUBY
 class Apple < Fruit
 
   def initialize color
@@ -62,3 +66,4 @@ apple_one.is_sweet
 => true
 apple_one.spoils
 => "Spoils in 7 days"
+```

@@ -7,18 +7,22 @@ We've been talking throughout this class about how everything in Ruby is an obje
 We've established everything in Ruby is an object; and just like real world objects you can make them do something; "." means calling a method on (doing something to) an object.
 
 Examples:
-````RUBY
+
+```RUBY
 hello.length
 hello.upcase
 ```
+
 Every object in Ruby belongs to a class: (another way of saying: each object is an instance of class). To find out what class an object is a part of you can call .class on any object and it will tell you. Once you know it is easy to Google the class of Ruby and see the methods/capabilities of the class.
-````RUBY
+
+```RUBY
 hello.class
 1.class
 1.0.class
 true.class
 Class.class
 ```
+
 Do this for yourself to see the Ruby documentation:
 Google: Ruby String class
 Google: Ruby Fixnum class
@@ -44,17 +48,21 @@ Note that this class concept is not (directly) related to JavaScript's class. A 
 
 You can find out the class of something by calling its .class method.
 
+```RUBY
 > 1.class
 => Fixnum
 > 1.0.class
 => Float
 'hello'.class
 => String
+```
+
 The nice thing about Ruby's OOP capabilities is that they're deep and subtle and powerful and you can spend a lot of time getting really good at OOP and being able to do many amazing things. Yet for most purposes, you can stick to simple OOP features and get nearly anything done that you might want.
 
 Making Your Own Class
 Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular). This can be created in IRB.
 
+```RUBY
 class Person
   def set_given_name(name)
     @given_name = name
@@ -69,28 +77,40 @@ Then you can create a new instance of the Person class. You create a new instanc
 
 a_person = Person.new()
 a_person.set_given_name('Bilbo')
+```
+
 Then you can call the methods that have stored the names:
 
+```RUBY
 a_person.get_given_name()
 => 'Bilbo'
+```
+
 Instance Variables
 The variable starting with @ is an instance variable, meaning it belongs to the instance of Person.
 And each instance of Person has it's own set of instance variables independent of other Persons.
 
 You can't just access an instance variable from outside of an object, as you can in JavaScript.
 
+```RUBY
 > a_person.given_name
 NoMethodError: undefined method `given_name` for #<Person:0x007fec7287d9b0>
 > p.@given_name
 SyntaxError: (irb):60: syntax error, unexpected tIVAR, expecting '('
+```
+
 This is why we have written accessor methods - the get... and set... methods in my class. And remember that Ruby methods return the value of whatever they last did, which is how my get... methods work.
 
 Simplifying the Methods
 To keep things simple, I've written the accessor methods in a much more cumbersome way than you would normally do it in Ruby. First, it would clearly be nicer to be able to set a variable value using the same sort of syntax we would use in JavaScript:
 
+```RUBY
 a_person.given_name = 'Bilbo'
+```
+
 And in fact we can do that. Without restarting your irb, enter this:
 
+```RUBY
 class Person
   def given_name=(name)
     @given_name = name
@@ -101,12 +121,16 @@ class Person
   end
 end
 This lets you write a_person.given_name = 'Baggins', which is interpreted as aPerson.given_name=("Baggins")
+```
 
 For example:
 
+```RUBY
 >  a_person.given_name = 'Bracegirdle'
 >  a_person.given_name
 => 'Bracegirdle'
+```
+
 Initialization
 Finally, you will often want to do something at the time an object is created. Perhaps it has a property that is an array, and you want to ensure that it always starts as an empty array.
 
@@ -114,6 +138,7 @@ If you give your class an initialize method, it will get executed immediately wh
 
 class with initialize:
 
+```RUBY
 class Jedi
 
   def initialize
@@ -124,14 +149,20 @@ class Jedi
     @title
   end
 end
+```
+
 Creating a new instance of the Jedi class, which immediately initializes an instance variable with an empty array, which can than have elements pushed to it:
 
+```RUBY
 > chosen_one = Jedi.new
 => #<Jedi:0x007fb532a24d30 @title="Knight">
 > chosen_one.title
 => "Knight"
+```
+
 Another example with initialize for a one-to-many/has-many relationship:
 
+```RUBY
 class Fruit
 
   def initialize
@@ -150,8 +181,11 @@ generic_fruit.vitamins => []            # No vitamins
 generic_fruit.vitamins << "C"
 generic_fruit.vitamins << "D"
 generic_fruit.vitamins => ["C", "D"]
+```
+
 One more Example, but this one is looking for an argument to be passed into it when it is initialized. So it gives an error of wrong number of arguments if one is not passed in.
 
+```RUBY
 class Animal
 
   def initialize att
@@ -174,3 +208,4 @@ Correct instance of the class, with passing in 1 argument.
 => #<Baz:0x007fb5331de210 @attitude=:sweet>
 > kitten.attitude
 => :sweet
+```
