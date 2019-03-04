@@ -68,7 +68,7 @@ apple_one.spoils
 => "Spoils in 7 days"
 ```
 
-[Go to Ruby Inheritance](./05rb_rspec.md)
+[Go to Ruby Testing with Rspec](./05rb_rspec.md)
 
 
 [Back to Ruby Classes and Objects](./03rb_classes.md)
