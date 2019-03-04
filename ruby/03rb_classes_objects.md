@@ -209,3 +209,8 @@ Correct instance of the class, with passing in 1 argument.
 > kitten.attitude
 => :sweet
 ```
+
+[Go to Ruby Inheritance](./04rb_inheritance.md)
+
+
+[Back to Ruby Conditions, Methods, Loops, and Hashes](./02rb_cond_methods_loops_hashes.md)

@@ -479,3 +479,8 @@ Read <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec" target="_b
 
 <a href="http://www.anchor.com.au/wp-content/uploads/rspec_cheatsheet_attributed.pdf" target="_blank">RSpec Cheat Sheet</a>
 
+
+[Go to Ruby Testing](./06rb_testing.md)
+
+
+[Back to Ruby Classes and Objects](./04rb_inheritance.md)
