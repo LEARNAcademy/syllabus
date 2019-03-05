@@ -26,3 +26,7 @@
 ## Stretch
 - As a player, I can click on the question marks and behind one of the question marks is a bomb icon and an alert appears with the text “You Lose"
 - As a player, I can play a 25 square game with three bombs
+
+[More Practice with Tic Tac Toe](./10react_ticktactoe.md)
+
+[Back to Practice with Dice Roller](./08dice_roller.md)

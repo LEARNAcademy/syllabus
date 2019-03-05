@@ -46,3 +46,9 @@ and the game has ended.
 - Use flexbox to set up your grid
 - Allow users to choose their mark (X, O, a color, an emoji, etc...)
 - Create a component for alerts and push the win/lose messages there instead of using an alert
+
+[On to Ruby!](../ruby/01rb_intro.md)
+
+[Back to Practice with Dice Roller](./08dice_roller.md)
+
+[Back to Syllabus](../README.md)
