@@ -483,4 +483,4 @@ Read <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec" target="_b
 [Go to Ruby Testing](./06rb_testing.md)
 
 
-[Back to Ruby Classes and Objects](./04rb_inheritance.md)
+[Back to Ruby Inheritance](./04rb_inheritance.md)
