@@ -236,3 +236,7 @@ Use object destructuring to create two variables - a name variable and a phone v
 * Arrow Functions
 * String Interpolation
 * Object Destructuring
+
+[Go to Javascript Higher Order Functions](./02js_higher_order_functions.md)
+
+[Back to Javascript Objects](../js_beginning/07js_objects.md)

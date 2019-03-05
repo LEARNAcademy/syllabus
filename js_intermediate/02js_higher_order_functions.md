@@ -217,3 +217,7 @@ Create a function that merges two arrays, takes in two arrays as arguments retur
 * var arr1 = [3, 7, 10, 5, 4, 3]
 * var arr2 = [7, 8, 2, 1, 5, 4]
 * expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
+
+[Go to Javascript Pig Latin](./03js_pig_latin_mob.md)
+
+[Back to Javascript ES6 Syntax](./01js_es6_syntax.md)

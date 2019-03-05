@@ -264,3 +264,7 @@ Use the following exercises to **write your test first**, make it fail(red), the
 13) Consider this variable:
 var product = { name: "chair", price: 14.99 }
 Write the test for a function called describeProduct takes product as an argument and returns "The product is a chair. It costs $14.99". Write the function and make the test pass.
+
+[Go to Javascript Class Interitance](./05js_class_inheritance.md)
+
+[Back to Javascript Pig Latin](./03js_pig_latin_mob.md)
