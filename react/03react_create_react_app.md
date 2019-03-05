@@ -296,10 +296,10 @@ Use `create-react-app` to create a new React project.
 - As a user, I can see a component with a list of your favorites
 - As a user, I can see a component containing a little blurb about each item on the list
 
-[Go to Create React App](./05react_state.md)
+[Go to React State](./04react_state.md)
 
 
-[Back to Intro to React](./01react_intro_to_react.md)
+[Back to React Nested Components](./02react_nested_components.md)
 
 
 [Back to Syllabus](../README.md)
