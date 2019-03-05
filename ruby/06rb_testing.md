@@ -58,7 +58,7 @@ Uncle Bob loves astronomy, and often uses it in his examples.  Are you wondering
 
 <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/K7yR--yL0bc?ecver=2" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
-[Go to Ruby Task List Challenge](./07_tasklist_challenge.md)
+[Back to Ruby Task List Challenge](./07rb_tasklist_challenge.md)
 
 
-[Back to Ruby Testing with Rspec](./05rb_rspec.md)
+[Back to Syllabus](../README.md)

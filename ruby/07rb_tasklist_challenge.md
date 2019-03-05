@@ -56,7 +56,7 @@ For each story:
 
 **Story:**	As a developer with a TaskList with a collection of items with and without due dates and yearly recurring dates, I can list all the not completed items in order of due date and yearly dates for the current month, then the items without due dates.
 
-[Go to Ruby Text Based Story](./08_textbased_story.md)
+[Go to Ruby Text Based Story](./08rb_textbased_story.md)
 
 
 [Back to Ruby Rspec](./06rb_testing.md)

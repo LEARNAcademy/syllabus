@@ -32,3 +32,8 @@ Whichever method you choose is completely up to you. You need to find out for yo
 Check out these links to see what other people have thought up for text-based game adventures:
 
 - <a href="http://playfic.com/explore/popular">Playfic</a>
+
+[Go to Ruby Text Based Story](./08rb_textbased_story.md)
+
+
+[Back to Ruby Rspec](./06rb_testing.md)

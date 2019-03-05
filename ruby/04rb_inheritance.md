@@ -71,4 +71,4 @@ apple_one.spoils
 [Go to Ruby Testing with Rspec](./05rb_rspec.md)
 
 
-[Back to Ruby Classes and Objects](./03rb_classes.md)
+[Back to Ruby Classes and Objects](./03rb_classes_objects.md)
