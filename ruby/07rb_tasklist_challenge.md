@@ -60,5 +60,3 @@ For each story:
 
 
 [Back to Ruby Rspec](./06rb_testing.md)
-
-[Back to Syllabus](../README.md)
