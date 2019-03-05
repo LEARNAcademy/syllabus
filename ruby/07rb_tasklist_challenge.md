@@ -59,4 +59,4 @@ For each story:
 [Go to Ruby Text Based Story](./08rb_textbased_story.md)
 
 
-[Back to Ruby Rspec](./06rb_testing.md)
+[Back to Ruby Testing](./06rb_testing.md)
