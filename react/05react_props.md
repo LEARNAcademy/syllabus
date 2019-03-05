@@ -79,7 +79,4 @@ Let's now take a look at how to use props in tandem with state.
 [Go to State and Props](./06react_state_and_props.md)
 
 
-[Back to Intro to React](./04react_state.md)
-
-
-[Back to Syllabus](../README.md)
+[Back to React State](./04react_state.md)

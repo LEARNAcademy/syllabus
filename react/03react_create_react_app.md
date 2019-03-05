@@ -300,6 +300,3 @@ Use `create-react-app` to create a new React project.
 
 
 [Back to React Nested Components](./02react_nested_components.md)
-
-
-[Back to Syllabus](../README.md)
