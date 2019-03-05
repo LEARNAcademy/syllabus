@@ -1,4 +1,5 @@
 # React Treasure Hunt
+
 ## The Setup:
 - 3 components
     - App.js

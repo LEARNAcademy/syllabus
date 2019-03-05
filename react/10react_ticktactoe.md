@@ -1,4 +1,6 @@
-# Rules of React
+# React Tic Tac Toe
+
+## Rules of React
 
 Here are some rules to keep handy as you build Tic Tac Toe - following them will help you avoid lots of problems.
 
@@ -7,7 +9,7 @@ Here are some rules to keep handy as you build Tic Tac Toe - following them will
 - Only call setState once per method or render cycle
 - State is for values that change, Props is for values to pass to a child component, constants should be set outside the component
 
-# For cleaner React
+## For cleaner React
 
 Some guidelines for better looking React code:
 
