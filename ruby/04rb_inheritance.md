@@ -67,3 +67,8 @@ apple_one.is_sweet
 apple_one.spoils
 => "Spoils in 7 days"
 ```
+
+[Go to Ruby Testing with Rspec](./05rb_rspec.md)
+
+
+[Back to Ruby Classes and Objects](./03rb_classes_objects.md)
