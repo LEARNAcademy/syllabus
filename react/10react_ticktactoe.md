@@ -1,4 +1,6 @@
-# Rules of React
+# React Tic Tac Toe
+
+## Rules of React
 
 Here are some rules to keep handy as you build Tic Tac Toe - following them will help you avoid lots of problems.
 
@@ -7,7 +9,7 @@ Here are some rules to keep handy as you build Tic Tac Toe - following them will
 - Only call setState once per method or render cycle
 - State is for values that change, Props is for values to pass to a child component, constants should be set outside the component
 
-# For cleaner React
+## For cleaner React
 
 Some guidelines for better looking React code:
 
@@ -46,3 +48,9 @@ and the game has ended.
 - Use flexbox to set up your grid
 - Allow users to choose their mark (X, O, a color, an emoji, etc...)
 - Create a component for alerts and push the win/lose messages there instead of using an alert
+
+[On to Ruby!](../ruby/01rb_intro.md)
+
+[Back to Practice with Dice Roller](./08dice_roller.md)
+
+[Back to Syllabus](../README.md)
