@@ -325,7 +325,7 @@ On the registration page, the user has to enter a user ID and a password, which 
 * User ID and password have to be at least six characters long
 * Password has to contain at least one of: !#$
 * User ID cannot contain the following characters: !#$ and space
-* Password cannot contain "password" in a capitalization
+* Password cannot be the word "password" 
 
 Proceed as follows:
 
