@@ -166,3 +166,7 @@ Hint: use `INTERSECT` or `OUTER JOIN` or `INNER JOIN`
 * What are the categories of the movies that were never rented?
 * Which customers did not rent a movie in the second half of 2005?
 * What was the total revenue in April 2007? In California?
+
+[Go to SQL CRUD and Foreign Keys](./05rails__sql_crud_foreign_keys.md)
+
+[Back to Intro to Postgres](./03rails_intro_postgres.md)
