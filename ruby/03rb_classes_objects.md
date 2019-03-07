@@ -10,11 +10,11 @@ You can find out the class of something by calling its .class method.
 
 ```RUBY
 > 1.class
-=> Fixnum
+# Fixnum
 > 1.0.class
-=> Float
+# Float
 'hello'.class
-=> String
+# String
 ```
 
 The nice thing about Ruby's OOP capabilities is that they're deep and subtle and powerful and you can spend a lot of time getting really good at OOP and being able to do many amazing things. Yet for most purposes, you can stick to simple OOP features and get nearly anything done that you might want.
@@ -43,7 +43,7 @@ Then you can call the methods that have stored the names:
 
 ```RUBY
 a_person.get_given_name()
-=> 'Bilbo'
+# 'Bilbo'
 ```
 
 Instance Variables
@@ -88,7 +88,7 @@ For example:
 ```RUBY
 >  a_person.given_name = 'Bracegirdle'
 >  a_person.given_name
-=> 'Bracegirdle'
+# 'Bracegirdle'
 ```
 
 Initialization
@@ -115,9 +115,9 @@ Creating a new instance of the Jedi class, which immediately initializes an inst
 
 ```RUBY
 > chosen_one = Jedi.new
-=> #<Jedi:0x007fb532a24d30 @title="Knight">
+# #<Jedi:0x007fb532a24d30 @title="Knight">
 > chosen_one.title
-=> "Knight"
+# "Knight"
 ```
 
 Another example with initialize for a one-to-many/has-many relationship:
@@ -136,11 +136,11 @@ end
 New instance of the class:
 
 generic_fruit = Fruit.new
-=> #<Fruit:0x007fb532acc120 @vitamins=[]>
-generic_fruit.vitamins => []            # No vitamins
+# #<Fruit:0x007fb532acc120 @vitamins=[]>
+generic_fruit.vitamins        # No vitamins []
 generic_fruit.vitamins << "C"
 generic_fruit.vitamins << "D"
-generic_fruit.vitamins => ["C", "D"]
+generic_fruit.vitamins  # has two vitamins ["C", "D"]
 ```
 
 One more Example, but this one is looking for an argument to be passed into it when it is initialized. So it gives an error of wrong number of arguments if one is not passed in.
@@ -165,9 +165,9 @@ from (irb):81:in `new'
 Correct instance of the class, with passing in 1 argument.
 
 > kitten = Animal.new :sweet
-=> #<Baz:0x007fb5331de210 @attitude=:sweet>
+# #<Baz:0x007fb5331de210 @attitude=:sweet>
 > kitten.attitude
-=> :sweet
+# :sweet
 ```
 
 # OBJECT ORIENTED PROGRAMMING IN RUBY
