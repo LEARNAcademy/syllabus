@@ -56,7 +56,7 @@ Before starting the implemention, copy each story into the editor as a comment, 
 **Story**:	As a programmer, I can make a Tesla car.
 **Hint**:	Create an variable called `my_tesla` which is of class `Tesla` which inherits from class `Car`.
 
-**Story**:	As a programmer, I can make a Tesla car.
+**Story**:	As a programmer, I can make a Honda car.
 
 **Story**:	As a programmer, I can make a Toyota car.
 
