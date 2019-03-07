@@ -1,4 +1,7 @@
 # BEHAVIOR DRIVEN DEVELOPMENT PROCESS
+
+### [Video of BDD with Rspec and Ruby](https://player.vimeo.com/video/168104193)
+
 The process to follow is:
 
 1) Determine a feature or behavior to implement.
@@ -219,6 +222,9 @@ Put the following in the file:
 ```
 
 ## BEHAVIOR-DRIVEN DEVELOPMENT
+
+### [Slideshow / Video of BDD](https://player.vimeo.com/video/168125067)
+
 ### Goals
 Look through these now and then use them to test yourself after the session
 
