@@ -1,4 +1,7 @@
 # BEHAVIOR DRIVEN DEVELOPMENT PROCESS
+
+### [Video of BDD with Rspec and Ruby](https://player.vimeo.com/video/168104193)
+
 The process to follow is:
 
 1) Determine a feature or behavior to implement.
@@ -132,7 +135,7 @@ We expect car.speed to be a number. We use the Numeric class in our test because
     # A weak expectation
     expect(a_car.speed).to be > 0
 
-    # Simple way to test    
+    # Simple way to test
     expect(a_car.speed).to be 42
 
     # Alternative way to test
@@ -219,6 +222,9 @@ Put the following in the file:
 ```
 
 ## BEHAVIOR-DRIVEN DEVELOPMENT
+
+### [Slideshow / Video of BDD](https://player.vimeo.com/video/168125067)
+
 ### Goals
 Look through these now and then use them to test yourself after the session
 
@@ -478,9 +484,3 @@ Read <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec" target="_b
 <a href="http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/" target="_blank">
 
 <a href="http://www.anchor.com.au/wp-content/uploads/rspec_cheatsheet_attributed.pdf" target="_blank">RSpec Cheat Sheet</a>
-
-
-[Go to Ruby Testing](./06rb_testing.md)
-
-
-[Back to Ruby Inheritance](./04rb_inheritance.md)

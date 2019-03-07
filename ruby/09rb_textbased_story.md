@@ -33,7 +33,6 @@ Check out these links to see what other people have thought up for text-based ga
 
 - <a href="http://playfic.com/explore/popular">Playfic</a>
 
-[Back to Ruby Task List Challenge](./07rb_tasklist_challenge.md)
 
 
 [Back to Syllabus](../README.md)
