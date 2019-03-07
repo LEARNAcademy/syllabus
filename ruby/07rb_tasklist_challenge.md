@@ -1,10 +1,10 @@
 ## How To Complete a Story
 
 For each story:
- 
-1. Copy the story into your rspec file as a comment. 
-1. Then write the test(s) that class/method tests must pass. 
-1. Then run the test(s) and see that they fail. 
+
+1. Copy the story into your rspec file as a comment.
+1. Then write the test(s) that class/method tests must pass.
+1. Then run the test(s) and see that they fail.
 1. Then implement the class/method, with comments, so that it passes the tests one at a time and you understand what you have created.
 
 ## Starting User Stories
@@ -55,8 +55,3 @@ For each story:
 **Story:**	As a developer with a TaskList with and without due dates and yearly recurring dates, I can list all the not completed items in order of due date and yearly dates for the current month.
 
 **Story:**	As a developer with a TaskList with a collection of items with and without due dates and yearly recurring dates, I can list all the not completed items in order of due date and yearly dates for the current month, then the items without due dates.
-
-[Go to Ruby Text Based Story](./08rb_textbased_story.md)
-
-
-[Back to Ruby Testing](./06rb_testing.md)
