@@ -86,9 +86,9 @@ vehicle.lights_on? # should return false
 
 **Story**:	As a programmer, I can slow my Teslas down by 7 per braking.
 
-**Story**:	As a programmer, I can speed my Teslas up by 2 per acceleration.
+**Story**:	As a programmer, I can speed my Hondas up by 2 per acceleration.
 
-**Story**:	As a programmer, I can slow my Teslas down by 1.25 per braking.
+**Story**:	As a programmer, I can slow my Hondas down by 1.25 per braking.
 
 **Story**:	As a programmer, I can speed my Toyotas up by 7 per acceleration.
 
