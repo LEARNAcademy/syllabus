@@ -580,3 +580,8 @@ Accept and store user name, and use it in the views.
 #### Stretch Challenge Four
 
 Encrypt the secret number.
+
+[Go to Rails Forms, Layout and Flash](./02rails_forms_layouts_flash_messages.md)
+
+
+[Back to Ruby Text Based Story Game Challenge](../ruby/08rb_textbased_story.md)

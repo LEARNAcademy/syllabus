@@ -209,3 +209,8 @@ Test that the webpage works the same as using the URL above.
 # Rails Hi/Lo with Forms Challenge
 
  * Create a form which uses the action: GET to the `try` route, and contains one field with the guess parameters, and a submit button.
+
+ [Go to Intro to Postgres](./03rails_intro_postgres.md)
+
+
+[Back to Rails Intro to Routes, Controllers and View](./01rails_routes_controllers_views.md)
