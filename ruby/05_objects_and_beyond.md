@@ -56,7 +56,7 @@ Before starting the implemention, copy each story into the editor as a comment, 
 **Story**:	As a programmer, I can make a Tesla car.
 **Hint**:	Create an variable called `my_tesla` which is of class `Tesla` which inherits from class `Car`.
 
-**Story**:	As a programmer, I can make a Tesla car.
+**Story**:	As a programmer, I can make a Honda car.
 
 **Story**:	As a programmer, I can make a Toyota car.
 
@@ -86,9 +86,9 @@ vehicle.lights_on? # should return false
 
 **Story**:	As a programmer, I can slow my Teslas down by 7 per braking.
 
-**Story**:	As a programmer, I can speed my Teslas up by 2 per acceleration.
+**Story**:	As a programmer, I can speed my Hondas up by 2 per acceleration.
 
-**Story**:	As a programmer, I can slow my Teslas down by 1.25 per braking.
+**Story**:	As a programmer, I can slow my Hondas down by 1.25 per braking.
 
 **Story**:	As a programmer, I can speed my Toyotas up by 7 per acceleration.
 
