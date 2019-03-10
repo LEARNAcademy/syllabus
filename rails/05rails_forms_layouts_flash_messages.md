@@ -184,7 +184,7 @@ Now, let's add the flash message to the layout, right above the page content:
 ```
 If we check a password, we can see our flash message. And if we refresh the page, it disappears.
 
-# Challenge  
+# Challenge
 Check User ID and Password on a Website
 * Create a route: /check_password to call a method called check in PasswordController.
 * Create a controller: PasswordController with a method called check.
@@ -209,8 +209,3 @@ Test that the webpage works the same as using the URL above.
 # Rails Hi/Lo with Forms Challenge
 
  * Create a form which uses the action: GET to the `try` route, and contains one field with the guess parameters, and a submit button.
-
- [Go to Intro to Postgres](./03rails_intro_postgres.md)
-
-
-[Back to Rails Intro to Routes, Controllers and View](./01rails_routes_controllers_views.md)
