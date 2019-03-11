@@ -44,6 +44,16 @@ Let's learn more about the `params` method.
 <%= params %></br>
 ```
 
+## Homepage URL
+
+In the router
+
+```
+root to: 'main#questions'
+```
+
+Then we can add a controller endpoint and view for 'questions' as our homepage.
+
 # Challenges
 
 ## Serve a dynamic page with Rails
@@ -54,7 +64,8 @@ Let's learn more about the `params` method.
   - For example: '/answers/42'
 
 #### STRETCH:
-* set the dynamic page you created as the landing page
-  - Use the route that doesn't require arguments as your landing page
+* set the dynamic page you created as the home page
+  - Use the route that doesn't require arguments as your home page
+  - set the root url in the router to be the homepage.
 
 * create at least one piece of data in the controller to be passed to the view
