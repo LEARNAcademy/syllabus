@@ -5,13 +5,13 @@ https://player.vimeo.com/video/137862869
 Putting the 'Relational' in 'Relational Databases'
 
 ## Table aliases
-![Table Aliases](/static-images/sql-lessons/joins/table-aliases.png)
+![Table Aliases](/assets/sql-lessons/joins/table-aliases.png)
 
 ## Aliases in SELECT clauses
-![Alias in SELECT](/static-images/sql-lessons/joins/alias-in-select.png)
+![Alias in SELECT](/assets/sql-lessons/joins/alias-in-select.png)
 
 ## Aliases in ON clauses
-![Alias in ON Clause](/static-images/sql-lessons/joins/alias-on-clause.png)
+![Alias in ON Clause](/assets/sql-lessons/joins/alias-on-clause.png)
 
 ## JOINs in FROM
 * specifies a table or set

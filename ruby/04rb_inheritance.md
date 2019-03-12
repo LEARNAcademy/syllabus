@@ -77,7 +77,3 @@ apple_one.spoils
 => "Spoils in 7 days"
 ```
 
-## Challenges
-### Process
-
-Before starting the implementation, copy each story into the editor as a comment, and use the function recipe to guide the implementation of each method
