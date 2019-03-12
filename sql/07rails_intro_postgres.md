@@ -2,7 +2,23 @@
 
 https://player.vimeo.com/video/137862860
 
-## A model is a representation
+### Let's get on the same page with some common terms...
+
+****PostgresSQL or just Postgres**  - is an open source object-relational database management system
+
+**SQL** - Structured Query Language designed for managing data held in a relational database management system
+
+**Model** - representation of a set of data 
+
+**Instance**  - A single row entry in a database 
+
+**Schema** - a description of the names and types of fields in a table
+
+**Attributes** - the keys in a key/value pair (ex. column headers in a table)
+
+**Relation or Table** - A collection of instances that contain the same attributes 
+
+**Primary Key** - unique identifier for each instance (automatically generated in rails)
 
 ### Model of a person
 ```
@@ -411,6 +427,27 @@ GROUP BY color;
  blue   |           7
 ```
 # Challenges
+Setup
+Open pgAdmin
+
+You may need to add the Country database.  If so follow these instructions...
+
+* open PGadmin
+* click on add new server
+* click on connection tab
+* in hostname/address type  127.0.0.1
+* change username from postgres to learn
+* password = SDlearn123
+* click save
+
+To run a query follow these steps...
+
+* click on database to query (lefthand side)
+* click on tools tab at the top
+* click on Query Tool
+* Type your query
+* Click on lightening bolt  to run query
+
 
 SQL Country Database Challenges
 
