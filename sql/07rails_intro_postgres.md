@@ -20,14 +20,14 @@ In our program, a person has an email, a family_name, and several other attribut
 A single row entry in a database can also be called an "instance".  We need a way to keep track of all the instances of our Person model.
 
 A collection of instances that contain the same attributes is called a relation or a table.  Tables allow us to better organize models.
-![table](/static-images/sql-lessons/intro-to-databases/this-is-a-table.png)
+![table](/assets/sql-lessons/intro-to-databases/this-is-a-table.png)
 A schema is a description of the names and types of fields in a table.
 
-![table](/static-images/sql-lessons/intro-to-databases/schema.png)
+![table](/assets/sql-lessons/intro-to-databases/schema.png)
 
-![table](/static-images/sql-lessons/intro-to-databases/rows.png)
+![table](/assets/sql-lessons/intro-to-databases/rows.png)
 
-![table](/static-images/sql-lessons/intro-to-databases/fields.png)
+![table](/assets/sql-lessons/intro-to-databases/fields.png)
 
 
 ## One More Thing
@@ -40,7 +40,7 @@ In Rails, every row of a table has a primary key named "id", and that ID is guar
 
 ### Our Model of a person
 
-We've added in a primary key for this instance of Person:  
+We've added in a primary key for this instance of Person:
 ```
 id:				1
 Given Name: 	Korben
@@ -56,7 +56,7 @@ What other primary keys - or unique identifiers - can you think of?
 
 ## Summary
 
-In this lesson, we learned about organizing a program's data into models.  We were introduced to the database concept of a row, which represents a model instance. Rows are grouped together into tables.  Relational databases define the name, data type, and several other characteristics of the fields using a schema.  One very important attribute of every row in every table in a Rails application is the id.  Primary keys are guaranteed to be unique, and are how we identify individual rows.  
+In this lesson, we learned about organizing a program's data into models.  We were introduced to the database concept of a row, which represents a model instance. Rows are grouped together into tables.  Relational databases define the name, data type, and several other characteristics of the fields using a schema.  One very important attribute of every row in every table in a Rails application is the id.  Primary keys are guaranteed to be unique, and are how we identify individual rows.
 
 Now that you are familiar with how databases organize data, you understand the foundation that the Rails apps we make class will be built on.  Relational databases were around long before Rails and will be here long after new technologies have take its place.  Rails, and all web frameworks, can be thought of as tools to efficiently and securely bridge web pages and data stored in relational databases.
 
@@ -140,7 +140,7 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
         country;
   ```
 
-  ![simple select](/static-images/sql-lessons/querying/simple-select.png)
+  ![simple select](/assets/sql-lessons/querying/simple-select.png)
 
   What's up with that order?
   * Not by code
@@ -156,8 +156,8 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
   ## Try these queries on for size
 
   #### A Set
-  ![Set](/static-images/sql-lessons/querying/set.png)
-  ![Where](/static-images/sql-lessons/querying/where.png)
+  ![Set](/assets/sql-lessons/querying/set.png)
+  ![Where](/assets/sql-lessons/querying/where.png)
   ````
       SELECT
         code,
@@ -170,10 +170,10 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
         gnp > 1e+6
   ````
 
-  ![Set Result](/static-images/sql-lessons/querying/set-result.png)
+  ![Set Result](/assets/sql-lessons/querying/set-result.png)
 
   #### Negation
-  ![Negation](/static-images/sql-lessons/querying/negation.png)
+  ![Negation](/assets/sql-lessons/querying/negation.png)
 
   ````
       SELECT
@@ -186,29 +186,29 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
 
   #### Union
 
-  ![Union](/static-images/sql-lessons/querying/union.png)
-  ![Union Continuity](/static-images/sql-lessons/querying/union-continuity.png)
+  ![Union](/assets/sql-lessons/querying/union.png)
+  ![Union Continuity](/assets/sql-lessons/querying/union-continuity.png)
 
   #### Intersection
 
-  ![Intersection](/static-images/sql-lessons/querying/intersection.png)
+  ![Intersection](/assets/sql-lessons/querying/intersection.png)
   ````
       SELECT code, name, population, gnp FROM country WHERE population > 1e+8
       INTERSECT
       SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
   ````
 
-  ![Union Results](/static-images/sql-lessons/querying/union-results.png)
+  ![Union Results](/assets/sql-lessons/querying/union-results.png)
 
   #### Difference
 
-  ![Difference](/static-images/sql-lessons/querying/difference.png)
+  ![Difference](/assets/sql-lessons/querying/difference.png)
   ````
       SELECT * FROM country WHERE NOT(continent = 'North America')
       EXCEPT
       SELECT * FROM country WHERE lifeexpectancy > 50
   ````
-  ![Difference Results](/static-images/sql-lessons/querying/difference-results.png)
+  ![Difference Results](/assets/sql-lessons/querying/difference-results.png)
 
   #### Boolean Expressions
 
@@ -315,7 +315,7 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
   ```
 
   ## Summary
-  In this section we've taken a look at the different types of SQL queries. You can use to create sets.  We tackled WHERE clauses, Negation, Unions, Intersections, Differences, and the boolean expressions AND and OR. Then we evaluated functions and ORDER BY clauses.  The SQL language is very mature, and full featured.  We've only touched the surface of what you can do with SQL.  
+  In this section we've taken a look at the different types of SQL queries. You can use to create sets.  We tackled WHERE clauses, Negation, Unions, Intersections, Differences, and the boolean expressions AND and OR. Then we evaluated functions and ORDER BY clauses.  The SQL language is very mature, and full featured.  We've only touched the surface of what you can do with SQL.
 
   ### Resources
   The country database is from http://www.stat.fi/worldinfigures
@@ -328,7 +328,7 @@ So far, we've stored items into tables and selected lists of items from them. Bu
 
 If we've created a table called "cars" that contains a make, a color, and mileage per gallon:
 ```
- id | make  | color  | mileage  
+ id | make  | color  | mileage
 ----+-------+--------+---------
   1 | BMW   | blue   |     6
   2 | Mazda | blue   |     7
@@ -363,7 +363,7 @@ would result in an error like this one:
 
 `ERROR:  column "cars.make" must appear in the GROUP BY clause or be used in an aggregate function`.
 
-What this means is that that when you group by color, each row of the `make` column would have to contain a set of values instead of one single value.  
+What this means is that that when you group by color, each row of the `make` column would have to contain a set of values instead of one single value.
 We *can* ask for the number of blue cars that exist, however -- which would be using an aggregate function, `COUNT` -- and would look like this:
 
 ```
@@ -390,7 +390,7 @@ GROUP BY color;
 ```
 
 ```
-color   |    avg_mileage     
+color   |    avg_mileage
 --------+--------------------
  yellow | 8.0000000000000000
  blue   | 6.5000000000000000
