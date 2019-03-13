@@ -17,7 +17,7 @@ Putting the 'Relational' in 'Relational Databases'
 * specifies a table or set
 * Join gives us all the fields from all the sets that match the ON clause
 
-![Using ON in FROM](assets/sql-lessons/joins/using-on-in-from.png)
+![Using ON in FROM](/assets/sql-lessons/joins/using-on-in-from.png)
 
 ![ON In FROM](/assets/sql-lessons/joins/on-in-from-2.png)
 
