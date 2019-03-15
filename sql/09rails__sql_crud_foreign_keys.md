@@ -298,3 +298,14 @@ To see the table was dropped use `\dt` to check the contact database.
 \dt
 No relations found.
 ```
+
+### Create, Update, Insert, DELETE
+
+* Create a rolodex database.
+* Connect to the database.
+* Create a persons table with a `serial PRIMARY KEY`, given_name, family_name, address, dob, email using appropriate datatypes found <a href="https://www.postgresql.org/docs/9.5/static/datatype.html#DATATYPE-TABLE" target="_blank">here</a>.
+* Add five or more family members to the persons table.
+* How many have the same family_name as you?
+* Add yourself into the persons table.
+* Update all family members with the same family_name as you, to live at the same address.
+* Delete all family members not with your family_name.
