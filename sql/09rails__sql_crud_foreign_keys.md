@@ -298,6 +298,7 @@ To see the table was dropped use `\dt` to check the contact database.
 \dt
 No relations found.
 ```
+## Challenge
 
 ### Create, Update, Insert, DELETE
 
