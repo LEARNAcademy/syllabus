@@ -1,4 +1,6 @@
-Validation can be used in the model `class` to insure incomplete, invalid, or incorrect data from being saved in the database.
+# ActiveRecord Validations
+
+Data validations can be used in the model `class` to insure incomplete, invalid, or incorrect data from being saved in the database.
 
 Here are a list of validations that can be implemented.
 
