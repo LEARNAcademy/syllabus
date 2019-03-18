@@ -1,5 +1,8 @@
 # ActiveRecord One-to-Many Relationships
 
+## Read the Docs
+There is a lot to ActiveRecord relationships.  Read the documentation to see all the ways that ActiveRecord can [help you leverage the power of SQL relationships](https://guides.rubyonrails.org/association_basics.html)
+
 ## Set Up Table
 
 From the Command line:
