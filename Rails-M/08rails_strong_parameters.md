@@ -67,7 +67,7 @@ Now the entire Contact, fax number and all, will successfully be saved.
 
 ### Challenge 1
 
-Recall Account model from the validations challenges. Your challenge is to connect that functionality to form.
+Recall the Account model from the validations challenges. Your challenge is to connect that functionality to form.
 
 #### Stories:
 
