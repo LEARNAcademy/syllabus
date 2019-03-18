@@ -115,7 +115,8 @@ rails c
 
 Let's see what we if we can find some contacts:
 ```
-2.2.2 :001 > Contact.all
+Contact.create(name: "Joe", email: "Joe@home.com", dob: 30.years.ago)
+Contact.all
 
 Contact Load (0.6ms)  SELECT "contacts".* FROM "contacts"
 => #<ActiveRecord::Relation [#<Contact id: 1, name: "Joe", email: "Joe@home.com", dob: "1990-05-01 00:00:00">]>
@@ -169,14 +170,14 @@ Other examples:
 ```
 
 ```
-2.2.2 :013 > contacts = Contact.where("email='joe@home.com'")
+2.2.2 :013 > contacts = Contact.where(email: 'joe@home.com')
   Contact Load (0.6ms)  SELECT "contacts".* FROM "contacts" WHERE (email='joe@home.com')
  => #<ActiveRecord::Relation [#<Contact id: 1, name: "Joe", email: "joe@home.com", dob: "1990-05-01 00:00:00">]>
 
-2.2.2 :014 > contacts[0]
+2.2.2 :014 > contacts.first
  => #<Contact id: 1, name: "Joe", email: "joe@home.com", dob: "1990-05-01 00:00:00">
 
-2.2.2 :015 > contacts[0].name
+2.2.2 :015 > contacts.first.name
  => "Joe"
 ```
 * Note: With `where` methods we are returned a collection of contact**s**, whereas `find` methods never selects more than one contact and therefore does not return a collection.
@@ -185,8 +186,8 @@ Find methods (see with autocomplete by hitting tab):
 ```
 Contact.find                          Contact.find_each
 Contact.find_by                       Contact.find_in_batches
-Contact.find_by!                      Contact.find_or_create_by
-Contact.find_by_sql                   Contact.find_or_create_by!
+Contact.find_by!                      Contact.where(email: 'joe@joe.com').first_or_create
+Contact.find_by_sql
 Contact.find_by_statement_cache       Contact.find_or_initialize_by
 Contact.find_by_statement_cache=      Contact.finder_needs_type_condition?
 Contact.find_by_statement_cache?

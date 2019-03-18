@@ -28,7 +28,7 @@ end
 
 * Note: the phone**s** table is **plural**
 * Note: contact_id is the foreign key, it always goes on the 'belongs_to' side of a relationship
-*
+
 ## Create Model
 
 Create a file within `app/models` folder named `phone.rb` and in it create the class called Phone:
@@ -88,7 +88,7 @@ Notice that we do not have to use any IDs, foreign keys or joins -- life is good
 
 ## Create a Database
 
-After making your Rails app and creating the database, create migrations to generate the following tables: 
+After making your Rails app and creating the database, create migrations to generate the following tables:
 A credit card has a number, an expiration date, and an owner. An owner has a name and address, and can have multiple credit cards.
 
 ## Manipulating Data
