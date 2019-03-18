@@ -21,15 +21,20 @@ class Person < ActiveRecord::Base
 end
 ```
 
-validate the presence of an person for a phone.
-In this example a phone must be associated with a person. A phone's foreign key can not be NULL in the database.
-
+Starting in Rails 5,  belongs_to side of relationships is validated by default
 ```
 class Phone < ActiveRecord::Base
-	belongs_to :person
-	validates :person, presence: true
+	belongs_to :person  #default validation for belongs to: presence: true
 end
 ```
+
+If you want an optional belongs_to relationship, you can set it up like this:
+```
+class Phone < ActiveRecord::Base
+	belongs_to :person, optional: true
+end
+```
+
 
 #### Uniqueness
 
