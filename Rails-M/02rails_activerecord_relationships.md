@@ -2,36 +2,36 @@
 
 ## Set Up Table
 
-```
-create table phones (
-	id serial PRIMARY KEY,
-	contact_id integer REFERENCES contacts(id) NOT NULL,
-	number varchar,
-	description varchar);
+From the Command line:
 
-\d phones
-
-insert into phones (contact_id, number, description) values (1, '555-1212', 'cell');
-insert into phones (contact_id, number, description) values (1, '333-2121', 'wife');
+```bash
+bundle exec  rails generate migration CreatePhones
 ```
+
+Fill out the migration with:
+
+```ruby
+class CreatePhones < ActiveRecord::Migration[5.2]
+  def change
+    create_table :phones do |t|
+      t.integer :contact_id
+      t.string :number
+      t.string :description
+      t.timestamps
+    end
+  end
+end
+```
+
 * Note: the phone**s** table is **plural**
-
-Check foreign key constraint:
-```
-insert into phones (contact_id, number, description) values (123, '666-7777', 'none');
-
-ERROR:  insert or update on table "phones" violates foreign key constraint "phones_contact_id_fkey"
-DETAIL:  Key (contact_id)=(123) is not present in table "contacts"
-```
-
-This fails because there is no contact with id 123.  Let's create one!
-
+* Note: contact_id is the foreign key, it always goes on the 'belongs_to' side of a relationship
+*
 ## Create Model
 
 Create a file within `app/models` folder named `phone.rb` and in it create the class called Phone:
 ```
-class Phone < ActiveRecord::Base
-  belongs_to(:contact)
+class Phone < ApplicationRecord
+  belongs_to :contact
 end
 ```
 
@@ -40,8 +40,8 @@ end
 Change Contact to have many phones:
 app/models/contact.rb
 ```
-class Contact < ActiveRecord::Base
-  has_many(:phones) # add this line
+class Contact < ApplicationRecord
+  has_many :phones  # add this line
 end
 ```
 * Note: phone**s** is **plural**

@@ -23,7 +23,9 @@ FATAL: database "mydbapp_development" does not exist
 
 ## Create Database
 
-In the terminal, run the command `rake db:create`.
+In Rails we use migrations to manage the shape of our database .....
+
+In the terminal, run the command `rails db:create`.
 
 This command creates two databases, one for our application's information and another to store any information that gets created while running tests. We can find those databases' names in `config/database.yml`. For example, the application's database might look somethihng like this:
 
@@ -42,36 +44,61 @@ rails s
 We should be able to connect to localhost and connect to mydbapp_development in psql.
 
 ## Create Table
-Once we have connected to mydbapp_development in psql, continue with creating a table:
+
+When we covered SQL, we were able to create tables directly using SQL commands,  for example, if we intended to create a ```contacts``` table, we could open a psql command line and enter:
 ```
 create table contacts (id serial PRIMARY KEY, name varchar, email varchar);
 \d contacts
 ```
-Note: table is **plural** contact**s**.
-```
-alter table contacts add dob timestamp;
-\d contacts
-insert into contacts (name, email, dob) values ('Joe', 'joe@home.com', '1990-05-01');
-```
-It should return something like `INSERT 0 1`
 
-Many web applications use email as unique ID these days.
+In a Rails app, we do the same thing using migrations. Migrations are files that run SQL commands for us.  Rails maintains a history for us of the migrations that have already run, and those that need to be run.  This is how Rails is able to maintain consistency between the database you run locally for development, and the one that runs in production.  You want them to stay the same, and Rails gives you the tools to do that.
 
-Check the contents of the database:
-```
-select * from contacts;
+#### Create Table Migration
+[Rails Migration Documentation](https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html)
 
- id | name |    email     |         dob         
-----+------+--------------+---------------------
-  1 | Joe  | joe@home.com | 1990-05-01 00:00:00
+Rails has a generator to create migrations for us.  Inside of our Rails app run:
+```bash
+bundle exec rails generate migration CreateContacts
 ```
+```ruby
+class CreateContacts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :contacts do |t|
+    end
+  end
+end
+```
+
+** The name of the migration is important.  When we name it "Create<Something>", Rails knows that we intend to create a new table in the database, and sets that up for us.
+
+Starting with that template migration file, we can fill in the details:
+```ruby
+class CreateContacts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :contacts do |t|
+      t.string :name
+      t.string :email
+      t.timestamps
+    end
+  end
+end
+```
+
+Then, we can run that migration from the command line:
+```bash
+bundle exec rails db:migrate
+```
+
+### Read the Docs!
+There is a lot to ActiveRecord migrations.  Have a read of the documentation to learn more about [how they can help you](https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html).
+
 
 ## Create a Model with ActiveRecord
 
 Create a file within app/models named `contact.rb` and in it create the class called `Contact`:
 
 ```rb
-class Contact < ActiveRecord::Base
+class Contact < ApplicationRecord
 end
 ```
 
@@ -124,7 +151,7 @@ Check the database from psql:
 ```
 select * from contacts;
 
- id | name  |      email      |            dob             
+ id | name  |      email      |            dob
 ----+-------+-----------------+----------------------------
   1 | Joe   | joe@home.com    | 1990-05-01 00:00:00
   2 | Jenny | jenny@phone.com | 2006-02-24 03:53:59.346107
@@ -189,7 +216,7 @@ Check the database:
 ```
 select * from contacts;
 
- id | name |    email     |         dob         
+ id | name |    email     |         dob
 ----+------+--------------+---------------------
   1 | Joe  | joe@home.com | 1990-05-01 00:00:00
 ```
