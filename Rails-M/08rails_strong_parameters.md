@@ -62,3 +62,42 @@ end
 ```
 
 Now the entire Contact, fax number and all, will successfully be saved.
+
+## Validations and Strong Params Challenges
+
+### Challenge 1
+
+Recall Account model from the validations challenges. Your challenge is to connect that functionality to form.
+
+#### Stories:
+
+- As a user, I see a form asking for my username, password and email
+- As a user, I receive an error message and am asked to try again if my form is incomplete
+- As a user, I can see how my form was incomplete
+- As a developer, I need to protect my database from sql injections from the user sign up form
+- As a user, I see a user creation success page, when I've correctly filled out the form
+
+### Challenge 2: Store Order Scheduler
+
+You have been tasked with creating an application to allow store owners to generate customer accounts and schedule orders for their products (office supplies, restaurant inventory/groceries, video games, food, your choice). You have to make sure that every order is complete with all the required information.
+
+#### Stories:
+
+- As a store owner,  I need to generate customer accounts that require a first name, last name, email, phone number
+- As a store owner, I need customer emails to be unique
+- As a store owner, I need to generate orders that require belong to a customer
+- As a store owner, I need each order to have a product name and quantity
+
+- As a store owner, I see a new customer form
+- As a store owner, I can add a customer account through the form
+- As a store owner, I can see an error if the form lacks information
+- As a store owner, I can see how the form was incomplete
+
+- As a store owner, I see an order form that asks for a product, quantity, customer account, and an estimated shipment date
+- As a store owner, I can submit an order
+- As a store owner, I can see an error if my order form lacks information
+- As a store owner, I can see how my order form was incomplete
+
+#### Super Stretch Challenges
+- As a store owner, I can see pending orders
+- As a store owner, I can see my pending orders by account

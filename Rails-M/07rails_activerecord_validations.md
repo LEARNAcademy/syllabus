@@ -76,3 +76,19 @@ end
 ## Resource
 
 For more information. See <a href="http://guides.rubyonrails.org/v4.2/active_record_validations.html" target="_blank" >Active Record Validations</a>
+
+## ActiveRecord Intro Challenges
+
+You have been tasked to set up an Account model for the users in your company’s application and they want it to be secure.
+
+### Stories:
+
+- As a developer, I need to generate accounts that require a username, a password, and an email
+- As a developer, I need each password to be unique
+- As a developer, I need every username to be at least 5 characters long
+- As a developer, I need each username to be unique
+- As a developer, I need each password to be at least 6 characters long
+- As a developer, I need each password to have at least one number
+- As a developer, I need each password to have at least one special character
+
+Check your work by exploring the ActiveRecord commands. (new, valid?, create, etc.)
