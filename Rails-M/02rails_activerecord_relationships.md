@@ -88,7 +88,7 @@ Notice that we do not have to use any IDs, foreign keys or joins -- life is good
 
 ## Create a Database
 
-After making your Rails app and creating the database, create tables that reflect the following relationships using `psql`:
+After making your Rails app and creating the database, create migrations to generate the following tables: 
 A credit card has a number, an expiration date, and an owner. An owner has a name and address, and can have multiple credit cards.
 
 ## Manipulating Data
