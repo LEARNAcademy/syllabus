@@ -7,7 +7,7 @@ Here are a list of validations that can be implemented.
 #### Length
 
 ```
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   validates :name, length: { minimum: 2 }
   validates :bio, length: { maximum: 500 }
   validates :password, length: { in: 6..20 }
@@ -18,21 +18,21 @@ end
 #### Presence
 
 ```
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   validates :name, :login, :email, presence: true
 end
 ```
 
 Starting in Rails 5,  belongs_to side of relationships is validated by default
 ```
-class Phone < ActiveRecord::Base
+class Phone < ApplicationRecord
 	belongs_to :person  #default validation for belongs to: presence: true
 end
 ```
 
 If you want an optional belongs_to relationship, you can set it up like this:
 ```
-class Phone < ActiveRecord::Base
+class Phone < ApplicationRecord
 	belongs_to :person, optional: true
 end
 ```
@@ -41,7 +41,7 @@ end
 #### Uniqueness
 
 ```
-class Account < ActiveRecord::Base
+class Account < ApplicationRecord
   validates :name, uniqueness: true
   validates :email, uniqueness: { case_sensitive: false }
 end
@@ -69,7 +69,7 @@ To verify whether or not an object is valid, Rails uses the valid? method. You c
 
 To verify whether or not a particular attribute of an object is valid, you can use errors[:attribute]. It returns an array of all the errors for :attribute. If there are no errors on the specified attribute, an empty array is returned.
 ```
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   validates :name, presence: true
 end
 
