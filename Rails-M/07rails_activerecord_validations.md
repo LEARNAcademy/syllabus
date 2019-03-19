@@ -96,7 +96,7 @@ You have been tasked to set up an Account model for the users in your company’
 
 ### Stretch Challenges
 
-These will require a little bit of research to implement. Visit this link on [Custom Validations](https://guides.rubyonrails.org/active_record_validations.html#custom-validators) for documentation on how to implement custom methods for validation.
+These will require a little bit of research to implement. Visit this link on [Custom Validations](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations) for documentation on how to implement custom methods for validation.
 
 - As a developer, I need each password to have at least one number
 - As a developer, I need each password to have at least one special character
