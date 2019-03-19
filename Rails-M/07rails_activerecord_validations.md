@@ -77,7 +77,7 @@ end
 
 For more information. See <a href="http://guides.rubyonrails.org/v4.2/active_record_validations.html" target="_blank" >Active Record Validations</a>
 
-## ActiveRecord Intro Challenges
+## ActiveRecord Validations Intro Challenges
 
 You have been tasked to set up an Account model for the users in your company’s application and they want it to be secure.
 
