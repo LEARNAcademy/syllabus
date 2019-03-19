@@ -88,7 +88,12 @@ You have been tasked to set up an Account model for the users in your company’
 - As a developer, I need every username to be at least 5 characters long
 - As a developer, I need each username to be unique
 - As a developer, I need each password to be at least 6 characters long
+
+### Stretch Challenges
+
+These will require a little bit of research to implement. Visit this link on [Custom Validations](https://guides.rubyonrails.org/active_record_validations.html#custom-validators) for documentation on how to implement your own validators.
+
 - As a developer, I need each password to have at least one number
 - As a developer, I need each password to have at least one special character
 
-Check your work by exploring the ActiveRecord commands. (new, valid?, create, etc.)
+For all these challenges check your work by exploring the ActiveRecord commands. (new, valid?, create, etc.)
