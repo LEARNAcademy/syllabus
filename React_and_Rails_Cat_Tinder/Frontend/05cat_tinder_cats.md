@@ -4,7 +4,7 @@ Its time to turn our attention to the page components of the application. We'll 
 
 Here's the basic test to start us out:
 
-#### ```src/pages/__tests__/Cats.js```
+#### ```src/components/__tests__/Cats.js```
 
 ```javascript
 import React from 'react'
@@ -53,7 +53,7 @@ Now that test should pass, because we have created a component that can be rende
 
 But lets fix that by adding some fake cat data to play with. Later this information will come from the rails backend, but for now lets just get something up that we can see and work with.
 
-We want all of our data in a central place, so instead of placing it directly in the pages/Cats.js component, we will put it in our logic component — App.js
+We want all of our data in a central place, so instead of placing it directly in the components/Cats.js component, we will put it in our logic component — App.js
 
 #### src/App.js
 ```javascript
@@ -127,7 +127,7 @@ What else do you have to change about your page to make this work?
 
 Now we get to test the information in our Cats.js component. Problem, now that the Cats.js takes in props from App.js — how can we test that? Our Cats.js component requires that information in order to render.
 
-We need our test to send some json data to pages/Cats.js the same way that App.js is currently sending the cats json as props to pages/Cats.js. It is really convenient if our test uses the same fake data as we have in App.js state.
+We need our test to send some json data to components/Cats.js the same way that App.js is currently sending the cats json as props to components/Cats.js. It is really convenient if our test uses the same fake data as we have in App.js state.
 
 Below, you’ll notice that we’re using an import statement for a thing called mount from Enzyme. It will allow us to pass information to a component we are testing.
 

@@ -32,8 +32,8 @@ Create React App gives us a file called App.js that ties in to the Index.js file
 ```javascript
 import React, { Component } from 'react'
 
-import Cats from ‘./pages/Cats’
-import NewCat from ‘./pages/NewCat’
+import Cats from ‘./components/Cats’
+import NewCat from ‘./components/NewCat’
 
 class App extends Component {
   render() {

@@ -2,7 +2,7 @@
 
 Now, switching gears back over to our frontend, lets load our cats.
 
-The frontend is going to ask the rails API for information, then rails will use ActiveRecord to get that information out of the database and hand it back to the frontend as json. We want to make that process as simple and re-useable as possible, because even though we only have two pages right now, we can be pretty sure our cat tinder app will get bigger and more complex in the future (because we're going to be famous).
+The frontend is going to ask the rails API for information, then rails will use ActiveRecord to get that information out of the database and hand it back to the frontend as json. We want to make that process as simple and re-useable as possible, because we can be pretty sure our cat tinder app will get bigger and more complex in the future (because we're going to be famous).
 
 To do this, we are going to put all of our "calls" to the API in a new folder in our react app.
 

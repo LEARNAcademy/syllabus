@@ -4,7 +4,7 @@ Time to build the form to add new cats. Remember we already have the call for Ne
 
 ## Challenge
 
-Your challenge this time is to create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your pages/Cats.js file.
+Your challenge this time is to create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your components/Cats.js file.
 
 #### ```src/components/__tests__/NewCat.js```
 ```javascript
@@ -65,7 +65,7 @@ constructor(props){
 ```
 And then for each input, we bind its value to state. We'll add a name to the input too, and an 'onChange()' callback, as we're going to need those next. Here is 'name', the other two are nearly identical.
 
-#### src/pages/NewCat.js
+#### src/components/NewCat.js
 ```javascript
 <FormControl
   type="text"
@@ -77,7 +77,7 @@ And then for each input, we bind its value to state. We'll add a name to the inp
 
 So what does ```handleChange()``` look like?
 
-#### src/pages/NewCat.js
+#### src/components/NewCat.js
 ```javascript
 handleChange(event){
   let {form } = this.state
