@@ -1,100 +1,111 @@
-# NewCat Component
+# Creating Your Own API
+We've looked at connecting React apps to an external API, and seen how to use data from an API to build compelling front end applications.  Today we're going to build our own API that will serve the data we create to our front end. 
 
-Time to build the form to add new cats. Remember we already have the route for NewCat in App.js - so all that’s left is to create the component.
+Creating our own API opens up a new world of possibilities for building engaging, interactive applications.  We can begin to accept user input, store and manipulate that input in the backend, and then provide a personalized experience for our user, perfectly suited to the task he/she is trying to achieve.
 
-## Challenge
+As you've seen, the primary tool to collect input from users is an HTML form.  The user fills in form fields with information that allows them to interact with the application.  As a general rule, we always want to process, validate, and store user data on the server where we have more control and processing power to handle it.  To do so, we need to build an API that the React app can both send data to and receive data from.  Ruby on Rails is a fantastic platform to build just such an API, and is what we'll use in class.  There are many other options for building back end APIs.
 
-Your challenge this time is to create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your pages/Cats.js file.
+In the architecture we are building, our front and backend will be two separate applications, giving us more freedom to choose the tools and technologies we want.  Throughout your career as a developer, you'll interact with many other backend platforms.  APIs can be built using Ruby, PHP, Python, Java, and even Javascript, among many others.  That might seem overwhelming, but remember that the concepts are generally the same no matter what technology is used.  The server is where we process data sent by the frontend, clean and store that data, and serve updated data back to the front end app to be consumed by the user.
 
-#### ```src/pages/__tests__/NewCat.js```
-```javascript
-import React from 'react'
-import ReactDOM from 'react-dom'
-import NewCat from '../NewCat'
-import { mount } from 'enzyme'
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
+## Review APIs
+![Api](https://s3.amazonaws.com/learn-site/curriculum/React/api.jpeg)
 
-Enzyme.configure({ adapter: new Adapter() });
 
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<NewCat />, div)
-})
+## Building an API for Cat Tinder
+We're going to build an application to help our users' cats socialize and be well adjusted members of the feline community.  Our application will allow users to create profiles for their cats, search other cat profiles and setup kitty play dates.  In this module we're focusing on the server side, so let's jump in and start building an application.
 
-it('has a name input', ()=>{
-  const component = mount(<NewCat />)
- expect(component.find('label#name').text()).toBe("Name")
-})
+## Overview of goals
+* Setting up a Ruby on Rails API application
+* Creating endpoints to accept and serve data
+* Validating user input
 
-it('has a age input', ()=>{
-  const component = mount(<NewCat />)
-  expect(component.find('label#age').text()).toBe("Age")
-})
+# App setup
+By the end of this section, you'll have a Rails app setup as an API with one test route.  You'll be able to receive JSON requests, and respond with data encoded in JSON format.
 
-it('has a enjoys input', ()=>{
-  const component = mount(<NewCat />)
-  expect(component.find('label#enjoys').text()).toBe("Enjoys")
-})
+## Let's get started
+We're going to use the ```--api``` flag when building a new Rails application to customize our new Rails app to have just what we need.  The app communicates in JSON, instead of HTML/CSS/Javascript, so we don't need to clutter the app up with support for all of those file types.  Open up a command line prompt, and enter the following commands:
 
-it('has a submit button', ()=>{
-  const component = mount(<NewCat />)
-  expect(component.find('button#submit').text()).toBe("Create Cat Profile")
-})
+```
+$ gem install rails
+$ rails new cat_tinder --api -T --database=postgresql
+$ cd cat_tinder
+```
+This gets the latest and greatest version of Rails, and generates a new Rails application configured to be used as an API.  the ```-T``` flag tells rails to skip adding the default Minitest framework, as we're going to use Rspec instead.
+
+````
+$ echo "gem 'rspec-rails', groups: [:development, :test]" >> Gemfile
+$ bundle install
+$ rails generate rspec:install
+```
+This adds 'rspec-rails' to the Gemfile, and instructs Rails to only load rspec when we are in development or test mode, and not production.  The ```rails g rspec:install``` command installs all the necessary files to create and run our tests.
+
+Next its time to add a Cat resource.  The following command will add the Model, Migration, Controller, and Route for cats.
+```
+$ rails g resource cat name:string age:integer enjoys:text
+$ rake db:migrate
+````
+
+## Verify that we're all set up
+Let's take a look around the application and verify that everything is setup correctly.  The first thing we can do is see that our test suite is running.  Of course, we don't have any specs yet, so we won't get much feedback, but rspec itself should run and finish successfully:
+
+```
+$ rspec spec
+*
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Cat add some examples to (or delete) .../cat_tinder/spec/models/cat_spec.rb
+     # Not yet implemented
+     # ./spec/models/cat_spec.rb:4
+
+
+Finished in 0.01159 seconds (files took 2.77 seconds to load)
+1 example, 0 failures, 1 pending
 ```
 
-Once you have a view that satisfies the tests, you’ll be ready to refactor your code to create a controlled form.
+Looks good!  If we open up Atom and inspect our app, we should see the following file structure:
+![cat tinder files](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat_tinder_server_files.png)
 
-## Controlled components
-Thinking ahead just a bit, we're going to need to pass the values from our form back up to the calling component. In order to do this easily, we will hold the values typed in by the user in state. To “watch” our inputs and save values into state, we need to switch our inputs to being “controlled components”(meaning watched by state). Or, in other words, add a 'value', and an 'onChange' attribute to the inputs. Then we can manage the value of the inputs in the components’ internal state until the form is submitted. Do you remember how to do this from the "Component, State, & Props" day?
+Open up ```db/migrate/``` (yours will be named slightly different)
 
-We start by adding state to the component in a constructor:
+```Ruby
+class CreateCats < ActiveRecord::Migration[5.1]
+  def change
+    create_table :cats do |t|
+      t.string :name
+      t.integer :age
+      t.text :enjoys
 
-#### src/pages/NewCat.js
-```javascript
-constructor(props){
-  super(props)
-  this.state = {
-    form:{
-      name: '',
-      age: '',
-      enjoys: ''
-    }
-  }
-}
-```
-And then for each input, we bind its value to state. We'll add a name to the input too, and an 'onChange()' callback, as we're going to need those next. Here is 'name', the other two are nearly identical.
-
-#### src/pages/NewCat.js
-```javascript
-<FormControl
-  type="text"
-  name="name"
-  onChange={this.handleChange.bind(this)}
-  value={this.state.form.name}
-/>
+      t.timestamps
+    end
+  end
+end
 ```
 
-So what does ```handleChange()``` look like?
+If we look in ``` config/routes.rb ```, we should see our cats route there:
 
-#### src/pages/NewCat.js
-```javascript
-handleChange(event){
-  let {form } = this.state
-  form[event.target.name] = event.target.value
-  this.setState({form: form})
-}
+```ruby
+Rails.application.routes.draw do
+  resources :cats
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
 ```
 
-## For discussion
+With one last check, we can be pretty confident that everything is setup correctly.  Let's fire up a Rails console, and interact with the database:
 
-Notice how we didn't test the 'handleChange()' method and when it was called?  Why do you suppose we didn't do that?
+```
+$ rails c
+Running via Spring preloader in process 22833
+Loading development environment (Rails 5.1.5)
+2.4.1 :001 > Cat.create(name: 'Felix', age: 4, enjoys: 'Window ledges, being in charge, and cat food, lots and lots of cat food.')
+   (0.1ms)  begin transaction
+  SQL (1.3ms)  INSERT INTO "cats" ("name", "age", "enjoys", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Felix"], ["age", 4], ["enjoys", "Window ledges, being in charge, and cat food, lots and lots of cat food."], ["created_at", "2018-03-09 16:01:41.355922"], ["updated_at", "2018-03-09 16:01:41.355922"]]
+   (1.1ms)  commit transaction
+ => #<Cat id: 1, name: "Felix", age: 4, enjoys: "Window ledges, being in charge, and cat food, lots...", created_at: "2018-03-09 16:01:41", updated_at: "2018-03-09 16:01:41">
+2.4.1 :002 > Cat.all
+  Cat Load (0.3ms)  SELECT  "cats".* FROM "cats" LIMIT ?  [["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<Cat id: 1, name: "Felix", age: 4, enjoys: "Window ledges, being in charge, and cat food, lots...", created_at: "2018-03-09 16:01:41", updated_at: "2018-03-09 16:01:41">]>
+2.4.1 :003 >
+```
 
-The answer is that ```handleChange()``` is an internal mechanism of the component, and we want to have flexibility later down the road to change how the component works. We're not particularily interested in those inner workings from a testing perspective.
-
-What we are interested in is what the component passes back to its caller, which we're going to test extensivly.  If you remember that testing is for validating outputs based on particular inputs, you'll write flexible tests that allow you to easily refactor.
-
-As a General Rule:
-* Don't test the inner working of a component.
-* Test that you get the correct outputs based on specific inputs.
-* Test behavior of the component, especially if it directly affects the user experience.
+That looks great!  In the next step, we'll expose some endpoints in our API, so the frontend application has a way to communicate with all the functionality we've built out so far.
