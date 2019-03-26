@@ -101,16 +101,14 @@ What else do you have to change about your page to make this work?
         	<ListGroup>
             {this.props.cats.map((cat, index) =>{
               return (
-                <ListGroupItem
-                  key={index}
-                  header={
+                <ListGroupItem key={index}>
                     <h4>
                       <span className='cat-name'>
                         {cat.name}
                       </span>
                       - <small className='cat-age'>{cat.age} years old</small>
                     </h4>
-                  }>
+   
                   <span className='cat-enjoys'>
                     {cat.enjoys}
                   </span>
