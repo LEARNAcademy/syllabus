@@ -1,12 +1,12 @@
 # NewCat Component
 
-Time to build the form to add new cats. Remember we already have the route for NewCat in App.js - so all that’s left is to create the component.
+Time to build the form to add new cats. Remember we already have the call for NewCat in App.js - so all that’s left is to create the component.
 
 ## Challenge
 
-Your challenge this time is to create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your pages/Cats.js file.
+Your challenge this time is to create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your components/Cats.js file.
 
-#### ```src/pages/__tests__/NewCat.js```
+#### ```src/components/__tests__/NewCat.js```
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -50,7 +50,7 @@ Thinking ahead just a bit, we're going to need to pass the values from our form 
 
 We start by adding state to the component in a constructor:
 
-#### src/pages/NewCat.js
+#### src/components/NewCat.js
 ```javascript
 constructor(props){
   super(props)
@@ -65,7 +65,7 @@ constructor(props){
 ```
 And then for each input, we bind its value to state. We'll add a name to the input too, and an 'onChange()' callback, as we're going to need those next. Here is 'name', the other two are nearly identical.
 
-#### src/pages/NewCat.js
+#### src/components/NewCat.js
 ```javascript
 <FormControl
   type="text"
@@ -77,7 +77,7 @@ And then for each input, we bind its value to state. We'll add a name to the inp
 
 So what does ```handleChange()``` look like?
 
-#### src/pages/NewCat.js
+#### src/components/NewCat.js
 ```javascript
 handleChange(event){
   let {form } = this.state
@@ -92,7 +92,7 @@ Notice how we didn't test the 'handleChange()' method and when it was called?  W
 
 The answer is that ```handleChange()``` is an internal mechanism of the component, and we want to have flexibility later down the road to change how the component works. We're not particularily interested in those inner workings from a testing perspective.
 
-What we are interested in is what the component passes back to its caller, which we're going to test extensivly.  If you remember that testing is for validating outputs based on particular inputs, you'll write flexible tests that allow you to easily refactor.
+What we are interested in is what the component passes back to its caller, which we're going to test extensively.  If you remember that testing is for validating outputs based on particular inputs, you'll write flexible tests that allow you to easily refactor.
 
 As a General Rule:
 * Don't test the inner working of a component.

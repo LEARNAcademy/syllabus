@@ -10,16 +10,16 @@ When a user clicks the “Create a Cat” button to submit the form, we want tha
 #### 1. Preparation
 
 ##### in App.js
-A function is created to handle information for a new cat. That function is preemptively sent to the dumb component (in our case pages/NewCat.js) as props. This function is saying to the dumb component: “Here is a function that takes in new cat json as an argument. Only run it when you have all the information for a new cat”.
+A function is created to handle information for a new cat. That function is preemptively sent to the dumb component (in our case components/NewCat.js) as props. This function is saying to the dumb component: “Here is a function that takes in new cat json as an argument. Only run it when you have all the information for a new cat”.
 
 #### 2. Data Entry
 
-##### in pages/NewCat.js
+##### in components/NewCat.js
 User inputs data into the form. The form is controlled, and saves all data directly into state
 
 #### 3. Form Submit
 
-##### in pages/NewCat.js
+##### in components/NewCat.js
 User hits submit - this is our signal that they are finished filling in their information. The form runs an onClick function, which calls the function held in props from App.js. That function runs and sends the form data (currently in state) to the logic component (in our case App.js)
 
 #### 4. Pass Data to the API

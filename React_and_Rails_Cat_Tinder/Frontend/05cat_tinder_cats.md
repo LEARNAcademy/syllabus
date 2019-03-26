@@ -4,7 +4,7 @@ Its time to turn our attention to the page components of the application. We'll 
 
 Here's the basic test to start us out:
 
-#### ```src/pages/__tests__/Cats.js```
+#### ```src/components/__tests__/Cats.js```
 
 ```javascript
 import React from 'react'
@@ -24,23 +24,23 @@ it('Cats renders without crashing', () => {
 
 That will fail until we create the component
 
-#### src/pages/Cats.js
+#### src/components/Cats.js
 ```javascript
 import React, { Component } from 'react';
 import {
-  Grid, Col, Row
+  Col, Container Row
 } from 'react-bootstrap'
 
 class Cats extends Component {
   render() {
     return (
-	<Grid>
+	<Container>
       <Row>
         <Col>
     		<div>Im a component</div>
         </Col>
       </Row>
-	<Grid>
+	</Container>
     );
   }
 }
@@ -53,7 +53,7 @@ Now that test should pass, because we have created a component that can be rende
 
 But lets fix that by adding some fake cat data to play with. Later this information will come from the rails backend, but for now lets just get something up that we can see and work with.
 
-We want all of our data in a central place, so instead of placing it directly in the pages/Cats.js component, we will put it in our logic component — App.js
+We want all of our data in a central place, so instead of placing it directly in the components/Cats.js component, we will put it in our logic component — App.js
 
 #### src/App.js
 ```javascript
@@ -85,15 +85,15 @@ constructor(props){
 
 ```
 
-Now we need to send this cats json array to the Cats component as props from App.js. To do this, we need a slightly different syntax in our Router. Change the Cats route to look like this:
+Now we need to send this cats json array to the Cats component as props from App.js. Change the Cats component call to look like this:
 
-``` <Route exact path="/cats" render={(props) => <Cats cats={this.state.cats}/>} /> ```
+``` <Cats cats={this.state.cats}/> ```
 
 Now that our Cats.js component is receiving an array of cats in props, lets add some bootstrap code to create real content in the Cats.js render function, replacing the blank elements we had before.
 
 What else do you have to change about your page to make this work?
 
-#### pages/Cats.js
+#### components/Cats.js
 
 ```javascript
 <Row>
@@ -101,16 +101,14 @@ What else do you have to change about your page to make this work?
         	<ListGroup>
             {this.props.cats.map((cat, index) =>{
               return (
-                <ListGroupItem
-                  key={index}
-                  header={
+                <ListGroupItem key={index}>
                     <h4>
                       <span className='cat-name'>
                         {cat.name}
                       </span>
                       - <small className='cat-age'>{cat.age} years old</small>
                     </h4>
-                  }>
+   
                   <span className='cat-enjoys'>
                     {cat.enjoys}
                   </span>
@@ -127,13 +125,13 @@ What else do you have to change about your page to make this work?
 
 Now we get to test the information in our Cats.js component. Problem, now that the Cats.js takes in props from App.js — how can we test that? Our Cats.js component requires that information in order to render.
 
-We need our test to send some json data to pages/Cats.js the same way that App.js is currently sending the cats json as props to pages/Cats.js. It is really convenient if our test uses the same fake data as we have in App.js state.
+We need our test to send some json data to components/Cats.js the same way that App.js is currently sending the cats json as props to components/Cats.js. It is really convenient if our test uses the same fake data as we have in App.js state.
 
 Below, you’ll notice that we’re using an import statement for a thing called mount from Enzyme. It will allow us to pass information to a component we are testing.
 
 Write some tests to cover the content we just added to Cats.js.
 
-#### ```src/pages/__tests__/Cats.js```
+#### ```src/components/__tests__/Cats.js```
 ```javascript
 const cats = [
   {

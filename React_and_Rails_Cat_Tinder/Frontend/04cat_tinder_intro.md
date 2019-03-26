@@ -5,12 +5,12 @@ Let's refer back to the wireframes, and recall what our interface is going to lo
 ![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
 
 ## App setup
-Using create-react-app, react-router-dom and react-bootstrap, we can setup a new application:
+Using create-react-app and react-bootstrap, we can setup a new application:
 
 ```
 $ create-react-app cat-tinder-frontend
 $ cd cat-tinder-frontend
-$ yarn add react-bootstrap react-router-dom
+$ yarn add react-bootstrap
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
 
@@ -28,27 +28,20 @@ I'm going to use the "United" theme from bootswatch.com, so I'll add the stylesh
 
 Create React App gives us a file called App.js that ties in to the Index.js file, it will be the entry point of our app.
 
-Just like when we built rails with views, we want to put our router out in front of our application, to help us process requests from the user. So, our React Router logic will live here in our App.js file.
-
 #### src/App.js
 ```javascript
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Cats from ‘./pages/Cats’
-import NewCat from ‘./pages/NewCat’
+import Cats from ‘./components/Cats’
+import NewCat from ‘./components/NewCat’
 
 class App extends Component {
   render() {
     return (
 		<div>
 			<Header />
-			<Router>
-				<Switch>
-					<Route exact path="/cats" component={Cats} />
-					<Route exact path="/" component={NewCat} />
-		  		</Switch>
-			</Router>
+			<Cats />
+			<NewCat />
 		</div>
     );
   }
