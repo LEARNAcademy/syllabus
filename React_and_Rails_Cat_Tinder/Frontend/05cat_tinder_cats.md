@@ -28,19 +28,19 @@ That will fail until we create the component
 ```javascript
 import React, { Component } from 'react';
 import {
-  Grid, Col, Row
+  Col, Container Row
 } from 'react-bootstrap'
 
 class Cats extends Component {
   render() {
     return (
-	<Grid>
+	<Container>
       <Row>
         <Col>
     		<div>Im a component</div>
         </Col>
       </Row>
-	<Grid>
+	</Container>
     );
   }
 }
