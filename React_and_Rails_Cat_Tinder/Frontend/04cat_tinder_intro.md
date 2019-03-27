@@ -2,7 +2,7 @@
 
 Let's refer back to the wireframes, and recall what our interface is going to look like:
 
-![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
+![wires](../../assets/cat-tinder/cat-tinder-single-page.png)
 
 ## App setup
 Using create-react-app and react-bootstrap, we can setup a new application:
