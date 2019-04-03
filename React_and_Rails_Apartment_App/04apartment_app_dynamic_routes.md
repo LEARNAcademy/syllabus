@@ -1,4 +1,4 @@
- Dynamic Routes
+# Dynamic Routes
 Imagine that we have a list of recipes in a chunk of JSON, and we want to create a page to show the details of each of them.
 
 ** Note, this is very much like a previous challenge, only this time, we're going to use dynamic routes and a single 'Recipe' component so that our app can support an infinite amount of recipes without us having to update the code for each one.;j
