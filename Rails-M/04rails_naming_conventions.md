@@ -26,4 +26,4 @@ Foreign key column linking to the `to_dos` table:
 ----
 ## Resource
 
-<a href="https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e" target="_blanke">Rails naming conventions</a>
+<a href="https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e" target="_blank">Rails naming conventions</a>

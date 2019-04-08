@@ -1,7 +1,7 @@
-# ActiveRecord One-to-Many Relationships
+# Active Record One-to-Many Relationships
 
 ## Read the Docs
-There is a lot to ActiveRecord relationships.  Read the documentation to see all the ways that ActiveRecord can [help you leverage the power of SQL relationships](https://guides.rubyonrails.org/association_basics.html)
+There is a lot to Active Record relationships.  Read the documentation to see all the ways that Active Record can [help you leverage the power of SQL relationships](https://guides.rubyonrails.org/association_basics.html)
 
 ## Set Up Table
 
@@ -104,4 +104,4 @@ Check that everything is in the database from `psql`.
 ### Stretch Challenge
 
 * Using `psql`, add a credit limit to each card
-* Using ActiveRecord in `rails console`, find the total credit extended to the owner with two credit cards
+* Using Active Record in `rails console`, find the total credit extended to the owner with two credit cards
