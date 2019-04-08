@@ -1,19 +1,19 @@
 # Getting Cats from the Database to the Frontend
 
-Now, switching gears back over to our frontend, lets load our cats.
+Now, switching gears back over to our frontend, let's load our cats.
 
 The frontend is going to ask the rails API for information, then rails will use ActiveRecord to get that information out of the database and hand it back to the frontend as json. We want to make that process as simple and re-useable as possible, because we can be pretty sure our cat tinder app will get bigger and more complex in the future (because we're going to be famous).
 
 To do this, we are going to put all of our "calls" to the API in a new folder in our react app.
 
-Add a new folder ``` src/api ```
+Add a new folder: ``` src/api ```
 
-Inside that folder, add a new file ``` index.js ```
+Inside that folder, add a new file: ``` index.js ```
 
-Here is the code for index.js, read the code and comments.
+Copy and paste this code into ```index.js```, read the code and comments.
 
 ```javascript
-// the address of our rails backend, saved as a constant value, because we never want to accidently change it
+// the address of our rails backend, saved as a constant value, because we never want to accidentally change it
 const BASE = 'http://localhost:3000'
 
 let getCats = function() {
@@ -32,40 +32,38 @@ export  {
 }
 ```
 
-We are using the javascript Fetch API as the intermediary who carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).  
+We are using the JavaScript Fetch API as the intermediary that carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).  
 
 Notice that we have wrapped the fetch call in another function called getCats. This is to give us control over WHEN the call runs.
 
-When we export something in React, we make it available for import (just like with all our components, the ```export default``` part)
+When we export something in React, we make it available for import (just like with all our components)
 
-So now, we can ```import``` our api call into any file we please. Lets do that:
+So now, we can ```import``` our API call into any file we please. Lets do that:
 
-First, add ``` import { getCats } from '../api' ``` to the imports in App.js
+First, add ```import { getCats } from '../api'``` to the imports in ```App.js```
 
-Then, add a new function to App.js:
+Then, add a new function to ```App.js```:
 
-#### in App.js
-``` javascript
-	constructor(props){
-		super(props)
-		this.state = {
-			cats: []
-		}
+```javascript
+constructor(props){
+  super(props)
+	this.state = {
+	  cats: []
 	}
+}
 
-	componentWillMount() {
-		getCats()
-		.then(APIcats => {
-			this.setState({
-				cats: APIcats
-			})
-		}
+componentWillMount() {
+  getCats()
+	.then(APIcats => {
+	  this.setState({
+		cats: APIcats
+	  })
 	}
-
+}
 ```
 
-What is this code doing? The big things to note are that we call getCats (which is a promise) and use the value returned from the promise (APIcats) to update state. ComponentWillMount is part of the React component lifecycle and always runs right before render. This means, that right before we
-have to show information on a page, React is going to preemptively use the code in our api folder to ask for some information and use the result from the
+What is this code doing? The big things to note are that we call getCats (which is a promise) and use the value returned from the promise (APIcats) to update state. ```ComponentWillMount()``` is part of the React component lifecycle and always runs right before render. This means, that right before we
+have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the
 database to set state.
 
 Now we should be ready to get information from the backend. Start your Rails server and react server at the same time, make sure to put the rails server on port 3000
