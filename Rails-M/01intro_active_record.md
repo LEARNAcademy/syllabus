@@ -1,6 +1,6 @@
-# Introduction to ActiveRecord
+# Introduction to Active Record
 
-[Video on ActiveRecord](
+[Video on Active Record](
 https://player.vimeo.com/video/156871310)
 
 ## Set Up Rails App
@@ -27,7 +27,7 @@ In Rails we use migrations to manage the shape of our database .....
 
 In the terminal, run the command `rails db:create`.
 
-This command creates two databases, one for our application's information and another to store any information that gets created while running tests. We can find those databases' names in `config/database.yml`. For example, the application's database might look somethihng like this:
+This command creates two databases, one for our application's information and another to store any information that gets created while running tests. We can find those databases' names in `config/database.yml`. For example, the application's database might look something like this:
 
 config/database.yml
 ```
@@ -93,7 +93,7 @@ bundle exec rails db:migrate
 There is a lot to ActiveRecord migrations.  Have a read of the documentation to learn more about [how they can help you](https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html).
 
 
-## Create a Model with ActiveRecord
+## Create a Model with Active Record
 
 Create a file within app/models named `contact.rb` and in it create the class called `Contact`:
 

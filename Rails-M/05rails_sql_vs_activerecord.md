@@ -1,8 +1,8 @@
-# SQL vs. ActiveRecord
+# SQL vs. Active Record
 
-ActiveRecord is a Rails-specific wrapper for SQL queries. It's shorter, easier to type, and often looks nicer, but under the hood it's the same old SQL. While we could have jumped straight into using ActiveRecord, it is important to know the SQL underneath these methods so that we can write efficient code that makes the best use of our database possible.
+Active Record is a Rails-specific wrapper for SQL queries. It's shorter, easier to type, and often looks nicer, but under the hood it's the same old SQL. While we could have jumped straight into using Active Record, it is important to know the SQL underneath these methods so that we can write efficient code that makes the best use of our database possible.
 
-Here are some examples of how SQL and ActiveRecord map to each other:
+Here are some examples of how SQL and Active Record map to each other:
 
 <table>
   <thead>
