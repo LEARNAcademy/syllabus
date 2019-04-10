@@ -17,7 +17,7 @@ Copy and paste this code into ```index.js```, read the code and comments.
 const BASE = 'http://localhost:3000'
 
 let getCats = function() {
-  	// the function name getCats is intended to remind you of the restful rails route --> GET '/cats'.
+// the function name getCats is intended to remind you of the restful rails route --> GET '/cats'.
 	return fetch(BASE + '/cats') // this would be equivalent to going to localhost:3000/cats in your browser. Do that - - what do you see?
 		.then((resp) => {
            	// resp will be whatever you saw on the page localhost:3000/cats, it is the result of our fetch call
@@ -38,13 +38,13 @@ Notice that we have wrapped the fetch call in another function called getCats. T
 
 When we export something in React, we make it available for import (just like with all our components)
 
-So now, we can ```import``` our API call into any file we please. Lets do that:
+So now, we can import our API call into any file we please. Lets do that:
 
-First, add ```import { getCats } from '../api'``` to the imports in ```App.js```
+First, add: ```import { getCats } from '../api'``` to the imports in ```App.js```
 
 Then, add a new function to ```App.js```:
 
-```javascript
+``` javascript
 constructor(props){
   super(props)
 	this.state = {
@@ -62,7 +62,7 @@ componentWillMount() {
 }
 ```
 
-What is this code doing? The big things to note are that we call getCats (which is a promise) and use the value returned from the promise (APIcats) to update state. ```ComponentWillMount()``` is part of the React component lifecycle and always runs right before render. This means, that right before we
+What is this code doing? The big things to note are that we call getCats (which is a promise) and use the value returned from the promise (APIcats) to update state. ComponentWillMount() is part of the React component lifecycle and always runs right before render. This means, that right before we
 have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the
 database to set state.
 

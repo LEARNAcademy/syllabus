@@ -4,8 +4,7 @@ It's time to turn our attention to the page components of the application. We'll
 
 Here's the basic test to start us out:
 
-```javascript
-src/components/__tests__/Cats.js```
+### src/components/__tests__/Cats.js
 
 ```javascript
 import React from 'react'
@@ -25,8 +24,7 @@ it('Cats renders without crashing', () => {
 
 The test will fail until we create the component.
 
-```javascript
-src/components/Cats.js```
+### src/components/Cats.js
 
 ```javascript
 import React, { Component } from 'react';
@@ -55,10 +53,9 @@ Now the test should pass because we have created a component that can be rendere
 
 Let's fix that by adding some fake (placeholder) cat data to play with. Later this information will come from the rails backend, but for now let's just get something up that we can see and work with.
 
-We want all of our data in a central place, so instead of placing it directly in the ```components/Cats.js``` component, we will put it in our logic component — ```App.js```
+We want all of our data in a central place, so instead of placing it directly in the ```components/Cats.js``` component, we will put it in our logic component ```App.js```
 
-```javascript
-src/App.js```
+### src/App.js
 
 ```javascript
 constructor(props){
@@ -88,19 +85,17 @@ constructor(props){
   }
 ```
 
-Now we need to send this cats json array to the Cats component as props from ```App.js```. Change the Cats component call to look like this:
+Now we need to send this cats JSON array to the Cats component as props from ```App.js```. Change the Cats component call to look like this:
 
 ```javascript
-<Cats cats={this.state.cats}/>
+<Cats cats={this.state.cats} />
 ```
 
 Now that our ```Cats.js``` component is receiving an array of cats in props, let's add some bootstrap code to create real content in the ```Cats.js``` render function, replacing the blank elements we had before.
 
 What else do you have to change about your page to make this work?
 
-```javascript
-components/Cats.js
-```
+### components/Cats.js
 
 ```javascript
 <Row>
@@ -125,16 +120,13 @@ components/Cats.js
 
 Now we get to test the information in our ```Cats.js``` component. Problem, now that the ```Cats.js``` takes in props from ```App.js``` — how can we test that? Our ```Cats.js``` component requires that information in order to render.
 
-We need our test to send some json data to ```components/Cats.js``` the same way that ```App.js``` is currently sending the cats json as props to components/```Cats.js```. It is really convenient if our test uses the same fake data as we have in ```App.js``` state.
+We need our test to send some json data to ```components/Cats.js``` the same way that ```App.js``` is currently sending the cats JSON as props to components/```Cats.js```. It is really convenient if our test uses the same fake data as we have in ```App.js``` state.
 
 Below, you’ll notice that we’re using an import statement for a thing called mount from Enzyme. It will allow us to pass information to a component we are testing.
 
 Write some tests to cover the content we just added to ```Cats.js```.
 
-
-```javascript
-src/components/__tests__/Cats.js
-```
+### src/components/__tests__/Cats.js
 
 ```javascript
 const cats = [
