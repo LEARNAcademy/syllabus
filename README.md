@@ -113,6 +113,7 @@ Using React and Rails to create an asynchronous full stack application with test
 3) [Challenge: Recipes App ](./React_and_Rails_Apartment_App/03apartment_app_recipes_challenge.md)
 4) [Dynamic Routes](./React_and_Rails_Apartment_App/04apartment_app_dynamic_routes.md)
 5) [React In Rails](https://classroom.github.com/a/HMg2JmtR)
+6) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
 
