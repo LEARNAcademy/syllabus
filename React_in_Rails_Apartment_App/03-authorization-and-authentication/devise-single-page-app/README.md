@@ -1,0 +1,328 @@
+# Devise and the Single Page App
+
+In this example, we bring all of the concepts we've been working with into one fully functional, full stack application.  We'll use Rails to differentiate between protected and public routes, Devise to handle authentication, and a React Single Page App do do the UI work.
+
+We'll pick this app up where the Devise Example app leaves off.  At the start, we have:
+
+* A functioning Rails 5 application
+* Devise and a User Model for authentication
+* A Bike resource associated to Users.
+* Scaffolded Controller and Views for Bikes
+
+### About the Git Branches
+* 'master' has the completed project
+* 'single-page-app-starting-point' is where this example picks up.  If you are following along, checkout that branch, and start coding from there.
+
+## 0) Before We start
+If you've been working through previous examples on this computer, you may have a stale SessionId stored in your Browser's cookies.  Delete any localhost cookies before we get going.
+
+## 1) Add React App Dependencies
+
+The first thing we need to do is add Webpack and React to our application.
+
+```bash
+bundle add webpacker react-rails
+bundle install
+rails webpacker:install
+rails webpacker:install:react
+rails generate react:install
+yarn install
+```
+
+## 2) Add the webpack to the layout
+```bash
+cat app/views/layouts/application.html.erb | sed 10!d
+```
+```result
+:     <%= javascript_pack_tag 'application' %>
+```
+
+## 3) Add Controller and View for Single Page App
+
+```bash
+rails g controller Pages
+```
+
+Its optional to add the controller methods for our two routes, but its helpful documentation to do so, so we'll do it here.
+```bash
+cat -n app/controllers/pages_controller.rb
+```
+```result
+:      1	class PagesController < ApplicationController
+:      2	  def unprotected
+:      3	  end
+:      4
+:      5	  def protected
+:      6	  end
+:      7	end
+```
+
+We also add the empty View files.
+
+```bash
+touch app/views/pages/unprotected.html.erb
+touch app/views/pages/protected.html.erb
+```
+
+## 4) Generate React Component for Unauthenticated Routes and another for Authenticated Ones
+We're technically going to be running 2 single page apps for this application, one for authenticated routes, and one for unauthenticated.
+
+```bash
+rails g react:component UnauthenticatedApp
+rails g react:component AuthenticatedApp
+```
+
+```bash
+cat app/javascript/components/AuthenticatedApp.js
+```
+```result
+: import React from "react"
+: import PropTypes from "prop-types"
+: class AuthenticatedApp extends React.Component {
+:   render () {
+:     return (
+:       <div>Authenticated</div>
+:     );
+:   }
+: }
+:
+: export default AuthenticatedApp
+```
+
+```bash
+cat app/javascript/components/UnauthenticatedApp.js
+```
+```result
+: import React from "react"
+: import PropTypes from "prop-types"
+: class UnauthenticatedApp extends React.Component {
+:   render () {
+:     return (
+:       <div>Unauthenticated</div>
+:     );
+:   }
+: }
+:
+: export default UnauthenticatedApp
+```
+
+Then we can place them on the appropriate pages:
+
+```bash
+cat app/views/pages/protected.html.erb
+```
+```result
+: <%= react_component('AuthenticatedApp') %>
+```
+
+```bash
+
+cat app/views/pages/unprotected.html.erb
+```
+```result
+: <%= react_component('UnauthenticatedApp') %>
+```
+
+Let's add some test routes to make sure all is working:
+
+```bash
+cat config/routes.rb
+```
+```result
+: Rails.application.routes.draw do
+:   get 'protected', to: 'pages#protected'
+:   get 'unprotected', to: 'pages#unprotected'
+: end
+```
+
+When we navigate to those routes, we see our components rendering.  Leave them there for just a minute while we configure the Pages Controller
+
+## 5) Protecting our route in the controller
+
+```bash
+bundle add devise
+rails generate devise:install
+rails generate devise User
+```
+
+```bash
+cat -n app/controllers/pages_controller.rb
+```
+```result
+:      1	class PagesController < ApplicationController
+:      2	  before_action :authenticate_user!, only: :protected
+:      3
+:      4	  def unprotected
+:      5	  end
+:      6
+:      7	  def protected
+:      8	  end
+:      9	end
+```
+
+Let's navigate again to '/protected'
+
+```bash
+cat config/routes.rb
+```
+```result
+: Rails.application.routes.draw do
+:   devise_for :users
+:   get 'protected', to: 'pages#protected'
+:   get 'unprotected', to: 'pages#unprotected'
+: end
+```
+
+## 6) Protect what should be login protected
+
+Now, let's setup our controller to protect what should be protected, and leave alone what is publicly available.
+
+Line 2 is all we need to add:
+
+```bash
+cat -n app/controllers/pages_controller.rb
+```
+```result
+:      1	class PagesController < ApplicationController
+:      2	  before_action :authenticate_user!, only: :protected
+:      3
+:      4	  def unprotected
+:      5	  end
+:      6
+:      7	  def protected
+:      8	  end
+:      9	end
+```
+
+## 7) Routes
+
+Let's audit all of the routes that we are going to need for this app, remembering all the different types we have in play:
+
+1. Those generated by Devise
+2. Unprotected HTML pages (single page React app)
+3. Protected HTML pages (single page React app)
+4. Protected API routes
+
+** Note that we could also have unprotected API routes, but this app doesn't utilize any of those.
+
+Here's our updated Routes file that handles all of these situations:
+
+```bash
+cat -n config/routes.rb
+```
+```result
+:      1	Rails.application.routes.draw do
+:      2	  resources :bikes, constraints: ->(request){ !request.format.html? }
+:      3	  devise_for :users
+:      4
+:      5	  get '*path', to: 'pages#protected', constraints: ->(request){ request.format.html? }
+:      6	  root to: 'pages#unprotected'
+:      7	end
+```
+
+1. We no longer want to handle HTTP traffic in the Bikes resource, but rather, we want that routed to our single page app.
+
+** Keep in mind that routes are read from top to bottom, so order is important.
+
+## 8) Adding the React Router
+
+```bash
+yarn add react-router-dom
+```
+
+And we can add a "pages/Bikes" component:
+
+```bash
+rails g react:component pages/Bikes
+```
+
+Then we can route to it in the React Router.
+
+```bash
+cat app/javascript/components/AuthenticatedApp.js
+```
+```result
+: import React from "react"
+: import PropTypes from "prop-types"
+: import {
+:   BrowserRouter as Router,
+:   Route,
+:   Switch,
+: } from 'react-router-dom'
+:
+: import Bikes from './pages/Bikes'
+: class AuthenticatedApp extends React.Component {
+:   render () {
+:     return (
+:       <Router>
+:         <div>
+:           <Switch>
+:             <Route path="/bikes" component={Bikes} />
+:           </Switch>
+:         </div>
+:       </Router>
+:     );
+:   }
+: }
+:
+: export default AuthenticatedApp
+```
+
+## 9) Displaying Bikes
+
+Now we can display a list of bikes to our user.  This assumes that you have some in the database.  Go ahead and add some via the Rails console if you don't.
+
+
+```bash
+cat -n app/javascript/components/pages/Bikes.js
+```
+```result
+:      1	import React from "react"
+:      2	import PropTypes from "prop-types"
+:      3	class Bikes extends React.Component {
+:      4	  constructor(props){
+:      5	    super(props)
+:      6	    this.state = {
+:      7	      bikes: []
+:      8	    }
+:      9	  }
+:     10	  componentDidMount(){
+:     11	      fetch('/bikes.json')
+:     12	      .then((response) => {
+:     13	        return response.json()
+:     14	      })
+:     15	      .then((json) => {
+:     16	        this.setState({bikes: json})
+:     17	      })
+:     18	      .catch((e)=>{
+:     19	        console.log("Error", e)
+:     20	      })
+:     21	  }
+:     22	  render () {
+:     23	    return (
+:     24	      <div>
+:     25	        <h1>Bikes</h1>
+:     26	        <table>
+:     27	          <tbody>
+:     28	            <tr>
+:     29	              <th>Brand</th>
+:     30	              <th>Model</th>
+:     31	              <th>year</th>
+:     32	            </tr>
+:     33
+:     34	            {this.state.bikes.map((bike, index) =>
+:     35	              <tr key={index}>
+:     36	                <td>{bike.brand}</td>
+:     37	                <td>{bike.model}</td>
+:     38	                <td>{bike.model_year}</td>
+:     39	              </tr>
+:     40	            )}
+:     41	          </tbody>
+:     42	        </table>
+:     43	      </div>
+:     44	    );
+:     45	  }
+:     46	}
+:     47
+:     48	export default Bikes
+```
