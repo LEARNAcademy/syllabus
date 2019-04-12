@@ -208,12 +208,12 @@ var numbers2 = [2, 4, 6, 8, 10]
 
 **Exercise 4** - Consider this variable:
  var numbers1 = [1, 2, 3, 4, 5]
- 
+
  * Write the code that will add the number 0 to the beginning of the array without altering the original array.
 
  **Exercise 5** - Consider this variable:
  var numbers3 = [2, 13, 6, 8, 4, 2]
- 
+
  * Write the code that finds the index of the first appearance of the number 2.
 
  * Write the code that finds the index of the last appearance of the number 2.
@@ -251,10 +251,9 @@ var numbers2 = [2, 4, 6, 8, 10]
 * Output the random answer.
 
 #### Stretch goal:
-* Create an html page linked to the javascript file - you will need to research onClick events and document.getElementById
+* Create an html page linked to the javascript file - you will need to research onClick events, document.getElementById and innerHTML. (we will do more of this next week).
 
 
 [Go to Javascript Loops](./05js_loops.md)
 
 [Back to Javascript Functions](./05js_functions.md)
-
