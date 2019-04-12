@@ -25,6 +25,12 @@ This example, meant to be done as a group exercise brings all the concepts toget
 
 * [Devise Single Page App](./devise-single-page-app)(Group Exercise)
 
+### To read up on react-rails, and how to pass data from Rails into React:
+[React Rails Docs](https://github.com/reactjs/react-rails#7-render-it-in-a-rails-view)
+
+### To read about passing data through the React Router:
+[React Router Docs](https://reacttraining.com/react-router/web/api/Route/render-func)
+
 #### Exercises
 
 * [Complete Skateboard App](https://classroom.github.com/a/c02lHbCC)(Pair Exercise)
