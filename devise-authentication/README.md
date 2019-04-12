@@ -38,7 +38,7 @@ Please use this Git Repo to manage your work.  It is a Github classroom, which w
 * [Git Repo](https://classroom.github.com/a/QXbYImaf)
 
 #### User Stories
-#####Part 1
+##### Part 1
 Story: As an un-registered guest on the website, I can go to a web page and see a list of available apartments.
 
 Apartments have: two street designations, a city, postal code, state, and country, in a addition to a building manager's contact info, which includes: name, phone number, and hours to contact
