@@ -1,0 +1,32 @@
+<%= form_with(model: bike, local: true) do |form| %>
+  <% if bike.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bike.errors.count, "error") %> prohibited this bike from being saved:</h2>
+
+      <ul>
+      <% bike.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model_year %>
+    <%= form.number_field :model_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
