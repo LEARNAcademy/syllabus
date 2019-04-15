@@ -104,9 +104,6 @@ Notice that in our loops we use 'let' to assign 'i' or 'index' to a starting val
 
 
 
-
-
-
 ## Loops/Iteration Challenges
 
 Below are exercises in using loops and iteration. Beneath each prompt write the code to fulfill the exercise requirement.
@@ -125,7 +122,7 @@ So the result should be: [ODD, 2, ODD, 4, ODD, 6 ....]
 
 ### The Odd and Even
 
-Write a JavaScript function that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
+Write a for loop that iterates from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
 Sample Output :
 "0 is even"
 "1 is odd"
