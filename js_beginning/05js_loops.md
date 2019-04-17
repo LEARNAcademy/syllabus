@@ -112,12 +112,16 @@ Below are exercises in using loops and iteration. Beneath each prompt write the 
 
 2.  Write a for loop that logs the result of each number from 1 - 20 tripled.
 
-3.  Consider this variable: var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].  Write a for loop that logs each number.
+3.  Consider this variable: var numbers = [8, 2, 17, 4, 5, 10, 4, 8, 9, 15].  Write a for loop that logs each number multiplied by 4.
 
 4.  Create a for loop that logs each EVEN number from 1-20, and in the place of every odd number, returns the word "ODD"
 So the result should be: [ODD, 2, ODD, 4, ODD, 6 ....]
 
-5.  Use a for loop to log each number from the numbers variable above in reverse.
+5.  Write a for loop that logs each number from 1 - 10 in reverse.
+
+6. Consider this variable: var letters = ["l", "e", "a", "r", "n"] Write a for loop that logs each letter capitalized.
+
+6.  Consider this variable: var strings = ["hi", "yo", "there", "what", "how", "two", "are", "where", "you"].  Write a for loop that logs the strings at only the odd indexes(start with 0).  
 
 
 ### The Odd and Even
