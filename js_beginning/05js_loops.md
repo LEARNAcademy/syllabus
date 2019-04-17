@@ -121,7 +121,7 @@ So the result should be: [ODD, 2, ODD, 4, ODD, 6 ....]
 
 6. Consider this variable: var letters = ["l", "e", "a", "r", "n"] Write a for loop that logs each letter capitalized.
 
-6.  Consider this variable: var strings = ["hi", "yo", "there", "what", "how", "two", "are", "where", "you"].  Write a for loop that logs the strings at only the odd indexes(start with 0).  
+7. Consider this variable: var strings = ["hi", "yo", "there", "what", "how", "two", "are", "where", "you"].  Write a for loop that logs the strings at only the even indexes(start with 0).  
 
 
 ### The Odd and Even
