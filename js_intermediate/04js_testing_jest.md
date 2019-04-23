@@ -1,6 +1,6 @@
 # Testing Javascript with Jest
 
-Testing with Jest 
+
 [![YouTub](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)
 ]
 
