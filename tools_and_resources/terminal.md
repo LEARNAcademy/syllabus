@@ -39,10 +39,6 @@ clear       clear the terminal
 * New Window
 * Choose style
 
-
-## nodeJS
-NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node must be installed on our machines. NodeJS allows us to run JS files through terminal. Super handy! After Node is installed you can cd into the folder of your JS file and run `node filename.js` which will run your JS file will render any console.log() in your terminal. To install nodeJS use a package manager system such as Homebrew (for Mac).
-
 ## Extras
 There are programs that help add a bit of flare and functionality to your terminal. One we like at Learn is a shell called ZSH (Z shell). Find out more <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank">here.</a>
 

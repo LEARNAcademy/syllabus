@@ -19,7 +19,7 @@ $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 
 I'm going to use the "United" theme from bootswatch.com, so I'll add the stylesheet to 'pubic/index.html'  You can download a theme from here: [Bootswatch](https://bootswatch.com/) and put it in the ```public/``` directory.
 
-#### public/index.html
+### public/index.html
 ```
 <link rel="stylesheet" href="%PUBLIC_URL%/bootstrap.min.css">
 ```
@@ -28,7 +28,7 @@ I'm going to use the "United" theme from bootswatch.com, so I'll add the stylesh
 
 Create React App gives us a file called App.js that ties in to the Index.js file, it will be the entry point of our app.
 
-#### src/App.js
+### src/App.js
 ```javascript
 import React, { Component } from 'react'
 

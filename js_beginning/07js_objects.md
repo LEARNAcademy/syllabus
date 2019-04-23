@@ -235,7 +235,7 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 
-### Epic Challenges
+### Challenges
 
 Working with functions and objects.
 
@@ -280,29 +280,9 @@ Volume of a cylinder : V = πr2h
 
 where r is the radius and h is the height of the cylinder.
 
+
+
 #### Exercise 4
-Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
-
-```javascript
-var library = [
-   {
-       title:  'The Road Ahead',
-       author: 'Bill Gates',
-       libraryID: 1254
-   },
-   {
-       title: 'Walter Isaacson',
-       author: 'Steve Jobs',
-       libraryID: 4264
-   },
-   {
-       title: 'Mockingjay: The Final Book of The Hunger Games',
-       author: 'Suzanne Collins',
-       libraryID: 3245
-   }];
-```
-
-#### Exercise 5
 
 Write a program that calculates the total, tax, and weight of the items in a shopping cart.
 
@@ -327,6 +307,32 @@ var cartItems = [
 ```
 #### Stretch Goal
 Extend your shopping cart program by creating a new class called 'CartItem', and creating an instance of CartItem before passing each to the cart calculator.  Is it easier or harder to pass class instances around? Does it make the code easier to read and reason about?
+
+#### SUPER STRETCH
+
+#### Exercise 5
+Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
+
+Hint:  Research alpha and numeric sorting in javascript.
+
+```javascript
+var library = [
+   {
+       title:  'The Road Ahead',
+       author: 'Bill Gates',
+       libraryID: 1254
+   },
+   {
+       title: 'Walter Isaacson',
+       author: 'Steve Jobs',
+       libraryID: 4264
+   },
+   {
+       title: 'Mockingjay: The Final Book of The Hunger Games',
+       author: 'Suzanne Collins',
+       libraryID: 3245
+   }];
+```
 
 
 ## Links

@@ -1,20 +1,20 @@
 # NEWCAT FUNCTIONALITY
 
-Now that the NewCat form is rendering correctly, we can wire the form up to pass submitted data to App.js, and handle errors correctly.
+Now that the NewCat form is rendering correctly, we can wire the form up to pass submitted data to ```App.js```, and handle errors correctly.
 
 What happens when a user clicks "Create Cat Profile" ?
 
-When a user clicks the “Create a Cat” button to submit the form, we want that to trigger a series of actions that lead to adding a new cat to the rails database. Lets chart where the information submitted by the user has to travel in order to get to the db.
+When a user clicks the “Create a Cat” button to submit the form, we want that to trigger a series of actions that lead to adding a new cat to the rails database. Let's chart where the information submitted by the user has to travel in order to get to the db.
 
 ## Flow of information from form to DB
 #### 1. Preparation
 
-##### in App.js
-A function is created to handle information for a new cat. That function is preemptively sent to the dumb component (in our case components/NewCat.js) as props. This function is saying to the dumb component: “Here is a function that takes in new cat json as an argument. Only run it when you have all the information for a new cat”.
+##### In App.js
+A function is created to handle information for a new cat. That function is preemptively sent to the dumb component (in our case ```components/NewCat.js```) as props. This function is saying to the dumb component: “Here is a function that takes in new cat json as an argument. Only run it when you have all the information for a new cat”.
 
 #### 2. Data Entry
 
-##### in components/NewCat.js
+##### In components/NewCat.js
 User inputs data into the form. The form is controlled, and saves all data directly into state
 
 #### 3. Form Submit
@@ -24,9 +24,9 @@ User hits submit - this is our signal that they are finished filling in their in
 
 #### 4. Pass Data to the API
 
-#### in App.js
+#### In App.js
 We now would trigger a POST type request to the backend, and rails would handle the rest — but more on that tomorrow.
 
 ## Challenge
 
-Create a ```handleNewCat``` function in App.js that only does one thing: console.log the information from the NewCat form. Pass the handleNewCat function to the NewCat component as props, and then run the handleNewCat function when a user clicks the form submit button
+Create a ```handleNewCat``` function in ```App.js``` that only does one thing: ```console.log()``` the information from the NewCat form. Pass the handleNewCat function to the NewCat component as props, and then run the handleNewCat function when a user clicks the form submit button.
