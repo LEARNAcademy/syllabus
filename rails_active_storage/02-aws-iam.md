@@ -1,7 +1,4 @@
 ### IAM
-AKIAXZ7WDL5KC5S6RGTU
-
-f+/9RvHa52WsctzakeNtfyjCAMII9QqniXe+F2LQ
 
 ![iam](./assets/10-iam.png)
 
