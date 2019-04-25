@@ -17,8 +17,8 @@ rails db:migrate
 ```yml
 amazon:
   service: S3
-  access_key_id: <Your Key>
-  secret_access_key: <Your Secret Key>
+  access_key_id:  <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: us-east-1
   bucket: <name of your AWS S3 bucket>
 ```
@@ -47,4 +47,30 @@ Finally, we add a line to our ActiveRecord Model to tell it we want it to have a
 class User < ApplicationRecord
   has_one_attached :avatar
 end
+```
+
+### Example Controller
+
+For our controller, we need to setup an endpoint that will accept an update with our user's avatar data.  **Note:** that this has no authentication at all, so it is very insecure.
+
+```ruby
+class UsersController < ApplicationController
+
+    def update
+        @user = User.find(params[:id]) #probably would be current_user for you
+        @user.update_attributes(user_params)
+        render :show
+    end
+
+    def user_params
+        params.require(:user).permit(:avatar)
+    end
+end
+```
+
+The View for :show is JBuilder:
+```ruby
+json.id @user.id
+json.name @user.name
+json.avatar_url url_for(@user.avatar)
 ```

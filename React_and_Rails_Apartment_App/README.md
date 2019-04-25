@@ -1,4 +1,4 @@
-##### Group Activities / Pairing Challenges
+#### Group Activities / Pairing Challenges
 * [React Router](https://classroom.github.com/g/RSynp64z) - old
 * [Dynamic Routes](https://classroom.github.com/g/hoUP0zMm) - old
 

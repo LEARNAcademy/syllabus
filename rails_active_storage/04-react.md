@@ -1,4 +1,5 @@
 ## ActiveStorage in React
+[Github Docs for react-activestorage-provider](https://github.com/cbothner/react-activestorage-provider)
 
 #### Add react-activestorage-provider
 
@@ -8,7 +9,7 @@ yarn add react-activestorage-provider
 ```
 
 ### User the package
-This example adds ability to upload an Avatar to User record.  In a Component:
+This example adds ability to upload an Avatar to an existing User record.  In a Component:
 
 ```javascript
 import React from "react"
@@ -16,16 +17,38 @@ import PropTypes from "prop-types"
 import ActiveStorageProvider from 'react-activestorage-provider'
 
 class User extends React.Component {
+  constructor(props){
+    super(props)
+    const{ user } = props
+    this.state = {
+      user
+    }
+  }
+
+
+  handleSubmit = (user)=>{
+    this.setState({ user })
+  }
+
   render () {
+    const{ user } = this.state
     return (
       <React.Fragment>
+        <h1>User: {user.name} </h1>
+        { user && user.avatar_url &&
+          <div>
+            <h2>Your Avatar is: </h2>
+            <img src={user.avatar_url} />
+          </div>
+        }
         <ActiveStorageProvider
           endpoint={{
-            path: '/users',
+            path: `/users/${user.id}`,
             model: 'User',
             attribute: 'avatar',
-            method: 'POST',
+            method: 'PUT',
           }}
+          onSubmit={this.handleSubmit}
           render={({ handleUpload, uploads, ready }) => (
             <div>
               <input
@@ -65,4 +88,5 @@ class User extends React.Component {
 }
 
 export default User
+
 ```
