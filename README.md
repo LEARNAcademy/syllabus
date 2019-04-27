@@ -117,6 +117,9 @@ Using React and Rails to create an asynchronous full stack application with test
 6) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
+1) [ActiveStorage](./Rails_ActiveStorage/README.md)
+2) [JBuilder](./Rails_JBuilder/README.md)
+3) [has_many_through](./Rails_has_many_through/README.md)
 
 ## Unit Eleven: Capstone Project, Week 2
 
