@@ -122,5 +122,6 @@ Using React and Rails to create an asynchronous full stack application with test
 3) [has_many_through](./Rails_has_many_through/README.md)
 
 ## Unit Eleven: Capstone Project, Week 2
+1) [Heroku](./heroku/README.md)
 
 ## Unit Twelve: Internship Preparation
