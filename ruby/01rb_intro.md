@@ -3,8 +3,6 @@ Ruby is an open source, object-oriented programming language with a reputation f
 
 If you are using a Mac, Ruby comes preinstalled on your machine. To use it, open the terminal and type `irb` (interactive ruby shell) into terminal. And that's it! You're all set to start coding in Ruby.
 
-If you're using Windows, go here: <a href="https://www.codecademy.com/articles/ruby-setup"> Windows Ruby Setup</a>
-
 ## Running Ruby from a file
 Time to start running Ruby from a file.
 
