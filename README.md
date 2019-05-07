@@ -22,6 +22,7 @@ This section is building on Javascript foundations and introducing more advanced
 3) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+6) [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 
 
 ## Unit Three: React
@@ -112,9 +113,15 @@ Using React and Rails to create an asynchronous full stack application with test
 2) [Challenge: Portfolio App](./React_and_Rails_Apartment_App/02apartment_app_portfolio_challenge.md)
 3) [Challenge: Recipes App ](./React_and_Rails_Apartment_App/03apartment_app_recipes_challenge.md)
 4) [Dynamic Routes](./React_and_Rails_Apartment_App/04apartment_app_dynamic_routes.md)
+5) [React In Rails](https://classroom.github.com/a/HMg2JmtR)
+6) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
+1) [ActiveStorage](./Rails_ActiveStorage/README.md)
+2) [JBuilder](./Rails_JBuilder/README.md)
+3) [has_many_through](./Rails_has_many_through/README.md)
 
 ## Unit Eleven: Capstone Project, Week 2
+1) [Heroku](./heroku/README.md)
 
 ## Unit Twelve: Internship Preparation

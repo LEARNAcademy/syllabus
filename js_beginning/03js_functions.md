@@ -152,17 +152,17 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 Below are exercises in writing functions.
 
-1.  Write a function called marco that logs "polo" to the screen.
+1.  Write a function called marco that returns "polo".
 
-2.  Write a function called greeting that takes a name as an argument and logs 'welcome <person's name here>''
+2.  Write a function called greeting that takes a name as an argument and returns 'welcome <person's name here>''
 
-3.  Write a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even.
+3.  Write a function called oddOrEven that takes an number as an argument and returns whether the number is odd or even.
 
-4.  Write a function called triple that takes a number as an argument and logs the result of that number multiplied by 3.
+4.  Write a function called triple that takes a number as an argument and returns the result of that number multiplied by 3.
 
-5.  Write a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+5.  Write a function called multiply that takes two numbers as arguments and returns the result of one of the numbers multiplied by the other.
 
-6.  Write a function called divisibleBy that takes two numbers as arguments and logs whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+6.  Write a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 
 Below are slightly harder challenges.  
 ##### Remember to write the pseudo code for each function before you write the code!
@@ -199,6 +199,8 @@ Write a function named pluralize that:
 ``` pluralizer(1, dog) ``` should return "1 dog" because the number one does not require a plural noun
 
 * Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
+
+[practice more with Edabit](https://edabit.com/challenges/javascript)
 
 [Go to Javascript Arrays](./04js_arrays.md)
 
