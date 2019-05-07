@@ -38,7 +38,11 @@ React is a powerful Javascript library used to build more complicated web applic
 7) [React Functional Props](./react/07react_functional_props.md/)
 8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
+<<<<<<< HEAD
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
+=======
+10) [Challenge: React TicTacToe Mob](./react/03react_tictactoe.md/)
+>>>>>>> master
 
 
 ## Unit Four: Ruby
