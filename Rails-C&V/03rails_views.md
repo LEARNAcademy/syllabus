@@ -2,6 +2,13 @@
 
 What if we don't want to render plain text on a page? Rails can do that, too.
 
+Recall that we have a route in 'config/routes.rb' that looks like this:
+```ruby
+Rails.application.routes.draw do
+    get "/answers/:number", to: 'main#answers'
+end
+```
+
 Let's update our `answers` method to load an html.erb file instead of rendering plain text.
 
 ```
