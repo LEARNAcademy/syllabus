@@ -109,11 +109,11 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: React Routes, Authentication
 
-1) [React Router](./React_in_Rails_Apartment_App/01-react-router-intro.md)
-2) [Challenge: Portfolio App](./React_in_Rails_Apartment_App/02-portfolio-challenge.md)
-3) [Challenge: Recipes App ](./React_in_Rails_Apartment_App/03-recipes-challenge.md)
-4) [Dynamic Routes](./React_in_Rails_Apartment_App/04-dynamic-routes.md)
-5) [React In Rails](https://github.com/LEARNAcademy/react-router-dynamic-routes)
+1) [React Router](./React_in_Rails_Apartment_App/01-routing-in-react/01-react-router-intro.md)
+2) [Challenge: Portfolio App](./React_in_Rails_Apartment_App/01-routing-in-react/02-portfolio-challenge.md)
+3) [Challenge: Recipes App ](./React_in_Rails_Apartment_App/01-routing-in-react/03-recipes-challenge.md)
+4) [Dynamic Routes](./React_in_Rails_Apartment_App/01-routing-in-react/04-dynamic-routes.md)
+5) [React In Rails](./React_in_Rails_Apartment_App/02-react-in-rails/README.md)
 6) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
