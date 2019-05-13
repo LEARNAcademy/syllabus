@@ -5,8 +5,9 @@ Now that we've explored HTML, CSS, Javascript, and Ruby, we have the complete se
 
 ##### In the terminal:
 ```
-rails new myapp
+rails new myapp -d postgresql -T
 cd myapp
+rails db:create
 rails server
 ```
 These commands do a few things. `rails new app_name` generates a new rails application in a folder. The Rails app we are generating is going to be called "myapp". Once we've navigated ourselves into the Rails app directory, we run the Rails application by starting the server. We do that by typing `rails server` or `rails s`.
