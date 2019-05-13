@@ -59,11 +59,12 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1) [Rails Intro to Routes, Controllers and View](./rails/01rails_routes_controllers_views.md)
-2) [Rails Forms, Layout and Flash](./rails/02rails_forms_layont_flash_messages.md)
-3) [Intro to Postgres](./rails/03rails_intro_postgres.md)
-4) [SQL Joins](./rails/04rails_sql_joins.md)
-5) [SQL CRUD and Foreign Keys](./rails/05rails__sql_crud_foreign_keys.md)
+https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/01rails_routes_controllers_views.md
+1) [Rails Intro to Routes, Controllers and View](./Rails-C%26V/01rails_routes_controllers_views.md)
+2) [Rails Forms, Layout and Flash](./Rails-C%26V/02rails_forms_layont_flash_messages.md)
+3) [Intro to Postgres](./Rails-C%26V/03rails_intro_postgres.md)
+4) [SQL Joins](./Rails-C%26V/04rails_sql_joins.md)
+5) [SQL CRUD and Foreign Keys](./Rails-C%26V/05rails__sql_crud_foreign_keys.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
