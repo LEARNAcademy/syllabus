@@ -74,5 +74,6 @@ Then we can add a controller endpoint and view for 'questions' as our homepage.
 * set the dynamic page you created as the home page
   - Use the route that doesn't require arguments as your home page
   - set the root url in the router to be the homepage.
-
 * create at least one piece of data in the controller to be passed to the view
+
+-- hint: You can read about routes on the excellent [Rails guides](https://guides.rubyonrails.org/routing.html)
