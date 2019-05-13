@@ -59,7 +59,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1) [Rails Intro to Routes, Controllers and View](./rails/01rails_routes_controllers_views.md)
+1) [Rails Intro to Routes, Controllers and View](https://github.com/LEARNAcademy/Syllabus/blob/master/Rails-C%26V/01rails_routes_controllers_views.md)
 2) [Rails Params](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/02rails_params.md)
 3) [Rails Views](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/03rails_views.md)
 4) [Rails Cookies](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/04rails_cookies.md)
