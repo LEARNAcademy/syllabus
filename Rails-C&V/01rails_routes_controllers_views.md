@@ -52,6 +52,12 @@ Rails.application.routes.draw do
 ```
 This route will, when you type `localhost:3000/answers` into the browser (the get '/answers' part), look for a controller called MainController and load any methods called `answers` that it finds there (the 'main#answers' part).
 
+## rails generate controller
+From the command line, we can add a new Rails controller with a rails command:
+```bash
+rails generate controller main
+```
+
 If our MainController looks like this:
 *app/controllers/main_controller.rb*:
 ```
