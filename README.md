@@ -59,6 +59,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
+<<<<<<< HEAD
 1) [Rails Intro to Routes, Controllers and View](https://github.com/LEARNAcademy/Syllabus/blob/master/Rails-C%26V/01rails_routes_controllers_views.md)
 2) [Rails Params](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/02rails_params.md)
 3) [Rails Views](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/03rails_views.md)
@@ -66,6 +67,13 @@ Rails is full stack framework built into the Ruby programming language. Here you
 5) [Rails Forms, Layouts and Flash Messages](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/05rails_forms_layouts_flash_messages.md)
 6) [Rails Generate](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/06rails_generate.md)
 7) [Rails Mini Projects](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/07rails_miniprojects.md)
+=======
+1) [Rails Intro to Routes, Controllers and View](./Rails-C%26V/01rails_routes_controllers_views.md)
+2) [Rails Forms, Layout and Flash](./Rails-C%26V/02rails_forms_layont_flash_messages.md)
+3) [Intro to Postgres](./Rails-C%26V/03rails_intro_postgres.md)
+4) [SQL Joins](./Rails-C%26V/04rails_sql_joins.md)
+5) [SQL CRUD and Foreign Keys](./Rails-C%26V/05rails__sql_crud_foreign_keys.md)
+>>>>>>> 3416cc97d142df2ec976b2f51edb13530adc0c43
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 

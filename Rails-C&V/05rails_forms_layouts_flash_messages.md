@@ -35,7 +35,7 @@ class MainController < ApplicationController
 end
 ```
 
-At this point the URL should work: http://localhost:3000/answers?number=43
+At this point the URL should work: /answers?number=43
 
 ## Using a form to enter data instead of URL
 
@@ -49,7 +49,7 @@ Number was: <%= @result_string %>
 </form>
 ```
 
-Address bar in browser changes to: http://localhost:3000/answers?number=43
+Address bar in browser changes to: /answers?number=43
 Just as if we had entered it ourselves.
 
 ## Adding Data Validation
@@ -190,7 +190,7 @@ Check User ID and Password on a Website
 * Create a controller: PasswordController with a method called check.
 * Create a view for the check method in PasswordController called check.html.erb.
 
-In a browser use http://localhost:3000/check_password?userid=joe&password=letmein to check the credentials.
+In a browser use /check_password?userid=joe&password=letmein to check the credentials.
 
 ##### Inside the method:
 * Store the user ID and password in instance variables
