@@ -503,7 +503,7 @@ Save your queries in a file if you want to keep them for posterity.
 * What is the average life expectancy for all continents?
 * Which countries have the letter ‘z’ in the name? How many?
 
-[Go to SQL Joins](./04rails_sql_joins.md)
 
+[Go to SQL Joins](./08rails_sql_joins.md)
 
-[Back to Rails Forms, Layout and Flash](./02rails_forms_layouts_flash_messages.md)
+[Back to Syllabus](../README.md)

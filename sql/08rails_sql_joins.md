@@ -167,6 +167,8 @@ Hint: use `INTERSECT` or `OUTER JOIN` or `INNER JOIN`
 * Which customers did not rent a movie in the second half of 2005?
 * What was the total revenue in April 2007? In California?
 
-[Go to SQL CRUD and Foreign Keys](./05rails__sql_crud_foreign_keys.md)
+[Go to SQL CRUD and Foreign Keys](./09rails__sql_crud_foreign_keys.md)
 
-[Back to Intro to Postgres](./03rails_intro_postgres.md)
+[Back to Intro to Postgres](./07rails_intro_postgres.md)
+
+[Back to Syllabus](../README.md)
