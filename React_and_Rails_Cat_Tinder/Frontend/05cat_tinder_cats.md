@@ -29,7 +29,7 @@ The test will fail until we create the component.
 ```javascript
 import React, { Component } from 'react';
 import {
-  Col, Container Row
+  Col, Container, Row
 } from 'react-bootstrap'
 
 class Cats extends Component {
@@ -103,12 +103,12 @@ What else do you have to change about your page to make this work?
     <ListGroup>
     {this.props.cats.map((cat, index) =>{
       return (
-        <ListGroupItem key={index}>
+        <ListGroup.Item key={index}>
           <h4>
             <span className='cat-name'>{cat.name}</span> - <small className='cat-age'>{cat.age} years old</small>
           </h4>
             <span className='cat-enjoys'>{cat.enjoys}</span>
-          </ListGroupItem>
+          </ListGroup.Item>
         )
       })}
     </ListGroup>
