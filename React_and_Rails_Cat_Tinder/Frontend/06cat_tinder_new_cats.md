@@ -70,7 +70,7 @@ And then for each input, we use an arrow function to bind its value to state. We
 ### src/components/NewCat.js
 
 ```javascript
-<FormControl
+<Form.Control
   type="text"
   name="name"
   onChange={this.handleChange}
