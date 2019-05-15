@@ -66,6 +66,10 @@ Rails is full stack framework built into the Ruby programming language. Here you
 5) [Rails Forms, Layouts and Flash Messages](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/05rails_forms_layouts_flash_messages.md)
 6) [Rails Generate](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/06rails_generate.md)
 7) [Rails Mini Projects](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/07rails_miniprojects.md)
+8) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+9) [Joins](./sql/08rails_sql_joins.md)
+10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
+11) [Foreign Keys, Joins, & Associations](./sql/10_sql_joins.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
@@ -109,11 +113,11 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: React Routes, Authentication
 
-1) [React Router](./React_and_Rails_Apartment_App/01apartment_app_react_router.md)
-2) [Challenge: Portfolio App](./React_and_Rails_Apartment_App/02apartment_app_portfolio_challenge.md)
-3) [Challenge: Recipes App ](./React_and_Rails_Apartment_App/03apartment_app_recipes_challenge.md)
-4) [Dynamic Routes](./React_and_Rails_Apartment_App/04apartment_app_dynamic_routes.md)
-5) [React In Rails](https://classroom.github.com/a/HMg2JmtR)
+1) [React Router](./React_in_Rails_Apartment_App/01-routing-in-react/01-react-router-intro.md)
+2) [Challenge: Portfolio App](./React_in_Rails_Apartment_App/01-routing-in-react/02-portfolio-challenge.md)
+3) [Challenge: Recipes App ](./React_in_Rails_Apartment_App/01-routing-in-react/03-recipes-challenge.md)
+4) [Dynamic Routes](./React_in_Rails_Apartment_App/01-routing-in-react/04-dynamic-routes.md)
+5) [React In Rails](./React_in_Rails_Apartment_App/02-react-in-rails/README.md)
 6) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
