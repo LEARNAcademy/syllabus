@@ -30,3 +30,10 @@ We now would trigger a POST type request to the backend, and rails would handle 
 ## Challenge
 
 Create a ```handleNewCat``` function in ```App.js``` that only does one thing: ```console.log()``` the information from the NewCat form. Pass the handleNewCat function to the NewCat component as props, and then run the handleNewCat function when a user clicks the form submit button.
+
+
+#### Where to go from here
+
+[Back to Cat Tinder: New Cat API Call](./08cat_tinder_new_cat_form.md)
+
+[Back to Syllabus](../../README.md)

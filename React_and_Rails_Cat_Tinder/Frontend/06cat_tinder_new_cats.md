@@ -102,3 +102,11 @@ As a General Rule:
 * Don't test the inner working of a component.
 * Test that you get the correct outputs based on specific inputs.
 * Test behavior of the component, especially if it directly affects the user experience.
+
+#### Where to go from here
+
+[Go to Cat Tinder: API Setup](../Backend/01cat_tinder_setup.md)
+
+[Back to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+
+[Back to Syllabus](../../README.md)

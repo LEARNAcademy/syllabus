@@ -77,3 +77,11 @@ This is where we've ended up:
 ![cat tinder index](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-index.png)
 
 __Excellent__!
+
+#### Where to go from here
+
+[Go to Cat Tinder: New Cat API Call](./08cat_tinder_new_cat_form.md)
+
+[Back to Cat Tinder: CORS](../Backend/05cat_tinder_CORS.md)
+
+[Back to Syllabus](../../README.md)

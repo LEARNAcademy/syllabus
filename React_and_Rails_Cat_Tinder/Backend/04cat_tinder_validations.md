@@ -105,3 +105,11 @@ And Now, we're Green!
 Challenges:
 Add the appropriate Validations to make sure that users submit an age, and what the cat enjoys.  
 Add a Validation to assure that the enjoys value is at least 10 characters long.
+
+#### Where to go from here
+
+[Go to Cat Tinder: CORS](./05cat_tinder_CORS.md)
+
+[Back to Cat Tinder: API Endpoints](./03cat_tinder_API_Endpoints.md)
+
+[Back to Syllabus](../../README.md)

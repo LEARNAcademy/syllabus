@@ -149,3 +149,9 @@ Our test lets us know exactly what we need to do to get it to pass, so let's do 
 There are all kinds of matchers to use with expect.  Above we used ```expect().toEqual()```.  Checkout Jest's documentation to see them all:
 
 [jest matchers](https://facebook.github.io/jest/docs/en/using-matchers.html#content)
+
+#### Where to go from here
+
+[Go to Testing Structure in React](./02react_testing_app_structure.md)
+
+[Back to Syllabus](../../README.md)
