@@ -2,6 +2,13 @@
 
 What if we don't want to render plain text on a page? Rails can do that, too.
 
+Recall that we have a route in 'config/routes.rb' that looks like this:
+```ruby
+Rails.application.routes.draw do
+    get "/answers/:number", to: 'main#answers'
+end
+```
+
 Let's update our `answers` method to load an html.erb file instead of rendering plain text.
 
 ```
@@ -67,5 +74,6 @@ Then we can add a controller endpoint and view for 'questions' as our homepage.
 * set the dynamic page you created as the home page
   - Use the route that doesn't require arguments as your home page
   - set the root url in the router to be the homepage.
-
 * create at least one piece of data in the controller to be passed to the view
+
+-- hint: You can read about routes on the excellent [Rails guides](https://guides.rubyonrails.org/routing.html)
