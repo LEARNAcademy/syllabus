@@ -66,6 +66,10 @@ Rails is full stack framework built into the Ruby programming language. Here you
 5) [Rails Forms, Layouts and Flash Messages](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/05rails_forms_layouts_flash_messages.md)
 6) [Rails Generate](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/06rails_generate.md)
 7) [Rails Mini Projects](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/07rails_miniprojects.md)
+8) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+9) [Joins](./sql/08rails_sql_joins.md)
+10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
+11) [Foreign Keys, Joins, & Associations](./sql/10_sql_joins.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 

@@ -12,8 +12,8 @@ To make life easier for developers, Rails can generate code for you. Rather than
 
 We are going to use the noun-verb pattern: we want to **register** a **user**.
 However, we are going to need two routes:
-* `http://localhost:3000/users/index` to display an index web page.
-* `http://localhost:3000/users/register` to display a register page, which is also where the information is going to be sent when users click on the submit button.
+* `/users/index` to display an index web page.
+* `/users/register` to display a register page, which is also where the information is going to be sent when users click on the submit button.
 
 Technically `index` is not a verb but read it as "display index page"; `index` is often used for a starting or landing page for historial reasons.
 
@@ -53,8 +53,8 @@ create      app/assets/stylesheets/users.scss
 See how, in addition to the controller, Rails has also made an `.html.erb` file for us?
 
 Test that the newly created implementation works by visiting the routes:
-`http://localhost:3000/users/index`
-`http://localhost:3000/users/register`
+`/users/index`
+`/users/register`
 
 We should be able to see the default view that our generator created.
 
