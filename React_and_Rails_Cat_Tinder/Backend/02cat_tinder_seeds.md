@@ -29,3 +29,11 @@ Notice that this is just plain old Ruby code, we can put whatever we like in her
 ```
 $ rake db:seed
 ```
+
+#### Where to go from here
+
+[Go to Cat Tinder: API Endpoints](./03cat_tinder_API_Endpoints.md)
+
+[Back to Cat Tinder: Seeds](./01cat_tinder_setup.md)
+
+[Back to Syllabus](../../README.md)

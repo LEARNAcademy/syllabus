@@ -60,3 +60,11 @@ Did you see that we are using a Header component that hasn't been created anywhe
 <b>Make a header component with bootstrap and add it to the project as src/components/Header.js.</b>
 
 Remember that running ``` yarn start ``` will error out until we create the Cats and NewCat components. Feel free to put placeholders there while you create your header.
+
+#### Where to go from here
+
+[Go to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+
+[Back to React Interaction Testing](./03react_testing_interactions.md)
+
+[Back to Syllabus](../../README.md)

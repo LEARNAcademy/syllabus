@@ -95,20 +95,26 @@ Professional development is dedicated to preparing for your  internship and the 
 
 Using React and Rails to create an asynchronous full stack application with testing.
 
+### Front End Setup
 1) [Testing with Jest and Enzyme](./React_and_Rails_Cat_Tinder/Frontend/01react_testing_jest_enzyme.md)
 2) [Testing Structure in React](./React_and_Rails_Cat_Tinder/Frontend/02react_testing_app_structure.md)
 3) [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
-1) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/04cat_tinder_intro.md)
-4) [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
+4) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/04cat_tinder_intro.md)
 5) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_cats.md)
 6) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_new_cats.md)
-7) [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
-8) [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
-9) [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
-10) [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
-11) [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_api_index.md)
-12) [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_new_cat_form.md)
-13) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_form_submit.md)
+
+### Back End Setup
+
+7) [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
+8) [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
+9) [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
+10) [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
+11) [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
+
+### Bringing it together!
+12) [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_api_index.md)
+13) [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_new_cat_form.md)
+14) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_form_submit.md)
 
 
 ## Unit Nine: React Routes, Authentication

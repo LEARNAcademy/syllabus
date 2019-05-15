@@ -109,3 +109,11 @@ Loading development environment (Rails 5.1.5)
 ```
 
 That looks great!  In the next step, we'll expose some endpoints in our API, so the frontend application has a way to communicate with all the functionality we've built out so far.
+
+#### Where to go from here
+
+[Go to Cat Tinder: Seeds](./02cat_tinder_seeds.md)
+
+[Back to Cat Tinder: New Cat component](../Frontend/06cat_tinder_new_cats.md)
+
+[Back to Syllabus](../../README.md)
