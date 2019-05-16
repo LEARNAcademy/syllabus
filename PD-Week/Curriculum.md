@@ -11,7 +11,9 @@
 3) **[Transferable Skills](https://drive.google.com/open?id=1EdGsZIk8vvcaB-t3Kz2sTD_ES3OfGyLN)**
 <br/> LEARN grads are known for the skills they bring into the tech industry from their previous careers. Discover the ones that make you stand out!
 <br/>
-<br/> *Additional Resources:*
+<br/> 
+
+*Additional Resources:*
 
 * [Discover Your Transferable Skills Activity](https://drive.google.com/open?id=1BjhCw7HbXCwnZ9PIoLVbQqZnVmOfExWf)
 <br/> This activity can help you get started in identifying some of your transferable skills if you feel lost.
