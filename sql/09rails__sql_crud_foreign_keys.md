@@ -310,3 +310,9 @@ No relations found.
 * Add yourself into the persons table.
 * Update all family members with the same family_name as you, to live at the same address.
 * Delete all family members not with your family_name.
+
+[Go to Foreign Keys, Joins & Associations](./10_sql_joins.md)
+
+[Back to Joins](./08rails_sql_joins.md)
+
+[Back to Syllabus](../README.md)
