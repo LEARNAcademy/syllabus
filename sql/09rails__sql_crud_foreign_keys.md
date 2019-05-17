@@ -1,6 +1,11 @@
 # SQL in the Terminal
 
-https://player.vimeo.com/video/73994505
+https://www.youtube.com/watch?v=kHwEeimBYEA
+
+[![YouTube](http://img.youtube.com/vi/kHwEeimBYEA/0.jpg)](https://www.youtube.com/watch?v=kHwEeimBYEA)
+]
+
+
 
 ## Starting Off
 
@@ -82,6 +87,13 @@ It's a good idea to always have a unique, automatically-incrementing ID number f
 > ALTER TABLE contacts ADD id serial PRIMARY KEY;
 ```
 The serial data type is an autoincrementing integer.
+
+
+# CRUD Commands
+
+[![YouTube](http://img.youtube.com/vi/otGjamn9Jpo/0.jpg)](https://www.youtube.com/watch?v=otGjamn9Jpo)
+]
+
 
 ## Insert
 Now that we have tables with columns, let's put some data in them:
