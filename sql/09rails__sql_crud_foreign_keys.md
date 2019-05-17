@@ -9,8 +9,23 @@ https://www.youtube.com/watch?v=kHwEeimBYEA
 
 ## Starting Off
 
-To access the Postgres server, open a terminal and run $ psql. You should have a prompt that looks something like this:
+### Note for Cloud 9 users
+
+We need to create a db in postgres for our user's information first, so before entering the psql cli, let's run:
+
+```bash
+$ createdb
 ```
+
+To access the Postgres server, open a terminal and run:
+
+```bash
+$ psql
+```
+
+You should then have a prompt that looks something like this:
+
+```bash
 learn_sd=#
 ```
 The learn_sd at the beginning of the prompt is the name of the default database we created with our username. To keep things easy to read, I'll shorten the prompt to just:
@@ -22,16 +37,7 @@ Let's create a real database of our own. In psql, type:
 > CREATE DATABASE test_database;
 ```
 
-## Note for Cloud 9 users
-There is a bug in Cloud 9's psql install currently preventing this from working, so a quick workaround is to create a rails application, and use the db that Rails creates for us:
 
-```bash
-$ rails new test_app -d postgresql
-$ cd test_app
-# update the config/database.yml
-$ rails db:create
-$ psql test_app_development
-```
 
 This is our first SQL statement. SQL keywords are case insensitive but are conventionally typed in all caps. All SQL statements must end with a semicolon. If you press enter and nothing happens, check to see if the prompt has changed from =# to -# - if so, you forgot to put a semicolon at the end of your statement. Just type one and press enter, and your statement should run.
 
