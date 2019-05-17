@@ -50,6 +50,8 @@ To see a list of psql commands, we can type # \? . We can press the down arrow t
 
 ## Creating a Table
 
+### Note, we never, ever, ever do this in a Rails application.  Rails manages this for us.  We're exploring this because we need to know what Rails is doing under the hood.
+
 ```
 > CREATE TABLE contacts (name varchar, age int, birthday timestamp);
 ```
