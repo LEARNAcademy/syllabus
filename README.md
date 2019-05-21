@@ -69,7 +69,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 8) [Intro to Postgres](./sql/07rails_intro_postgres.md)
 9) [Joins](./sql/08rails_sql_joins.md)
 10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
-11) [Foreign Keys, Joins, & Associations](./sql/10_sql_joins.md)
+11) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
