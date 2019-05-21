@@ -99,9 +99,13 @@ Using React and Rails to create an asynchronous full stack application with test
 1) [Testing with Jest and Enzyme](./React_and_Rails_Cat_Tinder/Frontend/01react_testing_jest_enzyme.md)
 2) [Testing Structure in React](./React_and_Rails_Cat_Tinder/Frontend/02react_testing_app_structure.md)
 3) [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
-4) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/04cat_tinder_intro.md)
-5) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_cats.md)
-6) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_new_cats.md)
+4) [React Routing](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/01-react-router-intro.md)
+5) [Portfolio Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/02-portfolio-challenge.md)
+6) [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-recipes-challenge.md)
+7) [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-dynamic-routes.md)
+7) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/04cat_tinder_intro.md)
+8) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_cats.md)
+9) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_new_cats.md)
 
 ### Back End Setup
 
@@ -117,14 +121,10 @@ Using React and Rails to create an asynchronous full stack application with test
 14) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_form_submit.md)
 
 
-## Unit Nine: React Routes, Authentication
+## Unit Nine: Authentication
 
-1) [React Router](./React_in_Rails_Apartment_App/01-routing-in-react/01-react-router-intro.md)
-2) [Challenge: Portfolio App](./React_in_Rails_Apartment_App/01-routing-in-react/02-portfolio-challenge.md)
-3) [Challenge: Recipes App ](./React_in_Rails_Apartment_App/01-routing-in-react/03-recipes-challenge.md)
-4) [Dynamic Routes](./React_in_Rails_Apartment_App/01-routing-in-react/04-dynamic-routes.md)
-5) [React In Rails](./React_in_Rails_Apartment_App/02-react-in-rails/README.md)
-6) [Devise](./devise-authentication/README.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/02-react-in-rails/README.md)
+2) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
 1) [ActiveStorage](./Rails_ActiveStorage/README.md)
