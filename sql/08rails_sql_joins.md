@@ -62,6 +62,7 @@ The difference between `ON` and `USING` with `JOIN`s
 <div class="text-center">
 <img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/58/original_JOIN_ON.png?1477430076" style="height: 300px;"/>
 </div>
+
 ```sql
 SELECT
 	*
@@ -76,6 +77,7 @@ WHERE ...
 <div style="hieght: 100px;">
 <img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/59/original_JOIN_USING.png?1477430091" />
 </div>
+
 ```sql
 SELECT
 	*
