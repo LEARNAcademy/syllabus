@@ -123,7 +123,7 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: Authentication
 
-1) [React In Rails](./React_in_Rails_Apartment_App/02-react-in-rails/README.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
 2) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
