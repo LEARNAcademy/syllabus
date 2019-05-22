@@ -4,7 +4,7 @@ It's time to turn our attention to the page components of the application. We'll
 
 Here's the basic test to start us out:
 
-### src/components/__tests__/Cats.js
+### src/pages/__tests__/Cats.js
 
 ```javascript
 import React from 'react'
@@ -24,7 +24,7 @@ it('Cats renders without crashing', () => {
 
 The test will fail until we create the component.
 
-### src/components/Cats.js
+### src/pages/Cats.js
 
 ```javascript
 import React, { Component } from 'react';
@@ -95,7 +95,7 @@ Now that our ```Cats.js``` component is receiving an array of cats in props, let
 
 What else do you have to change about your page to make this work?
 
-### components/Cats.js
+### pages/Cats.js
 
 ```javascript
 <Row>

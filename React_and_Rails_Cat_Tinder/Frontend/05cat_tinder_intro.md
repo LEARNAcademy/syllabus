@@ -2,7 +2,7 @@
 
 Let's refer back to the wireframes, and recall what our interface is going to look like:
 
-![wires](../../assets/cat-tinder/cat-tinder-single-page.png)
+![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
 
 ## App setup
 Using create-react-app and react-bootstrap, we can setup a new application:
@@ -31,17 +31,22 @@ Create React App gives us a file called App.js that ties in to the Index.js file
 ### src/App.js
 ```javascript
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Cats from ‘./components/Cats’
-import NewCat from ‘./components/NewCat’
+import Cats from ‘./pages/Cats’
+import NewCat from ‘./pages/NewCat’
 
 class App extends Component {
   render() {
     return (
 		<div>
 			<Header />
-			<Cats />
-			<NewCat />
+			<Router>
+				<Switch>
+					<Route exact path="/cats" component={Cats} />
+					<Route exact patch="/" component={NewCat} />
+				</Switch>
+			</Router>
 		</div>
     );
   }
