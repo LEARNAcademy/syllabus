@@ -10,7 +10,7 @@ Using create-react-app and react-bootstrap, we can setup a new application:
 ```
 $ create-react-app cat-tinder-frontend
 $ cd cat-tinder-frontend
-$ yarn add react-bootstrap
+$ yarn add react-bootstrap react-router-dom
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
 
@@ -68,7 +68,7 @@ Remember that running ``` yarn start ``` will error out until we create the Cats
 
 #### Where to go from here
 
-[Go to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+[Go to Cat Tinder: Cats component](./06cat_tinder_cats.md)
 
 [Back to React Interaction Testing](./03react_testing_interactions.md)
 

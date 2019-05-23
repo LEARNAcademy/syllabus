@@ -35,13 +35,13 @@ import {
 class Cats extends Component {
   render() {
     return (
-	<Container>
-      <Row>
-        <Col>
-    		<div>Im a component</div>
-        </Col>
-      </Row>
-	</Container>
+      <Container>
+          <Row>
+            <Col>
+            <div>Im a component</div>
+            </Col>
+          </Row>
+      </Container>
     );
   }
 }
@@ -170,7 +170,7 @@ Add some more tests of your own.
 
 #### Where to go from here
 
-[Go to Cat Tinder: New Cat component](./06cat_tinder_new_cats.md)
+[Go to Cat Tinder: New Cat component](./07cat_tinder_new_cats.md)
 
 [Back to Cat Tinder Intro](./04cat_tinder_intro.md)
 

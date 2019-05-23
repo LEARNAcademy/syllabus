@@ -56,8 +56,8 @@ Notice the ```this.props.success``` statement. If this evaluates to "true" the r
 
 #### Where to go from here
 
-[Go to Cat Tinder: New Cat Submit](./09cat_tinder_form_submit.md)
+[Go to Cat Tinder: New Cat Submit](./10cat_tinder_form_submit.md)
 
-[Back to Cat Tinder: Cats Index API Call](./07cat_tinder_api_index.md)
+[Back to Cat Tinder: Cats Index API Call](./08cat_tinder_api_index.md)
 
 [Back to Syllabus](../../README.md)
