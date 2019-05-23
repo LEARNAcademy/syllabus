@@ -107,6 +107,6 @@ As a General Rule:
 
 [Go to Cat Tinder: API Setup](../Backend/01cat_tinder_setup.md)
 
-[Back to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+[Back to Cat Tinder: Cats component](./06cat_tinder_cats.md)
 
 [Back to Syllabus](../../README.md)

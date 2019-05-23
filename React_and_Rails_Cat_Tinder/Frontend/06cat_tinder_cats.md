@@ -172,6 +172,6 @@ Add some more tests of your own.
 
 [Go to Cat Tinder: New Cat component](./07cat_tinder_new_cats.md)
 
-[Back to Cat Tinder Intro](./04cat_tinder_intro.md)
+[Back to Cat Tinder Intro](./05cat_tinder_intro.md)
 
 [Back to Syllabus](../../README.md)
