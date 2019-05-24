@@ -6,7 +6,7 @@ Time to build the form to add new cats. Remember we already have the call for Ne
 
 Create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your ```components/Cats.js``` file.
 
-### src/components/__tests__/NewCat.js
+### src/pages/__tests__/NewCat.js
 
 ```javascript
 import React from 'react'
@@ -51,7 +51,7 @@ Thinking ahead just a bit, we're going to need to pass the values from our form 
 
 We start by adding state to the component in a constructor:
 
-### src/components/NewCat.js
+### src/pages/NewCat.js
 
 ```javascript
 constructor(props){
@@ -67,7 +67,7 @@ constructor(props){
 ```
 And then for each input, we use an arrow function to bind its value to state. We'll add a name to the input too, and an onChange() callback, as we're going to need those next. Here is 'name', the other two are nearly identical.
 
-### src/components/NewCat.js
+### src/pages/NewCat.js
 
 ```javascript
 <Form.Control
@@ -80,7 +80,7 @@ And then for each input, we use an arrow function to bind its value to state. We
 
 So what does handleChange() look like?
 
-### src/components/NewCat.js
+### src/pages/NewCat.js
 
 ```javascript
 handleChange = (event) => {
@@ -107,6 +107,6 @@ As a General Rule:
 
 [Go to Cat Tinder: API Setup](../Backend/01cat_tinder_setup.md)
 
-[Back to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+[Back to Cat Tinder: Cats component](./06cat_tinder_cats.md)
 
 [Back to Syllabus](../../README.md)

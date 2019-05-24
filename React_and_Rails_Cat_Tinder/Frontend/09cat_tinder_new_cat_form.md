@@ -41,10 +41,23 @@ handleNewCat(newCatInfo) {
 }
 ```
 
+Last thing to do is add the redirect element in NewCat.js. You can do this a variety of ways, but here is one example:
+
+#### pages/NewCat.js
+```
+// ... the NewCat form ...
+		</form>
+	{this.props.success &&
+		<Redirect to="/cats" />
+	}
+</div>
+```
+Notice the ```this.props.success``` statement. If this evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist. You will need to pass a "success" value in props to finish this functionality.
+
 #### Where to go from here
 
-[Go to Cat Tinder: New Cat Submit](./09cat_tinder_form_submit.md)
+[Go to Cat Tinder: New Cat Submit](./10cat_tinder_form_submit.md)
 
-[Back to Cat Tinder: Cats Index API Call](./07cat_tinder_api_index.md)
+[Back to Cat Tinder: Cats Index API Call](./08cat_tinder_api_index.md)
 
 [Back to Syllabus](../../README.md)

@@ -2,7 +2,7 @@
 
 Let's refer back to the wireframes, and recall what our interface is going to look like:
 
-![wires](../../assets/cat-tinder/cat-tinder-single-page.png)
+![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
 
 ## App setup
 Using create-react-app and react-bootstrap, we can setup a new application:
@@ -10,7 +10,7 @@ Using create-react-app and react-bootstrap, we can setup a new application:
 ```
 $ create-react-app cat-tinder-frontend
 $ cd cat-tinder-frontend
-$ yarn add react-bootstrap
+$ yarn add react-bootstrap react-router-dom
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
 
@@ -31,17 +31,22 @@ Create React App gives us a file called App.js that ties in to the Index.js file
 ### src/App.js
 ```javascript
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Cats from ‘./components/Cats’
-import NewCat from ‘./components/NewCat’
+import Cats from ‘./pages/Cats’
+import NewCat from ‘./pages/NewCat’
 
 class App extends Component {
   render() {
     return (
 		<div>
 			<Header />
-			<Cats />
-			<NewCat />
+			<Router>
+				<Switch>
+					<Route exact path="/cats" component={Cats} />
+					<Route exact patch="/" component={NewCat} />
+				</Switch>
+			</Router>
 		</div>
     );
   }
@@ -63,7 +68,7 @@ Remember that running ``` yarn start ``` will error out until we create the Cats
 
 #### Where to go from here
 
-[Go to Cat Tinder: Cats component](./05cat_tinder_cats.md)
+[Go to Cat Tinder: Cats component](./06cat_tinder_cats.md)
 
 [Back to React Interaction Testing](./03react_testing_interactions.md)
 
