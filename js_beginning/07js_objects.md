@@ -237,11 +237,30 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 
-### Challenges
+### Object Challenges
 
 Working with functions and objects.
 
 #### Exercise 1
+
+Consider this variable:
+
+```javascript
+var person = { fName: "Arthur", lastName: "Dent" }
+```
+Write the code that accesses the first name of the person object.
+Then write the code that accesses the last name of the person object.
+
+#### Exercise 2
+
+Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
+
+#### Exercise 3
+
+Update the person object with a method that logs 'Arthur Dent is from planet Earth.'.
+
+
+#### Exercise 4
 Consider this variable:
 
 ```javascript
@@ -250,7 +269,31 @@ var product = { name: "chair", price: 14.99 }
 
 Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
-#### Exercise 2
+#### Exercise 5
+
+Consider this variable:
+
+```javascript
+var lunch = { name: "PB and Banana", type: "sandwich", ingredients: ["bread", "peanut butter", "banana"] }
+```
+
+Write the code that accesses the ingredients property.
+
+#### Exercise 6
+
+Write the code that access the 3rd ingredient of the lunch object.
+
+#### Exercise 7
+
+Write a function that takes an argument like the lunch object and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana." 
+
+#### Exercise 8
+
+Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana." 
+
+### Class Challenges
+
+#### Exercise 1
 
 Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
 
@@ -274,7 +317,7 @@ For example:
  ----> "OledMonitor is beyond budget"
 ```
 
-#### Exercise 3
+#### Exercise 2
 
 Write a program to get the volume of a Cylinder with four decimal places using object classes.
 
@@ -284,7 +327,7 @@ where r is the radius and h is the height of the cylinder.
 
 
 
-#### Exercise 4
+#### Exercise 3
 
 Write a program that calculates the total, tax, and weight of the items in a shopping cart.
 
@@ -312,7 +355,7 @@ Extend your shopping cart program by creating a new class called 'CartItem', and
 
 #### SUPER STRETCH
 
-#### Exercise 5
+#### Exercise 4
 Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
 
 Hint:  Research alpha and numeric sorting in javascript.
