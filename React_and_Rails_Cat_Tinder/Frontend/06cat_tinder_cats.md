@@ -88,7 +88,7 @@ constructor(props){
 Now we need to send this cats JSON array to the Cats component as props from ```App.js```. Change the Cats component call to look like this:
 
 ```javascript
-<Cats cats={this.state.cats} />
+<Route exact path="/cats" render={( props) => <Cats cats={this.state.cats}/> } />
 ```
 
 Now that our ```Cats.js``` component is receiving an array of cats in props, let's add some bootstrap code to create real content in the ```Cats.js``` render function, replacing the blank elements we had before.
