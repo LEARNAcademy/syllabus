@@ -16,10 +16,7 @@ Test that it works:
 cd mydbapp
 rails s
 ```
-Not quite:
-```
-FATAL: database "mydbapp_development" does not exist
-```
+It works, but not super interesting yet.  Let's work with our model layer.
 
 ## Create Database
 
