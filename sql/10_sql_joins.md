@@ -1,5 +1,10 @@
 # Joins and Relations
+
+
 ## Understanding Relations / Foreign Keys
+[![YouTube](http://img.youtube.com/vi/QpFPd4tlGoA/0.jpg)](https://www.youtube.com/watch?v=QpFPd4tlGoA)
+]
+
 
 #### The Crude Approach
 
