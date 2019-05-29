@@ -295,6 +295,66 @@ Update the lunch object with method that returns "The ingredients for a PB and B
 
 #### Exercise 1
 
+Consider this class.
+
+```javascript
+class Coffee {
+  constructor(type, cream=0, sugar=0){
+    this.type = type.toLowerCase()
+    this.cream = cream
+    this.sugar = false
+  }
+
+  coffeeProfile = () => {
+    console.log(`${this.type}: ${this.creams}, ${this.sugars}`)
+  }
+
+  creams = () => {
+    if (this.cream > 0){
+      return `${this.cream} creams`
+    } else {
+      return `${this.cream} cream`
+    }
+  }
+
+    sugars = () => {
+    if (this.sugar > 0){
+      return `${this.sugar} sugars`
+    } else {
+      return `${this.sugar} sugar`
+    }
+  }
+}
+```
+
+Write the code that makes a black coffee.
+
+#### Exercise 2
+
+Write the code that makes a coffee with 1 cream and 2 sugars.
+
+#### Exercise 3
+
+Write the code that makes a coffee with 2 sugars. Then write the code that outputs the coffee's profile.
+
+#### Exercise 4
+
+Write a Latte class that receives a type, a milk type (default to 'milk') and a number of shots ('default to 1').
+
+#### Exercise 5
+
+Write a method for your Latte class that outputs the latte's profile.
+
+#### Exercise 6
+
+Write the code that makes a regular, single shot latte. Then, log the latte's profile.
+
+#### Exercise 7
+
+Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
+
+#### Exercise 8
+
 Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
 
 * "This product is in budget."
@@ -317,7 +377,7 @@ For example:
  ----> "OledMonitor is beyond budget"
 ```
 
-#### Exercise 2
+#### Exercise 9
 
 Write a program to get the volume of a Cylinder with four decimal places using object classes.
 
@@ -326,8 +386,7 @@ Volume of a cylinder : V = πr2h
 where r is the radius and h is the height of the cylinder.
 
 
-
-#### Exercise 3
+#### Exercise 10
 
 Write a program that calculates the total, tax, and weight of the items in a shopping cart.
 
@@ -355,7 +414,7 @@ Extend your shopping cart program by creating a new class called 'CartItem', and
 
 #### SUPER STRETCH
 
-#### Exercise 4
+#### Exercise 11
 Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
 
 Hint:  Research alpha and numeric sorting in javascript.
