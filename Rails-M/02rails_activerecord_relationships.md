@@ -1,5 +1,8 @@
 # Active Record One-to-Many Relationships
 
+[![YouTube](http://img.youtube.com/vi/CM520EfUI7k/0.jpg)](https://www.youtube.com/watch?v=CM520EfUI7k)
+]
+
 ## Read the Docs
 There is a lot to Active Record relationships.  Read the documentation to see all the ways that Active Record can [help you leverage the power of SQL relationships](https://guides.rubyonrails.org/association_basics.html)
 
