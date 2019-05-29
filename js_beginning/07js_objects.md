@@ -339,7 +339,7 @@ Write the code that makes a coffee with 2 sugars. Then write the code that outpu
 
 #### Exercise 4
 
-Write a Latte class that receives a type, a milk type (default to 'milk') and a number of shots ('default to 1').
+Write a Latte class that receives a type, a milk type (default to 'milk') and a number of shots (default to 1).
 
 #### Exercise 5
 
