@@ -1,7 +1,7 @@
 # Introduction to Active Record
 
-[Video on Active Record](
-https://player.vimeo.com/video/156871310)
+[![YouTube](http://img.youtube.com/vi/3D_JwWoJKm4/0.jpg)](https://www.youtube.com/watch?v=3D_JwWoJKm4)
+]
 
 ## Set Up Rails App
 
