@@ -45,3 +45,18 @@ end
 ```
 
 Remember to add the parameter names to the strong parameter whitelist.
+
+
+## A note about Cloud 9 and making your app available to Postman
+
+In order to see our app in Postman, we need to expost the running Rails application to the intenet by poking a hole through the AWS firewall.
+
+[ec2](https://content.screencast.com/users/mclark8/folders/Jing/media/de3baa8a-4304-45fe-98a1-bbe4b48f40a2/00000517.png)
+
+[intance](https://content.screencast.com/users/mclark8/folders/Jing/media/0ca8960a-1bdf-45dd-8a18-65a97f5f4f0d/00000518.png)
+
+[security groups](https://content.screencast.com/users/mclark8/folders/Jing/media/fdafc2c0-ec17-47df-88f2-c1ee54a2627e/00000519.png)
+
+[edit](https://content.screencast.com/users/mclark8/folders/Jing/media/5a2cdedb-2cef-477c-b192-88bc8ecb43ba/00000520.png)
+
+[Add Rule](https://content.screencast.com/users/mclark8/folders/Jing/media/d638d5f5-9d97-4de7-a4dd-daa62afd3847/00000521.png)
