@@ -71,4 +71,4 @@ Then Looking under the sharing options for the Cloud 9 server, and copy the IP a
 
 ![ip address](https://content.screencast.com/users/mclark8/folders/Jing/media/b2ada5dd-9452-4123-a3c9-d6564a942305/00000522.png)
 
-*Note you will use the application IP plus :8080 (ie, xxx.xx.xx.xx:8080) in the browser and in Postman
+*Note you will use the application IP plus :8080 (ie, xx.xx.xx.xxx:8080) in the browser and in Postman
