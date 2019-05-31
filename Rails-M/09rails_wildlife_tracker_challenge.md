@@ -60,3 +60,13 @@ In order to see our app in Postman, we need to expost the running Rails applicat
 ![edit](https://content.screencast.com/users/mclark8/folders/Jing/media/5a2cdedb-2cef-477c-b192-88bc8ecb43ba/00000520.png)
 
 ![Add Rule](https://content.screencast.com/users/mclark8/folders/Jing/media/d638d5f5-9d97-4de7-a4dd-daa62afd3847/00000521.png)
+
+
+### Running the Rails App
+```bash
+bundle exec rails s -b 0.0.0.0
+```
+
+Then Looking under the sharing options for the Cloud 9 server, and copy the IP address:
+
+![ip address](https://content.screencast.com/users/mclark8/folders/Jing/media/b2ada5dd-9452-4123-a3c9-d6564a942305/00000522.png)
