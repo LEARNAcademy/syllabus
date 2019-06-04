@@ -178,7 +178,7 @@ At their most basic, routes have a path, and a component prop.  The path specifi
 #### exact
 Notice the exact prop on line 36.  That is required on the home route because in ReactRouter, more than one route can match at any given time.  For example, here's what our sample app looks like with the routes above when we go to the AboutUs page:
 
-![routes 1](./assets/routes-1.png)
+![routes 1](/assets/cat-tinder/routes-1.png)
 
 If we change the route on 36 so they are now:
 
@@ -193,7 +193,7 @@ cat src/App.js |sed '36,38!d'
 
 Then the page changes to look like this:  Not What We Want!
 
-![routes 2](./assets/routes-2.png)
+![routes 2](/assets/cat-tinder/routes-2.png)
 
 Notice that both the Home and the AboutUs route are rendering.  Both routes match, so both render!  We can prevent this by adding the ```exact``` prop.
 
