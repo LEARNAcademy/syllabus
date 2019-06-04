@@ -62,6 +62,8 @@ Create-react-app adds a testing file for you when you create the app.  Let's ope
 
 ## Adding Enzyme
 
+[Enzyme Docs](https://github.com/airbnb/enzyme)
+
 Jest is pretty easy to use, but adding Enzyme and react-test-renderer makes working with React components even better.  First, lets' add them to our package.json file:
 
 ```
