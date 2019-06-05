@@ -15,7 +15,7 @@ An animal has the following information: common name, latin name, kingdom (mamma
 
 - **Story**:  As the API I can destroy a animal in the database.
 
-- **Story**:  As the API I can create a sighting of an animal with date, time, latitude and longitude.
+- **Story**:  As the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
 
  - *Hint*:   An animal has_many sightings.
 
@@ -23,7 +23,7 @@ An animal has the following information: common name, latin name, kingdom (mamma
 
 - **Story**:  As the API I can destroy an animal sighting in the database.
 
-- **Story**:  As the API I, when I view a specific animal, I can also see a list sightings of that animal.
+- **Story**:  As the API, when I view a specific animal, I can also see a list sightings of that animal.
 
 
 ## Stretch Goal
