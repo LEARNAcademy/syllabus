@@ -6,22 +6,22 @@ This is your introduction to programming through the Javascript programming lang
 
 1) [Javascript Intro](./js_beginning/01js_intro.md)
 2) [Javascript Conditions](./js_beginning/02js_conditions.md)
-3) [Javascript Functions](./js_beginning/03js_functions.md)
-4) [Javascript Arrays](./js_beginning/04js_arrays.md)
-5) [Javascript Loops](./js_beginning/05js_loops.md)
-6) [Javascript Functions, Loops and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-7) [Javascript Objects](./js_beginning/07js_objects.md)
+3) [Javascript Arrays](./js_beginning/04js_arrays.md)
+4) [Javascript Loops](./js_beginning/05js_loops.md)
+5) [Javascript Functions](./js_beginning/03js_functions.md)
+6) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
+7) [Javascript Functions, Loops and Arrays](./js_beginning/06js_funcLoopsArrays.md)
+8) [Javascript Objects](./js_beginning/07js_objects.md)
 
 
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
 
-1) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
-2) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
+1) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
+2) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 3) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
-4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+4) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
 
 
 ## Unit Three: React
@@ -65,8 +65,6 @@ Rails is full stack framework built into the Ruby programming language. Here you
 5) [SQL CRUD and Foreign Keys](./rails/05rails__sql_crud_foreign_keys.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
-
-
 
 1) [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
 2) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
