@@ -1,5 +1,5 @@
 # Working with and thinking about Objects
-[![YouTub](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
+[![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
 ]
 ## Object with Data
 
@@ -306,11 +306,11 @@ class Coffee {
   }
 
   coffeeProfile(){
-    console.log(`${this.type}: ${this.creams}, ${this.sugars}`)
+    return(`${this.type}: ${this.creams()}, ${this.sugars()}`)
   }
 
   creams(){
-    if (this.cream > 0){
+    if (this.cream > 1){
       return `${this.cream} creams`
     } else {
       return `${this.cream} cream`
@@ -318,7 +318,7 @@ class Coffee {
   }
 
   sugars(){
-    if (this.sugar > 0){
+    if (this.sugar > 1){
       return `${this.sugar} sugars`
     } else {
       return `${this.sugar} sugar`
