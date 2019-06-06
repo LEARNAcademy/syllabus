@@ -317,7 +317,7 @@ class Coffee {
     }
   }
 
-    sugars(){
+  sugars(){
     if (this.sugar > 0){
       return `${this.sugar} sugars`
     } else {
