@@ -14,3 +14,11 @@ So, when you want Jest to find your tests, the rule is:
 
 1) use a filename with '.test' in it, "App.test.js" for example.
 2) Make a '__tests__' directory, and put your tests in there
+
+#### Where to go from here
+
+[Go to React Interaction Testing](./03react_testing_interactions.md)
+
+[Back to React Testing with Jest and Enzyme](./01react_testing_jest_enzyme)
+
+[Back to Syllabus](../../README.md)

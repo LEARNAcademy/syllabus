@@ -179,3 +179,11 @@ And we're Green!  This isn't quite production ready code, but its enough to get 
 
 ## Summary
 In this section, we've built out our first API endpoint to handle requests for listing and creating cats.  In the next section, we're going to deal with validating that the information passed to the ```create``` route is what we expect and handle situations when its not.
+
+#### Where to go from here
+
+[Go to Cat Tinder: Validations](./04cat_tinder_validations.md)
+
+[Back to Cat Tinder: Seeds](./02cat_tinder_seeds.md)
+
+[Back to Syllabus](../../README.md)

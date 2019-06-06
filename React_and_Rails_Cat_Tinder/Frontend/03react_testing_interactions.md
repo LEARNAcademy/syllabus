@@ -158,3 +158,11 @@ class App extends Component {
 
 export default App;
 ```
+
+#### Where to go from here
+
+[Go to Cat Tinder Intro](./05cat_tinder_intro.md)
+
+[Back to React Interaction Testing](./01react_testing_jest_enzyme.md)
+
+[Back to Syllabus](../../README.md)

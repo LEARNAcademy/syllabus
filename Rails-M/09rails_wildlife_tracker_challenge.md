@@ -1,63 +1,72 @@
 # Wildlife Tracker with Nested Resources
 
 
-The Forest Service is considering a proposal from a timber company to clear-cut an old-growth forest of virgin Douglas fir just outside of Portland. Before they give the go-ahead, they need to do an environmental impact study. They've asked you and your pair to build an app so that the rangers can report wildlife sightings.
+The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland. Before they give the go-ahead, they need to do an environmental impact study. They've asked you to build an app so that the rangers can report wildlife sightings.
 
-- **Story**:  As a ranger I can go to a home page.
+### The API Stories
 
-- **Story**:  As a ranger I can create an animal and save it in the database.
+
+- **Story**:  As the API I can create an animal and save it in the database.
 An animal has the following information: common name, latin name, kingdom (mammal, insect, etc.).
 
-- **Story**:  As a ranger I can list all animals in a database.
+- **Story**:  As the API I can list all animals in a database.
 
-- **Story**:  As a ranger I can update an animal in the database.
+- **Story**:  As the API I can update an animal in the database.
 
-- **Story**:  As a ranger I can destroy a animal in the database.
+- **Story**:  As the API I can destroy a animal in the database.
 
-- **Story**:  As a ranger I can create a sighting of an animal with date, time, latitude and longitude.
+- **Story**:  As the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
 
  - *Hint*:   An animal has_many sightings.
 
-- **Story**:  As a ranger I can update an animal sighting in the database.
+- **Story**:  As the API I can update an animal sighting in the database.
 
-- **Story**:  As a ranger I can destroy an animal sighting in the database.
+- **Story**:  As the API I can destroy an animal sighting in the database.
 
-- **Story**:  As a ranger I, when I view a specific animal, I can also see a list sightings of that animal.
-
-- **Story**:  As a ranger I, when I view a specific animal, I can add a sighting of that animal.
-
-- **Story**:  The area under consideration has been divided into several regions. As a ranger, when I report a sighting, I can choose the region from a drop-down menu.
+- **Story**:  As the API, when I view a specific animal, I can also see a list sightings of that animal.
 
 
 ## Stretch Goal
 
-- **Story**:  As a ranger, I can run a report to list all sightings during a given time period.
+- **Story**:  As the API, I can run a report to list all sightings during a given time period.
 
- - *Hint*:  write a form that looks something like this:
 
-```
-<form action="/sightings" method="get">
-  <label for="start_date">Start date</label>
-  <input id="start_date" name="start_date" type="text">
-  <label for="end_date">End date</label>
-  <input id="end_date" name="end_date" type="text">
-  <button>Run report</button>
-</form>
-```
-
-- then your controller can look something like this:
+- Hint: Your controller can look something like this:
 
 ```
 class SightingsController < ApplicationController
   def index
     @sightings = Sighting.where(start_date: params[:start_date]..params[:end_date])
-    render('sightings/index.html.erb')
+    render json: @sightings
   end
 end
 ```
 
 Remember to add the parameter names to the strong parameter whitelist.
 
-## Super Stretch Goal
 
-- **Story**:  As a ranger, I can run a report to list all sightings during a given time period, narrowed down to a particular region.
+## A note about Cloud 9 and making your app available to Postman
+
+In order to see our app in Postman, we need to expost the running Rails application to the intenet by poking a hole through the AWS firewall.
+
+![ec2](https://content.screencast.com/users/mclark8/folders/Jing/media/de3baa8a-4304-45fe-98a1-bbe4b48f40a2/00000517.png)
+
+![intance](https://content.screencast.com/users/mclark8/folders/Jing/media/0ca8960a-1bdf-45dd-8a18-65a97f5f4f0d/00000518.png)
+
+![security groups](https://content.screencast.com/users/mclark8/folders/Jing/media/fdafc2c0-ec17-47df-88f2-c1ee54a2627e/00000519.png)
+
+![edit](https://content.screencast.com/users/mclark8/folders/Jing/media/5a2cdedb-2cef-477c-b192-88bc8ecb43ba/00000520.png)
+
+![Add Rule](https://content.screencast.com/users/mclark8/folders/Jing/media/d638d5f5-9d97-4de7-a4dd-daa62afd3847/00000521.png)
+
+
+### Running the Rails App
+```bash
+bundle exec rails s -b 0.0.0.0
+```
+
+Then Looking under the sharing options for the Cloud 9 server, and copy the IP address:
+
+![ip address](https://content.screencast.com/users/mclark8/folders/Jing/media/b2ada5dd-9452-4123-a3c9-d6564a942305/00000522.png)
+
+*Note you will use the application IP plus :8080 (ie, xx.xx.xx.xxx:8080) in the browser and in Postman

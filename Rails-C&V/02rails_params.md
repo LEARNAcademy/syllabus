@@ -47,7 +47,6 @@ Normally we do most of the logic in the controller and send on the results to th
 class MainController < ApplicationController
 
   def answers
-    cookies[:name] = params[:name] unless params[:name].nil?
     if params[:number].to_i.even?
       @result_string = "Even"
     else

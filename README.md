@@ -21,7 +21,13 @@ This section is building on Javascript foundations and introducing more advanced
 1) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
 2) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 3) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
+<<<<<<< HEAD
 4) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+=======
+4) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
+5) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+6) [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
+>>>>>>> master
 
 
 ## Unit Three: React
@@ -37,7 +43,7 @@ React is a powerful Javascript library used to build more complicated web applic
 7) [React Functional Props](./react/07react_functional_props.md/)
 8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
-10) [Challenge: React TicTacToe Mob](./react/03react_tictactoe.md/)
+10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
 
 
 ## Unit Four: Ruby
@@ -58,11 +64,17 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1) [Rails Intro to Routes, Controllers and View](./rails/01rails_routes_controllers_views.md)
-2) [Rails Forms, Layout and Flash](./rails/02rails_forms_layont_flash_messages.md)
-3) [Intro to Postgres](./rails/03rails_intro_postgres.md)
-4) [SQL Joins](./rails/04rails_sql_joins.md)
-5) [SQL CRUD and Foreign Keys](./rails/05rails__sql_crud_foreign_keys.md)
+1) [Rails Intro to Routes, Controllers and View](https://github.com/LEARNAcademy/Syllabus/blob/master/Rails-C%26V/01rails_routes_controllers_views.md)
+2) [Rails Params](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/02rails_params.md)
+3) [Rails Views](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/03rails_views.md)
+4) [Rails Cookies](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/04rails_cookies.md)
+5) [Rails Forms, Layouts and Flash Messages](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/05rails_forms_layouts_flash_messages.md)
+6) [Rails Generate](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/06rails_generate.md)
+7) [Rails Mini Projects](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/07rails_miniprojects.md)
+8) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+9) [Joins](./sql/08rails_sql_joins.md)
+10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
+11) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
@@ -88,31 +100,43 @@ Professional development is dedicated to preparing for your  internship and the 
 
 Using React and Rails to create an asynchronous full stack application with testing.
 
+### Front End Setup
 1) [Testing with Jest and Enzyme](./React_and_Rails_Cat_Tinder/Frontend/01react_testing_jest_enzyme.md)
 2) [Testing Structure in React](./React_and_Rails_Cat_Tinder/Frontend/02react_testing_app_structure.md)
 3) [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
-1) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/04cat_tinder_intro.md)
-4) [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
-5) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_cats.md)
-6) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_new_cats.md)
-7) [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
-8) [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
-9) [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
-10) [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
-11) [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_api_index.md)
-12) [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_new_cat_form.md)
-13) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_form_submit.md)
+4) [React Routing](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/01-react-router-intro.md)
+5) [Portfolio Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/02-portfolio-challenge.md)
+6) [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-recipes-challenge.md)
+7) [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-dynamic-routes.md)
+8) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_intro.md)
+9) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_cats.md)
+10) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_new_cats.md)
+
+### Back End Setup
+
+11) [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
+12) [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
+13) [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
+14) [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
+12) [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
+
+### Bringing it together!
+12) [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_api_index.md)
+13) [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_new_cat_form.md)
+14) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/10cat_tinder_form_submit.md)
 
 
-## Unit Nine: React Routes, Authentication
+## Unit Nine: Authentication
 
-1) [React Router](./React_and_Rails_Apartment_App/01apartment_app_react_router.md)
-2) [Challenge: Portfolio App](./React_and_Rails_Apartment_App/02apartment_app_portfolio_challenge.md)
-3) [Challenge: Recipes App ](./React_and_Rails_Apartment_App/03apartment_app_recipes_challenge.md)
-4) [Dynamic Routes](./React_and_Rails_Apartment_App/04apartment_app_dynamic_routes.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
+2) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
+1) [ActiveStorage](./Rails_ActiveStorage/README.md)
+2) [JBuilder](./Rails_JBuilder/README.md)
+3) [has_many_through](./Rails_has_many_through/README.md)
 
 ## Unit Eleven: Capstone Project, Week 2
+1) [Heroku](./heroku/README.md)
 
 ## Unit Twelve: Internship Preparation
