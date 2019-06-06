@@ -40,7 +40,7 @@ When we export something in React, we make it available for import (just like wi
 
 So now, we can import our API call into any file we please. Lets do that:
 
-First, add: ```import { getCats } from '../api'``` to the imports in ```App.js```
+First, add: ```import { getCats } from './api'``` to the imports in ```App.js```
 
 Then, add a new function to ```App.js```:
 
@@ -58,7 +58,7 @@ componentWillMount() {
 	  this.setState({
 		cats: APIcats
 	  })
-	}
+	})
 }
 ```
 
