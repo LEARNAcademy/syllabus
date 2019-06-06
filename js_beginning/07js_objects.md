@@ -285,11 +285,11 @@ Write the code that access the 3rd ingredient of the lunch object.
 
 #### Exercise 7
 
-Write a function that takes an argument like the lunch object and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana." 
+Write a function that takes an argument like the lunch object and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 #### Exercise 8
 
-Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana." 
+Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 ### Class Challenges
 
@@ -302,14 +302,14 @@ class Coffee {
   constructor(type, cream=0, sugar=0){
     this.type = type.toLowerCase()
     this.cream = cream
-    this.sugar = false
+    this.sugar = sugar
   }
 
-  coffeeProfile = () => {
+  coffeeProfile(){
     console.log(`${this.type}: ${this.creams}, ${this.sugars}`)
   }
 
-  creams = () => {
+  creams(){
     if (this.cream > 0){
       return `${this.cream} creams`
     } else {
@@ -317,7 +317,7 @@ class Coffee {
     }
   }
 
-    sugars = () => {
+    sugars(){
     if (this.sugar > 0){
       return `${this.sugar} sugars`
     } else {
