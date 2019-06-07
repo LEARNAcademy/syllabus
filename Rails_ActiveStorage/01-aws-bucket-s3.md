@@ -41,4 +41,4 @@
 
 ```
 
-![Public Bucket](./assets/07-public bucket.png)
+![Public Bucket](./assets/07-public%20bucket.png?raw=true)
