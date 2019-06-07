@@ -4,23 +4,6 @@
 
 ![Permissions](./assets/03-permissions.png)
 
-![Bucket Policy](./assets/04-bucket-policy.png)
-
-### CORS
-```xml
-<CORSConfiguration>
- <CORSRule>
-   <AllowedOrigin>*</AllowedOrigin>
-   <AllowedMethod>PUT</AllowedMethod>
-   <AllowedMethod>POST</AllowedMethod>
-   <AllowedMethod>DELETE</AllowedMethod>
-   <AllowedHeader>*</AllowedHeader>
-  <MaxAgeSeconds>3000</MaxAgeSeconds>
- </CORSRule>
-</CORSConfiguration>
-```
-
-![CORS](./assets/06-cors.png)
 ### Bucket Policy
 ```json
 {
@@ -40,5 +23,24 @@
 }
 
 ```
+
+![Bucket Policy](./assets/04-bucket-policy.png)
+
+### CORS
+```xml
+<CORSConfiguration>
+ <CORSRule>
+   <AllowedOrigin>*</AllowedOrigin>
+   <AllowedMethod>PUT</AllowedMethod>
+   <AllowedMethod>POST</AllowedMethod>
+   <AllowedMethod>DELETE</AllowedMethod>
+   <AllowedHeader>*</AllowedHeader>
+  <MaxAgeSeconds>3000</MaxAgeSeconds>
+ </CORSRule>
+</CORSConfiguration>
+```
+
+![CORS](./assets/06-cors.png)
+
 
 ![Public Bucket](./assets/07-public%20bucket.png?raw=true)
