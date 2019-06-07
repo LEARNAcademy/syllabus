@@ -35,7 +35,7 @@ The name of these routes is important.  Rails knows to route the requests in the
 We start with the index route.  In this endpoint, we want to return all of the cats that the application knows about.  Later on, we may want to add search and/or pagination, but for now we'll keep things simple and just return all the cats.
 
 ### Create a spec
-We're going to practice Test Driven Development, so let's start with a test.  Create a new file ```spec/requests/cats_spec.rb```, and add this code:
+We're going to practice Test Driven Development, so let's start with a test.  You, can add specs such as the following in the controller spec file:
 
 ```ruby
 require 'rails_helper'
@@ -62,26 +62,6 @@ end
 
 When we run that spec, it fails of course, because we don't have any code in the controller to respond to the request correctly.  This failure is a good thing!
 
-```
-$ rspec spec/requests/cats_spec.rb
-F
-
-Failures:
-
-  1) Cats API gets a list of Cats
-     Failure/Error: json = JSON.parse(response.body)
-
-     JSON::ParserError:
-       743: unexpected token at ''
-     # ./spec/requests/cats_spec.rb:7:in `block (2 levels) in <top (required)>'
-
-Finished in 0.09661 seconds (files took 1.15 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/requests/cats_spec.rb:4 # Cats API gets a list of Cats
-```
 
 Now we can write the controller code to make it pass:
 
@@ -90,16 +70,6 @@ def index
   cats = Cat.all
   render json: cats
 end
-```
-
-Running our spec one more time, we see green!
-
-```
-$ rspec spec/requests/cats_spec.rb
-.
-
-Finished in 0.12364 seconds (files took 1.29 seconds to load)
-1 example, 0 failures
 ```
 
 ### Try it in the browser
@@ -135,30 +105,7 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
   end
 ```
 
-And once again, this fails because we have no code in the controller to make it pass.  Good!
-
-```
-$ rspec spec/requests/cats_spec.rb
-.F
-
-Failures:
-
-  1) Cats API creates a cat
-     Failure/Error: expect(new_cat.name).to eq('Buster')
-
-     NoMethodError:
-       undefined method `name' for nil:NilClass
-     # ./spec/requests/cats_spec.rb:24:in `block (2 levels) in <top (required)>'
-
-Finished in 0.11318 seconds (files took 1.3 seconds to load)
-2 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/requests/cats_spec.rb:12 # Cats API creates a cat
-```
-
-Adding the controller code for this spec is as follows:
+And once again, this fails because we have no code in the controller to make it pass.  Good!  Adding the controller code for this spec is as follows:
 
 ```
   def create

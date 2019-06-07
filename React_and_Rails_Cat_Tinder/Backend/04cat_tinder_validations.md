@@ -8,7 +8,7 @@ We've started all of our back end coding with a failing test, and we now have go
 
 Here's a test to assure that we get the correct response status when we submit a create request without a name for a cat:
 
-#### spec/requests/cats_spec.rb
+#### spec/controllers/cats_controller_spec.rb
 ```
 it "doesn't create a cat without a name" do
   cat_params = {
@@ -31,39 +31,7 @@ it "doesn't create a cat without a name" do
 end
 ```
 
-And the results from running the full test suite:
-
-```
-$ rspec spec
-*..F
-
-Pending: (Failures listed here are expected and do not affect your suite's status)
-
-  1) Cat add some examples to (or delete) /Users/mclark/Projects/notch8/curriculum/2018-alpha/08-React-and-Rails/cat_tinder/spec/models/cat_spec.rb
-     # Not yet implemented
-     # ./spec/models/cat_spec.rb:4
-
-
-Failures:
-
-  1) Cats API doesn't create a cat without a name
-     Failure/Error: expect(response.status).to eq 422
-
-       expected: 422
-            got: 200
-
-       (compared using ==)
-     # ./spec/requests/cats_spec.rb:36:in `block (2 levels) in <top (required)>'
-
-Finished in 0.15078 seconds (files took 1.41 seconds to load)
-4 examples, 1 failure, 1 pending
-
-Failed examples:
-
-rspec ./spec/requests/cats_spec.rb:27 # Cats API doesn't create a cat without a name
-```
-
-Great!  We expected a 422 response which is the server letting us know that we submitted an "Unprocessable Entity", but that's not what we got back.  So how do we make that test pass?  Let's add a validation.  You can also see in the above test results that we have a Pending test for our Cat model, and we know that validations are added to models, why don't we add another Model test for the validation, and make it pass?
+And the results from running the full test suite give us a failure.  Great!  We expected a 422 response which is the server letting us know that we submitted an "Unprocessable Entity", but that's not what we got back.  So how do we make that test pass?  Let's add a validation.  You can also see in the above test results that we have a Pending test for our Cat model, and we know that validations are added to models, why don't we add another Model test for the validation, and make it pass?
 
 ### A model test for our validation
 
