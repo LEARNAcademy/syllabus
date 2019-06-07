@@ -1,8 +1,8 @@
 ![Create Bucket](./assets/01-create-bucket.png)
-
 ![Bucket Name](./assets/02-bucket-name.png)
-
+![Configure Options](./assets/03-configure-options.png)]
 ![Permissions](./assets/03-permissions.png)
+![Review](./assets/03-review.png)
 
 ### Bucket Policy
 ```json
