@@ -11,5 +11,5 @@ Please have a read of the [docs for the react-rails project](https://github.com/
 ## Exercises
 The material in this repo is intended to be run as a group exercise in the LEARN Academy Class
 
-1. [React and Rails Hello World App](https://github.com/LEARNAcademy/react-rails/tree/master/01_hello_world)
-2. [Building a Single Page React App in Rails](https://github.com/LEARNAcademy/react-rails/tree/master/02_single_page_app)
+1. [React and Rails Hello World App](./01-react-in-rails/02_Hello_World.md)
+2. [Building a Single Page React App in Rails](./01-react-in-rails/03_single_page_app.md)
