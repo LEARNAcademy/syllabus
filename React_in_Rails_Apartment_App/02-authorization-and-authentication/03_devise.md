@@ -79,9 +79,7 @@ tree app
 ```
 
 ### 7) Set root to "bikes#index"
-```bash
-cat -n config/routes.rb
-```
+#### config/routes.rb
 ```result
 :      1	Rails.application.routes.draw do
 :      2	  resources :bikes
@@ -98,9 +96,7 @@ rails s
 
 ### 9) Protect all Bike routes
 
-```bash
-cat -n app/controllers/bikes_controller.rb |sed 1,3!d
-```
+#### app/controllers/bikes_controller.rb |sed 1,3!d
 ```result
 :      1	class BikesController < ApplicationController
 :      2	  before_action :set_bike, only: [:show, :edit, :update, :destroy]
@@ -111,9 +107,7 @@ cat -n app/controllers/bikes_controller.rb |sed 1,3!d
 ### 8) Assign new bikes to current_user
 
 Associate Bikes to Users:
-```bash
-cat -n app/models/bike.rb
-```
+#### app/models/bike.rb
 ```result
 :      1	class Bike < ApplicationRecord
 :      2	  belongs_to :user
@@ -121,9 +115,7 @@ cat -n app/models/bike.rb
 ```
 
 And Users to Bikes:
-```bash
-cat -n app/models/user.rb
-```
+#### app/models/user.rb
 ```result
 :      1	class User < ApplicationRecord
 :      2	  # Include default devise modules. Others available are:
@@ -137,9 +129,7 @@ cat -n app/models/user.rb
 
 We need to remove the "User" input from our generated form for a new bike:
 
-```bash
-cat -n app/views/bikes/_form.html.erb
-```
+#### app/views/bikes/_form.html.erb
 ```result
 :      1	<%= form_with(model: bike, local: true) do |form| %>
 :      2	  <% if bike.errors.any? %>
@@ -177,9 +167,7 @@ cat -n app/views/bikes/_form.html.erb
 
 Then, in the ```create``` method of the controller, we can assign it to the current user with the help of a Devise helper method.
 
-```bash
-cat -n app/controllers/bikes_controller.rb |sed 27,39!d
-```
+#### app/controllers/bikes_controller.rb |sed 27,39!d
 ```result
 :     27	  def create
 :     28	    @bike = current_user.bikes.new(bike_params)
@@ -197,7 +185,3 @@ cat -n app/controllers/bikes_controller.rb |sed 27,39!d
 ```
 
 ### 10) Now when we test it out, we can see in the console that Bikes are assigned to the user
-
-## Next Up Single Page App with Devise
-
-[Setup a Single Page React App with Rails and Devise](../devise-single-page-app)
