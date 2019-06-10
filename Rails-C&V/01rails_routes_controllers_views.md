@@ -50,11 +50,11 @@ We can take advantage of the `/public` directory to quickly set up our own home 
 
 Now our page is being served on the home page instead.
 
-### Answering Web Requests (Programming the response)
+## Answering Web Requests (Programming the response)
 
 As neat as the `/public` directory is for quickly setting up easy-to-access pages, as developers, we typically need a way to create more application endpoints that allow us more control and the ability to do more work in responding to a user request. In short, we need to program a response
 
-#### Anatomy of a Rails response
+### Anatomy of a Rails response
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. As you may recall, a typical request starts with a url. In other words, a url is typed into the browser address bar and the user hits enter.
 
@@ -65,7 +65,7 @@ We've worked with some urls previously but take this one for example:
 
 In order for our Rails server to respond to a request to this url, it must have a way of knowing that it should be responding to the call to that url. A file is created when you run ```rails new``` that is intended to be the home of all those valid urls. It is the ```routes.rb``` file in the ```config``` folder of your Rails app.s
 
-## A route
+#### A route
 
 *config/routes.rb*:
 ```
@@ -74,7 +74,7 @@ Rails.application.routes.draw do
 ```
 The route here is the line that reads ```get '/answers' => 'main#answers'```. What it does is essentially add something like an address on your application. Meaning when you type `localhost:3000/answers` into the browser (the get '/answers' part) and hit enter, Rails will determine that you have requested the ```/answers``` route and that it needs to find the ```main``` controller and run its ```answers``` method. Let's take a look then at a Rails controller.
 
-## A Rails controller
+#### A Rails controller
 From the command line, we can add a new Rails controller with a rails command:
 ```bash
 rails generate controller main
