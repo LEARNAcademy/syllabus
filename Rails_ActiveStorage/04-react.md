@@ -8,8 +8,10 @@ From a terminal:
 yarn add react-activestorage-provider
 ```
 
-### User the package
+### Use the ActiveStorageProvider component
 This example adds ability to upload an Avatar to an existing User record.  In a Component:
+
+** Note:  This example is for a React app built inside of a Rails app.  For front ends served stand alone, please see below.
 
 ```javascript
 import React from "react"
@@ -89,4 +91,21 @@ class User extends React.Component {
 
 export default User
 
+```
+
+#### ActiveStorageProvider in Stand Alone React Apps
+If you are building an app that is not served through Rails, but has a stand alone front end, the ActiveStorateProvider is a little different.  It must also specify host information in its endpoint configuration.  Here's an example:
+
+```javascript
+<ActiveStorageProvider
+	endpoint={{
+		path: `/users/${user.id}`,
+		host: 'localhost',
+		port: '3000',
+		protocol: 'http',
+		model: 'User',
+		attribute: 'avatar',
+		method: 'PUT',
+	}}
+	......
 ```

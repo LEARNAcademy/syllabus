@@ -65,6 +65,16 @@ class User < ApplicationRecord
 end
 ```
 
+### If you setup Rails as an API
+If you setup Rails as an API only by calling ```rails new <app-name> --api```, then you'll want to work around a bug in Rails preventing ActiveStorage from working correctly.  We need to tell the controller specific to ActiveStorage to not verify the authenticity token, just like the rest of our application.
+
+Create a new file: /config/initializers/active_storage.rb
+
+This is the only line you'll need there:
+```ruby
+ActiveStorage::DirectUploadsController.instance_eval { skip_forgery_protection }
+```
+
 ### Example Controller
 
 For our controller, we need to setup an endpoint that will accept an update with our user's avatar data.  **Note:** that this has no authentication at all, so it is very insecure.
