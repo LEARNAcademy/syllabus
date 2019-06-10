@@ -23,7 +23,7 @@ amazon:
   bucket: <name of your AWS S3 bucket>
 ```
 
-#### credentials
+#### Credentials
 [![YouTube](http://img.youtube.com/vi/9CJBvyFGnvo/0.jpg)](https://www.youtube.com/watch?v=9CJBvyFGnvo)
 ]
 
