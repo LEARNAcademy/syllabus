@@ -72,7 +72,7 @@ In order for our Rails server to respond to a request to this url, it must have 
 Rails.application.routes.draw do
   get '/answers' => 'main#answers'
 ```
-The route here is the line that reads ```get '/answers' => 'main#answers'```. What it does is essentially add something like an address on your application. Meaning when you type `localhost:3000/answers` into the browser (the get '/answers' part) and hit enter, Rails determine that you have requested the ```/answers``` route and that it needs to find the ```main``` controller and run its ```answers``` method. Let's take a look then at what a Rails controller is.
+The route here is the line that reads ```get '/answers' => 'main#answers'```. What it does is essentially add something like an address on your application. Meaning when you type `localhost:3000/answers` into the browser (the get '/answers' part) and hit enter, Rails will determine that you have requested the ```/answers``` route and that it needs to find the ```main``` controller and run its ```answers``` method. Let's take a look then at a Rails controller.
 
 ## A Rails controller
 From the command line, we can add a new Rails controller with a rails command:
@@ -122,8 +122,7 @@ class MainController < ApplicationController
 end
 ```
 
-Now, my Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser. 
-
+Now, our Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser. 
 
 This may be a lot to take in, but let's recap:
 
