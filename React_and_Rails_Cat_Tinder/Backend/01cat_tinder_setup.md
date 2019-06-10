@@ -42,7 +42,7 @@ This adds 'rspec-rails' to the Gemfile, and instructs Rails to only load rspec w
 Next its time to add a Cat resource.  The following command will add the Model, Migration, Controller, and Route for cats.
 ```
 $ rails g resource cat name:string age:integer enjoys:text
-$ rake db:migrate
+$ rails db:migrate
 ````
 
 ## Verify that we're all set up

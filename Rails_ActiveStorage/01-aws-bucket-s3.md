@@ -1,26 +1,9 @@
 ![Create Bucket](./assets/01-create-bucket.png)
-
 ![Bucket Name](./assets/02-bucket-name.png)
-
+![Configure Options](./assets/03-configure-options.png)]
 ![Permissions](./assets/03-permissions.png)
+![Review](./assets/03-review.png)
 
-![Bucket Policy](./assets/04-bucket-policy.png)
-
-### CORS
-```xml
-<CORSConfiguration>
- <CORSRule>
-   <AllowedOrigin>*</AllowedOrigin>
-   <AllowedMethod>PUT</AllowedMethod>
-   <AllowedMethod>POST</AllowedMethod>
-   <AllowedMethod>DELETE</AllowedMethod>
-   <AllowedHeader>*</AllowedHeader>
-  <MaxAgeSeconds>3000</MaxAgeSeconds>
- </CORSRule>
-</CORSConfiguration>
-```
-
-![CORS](./assets/06-cors.png)
 ### Bucket Policy
 ```json
 {
@@ -41,4 +24,23 @@
 
 ```
 
-![Public Bucket](./assets/07-public bucket.png)
+![Bucket Policy](./assets/04-bucket-policy.png)
+
+### CORS
+```xml
+<CORSConfiguration>
+ <CORSRule>
+   <AllowedOrigin>*</AllowedOrigin>
+   <AllowedMethod>PUT</AllowedMethod>
+   <AllowedMethod>POST</AllowedMethod>
+   <AllowedMethod>DELETE</AllowedMethod>
+   <AllowedHeader>*</AllowedHeader>
+  <MaxAgeSeconds>3000</MaxAgeSeconds>
+ </CORSRule>
+</CORSConfiguration>
+```
+
+![CORS](./assets/06-cors.png)
+
+
+![Public Bucket](./assets/07-public%20bucket.png?raw=true)
