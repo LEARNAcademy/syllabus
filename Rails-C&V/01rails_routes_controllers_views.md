@@ -80,7 +80,7 @@ From the command line, we can add a new Rails controller with a rails command:
 rails generate controller main
 ```
 
-If our MainController looks like this:
+We can then program our controller like this:
 *app/controllers/main_controller.rb*:
 ```
 class MainController < ApplicationController
@@ -94,7 +94,38 @@ Here we are defining the main controller that we specified to handle our ```/ans
 
 This completes the Rails response to the ```/answers``` request. When we visit `localhost:3000/answers`, we should see a white page with the text "hello".
 
-This may be a lot to take in, but lets recap:
+Let's program another response. Let's say we want our Rails program to be able to respond to requests for:
+
+```localhost:3000/mypage```
+
+First, we can tell Rails to accept requests to ```/mypage``` in the ```routes.rb```:
+
+*config/routes.rb*:
+```
+Rails.application.routes.draw do
+  get '/answers' => 'main#answers'
+  get '/mypage' => 'main#mypage'
+```
+
+Now, I need to add a ```mypage``` method to my ```main``` controller that will define how to respond:
+
+*app/controllers/main_controller.rb*:
+```
+class MainController < ApplicationController
+  def answers
+    render html: "hello" #.html_safe
+  end
+
+  def mypage
+    render html: "welcome to my page" #.html_safe
+  end
+end
+```
+
+Now, my Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser. 
+
+
+This may be a lot to take in, but let's recap:
 
 ### Routes and Controllers are the meat and potatoes to your Rails server
 
