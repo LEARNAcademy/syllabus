@@ -32,7 +32,7 @@ And just like that, we should see the boilerplate Rails homepage.
 
 #### Serving the public
 
-Rails has a folder called `/public'. Anything we put into this folder will be accessible by the rest of the application just by asking for it. To see this in action, create HTML file in `/public` called `myfile.html`.
+Rails has a folder called `/public`. Anything we put into this folder will be accessible by the rest of the application just by asking for it. To see this in action, create HTML file in `/public` called `myfile.html`.
 
 #### In a browser enter:
 
