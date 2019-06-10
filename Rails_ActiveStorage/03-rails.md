@@ -23,7 +23,7 @@ amazon:
   bucket: <name of your AWS S3 bucket>
 ```
 
-#### credentials
+### credentials
 Notice the ```Rails.application.credentials.dig(:aws, :access_key_id)``` lines above.  Those refer to a built-in credentials storage system in Rails.  Its purpose is to keep the secret data your app depends on encrypted and secret.  If you look in your ```/config``` directory, you'll notice a file called ```/config/credentials.yml.enc```.  This file is encrypted, and not intended to be edited directly.  Instead, you can edit it with a rails command:
 
 ```bash
