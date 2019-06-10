@@ -23,9 +23,22 @@ amazon:
   bucket: <name of your AWS S3 bucket>
 ```
 
+#### credentials
+Notice the ```Rails.application.credentials.dig(:aws, :access_key_id)``` lines above.  Those refer to a built-in credentials storage system in Rails.  Its purpose is to keep the secret data your app depends on encrypted and secret.  If you look in your ```/config``` directory, you'll notice a file called ```/config/credentials.yml.enc```.  This file is encrypted, and not intended to be edited directly.  Instead, you can edit it with a rails command:
+
+```bash
+$ EDITOR=nano bin/rails credentials:edit
+```
+
+This will open up a Nano editor inside of your terminal.  Nano is a full featured editor just like Atom or the Cloud9 editor, it just runs inside of your terminal.  Its interface is text based, so it may take a bit of getting used to.  Look for the keyboard shortcuts at the bottom to find your way around.
+
+Inside of this file, we add our credentials, and when we save and close the editor, they are encrypted and saved into the ```credentials.yml.enc``` file, ready for use like in the ```/config/storage.yml``` file above.
+
+EngineYard has a [great article](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2) with much more detail on how to use Rails Credentials
+
 ### Configure ActiveStorage
 
-### /config/environments/development.rb, and production.rb
+#### ```/config/environments/development.rb```, and ```production.rb```
 
 Find this line, and make sure it is uncommented, and changed to ':amazon'
 
