@@ -1,5 +1,3 @@
-{% youtube 1BZPSnXKK1M %}
-
 # Working with and thinking about Objects
 [![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
 ]
