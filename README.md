@@ -101,8 +101,8 @@ Using React and Rails to create an asynchronous full stack application with test
 3) [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
 4) [React Routing](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/01-react-router-intro.md)
 5) [Portfolio Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/02-portfolio-challenge.md)
-6) [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-recipes-challenge.md)
-7) [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-dynamic-routes.md)
+6) [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-recipes-challenge.md)
+7) [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-dynamic-routes.md)
 8) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_intro.md)
 9) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_cats.md)
 10) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_new_cats.md)
@@ -123,7 +123,7 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: Authentication
 
-1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/README.md)
 2) [Devise](./devise-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
