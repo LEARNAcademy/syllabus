@@ -23,7 +23,10 @@ amazon:
   bucket: <name of your AWS S3 bucket>
 ```
 
-#### credentials
+#### Credentials
+[![YouTube](http://img.youtube.com/vi/9CJBvyFGnvo/0.jpg)](https://www.youtube.com/watch?v=9CJBvyFGnvo)
+]
+
 Notice the ```Rails.application.credentials.dig(:aws, :access_key_id)``` lines above.  Those refer to a built-in credentials storage system in Rails.  Its purpose is to keep the secret data your app depends on encrypted and secret.  If you look in your ```/config``` directory, you'll notice a file called ```/config/credentials.yml.enc```.  This file is encrypted, and not intended to be edited directly.  Instead, you can edit it with a rails command:
 
 ```bash
@@ -60,6 +63,16 @@ Finally, we add a line to our ActiveRecord Model to tell it we want it to have a
 class User < ApplicationRecord
   has_one_attached :avatar
 end
+```
+
+### If you setup Rails as an API
+If you setup Rails as an API only by calling ```rails new <app-name> --api```, then you'll want to work around a bug in Rails preventing ActiveStorage from working correctly.  We need to tell the controller specific to ActiveStorage to not verify the authenticity token, just like the rest of our application.
+
+Create a new file: /config/initializers/active_storage.rb
+
+This is the only line you'll need there:
+```ruby
+ActiveStorage::DirectUploadsController.instance_eval { skip_forgery_protection }
 ```
 
 ### Example Controller
