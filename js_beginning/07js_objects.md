@@ -1,4 +1,5 @@
 # Working with and thinking about Objects
+{% youtube 1BZPSnXKK1M %}
 [![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
 ]
 ## Object with Data
