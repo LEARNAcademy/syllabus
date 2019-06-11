@@ -23,6 +23,7 @@ This section is building on Javascript foundations and introducing more advanced
 3) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
 4) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 5) [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
+6) [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
 
 
 ## Unit Three: React
