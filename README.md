@@ -60,17 +60,18 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1) [Rails Intro to Routes, Controllers and View](https://github.com/LEARNAcademy/Syllabus/blob/master/Rails-C%26V/01rails_routes_controllers_views.md)
-2) [Rails Params](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/02rails_params.md)
-3) [Rails Views](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/03rails_views.md)
-4) [Rails Cookies](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/04rails_cookies.md)
-5) [Rails Forms, Layouts and Flash Messages](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/05rails_forms_layouts_flash_messages.md)
-6) [Rails Generate](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/06rails_generate.md)
-7) [Rails Mini Projects](https://github.com/learn-academy-2019-bravo/Syllabus/blob/master/Rails-C%26V/07rails_miniprojects.md)
-8) [Intro to Postgres](./sql/07rails_intro_postgres.md)
-9) [Joins](./sql/08rails_sql_joins.md)
-10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
-11) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
+1) [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
+2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+3) [Rails Params](./Rails-C&V/02rails_params.md)
+4) [Rails Views](./Rails-C&V/03rails_views.md)
+5) [Rails Cookies](./Rails-C&V/04rails_cookies.md)
+6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+7) [Rails Generate](./Rails-C&V/06rails_generate.md)
+8) [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
+9) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+10) [Joins](./sql/08rails_sql_joins.md)
+11) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
+12) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
