@@ -7,9 +7,16 @@ Let's explore how Rails and React are integrated by constructing the simplest po
 ## React-Rails Docs
 Please have a read of the [docs for the react-rails project](https://github.com/reactjs/react-rails) first to see what we're going to do, and all of the advanced features of the gem.
 
+## Devise docs
+The Devise documentation is also great. Devise is so flexible and ubiquitous, that this page probably deserves a spot in your bookmarks.  [Devise](https://github.com/plataformatec/devise)
 
-## Exercises
-The material in this repo is intended to be run as a group exercise in the LEARN Academy Class
+## About authentication
+1. [Authentication vs. Authorization](./02-authorization-and-authentication/01-authentication-vs-authorization.md)
+2. [How Authentication Works](./02-authorization-and-authentication/02-authentication.md)
 
-1. [React and Rails Hello World App](./01-react-in-rails/02_Hello_World.md)
-2. [Building a Single Page React App in Rails](./01-react-in-rails/03_single_page_app.md)
+## Guides
+
+1. [Stand Alone Devise App](./02-authorization-and-authentication/03_devise.md)
+2. [React and Rails Together](./01-react-in-rails/02_Hello_World.md)
+2. [Single Page React App in Rails](./01-react-in-rails/03_single_page_app.md)
+3. [Putting it all together](./03_devise_and_react_together.md)
