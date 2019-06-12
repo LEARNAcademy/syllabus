@@ -1,5 +1,8 @@
 # Higher-Order Functions
 
+[![YouTube](http://img.youtube.com/vi/OHxBtQxC0ok/0.jpg)](https://www.youtube.com/watch?v=OHxBtQxC0ok&list=PLbsdmHaQ-46dMPNZkV3TEP6J_t1DASQCr&index=7&t=0s)
+
+
 A higher-order function is simply a function that either takes in another function as an argument or returns another function.
 
 We will focus on two higher order functions for this lesson -
