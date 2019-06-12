@@ -56,11 +56,15 @@ $ rails g controller Pages
 ```
 
 ### Add a route for the homepage
+#### config/routes.rb
 ```result
-: Rails.application.routes.draw do
-:   root to: "pages#homepage"
-: end
+       1	Rails.application.routes.draw do
+		   2    devise_for :users
+       3	  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
+       4	  root to: 'pages#root'
+       5	end
 ```
+This route directs all html traffic to the 'pages#root' route, but ignores non html traffic, like our api requests will be.  That is perfect to interact with the React router eventually if and when that gets added to your app.
 
 ### Add homepage and React Component
 Next, we'll add a homepage view, and add our react component to it.  We want to pass three pieces of information down from Rails into our React App.
