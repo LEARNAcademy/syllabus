@@ -31,7 +31,7 @@ Made up of status codes:
 - 400's - client side error
 - 500's - server side error
 
-[Cat Error Codes](./https://http.cat/)
+[Cat Error Codes](https://http.cat/[status_code])
 
 ### CRUD
 The basic actions a website should be able to do:
