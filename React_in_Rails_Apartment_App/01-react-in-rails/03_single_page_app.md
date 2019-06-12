@@ -1,5 +1,7 @@
 # Building a Single Page React App with React-Rails
 
+[![YouTube](http://img.youtube.com/vi/96Kd2dCsXm8/0.jpg)](https://www.youtube.com/watch?v=96Kd2dCsXm8)
+
 We've seen how to create React components and use them on a webpage in a Rails app.  Our next task is to build a single page React app, where React is completely responsible for navigation, and the user experience of our application.  In this project, we're going to see how to build out a React application inside of Rails with all the features we've come to expect in our applications.
 
 We'll re-visit:
@@ -25,7 +27,6 @@ yarn install
 ### 2) Add the webpack to the layout
 
 #### app/views/layouts/application.html.erb
-```
 ```result
 <%= javascript_pack_tag 'application' %>
 ```
@@ -38,11 +39,6 @@ yarn install
 rails g controller Pages
 ```
 
-#### app/views/pages/root.html.erb
-```result
-<h1>Single Page App Example</h1>
-```
-
 #### config/routes.rb
 ```result
 : Rails.application.routes.draw do
@@ -50,12 +46,7 @@ rails g controller Pages
 : end
 ```
 
-### 4) Run the Rails server, and verify all is working
-```bash
-rails s
-```
-
-### 5) Render Our first component
+### 4) Render Our first component
 
 Now that we have a place for it, let's add the main component for our single page application.  In a create-react-app built app, this component is called 'App.js'.  In our app, were going to call it 'MainApp.js'
 
@@ -93,7 +84,7 @@ And we can add some starting text we'll see when its rendered to assure that all
 ## React and Bootstrap
 In previous examples of using Bootstrap with React, we've used the excellent [React Bootstrap](https://react-bootstrap.github.io/) module.  For this example, we're going to use the equally excellent [Reactstrap](https://reactstrap.github.io/) package.  The do the same things, and eventually one may 'win' out over the other, but as of 2019, either is a great choice to use in your applications.  Its the same process for each when including them into a Rails backed project.
 
-### 6) Add Bootstrap to Rails.
+### 5) Add Bootstrap to Rails.
 Reactstrap (and react-bootstrap) does not include Bootstrap's core CSS.  This means that we need to add those CSS files the the project ourselves.
 
 #### There is a Gem for Bootstrap
@@ -103,7 +94,7 @@ One of the easiest ways to do this is to use the 'bootstrap' Rubygem.  We can ad
 bundle add bootstrap
 ```
 
-#### 7) Add bootstrap to our Stylesheet
+#### 6) Add bootstrap to our Stylesheet
 
 We need to add the Bootstrap css rules to our main application stylesheet.  We're using the bootstrap gem, so we need to change `application.css` to be named `application.scss`.  This will cause the stylesheet to be loaded through the SASS engine, and alow us to import Bootstrap via a SASS ```@import``` statement.
 
@@ -123,12 +114,12 @@ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scs
 
 ** Note, there are many ways to add bootstrap to a Rails app, all of which will work equally well with our single page React application.
 
-### 8) Add Reactstrap
+### 7) Add Reactstrap
 ```bash
 yarn add reactstrap
 ```
 
-### 9) Add Reactstrap components to the page
+### 8) Add Reactstrap components to the page
 Once that is done, we can use Reactstrap components on our page.  Let's try it out in our MainApp component. This code is borrowed directly from Reactstrap's docs for the Nav component:
 
 #### app/javascript/components/MainApp.js
@@ -166,14 +157,14 @@ We want our application structure to be as simple as possible.  File structure s
 
 This structure is all placed, because of Rails convention in the '/app/javascript/components' directory
 
-## 10) React-Router
+## 9) React-Router
 In order to have multiple pages in a single page app, we need to add the router.  From the root directory of the project:
 
 ```bash
 yarn add react-router-dom
 ```
 
-### 11) Add pages
+### 10) Add pages
 
 We need some pages in our React single page app  to route too.  For this example, we'll add an "About Us", "Learn More", and "Home" page.  Each of them will have an ```<h1>``` describing their intent.
 
@@ -196,7 +187,7 @@ cat app/javascript/components/pages/Home.js
 
 The other two are mostly the same.
 
-### 12) Routing Constraints
+### 11) Routing Constraints
 
 You'll recall that Rails has a router, and now that we've added react-router, so does React.  You might imagine that these two routers could come into conflict, and that would be correct.  We need to clearly separate the Rails routing responsibilities, and the React routing responsibilities.  We're building a single page app.  This, by definition, means that all HTML traffic goes to just one page.  All other types of requests though, will need to be routed by the rails app.  Most important of these, is the JSON and Javascript traffic that the Rails app must handle, we've been thinking of these requests as API requests from the frontend app to the backend one.
 
@@ -215,7 +206,7 @@ The Rails Router has a convenient feature that we can use to achieve this separa
 
 Pretty cool!
 
-### 13) Update the React router
+### 12) Update the React router
 
 #### app/javascript/components/MainApp.js
 ```result
@@ -257,4 +248,4 @@ Pretty cool!
 :     36	export default MainApp
 ```
 
-## 14) Re-Load the page.
+## 13) Re-Load the page.
