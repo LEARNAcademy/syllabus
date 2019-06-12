@@ -1,8 +1,8 @@
 # Testing Javascript with Jest
 
 
-[![YouTub](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)
-]
+[![YouTube](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)
+
 
 ## Why Test?
 * breaks problems down into smaller pieces
