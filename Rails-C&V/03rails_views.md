@@ -1,18 +1,19 @@
-# Render Simple View
+# Rendering the V(iew)
 
-What if we don't want to render plain text on a page? Rails can do that, too.
+You may be wondering, how do I send something more complicated to the user. In the previous example, the html that we sent as a response was limited. We were basically sending strings. Thankfully, Rails also makes the process of serving html pretty comprehensive.
 
 Recall that we have a route in 'config/routes.rb' that looks like this:
 ```ruby
 Rails.application.routes.draw do
-    get "/answers/:number", to: 'main#answers'
+    get "/answers", to: 'main#answers'
 end
 ```
 
 Let's update our `answers` method to load an html.erb file instead of rendering plain text.
 
-```
-main_controller.rb:
+*main_controller.rb*:
+
+```ruby
 class MainController < ApplicationController
 
   def answers
@@ -21,13 +22,14 @@ class MainController < ApplicationController
 
 end
 ```
+
 *views/main/answers.html.erb*:
+
 ```
 Answer is: something
 ```
-`http://localhost:3000/answers/42`
 
-And our `answers.html.erb` loads
+Now if we visit `http://localhost:3000/answers/42` Rails renders our `answers.html.erb`.
 
 #### Render View With Ruby Value
 
