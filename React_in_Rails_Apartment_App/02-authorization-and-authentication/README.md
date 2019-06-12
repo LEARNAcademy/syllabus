@@ -19,6 +19,13 @@ This example is intended to be done as a group exercise.
 #### Group Work
 This example, meant to be done as a group exercise brings all the concepts together.  We build an app with authenticated Devise routes, and a single page application.
 
+##### Part 1
+[![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
+
+##### Part 2
+[![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
+
+
 * [Devise Single Page App](./04_devise_single_page_app.md)(Group Exercise)
 
 #### Exercises
