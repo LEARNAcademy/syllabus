@@ -78,7 +78,19 @@ Next, we'll add a homepage view, and add our react component to it.  We want to 
 ```
 
 ### Login/Logout button
-With login status and routes in our React component, we can now add a button to log the user out or in.  This example puts the button in MainApp.  You may choose to pass those props to another component, and place the buttons there.
+With login status and routes in our React component, we can now add a button to log the user out or in.
+
+First we need to instruct Devise to listen for logout requests via GET instead of the default DELETE.  We do that in Devise's config file:
+
+#### config/initializers/devise.rb
+```ruby
+# Find this line:
+config.sign_out_via = :delete
+# and replace it with this:
+config.sign_out_via = :get
+```
+
+This example puts the button in MainApp.  You may choose to pass those props to another component, and place the buttons there.
 
 
 #### app/javascript/components/MainApp.js
