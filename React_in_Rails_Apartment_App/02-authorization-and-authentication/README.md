@@ -12,22 +12,17 @@ We turn our attention to a base install of Devise, a popular Rails authenticatio
 #### Group Work
 This example is intended to be done as a group exercise.
 
-* [Devise Example](./devise-example) (Group Exercise)
-
-#### Exercises
-
-* [Challenge Devise Database Authenticatable](https://github.com/LEARNAcademy/challenge-devise-database-authenticatable) (Pair Exercise)
+* [Devise Example](./03_devise.md) (Group Exercise)
 
 ## Devise and a Single Page App
 
 #### Group Work
 This example, meant to be done as a group exercise brings all the concepts together.  We build an app with authenticated Devise routes, and a single page application.
 
-* [Devise Single Page App](./devise-single-page-app)(Group Exercise)
+* [Devise Single Page App](./04_devise_single_page_app.md)(Group Exercise)
 
 #### Exercises
 
 * [Complete Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
-* [Apartment App](https://github.com/LEARNAcademy/exercise-apartment-app)(Multi Day Exercise)
+* [Apartment App](https://classroom.github.com/g/5mGKXh_G)(Multi Day Exercise)
   - Please use this Git Repo to manage your work.  It is a Github classroom, which will allow the instructors to give you feedback.
-
