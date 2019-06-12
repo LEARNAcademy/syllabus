@@ -1,6 +1,6 @@
 # Single Page App Authentication
 
-This example takes a look at how we log users into an application.  We start off with a discussion of a few concepts around authentication and authorization.  It's important to make the distinction clearly.
+We start off with a discussion of a few concepts around authentication and authorization.  It's important to make the distinction clearly.
 
 ## Start Here
 * [Authentication vs. Authorization](./01-authentication-vs-authorization.md) (independent reading)
