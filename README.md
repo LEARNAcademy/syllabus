@@ -14,6 +14,7 @@ This is your introduction to programming through the Javascript programming lang
 8) [Javascript Objects](./js_beginning/07js_objects.md)
 
 
+
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
@@ -40,6 +41,9 @@ React is a powerful Javascript library used to build more complicated web applic
 8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
+
+[Additional Topics](./react/additonal_topics.md)
+
 
 
 ## Unit Four: Ruby
@@ -83,6 +87,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+
+
+[Additional Topis](./Rails-M/addional_topics.md)
 
 ## Unit Seven: Professional Development Week
 
