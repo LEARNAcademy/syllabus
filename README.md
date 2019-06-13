@@ -89,7 +89,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 
-[Additional Topis](./Rails-M/additional_topics.md)
+[Additional Topics](./Rails-M/additional_topics.md)
 
 ## Unit Seven: Professional Development Week
 
