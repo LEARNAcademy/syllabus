@@ -1,5 +1,7 @@
 # Classes in ES6
 
+[![YouTube](http://img.youtube.com/vi/WS6a1tCx_AI/0.jpg)](https://www.youtube.com/watch?v=WS6a1tCx_AI)
+
 One of the highly anticipated additions to the Javascript language introduced in ES6 was Classes.  When we think of our   application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with  those objects.  A car, for example is an object that is made up of many smaller objects.  It has wheels, a horn, and an   engine, all of which can be interacted with by a driver.  Wheels, horns, engines, and drivers are all objects, and thus,  all modeled using classes in our application.
 
 Classes define attributes and behaviors.  An engine has attributes such as horsepower, oil level, rpm, and temperature,   for example.  It has behaviors as well, such as start, accelerate, and stop.
