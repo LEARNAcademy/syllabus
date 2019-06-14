@@ -1,5 +1,7 @@
 # Rendering the V(iew)
 
+## Rendering an html view
+
 You may be wondering, how do I send something more complicated to the user. In the previous example, the html that we sent as a response was limited. We were basically sending strings. Thankfully, Rails also makes the process of serving html pretty comprehensive.
 
 Let's add route in 'config/routes.rb' that looks like this:
@@ -39,51 +41,43 @@ Hello!
 
 Now if we visit `http://localhost:3000/greeting` Rails renders our `greeting.html.erb`.
 
+# Passing Values to the (V)iew
+
 #### Render View With Ruby Value
 
-A web page that forever says "Answer is: something" isn't very useful. Let's change it to print the value of our number parameter.
+So that's pretty cool, but eventually, we'll want this view to become a bit more dynamic. In order to do that, we need a way to pass values to the view. Remember those instance variables that we used in Ruby classes? That's where those come in.
 
-*answers.html.erb*:
+You may have noticed that our html files have a funny extension. They end with `html.erb`. What that final `erb` extension stands for is `embedded ruby`. It means that these views can have Ruby values in them and even evaluate some Ruby logic! 
+
+Let's take a look at how to pass a value in to the view.
+
+We'll update the controller's greeting method to set up an instance variable:
+
+*main_controller.rb*
+
+```ruby
+class MainController < ApplicationController
+
+  def answers
+    render html: "hello" #.html_safe
+  end
+
+  def greeting
+    @name = "Jane"
+    render "greeting.html.erb"
+  end
+end
 ```
-Number is: <%= params[:number] %>
+Then, we'll update the `greeting.html.erb` file to display the variable as part of the view:
+
+*views/main/greeting.html.erb*:
+
 ```
+Hello <%= @name %>!
+```
+
 Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded ruby". By wrapping our Ruby code in those symbols, it will execute on the page and then print.
 
-Visit `http://localhost:3000/answers/42` and see what happens.
+Visit `http://localhost:3000/greeting` and see what happens.
 
-### Examine Params
-
-Let's learn more about the `params` method.
-
-*answers.html.erb*:
-```
-<%= params.class %><br/>
-<%= params %></br>
-```
-
-## Homepage URL
-
-In the router
-
-```
-root to: 'main#questions'
-```
-
-Then we can add a controller endpoint and view for 'questions' as our homepage.
-
-# Challenges
-
-## Serve a dynamic page with Rails
-* Make a webpage for your class with a route, controller file, and view file - take note of the path of information from route to view
-* Navigate to the page you created in the browser
-* Pass a query string parameter into your controller, and render it in the view
-* Add a new Route, controller endpoint, and view that accepts a Route parameter and displays it in the view
-  - For example: '/answers/42'
-
-#### STRETCH:
-* set the dynamic page you created as the home page
-  - Use the route that doesn't require arguments as your home page
-  - set the root url in the router to be the homepage.
-* create at least one piece of data in the controller to be passed to the view
-
--- hint: You can read about routes on the excellent [Rails guides](https://guides.rubyonrails.org/routing.html)
+Now that we know how to pass values into our Rails views, we are on our way to making our views much more dynamic. Next, we'll take a look at using Rails params allows us to get info from a client request into a server response.

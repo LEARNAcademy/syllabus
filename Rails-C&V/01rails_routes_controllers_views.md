@@ -60,7 +60,7 @@ rails generate controller main
 
 If our MainController looks like this:
 *app/controllers/main_controller.rb*:
-```
+```ruby
 class MainController < ApplicationController
   def answers
     render html: "hello" #.html_safe
