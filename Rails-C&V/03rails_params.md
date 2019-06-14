@@ -91,3 +91,19 @@ end
 ```
 Number is: <%= @result_string %>
 ```
+
+## Challenges
+
+The goal of these challenges is to round out your use of controllers, routes, and views with params practice.
+
+Go ahead and create a new Rails app for these stories.
+
+#### Stories
+
+You are making an simple app that performs various logic on the parameters passed in.
+
+- As a user, I can visit a page that takes a number and displays that number cubed
+- As a user, I can visit a page that takes 2 numbers and displays where or not the first number is evenly divisible by the second
+- As a user, I can visit a page that takes in a string and displays how many characters are in the string
+- As a user, I can visit a page that takes a string and displays whether it is a palindrome
+- As a user, I can visit a page that takes a noun, verb, adjective, adverb, and location and displays short, uses them to display a short silly story

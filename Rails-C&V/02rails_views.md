@@ -101,7 +101,9 @@ Now that we know how to pass values into our Rails views, we are on our way to m
 
 ## Challenges
 
-The goal of these challenges are to solidify your routes and controller knowledge and add views on top if it. Go ahead and use your Rails app from the previous exercises.
+The goal of these challenges are to solidify your routes and controller knowledge and add views on top if it. 
+
+Go ahead and create a new Rails app for these stories.
 
 #### Stories: Recommended
 
