@@ -14,6 +14,7 @@ This is your introduction to programming through the Javascript programming lang
 8) [Javascript Objects](./js_beginning/07js_objects.md)
 
 
+
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
@@ -40,6 +41,9 @@ React is a powerful Javascript library used to build more complicated web applic
 8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
+
+[Additional Topics](./react/additonal_topics.md)
+
 
 
 ## Unit Four: Ruby
@@ -84,6 +88,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
+
+[Additional Topis](./Rails-M/addional_topics.md)
+
 ## Unit Seven: Professional Development Week
 
 Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
@@ -124,8 +131,8 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: Authentication
 
-1) [React In Rails](./React_in_Rails_Apartment_App/README.md)
-2) [Devise](./devise-authentication/README.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
+2) [Devise](./React_in_Rails_Apartment_App/02-authorization-and-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
 1) [ActiveStorage](./Rails_ActiveStorage/README.md)

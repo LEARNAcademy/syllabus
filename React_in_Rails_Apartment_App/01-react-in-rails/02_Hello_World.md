@@ -1,5 +1,7 @@
 # React Rails Group Exercise
 
+[![YouTube](http://img.youtube.com/vi/ZkYxPZcISGQ/0.jpg)](https://www.youtube.com/watch?v=ZkYxPZcISGQ)
+
 ## Setup Steps
 
 1) Create a Rails Application

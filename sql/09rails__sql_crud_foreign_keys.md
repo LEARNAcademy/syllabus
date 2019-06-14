@@ -1,11 +1,6 @@
 # SQL in the Terminal
 
-https://www.youtube.com/watch?v=kHwEeimBYEA
-
 [![YouTube](http://img.youtube.com/vi/kHwEeimBYEA/0.jpg)](https://www.youtube.com/watch?v=kHwEeimBYEA)
-]
-
-
 
 ## Starting Off
 
