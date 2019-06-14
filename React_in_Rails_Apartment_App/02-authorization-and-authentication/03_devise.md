@@ -1,3 +1,10 @@
+#### Part 1
+[![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
+
+#### Part 2
+[![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
+
+
 # Adding Devise
 These intstructions were taken from the [Devise Github Repo](https://github.com/plataformatec/devise#getting-started).  Devise is a complicated and powerful piece of software.  You'll want to refer back to this link when you have questions about how it all works.
 
