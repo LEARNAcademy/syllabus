@@ -2,14 +2,16 @@
 
 You may be wondering, how do I send something more complicated to the user. In the previous example, the html that we sent as a response was limited. We were basically sending strings. Thankfully, Rails also makes the process of serving html pretty comprehensive.
 
-Recall that we have a route in 'config/routes.rb' that looks like this:
+Let's add route in 'config/routes.rb' that looks like this:
 ```ruby
 Rails.application.routes.draw do
     get "/answers", to: 'main#answers'
+
+    get "/greeting", to: 'main#greeting' # Our new route
 end
 ```
 
-Let's update our `answers` method to load an html.erb file instead of rendering plain text.
+Then we'll add a ```greeting``` method to our controller.
 
 *main_controller.rb*:
 
@@ -17,19 +19,25 @@ Let's update our `answers` method to load an html.erb file instead of rendering 
 class MainController < ApplicationController
 
   def answers
-    render "answers.html.erb" # Rails magic without this
+    render html: "hello" #.html_safe
   end
 
+  def greeting
+    render "greeting.html.erb"
+  end
 end
 ```
 
-*views/main/answers.html.erb*:
+Now, let's add a folder named after our controller to our views folder and inside of it create the ```greeting.html.erb``` file we referred to in our controller.
+
+
+*views/main/greeting.html.erb*:
 
 ```
-Answer is: something
+Hello!
 ```
 
-Now if we visit `http://localhost:3000/answers/42` Rails renders our `answers.html.erb`.
+Now if we visit `http://localhost:3000/greeting` Rails renders our `greeting.html.erb`.
 
 #### Render View With Ruby Value
 
