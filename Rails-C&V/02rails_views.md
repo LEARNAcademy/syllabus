@@ -80,4 +80,39 @@ Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded rub
 
 Visit `http://localhost:3000/greeting` and see what happens.
 
+## A last note on views
+
+Sometimes you want to tell Rails what you want as your 'landing page' or the page the user sees when they first visit your site. You can do this in the `routes.rb` like so:
+
+*routes.rb*
+
+```ruby
+Rails.application.routes.draw do
+    get "/answers", to: 'main#answers'
+
+    get "/greeting", to: 'main#greeting'
+    root to: "main#greeting"
+end
+```
+
+This tells Rails that when a user calls your app without specifying a route url, it should send them to the `greeting` method of the `main` controller or the '`/greeting`' route.
+
 Now that we know how to pass values into our Rails views, we are on our way to making our views much more dynamic. Next, we'll take a look at using Rails params allows us to get info from a client request into a server response.
+
+## Challenges
+
+The goal of these challenges are to solidify your routes and controller knowledge and add views on top if it. Go ahead and use your Rails app from the previous exercises.
+
+#### Stories: Recommended
+
+You are building an app that puts together you and your partners list of recommended things.
+
+- As a user, I can see a page listing you and your partner's list of recommended places to see in San Diego (or another city of your choosing)
+- As a user, I can see a page listing you and your partner's list of recommended international destinations
+- As a user, I can see a page listing you and your partner's list of recommended films
+- As a user, I can see a page listing you and your partner's list of recommended T.V. shows
+
+### Stretch Challenges
+
+- As a user, I can visit landing page that has links to all you other pages
+- As a user, I can retunr to the landing page from within any of the other pages
