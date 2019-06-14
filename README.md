@@ -14,6 +14,7 @@ This is your introduction to programming through the Javascript programming lang
 8) [Javascript Objects](./js_beginning/07js_objects.md)
 
 
+
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
@@ -41,6 +42,9 @@ React is a powerful Javascript library used to build more complicated web applic
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
 
+[Additional Topics](./react/additonal_topics.md)
+
+
 
 ## Unit Four: Ruby
 
@@ -60,6 +64,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
+<<<<<<< HEAD
 1) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
 2) [Rails Views](./Rails-C&V/02rails_views.md)
 3)  [Rails Params](./Rails-C&V/03rails_params.md)
@@ -71,6 +76,20 @@ Rails is full stack framework built into the Ruby programming language. Here you
 9) [Joins](./sql/08rails_sql_joins.md)
 10) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
 11) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
+=======
+1) [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
+2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+3) [Rails Params](./Rails-C&V/02rails_params.md)
+4) [Rails Views](./Rails-C&V/03rails_views.md)
+5) [Rails Cookies](./Rails-C&V/04rails_cookies.md)
+6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+7) [Rails Generate](./Rails-C&V/06rails_generate.md)
+8) [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
+9) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+10) [Joins](./sql/08rails_sql_joins.md)
+11) [SQL CRUD (in the Terminal) & Foreign Keys](./sql/09rails__sql_crud_foreign_keys.md)
+12) [Foreign Keys and Relations](./sql/10_sql_foreign_keys_and_relations.md)
+>>>>>>> master
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
@@ -83,6 +102,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+
+
+[Additional Topis](./Rails-M/addional_topics.md)
 
 ## Unit Seven: Professional Development Week
 
@@ -124,8 +146,8 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: Authentication
 
-1) [React In Rails](./React_in_Rails_Apartment_App/README.md)
-2) [Devise](./devise-authentication/README.md)
+1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
+2) [Devise](./React_in_Rails_Apartment_App/02-authorization-and-authentication/README.md)
 
 ## Unit Ten: Capstone Project, Week 1
 1) [ActiveStorage](./Rails_ActiveStorage/README.md)
