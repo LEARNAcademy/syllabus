@@ -13,6 +13,11 @@ This is your introduction to programming through the Javascript programming lang
 7) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
 8) [Javascript Objects](./js_beginning/07js_objects.md)
 
+#### Additional Topics:
+
+- [Introduction to git and Github](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
+
+
 
 
 ## Unit Two: Intermediate Javascript
