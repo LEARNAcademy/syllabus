@@ -190,28 +190,33 @@ Now, let's add the flash message to the layout, right above the page content:
 ```
 If we check a password, we can see our flash message. And if we refresh the page, it disappears.
 
-# Challenge
-Check User ID and Password on a Website
-* Create a route: /check_password to call a method called check in PasswordController.
-* Create a controller: PasswordController with a method called check.
-* Create a view for the check method in PasswordController called check.html.erb.
+# Challenges
 
-In a browser use /check_password?userid=joe&password=letmein to check the credentials.
+The goal of these challenges is to get practice coding up forms to send information to your controllers and send information back out to the user based on the form information received. 
 
-##### Inside the method:
-* Store the user ID and password in instance variables
-* Do some checks for whether they are valid; if they are, return with a message 'Credentials are acceptable', otherwise print 'Try again.'
+### Forms and Params Stories
 
-Test the method with the URL above.
+- As a user, I can visit a page at `/quadruple`
+- As a user, when I submit a number to `/quadruple` I can see that number quadrupled on the page
+- As a user I can visit a `/multiply_by` page
+- As a user, when I submit two numbers to `/multiply_by` I can see the result of the two numbers multiplied on the page
 
-##### In the view:
-* Show the result String at the top (if there is any)
-* Create a form to which uses method GET to the check_password route, and contains two fields with the names of the parameters, and a submit button.
+### User Forms Stories
 
-Test that the webpage works the same as using the URL above.
-
-# Challenge
+- As a user, I can visit a 'Subscribe' page with a `name` and `email` input
+- As a user, when I fill out my `name` and `email` and click 'Subscribe', I see a thank you message like this: 'Thanks, **name**! You are subscribed with this email: **email**!'
+- As a user, I can go to a 'Sign Up' page
+- As a user, when I 'Sign Up' with a `user_name`, `email`, `password`, and `password` confirmation, I am greeted by my `user_name` on the same page
+- As a user, I can go to a 'Add Profile' page
+- As a user, when I submit my profile with a `first_name`, `last_name`, `blurb`, and `hobbies`, I can see my profile information on the same page
+- As a user, I can visit a 'Sign In' page
+- As a user, if 'Sign In' with a user_id that is at least 6 characters along and a password that is not the same as my user_id, I am greeted by my `user_id`: 'Welcome, **user_id**!
+  - **Stretch Challenge**
+    - Add some other validations into your 'Sign In' (ie, no numbers in a user_id/special character & number required in password)
+## Stretch Challenge
 
 # Rails Hi/Lo with Forms Challenge
+
+For this challenge, have a look at [Rails Cookies](./04rails_cookies.md) to see how cookies can help you store your secret number.
 
  * Create a form which uses the action: GET to the `try` route, and contains one field with the guess parameters, and a submit button.
