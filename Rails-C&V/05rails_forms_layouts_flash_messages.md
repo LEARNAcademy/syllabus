@@ -11,7 +11,7 @@ Let's start with a simple setup.
 
 config/routes.rb
 
-```
+```ruby
 Rails.application.routes.draw do
   get '/answers' => 'main#answers'
 end
@@ -20,7 +20,8 @@ end
 ### Controller
 
 app/controllers/main_controller.rb:
-```
+
+```ruby
 class MainController < ApplicationController
 
   def answers
@@ -40,7 +41,8 @@ At this point the URL should work: /answers?number=43
 ## Using a form to enter data instead of URL
 
 views/main/answers.html.erb:
-```
+
+```ruby
 Number was: <%= @result_string %>
 <hr/>
 <form action="answers" method="get">
@@ -55,7 +57,8 @@ Just as if we had entered it ourselves.
 ## Adding Data Validation
 
 views/main/answers.html.erb:
-```
+
+```ruby
 Number was: <%= @result_string %>
 <hr/>
 <form action="answers" method="get">
@@ -68,7 +71,8 @@ Number was: <%= @result_string %>
 Adding name to form and cookies
 
 views/main/answers.html.erb:
-```
+
+```ruby
 <% if !@user_name.nil? %>
   Hello <%= @user_name %>!
 <% end %>
@@ -86,14 +90,16 @@ Number: <%= @result_string %>
 ```
 
 app/controllers/main_controller.rb:
-```
+
+```ruby
 class MainController < ApplicationController
 
   def answers
     if params.has_key?(:user_name) && !params[:user_name].strip.empty?
-      cookies[:name] = params[:user_name]
+      @user_name = params[:user_name]
+    else
+      @user_name = "Guest"
     end
-    @user_name = cookies[:name]
 
     if params[:number].to_i.even?
       @result_string = "Even"
@@ -153,7 +159,7 @@ Here's how it works: you set a flash message in the controller. The flash messag
 Let's add a flash to the Password Checker:
 
 *app/controllers/password_controller.rb*
-```
+```ruby
 class PasswordController < ApplicationController
   def check_credentials
     if valid(params[:userid], params[:password]
@@ -172,7 +178,7 @@ The flash acts very much like a hash, and the two keys you're allowed to set are
 Now, let's add the flash message to the layout, right above the page content:
 
 *app/views/layouts/application.html.erb*
-```
+```erb
 <body>
 
   <%= flash[:alert] %>
@@ -194,7 +200,7 @@ In a browser use /check_password?userid=joe&password=letmein to check the creden
 
 ##### Inside the method:
 * Store the user ID and password in instance variables
-* Do some checks for whether they are valid; if they are, return with a meesage 'Credentials are acceptable', otherwise print 'Try again.'
+* Do some checks for whether they are valid; if they are, return with a message 'Credentials are acceptable', otherwise print 'Try again.'
 
 Test the method with the URL above.
 
