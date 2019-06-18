@@ -9,7 +9,7 @@ Let's start with a simple setup.
 
 ### Route
 
-config/routes.rb
+*config/routes.rb*
 
 ```ruby
 Rails.application.routes.draw do
@@ -19,7 +19,7 @@ end
 
 ### Controller
 
-app/controllers/main_controller.rb:
+*app/controllers/main_controller.rb*
 
 ```ruby
 class MainController < ApplicationController
@@ -40,9 +40,9 @@ At this point the URL should work: /answers?number=43
 
 ## Using a form to enter data instead of URL
 
-views/main/answers.html.erb:
+*views/main/answers.html.erb*
 
-```ruby
+```erb
 Number was: <%= @result_string %>
 <hr/>
 <form action="answers" method="get">
@@ -56,9 +56,9 @@ Just as if we had entered it ourselves.
 
 ## Adding Data Validation
 
-views/main/answers.html.erb:
+*views/main/answers.html.erb*
 
-```ruby
+```erb
 Number was: <%= @result_string %>
 <hr/>
 <form action="answers" method="get">
@@ -70,9 +70,9 @@ Number was: <%= @result_string %>
 ## More data in a form
 Adding name to form and cookies
 
-views/main/answers.html.erb:
+*views/main/answers.html.erb*
 
-```ruby
+```erb
 <% if !@user_name.nil? %>
   Hello <%= @user_name %>!
 <% end %>
@@ -89,7 +89,7 @@ Number: <%= @result_string %>
 </form>
 ```
 
-app/controllers/main_controller.rb:
+*app/controllers/main_controller.rb*
 
 ```ruby
 class MainController < ApplicationController
@@ -113,43 +113,59 @@ end
 ```
 
 
-<h1>Layout</h1>
-<p>Have you noticed how your views actually contain a valid HTML document, but you never write the <code class="prettyprint prettyprinted" style=""><span class="tag">&lt;body&gt;</span></code> and <code class="prettyprint prettyprinted" style=""><span class="tag">&lt;title&gt;</span></code> and other tags like that yourself? That's because they're in the <code class="prettyprint prettyprinted" style=""><span class="pln">app</span><span class="pun">/</span><span class="pln">views</span><span class="pun">/</span><span class="pln">layouts</span><span class="pun">/</span><span class="pln">application</span><span class="pun">.</span><span class="pln">html</span><span class="pun">.</span><span class="pln">erb</span></code> file, which looks something like this:</p>
+## Layout
 
-<div class="filename">app/views/layouts/application.html.erb</div>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;!</span><span class="no">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="no">Wikipages</span><span class="o">&lt;</span><span class="sr">/title&gt;</span>
-<span class="sr">  &lt;%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" =&gt; true %&gt;</span>
-<span class="sr">  &lt;%= javascript_include_tag "application", "data-turbolinks-track" =&gt; true %&gt;</span>
-<span class="sr">  &lt;%= csrf_meta_tags %&gt;</span>
-<span class="sr">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+Have you noticed how your views actually contain a valid HTML document, but you never write the `<body>` and `<title>` and other tags like that yourself? That's because they're in the app/views/layouts/application.html.erb file, which looks something like this:
 
-  <span class="o">&lt;%=</span> <span class="k">yield</span> <span class="sx">%&gt;</span>
+*app/views/layouts/application.html.erb*
 
-<span class="sx">&lt;/body&gt;</span>
-<span class="o">&lt;</span><span class="sr">/html&gt;</span></code></pre></div>
+```erb
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wikipages</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
 
-<p>The <code class="prettyprint prettyprinted" style=""><span class="pun">&lt;%=</span><span class="pln"> </span><span class="kwd">yield</span><span class="pln"> %&gt;</span></code> bit of code is where your views are inserted. If you ever want to change something on all of your pages - such as adding a logo or nav bar - this layout file is the place to do it.</p>
-<p>If we want to make every page have a different <code class="prettyprint prettyprinted" style=""><span class="tag">&lt;title&gt;</span></code> we need a way to set it in each view, and then retrieve it in the layout. Here's how to set it in a view:</p>
-<div class="filename">app/views/contacts/show.html.erb</div>
-<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;%</span> <span class="n">content_for</span><span class="p">(</span><span class="ss">:title</span><span class="p">,</span> <span class="s2">"New contact | Wikipages"</span><span class="p">)</span> <span class="cp">%&gt;</span>
 
-<span class="nt">&lt;h1&gt;</span>New contact<span class="nt">&lt;/h1&gt;</span>
-...</code></pre></div>
+</body>
+</html>
+```
+The <%= yield %> bit of code is where your views are inserted. If you ever want to change something on all of your pages - such as adding a logo or nav bar - this layout file is the place to do it.
+
+If we want to make every page have a different `<title>` we need a way to set it in each view, and then retrieve it in the layout. Here's how to set it in a view:
+
+*app/views/contacts/show.html.erb*
+
+```erb
+<% content_for(:title, "New contact | Wikipages") %>
+<h1>New contact</h1>
+...
+```
 
 We have seen code wrapped in `<%= %>` before.  That means it is Ruby code that we want to be printed to the page.  When you want to execute code in the view without printing the output, all you need to do is not use the "=" sign like in our `<% %>`-wrapped code snippet above.
-  <p>Then, here's how to retrieve it in the layout.</p>
-  <div class="filename">app/views/layouts/application.html.erb</div>
-<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="nt">&lt;title&gt;</span><span class="cp">&lt;%=</span> <span class="k">yield</span><span class="p">(</span><span class="ss">:title</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="nt">&lt;/title&gt;</span></code></pre></div>
-  <p>When your layouts get more complex, such as with nav bars that change depending on what page you're on, you can write longer <code class="prettyprint prettyprinted" style=""><span class="pln">content_for</span></code> 's like this:</p>
-<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;%</span> <span class="n">content_for</span><span class="p">(</span><span class="ss">:navbar</span><span class="p">)</span> <span class="k">do</span> <span class="cp">%&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"something/else"</span><span class="nt">&gt;</span>Something else<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"etc"</span><span class="nt">&gt;</span>Etc.<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></div>
+
+Then, here's how to retrieve it in the layout.
+
+*app/views/layouts/application.html.erb*
+
+```html
+<title><%= yield(:title) %></title>
+```
+
+When your layouts get more complex, such as with nav bars that change depending on what page you're on, you can write longer `content_for's` like this:
+
+```erb
+<% content_for(:navbar) do %>
+  <li><a href="/">Home</a></li>
+  <li><a href="something/else">Something else</a></li>
+  <li><a href="etc">Etc.</a></li>
+<% end %>
+```
 
 #### The Flash
 You might be wishing you could add a message to the user after something has been checked, letting them know that the check was successfully made. Rails provides a tool for doing this called flash messages. (This has nothing to do with the Adobe Flash, by the way.)
@@ -159,6 +175,7 @@ Here's how it works: you set a flash message in the controller. The flash messag
 Let's add a flash to the Password Checker:
 
 *app/controllers/password_controller.rb*
+
 ```ruby
 class PasswordController < ApplicationController
   def check_credentials
@@ -178,6 +195,7 @@ The flash acts very much like a hash, and the two keys you're allowed to set are
 Now, let's add the flash message to the layout, right above the page content:
 
 *app/views/layouts/application.html.erb*
+
 ```erb
 <body>
 
