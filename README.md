@@ -81,28 +81,25 @@ Rails is full stack framework built into the Ruby programming language. Here you
 9) [Intro to Postgres](./sql/07rails_intro_postgres.md)
 10) [Joins](./sql/08rails_sql_joins.md)
 11) [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
-12) [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
-13) [Challenge: Active Record Task List](./Rails-M/04rails_naming_conventions.md)
-14) [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-15) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
 
-Additional Topics:
+## Unit Six: Active Record and Full Stack Ruby on Rails
 
-[Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
-
-## Unit Six: Full Stack Ruby on Rails
-
-
+1) [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
+2) [Challenge: Active Record Task List](./Rails-M/04rails_naming_conventions.md)
+3) [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
+4) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
 3) [Challenge: Active Record Task List](./Rails-M/03rails_active_record_tasklist.md)
-4) [Rails Naming Conventions](./Rails-M/04rails_naming_conventions.md)
-5) [SQL vs. Active Record](./Rails-M/05rails_sql_vs_activerecord.md)
-6) [Rails Troubleshooting](./Rails-M/06rails_troubleshooting.md)
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 
-[Additional Topis](./Rails-M/addional_topics.md)
+Additional Topics:
+- [Rails Naming Conventions](./Rails-M/04rails_naming_conventions.md)
+- [SQL vs. Active Record](./Rails-M/05rails_sql_vs_activerecord.md)
+- [Rails Troubleshooting](./Rails-M/06rails_troubleshooting.md)
+- [Migrations: Adding a Column](./Rails-M/migrations_adding_column.md)
+- [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
 
 ## Unit Seven: Professional Development Week
 
