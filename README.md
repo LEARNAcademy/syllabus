@@ -85,7 +85,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
 1) [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
-2) [Challenge: Active Record Task List](./Rails-M/04rails_naming_conventions.md)
+2) [Challenge: Active Record Tasks](./Rails-M/03rails_active_record_tasks.md)
 3) [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
 4) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
 3) [Challenge: Active Record Task List](./Rails-M/03rails_active_record_tasklist.md)
@@ -95,10 +95,10 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 
 Additional Topics:
-- [Rails Naming Conventions](./Rails-M/04rails_naming_conventions.md)
-- [SQL vs. Active Record](./Rails-M/05rails_sql_vs_activerecord.md)
-- [Rails Troubleshooting](./Rails-M/06rails_troubleshooting.md)
-- [Migrations: Adding a Column](./Rails-M/migrations_adding_column.md)
+- [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
+- [SQL vs. Active Record](./Rails-M/additional-topics/05rails_sql_vs_activerecord.md)
+- [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
+- [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
 
 ## Unit Seven: Professional Development Week
