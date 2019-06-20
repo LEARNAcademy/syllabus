@@ -50,6 +50,8 @@ React is a powerful Javascript library used to build more complicated web applic
 
 [Additional Topics](./react/additonal_topics.md)
 
+[React Component Lifecycle](./react/react_component_lifecycle.md)
+
 
 
 ## Unit Four: Ruby
@@ -72,15 +74,16 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1) [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
 2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-3) [Rails Params](./Rails-C&V/02rails_params.md)
-4) [Rails Views](./Rails-C&V/03rails_views.md)
+3) [Rails Views](./Rails-C&V/02rails_views.md)
+4)  [Rails Params](./Rails-C&V/03rails_params.md)
 5) [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
 7) [Rails Generate](./Rails-C&V/06rails_generate.md)
 8) [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-9) [Intro to Postgres](./sql/07rails_intro_postgres.md)
-10) [Joins](./sql/08rails_sql_joins.md)
-11) [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+9) [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
+10) [Intro to Postgres](./sql/07rails_intro_postgres.md)
+11) [Joins](./sql/08rails_sql_joins.md)
+12) [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
@@ -88,7 +91,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 2) [Challenge: Active Record Tasks](./Rails-M/03rails_active_record_tasks.md)
 3) [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
 4) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
-3) [Challenge: Active Record Task List](./Rails-M/03rails_active_record_tasklist.md)
+3) [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
