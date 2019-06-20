@@ -1,6 +1,6 @@
 # Using Parameters in Rails
 
-Parameters are how you Rails server receives information from the client. That said, you will be working with params a lot when programming your Rails servers.
+Parameters are how your Rails server receives information from the client. That said, you will be working with params a lot when programming your Rails servers.
 
 Let's take a look at a couple of ways to start using Rails params.
 
@@ -106,4 +106,4 @@ You are making an simple app that performs various logic on the parameters passe
 - As a user, I can visit a page that takes 2 numbers and displays where or not the first number is evenly divisible by the second
 - As a user, I can visit a page that takes in a string and displays how many characters are in the string
 - As a user, I can visit a page that takes a string and displays whether it is a palindrome
-- As a user, I can visit a page that takes a noun, verb, adjective, adverb, and location and displays short, uses them to display a short silly story
+- As a user, I can visit a page that takes a noun, verb, adjective, adverb, and  uses them to display a short silly story

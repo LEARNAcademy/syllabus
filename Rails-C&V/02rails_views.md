@@ -116,5 +116,5 @@ You are building an app that puts together you and your partners list of recomme
 
 ### Stretch Challenges
 
-- As a user, I can visit landing page that has links to all you other pages
+- As a user, I can visit landing page that has links to all your other pages
 - As a user, I can return to the landing page from within any of the other pages
