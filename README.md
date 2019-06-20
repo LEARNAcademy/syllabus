@@ -50,6 +50,8 @@ React is a powerful Javascript library used to build more complicated web applic
 
 [Additional Topics](./react/additonal_topics.md)
 
+[React Component Lifecycle](./react/react_component_lifecycle.md)
+
 
 
 ## Unit Four: Ruby
