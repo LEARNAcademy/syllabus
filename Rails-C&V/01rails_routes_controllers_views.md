@@ -110,7 +110,7 @@ Rails.application.routes.draw do
 Now, I need to add a ```mypage``` method to my ```main``` controller that will define how to respond:
 
 *app/controllers/main_controller.rb*:
-```
+```ruby
 class MainController < ApplicationController
   def answers
     render html: "hello" #.html_safe
