@@ -46,8 +46,11 @@ React is a powerful Javascript library used to build more complicated web applic
 8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
+11) [Challenge: React Battleship](./react/11react_battleship.md)
 
 [Additional Topics](./react/additonal_topics.md)
+
+[React Component Lifecycle](./react/react_component_lifecycle.md)
 
 
 
