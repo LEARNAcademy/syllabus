@@ -74,8 +74,8 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1) [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
 2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-3) [Rails Params](./Rails-C&V/02rails_params.md)
-4) [Rails Views](./Rails-C&V/03rails_views.md)
+3) [Rails Views](./Rails-C&V/02rails_views.md)
+4)  [Rails Params](./Rails-C&V/03rails_params.md)
 5) [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
 7) [Rails Generate](./Rails-C&V/06rails_generate.md)
