@@ -13,8 +13,4 @@ They are also unavoidable.  Some of our components are going to be smart.  It's 
 ![smart vs dumb components](./assets/smart-vs-dumb-components.jpg)
 
 
-## Props tested with Jest
 
-[![YouTube](http://img.youtube.com/vi/74PxJh45RuU/0.jpg)](https://www.youtube.com/watch?v=74PxJh45RuU)
-
-[How we test prop methods with Jest](https://github.com/LEARNAcademy/props-review-with-jest)
