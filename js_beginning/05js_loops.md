@@ -1,6 +1,10 @@
 
 ## Javascript Loops
 
+[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+
+
+
 Javascript has many types of loops including...
 
 * [For](https://www.w3schools.com/js/js_loop_for.asp)
