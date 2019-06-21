@@ -48,7 +48,7 @@ React is a powerful Javascript library used to build more complicated web applic
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
 11) [Challenge: React Battleship](./react/11react_battleship.md)
 
-Additional Topics
+**Additional Topics**:
 
 - [Smart and Dumb Components](./react/smart_and_dumb_components.md)
 - [Testing Props with Jest](./react/testing_props_with_jest.md)
