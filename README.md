@@ -108,9 +108,7 @@ Additional Topics:
 
 Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
 
-1) [Intro to Professional Development Week](./PD-Week/Intro-to-Professional-Dev-Week-2019A.pdf)
-2) [Tech Talks](./PD-Week/Tech-Talks.pdf)
-3) [Elevator Pitch](./PD-Week/The-Elevator-Pitch-Presentation.pdf)
+- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
