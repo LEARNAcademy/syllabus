@@ -1,5 +1,10 @@
 ## Functions, Loops and Arrays (Oh My!)
 
+[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+
+
+
+
 In some cases, we will need to build functions that utilize all of these topics.  Let's put all these concepts together with the following exercise.
 
 1.  Create a function that takes in an array and returns a new array with all numbers multiplied by 5.

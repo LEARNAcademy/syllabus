@@ -1,6 +1,12 @@
 # JavaScript Decision Structures
 
+[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+
+
+
 ## Javascript Decisions
+
+
 
 Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
 

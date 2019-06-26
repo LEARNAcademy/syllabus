@@ -1,4 +1,7 @@
 # React and State
+[![YouTube](http://img.youtube.com/vi/5xFUQd3wuT4/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+
+
 
 By now we know that everything in react is a component and that **State** and **Props** are two key concepts of this front-end javascript library.
 
