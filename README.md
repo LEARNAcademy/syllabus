@@ -48,11 +48,11 @@ React is a powerful Javascript library used to build more complicated web applic
 10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
 11) [Challenge: React Battleship](./react/11react_battleship.md)
 
-[Additional Topics](./react/additonal_topics.md)
+**Additional Topics**:
 
-[React Component Lifecycle](./react/react_component_lifecycle.md)
-
-
+- [Smart and Dumb Components](./react/smart_and_dumb_components.md)
+- [Testing Props with Jest](./react/testing_props_with_jest.md)
+- [React Component Lifecycle](./react/react_component_lifecycle.md)
 
 ## Unit Four: Ruby
 
@@ -108,9 +108,7 @@ Additional Topics:
 
 Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
 
-1) [Intro to Professional Development Week](./PD-Week/Intro-to-Professional-Dev-Week-2019A.pdf)
-2) [Tech Talks](./PD-Week/Tech-Talks.pdf)
-3) [Elevator Pitch](./PD-Week/The-Elevator-Pitch-Presentation.pdf)
+- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
