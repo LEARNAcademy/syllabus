@@ -1,5 +1,7 @@
 # BEHAVIOR DRIVEN DEVELOPMENT PROCESS
 
+[![YouTube](http://img.youtube.com/vi/NhhzRtJC8bg/0.jpg)](https://www.youtube.com/watch?v=NhhzRtJC8bg)
+
 ### [Video of BDD with Rspec and Ruby](https://player.vimeo.com/video/168104193)
 
 The process to follow is:
@@ -135,7 +137,7 @@ We expect car.speed to be a number. We use the Numeric class in our test because
     # A weak expectation
     expect(a_car.speed).to be > 0
 
-    # Simple way to test    
+    # Simple way to test
     expect(a_car.speed).to be 42
 
     # Alternative way to test
