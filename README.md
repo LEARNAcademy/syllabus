@@ -76,7 +76,6 @@ Rails is full stack framework built into the Ruby programming language. Here you
 2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
 3) [Rails Views](./Rails-C&V/02rails_views.md)
 4)  [Rails Params](./Rails-C&V/03rails_params.md)
-5) [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
 7) [Rails Generate](./Rails-C&V/06rails_generate.md)
 8) [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
@@ -84,6 +83,10 @@ Rails is full stack framework built into the Ruby programming language. Here you
 10) [Intro to Postgres](./sql/07rails_intro_postgres.md)
 11) [Joins](./sql/08rails_sql_joins.md)
 12) [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+
+Additional Topics:
+
+[Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
 
