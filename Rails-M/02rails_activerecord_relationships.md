@@ -106,5 +106,5 @@ Check that everything is in the database from `psql`.
 
 ### Stretch Challenge
 
-* Using `psql`, add a credit limit to each card
+* Add a credit limit to each card
 * Using Active Record in `rails console`, find the total credit extended to the owner with two credit cards
