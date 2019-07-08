@@ -2,7 +2,10 @@
 
 As part of managing form parameters in Rails, versions of Rails 4+ also have a feature known as "strong parameters" or "whitelisting". It is a way for us to manage exactly what goes into creating new object instances, and helps us keep unwanted information -- usually from malicious hackers -- out of the database.
 
+## Strong params in the controller
+
 A controller's strong parameters will be all the way down at the bottom of the file and will look something like this:
+
 
 controllers/contacts_controller.rb
 ```ruby
@@ -42,6 +45,28 @@ def create
 	...
 end
 ```
+
+## Strong params in the form
+
+Now that strong params are established in the controller, we need to format the params into the above hash structure in order for Rails to accept our params.
+
+```erb
+<form action="create" action="POST">
+  <label for="name">Name:</label>
+  <input id="name" name="contact[name]">
+  <label for="phone">Phone:</label>
+  <input id="phone" name="contact[phone]">
+  <label for="email">Email:</label>
+  <input id="email" name="contact[email]">
+  <input type="submit" value="Submit Contact">
+</form>
+```
+
+Notice that it's the name attribute of our inputs that are different. Here we are first giving essentially the name of our class and passing it the name of the column in square brackets.
+
+Now if we use the form, we should see a successful create of our contact.
+
+## Permitting parameters
 
 Most of the time, strong parameters are a feature we don't have to think about. If we want to add a new attribute to Contact, however, it's important to remember to add it to the strong parameters list. Otherwise, our form for creating new Contacts will silently drop the information we've told it to ignore. For example, if we created a new column for storing fax numbers without updating our `contact_params` method, the response in the Rails server would look like this:
 
