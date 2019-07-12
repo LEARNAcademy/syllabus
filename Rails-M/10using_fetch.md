@@ -1,5 +1,7 @@
 # Getting Data from Backend to the Frontend
 
+[![YouTube](http://img.youtube.com/vi/8VuPD4qdvRQ/0.jpg)](https://www.youtube.com/watch?v=8VuPD4qdvRQ)]
+
 Now, switching gears back over to our frontend, let's look at how we consume data from an API in a React application.
 
 The frontend is going to ask the rails API for information, then rails will use ActiveRecord to get that information out of the database and hand it back to the frontend as json, just like we've been doing in Postman.
