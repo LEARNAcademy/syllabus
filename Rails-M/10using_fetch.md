@@ -9,7 +9,7 @@ We need to handle one more piece of setup to allow a request from one applicatio
 
 From the terminal we install the 'rails-cors' gem:
 ```
-$ bundle add rails-cors
+$ bundle add rack-cors
 ```
 
 Then we add this file to allow API connections:
