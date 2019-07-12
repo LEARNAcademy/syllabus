@@ -85,3 +85,43 @@ class App extends React.Component {
 
 export default App;
 ```
+
+
+## About fetch
+Fetch is promised based, which makes sense when you think about what is actually happening with it.  It is fetching data from the server, and that takes some time to go round trip.  While that request is out, the user's browser is free to do whatever else it needs, and when the data is returned, the promise is resolved.
+
+Let's look at each part of the fetch:
+
+```javascript
+  fetch("http://<your cloud 9 IP address or localhost>:8080/spirit_animals")
+```
+This is the part that sends out the actual request.  The response will be a promise that will eventually resolve with a response object, which we handle next:
+
+```javascript
+  .then((resp)=>{
+    return resp.json()
+  })
+```
+
+Here we handle the response object, which has several functions available on it that themselves return promises.  There are many great resources out there talking about promises, like [this one from Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).  You may want to read up on all of the other methods available on a promise.
+
+With the json response from our request, we're ready to update state and rerender our component.  This is one way:
+
+```javascript
+    .then((animals)=>{
+      this.setState({ spiritAnimals: animals })
+    })
+```
+
+Finally, we want to make sure and handle any errors in the transport of our fetch request.  We can do that with a catch section.  This will be called when things go wrong:
+
+```javascript
+    .catch((error)=>{
+      this.setState({ error: `Sorry, there was a problem.  ${error.message}`})
+    })
+```
+
+With the fetch in place, our component is able to recall information from our webserver on page load, and display it to the user.
+
+## About the other verbs
+We just looked at a GET request.  You may be wondering about the other CRUD verbs like POST, PUT/PATCH, and DELETE.  Fetch can handle those too, and we'll be taking a closer look at them in upcomming projects.  If you are curios now, check the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) for all the details.
