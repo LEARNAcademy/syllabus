@@ -110,7 +110,7 @@ You have been tasked with creating an application to allow store owners to gener
 
 - As a store owner,  I need to generate customer accounts that require a first name, last name, email, phone number
 - As a store owner, I need customer emails to be unique
-- As a store owner, I need to generate orders that require belong to a customer
+- As a store owner, I need to generate orders that belong to a customer
 - As a store owner, I need each order to have a product name and quantity
 
 - As a store owner, I see a new customer form

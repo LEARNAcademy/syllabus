@@ -6,29 +6,29 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 ### The API Stories
 
 
-- **Story**:  As the API I can create an animal and save it in the database.
+- **Story**:  As the consumer of the API I can create an animal and save it in the database.
 An animal has the following information: common name, latin name, kingdom (mammal, insect, etc.).
 
-- **Story**:  As the API I can list all animals in a database.
+- **Story**:  As the consumer of the API I can list all animals in a database.
 
-- **Story**:  As the API I can update an animal in the database.
+- **Story**:  As the consumer of the API I can update an animal in the database.
 
-- **Story**:  As the API I can destroy a animal in the database.
+- **Story**:  As the consumer of the API I can destroy a animal in the database.
 
-- **Story**:  As the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
+- **Story**:  As the consumer of the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
 
  - *Hint*:   An animal has_many sightings.
 
-- **Story**:  As the API I can update an animal sighting in the database.
+- **Story**:  As the consumer of the API I can update an animal sighting in the database.
 
-- **Story**:  As the API I can destroy an animal sighting in the database.
+- **Story**:  As the consumer of the API I can destroy an animal sighting in the database.
 
-- **Story**:  As the API, when I view a specific animal, I can also see a list sightings of that animal.
+- **Story**:  As the consumer of the API, when I view a specific animal, I can also see a list sightings of that animal.
 
 
 ## Stretch Goal
 
-- **Story**:  As the API, I can run a report to list all sightings during a given time period.
+- **Story**:  As the consumer of the API, I can run a report to list all sightings during a given time period.
 
 
 - Hint: Your controller can look something like this:
@@ -43,6 +43,26 @@ end
 ```
 
 Remember to add the parameter names to the strong parameter whitelist.
+
+## Super Stretch Goals
+**Note:  All of these stories should include the proper RSPEC model specs, and the controllers should be tested using Controller specs.
+
+- **Story**: As the consumer of the API, I want to see validation errors if a sighting doesn't include: latitude, longitude, or a date.
+- **Story**: As the consumer of the API, I want to see validation errors if an animal doesn't include a common name, or a latin name.
+- **Story**: As the consumer of the API, I want to see a validation error if the animals latin name matches exactly the common name.
+- **Story**: As the consumer of the API, I want to see a validation error if the animals latin name or common name are not unique.
+- **Story**: As the consumer, I want to see a status code of 422 when a post request can not be completed because of validation errors.
+
+### Spec documentation
+* [Controller Specs](https://relishapp.com/rspec/rspec-rails/docs/controller-specs)
+* [Model Specs](https://relishapp.com/rspec/rspec-rails/docs/model-specs)
+
+## Super duper Stretch Goals
+- **Story**: As the consumer of the API, I can submit sighting data along with new animals in 1 api call
+	- Look into ```accepts_nested_attributes_for```
+
+### Errors in an API documentation
+* [rebased](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
 
 
 ## A note about Cloud 9 and making your app available to Postman
