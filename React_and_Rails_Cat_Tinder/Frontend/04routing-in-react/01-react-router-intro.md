@@ -1,5 +1,8 @@
+GqNurNBKPAw
 # Adding pages to a React Application
 
+[![YouTube](http://img.youtube.com/vi/GqNurNBKPAw/0.jpg)](https://www.youtube.com/watch?v=GqNurNBKPAw)
+]
 Up until this point, we've worked with React apps that only have one page, and most of the code we've written all went in App.js.  Now we'd like to have an app that has a few different pages of content.  Even for a very basic website, we'd like to have a home page, an 'about us' page, and a few detail pages holding content for whatever our site is about.
 
 We could create all of those pages in one file, but it would get hard to manage pretty quickly.  Instead, we want to keep each page level component in its own file, import them into App.js, and then use a router to load and unload them based on user actions.  First, lets look at a decent structure for our applicaiton.  Note that there are no hard and fast rules for structure in a React App, but simplier is better, so we'll start as simple as we can.
