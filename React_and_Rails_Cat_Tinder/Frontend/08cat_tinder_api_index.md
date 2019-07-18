@@ -7,7 +7,7 @@ The frontend is going to ask the rails API for information, then rails will use 
 To do this, we are going to put all of our "calls" to the API in a new folder in our react app.
 
 #### Cloud 9 users
-Be sure and review the [instructions](../Rails-M/additional-topics/07rails_cloud9_access.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker and Postman.
+Be sure and review the [instructions](../../Rails-M/additional-topics/07rails_cloud9_access.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker and Postman.
 
 ## Using Fetch to get our data
 
