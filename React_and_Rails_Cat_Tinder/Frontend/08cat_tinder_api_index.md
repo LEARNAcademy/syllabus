@@ -6,6 +6,11 @@ The frontend is going to ask the rails API for information, then rails will use 
 
 To do this, we are going to put all of our "calls" to the API in a new folder in our react app.
 
+#### Cloud 9 users
+Be sure and review the [instructions](../Rails-M/additional-topics/07rails_cloud9_access.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker and Postman.
+
+## Using Fetch to get our data
+
 Add a new folder: ``` src/api ```
 
 Inside that folder, add a new file: ``` index.js ```
@@ -14,6 +19,7 @@ Copy and paste this code into ```index.js```, read the code and comments.
 
 ```javascript
 // the address of our rails backend, saved as a constant value, because we never want to accidentally change it
+// Cloud9 users: This will be your IP address found under the 'Share' link
 const BASE = 'http://localhost:3000'
 
 let getCats = function() {
@@ -32,7 +38,7 @@ export  {
 }
 ```
 
-We are using the JavaScript Fetch API as the intermediary that carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).  
+We are using the JavaScript Fetch API as the intermediary that carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).
 
 Notice that we have wrapped the fetch call in another function called getCats. This is to give us control over WHEN the call runs.
 
