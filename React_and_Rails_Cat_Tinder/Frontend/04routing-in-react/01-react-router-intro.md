@@ -5,9 +5,6 @@ Up until this point, we've worked with React apps that only have one page, and m
 We could create all of those pages in one file, but it would get hard to manage pretty quickly.  Instead, we want to keep each page level component in its own file, import them into App.js, and then use a router to load and unload them based on user actions.  First, lets look at a decent structure for our applicaiton.  Note that there are no hard and fast rules for structure in a React App, but simplier is better, so we'll start as simple as we can.
 
 ## React Project Structure
-```bash
-tree src
-```
 ```result
 : src
 : ├── App.css
@@ -24,9 +21,6 @@ tree src
 You can see from above that we've added a "pages" directory to hold each of the pages we're about to create.  Each file in "pages" is a React component that we'll import into "App.js" and use in our router.
 
 Here's the code for the Home component.
-```bash
-cat src/pages/Tomato.js
-```
 ```javascript
 : import React, { Component } from 'react'
 : import ReactDOM from 'react-dom'
@@ -114,9 +108,6 @@ cat src/App.js
 
 Have a look at what we're importing into App.js
 
-```bash
-cat -n src/App.js | sed '1,15!d'
-```
 ```javascript
 :      1	import React, { Component } from "react";
 :      2	import ReactDOM from 'react-dom'
@@ -143,9 +134,6 @@ cat -n src/App.js | sed '1,15!d'
 ### Rendering the Router
 Next lets take a look at how to render the Router, and embedded Routes within it.  Here's a simplified (psuedo-code) version of App.js above:
 
-```bash
-cat src/App.js |sed '18,41!d'
-```
 ```javascript
 :   render() {
 :     return(
@@ -164,9 +152,6 @@ Think back to the work we did with Rails, and Layouts, and this code may feel so
 
 ### What is a Route?
 Here are the 3 routes in our sample project
-```bash
-cat -n src/App.js | sed '36,38!d'
-```
 ```html
 :     36	          <Route path="/" exact component={Home} />
 :     37	          <Route path="/about/" component={AboutUs} />
@@ -182,9 +167,6 @@ Notice the exact prop on line 36.  That is required on the home route because in
 
 If we change the route on 36 so they are now:
 
-```bash
-cat src/App.js |sed '36,38!d'
-```
 ```html
 :           <Route path="/" component={Home} />
 :           <Route path="/about/" component={AboutUs} />
@@ -202,9 +184,6 @@ We can also use the Switch component to match only one route.  With switch, the 
 
 * Note: the following works after adding "Switch" to our import statements at the top of the file.
 
-```bash
-cat -n src/App.js |sed '37,41!d'
-```
 ```html
 :     37	          <Switch>
 :     38	            <Route path="/about/" component={AboutUs} />
@@ -217,9 +196,6 @@ cat -n src/App.js |sed '37,41!d'
 When using Switch, we can also specify a default route that always matches last by creating a Route that has no path.  That way, we're sure to at least show the user something.  This route will match when the user goes to an URL that is not found.
 
 Here is our NotFound component
-```bash
-cat -n src/pages/NotFound.js
-```
 ```javascript
 :      1	import React, { Component } from 'react'
 :      2	import ReactDOM from 'react-dom'
@@ -237,9 +213,6 @@ cat -n src/pages/NotFound.js
 
 And after Importing it at the top of App.js, we can add a Route for it:
 
-```bash
-cat -n src/App.js |sed '38,43!d'
-```
 ```html
 :     38	          <Switch>
 :     39	            <Route path="/about/" component={AboutUs} />
