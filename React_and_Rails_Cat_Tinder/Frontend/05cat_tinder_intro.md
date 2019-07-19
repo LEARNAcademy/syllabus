@@ -13,8 +13,15 @@ $ cd cat-tinder-frontend
 $ yarn add react-bootstrap react-router-dom
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
-
-
+## Cloud9 users: In the package.json file modify the scripts code to set the default to port 8081
+`  
+"scripts": {
+    "start": "PORT=8081 react-scripts start", //Modified for Cloud 9 Users
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+`
 ## Add a theme
 
 I'm going to use the "United" theme from bootswatch.com, so I'll add the stylesheet to 'pubic/index.html'  You can download a theme from here: [Bootswatch](https://bootswatch.com/) and put it in the ```public/``` directory.
@@ -57,6 +64,8 @@ export default App;
 ````
 
 We haven’t really built any components yet, so this code will throw an error, but we have set up our basis for handling requests.
+
+
 
 ## Challenge
 
