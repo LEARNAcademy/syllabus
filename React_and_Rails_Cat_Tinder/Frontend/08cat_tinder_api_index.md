@@ -72,7 +72,7 @@ What is this code doing? The big things to note are that we call getCats (which 
 have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the
 database to set state.
 
-Now we should be ready to get information from the backend. Start your Rails server and react server at the same time, make sure to put the rails server on port 3000, or if you are using Cloud9 on port 80.80.80.80, if you are using Postman run the code `rails s -b 0.0.0.0`
+Now we should be ready to get information from the backend. Start your Rails server and react server at the same time, make sure to put the rails server on port 3000, or if you are using Cloud9 on port 8080, to start your rails app run  `rails s -b 0.0.0.0`
 
 Fire up your React server if its not already, and let's see how we're doing.  Recall the wireframe we started out with?
 
