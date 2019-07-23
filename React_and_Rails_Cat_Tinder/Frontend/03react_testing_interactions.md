@@ -18,9 +18,9 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <H1>
+        <h1>
           Testing Example
-        </H1>
+        </h1>
         <Row>
           <Col xs={4}>
             <Button>
