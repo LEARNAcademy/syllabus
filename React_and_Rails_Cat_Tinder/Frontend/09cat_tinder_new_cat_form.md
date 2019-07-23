@@ -54,9 +54,9 @@ Last thing to do is add the redirect element in NewCat.js. You can do this a var
 ```
 Notice the ```this.props.success``` statement. If this evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist. You will need to pass a "success" value in props to finish this functionality.
 
-#### Stretch Challenges
+## Stretch Challenges
 
-- As a user, when I am on the cat index page, I can click on a cat and see it's profile page.
+- As a user, when I am on the cat index page, I can click on a cat and see its profile page.
 - As a user, when viewing a cat's profile page, I can edit the cat's info.
 - As a user, I can delete a cat.
 
