@@ -114,6 +114,6 @@ That looks great!  In the next step, we'll expose some endpoints in our API, so 
 
 [Go to Cat Tinder: Seeds](./02cat_tinder_seeds.md)
 
-[Back to Cat Tinder: New Cat component](../Frontend/07cat_tinder_new_cats.md)
+[Back to Cat Tinder: New Cat Functionality Overview](../Frontend/10cat_tinder_form_submit.md)
 
 [Back to Syllabus](../../README.md)
