@@ -54,10 +54,12 @@ Last thing to do is add the redirect element in NewCat.js. You can do this a var
 ```
 Notice the ```this.props.success``` statement. If this evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist. You will need to pass a "success" value in props to finish this functionality.
 
-#### Where to go from here
+#### Stretch Challenges
 
-<!-- [Go to Cat Tinder: New Cat Submit](./10cat_tinder_form_submit.md) -->
+- As a user, when I am on the cat index page, I can click on a cat and see it's profile page.
+- As a user, when viewing a cat's profile page, I can edit the cat's info.
+- As a user, I can delete a cat.
 
-[Back to Cat Tinder: Cats Index API Call](./08cat_tinder_new_cats.md)
+[Back to Cat Tinder: Cats Index API Call](./08cat_tinder_api_index.md)
 
 [Back to Syllabus](../../README.md)
