@@ -105,7 +105,7 @@ As a General Rule:
 
 #### Where to go from here
 
-[Go to Cat Tinder: API Setup](../Backend/01cat_tinder_setup.md)
+[Go to Cat Tinder: New Cat Functionality Overview](./10cat_tinder_form_submit.md)
 
 [Back to Cat Tinder: Cats component](./06cat_tinder_cats.md)
 
