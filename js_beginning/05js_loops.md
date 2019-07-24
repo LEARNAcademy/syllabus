@@ -1,7 +1,7 @@
 
 ## Javascript Loops
 
-[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=4PcRcvgIXNk)
 
 
 
