@@ -4,7 +4,7 @@ Time to build the form to add new cats. Remember we already have the call for Ne
 
 ## Challenge
 
-Create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your ```components/Cats.js``` file.
+Create a component that fulfills the tests in this file. You will see that these tests assume we are using bootstrap to create our view, and reference bootstrap components that will need to be added to your ```pages/Cats.js``` file.
 
 ### src/pages/__tests__/NewCat.js
 
