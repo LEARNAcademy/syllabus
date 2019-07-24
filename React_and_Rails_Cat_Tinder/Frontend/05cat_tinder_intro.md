@@ -1,6 +1,8 @@
 # Introduction
 
-Let's refer back to the wireframes, and recall what our interface is going to look like:
+Before jumping into the code it helps to set up a wireframe that we can refer back to at any point during the development of our app.
+
+Here's what our app is going to look like:
 
 ![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
 
