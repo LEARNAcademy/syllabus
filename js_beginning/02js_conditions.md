@@ -1,6 +1,6 @@
 # JavaScript Decision Structures
 
-[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=Ee_Phg9Ip-k)
 
 
 
