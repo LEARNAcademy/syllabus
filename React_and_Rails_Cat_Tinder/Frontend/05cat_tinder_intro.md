@@ -53,7 +53,7 @@ class App extends Component {
 			<Router>
 				<Switch>
 					<Route exact path="/cats" component={Cats} />
-					<Route exact patch="/" component={NewCat} />
+					<Route exact path="/" component={NewCat} />
 				</Switch>
 			</Router>
 		</div>
