@@ -58,7 +58,7 @@ constructor(props){
 	}
 }
 
-componentWillMount() {
+componentDidMount() {
   getCats()
 	.then(APIcats => {
 	  this.setState({
