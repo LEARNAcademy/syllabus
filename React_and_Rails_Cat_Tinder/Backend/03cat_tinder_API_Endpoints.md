@@ -35,7 +35,9 @@ The name of these routes is important.  Rails knows to route the requests in the
 We start with the index route.  In this endpoint, we want to return all of the cats that the application knows about.  Later on, we may want to add search and/or pagination, but for now we'll keep things simple and just return all the cats.
 
 ### Create a spec
-We're going to practice Test Driven Development, so let's start with a test.  You, can add specs such as the following in the controller spec file:
+We're going to practice Test Driven Development, so let's start with a test.  We'll add a `requests` folder to the `spec` folder that rspec generated. Then, we'll add our test file:
+
+**/spec/requests/cats_spec.rb**
 
 ```ruby
 require 'rails_helper'
