@@ -109,7 +109,7 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
 
 And once again, this fails because we have no code in the controller to make it pass.  Good!  Adding the controller code for this spec is as follows:
 
-```
+```ruby
   def create
     # Create a new cat
     cat = Cat.create(cat_params)
