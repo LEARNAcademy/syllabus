@@ -110,6 +110,10 @@ Make sure you try different options and change the variables to ensure properly 
 
 2) Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`).
 
+#### Epic Challenge
+
+1) Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password". If the user’s password is equal to 8 or more characters OR includes `!`, then log "that password is strong enough!". Log "password is not strong enough" for every other input.
+
 
 [Go to next lesson: Javascript Functions](./03js_functions.md)
 
