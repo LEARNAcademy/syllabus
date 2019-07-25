@@ -32,15 +32,17 @@ $ cd cat_tinder
 ```
 This gets the latest and greatest version of Rails, and generates a new Rails application configured to be used as an API.  the ```-T``` flag tells rails to skip adding the default Minitest framework, as we're going to use Rspec instead.
 
-````
+```bash
 $ echo "gem 'rspec-rails', groups: [:development, :test]" >> Gemfile
 $ bundle install
 $ rails generate rspec:install
 ```
+
 This adds 'rspec-rails' to the Gemfile, and instructs Rails to only load rspec when we are in development or test mode, and not production.  The ```rails g rspec:install``` command installs all the necessary files to create and run our tests.
 
 Next its time to add a Cat resource.  The following command will add the Model, Migration, Controller, and Route for cats.
-```
+
+```bash
 $ rails g resource cat name:string age:integer enjoys:text
 $ rails db:migrate
 ````
