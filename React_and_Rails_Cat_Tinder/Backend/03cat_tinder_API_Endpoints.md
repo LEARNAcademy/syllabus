@@ -97,7 +97,7 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
     post '/cats', params: cat_params
 
     # Assure that we get a success back
-    expect(response).to be_success
+    expect(response).to have_http_status(:ok)
 
     # Look up the cat we expect to be created in the Database
     new_cat = Cat.first
