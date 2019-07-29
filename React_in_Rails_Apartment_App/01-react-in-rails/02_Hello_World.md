@@ -4,6 +4,16 @@
 
 ## Setup Steps
 
+0) Add Yarn if its not already installed
+```bash
+$ yarn -v 
+```
+If yarn not found:
+
+```bash
+$ npm install -g yarn
+```
+
 1) Create a Rails Application
 ```bash
 $ rails new hello_world
