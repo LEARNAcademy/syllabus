@@ -168,9 +168,8 @@ yarn add react-router-dom
 
 We need some pages in our React single page app  to route too.  For this example, we'll add an "About Us", "Learn More", and "Home" page.  Each of them will have an ```<h1>``` describing their intent.
 
-```bash
-cat app/javascript/components/pages/Home.js
-```
+#### app/javascript/components/pages/Home.js
+
 ```result
 : import React, { Component } from 'react'
 :
