@@ -77,9 +77,8 @@ cat config/routes.rb
 ```
 
 8) Add homepage, and React Component
-```bash
-cat app/views/pages/index.html.erb
-```
+
+#### app/views/pages/index.html.erb
 ```result
 : <%= react_component("HelloWorld") %>
 ```
