@@ -16,6 +16,7 @@ $ npm install -g yarn
 
 1) Create a Rails Application
 ```bash
+$ gem install rails
 $ rails new hello_world
 $ cd hello_world
 ```
