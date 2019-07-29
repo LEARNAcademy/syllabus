@@ -174,7 +174,7 @@ We need to remove the "User" input from our generated form for a new bike:
 
 Then, in the ```create``` method of the controller, we can assign it to the current user with the help of a Devise helper method.
 
-#### app/controllers/bikes_controller.rb |sed 27,39!d
+#### app/controllers/bikes_controller.rb
 ```result
 :     27	  def create
 :     28	    @bike = current_user.bikes.new(bike_params)
