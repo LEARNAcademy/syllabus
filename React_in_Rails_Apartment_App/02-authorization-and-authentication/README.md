@@ -26,7 +26,7 @@ This example, meant to be done as a group exercise brings all the concepts toget
 [![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
 
 
-* [Devise Single Page App](./03_devise_and_react_together.md)(Group Exercise)
+* [Devise Single Page App](../03_devise_and_react_together.md)(Group Exercise)
 
 #### Exercises
 
