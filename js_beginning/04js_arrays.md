@@ -179,10 +179,10 @@ And finally, let's look at **.indexOf** and **lastIndexOf**.
 
 var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
 
-console.log(array2.indexOf("t"))
+console.log(arr1.indexOf("t"))
 6
 
-console.log(array2.lastIndexOf("y"));
+console.log(arr1.lastIndexOf("y"));
 4
 ```
 
