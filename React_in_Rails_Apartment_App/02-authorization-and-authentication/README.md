@@ -31,5 +31,5 @@ This example, meant to be done as a group exercise brings all the concepts toget
 #### Exercises
 
 * [Complete Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
-* [Apartment App](https://classroom.github.com/g/5mGKXh_G)(Multi Day Exercise)
+* [Apartment App](https://classroom.github.com/a/2j-YvRO4)(Multi Day Exercise)
   - Please use this Git Repo to manage your work.  It is a Github classroom, which will allow the instructors to give you feedback.
