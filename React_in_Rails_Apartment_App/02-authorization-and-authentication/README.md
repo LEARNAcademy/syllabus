@@ -28,6 +28,8 @@ This example, meant to be done as a group exercise brings all the concepts toget
 
 * [Devise Single Page App](../03_devise_and_react_together.md)(Group Exercise)
 
+* [Example Completed Application](https://github.com/LEARNAcademy/devise_and_react_example)
+
 #### Exercises
 
 * [Complete Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
