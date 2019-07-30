@@ -212,7 +212,7 @@ Pretty cool!
 :      1	import React from "react"
 :      2	import PropTypes from "prop-types"
 :      3	import { Nav, NavItem, NavLink} from 'reactstrap'
-:      4	import { BrowserRouter as  Router, Route } from 'react-router-dom'
+:      4	import { BrowserRouter as  Router, Route, Link } from 'react-router-dom'
 :      5
 :      6	// Pages
 :      7	import Home from './pages/Home'
@@ -226,13 +226,13 @@ Pretty cool!
 :     15	        <div>
 :     16	          <Nav>
 :     17	            <NavItem>
-:     18	              <NavLink href="/">Home</NavLink>
+:     18	              <NavLink to="/" tag={Link}>Home</NavLink>
 :     19	            </NavItem>
 :     20	            <NavItem>
-:     21	              <NavLink href="/about">About Us</NavLink>
+:     21	              <NavLink to="/about" tag={Link}>About Us</NavLink>
 :     22	            </NavItem>
 :     23	            <NavItem>
-:     24	              <NavLink href="/more">Learn More</NavLink>
+:     24	              <NavLink to="/more" tag={Link}>Learn More</NavLink>
 :     25	            </NavItem>
 :     26	          </Nav>
 :     27	          <Route path="/" exact component={Home} />
