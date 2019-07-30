@@ -12,7 +12,7 @@ We turn our attention to a base install of Devise, a popular Rails authenticatio
 #### Group Work
 This example is intended to be done as a group exercise.
 
-* [Devise Example](./03_devise.md) (Group Exercise)
+* [Devise Example](/Syllabus/blob/master/React_in_Rails_Apartment_App/03_devise_and_react_together.md) (Group Exercise)
 
 ## Devise and a Single Page App
 
