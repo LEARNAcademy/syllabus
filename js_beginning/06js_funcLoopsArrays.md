@@ -136,6 +136,22 @@ DON'T FORGET TO PSEUDO CODE
 * fillArray(4, 11)
 * expected output -->> [11, 11, 11, 11]
 
+6. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+* 4 ➞ 10
+* 13 ➞ 91
+* 600 ➞ 180300
+
+7. Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+* ([1, 2, 3, 4, 5]) ➞ [1, 5]
+* ([2334454, 5]) ➞ [5, 2334454]
+* ([1]) ➞ [1, 1]
+
+
+
+
+
 ### Super Stretch Challenge
 
 #### High/Low Game
