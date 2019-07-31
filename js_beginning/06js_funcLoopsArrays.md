@@ -164,6 +164,8 @@ DON'T FORGET TO PSEUDO CODE
 * Stretch: Add styling to your page and push it to a GitHub repository
 
 
-[Go to Javascript Objects](./07js_objects.md)
+[Go to next lesson: Javascript ES6](../js_intermediate/01js_es6_syntax.md)
 
 [Back to Javascript Functions](./03js_functions.md)
+
+[Back to Syllabus](../README.md)

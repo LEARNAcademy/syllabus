@@ -1,4 +1,6 @@
-# Arrow Functions
+# ES6 SYNTAX
+
+## Arrow Functions
 
 With some differences that we will talk more about later, Arrow Functions are a shorthand way to define a function in javascript.
 
@@ -237,6 +239,8 @@ Use object destructuring to create two variables - a name variable and a phone v
 * String Interpolation
 * Object Destructuring
 
-[Go to Javascript Higher Order Functions](./02js_higher_order_functions.md)
+[Go to next lesson: Testing with Jest](./04js_testing_jest.md)
 
-[Back to Javascript Objects](../js_beginning/07js_objects.md)
+[Back to JavaScript Objects](../js_beginning/06js_objects.md)
+
+[Back to Syllabus](../README.md)

@@ -206,7 +206,7 @@ const addGranola = (arr1) => {
 
 ```
 
-#### Jest Cheat Sheet 
+#### Jest Cheat Sheet
 https://github.com/sapegin/jest-cheat-sheet#test-structure
 
 # Challenges
@@ -268,6 +268,8 @@ Use the following exercises to **write your test first**, make it fail(red), the
 var product = { name: "chair", price: 14.99 }
 Write the test for a function called describeProduct takes product as an argument and returns "The product is a chair. It costs $14.99". Write the function and make the test pass.
 
-[Go to Javascript Class Interitance](./05js_class_inheritance.md)
+[Go to next lesson: Javascript Higher Order Functions](./02js_higher_order_functions.md)
 
-[Back to Javascript Pig Latin](./03js_pig_latin_mob.md)
+[Back to Javascript Objects](../js_beginning/07js_objects.md)
+
+[Back to Syllabus](../README.md)
