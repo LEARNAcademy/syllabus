@@ -223,7 +223,7 @@ For another example look at <a href="https://github.com/bravo-2018/daily_challen
 * oldEnough(19)
 * expected output -->> "19 is not old enough to drink"
 
-2) Write an arrow function named greaterNum that takes two numbers as arguments, use sting interpolation to return a sentence explaining which number is greater
+2) Write an arrow function named greaterNum that takes two numbers as arguments, use string interpolation to return a sentence explaining which number is greater
 
 * (4, -9)
 * expected output -->> "4 is greater than -9"
