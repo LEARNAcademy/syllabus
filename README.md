@@ -15,7 +15,7 @@ This is your introduction to programming through the Javascript programming lang
 
 #### Additional Topics:
 
-- [Introduction to git and Github](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
+- [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
 - [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 

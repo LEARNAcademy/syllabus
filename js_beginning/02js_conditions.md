@@ -108,7 +108,7 @@ Make sure you try different options and change the variables to ensure properly 
 
 1) Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
 
-2) Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`).
+2) Write an `if/else` statement that takes a variable of any data type and logs the data type **HINT**: use the JS operator `typeof`.
 
 #### Epic Challenge
 

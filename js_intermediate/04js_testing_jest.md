@@ -233,7 +233,7 @@ Now Build your function that satisfies your test and run yarn jest again.  Your 
 
 ## Exercises
 
-Use the following exercises to **write your test first**, make it fail(red), then write your function on the same file below the test and make it pass(green).  You can put all of these challenges (tests and functions) on one file.
+Use the following exercises to **write your test first**, make it fail(red), then write your function on the same file below the test and make it pass(green). You can put all of these challenges (tests and functions) on one file.
 
 1) Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.  Write the function and make the test pass.
 
