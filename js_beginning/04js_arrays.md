@@ -250,6 +250,8 @@ var numbers2 = [2, 4, 6, 8, 10]
 * Create an HTML page linked to the JavaScript file - you will need to research onClick events, document.getElementById() and innerHTML. (If you are stuck, don't worry, we will do more of this next week.)
 
 
-[Go to Javascript Loops](./05js_loops.md)
+[Go to next lesson: Javascript Loops](./05js_loops.md)
 
 [Back to Javascript Conditionals](./02js_conditions.md)
+
+[Back to Syllabus](../README.md)

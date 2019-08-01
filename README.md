@@ -5,19 +5,19 @@
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
 
 1) [Javascript Intro](./js_beginning/01js_intro.md)
-2) [Javascript Conditions](./js_beginning/02js_conditions.md)
+2) [Javascript Conditionals](./js_beginning/02js_conditions.md)
 3) [Javascript Arrays](./js_beginning/04js_arrays.md)
 4) [Javascript Loops](./js_beginning/05js_loops.md)
 5) [Javascript Functions](./js_beginning/03js_functions.md)
-6) [Javascript Functions, Loops and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-7) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
-8) [Javascript Objects](./js_beginning/07js_objects.md)
+6) [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
+7) [Javascript Objects](./js_beginning/07js_objects.md)
+8) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
 
 #### Additional Topics:
 
-- [Introduction to git and Github](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
-
-
+- [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
+- [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
+- [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 
 
 ## Unit Two: Intermediate Javascript
@@ -26,11 +26,12 @@ This section is building on Javascript foundations and introducing more advanced
 
 1) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
 2) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
-3) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
+3) [Javascript Classes and Inheritance](./js_intermediate/05js_class_inheritance.md)
 4) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
-5) [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
-6) [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
 
+#### Additional Topics:
+
+- [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
 
 ## Unit Three: React
 
