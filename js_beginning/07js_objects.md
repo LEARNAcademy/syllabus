@@ -238,6 +238,9 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 
+A great style guide for Javascript:
+[Air B & B](https://github.com/airbnb/javascript)
+
 ### Object Challenges
 
 Working with functions and objects.
