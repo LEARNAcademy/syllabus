@@ -35,12 +35,14 @@ The name of these routes is important.  Rails knows to route the requests in the
 We start with the index route.  In this endpoint, we want to return all of the cats that the application knows about.  Later on, we may want to add search and/or pagination, but for now we'll keep things simple and just return all the cats.
 
 ### Create a spec
-We're going to practice Test Driven Development, so let's start with a test.  You, can add specs such as the following in the controller spec file:
+We're going to practice Test Driven Development, so let's start with a test.  We'll add a `requests` folder to the `spec` folder that rspec generated. Then, we'll add our test file:
+
+**/spec/requests/cats_spec.rb**
 
 ```ruby
 require 'rails_helper'
 
-describe "Cats API" do
+describe "Cats API", type: :request do
   it "gets a list of Cats" do
     # Create a new cat in the Test Database (not the same one as development)
     Cat.create(name: 'Felix', age: 2, enjoys: 'Walks in the park')
@@ -52,7 +54,7 @@ describe "Cats API" do
     json = JSON.parse(response.body)
 
     # Assure that we got a successful response
-    expect(response).to be_success
+    expect(response).to have_http_status(:ok)
 
     # Assure that we got one result back as expected
     expect(json.length).to eq 1
@@ -95,7 +97,7 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
     post '/cats', params: cat_params
 
     # Assure that we get a success back
-    expect(response).to be_success
+    expect(response).to have_http_status(:ok)
 
     # Look up the cat we expect to be created in the Database
     new_cat = Cat.first
@@ -107,7 +109,7 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
 
 And once again, this fails because we have no code in the controller to make it pass.  Good!  Adding the controller code for this spec is as follows:
 
-```
+```ruby
   def create
     # Create a new cat
     cat = Cat.create(cat_params)

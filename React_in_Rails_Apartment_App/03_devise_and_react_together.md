@@ -28,8 +28,8 @@ For More detailed Description of setting up React: [Check here](./01-react-in-ra
 
 ### React Setup
 ```bash
-$ bundler add webpacker
-$ bundler add react-rails
+$ bundle add webpacker
+$ bundle add react-rails
 $ bundle install
 $ rails webpacker:install
 $ rails webpacker:install:react

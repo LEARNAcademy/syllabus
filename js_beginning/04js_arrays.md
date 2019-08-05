@@ -179,10 +179,10 @@ And finally, let's look at **.indexOf** and **lastIndexOf**.
 
 var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
 
-console.log(array2.indexOf("t"))
+console.log(arr1.indexOf("t"))
 6
 
-console.log(array2.lastIndexOf("y"));
+console.log(arr1.lastIndexOf("y"));
 4
 ```
 
@@ -239,21 +239,19 @@ var numbers2 = [2, 4, 6, 8, 10]
 
 * Sort all the names in reverse alphabetical order.
 
-## Magic 8 Ball
+#### Magic 8 Ball
 
-#### Story
-* As a user I can enter a question and get a random answer to my question.
-
-#### Goal:
-* Create an array with the following answers: Yup!, Fuhgeddaboudit, Maybe, Ask: what would your mother do?, Ask: what would an Australian do, then do the opposite, Your answer here.
-* Set a variable called question so you can test different questions.
-* Create a random number to select one of the answers (hint: use Math.random().
-* Output the random answer.
+* Create an array with 6 different (appropriate) Magic 8 Ball answers
+* Create a random number to select one of the answers (hint: use Math.random()
+* Output the random answer
 
 #### Stretch goal:
-* Create an html page linked to the javascript file - you will need to research onClick events, document.getElementById and innerHTML. (we will do more of this next week).
+* As a user I can enter a question and get a random answer to my question.
+* Create an HTML page linked to the JavaScript file - you will need to research onClick events, document.getElementById() and innerHTML. (If you are stuck, don't worry, we will do more of this next week.)
 
 
-[Go to Javascript Loops](./05js_loops.md)
+[Go to next lesson: Javascript Loops](./05js_loops.md)
 
-[Back to Javascript Functions](./05js_functions.md)
+[Back to Javascript Conditionals](./02js_conditions.md)
+
+[Back to Syllabus](../README.md)

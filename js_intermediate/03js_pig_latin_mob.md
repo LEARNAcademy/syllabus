@@ -67,6 +67,8 @@ See also:
 
 <a href="https://www.youtube.com/watch?v=p_pvslS4gEI" target="_blank">A day of Mob Programming</a>
 
-[Go to Javascript Testing With Jest](./04js_testing_jest.md)
+[Back to Javascript Testing With Jest](./04js_testing_jest.md)
 
 [Back to Javascript Higher Order Functions](./02js_higher_order_functions.md)
+
+[Back to Syllabus](../README.md)
