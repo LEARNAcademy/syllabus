@@ -29,6 +29,7 @@ We're going to use the ```--api``` flag when building a new Rails application to
 $ gem install rails
 $ rails new cat_tinder --api -T --database=postgresql
 $ cd cat_tinder
+$ rails db:create
 ```
 This gets the latest and greatest version of Rails, and generates a new Rails application configured to be used as an API.  the ```-T``` flag tells rails to skip adding the default Minitest framework, as we're going to use Rspec instead.
 

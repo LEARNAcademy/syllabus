@@ -10,7 +10,7 @@ In order to see our app in Postman, we need to expost the running Rails applicat
 
 ![edit](https://content.screencast.com/users/mclark8/folders/Jing/media/5a2cdedb-2cef-477c-b192-88bc8ecb43ba/00000520.png)
 
-![Add Rule](https://content.screencast.com/users/mclark8/folders/Jing/media/d638d5f5-9d97-4de7-a4dd-daa62afd3847/00000521.png)
+![Add Rule](https://content.screencast.com/users/mclark8/folders/Jing/media/08024915-2545-433b-8d8d-c41848e825d5/00000539.png)
 
 
 ### Running the Rails App
