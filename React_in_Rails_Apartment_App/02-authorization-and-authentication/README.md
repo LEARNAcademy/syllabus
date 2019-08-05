@@ -12,12 +12,13 @@ We turn our attention to a base install of Devise, a popular Rails authenticatio
 #### Group Work
 This example is intended to be done as a group exercise.
 
-* [Devise Example](./03_devise.md) (Group Exercise)
+* [Devise Example](/Syllabus/blob/master/React_in_Rails_Apartment_App/03_devise_and_react_together.md) (Group Exercise)
 
 ## Devise and a Single Page App
 
 #### Group Work
 This example, meant to be done as a group exercise brings all the concepts together.  We build an app with authenticated Devise routes, and a single page application.
+
 
 ##### Part 1
 [![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
@@ -25,11 +26,12 @@ This example, meant to be done as a group exercise brings all the concepts toget
 ##### Part 2
 [![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
 
+* [Devise Single Page App](../03_devise_and_react_together.md)(Group Exercise)
 
-* [Devise Single Page App](./04_devise_single_page_app.md)(Group Exercise)
+* [Example Completed Application](https://github.com/LEARNAcademy/devise_and_react_example)
 
 #### Exercises
 
 * [Complete Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
-* [Apartment App](https://classroom.github.com/g/5mGKXh_G)(Multi Day Exercise)
+* [Apartment App](https://classroom.github.com/a/2j-YvRO4)(Multi Day Exercise)
   - Please use this Git Repo to manage your work.  It is a Github classroom, which will allow the instructors to give you feedback.

@@ -59,7 +59,7 @@ $ rails g controller Pages
 #### config/routes.rb
 ```result
        1	Rails.application.routes.draw do
-		   2    devise_for :users
+       2          devise_for :users
        3	  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
        4	  root to: 'pages#root'
        5	end
