@@ -20,47 +20,7 @@ A massive update to a new standard of JavaScript that increased the functionalit
 * generators
 * promises
 
-## Arrow Functions
-
-The official definition: An arrow function is a syntactically compact alternative to a regular function expression, although without its own bindings to the `this, arguments, super, or new.target` keywords. Arrow function expressions are ill suited as methods, and they cannot be used as constructors.
-
-Arrow functions are useful in testing, higher order functions, creating methods in React, and much more.
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">MDN Arrow Functions</a>
-
-### Examples:
-
-A named function is declared with the "function" key word and a name, like this:
-
-```javascript
-function makeSomthing(argument) {
-     return something
- }
-```
-
-Arrow functions don't use the "function" key word and instead looks like this:
-
-```JavaScript
-makeSomething = (argument) => {
-     return something
- }
-```
-
-Let's take an example from our functions lesson and refactor it into an arrow function.
-
-```javascript
-// Before ES6
-
-function greeting(name) {
-    return "Hello " + name
-}
-
-// With arrow functions
-
-var greeting = (name) => {
-    return "Hello " + name
-}
-```
+Much of the new syntax is incorporated into the Learn Curriculum and widely used in the industry.  Below are a few new concepts that you may not have seen yet that we'll use throughout the course.
 
 ## Template Literals - String Interpolation
 
