@@ -36,3 +36,7 @@ I can use this handy command to see what that `resources :guitars` line does:
 ```bash
 rails routes
 ```
+
+There's a lot that's output to the screen but lets focus on this section:
+
+![Resource Routes](../assets/resource-routes.png)
