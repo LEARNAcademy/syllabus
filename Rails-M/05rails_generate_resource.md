@@ -125,4 +125,4 @@ I can now visit '`/guitars/2`' and see the guitar I just created:
 
 Additionally, if I visit '`/guitars`', I will see all the guitars in the database.
 
-The key here is that after generating the resource, I really only needed to define the methods that a particular route requireed to work.
+The key here is that after generating the resource, I really only needed to define the method that a particular route requires to work.
