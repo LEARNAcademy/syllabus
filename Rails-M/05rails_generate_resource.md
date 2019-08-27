@@ -49,6 +49,8 @@ There's a lot that's output to the screen but lets focus on this section:
 
 What we see is that Rails generated all the routes required for us to build out the CRUD functionality for our guitars. All we really need to do is tell our controller what we want it do for each request.
 
+## Coding an index response
+
 Let's tell it what we want it to do for a "`get`" to the "`/guitars`" url.
 
 From looking at my `rails routes` output I can see that I need to create an `index` method on my guitars controller.
@@ -67,7 +69,7 @@ We're asking the controller to do something that's a little different from what 
 
 At this point I can run the server and visit '`/guitars`'. But it's not very interesting because I don't have any data in my tables yet.
 
-Since my guitar model is set up though, I hop into the `rails console` and one:
+Since my guitar model is set up though, I can hop into the `rails console` and add one:
 
 ```ruby
 Guitar.create(strings: 7, manufacturer: 'Ibanez', model: 'RG Premium', color: 'Twilight Black')
@@ -80,3 +82,47 @@ Now when I visit I should see something like this:
 ```
 
 Again, I merely ran `rails g resource`, migrated, and defined my `index` action in my controller.
+
+Let's see one more simple example.
+
+## Coding a show response
+
+Let's focus on the route for retrieving selecting a single guitar object from the database.
+
+Recalling our routes:
+
+![Resource Routes](../assets/resource-routes.png)
+
+We see that Rails set up a route for '`/guitars/:id`' that points to a show method in the guitars controller. We'll build that out to find a guitar based on the id param passed to the controller.
+
+We'll update our `guitars_controller.rb` to have a show method:
+
+```ruby
+class GuitarsController < ApplicationController
+
+    #...index method...
+
+    def show
+        @guitar = Guitar.find([params[:id]])
+        render json: @guitar
+    end
+end
+```
+
+Now if I visit '`/guitars/1`' I should get that first guitar back.
+
+If I hop into the rails console and add another guitar:
+
+```ruby
+Guitar.create(strings: 6, manufacturer: 'Fender', model: 'Stratocaster', color: 'Sunburst')
+```
+
+I can now visit '`/guitars/2`' and see the guitar I just created:
+
+```json
+[{"id":2,"strings":6,"manufacturer":"Fender","model":"Stratocaster","color":"Sunburst","created_at":"2019-08-27T17:40:34.155Z","updated_at":"2019-08-27T17:40:34.155Z"}]
+```
+
+Additionally, if I visit '`/guitars`', I will see all the guitars in the database.
+
+The key here is that after generating the resource, I really only needed to define the methods that a particular route requireed to work.
