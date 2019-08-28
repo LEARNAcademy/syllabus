@@ -73,12 +73,14 @@ We'll build our request like so:
 
 ![Delete request in Postman](../assets/postman/postman-delete-send.png)
 
+Notice that we've selected the `DELETE` verb and set up the url with the `id` of the guitar we want delete.
+
 When we hit send, we should get back the item we just deleted:
 
 ![Deleted Guitar](../assets/postman/postman-create-json.png)
 
-Now if I try to show the guitar I just deleted, I should receive an error:
+Now if we try to show the guitar we just deleted, we should receive an error:
 
 ![Postman 404](../assets/postman/postman-404.png)
 
-
+The only CRUD action left is the **U**pdate, but leave that up to you to put together.
