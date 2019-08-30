@@ -15,6 +15,24 @@ rails new contact-app -d postgresql -T
 rails db:create
 ```
 
+Then, we'll set up `rspec` as our spec framework. To do this we'll add the `rspec-rails` gem to our `:development, :test` group in our **Gemfile**:
+
+```ruby
+group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.8' # <--- Added this gem
+end
+```
+
+Then we'll run a couple of commands:
+
+```bash
+bundle install
+rails generate rspec:install
+```
+
+That will bundle `rspec-rails` in with our app and generate the files we'll need to start writing our tests.
+
 ## The Initial Requirements
 
 We are building an application for storing the contact information of our users. That said it, is crucial for our app to have a name and email on record for each user.
@@ -25,9 +43,4 @@ What we need to build:
 - Cannot be created without an email
 
 The requirements may change, so we may need to add some additional tests. But this is enough to get started.
-
-
-
-
-
 
