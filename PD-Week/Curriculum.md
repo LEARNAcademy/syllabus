@@ -13,6 +13,7 @@
 <br/> LEARN grads are known for the skills they bring into the tech industry from their previous careers. Discover the ones that make you stand out!
 <br/>
 <br/>
+
 *Additional Resources:*
 
 * [Discover Your Transferable Skills Activity](https://drive.google.com/open?id=1b73wQ4qGm7JoPYCNhC9ZaOYSCNIl2Iq_)
@@ -38,6 +39,7 @@
 <br/> Your resume is one of the most important materials you need for your job search. Selecting the right format and presenting the best content is key to getting in the door for a job interview!
 <br/>
 <br/>
+
 *Additional Resources:*
 
 * [Action Verb List](https://drive.google.com/open?id=1XpRV4ql5GAsGvVbZ5UuNOUcfGKo5c0t-)
@@ -114,6 +116,7 @@
 <br/> Portfolios are a necessity to get that first and sometimes even second job. This resource provides alumni samples as well as resources for building your own portfolio from scratch or using an existing template.
 <br/>
 <br/>
+
 *Additional Resources:*
 
 * [How to Build Impressive Portfolio Sites](https://drive.google.com/open?id=1GqS63bnway1oRShBycZ0HtuhihSTguOaNJnM7xxX1F0)
