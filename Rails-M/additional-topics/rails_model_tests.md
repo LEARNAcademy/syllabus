@@ -162,6 +162,8 @@ class Contact < ApplicationRecord
 end
 ```
 
+If we run our tests now, we'll see that we're passing.
+
 
 
 

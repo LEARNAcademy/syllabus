@@ -110,6 +110,7 @@ Additional Topics:
 - [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
 - [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
+- [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
 
 ## Unit Seven: Professional Development Week
 
