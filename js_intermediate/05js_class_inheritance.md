@@ -569,8 +569,8 @@ Before starting the implementation, copy each story into the editor as a comment
 
 **Story**:	As a programmer, I can sort my collection of cars based on model and then year.
 
-[Go to React Intro](../react/01react_intro_to_react.md)
+[Go to next lesson: React Intro](../react/01react_intro_to_react.md)
 
-[Back to Javascript Testing With Jest](./04js_testing_jest.md)
+[Back to Javascript Higher Order Functions](./02js_higher_order_functions.md)
 
 [Back to Syllabus](../README.md)

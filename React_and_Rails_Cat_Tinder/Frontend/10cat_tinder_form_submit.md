@@ -1,4 +1,4 @@
-# NEWCAT FUNCTIONALITY
+# NewCat Functionality Overview
 
 Now that the NewCat form is rendering correctly, we can wire the form up to pass submitted data to ```App.js```, and handle errors correctly.
 
@@ -34,6 +34,8 @@ Create a ```handleNewCat``` function in ```App.js``` that only does one thing: `
 
 #### Where to go from here
 
-[Back to Cat Tinder: New Cat API Call](./09cat_tinder_new_cat_form.md)
+[Go to Cat Tinder: Rails API Setup](../Backend/01cat_tinder_setup.md)
+
+[Back to Cat Tinder: NewCat Component](./07cat_tinder_new_cats.md)
 
 [Back to Syllabus](../../README.md)

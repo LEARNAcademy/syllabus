@@ -10,18 +10,17 @@ import React, { Component } from 'react';
 import {
   Col,
   Button,
-  Grid,
-  PageHeader,
+  Container,
   Row,
 } from 'react-bootstrap'
 
 class App extends Component {
   render() {
     return (
-      <Grid>
-        <PageHeader>
+      <Container>
+        <h1>
           Testing Example
-        </PageHeader>
+        </h1>
         <Row>
           <Col xs={4}>
             <Button>
@@ -31,7 +30,7 @@ class App extends Component {
           <Col xs={8}>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }
@@ -107,13 +106,12 @@ test('changes button text when button clicked a second time', () => {
 And here is the Component to make these tests pass:
 
 #### /src/App.js
-```
+```jsx
 import React, { Component } from 'react';
 import {
   Col,
   Button,
-  Grid,
-  PageHeader,
+  Container,
   Row,
 } from 'react-bootstrap'
 
@@ -133,10 +131,10 @@ class App extends Component {
   }
   render() {
     return (
-      <Grid>
-        <PageHeader>
+      <Container>
+        <h1>
           Testing Example
-        </PageHeader>
+        </h1>
         <Row>
           <Col xs={4}>
             <Button onClick={this.toggleResult.bind(this)}>
@@ -151,7 +149,7 @@ class App extends Component {
             </span>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

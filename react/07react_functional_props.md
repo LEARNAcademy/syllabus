@@ -8,7 +8,7 @@ Here we have 3 components, a main application, a Form component and a Result com
 
 Getting back to our question, how do we pass information from a child component (the Form component in this case) back up to the App, so it can pass it along to Result component?
 
-The asnswer may surprise you: We can't.  There is no way in React to pass data back up from a child component to a parent.
+The answer may surprise you: We can't.  There is no way in React to pass data back up from a child component to a parent.
 
 Not one, ...nada, .... zilch, ... it isn't going to happen.
 

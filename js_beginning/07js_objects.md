@@ -1,4 +1,5 @@
 # Working with and thinking about Objects
+
 [![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
 ]
 ## Object with Data
@@ -237,6 +238,9 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 
+A great style guide for Javascript:
+[Air B & B](https://github.com/airbnb/javascript)
+
 ### Object Challenges
 
 Working with functions and objects.
@@ -441,7 +445,7 @@ var library = [
 
 ## Links
 
-[Go to ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
+[Go to next lesson: ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
 
 [Back to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
 

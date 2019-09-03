@@ -2,7 +2,7 @@
 # Intro to Functions
 ## Lecture
 
-[![YouTube](http://img.youtube.com/vi/K2ACS1cfCCI/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](http://img.youtube.com/vi/K2ACS1cfCCI/0.jpg)](https://www.youtube.com/watch?v=K2ACS1cfCCI)
 
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
@@ -205,7 +205,8 @@ Write a function named pluralize that:
 
 [practice more with Edabit](https://edabit.com/challenges/javascript)
 
-[Go to Javascript Arrays](./04js_arrays.md)
+[Go to next lesson: Javascript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
 
+[Back to Javascript Conditionals](./02js_conditions.md)
 
-[Back to Javascript Functions](./02js_conditions.md)
+[Back to Syllabus](../README.md)

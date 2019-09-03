@@ -221,6 +221,8 @@ Create a function that merges two arrays, takes in two arrays as arguments retur
 * var arr2 = [7, 8, 2, 1, 5, 4]
 * expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
 
-[Go to Javascript Pig Latin](./03js_pig_latin_mob.md)
+[Go to next lesson: Javascript Testing with Jest](./04js.testing_jest.md)
 
-[Back to Javascript ES6 Syntax](./01js_es6_syntax.md)
+[Back to Classes and Inheritance](./05js_class_inheritance.md)
+
+[Back to Syllabus](../README.md)

@@ -4,8 +4,19 @@
 
 ## Setup Steps
 
+0) Add Yarn if its not already installed
+```bash
+$ yarn -v 
+```
+If yarn not found:
+
+```bash
+$ npm install -g yarn
+```
+
 1) Create a Rails Application
 ```bash
+$ gem install rails
 $ rails new hello_world
 $ cd hello_world
 ```
@@ -67,9 +78,8 @@ cat config/routes.rb
 ```
 
 8) Add homepage, and React Component
-```bash
-cat app/views/pages/index.html.erb
-```
+
+#### app/views/pages/index.html.erb
 ```result
 : <%= react_component("HelloWorld") %>
 ```

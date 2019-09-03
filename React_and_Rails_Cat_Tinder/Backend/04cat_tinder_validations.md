@@ -8,7 +8,7 @@ We've started all of our back end coding with a failing test, and we now have go
 
 Here's a test to assure that we get the correct response status when we submit a create request without a name for a cat:
 
-#### spec/controllers/cats_controller_spec.rb
+#### spec/requests/cats_spec.rb
 ```
 it "doesn't create a cat without a name" do
   cat_params = {
