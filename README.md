@@ -63,11 +63,12 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 2) [Ruby Conditions](./ruby/02rb_cond_methods_loops_hashes.md)
 3) [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4) [Ruby Inheritance](./ruby/04rb_inheritance.md)
-5) [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
-6) [Ruby BDD and TDD](./ruby/08rb_testing.md)
-7) [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
-8) [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
-
+5) [Objects and Beyond, Car Challenge](./ruby/05_objects_and_beyond.md)
+6) [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
+7) [Ruby BDD and TDD](./ruby/08rb_testing.md)
+8) [Challenge: BDD Car Challenge](./ruby/06rb_bdd_car_challenge.md)
+9) [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
+10) [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
 
 ## Unit Five: Ruby on Rails and Postgres
 
@@ -98,10 +99,11 @@ Additional Topics:
 3) [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
-9) [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
-10) [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
-11) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
-12) [Intro to Fetch](./Rails-M/10using_fetch.md)
+9) [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+10) [Intro to Fetch](./Rails-M/10using_fetch.md)
+11) [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
+12) [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
+13) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 
 Additional Topics:
