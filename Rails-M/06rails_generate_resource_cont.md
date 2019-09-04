@@ -44,7 +44,7 @@ When we click send, given that we've formatted our request correctly, we should 
 
 ![Post Response in Postman](../assets/postman/postman-create-json.png)
 
-Notice that we get a **Status: 200 OK** and we get the newly created guitar in the body of our response.
+Notice that we get the newly created guitar in the body of our response.
 
 ##  Coding a destroy response
 
