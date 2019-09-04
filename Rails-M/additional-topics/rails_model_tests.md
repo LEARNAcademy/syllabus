@@ -111,7 +111,7 @@ When we run our specs again, we'll see it pass.
 
 ![Failing Name Presence](../../assets/rspec-rails-models/rspec-models-passing.png)
 
-Let's go ahead apply a presence validation to emails as well.
+Let's go ahead and apply a presence validation to emails as well.
 
 First we'll add a test case for it:
 
@@ -164,6 +164,7 @@ end
 
 If we run our tests now, we'll see that we're passing.
 
+This is the workflow that we can use to add model tests as the required data for our application evolves. As you are writing specs, it often helps to think of other ways that bad data can break your application. When you can think about your application in this way, you can begin to see the other ways that your data ought to be tested.
 
 
 
