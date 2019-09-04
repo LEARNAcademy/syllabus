@@ -83,4 +83,4 @@ Now if we try to show the guitar we just deleted, we should receive an error:
 
 ![Postman 404](../assets/postman/postman-404.png)
 
-The only CRUD action left is the **U**pdate, but leave that up to you to put together.
+The only CRUD action left is the **U**pdate, but we'll leave that up to you to put together.
