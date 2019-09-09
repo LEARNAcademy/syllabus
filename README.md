@@ -99,9 +99,12 @@ Additional Topics:
 3) [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
-9) [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-10) [Intro to Fetch](./Rails-M/10using_fetch.md)
-11) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+9) [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
+10) [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+11) [Intro to Fetch](./Rails-M/10using_fetch.md)
+12) [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
+13) [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
+14) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 
 Additional Topics:
