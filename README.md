@@ -9,6 +9,7 @@ This is your introduction to programming through the Javascript programming lang
 3) [Javascript Arrays](./js_beginning/04js_arrays.md)
 4) [Javascript Loops](./js_beginning/05js_loops.md)
 5) [Javascript Functions](./js_beginning/03js_functions.md)
+6) [Javascript Template Literals](./js_beginning/js_template_literals.md)
 6) [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
 7) [Javascript Objects](./js_beginning/07js_objects.md)
 8) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
