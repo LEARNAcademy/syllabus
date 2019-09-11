@@ -114,6 +114,6 @@ console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
 
 Refactor this function to uset the spread operator to combine the array arguments.
 
-#### Exercise 3
+**STRETCH**
 
 Recall the **combineAndFilterOdd()** function from the previous exercise. Refactor the function to take any number of arguments.
