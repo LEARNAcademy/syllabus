@@ -41,17 +41,13 @@ We can then import our mock and use it in any component we like. Don’t forget 
 
 Here’s an example of how to add the entire mock recipes array to an attribute on state in a component:
 
-“`bash cat ./src/Recipe.js | sed ‘1,13!d’ “` “`javascript
-
+```javascript
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-:
 
 //Import of our Mock Data
 import recipes from './store/recipes'
-:
 
-```jsx
 class Recipe extends Component {
   constructor(props){
     super(props)
