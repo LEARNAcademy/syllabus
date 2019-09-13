@@ -37,7 +37,7 @@ Notice all of those options above, they are very powerful, and you can use them 
 Create-react-app adds a testing file for you when you create the app.  Let's open it up, and see what it looks like
 
 #### /src/App.test.js
-```
+```javascript
 1  import React from 'react';
 2  import ReactDOM from 'react-dom';
 3  import App from './App';
@@ -51,12 +51,14 @@ Create-react-app adds a testing file for you when you create the app.  Let's ope
 1) We need to load the react framework
 3) Here we import the App component, which we're going to test
 5) This is the first test.  Tests are meant to be as human readable as possible.  A test has the following structure:
-```
+
+```javascript
   it("<name of test>", ()=>{
     // Test Setup code
     // Optional expectations we can specify about our code
   })
 ```
+
 6) This line is setting up our test,  we're working with a real DOM here, actual HTML
 7) Finally, in this test, we render our component into the dom, and assure that it doesn't crash.
 
@@ -66,42 +68,48 @@ Create-react-app adds a testing file for you when you create the app.  Let's ope
 
 Jest is pretty easy to use, but adding Enzyme and react-test-renderer makes working with React components even better.  First, lets' add them to our package.json file:
 
-```
+```bash
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
 
 Now that we've done that, we have some great tools to inspect the rendered HTML of our application.  Currently, our App.js file looks like this:
 
 #### /src/App.js
-```
-import React, { Component } from 'react';
+
+```javascript
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-      </div>
-    );
-  }
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
 ```
 
 ### Writing a new Test
-Imagine that we want to change the ```<h2>``` text to read "Welcome to LEARN".  Let's rewrite our test file with a test to check for that, then we'll update the code to make it pass. (that's TDD!)
+Imagine that we want to change the ```<p>``` text to read "Welcome to LEARN".  Let's rewrite our test file with a test to check for that, then we'll update the code to make it pass. (that's TDD!)
 
 ### /src/App.test.js
-```
+```javascript
 1  import React from 'react';
 2  import ReactDOM from 'react-dom';
 3  import App from './App';
@@ -112,16 +120,16 @@ Imagine that we want to change the ```<h2>``` text to read "Welcome to LEARN".  
 9
 10 it('Renders a LEARN welcome', ()=>{
 11   const app = mount(<App />)
-12   expect(app.find('h2').text()).toEqual('Welcome to LEARN')
+12   expect(app.find('p').text()).toEqual('Welcome to LEARN')
 13 })
 ```
 ** Note: We removed the default test that create-react-app provided, as its not very useful once we're writing our own tests
 
 4) Notice on line 4, we import 'mount' from Enzyme.
 6) Here we use mount to instantiate an instance of our App component.
-7) Here's the magic of Enzyme, we can call ```app.find('h2')``` to inspect the dom, and find our element.
+7) Here's the magic of Enzyme, we can call ```app.find('p')``` to inspect the dom, and find our element.
    Also notice the syntax of an expectation.
-   ```
+   ```javascript
     expect(<one thing>).toEqual(<another thing>)
    ```
    In this case, we're expecting the things to be the same.  We could expect them to be differnt, greater than, or any host of other tests.
@@ -129,7 +137,7 @@ Imagine that we want to change the ```<h2>``` text to read "Welcome to LEARN".  
 ### Failing test output
 Notice the running test command you have,  It has notice that we made a code change, and re-run our test for us.  ... And we have a failing test!  This is a very good thing, as we know what we now need to do to our code.
 
-![failing-test](https://s3.amazonaws.com/learn-site/curriculum/testing-react/failing-test.png)
+![failing-enzyme-test](../../assets/cat-tinder/failing-enzyme-test.png)
 
 ### Getting our test GREEN
 
@@ -138,13 +146,16 @@ Our test lets us know exactly what we need to do to get it to pass, so let's do 
 #### /src/App.js
 ```
   // Change this:
-  <h2>Welcome to React</h2>
+  <p>
+    Edit <code>src/App.js</code> and save to reload.
+  </p>
 
-  // To This:
-  <h2>Welcome to LEARN</h2>
+  <p>
+    Welcome to LEARN
+  </p>
 ```
 
-![green](https://s3.amazonaws.com/learn-site/curriculum/testing-react/green.png)
+![passing-enzyme-test](../../assets/cat-tinder/passing-enzyme-test.png)
 
 ## Jest Matchers
 

@@ -12,21 +12,22 @@ We're going to use a mock again to store our Recipe data.  Eventually we'd want 
 ```bash
 cat ./src/store/recipes.js
 ```
+
 ```javascript
-: const recipes = [
-:   {
-:     id: 1,
-:     name: 'Mac & cheese',
-:     instructions: 'Cook the noodles, then add the cheese.'
-:   },
-:   {
-:     id: 2,
-:     name: 'Tofu Burger',
-:     instructions: 'Thaw the frozen Tofu Burger,  and grill for 10 minutes.'
-:   }
-: ]
-:
-: export default recipes
+const recipes = [
+  {
+    id: 1,
+    name: 'Mac & cheese',
+    instructions: 'Cook the noodles, then add the cheese.'
+  },
+  {
+    id: 2,
+    name: 'Tofu Burger',
+    instructions: 'Thaw the frozen Tofu Burger,  and grill for 10 minutes.'
+  }
+]
+
+export default recipes
 ```
 
 ## Dynamic Routes Defined
@@ -77,55 +78,55 @@ Here's App.js, with some dynamic Links added to the nav, and their corresponding
 cat -n src/App.js
 ```
 ```javascript
-:      1	import React, { Component } from 'react';
-:      2	import {
-:      3	  BrowserRouter as Router,
-:      4	  Link,
-:      5	  Route,
-:      6	  Switch
-:      7	} from "react-router-dom";
-:      8
-:      9	import recipes from './store/recipes'
-:     10	import Recipe from './pages/Recipe'
-:     11
-:     12	class App extends Component {
-:     13	  constructor(props){
-:     14	    super(props)
-:     15	    this.state = {
-:     16	      recipes: recipes
-:     17	    }
-:     18	  }
-:     19	  render() {
-:     20	    const{ recipes } = this.state
-:     21
-:     22	    return (
-:     23	      <Router>
-:     24	        <div>
-:     25	          <nav>
-:     26	            <h2>Recipes</h2>
-:     27	            <ul>
-:     28	              {recipes.map((recipe)=>
-:     29	                <li>
-:     30	                  <Link to={`/recipe/${recipe.id}`}>
-:     31	                    {recipe.name}
-:     32	                  </Link>
-:     33	                </li>
-:     34	              )}
-:     35	            </ul>
-:     36	          </nav>
-:     37	          <Switch>
-:     38	            <Route
-:     39	              path="/recipe/:id"
-:     40	              component={Recipe}
-:     41	            />
-:     42	          </Switch>
-:     43	        </div>
-:     44	      </Router>
-:     45	    );
-:     46	  }
-:     47	}
-:     48
-:     49	export default App;
+1	import React, { Component } from 'react';
+2	import {
+3	  BrowserRouter as Router,
+4	  Link,
+5	  Route,
+6	  Switch
+7	} from "react-router-dom";
+8
+9	import recipes from './store/recipes'
+10	import Recipe from './pages/Recipe'
+11
+12	class App extends Component {
+13	  constructor(props){
+14	    super(props)
+15	    this.state = {
+16	      recipes: recipes
+17	    }
+18	  }
+19	  render() {
+20	    const{ recipes } = this.state
+21
+22	    return (
+23	      <Router>
+24	        <div>
+25	          <nav>
+26	            <h2>Recipes</h2>
+27	            <ul>
+28	              {recipes.map((recipe)=>
+29	                <li>
+30	                  <Link to={`/recipe/${recipe.id}`}>
+31	                    {recipe.name}
+32	                  </Link>
+33	                </li>
+34	              )}
+35	            </ul>
+36	          </nav>
+37	          <Switch>
+38	            <Route
+39	              path="/recipe/:id"
+40	              component={Recipe}
+41	            />
+42	          </Switch>
+43	        </div>
+44	      </Router>
+45	    );
+46	  }
+47	}
+48
+49	export default App;
 ```
 
 The first thing to notice here is that we're down to exactly one route to handle all of our Recipes.  There could be 1, there could be 1 million, all we need is a single route.  Pretty cool!  Let's take a closer look at that code:
@@ -133,31 +134,35 @@ The first thing to notice here is that we're down to exactly one route to handle
 ```bash
 cat -n src/App.js |sed '37,42!d'
 ```
+
 ```html
-:     37	          <Switch>
-:     38	            <Route
-:     39	              path="/recipe/:id"
-:     40	              component={Recipe}
-:     41	            />
-:     42	          </Switch>
+37	          <Switch>
+38	            <Route
+39	              path="/recipe/:id"
+40	              component={Recipe}
+41	            />
+42	          </Switch>
 ```
+
 If we were to translate line 39 into plain english, it would read something like, "For any URL that begins with '/recipe/' and ends with a value, this Route matches, additionally, pass the ending value to the page component."
 
 Finishing up App.js, we notice that the links in the nav loop over all the recipes from our mock data (and eventually real data) and construct the proper link.  Our UI is now completly flexible and able to accomodate whatever data we recieve from the backend api.
+
 ```bash
 cat -n src/App.js | sed '26,35!d'
 ```
+
 ```html
-:     26	            <h2>Recipes</h2>
-:     27	            <ul>
-:     28	              {recipes.map((recipe)=>
-:     29	                <li>
-:     30	                  <Link to={`/recipe/${recipe.id}`}>
-:     31	                    {recipe.name}
-:     32	                  </Link>
-:     33	                </li>
-:     34	              )}
-:     35	            </ul>
+26	            <h2>Recipes</h2>
+27	            <ul>
+28	              {recipes.map((recipe)=>
+29	                <li>
+30	                  <Link to={`/recipe/${recipe.id}`}>
+31	                    {recipe.name}
+32	                  </Link>
+33	                </li>
+34	              )}
+35	            </ul>
 ```
 
 ## Recipe Detail Page
@@ -174,24 +179,25 @@ After a careful read of the [React docs on components](https://reactjs.org/docs/
 ```bash
 cat -n src/pages/Recipe.js |sed '7,23!d'
 ```
+
 ```javascript
-:      7	class Recipe extends Component {
-:      8	  constructor(props){
-:      9	    super(props)
-:     10	    const{ match } = props
-:     11
-:     12	    this.state={
-:     13	      recipeId: match.params.id
-:     14	    }
-:     15	  }
-:     16
-:     17	  componentDidUpdate(prevProps){
-:     18	    const prevMatch = prevProps.match
-:     19	    const{ match } = this.props
-:     20	    if(match.params.id != prevMatch.params.id){
-:     21	      this.setState({recipeId: match.params.id})
-:     22	    }
-:     23	  }
+7	class Recipe extends Component {
+8	  constructor(props){
+9	    super(props)
+10	    const{ match } = props
+11
+12	    this.state={
+13	      recipeId: match.params.id
+14	    }
+15	  }
+16
+17	  componentDidUpdate(prevProps){
+18	    const prevMatch = prevProps.match
+19	    const{ match } = this.props
+20	    if(match.params.id != prevMatch.params.id){
+21	      this.setState({recipeId: match.params.id})
+22	    }
+23	  }
 ...
 ```
 The constructor hooks into the components lifecycle before the component is placed on the page the first time.
@@ -203,49 +209,50 @@ We've now assigned the ID of our object to state, and we're ready to lookup the 
 ```bash
 cat -n src/pages/Recipe.js
 ```
+
 ```javascript
-:      1	import React, { Component } from 'react'
-:      2	import ReactDOM from 'react-dom'
-:      3
-:      4	//Our Mock Datastore
-:      5	import recipes from '../store/recipes'
-:      6
-:      7	class Recipe extends Component {
-:      8	  constructor(props){
-:      9	    super(props)
-:     10	    const{ match } = props
-:     11
-:     12	    this.state={
-:     13	      recipeId: match.params.id
-:     14	    }
-:     15	  }
-:     16
-:     17	  componentDidUpdate(prevProps){
-:     18	    const prevMatch = prevProps.match
-:     19	    const{ match } = this.props
-:     20	    if(match.params.id != prevMatch.params.id){
-:     21	      this.setState({recipeId: match.params.id})
-:     22	    }
-:     23	  }
-:     24
-:     25	  render() {
-:     26	    const{ recipeId } = this.state
-:     27	    const recipe = recipes.find((r)=> r.id == recipeId)
-:     28
-:     29	    return(
-:     30	      <div>
-:     31	        {recipe &&
-:     32	          <div>
-:     33	            <h1>{recipe.name}</h1>
-:     34	            <p>{recipe.instructions}</p>
-:     35	          </div>
-:     36	        }
-:     37	      </div>
-:     38	    )
-:     39	  }
-:     40	}
-:     41
-:     42	export default Recipe
+1	import React, { Component } from 'react'
+2	import ReactDOM from 'react-dom'
+3
+4	//Our Mock Datastore
+5	import recipes from '../store/recipes'
+6
+7	class Recipe extends Component {
+8	  constructor(props){
+9	    super(props)
+10	    const{ match } = props
+11
+12	    this.state={
+13	      recipeId: match.params.id
+14	    }
+15	  }
+16
+17	  componentDidUpdate(prevProps){
+18	    const prevMatch = prevProps.match
+19	    const{ match } = this.props
+20	    if(match.params.id != prevMatch.params.id){
+21	      this.setState({recipeId: match.params.id})
+22	    }
+23	  }
+24
+25	  render() {
+26	    const{ recipeId } = this.state
+27	    const recipe = recipes.find((r)=> r.id == recipeId)
+28
+29	    return(
+30	      <div>
+31	        {recipe &&
+32	          <div>
+33	            <h1>{recipe.name}</h1>
+34	            <p>{recipe.instructions}</p>
+35	          </div>
+36	        }
+37	      </div>
+38	    )
+39	  }
+40	}
+41
+42	export default Recipe
 ```
 
 
