@@ -230,8 +230,8 @@ cat -n src/pages/Recipe.js
 17	  componentDidUpdate(prevProps){
 18	 
 19	    
-20	    if(props.match.params.id != prevProps.params.id){
-21	      this.setState({recipeId: props.match.params.id})
+20	    if(this.props.match.params.id != prevProps.params.id){
+21	      this.setState({recipeId: this.props.match.params.id})
 22	    }
 23	  }
 24
