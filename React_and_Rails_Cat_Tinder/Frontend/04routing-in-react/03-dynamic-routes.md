@@ -192,10 +192,10 @@ cat -n src/pages/Recipe.js |sed '7,23!d'
 15	  }
 16
 17	  componentDidUpdate(prevProps){
-18	    const prevMatch = prevProps.match
+18	  
 19	    
-20	    if(props.match.params.id != prevMatch.params.id){
-21	      this.setState({recipeId: props.match.params.id})
+20	    if(this.props.match.params.id != prevProps.match.params.id){
+21	      this.setState({recipeId: this.props.match.params.id})
 22	    }
 23	  }
 ...
@@ -228,9 +228,9 @@ cat -n src/pages/Recipe.js
 15	  }
 16
 17	  componentDidUpdate(prevProps){
-18	    const prevMatch = prevProps.match
+18	 
 19	    
-20	    if(props.match.params.id != prevMatch.params.id){
+20	    if(props.match.params.id != prevProps.params.id){
 21	      this.setState({recipeId: props.match.params.id})
 22	    }
 23	  }
