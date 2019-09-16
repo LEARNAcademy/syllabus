@@ -184,18 +184,18 @@ cat -n src/pages/Recipe.js |sed '7,23!d'
 7	class Recipe extends Component {
 8	  constructor(props){
 9	    super(props)
-10	    const{ match } = props
+10	  
 11
 12	    this.state={
-13	      recipeId: match.params.id
+13	      recipeId: props.match.params.id
 14	    }
 15	  }
 16
 17	  componentDidUpdate(prevProps){
 18	    const prevMatch = prevProps.match
-19	    const{ match } = this.props
-20	    if(match.params.id != prevMatch.params.id){
-21	      this.setState({recipeId: match.params.id})
+19	    
+20	    if(props.match.params.id != prevMatch.params.id){
+21	      this.setState({recipeId: props.match.params.id})
 22	    }
 23	  }
 ...
@@ -220,18 +220,18 @@ cat -n src/pages/Recipe.js
 7	class Recipe extends Component {
 8	  constructor(props){
 9	    super(props)
-10	    const{ match } = props
+10	    
 11
 12	    this.state={
-13	      recipeId: match.params.id
+13	      recipeId: props.match.params.id
 14	    }
 15	  }
 16
 17	  componentDidUpdate(prevProps){
 18	    const prevMatch = prevProps.match
-19	    const{ match } = this.props
-20	    if(match.params.id != prevMatch.params.id){
-21	      this.setState({recipeId: match.params.id})
+19	    
+20	    if(props.match.params.id != prevMatch.params.id){
+21	      this.setState({recipeId: props.match.params.id})
 22	    }
 23	  }
 24
