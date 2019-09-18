@@ -85,7 +85,7 @@ console.log(createSentence("hello", "y'all", "what's", "up", "doc"))
 -->> "hello y'all what's up doc"
 ```
 
-For another example look at <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js">this </a> deduping function challenge refactored to make use of spread syntax.
+For another example look at <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js" target="_blank">this </a> deduping function challenge refactored to make use of spread syntax.
 
 ## Challenges
 
@@ -98,7 +98,7 @@ function combineArrays(arrOne, arrTwo) {
   return arrOne.concat(arrTwo)
 }
 
-console.log(combineArrays([2, 4, 2], [4, 6, 11])
+console.log(combineArrays([2, 4, 2], [4, 6, 11]))
 ```
 
 Refactor this function to use the spread operator to combine the arrays.
@@ -115,7 +115,7 @@ function combineAndFilterOdd(arrOne, arrTwo, arrThree){
 console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
 ```
 
-Refactor this function to uset the spread operator to combine the array arguments.
+Refactor this function to use the spread operator to combine the array arguments.
 
 **STRETCH**
 
