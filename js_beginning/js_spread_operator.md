@@ -18,7 +18,9 @@ Historically when we wanted to concatenate 2 arrays ( join 2 arrays) we had to u
 var arr1 = [0, 1, 2]
 var arr2 = [3, 4, 5]
 
-arr1 = arr1.concat(arr2) -->> [0, 1, 2, 3, 4, 5]
+var combined = arr1.concat(arr2) -->> [0, 1, 2, 3, 4, 5]
+
+console.log(combined)
 ```
 
 While that wasn't terrible to use, we now have ability to use the spread operator to accomplish the same task:
@@ -29,7 +31,8 @@ While that wasn't terrible to use, we now have ability to use the spread operato
 var arr1 = [0, 1, 2]
 var arr2 = [3, 4, 5]
 
-arr1 = [...arr1, ...arr2]
+var combined = [...arr1, ...arr2]
+console.log(combined)
 ```
 
 Notice the result is more declarative and more readable.
