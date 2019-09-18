@@ -142,7 +142,7 @@ let author = {
 Write the code that destructures the author object and makes the following work:
 
 ```javascript
-console.log(`${name} is a ${genre} author`) //-->> "H. G. Wells is a science fiction writer"
+console.log(`${name} is a ${genre} author`) //-->> "H. G. Wells is a science fiction author"
 ```
 
 #### Exercise 2
