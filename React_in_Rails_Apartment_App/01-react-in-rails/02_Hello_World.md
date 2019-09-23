@@ -22,8 +22,14 @@ $ cd hello_world
 ```
 
 2) Add the React Gems
+
+For Rails 5.3 and below:
 ```bash
 $ bundler add webpacker
+```
+
+```bash
+ 
 $ bundler add react-rails
 $ bundle install
 ```
