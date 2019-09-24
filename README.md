@@ -156,7 +156,7 @@ Using React and Rails to create an asynchronous full stack application with test
 1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
 2) [Devise](./React_in_Rails_Apartment_App/02-authorization-and-authentication/README.md)
 3) [Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
-4) [Apartment App](https://classroom.github.com/a/2j-YvRO4)(Multi Day Exercise)
+4) [Apartment App](https://github.com/learn-academy-2019-delta/exercise-apartment-app)(Multi Day Exercise)
 
 ## Unit Ten: Capstone Project, Week 1
 1) [ActiveStorage](./Rails_ActiveStorage/README.md)
