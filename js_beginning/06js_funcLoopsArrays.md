@@ -142,29 +142,22 @@ DON'T FORGET TO PSEUDO CODE
 * 13 ➞ 91
 * 600 ➞ 180300
 
-7. Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
-
-* ([1, 2, 3, 4, 5]) ➞ [1, 5]
-* ([2334454, 5]) ➞ [5, 2334454]
-* ([1]) ➞ [1, 1]
-
-
-
 
 
 ### Super Stretch Challenge
 
 #### High/Low Game
 * Create an HTML page and link your JavaScript file
+* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
 * Create a function that plays the following game: The computer picks a secret random integer between 1 and 100 (both inclusive), and asks the user to guess a number HINT: use prompt(), OR `<input>`
 * If the user's guess is too high, the user will be notified
 * If the user's guess is too low, the user will be notified
 * If the user guesses the secret number correctly, a winning message will be displayed HINT: use alert() OR `innerHTML`
-* Stretch: If the user has not guessed the secret number in seven tries, a losing message will be displayed
-* Stretch: Add styling to your page and push it to a GitHub repository
+* STRETCH: If the user has not guessed the secret number in seven tries, a losing message will be displayed
+* STRETCH: Add styling to your page and push it to a GitHub repository
 
 
-[Go to next lesson: Javascript ES6](../js_intermediate/01js_es6_syntax.md)
+[Go to next lesson: Higher Order Functions](../js_intermediate/02js_higher_order_functions.md)
 
 [Back to Javascript Functions](./03js_functions.md)
 

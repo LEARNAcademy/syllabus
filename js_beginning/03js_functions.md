@@ -1,4 +1,3 @@
-
 # Intro to Functions
 ## Lecture
 
@@ -63,7 +62,6 @@ function greeting(name) {
 console.log(greeting("Sally"))
 
 output >> Hello Sally
-
 ```
 
 Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.  
@@ -105,9 +103,9 @@ Now lets build the actual code around the pseudo code.
 ```JavaScript
 //create a function called old_enough
 //takes in 1 number as an arguments
-function old_enough(number){
+function old_enough(age){
     //if number is less than 21 return 'can not drink'(if/else statement)
-    if(number < 21){
+    if(age < 21){
         return "Can not drink"
     //otherwise return 'allowed to drink'
     } else {
