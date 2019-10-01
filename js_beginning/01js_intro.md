@@ -11,14 +11,13 @@ JavaScript takes in information in a very specific way. JS is a loosely typed la
 ## Primitive Data Types
 
 The basic data types are:
-<ul>
-<li>Number</li>
-<li>String</li>
-<li>Boolean</li>
-<li>Undefined</li>
-<li>Null</li>
-<li>Symbol</li>
-</ul>
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+
 
 ### Numbers
 
@@ -200,10 +199,7 @@ b                   -> "world"
 c                   -> "hello world"
 ```
 
-
-
 We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
-
 
 
 ## Challenges
@@ -212,40 +208,27 @@ Open up a JS file in atom, run your program in terminal with node.
 
 #### Arithmetic Challenge
 
-<ul>
-<li>Add, subtract, multiple, and divide integers and floats</li>
-<li>Find the remainder of 33/6</li>
-<li>Calculate 5 to the power of 7</li>
-</ul>
+- Add, subtract, multiple, and divide integers and floats
+- Find the remainder of 33/6
+- Calculate 5 to the power of 7
 
 #### String Challenge
 
-<ul>
-<li>Find the length of a string containing your name</li>
-<li>Does your string include the letter "e"?</li>
-<li>Concat two strings and find the length</li>
-</ul>
-
+- Find the length of a string containing your name
+- Does your string include the letter "e"?
+- Concat two strings and find the length
 
 ### Variables Challenge
 
-<ul>
-<li>Set a variable called favNum equal to your favorite number</li>
-<li>What is your favorite number divided by 2?</li>
-<li>Set another variable called otherNum equal to 13</li>
-<li>Divide favNum by otherNum</li>
-<li>Is otherNum greater than favNum?</li>
-</ul>
+- Set a variable called favNum equal to your favorite number
+- What is your favorite number divided by 2?
+- Set another variable called otherNum equal to 13
+- Divide favNum by otherNum
+- Is otherNum greater than favNum?
 
-<ul>
-<li>Save a string as a variable</li>
-<li>Find the length of the string</li>
-<li>Use the method charAt() to find what letter is at the 3rd index</li>
-</ul>
-
-<ul>
-<li>Try combining different data types to see what happens</li>
-</ul>
+- Save a string as a variable
+- Find the length of the string
+- Use the method charAt() to find what letter is at the 3rd index
 
 [Go to next lesson: Javascript Conditionals](./02js_conditions.md)
 
