@@ -1,7 +1,7 @@
 # Testing Javascript with Jest
 
 
-[![YouTub](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)
+[![YouTube](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)
 ]
 
 ## Why Test?
@@ -9,9 +9,9 @@
 * helps avoid feature creep - stay focused on essential piece of the program
 * keeps you focused on the current objective
 * closer to 100% test coverage
-* tests can save you time in the end (deployed app that breaks with no tests - could be hard to pinpoint problem.)
+* tests can save you time in the end (deployed app that breaks with no tests - could be hard to pinpoint problems)
 
-** "Red, Green, Refactor" **
+**"Red, Green, Refactor"**
 1.  Write the test first
 2.  Make it fail (red)
 3.  Write the code
@@ -20,10 +20,9 @@
 
 
 
+**Unit or Functional** = smallest  -  just testing functions
 
-** Unit or Functional** = smallest  -  just testing functions
-
-** Integration Testing** is testing how everything is interacting with each other  (rails api)
+**Integration Testing** is testing how everything is interacting with each other (rails api)
 
 
 ## What Does Testing Syntax Look Like with Jest?
@@ -200,8 +199,8 @@ Here's the function that would make this test pass.
 
 ```javaScript
 const addGranola = (arr1) => {
-    var arr2 = arr1.concat("granola")
-    return arr2
+  let arr2 = arr1.concat("granola")
+  return arr2
 }
 
 ```
@@ -231,7 +230,7 @@ Jest will run the code on that file.  Your test will fail (Red).
 
 Now Build your function that satisfies your test and run yarn jest again.  Your test should now pass!(Green)
 
-## Exercises
+## Challenges
 
 Use the following exercises to **write your test first**, make it fail(red), then write your function on the same file below the test and make it pass(green). You can put all of these challenges (tests and functions) on one file.
 
@@ -251,22 +250,15 @@ Use the following exercises to **write your test first**, make it fail(red), the
 
 8) Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen. Write the function and make the test pass.
 
-
 9) Write the test for a function called oddOrEven that takes an number as an argument and logs whether the number is odd or even. Write the function and make the test pass.
-
 
 10) Write the test for a function called double that takes an number as an argument and returns the result of that number multiplied by 2. Write the function and make the test pass.
 
-
 11) Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other. Write the function and make the test pass.
-
 
 12) Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5". Write the function and make the test pass.
 
-
-13) Consider this variable:
-var product = { name: "chair", price: 14.99 }
-Write the test for a function called describeProduct takes product as an argument and returns "The product is a chair. It costs $14.99". Write the function and make the test pass.
+13) Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'. Write the function and make the test pass.
 
 [Go to next lesson: Javascript Higher Order Functions](./02js_higher_order_functions.md)
 
