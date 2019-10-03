@@ -94,7 +94,7 @@ Here's what the pseudo code might look like:
 
 //takes in 1 number as an arguments
 
-//if number is less than 21 retun 'can not drink' (if/else statment)
+//if number is less than 21 return 'can not drink' (if/else statement)
 
 //otherwise return 'allowed to drink'
 ```
@@ -127,9 +127,9 @@ output -> "Can not drink"
 
 ## Verify
 
-Notice that we called 'old_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.  
+Notice that we called 'old_enough' several times using different test cases. You'll want to verify that your function is working by testing it with many different arguments.  
 
-## Console.log  vs  Return
+## Console.log  vs  return
 Notice that we can call console.log as many times as we want and we can even call console.log inside functions like this...
 
 ```JavaScript
