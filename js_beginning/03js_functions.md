@@ -180,7 +180,7 @@ Write a function named greaterNum that:
 
 Write a function named helloWorld that:
 * takes 1 argument, a language code (e.g. "es", "de", "en")
-* returns "Hello, World" for the given language, for at least 3 languages. It should default to returning English.
+* returns "Hello, World" for the given language, for at least 3 languages. It should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
 * Test the function for each of the supported languages
 
 #### The Grade Assigner
@@ -193,7 +193,7 @@ Write a function named assignGrade that:
 #### The Pluralizer
 
 Write a function named pluralize that:
-* takes 2 arguments, a noun and a number.
+* takes 2 arguments, a number and a singular noun.
 * returns the number and pluralized form of the noun, if necessary.
 
 ``` pluralizer(5, cat) ``` should return "5 cats"
