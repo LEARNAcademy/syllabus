@@ -55,7 +55,7 @@ import React, { Component } from 'react';
 class App extends Component{
   render(){
     return (
-      <h1>A Functional Component</h1>
+      <h1>A Class Based Component</h1>
     );
   }
 }
