@@ -30,7 +30,42 @@ After you type `yarn start` you will notice your terminal is busy running React.
 
 ## Modifying The App component
 
+We're going to use a Class based component in class instead of the functional one that comes pre-built for us in App.js.  Converting between the two is a matter of applying the formula below.  Once you're familiar with the conversion of this simple component, we can look at applying the same steps to ```src/App.js``` in our new project.
+
+### Going from functional to class components
+
+A very basic functional component looks something like this:
+
+```javascript
+import React from 'react';
+
+function App() {
+  return (
+    <h1>A Functional Component</h1>
+  );
+}
+
+export default App;
+```
+
+The equivalent class based component:
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component{
+  render(){
+    return (
+      <h1>A Functional Component</h1>
+    );
+  }
+}
+
+export default App;
+```
+
 #### src/App.js
+
+Below is ```/src/App.js``` converted to a class based component.  We've added some comments describing what each line is doing.
 
 ```javascript
 // We're using React and Component from the react library
@@ -84,8 +119,8 @@ class App extends Component {
 export default App;
 ```
 
-Edit this file to make it our own, and save it.  The browser will reload
-showing our changes. We'll remove all of the boilerplate that we got for
+Edit your own ```/src/App.js``` to make it your own, and save it.  The browser will reload
+showing the changes. We'll remove all of the boilerplate that we got for
 free when we ran 'create-react-app'
 
 ```javascript
