@@ -7,7 +7,7 @@ Up until late 2016, the hardest part about working with React was just getting a
 ## create-react-app
 Use Yarn to install the `create-react-app` followed by the name of your application, so we can build our first React app.
 ```
-$ yarn global add create-react-app
+$ npm install -g create-react-app
 $ create-react-app sample-app
 ```
 
