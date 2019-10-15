@@ -156,8 +156,19 @@ export default App;
 - What does pure vs impure mean?
 - In our implementation is GreetingInput a pure or impure component?
 
-## Exercise
+## Exercise - Robot
 
 - Create the following page as a set of React components. When you type in the text box, it should update all 3 result labels
 
 ![Active Listening Robot Challenge](../assets/robot_active_listening.png)
+
+## Exercise 2 - Mad Libs
+Create a Madlibs game based on the following wireframe and user stores
+
+![Mad Libs](../assets/madlibs.png)
+
+### Stories
+* As a user, When I first go to the app, I should not see an incomplete story.
+* As a user, I should be presented with a list of nouns, pronouns, verbs, adjectives, and adjectives to fill in.
+* As a user, when I click the 'Submit' button, I should see a unique story based on the words I've filled in.
+* As a user, when I click the 'Clear' button, I should see the story reset to empty.
