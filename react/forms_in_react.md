@@ -64,7 +64,7 @@ class App extends Component {
     }
   }
 
-  updateGreeting(e){
+  updateGreeting = (e) => {
     this.setState({greeting: e.target.value})
   }
 
@@ -75,7 +75,7 @@ class App extends Component {
           <Header greeting={this.state.greeting} />
         </div>
         <div>
-          <input value={this.state.greeting} onChange={this.updateGreeting.bind(this)} />
+          <input value={this.state.greeting} onChange={this.updateGreeting} />
         </div>
       </div>
     );
@@ -98,13 +98,13 @@ As our app grows, we'll likely want to move the `<input>` into its own component
 import React, { Component } from 'react';
 
 class GreetingInput extends Component {
-  handleChange(e){
+  handleChange = (e) => {
     this.props.updateGreeting(e.target.value)
   }
 
   render() {
     return (
-      <input value={this.props.greeting} onChange={this.handleChange.bind(this)} />
+      <input value={this.props.greeting} onChange={this.handleChange} />
     );
   }
 }
@@ -129,7 +129,7 @@ class App extends Component {
     }
   }
 
-  updateGreeting(greeting){
+  updateGreeting = (greeting) => {
     this.setState({greeting: greeting})
   }
   render() {
@@ -139,7 +139,7 @@ class App extends Component {
           <Header greeting={this.state.greeting} />
         </div>
         <div>
-          <GreetingInput greeting={this.state.greeting} updateGreeting={this.updateGreeting.bind(this)} />
+          <GreetingInput greeting={this.state.greeting} updateGreeting={this.updateGreeting} />
         </div>
       </div>
     );
