@@ -41,10 +41,21 @@ In the controller's `create` method, we can see that this list is referenced whe
 
 ```ruby
 def create
-    @contact = Contact.new(contact_params)
-	...
+    @contact = Contact.create(contact_params)
 end
 ```
+
+Or alternatively
+
+```ruby
+def create
+    @contact = Contact.new(contact_params)
+    ...
+    @contact.save
+end
+```
+
+`.new` will create a new object, while `.create` will create it and save it to the database. If you use `.new`, you need to follow up with `.save` for it to actually be saved. If you have actions you wish to do before putting the object into the database, consider using `.new` instead.
 
 ## Strong params in the form
 
