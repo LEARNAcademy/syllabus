@@ -359,10 +359,10 @@ Write the code that makes a double shot hazelnut latte with almond milk. Then, l
 
 #### Exercise 8
 
-Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
+Write a class that accepts a product and budget in its constructor.  Add a function that determines if the product is under the budget, and displays the appropriate message:
 
 * "This product is in budget."
-* "This product is beyond budget."
+* "This product is over budget."
 
 Here is some sample data:
 ```javascript
@@ -419,7 +419,7 @@ Extend your shopping cart program by creating a new class called 'CartItem', and
 #### SUPER STRETCH
 
 #### Exercise 11
-Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
+Write a program that has accessors to return a list of books sorted by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
 
 Hint:  Research alpha and numeric sorting in javascript.
 
