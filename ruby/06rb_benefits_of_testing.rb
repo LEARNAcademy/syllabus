@@ -1,4 +1,4 @@
-# Test Driven Development
+# TEST DRIVEN DEVELOPMENT BENEFITS
 
 ## Objectives
 
@@ -26,28 +26,3 @@ In short, there is no end to the winning when you write tests for your code.  Yo
 * Less Bugs
 * Confidence when you refactor
 * Help your job hunt
-
-## What is TDD
-
-### TDD VS BDD
-### [Youtube Video about TDD vs BDD](https://www.youtube.com/embed/fsSMuqIpu_c?ecver=2)
-
-
-
-
-
-### TDD In Depth
-### [Youtube video about TDD](https://www.youtube.com/embed/H4Hf3pji7Fw?ecver=2)
-
-
-### Uncle Bob
-Here is a discussion lead by Robert Martin, also known as "Uncle Bob".  He's a legend in the programming world who has written extensively about software design and architecture.  This video is just a small taste of his work.  I encourage you to seek out his videos and books as you dive deeper into software.
-
-### [Video of Uncle Bob on TDD](https://www.youtube.com/embed/GvAzrC6-spQ?ecver=2)
-
-
-
-### Extra Credit
-Uncle Bob loves astronomy, and often uses it in his examples.  Are you wondering how the moon was formed?  If so, he'll explain that, and a lot about testing as well.
-
-### [Another Video with Uncle Bob, the moon and testing](https://www.youtube.com/embed/K7yR--yL0bc?ecver=2)
