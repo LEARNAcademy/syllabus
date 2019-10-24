@@ -1,6 +1,6 @@
-# BEHAVIOR DRIVEN DEVELOPMENT PROCESS
+# TEST DRIVEN DEVELOPMENT PROCESS
 
-### [Video of BDD with Rspec and Ruby](https://player.vimeo.com/video/168104193)
+### [Video of TDD/BDD with Rspec and Ruby](https://player.vimeo.com/video/168104193)
 
 The process to follow is:
 
