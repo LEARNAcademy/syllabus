@@ -33,8 +33,11 @@ class Person
   end
 
 end
+```
+
 Then you can create a new instance of the Person class. You create a new instance of a class with .new.
 
+```ruby
 a_person = Person.new()
 a_person.set_given_name('Bilbo')
 ```
