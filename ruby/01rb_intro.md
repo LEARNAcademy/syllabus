@@ -99,7 +99,7 @@ The string "hello" knows when the upcase method is called on it, it needs to cha
 
 
 RUBY STYLE GUIDE
-Correct styling conventions for Ruby made for code that is easy to read. You can find a maintained Ruby Styling Guide here: Ruby Styling Guide.
+Correct styling conventions for Ruby made for code that is easy to read. You can find a maintained Ruby Styling Guide here: [Ruby Styling Guide.](https://rubystyle.guide/)
 
 ## Ruby Data Types
 Numbers
