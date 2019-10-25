@@ -22,8 +22,14 @@ $ cd hello_world
 ```
 
 2) Add the React Gems
+
+For Rails 5.3 and below:
 ```bash
 $ bundler add webpacker
+```
+
+```bash
+ 
 $ bundler add react-rails
 $ bundle install
 ```
@@ -35,7 +41,7 @@ $ rails webpacker:install:react
 $ rails generate react:install
 ```
 
-4) Add Webpack to the Rails Application Layout (/app/views/layouts/application.html.erb)
+4) Add Webpack to the Rails Application Layout if it is not already there (Rails 5.3 and below) (/app/views/layouts/application.html.erb)
 ```html
 <%= javascript_pack_tag 'application' %>
 ```
