@@ -1,4 +1,3 @@
-
 # Intro to Functions
 ## Lecture
 
@@ -62,7 +61,6 @@ greeting = (name) => {
 console.log(greeting("Sally"))
 
 output >> Hello Sally
-
 ```
 
 Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.
@@ -148,7 +146,7 @@ output -> "Can not ride rollercoaster"
 
 Notice that we called 'tall_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.
 
-## Console.log  vs  Return
+## Console.log  vs  return
 Notice that we can call console.log as many times as we want and we can even call console.log inside functions like this...
 
 ```JavaScript
@@ -199,7 +197,7 @@ Write a function named greaterNum that:
 
 Write a function named helloWorld that:
 * takes 1 argument, a language code (e.g. "es", "de", "en")
-* returns "Hello, World" for the given language, for at least 3 languages. It should default to returning English.
+* returns "Hello, World" for the given language, for at least 3 languages. It should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
 * Test the function for each of the supported languages
 
 #### The Grade Assigner
@@ -212,7 +210,7 @@ Write a function named assignGrade that:
 #### The Pluralizer
 
 Write a function named pluralize that:
-* takes 2 arguments, a noun and a number.
+* takes 2 arguments, a number and a singular noun.
 * returns the number and pluralized form of the noun, if necessary.
 
 ``` pluralizer(5, cat) ``` should return "5 cats"

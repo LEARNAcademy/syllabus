@@ -63,11 +63,12 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 2. [Ruby Conditions](./ruby/02rb_cond_methods_loops_hashes.md)
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
-5. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
-6. [Ruby BDD and TDD](./ruby/08rb_testing.md)
-7. [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
-8. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
-
+5. [Objects and Beyond, Car Challenge](./ruby/05_objects_and_beyond.md)
+6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
+7. [Ruby TDD](./ruby/08rb_testing.md)
+8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
+9. [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
+10. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
 
 ## Unit Five: Ruby on Rails and Postgres
 
@@ -90,7 +91,6 @@ Additional Topics:
 [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
-
 1. [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
 2. [Challenge: Active Record Tasks](./Rails-M/03rails_active_record_tasks.md)
 3. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
@@ -98,9 +98,12 @@ Additional Topics:
 3. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 7. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8. [Strong Params](./Rails-M/08rails_strong_parameters.md)
-9. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
-10. [Intro to Fetch](./Rails-M/10using_fetch.md)
-
+9. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
+10. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+11. [Intro to Fetch](./Rails-M/10using_fetch.md)
+12. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
+13. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
+14. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 Additional Topics:
 - [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
@@ -108,6 +111,7 @@ Additional Topics:
 - [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
 - [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
+- [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
 
 ## Unit Seven: Professional Development Week
 

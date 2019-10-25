@@ -1,12 +1,12 @@
+# RUBY CLASSES
 
-# RUBY CLASS
 In Ruby, all values are objects. Anything you have any way of referring to is an object.
 
-All objects in Ruby belong to a class. The class defines what it means to be that kind of thing, which is to say what the thing does.
+All objects in Ruby belong to a class. The class defines what it means to be that kind of "thing," which is to say what data and behavior are defined in the object.
 
 Note that this class concept is not (directly) related to JavaScript's class. A Ruby class is most similar in JavaScript to a prototype, but Ruby classes are a bit different.
 
-You can find out the class of something by calling its .class method.
+You can find out the class of something by calling the .class method.
 
 ```RUBY
 > 1.class
@@ -17,9 +17,9 @@ You can find out the class of something by calling its .class method.
 # String
 ```
 
-The nice thing about Ruby's OOP capabilities is that they're deep and subtle and powerful and you can spend a lot of time getting really good at OOP and being able to do many amazing things. Yet for most purposes, you can stick to simple OOP features and get nearly anything done that you might want.
+The nice thing about Ruby's OOP (Object Oriented Programming) capabilities is that they're deep, subtle and powerful and you can spend a lot of time getting really good at OOP and being able to do many amazing things. Yet for most purposes, you can stick to simple OOP features and get nearly anything done that you might want.
 
-Making Your Own Class
+### Making Your Own Class
 Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular). This can be created in IRB.
 
 ```RUBY
@@ -28,41 +28,39 @@ class Person
     @given_name = name
   end
 
-  def get_given_name()
+  def get_given_name
     @given_name
   end
 
 end
-Then you can create a new instance of the Person class. You create a new instance of a class with .new.
+# Then you can create a new instance of the Person class. You create a new instance of a class with the .new method.
 
-a_person = Person.new()
+a_person = Person.new
 a_person.set_given_name('Bilbo')
 ```
 
-Then you can call the methods that have stored the names:
+Then you can call the method that contains the variable given_name:
 
 ```RUBY
-a_person.get_given_name()
+a_person.get_given_name
 # 'Bilbo'
 ```
 
-Instance Variables
-The variable starting with @ is an instance variable, meaning it belongs to the instance of Person.
-And each instance of Person has it's own set of instance variables independent of other Persons.
+### Instance Variables
+The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @given_name belongs to class Person. Each "instance" of the class Person has it's own set of instance variables independent of other Person objects.
 
-You can't just access an instance variable from outside of an object, as you can in JavaScript.
+You can't just access an instance variable from outside of an object, as you can with variables in JavaScript.
 
 ```RUBY
-> a_person.given_name
-NoMethodError: undefined method `given_name` for #<Person:0x007fec7287d9b0>
-> p.@given_name
-SyntaxError: (irb):60: syntax error, unexpected tIVAR, expecting '('
+irb(main):> a_person.given_name
+# returns an error
+NoMethodError (undefined method 'given_name' for #<Person:0x00007f812a1408b8 @given_name="Bilbo">)
 ```
 
-This is why we have written accessor methods - the get... and set... methods in my class. And remember that Ruby methods return the value of whatever they last did, which is how my get... methods work.
+This is why we have written accessor methods - the `get` and `set` methods in the class. Remember, Ruby methods return the value of whatever they last did, which is how the `get` methods work.
 
-Simplifying the Methods
-To keep things simple, I've written the accessor methods in a much more cumbersome way than you would normally do it in Ruby. First, it would clearly be nicer to be able to set a variable value using the same sort of syntax we would use in JavaScript:
+### Simplifying the Methods
+To keep things simple, here is the accessor methods in a much more cumbersome way than you would normally do it in Ruby. First, it would clearly be nicer to be able to set a variable value using syntax similar to JavaScript:
 
 ```RUBY
 a_person.given_name = 'Bilbo'
@@ -80,7 +78,7 @@ class Person
     @given_name
   end
 end
-This lets you write a_person.given_name = 'Baggins', which is interpreted as aPerson.given_name=("Baggins")
+# This lets you write a_person.given_name='Baggins', which is interpreted as aPerson.given_name=("Baggins")
 ```
 
 For example:
@@ -91,12 +89,12 @@ For example:
 # 'Bracegirdle'
 ```
 
-Initialization
+### Initialization
 Finally, you will often want to do something at the time an object is created. Perhaps it has a property that is an array, and you want to ensure that it always starts as an empty array.
 
 If you give your class an initialize method, it will get executed immediately when an instance of the class is created. And if it takes any arguments, you'll be required to give those when creating an instance.
 
-class with initialize:
+A class with an initialize method:
 
 ```RUBY
 class Jedi
@@ -109,18 +107,14 @@ class Jedi
     @title
   end
 end
-```
 
-Creating a new instance of the Jedi class, which immediately initializes an instance variable with an empty array, which can than have elements pushed to it:
-
-```RUBY
 > chosen_one = Jedi.new
 # #<Jedi:0x007fb532a24d30 @title="Knight">
 > chosen_one.title
 # "Knight"
 ```
 
-Another example with initialize for a one-to-many/has-many relationship:
+Creating a new instance of the Fruit class, which immediately initializes an instance variable with an empty array, which can than have elements pushed to it:
 
 ```RUBY
 class Fruit
@@ -133,59 +127,52 @@ class Fruit
     @vitamins
   end
 end
-New instance of the class:
 
-generic_fruit = Fruit.new
-# #<Fruit:0x007fb532acc120 @vitamins=[]>
-generic_fruit.vitamins        # No vitamins []
-generic_fruit.vitamins << "C"
-generic_fruit.vitamins << "D"
-generic_fruit.vitamins  # has two vitamins ["C", "D"]
+# New instance (object) of the class:
+apple = Fruit.new
+#<Fruit:0x007fb532acc120 @vitamins=[]>
+apple.vitamins        
+# Returns an empty array
+apple.vitamins << "C"
+apple.vitamins << "D"
+apple.vitamins  
+# returns an array with two items: ["C", "D"]
 ```
 
-One more Example, but this one is looking for an argument to be passed into it when it is initialized. So it gives an error of wrong number of arguments if one is not passed in.
+One more example, but this one is looking for an argument to be passed when the object is initialized. There will be an error if the `.new` method does not have an argument.
 
 ```RUBY
 class Animal
 
-  def initialize att
-    @attitude = att
+  def initialize tude
+    @attitude = tude
   end
 
   def attitude
     @attitude
   end
 end
-New instance of the class, which gives error.
 
-> kitten = Animal.new
-ArgumentError: wrong number of arguments (0 for 1)
-from (irb):77:in `initialize'
-from (irb):81:in `new'
-Correct instance of the class, with passing in 1 argument.
+# New instance of the class without an argument, which gives error:
+kitten = Animal.new
+# ArgumentError (wrong number of arguments (given 0, expected 1))
 
 > kitten = Animal.new :sweet
 # #<Baz:0x007fb5331de210 @attitude=:sweet>
 > kitten.attitude
 # :sweet
+> kitten = Animal.new 'sweet'
+# #<Baz:0x007fb5331de210 @attitude="sweet">
+> kitten.attitude
+# "sweet"
 ```
 
-# OBJECT ORIENTED PROGRAMMING IN RUBY
+## OBJECT ORIENTED PROGRAMMING IN RUBY
 We've been talking throughout this class about how everything in Ruby is an object, but it can be difficult to visualize what that means when it comes to building a program. Let's take a moment with your Car challenge to take apart how Ruby's object-oriented behavior actually impacts you as a programmer.
-
 
 **Given Classes**
 
-We've established everything in Ruby is an object; and just like real world objects you can make them do something; "." means calling a method on (doing something to) an object.
-
-Examples:
-
-```RUBY
-hello.length
-hello.upcase
-```
-
-Every object in Ruby belongs to a class: (another way of saying: each object is an instance of class). To find out what class an object is a part of you can call .class on any object and it will tell you. Once you know it is easy to Google the class of Ruby and see the methods/capabilities of the class.
+Every object in Ruby belongs to a class. Another way of saying: each object is an instance of class. To find out what class an object is a part of you can call `.class` on any object and it will tell you. Once you know what class the object belongs to it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
 
 ```RUBY
 hello.class
@@ -195,24 +182,10 @@ true.class
 Class.class
 ```
 
-Do this for yourself to see the Ruby documentation:
-Google: Ruby String class
-Google: Ruby Fixnum class
-
-Be sure to select the documentation for the version of Ruby you have installed (to find out use: ruby --version).
-
-Classes are made up of Nouns and Verbs
-Take a look at your Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @wheels and @model_year -- are what make your object what it is: the class Vehicle (also a noun). The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
-
-Classes have Relationships
-In your Car challenge, you have at minimum a Vehicle class and a Car class. There can be as many Cars as you want to make, and they will share a lot of the same attributes as Vehicle. Any time you identify this kind of relationship forming, whether it's one to many or one to one, it's a strong indication that there should be inheritance between the two classes. This will allow you to share methods across related classes.
-
-Objects are Interrelated
-Creating a program in Ruby is a little bit like playing Jenga; all the bits and pieces rely on each other to stand up, and removing the wrong piece can wreak havoc. Because of their relationships, objects impact each other and you have to remember those relationships as you're writing your code. Take the example of the Vitamin class from this morning's presentation. Vitamin and Apple have a many to many relationship. There can be as many Apples with Vitamins as you want to create, and you can create them using the method you already wrote for creating items in the Fruit class, which is pretty cool. But what happens when you write a method in the Fruit class to grab all Fruit with Vitamins, and it grabs an instance of the Fruit class that doesn't inherit from Vitamin? You'll get an error. One solution to this is creating a separate array for storing items with Vitamins in Fruit, so the two types don't clash. Remembering how your objects impact each other is very important when writing applications in Ruby.
-
-
+Classes are made up of Nouns (data) and Verbs (methods). Take a look at your Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @wheels and @model_year -- are what make your object what it is: the class Vehicle (also a noun). The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
 
 [Go to Ruby Inheritance](./04rb_inheritance.md)
 
-
 [Back to Ruby Conditions, Methods, Loops, and Hashes](./02rb_cond_methods_loops_hashes.md)
+
+[Back to Syllabus](../README.md)

@@ -17,6 +17,11 @@ The process to follow is:
 Create a file called car.rb and file called car_spec.rb in the same folder.
 Put the following into the spec file:
 
+```ruby
+require 'rspec'
+require_relative 'car'
+```
+
 - require 'rspec' - searches the gem file path and grabs it.
 - require_relative 'car' - gets the car, which is within the same folder.
 
@@ -24,8 +29,16 @@ In the terminal, cd to the folder with the files; then:
 
 ```bash
 rspec car_spec.rb
-and see that world is good and fine.
 ```
+
+and see that world is good and fine.  If it is not, such as if this is the first time you've run `rspec` or you are setting up your development environment in AWS there are two commands you'll need to enter into the AWS terminal to properly test your ruby files.
+
+```bash
+sudo apt install rspec-ruby-core
+gem install rspec
+```
+
+After the commands run you're ready to get to work!  There are additional links and documentation at the end of this document for setting up rspec on your computer.
 
 ## Getting to Work
 ### First Feature: A Car is a Thing

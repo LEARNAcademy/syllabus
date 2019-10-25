@@ -35,8 +35,6 @@ class App extends Component {
 }
 
 export default App;
-
-
 ````
 
 Notice how we have imported counter at the top and called Counter in the return section.
@@ -53,12 +51,10 @@ import React, { Component } from 'react';
 class Counter extends Component {
   constructor(props){
     super(props)
-      this.state = {
-        count: 0
+    this.state = {
+      count: 0
     }
-}
-
-
+  }
 
   render() {
 
@@ -89,8 +85,6 @@ class Counter extends Component {
     }
 }
 
-
-
   render() {
       let { count } = this.state
 
@@ -98,13 +92,11 @@ class Counter extends Component {
         <div>
         <h1>Counter: {count}</h1>
         </div>
-
     );
   }
 }
 
 export default Counter;
-
 ````
 
 In the render section we set count equal to this.state and then used our new variable count in the return.  
@@ -122,8 +114,6 @@ class Counter extends Component {
     }
 }
 
-
-
   render() {
       let { count } = this.state
 
@@ -132,14 +122,11 @@ class Counter extends Component {
         <h1>count: {count}</h1>
         <button onClick = {this.handleChange}>Press Me!</button>
         </div>
-
     );
   }
 }
 
 export default Counter;
-
-
 ````
 
 Now let's create our handleChange function so our application knows what to do when the button is pressed.
@@ -155,30 +142,26 @@ class Counter extends Component {
       this.state = {
         count: 0
     }
-}
+  }
 
-handleChange = () => {
-    let newCount = this.state.count + 1
-    this.setState({count: newCount})
-}
-
-
+  handleChange = () => {
+      let newCount = this.state.count + 1
+      this.setState({count: newCount})
+  }
 
   render() {
-      let { count } = this.state
+    let { count } = this.state
 
     return (
         <div>
         <h1>count: {count}</h1>
         <button onClick = {this.handleChange}>Press Me!</button>
         </div>
-
     );
   }
 }
 
 export default Counter;
-
 ````
 As you can see above, the handleChange function makes a copy of of this.state.count and adds one to it. We then save that into the variable called newCount.  Finally, we update our state by calling this.setState() and setting our count that is in state to our newCount that we just created.  Now we have a fully functioning button that increments by 1 every time the button is pressed and displays the current count.
 
@@ -203,10 +186,6 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
 ````
 
 # Challenges
