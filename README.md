@@ -74,20 +74,22 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1. [ Rails: RESTful Web Application Framework - Mon](./Rails-C&V/00rails_http_intro.md)
-2. [Rails Intro to Routes, Controllers and View - Mon](./Rails-C&V/01rails_routes_controllers_views.md)
-3. [Rails Views- Mon](./Rails-C&V/02rails_views.md)
-4.  [Rails Params - Mon](./Rails-C&V/03rails_params.md)
-6. [Rails Forms, Layouts and Flash Messages - Tues](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
-7. [Rails Generate - Tues](./Rails-C&V/06rails_generate.md)
-8. [Rails Mini Projects - Tues](./Rails-C&V/07rails_miniprojects.md)
-9. [CRUD with Postgresql - Wed](./sql/00postgres_crud_intro.md)
-10. [Intro to Postgres - Wed](./sql/07rails_intro_postgres.md)
-1. [Rails Model: Intro to Active Record - Thurs](./Rails-M/01intro_active_record.md)
-2. [Challenge: Active Record Tasks - Thurs](./Rails-M/03rails_active_record_tasks.md)
-1. [Active Record Relationships - Thurs](./Rails-M/02rails_activerecord_relationships.md)
-3. [Challenge: Active Record Task List - Thurs](./Rails-M/04rails_active_record_tasklist.md)
-11. [Joins - Fri](./sql/08rails_sql_joins.md)
+10. [Intro to Postgres](./sql/07rails_intro_postgres.md)
+11. [Joins](./sql/08rails_sql_joins.md)
+9. [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
+1. [ Rails: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
+1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+7. [Rails Generate](./Rails-C&V/06rails_generate.md)
+1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
+2. [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+3. [Rails Views](./Rails-C&V/02rails_views.md)
+4. [Rails Params](./Rails-C&V/03rails_params.md)
+6. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+
+### Bonus Material
+8. [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
+2. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
+3. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
 Additional Topics:
 
