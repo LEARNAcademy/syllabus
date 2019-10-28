@@ -473,15 +473,6 @@ Save your queries in a file if you want to keep them for posterity.
 * Which is the smallest country, by area and population? the 10 smallest countries, by area and population?
 * Which is the biggest country, by area and population? the 10 biggest countries, by area and population?
 
-#### `WITH`
-
-* Of the smallest 10 countries, which has the biggest gnp?
-(hint: use `WITH` and `LIMIT`)
-* Of the smallest 10 countries, which has the biggest per capita gnp?
-* Of the biggest 10 countries, which has the biggest gnp?
-* Of the biggest 10 countries, which has the biggest per capita gnp?
-* What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
-
 #### `GROUP BY`
 
 * How big are the continents in terms of area and population?
@@ -502,6 +493,15 @@ Save your queries in a file if you want to keep them for posterity.
 * What is the total population of all continents?
 * What is the average life expectancy for all continents?
 * Which countries have the letter ‘z’ in the name? How many?
+
+#### `WITH`
+
+* Of the smallest 10 countries, which has the biggest gnp?
+(hint: use `WITH` and `LIMIT`)
+* Of the smallest 10 countries, which has the biggest per capita gnp?
+* Of the biggest 10 countries, which has the biggest gnp?
+* Of the biggest 10 countries, which has the biggest per capita gnp?
+* What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
 
 
 [Go to SQL Joins](./08rails_sql_joins.md)
