@@ -74,6 +74,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
+<<<<<<< HEAD
 1. [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
 2. [Rails Intro](./Rails-C&V/rails_intro.md)
 2. [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
@@ -86,17 +87,32 @@ Rails is full stack framework built into the Ruby programming language. Here you
 10. [Intro to Postgres](./sql/07rails_intro_postgres.md)
 11. [Joins](./sql/08rails_sql_joins.md)
 12. [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+=======
+1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
+2. [Joins](./sql/08rails_sql_joins.md)
+3. [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
+4. [ Rails: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
+5. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+6. [Rails Generate](./Rails-C&V/06rails_generate.md)
+7. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
+8. [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+9. [Rails Views](./Rails-C&V/02rails_views.md)
+10. [Rails Params](./Rails-C&V/03rails_params.md)
+11. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+
+### Bonus Material
+1. [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
+2. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
+3. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
+>>>>>>> afad5de07c51b4e18ffaf642a7ee66388f4d0d70
 
 Additional Topics:
 
 [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Active Record and Full Stack Ruby on Rails
-1. [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
-2. [Challenge: Active Record Tasks](./Rails-M/03rails_active_record_tasks.md)
+
 3. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-4. [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
-3. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 7. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 8. [Strong Params](./Rails-M/08rails_strong_parameters.md)
 9. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
