@@ -130,15 +130,8 @@ NOTE: You don't actually need a join to get this information - try writing a que
    * Hint: Use `GROUP BY` and `COUNT(...)`
 * Which country or countries have the most official languages? (4 languages)
    * Hint: Use `GROUP BY` and `ORDER BY`
-* Which languages are spoken in the ten largest (area) countries?
-   * Hint: Use `WITH` to get the countries and join with that table
-* What languages are spoken in the 20 poorest (GNP/ capita) countries in the world? (94 with GNP > 0)
-   * Hint: Use `WITH` to get the countries, and `SELECT DISTINCT` to remove duplicates
 * Are there any countries without an official language?
    * Hint: Use `NOT IN` with a `SELECT`
-* What are the languages spoken in the countries with no official language? (49 countries, 172 languages, incl. English)
-* Which countries have the highest proportion of official language speakers? The lowest?
-* What is the most spoken language in the world?
 
 ### Cities
 
@@ -152,7 +145,6 @@ NOTE: You don't actually need a join to get this information - try writing a que
    * Hint: The official language of a city is based on country.
 * Which countries have the 100 biggest cities in the world?
 * What languages are spoken in the countries with the 100 biggest cities in the world?
-* Are there any countries without an official language? Hint: `WHERE ... NOT IN ( SELECT ... FROM ... WHERE ...)`
 
 ## DVD Rental Database Challenges
 Hint: use `INTERSECT` or `OUTER JOIN` or `INNER JOIN`
