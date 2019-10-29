@@ -67,54 +67,40 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
 7. [Ruby TDD](./ruby/08rb_testing.md)
 8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
-9. [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
+9. [Challenge: TDD Ruby Task List](./ruby/07rb_tasklist_challenge.md)
 10. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
 
-## Unit Five: Ruby on Rails and Postgres
+## Unit Five: Ruby on Rails Models and Postgres
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-<<<<<<< HEAD
-1. [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
-2. [Rails Intro](./Rails-C&V/rails_intro.md)
-2. [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-3. [Rails Views](./Rails-C&V/02rails_views.md)
-4.  [Rails Params](./Rails-C&V/03rails_params.md)
-6. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
-7. [Rails Generate](./Rails-C&V/06rails_generate.md)
-8. [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-9. [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
-10. [Intro to Postgres](./sql/07rails_intro_postgres.md)
-11. [Joins](./sql/08rails_sql_joins.md)
-12. [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
-=======
 1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
-2. [Joins](./sql/08rails_sql_joins.md)
-3. [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
-4. [ Rails: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
-5. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
-6. [Rails Generate](./Rails-C&V/06rails_generate.md)
-7. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
-8. [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-9. [Rails Views](./Rails-C&V/02rails_views.md)
-10. [Rails Params](./Rails-C&V/03rails_params.md)
-11. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+1. [Postgres Joins](./sql/08rails_sql_joins.md)
+1. [Info: CRUD with Postgres](./sql/00postgres_crud_intro.md)
+1. [Info: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
+1. [Intro to Rails](./Rails-C&V/rails_intro.md)
+1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
+1. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
+1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
+1. [Rails Generate](./Rails-C&V/06rails_generate.md)
+1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
+1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
+
 
 ### Bonus Material
-1. [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-2. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
-3. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
->>>>>>> afad5de07c51b4e18ffaf642a7ee66388f4d0d70
 
-Additional Topics:
+1. [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+1. [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
-[Rails Cookies](./Rails-C&V/04rails_cookies.md)
+## Unit Six: Full Stack Ruby on Rails
 
-## Unit Six: Active Record and Full Stack Ruby on Rails
-
-3. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-7. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
-8. [Strong Params](./Rails-M/08rails_strong_parameters.md)
+2. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+3. [Rails Views](./Rails-C&V/02rails_views.md)
+4. [Rails Params](./Rails-C&V/03rails_params.md)
+1. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
+1. [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 9. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
 10. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
 11. [Intro to Fetch](./Rails-M/10using_fetch.md)
