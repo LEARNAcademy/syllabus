@@ -1,32 +1,4 @@
-# Rails Intro: Coding a Response (Routes and Controllers)
-
-The goal of this section is to get you up and running with Rails.
-
-You will learn:
-
-- How to generate a Rails project
-- How to run the Rails server
-- How to work with public files
-- How to code a response
-
-## Create a Rails App
-Now that we've explored HTML, CSS, Javascript, and Ruby, we have the complete set of tools we need to start learning Rails, the framework for writing web applications in Ruby. Getting started is as easy as a few commands in the terminal.
-
-##### In the terminal:
-```
-rails new myapp -d postgresql -T
-cd myapp
-rails db:create
-rails server
-```
-These commands do a few things. `rails new app_name` generates a new rails application in a folder. The Rails app we are generating is going to be called "myapp". Once we've navigated ourselves into the Rails app directory, we run the Rails application by starting the server. We do that by typing `rails server` or `rails s`.
-
-In a browser type into the address field:
-`http://localhost:3000`
-or
-`127.0.0.1:3000`
-
-And just like that, we should see the boilerplate Rails homepage.
+# Rails View and Controllers
 
 ## A simple response: Public files
 
@@ -58,7 +30,7 @@ As neat as the `/public` directory is for quickly setting up easy-to-access page
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. As you may recall, a typical request starts with a url. In other words, a url is typed into the browser address bar and the user hits enter.
 
-We've worked with some urls previously but take this one for example: 
+We've worked with some urls previously but take this one for example:
 
 `localhost:3000/answers`
 
@@ -90,7 +62,7 @@ class MainController < ApplicationController
 end
 ```
 
-Here we are defining the main controller that we specified to handle our ```/answers``` requests in the ```routes.rb``` file. The controller, in its ```answers``` method defines what should happen when it is reached. In this case, it renders some html that reads "hello". 
+Here we are defining the main controller that we specified to handle our ```/answers``` requests in the ```routes.rb``` file. The controller, in its ```answers``` method defines what should happen when it is reached. In this case, it renders some html that reads "hello".
 
 This completes the Rails response to the ```/answers``` request. When we visit `localhost:3000/answers`, we should see a white page with the text "hello".
 
@@ -122,7 +94,7 @@ class MainController < ApplicationController
 end
 ```
 
-Now, our Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser. 
+Now, our Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser.
 
 This may be a lot to take in, but let's recap:
 
