@@ -90,23 +90,23 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 ### Bonus Material
 
-1. [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
-1. [Rails Cookies](./Rails-C&V/04rails_cookies.md)
+- [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+- [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Full Stack Ruby on Rails
 
-2. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-3. [Rails Views](./Rails-C&V/02rails_views.md)
-4. [Rails Params](./Rails-C&V/03rails_params.md)
+1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+1. [Rails Views](./Rails-C&V/02rails_views.md)
+1. [Rails Params](./Rails-C&V/03rails_params.md)
 1. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
 1. [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-9. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
-10. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-11. [Intro to Fetch](./Rails-M/10using_fetch.md)
-12. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
-13. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
-14. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+1. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
+1. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+1. [Intro to Fetch](./Rails-M/10using_fetch.md)
+1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
+1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
+1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
 
 Additional Topics:
 - [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
