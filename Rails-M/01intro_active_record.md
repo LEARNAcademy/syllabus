@@ -3,6 +3,11 @@
 [![YouTube](http://img.youtube.com/vi/3D_JwWoJKm4/0.jpg)](https://www.youtube.com/watch?v=3D_JwWoJKm4)
 ]
 
+## Active Record Details
+
+[![YouTube](http://img.youtube.com/vi/R5vpRwpWctY/0.jpg)](https://www.youtube.com/watch?v=R5vpRwpWctY)
+] 
+
 ## Set Up Rails App
 
 Keep psql running and open a new tab in terminal so you can create a new Rails application:
