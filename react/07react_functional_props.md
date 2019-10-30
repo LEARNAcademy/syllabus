@@ -1,3 +1,6 @@
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ug7w_r4XFH4/0.jpg)](https://www.youtube.com/watch?v=Ug7w_r4XFH4)
+
+
 # Passing Behavior as a Prop
 
 Now we know that state manages data inside of a component, and props allow us to pass data from a parent component to a child component.  There's one question left to ask: How do we pass information from a child component back up to its parent?  This kind of thing needs to happen all of the time.  Imagine the following React application:
@@ -8,7 +11,7 @@ Here we have 3 components, a main application, a Form component and a Result com
 
 Getting back to our question, how do we pass information from a child component (the Form component in this case) back up to the App, so it can pass it along to Result component?
 
-The asnswer may surprise you: We can't.  There is no way in React to pass data back up from a child component to a parent.
+The answer may surprise you: We can't.  There is no way in React to pass data back up from a child component to a parent.
 
 Not one, ...nada, .... zilch, ... it isn't going to happen.
 

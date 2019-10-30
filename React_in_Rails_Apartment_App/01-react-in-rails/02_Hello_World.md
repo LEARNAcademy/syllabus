@@ -4,15 +4,32 @@
 
 ## Setup Steps
 
+0) Add Yarn if its not already installed
+```bash
+$ yarn -v 
+```
+If yarn not found:
+
+```bash
+$ npm install -g yarn
+```
+
 1) Create a Rails Application
 ```bash
+$ gem install rails
 $ rails new hello_world
 $ cd hello_world
 ```
 
 2) Add the React Gems
+
+For Rails 5.3 and below:
 ```bash
 $ bundler add webpacker
+```
+
+```bash
+ 
 $ bundler add react-rails
 $ bundle install
 ```
@@ -24,7 +41,7 @@ $ rails webpacker:install:react
 $ rails generate react:install
 ```
 
-4) Add Webpack to the Rails Application Layout (/app/views/layouts/application.html.erb)
+4) Add Webpack to the Rails Application Layout if it is not already there (Rails 5.3 and below) (/app/views/layouts/application.html.erb)
 ```html
 <%= javascript_pack_tag 'application' %>
 ```
@@ -67,9 +84,8 @@ cat config/routes.rb
 ```
 
 8) Add homepage, and React Component
-```bash
-cat app/views/pages/index.html.erb
-```
+
+#### app/views/pages/index.html.erb
 ```result
 : <%= react_component("HelloWorld") %>
 ```

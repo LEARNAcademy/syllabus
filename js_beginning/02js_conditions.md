@@ -1,12 +1,9 @@
 # JavaScript Decision Structures
 
-[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
-
+[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=Ee_Phg9Ip-k)
 
 
 ## Javascript Decisions
-
-
 
 Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
 
@@ -14,7 +11,7 @@ One of the tools that helps us break down problems is the `if/else` decision str
 `if one thing is true, do this, otherwise, do this other thing.`
 In fact, the javascript code for creating these decision structures reads almost like our sentence did:
 ```
-if(this = true) {
+if(this thing evaluates to true) {
     console.log(do this thing)
 } else {
     console.log(do this other thing)
@@ -76,19 +73,19 @@ Example: Write an `if/else` statement that takes a variable of a number from 0 t
 var number = 9
 
 if(number === 100) {
-    console.log(number + " is a triple digit number");
+    console.log(number + " is a triple digit number")
 } else if(number > 9 && number < 100) {
-    console.log(number + " is a double digit number");
+    console.log(number + " is a double digit number")
 } else if(number >= 0 && number <= 9){
-    console.log(number + " is a single digit number");
+    console.log(number + " is a single digit number")
 } else {
-    console.log("please enter a number from 0 to 100");
+    console.log("please enter a number from 0 to 100")
 }
 ```
 
 ## Resources:
 
-Some further reading and resources here: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Conditionals from MDN</a>
+Some further reading and resources here: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">Conditionals from MDN</a>
 
 ## Challenges
 
@@ -108,10 +105,15 @@ Make sure you try different options and change the variables to ensure properly 
 
 1) Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
 
-2) Write an `if/else` statement that takes a variable of any data type and logs the data type (**hint**: use the JS operator `typeof`).
+2) Write an `if/else` statement that takes a variable of a boolean, number, or string  datatype and logs the data type of the variable **HINT**: use the JS operator `typeof`.
+
+#### Epic Challenge
+
+1) Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password". If the user’s password is equal to 8 or more characters OR includes `!`, then log "that password is strong enough!". Log "password is not strong enough" for every other input.
 
 
-[Go to next lesson: Javascript Functions](./03js_functions.md)
-
+[Go to next lesson: Javascript Arrays](./04js_arrays.md)
 
 [Back to Javascript Intro](./01js_intro.md)
+
+[Back to Syllabus](../README.md)

@@ -6,6 +6,11 @@ The frontend is going to ask the rails API for information, then rails will use 
 
 To do this, we are going to put all of our "calls" to the API in a new folder in our react app.
 
+#### Cloud 9 users
+Be sure and review the [instructions](../../Rails-M/additional-topics/07rails_cloud9_access.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker and Postman.
+
+## Using Fetch to get our data
+
 Add a new folder: ``` src/api ```
 
 Inside that folder, add a new file: ``` index.js ```
@@ -14,6 +19,7 @@ Copy and paste this code into ```index.js```, read the code and comments.
 
 ```javascript
 // the address of our rails backend, saved as a constant value, because we never want to accidentally change it
+// Cloud9 users: This will be your IP address found under the 'Share' link
 const BASE = 'http://localhost:3000'
 
 let getCats = function() {
@@ -32,7 +38,7 @@ export  {
 }
 ```
 
-We are using the JavaScript Fetch API as the intermediary that carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).  
+We are using the JavaScript Fetch API as the intermediary that carries our request to the backend. Like a courier, we just have to supply fetch with an address (our BASE const).
 
 Notice that we have wrapped the fetch call in another function called getCats. This is to give us control over WHEN the call runs.
 
@@ -52,7 +58,7 @@ constructor(props){
 	}
 }
 
-componentWillMount() {
+componentDidMount() {
   getCats()
 	.then(APIcats => {
 	  this.setState({
@@ -66,7 +72,7 @@ What is this code doing? The big things to note are that we call getCats (which 
 have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the
 database to set state.
 
-Now we should be ready to get information from the backend. Start your Rails server and react server at the same time, make sure to put the rails server on port 3000
+Now we should be ready to get information from the backend. Start your Rails server and react server at the same time, make sure to put the rails server on port 3000, or if you are using Cloud9 on port 8080, to start your rails app run  `rails s -b 0.0.0.0`
 
 Fire up your React server if its not already, and let's see how we're doing.  Recall the wireframe we started out with?
 

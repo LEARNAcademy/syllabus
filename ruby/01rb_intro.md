@@ -99,7 +99,7 @@ The string "hello" knows when the upcase method is called on it, it needs to cha
 
 
 RUBY STYLE GUIDE
-Correct styling conventions for Ruby made for code that is easy to read. You can find a maintained Ruby Styling Guide here: Ruby Styling Guide.
+Correct styling conventions for Ruby made for code that is easy to read. You can find a maintained Ruby Styling Guide here: [Ruby Styling Guide.](https://rubystyle.guide/)
 
 ## Ruby Data Types
 Numbers
@@ -220,7 +220,7 @@ Examples in IRB:
 
 > [1, 2, 3] << 99 # => [1, 2, 3, 99]
 ````
-The append operator, <<, (a.k.a. "the shovel") basically sticks something at the end of the array. The difference here is that we dont have to specify an index position when using the append operator.
+The append operator, <<, (a.k.a. "the shovel") basically sticks something at the end of the array. The difference here is that we don't have to specify an index position when using the append operator.
 
 It's good to note that the num array is not permanently changed by calling the method reverse on it. It returns a new array with the elements reversed.
 

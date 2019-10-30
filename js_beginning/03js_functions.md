@@ -1,8 +1,5 @@
-
 # Intro to Functions
 ## Lecture
-
-[![YouTube](http://img.youtube.com/vi/K2ACS1cfCCI/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
 
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
@@ -12,32 +9,33 @@ It is important to remember that there is a difference between a **function decl
 For example, look at this **function declaration:**
 
 ```JavaScript
-function greeting() {
+var greeting = () => {
     return "Hello There"
 }
 ````
 
 Notice the pieces of a function:
 
-1.  The keyword 'function'
+1.  Assigning a function to a variable.
 2.  The name of the function
 3.  Parentheses which can also take 'arguments'
-4.  Open and closing curly brackets
-5.  A set of instructions inside the curly brackets
-6.  A return statement right before the closing curly brackets
+4.  The fat arrow syntax
+5.  Open and closing curly brackets
+6.  A set of instructions inside the curly brackets
+7.  A return statement right before the closing curly brackets
 
 
 Great! We have a function. But this function has not yet been used in our program because we do not have a function call.  A **function call** looks like this....
 ```javascript
 greeting()
 ```
- Notice that we used the same name that we gave when we declared the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
+ Notice that we used the same name that we gave our variable that points to the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
 
 In order to see the output of our function, let's wrap our function call in a **console.log** like this..
 
 
 ```JavaScript
-function greeting() {
+var greeting = () => {
     return "Hello There"
 }
 
@@ -52,21 +50,38 @@ output >> Hello There
 
 Functions often require some information in order to run. Pieces of outside information that is used when a function runs are called **arguments** to that function.  We put the arguments inside the parentheses of the function.
 
-Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.  
+Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.
 
 ```JavaScript
 
-function greeting(name) {
+greeting = (name) => {
     return "Hello " + name
 }
 
 console.log(greeting("Sally"))
 
 output >> Hello Sally
-
 ```
 
-Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.  
+Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.
+
+## Other Syntax for functions
+
+There are several syntax's that are used to write functions.  The primary one we use today, and the one shown above is called 'ES6 syntax'.  Below is a version you'll see in older Javascript.  It accomplishes primarily the same thing, with a few differences.  ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to.
+
+### Old-School function declarations
+
+The word 'function' is a keyword in Javascript, and we can use it to declare a function.
+
+```javaScript
+function greeting(name){
+    return "Hello " + name
+}
+
+console.log(greeting("Sally"))
+
+output >> Hello Sally
+```
 
 
 ## Pseudo Code
@@ -88,54 +103,54 @@ This is great, because it means that while you are thinking up your logic, you a
 
 Let's look at an example using pseudo code and adding a conditional inside the function.
 
-Exercise: Write a function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).  
+Exercise: Write a function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).
 
 Here's what the pseudo code might look like:
 ```Javascript
-//create a function called old_enough
+//create a function called tall_enough
 
 //takes in 1 number as an arguments
 
-//if number is less than 21 retun 'can not drink' (if/else statment)
+//if number is less than 40 retun 'can not ride rollercoaster' (if/else statment)
 
-//otherwise return 'allowed to drink'
+//otherwise return 'allowed to ride rollercoaster'
 ```
 Now lets build the actual code around the pseudo code.
 
 ```JavaScript
-//create a function called old_enough
+//create a function called tall_enough
 //takes in 1 number as an arguments
-function old_enough(number){
-    //if number is less than 21 return 'can not drink'(if/else statement)
-    if(number < 21){
-        return "Can not drink"
-    //otherwise return 'allowed to drink'
+var tall_enough = (number) => {
+    //if number is less than 40 return 'can not ride rollercoaster'(if/else statement)
+    if(number < 40){
+        return "Can not ride rollercoaster"
+    //otherwise return 'allowed to ride rollercoaster'
     } else {
-        return "Allowed to drink"
+        return "Allowed to ride rollercoaster"
     }
 }
 
-console.log(old_enough(25));
-output -> Allowed to drink
+console.log(tall_enough(58));
+output -> Allowed to ride rollercoaster
 
-console.log(old_enough(19));
-output -> "Can not drink"
+console.log(tall_enough(37));
+output -> "Can not ride rollercoaster"
 
-console.log(old_enough(12);
-output -> "Can not drink"
+console.log(tall_enough(24);
+output -> "Can not ride rollercoaster"
 
 ```
 
 
 ## Verify
 
-Notice that we called 'old_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.  
+Notice that we called 'tall_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.
 
-## Console.log  vs  Return
+## Console.log  vs  return
 Notice that we can call console.log as many times as we want and we can even call console.log inside functions like this...
 
 ```JavaScript
-function greeting(name) {
+var greeting = (name) => {
     console.log(name);
     return "Hello " + name
 }
@@ -167,7 +182,7 @@ Below are exercises in writing functions.
 
 6.  Write a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 
-Below are slightly harder challenges.  
+Below are slightly harder challenges.
 ##### Remember to write the pseudo code for each function before you write the code!
 
 #### What number's bigger?
@@ -182,7 +197,7 @@ Write a function named greaterNum that:
 
 Write a function named helloWorld that:
 * takes 1 argument, a language code (e.g. "es", "de", "en")
-* returns "Hello, World" for the given language, for at least 3 languages. It should default to returning English.
+* returns "Hello, World" for the given language, for at least 3 languages. It should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
 * Test the function for each of the supported languages
 
 #### The Grade Assigner
@@ -195,7 +210,7 @@ Write a function named assignGrade that:
 #### The Pluralizer
 
 Write a function named pluralize that:
-* takes 2 arguments, a noun and a number.
+* takes 2 arguments, a number and a singular noun.
 * returns the number and pluralized form of the noun, if necessary.
 
 ``` pluralizer(5, cat) ``` should return "5 cats"
@@ -205,7 +220,8 @@ Write a function named pluralize that:
 
 [practice more with Edabit](https://edabit.com/challenges/javascript)
 
-[Go to Javascript Arrays](./04js_arrays.md)
+[Go to next lesson: Javascript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
 
+[Back to Javascript Conditionals](./02js_conditions.md)
 
-[Back to Javascript Functions](./02js_conditions.md)
+[Back to Syllabus](../README.md)

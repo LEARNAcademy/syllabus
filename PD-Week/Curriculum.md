@@ -37,6 +37,7 @@
 <br/> Your resume is one of the most important materials you need for your job search. Selecting the right format and presenting the best content is key to getting in the door for a job interview!
 <br/>
 <br/>
+
 *Additional Resources:*
 
 * [Action Verb List](https://drive.google.com/open?id=12BJRZ1fgbKPaBBdfWw-TfFuDDEXbzzxp)
@@ -74,6 +75,7 @@
 * Step 9: Join Groups & Follow Companies
 <br/>
 <br/>
+
 *Additional Resources:*
 
   * [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/open?id=1Ya1cXIh6louPU6HjAPpvA6-mY4UsrTDw)
@@ -97,8 +99,9 @@
 3) **[Tech Talks](https://drive.google.com/open?id=1Rau9mgWGntjNUubxflmKY4XEL8XLMrVJ)**
 <br/> During your 12th week, every member of your cohort will be creating and presenting 5-7 minute Tech Talks on a topic of your choice! This session will review the key components to a tech talk and provide some valuable resources.
 <br/>
-<br/> *Additional Resources:*
+<br/>
 
+*Additional Resources:*
 * [Tech Talk Topic Starters/Ideas](https://drive.google.com/open?id=1uc4bdce2X8izHZa_L_CBdmi0G_jCoEgU)
 <br/> This list provides ideas of past tech talks to get your brain stirring to come up with your own topic!
 
@@ -108,8 +111,8 @@
 5) **[Building Portfolios](https://drive.google.com/open?id=1ra1o7vxjfJNNF2kX1WgTWmYjPayhfHXL-oTuyWUPO5k)**
 <br/> Portfolios are a necessity to get that first and sometimes even second job. This resource provides alumni samples as well as resources for building your own protfolio from scratch or using an existing template.
 <br/>
-<br/> *Additional Resources:*
 
+*Additional Resources:*
 * [How to Build Impressive Portfolio Sites](https://drive.google.com/open?id=1pBz0SnAR_144tz-7ogHiPdpcDSPd1OBEyAq51ZSetoI)
 <br/> This resource provides some great tips on making your portfolio site and how to stand out.
 

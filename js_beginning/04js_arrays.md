@@ -179,35 +179,37 @@ And finally, let's look at **.indexOf** and **lastIndexOf**.
 
 var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
 
-console.log(array2.indexOf("t"))
+console.log(arr1.indexOf("t"))
 6
 
-console.log(array2.lastIndexOf("y"));
+console.log(arr1.lastIndexOf("y"));
 4
 ```
 
 # Challenges
 Array Methods Practice
 
- Below are exercises in using array methods. Beneath each prompt write the code to fulfill the exercise requirement.
-
 **Exercise 1** -  Consider this variable:
- var groceryList2 = ["chips", "dip", "cookies"]
+ var groceryList1 = ["chips", "dip", "cookies"]
 
  * Write the code that will add "soda" to the end of the original array.
 
 **Exercise 2** - Consider this variable:
-var numbers2 = [2, 4, 6, 8, 10]
+var numbers1 = [2, 4, 6, 8, 10]
 
-* Write the code that will add the number 0 to the beginning of the original array.
+* Write the code that will add the number 0 to the beginning of the array.
+
+* Write the code that will add the number 12 to the end of the array.
+
+* Write the code that will remove the first number from the array.
 
 **Exercise 3** - Consider this variable:
- var groceryList1 = ["apples", "carrots", "oatmeal"]
+ var groceryList2 = ["apples", "carrots", "oatmeal"]
 
  * Write the code that will add "granola" to the end of array without altering the original array.
 
 **Exercise 4** - Consider this variable:
- var numbers1 = [1, 2, 3, 4, 5]
+ var numbers2 = [1, 2, 3, 4, 5]
 
  * Write the code that will add the number 0 to the beginning of the array without altering the original array.
 
@@ -239,21 +241,20 @@ var numbers2 = [2, 4, 6, 8, 10]
 
 * Sort all the names in reverse alphabetical order.
 
-## Magic 8 Ball
+#### Magic 8 Ball
 
-#### Story
-* As a user I can enter a question and get a random answer to my question.
-
-#### Goal:
-* Create an array with the following answers: Yup!, Fuhgeddaboudit, Maybe, Ask: what would your mother do?, Ask: what would an Australian do, then do the opposite, Your answer here.
-* Set a variable called question so you can test different questions.
-* Create a random number to select one of the answers (hint: use Math.random().
-* Output the random answer.
+* Create an array with 6 different (appropriate) Magic 8 Ball answers
+* Create a random number to select one of the answers (hint: use Math.random()
+* Output the random answer
 
 #### Stretch goal:
-* Create an html page linked to the javascript file - you will need to research onClick events, document.getElementById and innerHTML. (we will do more of this next week).
+* As a user I can enter a question and get a random answer to my question.
+* Create an HTML page linked to the JavaScript file - you will need to research onClick events, document.getElementById() and innerHTML.
+* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
 
 
-[Go to Javascript Loops](./05js_loops.md)
+[Go to next lesson: Javascript Loops](./05js_loops.md)
 
-[Back to Javascript Functions](./05js_functions.md)
+[Back to Javascript Conditionals](./02js_conditions.md)
+
+[Back to Syllabus](../README.md)

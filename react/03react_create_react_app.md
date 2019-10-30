@@ -7,7 +7,7 @@ Up until late 2016, the hardest part about working with React was just getting a
 ## create-react-app
 Use Yarn to install the `create-react-app` followed by the name of your application, so we can build our first React app.
 ```
-$ yarn global add create-react-app
+$ npm install -g create-react-app
 $ create-react-app sample-app
 ```
 
@@ -30,7 +30,42 @@ After you type `yarn start` you will notice your terminal is busy running React.
 
 ## Modifying The App component
 
+We're going to use a Class based component in class instead of the functional one that comes pre-built for us in App.js.  Converting between the two is a matter of applying the formula below.  Once you're familiar with the conversion of this simple component, we can look at applying the same steps to ```src/App.js``` in our new project.
+
+### Going from functional to class components
+
+A very basic functional component looks something like this:
+
+```javascript
+import React from 'react';
+
+function App() {
+  return (
+    <h1>A Functional Component</h1>
+  );
+}
+
+export default App;
+```
+
+The equivalent class based component:
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component{
+  render(){
+    return (
+      <h1>A Class Based Component</h1>
+    );
+  }
+}
+
+export default App;
+```
+
 #### src/App.js
+
+Below is ```/src/App.js``` converted to a class based component.  We've added some comments describing what each line is doing.
 
 ```javascript
 // We're using React and Component from the react library
@@ -46,14 +81,14 @@ import './App.css';
 // We create a new component that extends the Component class, which React provides
 class App extends Component {
 
-  // When the component is first put on the page, and every time something changes in our component, the render function is     called.  This function builds the html markup that will be put on the page by React.
+  // When the component is first put on the page, and every time something changes in our component, the render function is called.  This function builds the html markup that will be put on the page by React.
   render() {
 
     // Here we have HTML markup right in our .js file.  Most of the React
     // apps that you see, and all of the ones that we'll build in class
     // use something called JSX to preprocess HTML (XML actually) back
     // into plain old JavaScript before the file is sent to the browser.
-    // Its not absolutly necessary to use JSX with React, but it makes it
+    // Its not absolutely necessary to use JSX with React, but it makes it
     // so much easier to write React components.
     return (
       <div className="App">
@@ -62,7 +97,7 @@ class App extends Component {
         // discussion about this on the web around this if you are interested.
         // The important thing to recognize here is that everything is
         // a component in React, so what is really happening here is the div
-        // component recieves an attribute named 'className', and is able to
+        // component receives an attribute named 'className', and is able to
         // operate on it as it is being rendered to the screen.
         <div className="App-header">
 
@@ -84,8 +119,8 @@ class App extends Component {
 export default App;
 ```
 
-Edit this file to make it our own, and save it.  The browser will reload
-showing our changes. We'll remove all of the boilerplate that we got for
+Edit your own ```/src/App.js``` to make it your own, and save it.  The browser will reload
+showing the changes. We'll remove all of the boilerplate that we got for
 free when we ran 'create-react-app'
 
 ```javascript
@@ -135,7 +170,7 @@ class Header extends Component{
 export default Header;
 ```
 
-Note that for each new component there 3 necessary steps in the component file. We must first import React and the component module. Next we code the component definition. Lastly, we must export the component. This allows us to import it whereever we want.
+Note: For each new component there 3 necessary steps to complete in the component file. We must first import React and the component module. Next we code the component definition. Lastly, we must export the component. This allows us to import it wherever we want.
 
 With the component defined, we can then use it in the App component:
 

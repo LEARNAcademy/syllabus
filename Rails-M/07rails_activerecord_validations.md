@@ -101,4 +101,13 @@ These will require a little bit of research to implement. Visit this link on [Cu
 - As a developer, I need each password to have at least one number
 - As a developer, I need each password to have at least one special character
 
+### Super Stretch Challenges
+- As a developer, I want accounts to have a has_many associated Addresses
+- As a developer, I want addresses to have street_number, street_name, city, state, and zip attributes
+- As a developer, I want to validate all fields on an address
+- As a developer, I want to validate that (street_number, street_name, zip) are unique for within an account
+	- ** Hint:  Read about :scope in the Rails validation docs
+- As a developer, I want to validate associated addresses on accounts
+	- ** Hint:  Read about validates_associated in the Rails validation docs
+
 For all these challenges check your work by exploring the ActiveRecord commands. (new, valid?, create, etc.)

@@ -1,4 +1,5 @@
 # Working with and thinking about Objects
+
 [![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
 ]
 ## Object with Data
@@ -237,6 +238,9 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 
+A great style guide for Javascript:
+[Air B & B](https://github.com/airbnb/javascript)
+
 ### Object Challenges
 
 Working with functions and objects.
@@ -355,10 +359,10 @@ Write the code that makes a double shot hazelnut latte with almond milk. Then, l
 
 #### Exercise 8
 
-Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
+Write a class that accepts a product and budget in its constructor.  Add a function that determines if the product is under the budget, and displays the appropriate message:
 
 * "This product is in budget."
-* "This product is beyond budget."
+* "This product is over budget."
 
 Here is some sample data:
 ```javascript
@@ -415,7 +419,7 @@ Extend your shopping cart program by creating a new class called 'CartItem', and
 #### SUPER STRETCH
 
 #### Exercise 11
-Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
+Write a program that has accessors to return a list of books sorted by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
 
 Hint:  Research alpha and numeric sorting in javascript.
 
@@ -441,7 +445,7 @@ var library = [
 
 ## Links
 
-[Go to ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
+[Go to next lesson: ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
 
 [Back to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
 

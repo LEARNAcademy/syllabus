@@ -39,8 +39,8 @@ Now let's look at this same objective with .map()
 
 var arr = [5, 3, 2, 9, 8]
 
-var newArr = arr.map(function(index){
-    return index * 3
+var newArr = arr.map(function(value){
+    return value * 3
 })
 
 console.log(newArr);
@@ -175,19 +175,19 @@ REMEMBER TO PSEUDO CODE FIRST!!
 
 Use .map() or .filter() and ES6 syntax on the exercises below.
 
-Write an anonymous function that takes in an array and returns a new array with all numbers multiplied by 10.
+Write a function that takes in an array and returns a new array with all numbers multiplied by 10.
 
 * var arr1 = [3, 9, 15, 4, 10]
 * expected output -> [30, 90, 150, 40, 100]
 
 
-Write an anonymous function that takes in an array and returns a new array with only odd numbers.
+Write a function that takes in an array and returns a new array with only odd numbers.
 
 * var arr2 = [2, 7, 3, 5, 8, 10, 13]
 * expected output = [7, 3, 5, 13]
 
 
-Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeof() method.
+Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeof method.
 
 * var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
 
@@ -201,13 +201,11 @@ var animals = [
   { name: "Hank", type: "cat", age: 11 },
 ];
 ```
-* Create an anonymous function that takes in any array of objects and returns a new array with only those of type cat.
+* Create a function that takes in any array of objects and returns a new array with only those of type cat.
 
 * Using the same array of objects above. Create an anonymous function that returns a new array with only the names of the animals.
 
-## Epic Challenges
-
-Remember to use .map() or .filter() and pseudo code first.  
+## Epic Challenges  
 
 Create a function that takes in a string and returns a new string with all the vowels removed.
 
@@ -221,6 +219,8 @@ Create a function that merges two arrays, takes in two arrays as arguments retur
 * var arr2 = [7, 8, 2, 1, 5, 4]
 * expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
 
-[Go to Javascript Pig Latin](./03js_pig_latin_mob.md)
+[Go to next lesson: Javascript Testing with Jest](./04js.testing_jest.md)
 
-[Back to Javascript ES6 Syntax](./01js_es6_syntax.md)
+[Back to Classes and Inheritance](./05js_class_inheritance.md)
+
+[Back to Syllabus](../README.md)

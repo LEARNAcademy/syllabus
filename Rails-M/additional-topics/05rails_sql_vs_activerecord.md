@@ -42,16 +42,6 @@ Here are some examples of how SQL and Active Record map to each other:
       <td>Model.where returns a collection</td>
     </tr>
     <tr>
-      <td>SELECT name, number </br>
-        FROM phones <br/>
-        JOIN users ON <br/>
-        phones.user_id = users.id;
-      </td>
-      <td>User.all.phones.numbers
-      </td>
-      <td>Returns a collection</td>
-    </tr>
-    <tr>
       <td>INSERT INTO users <br/>
         (first_name, last_name) <br/>
         VALUES ('John', 'Jones');

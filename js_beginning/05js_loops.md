@@ -1,8 +1,7 @@
 
 ## Javascript Loops
 
-[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
-
+[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=4PcRcvgIXNk)
 
 
 Javascript has many types of loops including...
@@ -116,16 +115,8 @@ Below are exercises in using loops and iteration. Beneath each prompt write the 
 
 2.  Write a for loop that logs the result of each number from 1 - 20 tripled.
 
-3.  Consider this variable: var numbers = [8, 2, 17, 4, 5, 10, 4, 8, 9, 15].  Write a for loop that logs each number multiplied by 4.
-
-4.  Create a for loop that logs each EVEN number from 1-20, and in the place of every odd number, returns the word "ODD"
+3.  Create a for loop that logs each EVEN number from 1-20, and in the place of every odd number, returns the word "ODD"
 So the result should be: [ODD, 2, ODD, 4, ODD, 6 ....]
-
-5.  Write a for loop that logs each number from 1 - 10 in reverse.
-
-6. Consider this variable: var letters = ["l", "e", "a", "r", "n"] Write a for loop that logs each letter capitalized.
-
-7. Consider this variable: var strings = ["hi", "yo", "there", "what", "how", "two", "are", "where", "you"].  Write a for loop that logs the strings at only the even indexes(start with 0).  
 
 
 ### The Odd and Even
@@ -137,13 +128,13 @@ Sample Output :
 "2 is even"
 
 
-
 ### Fizz Buzz
 
 Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word 'fizz'.  If a number is a multiple of five, replace it with the word 'buzz'.  If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 
 
-[Go to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
-
+[Go to next lesson: Javascript Functions](./03js_functions.md)
 
 [Back to Javascript Arrays](./04js_arrays.md)
+
+[Back to Syllabus](../README.md)
