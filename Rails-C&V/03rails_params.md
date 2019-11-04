@@ -1,5 +1,10 @@
 # Using Parameters in Rails
 
+
+[![YouTube](http://img.youtube.com/vi/FrQJX4UoX4k/0.jpg)](https://www.youtube.com/watch?v=FrQJX4UoX4k)
+]
+
+
 Parameters are how your Rails server receives information from the client. That said, you will be working with params a lot when programming your Rails servers.
 
 Let's take a look at a couple of ways to start using Rails params.
