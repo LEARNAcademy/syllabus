@@ -1,4 +1,9 @@
-# Rendering the V(iew)
+# Rendering the View
+
+
+[![YouTube](http://img.youtube.com/vi/rDRvdTuEopg/0.jpg)](https://www.youtube.com/watch?v=rDRvdTuEopg)
+]
+
 
 ## Rendering an html view
 
