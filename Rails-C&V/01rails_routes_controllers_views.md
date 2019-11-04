@@ -4,17 +4,17 @@
 
 #### Serving the public
 
-Rails has a folder called `/public`. Anything we put into this folder will be accessible by the rest of the application just by asking for it. To see this in action, create HTML file in `/public` called `myfile.html`.
+Rails has a folder called `/public`. Anything we put into this folder will be accessible by the rest of the application just by asking for it. To see this in action, create HTML file in `/public` called `myfile.html` and add some html.
 
 #### In a browser enter:
 
 `http://localhost:3000/myfile.html`
 
-And look, `myfile.html` loaded right away.
+And look, the content of `myfile.html` loaded right away.
 
 #### Set Landing Page
 
-We can take advantage of the `/public` directory to quickly set up our own home page instead of the Rails boilerplate. Let's change the file name for `myfile.html` to `index.html`.
+We can take advantage of the `/public` directory to quickly set up our own home page instead of the Rails boilerplate.
 
 ##### In a browser:
 
