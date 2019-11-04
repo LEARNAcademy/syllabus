@@ -2,8 +2,7 @@
 # Rails Intro: Coding a Response (Routes and Controllers)
 
 
-[![YouTube](http://img.youtube.com/vi/WMnFpgYJoCo/0.jpg)](https://www.youtube.com/watch?v=WMnFpgYJoCo)
-]
+[![YouTube](http://img.youtube.com/vi/WMnFpgYJoCo/0.jpg)](https://www.youtube.com/watch?v=WMnFpgYJoCo)]
 
 
 The goal of this section is to get you up and running with Rails.
