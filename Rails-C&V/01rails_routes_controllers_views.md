@@ -1,3 +1,4 @@
+
 # Rails Intro: Coding a Response (Routes and Controllers)
 
 
@@ -63,7 +64,7 @@ As neat as the `/public` directory is for quickly setting up easy-to-access page
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. As you may recall, a typical request starts with a url. In other words, a url is typed into the browser address bar and the user hits enter.
 
-We've worked with some urls previously but take this one for example: 
+We've worked with some urls previously but take this one for example:
 
 `localhost:3000/answers`
 
@@ -95,7 +96,7 @@ class MainController < ApplicationController
 end
 ```
 
-Here we are defining the main controller that we specified to handle our ```/answers``` requests in the ```routes.rb``` file. The controller, in its ```answers``` method defines what should happen when it is reached. In this case, it renders some html that reads "hello". 
+Here we are defining the main controller that we specified to handle our ```/answers``` requests in the ```routes.rb``` file. The controller, in its ```answers``` method defines what should happen when it is reached. In this case, it renders some html that reads "hello".
 
 This completes the Rails response to the ```/answers``` request. When we visit `localhost:3000/answers`, we should see a white page with the text "hello".
 
@@ -127,7 +128,7 @@ class MainController < ApplicationController
 end
 ```
 
-Now, our Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser. 
+Now, our Rails app has everything it needs to respond when I visit ```localhost:3000/mypage``` in the browser.
 
 This may be a lot to take in, but let's recap:
 
