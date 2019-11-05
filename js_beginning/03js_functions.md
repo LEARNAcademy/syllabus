@@ -53,7 +53,6 @@ Functions often require some information in order to run. Pieces of outside info
 Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.
 
 ```JavaScript
-
 greeting = (name) => {
     return "Hello " + name
 }
@@ -111,7 +110,7 @@ Here's what the pseudo code might look like:
 
 //takes in 1 number as an arguments
 
-//if number is less than 40 retun 'can not ride rollercoaster' (if/else statment)
+//if number is less than 40 return 'can not ride rollercoaster' (if/else statement)
 
 //otherwise return 'allowed to ride rollercoaster'
 ```
@@ -120,7 +119,7 @@ Now lets build the actual code around the pseudo code.
 ```JavaScript
 //create a function called tall_enough
 //takes in 1 number as an arguments
-var tall_enough = (number) => {
+var tallEnough = (number) => {
     //if number is less than 40 return 'can not ride rollercoaster'(if/else statement)
     if(number < 40){
         return "Can not ride rollercoaster"
@@ -130,28 +129,27 @@ var tall_enough = (number) => {
     }
 }
 
-console.log(tall_enough(58));
-output -> Allowed to ride rollercoaster
+console.log(tallEnough(58));
+output -> "Allowed to ride rollercoaster"
 
-console.log(tall_enough(37));
+console.log(tallEnough(37));
 output -> "Can not ride rollercoaster"
 
-console.log(tall_enough(24);
+console.log(tallEnough(24);
 output -> "Can not ride rollercoaster"
-
 ```
 
 
 ## Verify
 
-Notice that we called 'tall_enough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.
+Notice that we called 'tallEnough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.
 
 ## Console.log  vs  return
-Notice that we can call console.log as many times as we want and we can even call console.log inside functions like this...
+Notice that we can call console.log() as many times as we want and we can even call console.log inside functions like this...
 
 ```JavaScript
 var greeting = (name) => {
-    console.log(name);
+    console.log(name)
     return "Hello " + name
 }
 
@@ -172,7 +170,7 @@ Below are exercises in writing functions.
 
 1.  Write a function called marco that returns "polo".
 
-2.  Write a function called greeting that takes a name as an argument and returns 'welcome <person's name here>''
+2.  Write a function called greeting that takes a name as an argument and returns "Welcome, <person's name here>!"
 
 3.  Write a function called oddOrEven that takes an number as an argument and returns whether the number is odd or even.
 
@@ -213,12 +211,18 @@ Write a function named pluralize that:
 * takes 2 arguments, a number and a singular noun.
 * returns the number and pluralized form of the noun, if necessary.
 
-``` pluralizer(5, cat) ``` should return "5 cats"
-``` pluralizer(1, dog) ``` should return "1 dog" because the number one does not require a plural noun
+` pluralizer(5, cat) ` should return "5 cats"
+` pluralizer(1, dog) ` should return "1 dog" because the number one does not require a plural noun
 
 * Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
 
-[practice more with Edabit](https://edabit.com/challenges/javascript)
+#### STRETCH: Magic8 Ball with HTML
+* As a user I can enter a question and get a random answer to my question.
+* Create an HTML page linked to the JavaScript file - you will need to research onclick events, document.getElementById() and innerHTML.
+* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
+
+
+#### STRETCH: Practice with [Edabit](https://edabit.com/challenges/javascript)
 
 [Go to next lesson: Javascript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
 

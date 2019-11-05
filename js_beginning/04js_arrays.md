@@ -231,26 +231,19 @@ var numbers1 = [2, 4, 6, 8, 10]
 
  * Write the code that brings all the letters in the charsReversed Array together into a string without separators.
 
-**Exercise 7** - Create an array with your siblings names, and an array with your parents names.
+**Exercise 7** - Create two arrays consisting of three first names of your cohort members in each.
 
-* Sort your siblings names in alphabetical order.
+* Sort the names in alphabetical order.
 
-* Sort your parents names in reverse alphabetical order.
+* Sort the names in reverse alphabetical order.
 
 * Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
-
-* Sort all the names in reverse alphabetical order.
 
 #### Magic 8 Ball
 
 * Create an array with 6 different (appropriate) Magic 8 Ball answers
 * Create a random number to select one of the answers (hint: use Math.random()
 * Output the random answer
-
-#### Stretch goal:
-* As a user I can enter a question and get a random answer to my question.
-* Create an HTML page linked to the JavaScript file - you will need to research onClick events, document.getElementById() and innerHTML.
-* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
 
 
 [Go to next lesson: Javascript Loops](./05js_loops.md)
