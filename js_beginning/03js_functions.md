@@ -37,17 +37,14 @@ In order to see the output of our function, let's wrap our function call in a **
 var greeting = () => {
     return "Hello There"
 }
-
 console.log(greeting())
 
-output >> Hello There
-
+output -->> Hello There
 ```
-
 
 ## Function Arguments
 
-Functions often require some information in order to run. Pieces of outside information that is used when a function runs are called **arguments** to that function.  We put the arguments inside the parentheses of the function.
+Functions often require external information in order to run. Pieces of outside information that is used when a function runs are called **arguments** to that function.  We put the arguments inside the parentheses of the function.
 
 Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.
 
@@ -57,21 +54,30 @@ greeting = (name) => {
 }
 
 console.log(greeting("Sally"))
-
-output >> Hello Sally
+output -->> Hello Sally
 ```
+Notice that in the function we created a **placeholder** called `name`. This allows us to pass any name we want through the function during the function call.
 
-Notice that in the function we created a **placeholder** called 'name'. This allows us to pass any name we want through the function during the function call.
+The function is an encapsulated machine that can be called many times and give a unique output.
+
+```JavaScript
+console.log(greeting("Sam"))
+output -->> Hello Sam
+console.log(greeting("John"))
+output -->> Hello John
+console.log(greeting("Carol"))
+output -->> Hello Carol
+```
 
 ## Other Syntax for functions
 
-There are several syntax's that are used to write functions.  The primary one we use today, and the one shown above is called 'ES6 syntax'.  Below is a version you'll see in older Javascript.  It accomplishes primarily the same thing, with a few differences.  ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to.
+There are lots of ways to write functions. The primary one we use today, and the one shown above is called an arrow (or fat arrow) function using `ES6 syntax`. Below is a version you'll see in older Javascript. It accomplishes primarily the same thing, with a few differences in scope. ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to.
 
 ### Old-School function declarations
 
-The word 'function' is a keyword in Javascript, and we can use it to declare a function.
+The word `function` is a keyword in Javascript, and we can use it to declare a function.
 
-```javaScript
+```JavaScript
 function greeting(name){
     return "Hello " + name
 }
@@ -101,11 +107,11 @@ This is great, because it means that while you are thinking up your logic, you a
 
 Let's look at an example using pseudo code and adding a conditional inside the function.
 
-Exercise: Write a function called old_enough that takes in 1 number as an argument and tells whether or not the person is allowed to drink (over 21).
+Exercise: Write a function called tallEnough that takes an argument of a person's height as an argument and tells whether or not the person is tall enough to ride the rollercoaster.
 
 Here's what the pseudo code might look like:
 ```Javascript
-//create a function called tall_enough
+//create a function called tallEnough
 
 //takes in 1 number as an arguments
 
@@ -113,29 +119,29 @@ Here's what the pseudo code might look like:
 
 //otherwise return 'allowed to ride rollercoaster'
 ```
-Now lets build the actual code around the pseudo code.
+Now let's build the actual code around the pseudo code.
 
 ```JavaScript
 //create a function called tall_enough
 //takes in 1 number as an arguments
 var tallEnough = (number) => {
-    //if number is less than 40 return 'can not ride rollercoaster'(if/else statement)
-    if(number < 40){
-        return "Can not ride rollercoaster"
-    //otherwise return 'allowed to ride rollercoaster'
-    } else {
-        return "Allowed to ride rollercoaster"
-    }
+  //if number is less than 40 return 'can not ride rollercoaster'(if/else statement)
+  if(number < 40){
+    return "Can not ride rollercoaster"
+  //otherwise return 'allowed to ride rollercoaster'
+  } else {
+    return "Allowed to ride rollercoaster"
+  }
 }
 
-console.log(tallEnough(58));
-output -> "Allowed to ride rollercoaster"
+console.log(tallEnough(58))
+output -->> "Allowed to ride rollercoaster"
 
-console.log(tallEnough(37));
-output -> "Can not ride rollercoaster"
+console.log(tallEnough(37))
+output -->> "Can not ride rollercoaster"
 
-console.log(tallEnough(24);
-output -> "Can not ride rollercoaster"
+console.log(tallEnough(24)
+output -->> "Can not ride rollercoaster"
 ```
 
 
@@ -143,7 +149,7 @@ output -> "Can not ride rollercoaster"
 
 Notice that we called 'tallEnough' several times using different test cases.  You'll want to verify that your function is working by testing it with many different arguments.
 
-## Console.log  vs  return
+## console.log()  vs  return
 Notice that we can call console.log() as many times as we want and we can even call console.log inside functions like this...
 
 ```JavaScript
@@ -161,67 +167,55 @@ output -> "Hello Tom"
 However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
 
 
-
 ## Challenges
+#### Remember to write the pseudo code for each function before you write the code!
+
+1. Write a function named marco that returns "polo".
+
+2. Write a function named greeting that takes a name as an argument and returns "Welcome, <person's name here>!"
+
+3. Write a function named oddOrEven that takes a number as an argument and returns whether the number is odd or even.
+
+4. Write a function named triple that takes a number as an argument and returns the result of that number multiplied by 3.
+
+5. Write a function named multiply that takes two numbers as arguments and returns the result of one of the numbers multiplied by the other.
+
+6. Write a function named divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+
+7. Write a function named assignGrade that takes a number score as an argument and returns the letter grade for the score.
 
 
-Below are exercises in writing functions.
-
-1.  Write a function called marco that returns "polo".
-
-2.  Write a function called greeting that takes a name as an argument and returns "Welcome, <person's name here>!"
-
-3.  Write a function called oddOrEven that takes an number as an argument and returns whether the number is odd or even.
-
-4.  Write a function called triple that takes a number as an argument and returns the result of that number multiplied by 3.
-
-5.  Write a function called multiply that takes two numbers as arguments and returns the result of one of the numbers multiplied by the other.
-
-6.  Write a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
-
-Below are slightly harder challenges.
-##### Remember to write the pseudo code for each function before you write the code!
-
-#### What number's bigger?
+### STRETCH Challenge: What number's bigger?
 
 Write a function named greaterNum that:
-* takes 2 arguments, both numbers.
-* returns whichever number is the greater (higher) number.
-* Test the function 2 times with different number pairs
+* takes 2 arguments, both numbers
+* returns whichever number is the greater (higher) number
+* test the function 2 times with different number pairs
 
-
-#### The World Translator
+### STRETCH Challenge: The World Translator
 
 Write a function named helloWorld that:
 * takes 1 argument, a language code (e.g. "es", "de", "en")
-* returns "Hello, World" for the given language, for at least 3 languages. It should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
-* Test the function for each of the supported languages
+* returns "Hello, World" for the given language, for at least 3 languages
+* it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
+* test the function for each of the supported languages
 
-#### The Grade Assigner
-
-Write a function named assignGrade that:
-* takes 1 argument, a number score.
-* returns a grade for the score, either "A", "B", "C", "D", or "F".
-* Test the function for a few different scores.
-
-#### The Pluralizer
+### STRETCH Challenge: The Pluralizer
 
 Write a function named pluralize that:
-* takes 2 arguments, a number and a singular noun.
-* returns the number and pluralized form of the noun, if necessary.
+* takes 2 arguments, a number and a singular noun
+* returns the number and pluralized form of the noun, if necessary
+* pluralizer(5, cat) should return "5 cats"
+* pluralizer(1, dog) should return "1 dog" because the number one does not require a plural noun
+* Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species"
 
-` pluralizer(5, cat) ` should return "5 cats"
-` pluralizer(1, dog) ` should return "1 dog" because the number one does not require a plural noun
-
-* Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species".
-
-#### STRETCH: Magic8 Ball with HTML
+### STRETCH Challenge: Magic8 Ball with HTML
 * As a user I can enter a question and get a random answer to my question.
-* Create an HTML page linked to the JavaScript file - you will need to research onclick events, document.getElementById() and innerHTML.
-* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
+* Create an HTML page linked to the JavaScript file - you will need to research onclick events, document.getElementById() and innerHTML
+* More information about linking HTML to JavaScript can be found [here](../tools_and_resources/linking_html_and_javascript.md)
 
 
-#### STRETCH: Practice with [Edabit](https://edabit.com/challenges/javascript)
+### Practice functions with [Edabit](https://edabit.com/challenges/javascript)
 
 [Go to next lesson: Javascript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
 
