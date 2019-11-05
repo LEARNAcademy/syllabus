@@ -207,25 +207,31 @@ We have gone over most of the building blocks that compose a javascript program.
 Open up a JS file in atom, run your program in terminal with node.
 
 #### Arithmetic Challenge
-
-- Add, subtract, multiple, and divide integers and floats
-- Find the remainder of 33/6
+- Add 34 and 71
+- Subtract 67 from 123
+- Multiply 56 and 23
+- Divide 45 by 5
 - Calculate 5 to the power of 7
+- Find the remainder of 33/6
 
 #### String Challenge
-
 - Find the length of a string containing your name
 - Does your string include the letter "e"?
-- Concat two strings and find the length
 
-### Variables Challenge
+#### Boolean Challenge (return true or false)
+- Is 34 divided by 3 greater than 67 divided by 2?
+- Does 5 evaluate to the same as "5"?
+- Does 5 strictly equal "5"?
+- Does !3 strictly equal 3?
+- Does "LEARN".length strictly equal 5 AND "Student".length strictly equal 7?
+- Does "LEARN".length strictly equal 5 OR "Student".length strictly equal 10?
 
+
+#### Variables Challenge
 - Set a variable called favNum equal to your favorite number
-- What is your favorite number divided by 2?
+- Log your favorite number divided by 2
 - Set another variable called otherNum equal to 13
-- Divide favNum by otherNum
-- Is otherNum greater than favNum?
-
+- What is favNum divided by otherNum?
 - Save a string as a variable
 - Find the length of the string
 - Use the method charAt() to find what letter is at the 3rd index
