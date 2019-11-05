@@ -206,7 +206,7 @@ We have gone over most of the building blocks that compose a javascript program.
 
 Open up a JS file in atom, run your program in terminal with node.
 
-#### Arithmetic Challenge
+**Arithmetic Challenges**
 - Add 34 and 71
 - Subtract 67 from 123
 - Multiply 56 and 23
@@ -214,11 +214,11 @@ Open up a JS file in atom, run your program in terminal with node.
 - Calculate 5 to the power of 7
 - Find the remainder of 33/6
 
-#### String Challenge
+**String Challenges**
 - Find the length of a string containing your name
 - Does your string include the letter "e"?
 
-#### Boolean Challenge (return true or false)
+**Boolean Challenges (return true or false)**
 - Is 34 divided by 3 greater than 67 divided by 2?
 - Does 5 evaluate to the same as "5"?
 - Does 5 strictly equal "5"?
@@ -227,7 +227,7 @@ Open up a JS file in atom, run your program in terminal with node.
 - Does "LEARN".length strictly equal 5 OR "Student".length strictly equal 10?
 
 
-#### Variables Challenge
+**Variables Challenges**
 - Set a variable called favNum equal to your favorite number
 - Log your favorite number divided by 2
 - Set another variable called otherNum equal to 13
