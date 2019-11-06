@@ -227,8 +227,8 @@ https://github.com/sapegin/jest-cheat-sheet#test-structure
 
 13. Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'. Write the function that will make the test pass.
 
-[Go to next lesson: Objects and Classes](../js_beginning/07js_objects.md)
+[Go to next lesson: JavaScript Objects](../js_beginning/07js_objects.md)
 
-[Back to Javascript Higher Order Functions](./02js_higher_order_functions.md)
+[Back to JavaScript Higher Order Functions](./02js_higher_order_functions.md)
 
 [Back to Syllabus](../README.md)

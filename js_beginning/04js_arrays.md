@@ -184,20 +184,40 @@ console.log(arr1.indexOf("t"))
 console.log(arr1.lastIndexOf("y"));
 4
 ```
+## Array Destructuring
+
+The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
+Array destructuring allows us to assign values from an array to variables. Though array destructuring won't be immediately useful to us, it's good to know a little bit about what it affords us.
+
+```javascript
+let [firstVal, secondVal] = [1, 2]
+
+console.log(firstVal)   // => 1
+console.log(secondVal)  // => 2
+```
+
+Notice that an array destructuring assigment:
+
+- Starts with a variable keyword
+- In square brackets lists some variable names
+- Uses the assignment operator to assign the array to unpack
+
+Also notice that the variables are assigned in order. As in, the first variable name is assigned the first value of the value array.
+
 
 ## Challenges
 
 1. **Consider this variable:**
-
+```JavaScript
   var groceryList = ["chips", "dip", "cookies"]
-
+```
 - Write the code that will add "soda" to the end of the original array.
 - Write the code that will add "granola" to the end of array without altering the original array.
 
 2. **Consider this variable:**
-
+```JavaScript
   var numbers = [2, 4, 6, 8, 10]
-
+```
 - Write the code that will add the number 0 to the beginning of the array.
 
 - Write the code that will add the number 12 to the end of the array.
@@ -207,17 +227,18 @@ console.log(arr1.lastIndexOf("y"));
 - Write the code that will add the number 0 to the beginning of the array without altering the original array.
 
 3. **Consider this variable:**
-
+```JavaScript
   var numSet = [2, 13, 6, 8, 4, 2]
-
+```
 - Write the code that finds the index of the first appearance of the number 2.
 
 - Write the code that finds the index of the last appearance of the number 2.
 
 4. **Consider this variable:**
 
+```JavaScript
  var chars = ["y", "a", "r", "r", "a"]
-
+```
 - Write the code that brings all the letters in the chars array together into a string.
 
 - Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
