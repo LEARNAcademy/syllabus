@@ -175,8 +175,7 @@ console.log(newArr);
 
 And finally, let's look at **.indexOf** and **lastIndexOf**.
 
-```javascript
-
+```JavaScript
 var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
 
 console.log(arr1.indexOf("t"))
@@ -192,54 +191,54 @@ console.log(arr1.lastIndexOf("y"));
 
   var groceryList = ["chips", "dip", "cookies"]
 
-* Write the code that will add "soda" to the end of the original array.
-* Write the code that will add "granola" to the end of array without altering the original array.
+- Write the code that will add "soda" to the end of the original array.
+- Write the code that will add "granola" to the end of array without altering the original array.
 
 2. **Consider this variable:**
 
   var numbers = [2, 4, 6, 8, 10]
 
-* Write the code that will add the number 0 to the beginning of the array.
+- Write the code that will add the number 0 to the beginning of the array.
 
-* Write the code that will add the number 12 to the end of the array.
+- Write the code that will add the number 12 to the end of the array.
 
-* Write the code that will remove the first number from the array.
+- Write the code that will remove the first number from the array.
 
-* Write the code that will add the number 0 to the beginning of the array without altering the original array.
+- Write the code that will add the number 0 to the beginning of the array without altering the original array.
 
 3. **Consider this variable:**
 
   var numSet = [2, 13, 6, 8, 4, 2]
 
-* Write the code that finds the index of the first appearance of the number 2.
+- Write the code that finds the index of the first appearance of the number 2.
 
-* Write the code that finds the index of the last appearance of the number 2.
+- Write the code that finds the index of the last appearance of the number 2.
 
 4. **Consider this variable:**
 
  var chars = ["y", "a", "r", "r", "a"]
 
-* Write the code that brings all the letters in the chars array together into a string.
+- Write the code that brings all the letters in the chars array together into a string.
 
-* Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
+- Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
 
-* Write the code that brings all the letters in the charsReversed array together into a string with a hyphen between each letter.
+- Write the code that brings all the letters in the charsReversed array together into a string with a hyphen between each letter.
 
-* Write the code that brings all the letters in the charsReversed Array together into a string without separators.
+- Write the code that brings all the letters in the charsReversed Array together into a string without separators.
 
 5. **Create two arrays consisting of three first names of your cohort members in each.**
 
-* Sort the names in alphabetical order.
+- Sort the names in alphabetical order.
 
-* Sort the names in reverse alphabetical order.
+- Sort the names in reverse alphabetical order.
 
-* Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
+- Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
 
 ### STRETCH Challenge: Magic8 Ball
 
-* Create an array with 6 different (appropriate) Magic 8 Ball answers
-* Create a random number to select one of the answers (hint: use Math.random()
-* Output the random answer
+- Create an array with 6 different (appropriate) Magic 8 Ball answers
+- Create a random number to select one of the answers (hint: use Math.random()
+- Output the random answer
 
 
 [Go to next lesson: Javascript Loops](./05js_loops.md)

@@ -30,6 +30,42 @@ var person = {
 
 person.getData();   -> "Alex Keaton-123456789"
 ```
+## Objects
+
+You can use .map() or .filter() on arrays of objects as well.  
+
+Example:  Consider this toons variable.  Use .map() or .filter() to return a new array with only the dogs.
+
+```JavaScript
+
+var toons = [{name: "Brian", animal: "dog"},
+            {name: "Tom", animal: "duck"},
+            {name: "Bugs", animal: "dog"},
+            {name: "Daffy", animal: "duck"},
+            {name: "Felix", animal: "dog"},
+            {name: "Tabby", animal: "cat"}]
+
+
+var animal = toons.filter(value => value.animal === "dog")
+
+
+
+console.log(animal);
+
+```
+Consider this array of objects:
+
+```JavaScript
+var animals = [
+  { name: "Waffles", type: "dog", age: 12 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
+];
+```
+* Create a function that takes in any array of objects and returns a new array with only those of type cat.
+
+* Using the same array of objects above. Create an anonymous function that returns a new array with only the names of the animals.
 
 ## Classes
 

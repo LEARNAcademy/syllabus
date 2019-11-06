@@ -5,13 +5,12 @@
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
 
 1. [Javascript Intro](./js_beginning/01js_intro.md)
-1. [Javascript Conditionals](./js_beginning/02js_conditions.md)
-1. [Javascript Arrays](./js_beginning/04js_arrays.md)
-1. [Javascript Loops](./js_beginning/05js_loops.md)
-1. [Javascript Functions](./js_beginning/03js_functions.md)
-1. [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-1. [Javascript Objects](./js_beginning/07js_objects.md)
-1. [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
+2. [Javascript Conditionals](./js_beginning/02js_conditions.md)
+3. [Javascript Arrays](./js_beginning/04js_arrays.md)
+4. [Javascript Loops](./js_beginning/05js_loops.md)
+5. [Javascript Functions](./js_beginning/03js_functions.md)
+6. [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
+7. [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
 
 #### Additional Topics:
 
@@ -25,7 +24,7 @@ This is your introduction to programming through the Javascript programming lang
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
 
 1. [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-2. [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
+8. [Javascript Objects](./js_beginning/07js_objects.md)
 3. [Javascript Classes and Inheritance](./js_intermediate/05js_class_inheritance.md)
 4. [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 

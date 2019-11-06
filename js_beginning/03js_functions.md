@@ -168,7 +168,8 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 
 ## Challenges
-#### Remember to write the pseudo code for each function before you write the code!
+
+**DON'T FORGET TO PSEUDO CODE**
 
 1. Write a function named marco that returns "polo".
 
@@ -185,34 +186,30 @@ However, we can only have 1 return in a function.  Note that code after the func
 7. Write a function named assignGrade that takes a number score as an argument and returns the letter grade for the score.
 
 
-### STRETCH Challenge: What number's bigger?
+### STRETCH Challenges
 
-Write a function named greaterNum that:
-* takes 2 arguments, both numbers
-* returns whichever number is the greater (higher) number
-* test the function 2 times with different number pairs
+**Test your functions with multiple calls**
 
-### STRETCH Challenge: The World Translator
+1. What number's bigger: Write a function named greaterNum that takes 2 arguments, both numbers and returns whichever number is the greater (higher) number
 
-Write a function named helloWorld that:
-* takes 1 argument, a language code (e.g. "es", "de", "en")
-* returns "Hello, World" for the given language, for at least 3 languages
-* it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English.
-* test the function for each of the supported languages
+2. The World Translator: Write a function named helloWorld that takes 1 argument, a language code (e.g. "es", "de", "en") and returns "Hello, World" for the given language, for at least 3 languages (it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English)
 
-### STRETCH Challenge: The Pluralizer
+3. The Pluralizer: Write a function named pluralize that takes 2 arguments, a number and a singular noun and returns the number and pluralized form of the noun, if necessary
 
-Write a function named pluralize that:
-* takes 2 arguments, a number and a singular noun
-* returns the number and pluralized form of the noun, if necessary
-* pluralizer(5, cat) should return "5 cats"
-* pluralizer(1, dog) should return "1 dog" because the number one does not require a plural noun
-* Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species"
+  pluralizer = (5, cat)
 
-### STRETCH Challenge: Magic8 Ball with HTML
-* As a user I can enter a question and get a random answer to my question.
-* Create an HTML page linked to the JavaScript file - you will need to research onclick events, document.getElementById() and innerHTML
-* More information about linking HTML to JavaScript can be found [here](../tools_and_resources/linking_html_and_javascript.md)
+  Expected outcome -->> "5 cats"
+
+  pluralizer = (1, dog)
+
+  Expected outcome -->> "1 dog"
+
+- Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species"
+
+### EPIC Challenge: Magic8 Ball with HTML
+- As a user I can enter a question and get a random answer to my question.
+- Create an HTML page linked to the JavaScript file - you will need to research onclick events, document.getElementById() and innerHTML
+- More information about linking HTML to JavaScript can be found [here](../tools_and_resources/linking_html_and_javascript.md)
 
 
 ### Practice functions with [Edabit](https://edabit.com/challenges/javascript)

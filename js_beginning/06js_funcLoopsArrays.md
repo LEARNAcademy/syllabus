@@ -13,14 +13,13 @@ var myArr1 = [1, 5, 7, 3, 10]
 
 function mult5(array){
   let newArr = []
-  for(let i = 0; i < array.length; i++){
+  for(let i=0; i<array.length; i++){
     newArr.push(array[i] * 5)
   }
   return newArr
 }
 
 console.log(mult5(myArr1))
-
 ```
 
 Notice that we created an empty array inside our function and used the **.push()** method to populate our empty array. The function then returned the newly populated array.
@@ -34,7 +33,7 @@ var myArr2 = [1, 2, 7, 4, 10, 8, 9]
 
 function onlyEven(array){
   let newArr = []
-  for(let i = 0; i < array.length; i++){
+  for(let i=0; i<array.length; i++){
     if(array[i] % 2 === 0){
       newArr.push(array[i])
     }
@@ -43,119 +42,144 @@ function onlyEven(array){
 }
 
 console.log(onlyEven(myArr2))
-
 ```
 
-### Challenges
+## Challenges
 
 **DON'T FORGET TO PSEUDO CODE**
 
-- Write a function that takes in an array and returns a new array with all numbers multiplied by 3.
+1. Write a function that takes in an array and returns a new array with all numbers multiplied by 3.
 
-var testArr1 = [3, 9, 15, 4, 10]
-// expected output -->> [9, 27, 45, 12, 30]
+  var testArr1 = [3, 9, 15, 4, 10]
+
+  Expected output -->> [9, 27, 45, 12, 30]
 
 
-- Write a function that takes in an array and returns a new array with only odd numbers.
+2. Write a function that takes in an array and returns a new array with only odd numbers.
 
-var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
-// expected output -->> [-7, 3, 5, 13]
+  var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 
-- Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
+  Expected output -->> [-7, 3, 5, 13]
 
-var myMessage = "Hello There"
-// expected output -->> "HELLO THERE"
+3. Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
 
-4. Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method
+  var myMessage = "Hello There"
 
-var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
-// expected output -->> "nicework"
+  Expected output -->> "HELLO THERE"
 
-- Create a function that returns the highest number
+4. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the typeof method
 
-var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
-// expected output -->> 67
+  var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 
-- Create a function that returns the lowest number
+  Expected output -->> "nicework"
 
-var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
-// expected output -->> -9
+5. Create a function that returns the highest number
 
-- Create a function that calculates the sum
-var addThese1 = [1, 2, 3, 4]
-// expected output -->> 10
-var addThese2 = []
-// expected output -->> 0
+  var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+  Expected output -->> 67
+
+6. Create a function that returns the lowest number
+
+  var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+  Expected output -->> -9
+
+7. Create a function that calculates the sum
+
+  var addThese1 = [1, 2, 3, 4]
+
+  Expected output -->> 10
+
+  var addThese2 = []
+
+  Expected output -->> 0
 
 8. Create a function that calculates the mean value
-* var meanChecker = [1, 2, 3]
-* expected output -->> 2
+
+  var meanChecker = [1, 2, 3]
+  Expected output -->> 2
 
 9. Create a function that finds the index of the highest number
-* var indexHighestNumber = [1, 4, 2]
-* expected output -->> 1
+
+  var indexHighestNumber = [1, 4, 2]
+
+  Expected output -->> 1
 
 10. Create a function that takes in a string and returns only the middle value
 
-* var testString1 = "hello"
-* expected output -->> "l"
-* var testString2 = "boogeyman"
-* expected output -->> "e"
+  var testString1 = "hello"
+  Expected output -->> "l"
+  var testString2 = "boogeyman"
+  Expected output -->> "e"
 
-### Stretch Challenges
+### STRETCH Challenges
 
 1. Palindrome: Create a function that takes in a string and determines whether the string is a palindrome (the same word forward and backwards)
 
-* var isPalindrome1 = "racecar"
-* expected output -->> "Yes racecar is a palindrome"
-* var isPalindrome2 = "albatross"
-* expected output -->> "No albatross is not a palindrome"
+  var isPalindrome1 = "racecar"
+
+  Expected output -->> "Yes racecar is a palindrome"
+
+  var isPalindrome2 = "albatross"
+
+  Expected output -->> "No albatross is not a palindrome"
 
 2. Vowels Removed: Create a function that takes in a string and returns a new string with all the vowels removed
 
-* var fullString1 = "javascript is awesome"
-* expected output -->> "jvscrpt s wsm"
-* var fullString2 = "I am a LEARN student"
-* expected output -->> "m LRN stdnt"
+  var fullString1 = "javascript is awesome"
+
+  Expected output -->> "jvscrpt s wsm"
+
+  var fullString2 = "I am a LEARN student"
+
+  Expected output -->> "m LRN stdnt"
 
 3. Merge Arrays: Create a function that takes in two arrays as arguments and returns one array with no duplicate values.
 
-* var arr1 = [3, 7, 10, 5, 4, 3, 3]
-* var arr2 = [7, 8, 2, 3, 1, 5, 4]
-* expected output -->> [3, 7, 10, 5, 4, 8, 2, 1]
+  var arr1 = [3, 7, 10, 5, 4, 3, 3]
+
+  var arr2 = [7, 8, 2, 3, 1, 5, 4]
+
+  Expected output -->> [3, 7, 10, 5, 4, 8, 2, 1]
 
 4. Clean Function: Create a function that filters false, null, 0 and blank values from an array.
 
-* var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
-* expected output -->> [58, "abcd", true]
+  var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+
+  Expected output -->> [58, "abcd", true]
 
 5. Pre-fill: Write a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 
-* fillArray(6, 0)
-* expected output -->> [0, 0, 0, 0, 0, 0]
-* fillArray(4, 11)
-* expected output -->> [11, 11, 11, 11]
+  fillArray = (6, 0)
 
-6. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+  expected output -->> [0, 0, 0, 0, 0, 0]
 
-* 4 ➞ 10
-* 13 ➞ 91
-* 600 ➞ 180300
+  fillArray = (4, 11)
 
+  expected output -->> [11, 11, 11, 11]
 
+6. Create a function named addUp that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
 
-### Super Stretch Challenge
+  addUp = (4)
+
+  Expected output -->> 10
+
+  addUp = (13)
+
+  Expected output -->> 91
+
+  addUp = (600)
+
+  Expected output  -->> 180300
+
+### EPIC Challenge
 
 #### High/Low Game
-* Create an HTML page and link your JavaScript file
-* More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
-* Create a function that plays the following game: The computer picks a secret random integer between 1 and 100 (both inclusive), and asks the user to guess a number HINT: use prompt(), OR `<input>`
-* If the user's guess is too high, the user will be notified
-* If the user's guess is too low, the user will be notified
-* If the user guesses the secret number correctly, a winning message will be displayed HINT: use alert() OR `innerHTML`
-* STRETCH: If the user has not guessed the secret number in seven tries, a losing message will be displayed
-* STRETCH: Add styling to your page and push it to a GitHub repository
-
+- Create an HTML page and link your JavaScript file
+- More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
+- As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive)
+- As a user, when I see if my guess is too high or too low
+- As a user, if I guess the number correctly I am notified that I won
+- STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
 
 [Go to next lesson: Higher Order Functions](../js_intermediate/02js_higher_order_functions.md)
 

@@ -105,7 +105,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 3. Create a for loop that logs each even number from 1-20, and in the place of every odd number, returns the word "ODD"
 
-  Expected output: [ODD, 2, ODD, 4, ODD, 6 ...etc]
+  Expected output -->> [ODD, 2, ODD, 4, ODD, 6 ...etc]
 
 4. **Consider this variable:**
 
@@ -113,15 +113,15 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 * Create a loop that will log the highest number from the array
 
-  Expected output: 67
+  Expected output -->> 67
 
 * Create a loop that will log the lowest number from the array
 
-  Expected output: -9
+  Expected output -->> -9
 
 * Create a loop that will log the remainder of each number when divided by 2
 
-  Expected output: [1, 1, 1, 0, 1]
+  Expected output -->> [1, 1, 1, 0, 1]
 
 5. **Consider this variable:**
 
@@ -129,7 +129,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 * Write the code that will log the number of times the letter "e" occurs in the string
 
-  Expected output: 2
+  Expected output -->> 2
 
 ### STRETCH Challenges
 
@@ -137,14 +137,14 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
   Write a for loop that iterates from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
 
-  Expected output: "0 is even" "1 is odd" "2 is even"
+  Expected output -->> "0 is even" "1 is odd" "2 is even"
 
 
 2. **Fizz Buzz**
 
   Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word `fizz`. If a number is a multiple of five, replace it with the word `buzz`. If a number is a multiple of both 3 and 5, replace it with `fizzbuzz`.
 
-  Expected output: 1, 2, "fizz", 4, "buzz", 6, 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz" ...etc
+  Expected output -->> 1, 2, "fizz", 4, "buzz", 6, 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz" ...etc
 
 
 [Go to next lesson: Javascript Functions](./03js_functions.md)
