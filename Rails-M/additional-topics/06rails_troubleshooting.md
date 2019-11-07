@@ -4,7 +4,7 @@ Methods need to be written within `rails c` **NOT** within your Rails model file
 
 * `rails c` does not connect to the database.
 
-  * Check the `database.yml` file within Rails is the same name as the database you created in `psql`. Refer to the [Active Record Intro](../01_intro_active_record.md) tab to setup `database.yml` file.
+  * Check the `database.yml` file within Rails is the same name as the database you created in `psql`. Refer to the [Active Record Intro](../01intro_active_record.md) tab to setup `database.yml` file.
 
 * `uninitialized constant` error when trying to use Active Record, insure all files match naming convention. Be sure to check table names.
 
