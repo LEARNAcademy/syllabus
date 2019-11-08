@@ -103,9 +103,7 @@ This may seem like a trivial feature, but object destructuring can save you load
 
 Being comfortable with object destructuring allows you to make quick work of extracting and manipulating object properties.
 
-There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Destructuring Assignmment Operators</a>
+There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Destructuring Assignmment Operators</a>
 
 ## Challenges
 
@@ -194,7 +192,6 @@ console.log(describePokemon(pokeOne))
 console.log(describePokemon(pokeTwo))
 //-->> 'Magikarp is a Water pokemon'
 ```
-
 [Go to next lesson: JavaScript Classes](../js_intermediate/js_classes.md)
 
 [Back to JavaScript Testing with Jest](./js_intermediate/js_testing_jest.md)

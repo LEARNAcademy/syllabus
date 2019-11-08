@@ -18,14 +18,14 @@ This is your introduction to programming through the Javascript programming lang
 - [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 
-
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
 
 1. [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-8. [Javascript Objects](./js_beginning/07js_objects.md)
-3. [Javascript Classes and Inheritance](./js_intermediate/05js_class_inheritance.md)
+2. [Javascript Objects](./js_beginning/07js_objects.md)
+3. [Javascript Classes](./js_intermediate/js_classes.md)
+3. [Javascript Class Inheritance](./js_intermediate/05js_class_inheritance.md)
 4. [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 
 #### Additional Topics:
