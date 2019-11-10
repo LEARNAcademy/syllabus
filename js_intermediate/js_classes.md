@@ -183,7 +183,7 @@ console.log(bella.description())
 ## Resources
 
 For more information on objects see:
-<!-- <a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>
+<a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>
 <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects" target="_blank">You Don't Know JS: Up & Going - Chapter 2: Into JavaScript</a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects" target="_blank">MDN: Objects</a>
 
@@ -194,11 +194,11 @@ For more information on closures see:
 (Caution: not for the faint of heart)
 
 A great style guide for Javascript:
-[Air B & B](https://github.com/airbnb/javascript) -->
+[Air B & B](https://github.com/airbnb/javascript)
 
 
 You can see this animated if you go to http://pythontutor.com, select javaScript, and paste in the code.
-<!-- For further in-depth information see <a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a> -->
+For further in-depth information see <a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>
 
 ## Challenges
 
