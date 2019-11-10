@@ -115,6 +115,6 @@ The goal of these challenges is to get practice coding up forms to send informat
 - As a user, when I submit my profile with a `first_name`, `last_name`, `blurb`, and `hobbies`, I can see my profile information on the same page
 - As a user, I can visit a 'Sign In' page
 - As a user, if 'Sign In' with a user_id that is at least 6 characters along and a password that is not the same as my user_id, I am greeted by my `user_id`: 'Welcome, **user_id**!
-  - **Stretch Challenge**
-    - Add some other validations into your 'Sign In' (ie, no numbers in a user_id/special character & number required in password)
+
 ## Stretch Challenge
+- Add some other validations into your 'Sign In' (ie, no numbers in a user_id/special character & number required in password)

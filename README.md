@@ -81,8 +81,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
 1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
 1. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
-1. [Rails Generate](./Rails-C&V/06rails_generate.md)
+1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+1. [Rails Views](./Rails-C&V/02rails_views.md)
+1. [Rails Params](./Rails-C&V/03rails_params.md)
 1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
 1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
@@ -92,21 +93,23 @@ Rails is full stack framework built into the Ruby programming language. Here you
 - [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 - [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
-## Unit Six: Full Stack Ruby on Rails
+## Unit Six: Professional Development Week
 
-1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-1. [Rails Views](./Rails-C&V/02rails_views.md)
-1. [Rails Params](./Rails-C&V/03rails_params.md)
+Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
+
+- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+
+## Unit Seven: Full Stack Ruby on Rails
+
 1. [Rails Forms](./Rails-C&V/05rails_forms.md)
-1. [Rails Layouts and Flash Messages](./Rails-C&V/05rails_layouts_flash_messages.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
-1. [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-1. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
-1. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-1. [Intro to Fetch](./Rails-M/10using_fetch.md)
+1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
+1. [Postman](./blob/master/tools_and_resources/postman.md)
 1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
 1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
 1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+1. [Intro to Fetch](./Rails-M/10using_fetch.md)
 
 Additional Topics:
 - [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
@@ -115,12 +118,7 @@ Additional Topics:
 - [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
 - [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
-
-## Unit Seven: Professional Development Week
-
-Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
-
-- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+- [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
