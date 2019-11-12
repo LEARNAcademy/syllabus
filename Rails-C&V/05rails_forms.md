@@ -2,6 +2,10 @@
 
 https://player.vimeo.com/video/155715320
 
+# Ruby Review
+
+[![YouTube](http://img.youtube.com/vi/-CDpoSQTme0/0.jpg)](https://www.youtube.com/watch?v=-CDpoSQTme0)
+
 # Completing the User Interface
 
 ## Set Up
