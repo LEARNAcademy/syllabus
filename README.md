@@ -104,7 +104,7 @@ Professional development is dedicated to preparing for your  internship and the 
 1. [Rails Forms](./Rails-C&V/05rails_forms.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
 1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
-1. [Postman](./blob/master/tools_and_resources/postman.md)
+1. [Postman](./tools_and_resources/postman.md)
 1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
 1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
 1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
