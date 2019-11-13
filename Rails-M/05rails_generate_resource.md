@@ -49,6 +49,13 @@ There's a lot that's output to the screen but lets focus on this section:
 
 What we see is that Rails generated all the routes required for us to build out the CRUD functionality for our guitars. All we really need to do is tell our controller what we want it do for each request.
 
+## Disable Authenticity Token
+For static page Rails applications, a check is made to assure that forms submitted to the controller originate from the same website. In most single page applications that consume an API, we don't utilize this feature, and need to disable it.  Add the following to the ```/app/controllers/application_controller.rb```
+
+```Ruby
+skip_before_action :verify_authenticity_token
+```
+
 ## Coding an index response
 
 Let's tell it what we want it to do for a "`get`" to the "`/guitars`" url.
