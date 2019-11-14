@@ -2,7 +2,7 @@
 
 https://player.vimeo.com/video/216348577
 
-Up until late 2016, the hardest part about working with React was just getting a new app set up.  Facebook recognized this problem, and released some tools to help developers get started easily.  The following command is one of those tools, and we'll be looking at some of the important things it does for us - but just to get started, lets try it out now.
+Up until late 2016, the hardest part about working with React was just getting a new app set up.  Facebook recognized this problem, and released some tools to help developers get started easily. The following command is one of those tools, and we'll be looking at some of the important things it does for us - but just to get started, lets try it out now.
 
 ## create-react-app
 Use Yarn to install the `create-react-app` followed by the name of your application, so we can build our first React app.

@@ -7,11 +7,10 @@ This is your introduction to programming through the Javascript programming lang
 1. [Javascript Intro](./js_beginning/01js_intro.md)
 2. [Javascript Conditionals](./js_beginning/02js_conditions.md)
 3. [Javascript Arrays](./js_beginning/04js_arrays.md)
-4. [Javascript Functions](./js_beginning/03js_functions.md)
-5. [Javascript Loops](./js_beginning/05js_loops.md)
+4. [Javascript Loops](./js_beginning/05js_loops.md)
+5. [Javascript Functions](./js_beginning/03js_functions.md)
 6. [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-7. [Javascript Objects](./js_beginning/07js_objects.md)
-8. [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
+7. [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
 
 #### Additional Topics:
 
@@ -19,14 +18,14 @@ This is your introduction to programming through the Javascript programming lang
 - [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 
-
 ## Unit Two: Intermediate Javascript
 
 This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
 
 1. [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-2. [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
-3. [Javascript Classes and Inheritance](./js_intermediate/05js_class_inheritance.md)
+2. [Javascript Objects](./js_beginning/07js_objects.md)
+3. [Javascript Classes](./js_intermediate/js_classes.md)
+3. [Javascript Class Inheritance](./js_intermediate/05js_class_inheritance.md)
 4. [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 
 #### Additional Topics:
@@ -82,8 +81,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
 1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
 1. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
-1. [Rails Generate](./Rails-C&V/06rails_generate.md)
+1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
+1. [Rails Views](./Rails-C&V/02rails_views.md)
+1. [Rails Params](./Rails-C&V/03rails_params.md)
 1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
 1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
@@ -93,20 +93,23 @@ Rails is full stack framework built into the Ruby programming language. Here you
 - [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 - [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
-## Unit Six: Full Stack Ruby on Rails
+## Unit Six: Professional Development Week
 
-1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-1. [Rails Views](./Rails-C&V/02rails_views.md)
-1. [Rails Params](./Rails-C&V/03rails_params.md)
-1. [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
+Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
+
+- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+
+## Unit Seven: Full Stack Ruby on Rails
+
+1. [Rails Forms](./Rails-C&V/05rails_forms.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
-1. [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-1. [React Review](https://github.com/learn-academy-2019-delta/react-refresh)
-1. [APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-1. [Intro to Fetch](./Rails-M/10using_fetch.md)
+1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
+1. [Postman](./tools_and_resources/postman.md)
 1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
 1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
 1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+1. [Intro to Fetch](./Rails-M/10using_fetch.md)
 
 Additional Topics:
 - [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
@@ -115,12 +118,7 @@ Additional Topics:
 - [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
 - [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
-
-## Unit Seven: Professional Development Week
-
-Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
-
-- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+- [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
