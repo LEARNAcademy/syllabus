@@ -1,5 +1,7 @@
 # React Props
 
+[![YouTube](http://img.youtube.com/vi/-5dtIo_oib0/0.jpg)](https://www.youtube.com/watch?v=-5dtIo_oib0)
+
 Earlier, we took a look at state in React and how to use methods to update information in a component's state. With that, we are one step closer to building truly dynamic React applications.
 
 Where nested components gave us the ability to build modular interfaces and state gave us a means of tracking and updating data within components, props give us the ability to pass data between components. Specifically, it gives us the ability to pass data down to nested components.
