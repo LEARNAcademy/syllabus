@@ -17,7 +17,7 @@ Let's start with a simple setup.
 
 ```ruby
 Rails.application.routes.draw do
-  get '/answers' => 'main#answers'
+  post '/answers' => 'main#answers'
 end
 ```
 
@@ -49,7 +49,7 @@ At this point the URL should work: /answers?number=43
 ```erb
 Number was: <%= @result_string %>
 <hr/>
-<form action="answers" method="get">
+<form action="answers" method="post">
   <input type="text" name="number"/>
   <input type="submit" value="Submit Number"/>
 </form>
@@ -65,7 +65,7 @@ Just as if we had entered it ourselves.
 ```erb
 Number was: <%= @result_string %>
 <hr/>
-<form action="answers" method="get">
+<form action="answers" method="post">
   <input type="number" name="number" min="1" max="100" required/>
   <input type="submit" value="Submit Number"/>
 </form>
@@ -82,7 +82,7 @@ Adding name to form and cookies
 <% end %>
 Number: <%= @result_string %>
 <hr/>
-<form action="answers" method="get">
+<form action="answers" method="post">
   <label for="number_id">Number:</label>
   <input type="number" id="number_id" name="number" min="1" max="100" required/>
   </br>
@@ -116,8 +116,9 @@ class MainController < ApplicationController
 end
 ```
 
-# Rails Hi/Lo with Forms Challenge
-
-For this challenge, have a look at [Rails Cookies](./04rails_cookies.md) to see how cookies can help you store your secret number.
-
- * Create a form which uses the action: GET to the `try` route, and contains one field with the guess parameters, and a submit button.
+# Create a Blog Post Challenge
+Starting with the Blog Post Rails appliction.  Add the Ability to create new Blog Posts
+- add new and create routes to the Rails Router
+- add new controller endpoint
+- add a form for the new action with the Blog Post form
+- add create controller endpoint that process the form input 
