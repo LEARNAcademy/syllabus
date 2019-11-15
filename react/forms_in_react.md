@@ -1,5 +1,7 @@
 # Forms in React
 
+[![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
+
 Today we're going to take a closer look at managing state in Components, and handling state changes among components as they work together on the page. We've been working with both state and props to manage state in components. Recall that state is for managing internal state of a component, and props are used to communicate state between components. As you work more with react you'll begin to use component state less and less, keeping state contained in a few top level, 'smart', components and relying on props to pass state to other components.
 
 Let's take a closer look at the difference between component state and props by adding an input element to the page. We'll start by creating a Header component that takes a greeting, and displays it:

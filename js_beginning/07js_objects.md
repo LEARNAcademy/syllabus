@@ -1,7 +1,7 @@
 # Working with and thinking about Objects
 
-[![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
-]
+[![YouTube](http://img.youtube.com/vi/TE7zIjAwtdM/0.jpg)](https://www.youtube.com/watch?v=TE7zIjAwtdM)
+
 ## Object with Data
 
 Creating an object in JSON:

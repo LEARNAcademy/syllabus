@@ -1,5 +1,7 @@
 # ES6 SYNTAX
 
+[![YouTube](http://img.youtube.com/vi/J5j3wymMoz4/0.jpg)](https://www.youtube.com/watch?v=J5j3wymMoz4)
+
 ES6, JavaScript 6, or ECMAScript 2015
 European Computer Manufacturers Association Script, the 6th version.
 
