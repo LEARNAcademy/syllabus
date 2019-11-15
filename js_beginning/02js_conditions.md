@@ -91,25 +91,25 @@ Some further reading and resources here: <a href="https://developer.mozilla.org/
 
 Make sure you try different options and change the variables to ensure properly working code.
 
-1) Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.
+1. Write an `if/else` statement that takes a variable of item and logs "in budget" if a price is $100 or less.
 
-2) Write an `if/else` statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.
+1. Write an `if/else` statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.
 
-3) Write an `if/else` statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.
+1. Write an `if/else` statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.
 
-4) Write an `if/else` statement that takes two variables of numbers and outputs the larger number, or logs equal if the numbers are the same.
+1. Write an `if/else` statement that takes two variables of numbers and outputs the larger number, or logs equal if the numbers are the same.
 
-5) Write an `if/else` statement that takes a variable of a number and logs whether the number is odd, even, or zero.
+1. Write an `if/else` statement that takes a variable of a number and logs whether the number is odd, even, or zero.
 
-#### Stretch Challenges
+### STRETCH Challenges
 
-1) Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
+1. Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
 
-2) Write an `if/else` statement that takes a variable of a boolean, number, or string  datatype and logs the data type of the variable **HINT**: use the JS operator `typeof`.
+1. Write an `if/else` statement that takes a variable of a boolean, number, or string  datatype and logs the data type of the variable **HINT**: use the JS operator `typeof`.
 
-#### Epic Challenge
+### EPIC Challenge: Password Checker
 
-1) Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password". If the user’s password is equal to 8 or more characters OR includes `!`, then log "that password is strong enough!". Log "password is not strong enough" for every other input.
+1. Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password". If the user’s password is equal to 8 or more characters OR includes `!`, then log "that password is strong enough!". Log "password is not strong enough" for every other input.
 
 
 [Go to next lesson: Javascript Arrays](./04js_arrays.md)

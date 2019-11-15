@@ -1,272 +1,41 @@
-# Classes in ES6
+# JavaScript Class Inheritance
 
 [![YouTube](http://img.youtube.com/vi/LudiZKHYvMo/0.jpg)](https://www.youtube.com/watch?v=LudiZKHYvMo)
 
-One of the highly anticipated additions to the Javascript language introduced in ES6 was Classes.  When we think of our   application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with  those objects.  A car, for example is an object that is made up of many smaller objects.  It has wheels, a horn, and an   engine, all of which can be interacted with by a driver.  Wheels, horns, engines, and drivers are all objects, and thus,  all modeled using classes in our application.
+## Classes Review
+When we think of our application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with those objects.
 
-Classes define attributes and behaviors.  An engine has attributes such as horsepower, oil level, rpm, and temperature,   for example.  It has behaviors as well, such as start, accelerate, and stop.
+A car, for example is an object that is made up of many smaller objects. It has wheels, a horn, and an engine, all of which can be interacted with by a driver. Wheels, horns, engines, and drivers are all objects, and thus, all modeled using classes in our application.
 
-Classes themselves are not real things, but rather definitions of things.  Think of them as the product of an engineer    sitting at a desk with a pencil and paper designing exactly what he or she wants the engine to be.  Those plans then go   to the manufacturing floor (our our running application) and are made into real things which can interact with other      things.
+Classes define attributes (data) and behaviors (methods). An engine has attributes such as horsepower, oil level, and rpm. It has behaviors as well, such as start, accelerate, and stop.
 
-Let's take a look at an example of specifying an Engine class, and then creating an application around it where the       engine can be built and used.
+**Classes themselves are not real things,** but rather definitions of things. Think of classes as the product of an engineer sitting at a desk with a pencil and paper designing exactly what he or she wants the engine to be. Those plans then go to the manufacturing floor (our our running application) and are made into real things which can interact with other things (objects).
 
-We'll start by creating a new application called 'racecar.html'.
+Let's take a look at an example of an Engine class, and then creating an application around it where the engine can be built and used.
 
-```Javascript
-// ./racecar.html
-<html>
-  <head>
-  </head>
-  <body>
-    <script>
-      class Engine{
-        constructor(){
-          this.horsepower = 350
-          this.oilLevel = 100
-          this.rpm = 0
-        }
-      }
+```JavaScript
+class Engine{
+  constructor(){
+    this.oilLevel = 100
+    this.rpm = 0
+  }
+}
 
-      // calling `new Engine()' is just like sending the plans
-      // to the production floor to have it built
-      let engine = new Engine()
+// calling new Engine() is just like sending the plans to the production floor to have it built
+let engine = new Engine()
 
-      // now that we have an instance of our engine built,
-      // we can interact with it
-      console.log("horsepower:", engine.horsepower)
-      console.log("oil:", engine.oilLevel)
-      console.log("rpm:", engine.rpm)
-    </script>
-  </body>
-</html>
+// now that we have an instance of our engine to interact with
+
+console.log("oil:", engine.oilLevel)
+// Output -->> oil: 100
+console.log("rpm:", engine.rpm)
+// Output -->> rpm: 0
 ```
-
 ![racecar 1](https://s3.amazonaws.com/learn-site/curriculum/racecar-1.png)
 
+That's a start! We now have an engine, and can ask it details about its current state. But what if we want to be able to turn the engine on, and have it do some work for us? Remember that classes are collections of attributes and behavior, we can add a method to the class that turns the engine on and off.
 
-That's a start!  We now have an engine, and can ask it details about its current state.  But what if we want to be able   to turn the engine on, and have it do some work for us?  Remember that classes are collections of attributes and          behavior, we can add a method to the class that turns it on.
-
-```Javascript
-    <script>
-      class Engine{
-        constructor(){
-          this.horsepower = 350
-          this.oilLevel = 100
-          this.rpm = 0
-        }
-
-        start(){
-          this.rpm = 500
-        }
-
-        stop(){
-          this.rpm = 0
-        }
-      }
-
-      let engine = new Engine()
-
-      console.log("rpm:", engine.rpm)
-      engine.start()
-      console.log("rpm:", engine.rpm)
-
-      engine.stop()
-      console.log("rpm:", engine.rpm)
-    </script>
-```
-
-That works, but we want to be able to accelerate, and decelerate as well.  Let's add those methods as well.
-
-
-```Javascipt
-    <script>
-      class Engine{
-        constructor(){
-          this.horsepower = 350
-          this.oilLevel = 100
-          this.rpm = 0
-        }
-
-        start(){
-          this.rpm = 500
-        }
-
-        stop(){
-          this.rpm = 0
-        }
-
-        accelerate(){
-          if(this.rpm != 0){
-            this.rpm += 500
-          }
-        }
-
-        decelerate(){
-          if(this.rpm != 0){
-            this.rpm -= 500
-          }
-        }
-      }
-
-      let engine = new Engine()
-
-      console.log("rpm:", engine.rpm)
-      engine.start()
-      console.log("rpm:", engine.rpm)
-
-      engine.accelerate()
-      console.log("rpm:", engine.rpm)
-
-      engine.accelerate()
-      console.log("rpm:", engine.rpm)
-
-      engine.decelerate()
-      engine.decelerate()
-      console.log("rpm:", engine.rpm)
-
-      engine.stop()
-      console.log("rpm:", engine.rpm)
-    </script>
-
-```
-
-And now we can rev the engine.
-![rev it up](https://s3.amazonaws.com/learn-site/curriculum/racecar-2.png)
-
-Excellent!  Now that we have an engine, we can go back to our pencil pushing engineer and ask her to design the racecar   that our engine will power.
-
-```Javascript
-class Racecar{
-  constructor(){
-    this.speed = 0
-  }
-}
-```
-
-That's a start, but our racecar doesn't have an engine!  We're not going to win many races if we can't propel ourselves   down the track, so we go back to the engineer and ask her to allow us to add an engine to the car, along with an          ignition, throttle, transmission, speedometer, and shift lever.
-
-```Javascript
-class Racecar{
-  constructor(engine){
-    this.engine = engine
-    this.speed = 0
-    this.gear = 1
-  }
-
-  start(){
-    this.engine.start()
-  }
-
-  shiftUp(){
-    if(this.gear < 5){
-      this.gear++
-      this.speed = this.calculateSpeed()
-    }
-  }
-
-  shiftDown(){
-    if(this.gear > 1){
-      this.gear --
-      this.speed = this.calculateSpeed()
-    }
-  }
-
-  accelerate(){
-    this.engine.accelerate()
-    this.speed = this.calculateSpeed()
-  }
-
-  decelerate(){
-    this.engine.decelerate()
-    this.speed = this.calculateSpeed()
-  }
-
-  calculateSpeed(){
-    return this.engine.rpm * this.gear / 50
-  }
-}
-```
-
-We're ready to take our racecar out for a test drive around the track.
-
-
-```Javascript
-let engine = new Engine()
-let racecar = new Racecar(engine)
-
-racecar.start()
-console.log('accelerating')
-racecar.accelerate()
-console.log('speed:', racecar.speed)
-
-console.log('accelerating')
-racecar.accelerate()
-console.log('speed:', racecar.speed)
-
-console.log('shifting Up')
-racecar.shiftUp()
-console.log('speed:', racecar.speed)
-
-console.log('shifting Down')
-racecar.shiftDown()
-console.log('speed:', racecar.speed)
-
-```
-
-![test drive](https://s3.amazonaws.com/learn-site/curriculum/racecar-3.png)
-
-
-# Inheritance
-
-Recall the Engine class that we built in the Class module.  That engine worked great to propel our car, but just like in  the real world, we're not limited to only having one type of engine.  There can be many variations of engines, all of     which share attributes and behaviors, but are different in their own ways.  Javascript classes allow us to model this     situation by using inheritance.  We start with an Engine class that has properties common to all engines, and then can    inherit from it to create new Engine classes that are specialized.
-
-For this example, we'll move the Racecar class out to its own file, and include it in our application.
-
-Starting where we left off:
-
-```HTML
-<html>
-  <head>
-    <script type='text/javascript' src='racecar.js'></script>
-  </head>
-  <body>
-    <script>
-      class Engine{
-        constructor(){
-          this.horsepower = 350
-          this.oilLevel = 100
-          this.rpm = 0
-        }
-
-        start(){
-          this.rpm = 500
-        }
-
-        stop(){
-          this.rpm = 0
-        }
-
-        accelerate(){
-          if(this.rpm != 0){
-            this.rpm += 500
-          }
-        }
-
-        decelerate(){
-          if(this.rpm != 0){
-            this.rpm -= 500
-          }
-        }
-      }
-    </script>
-  </body>
-</html>
-```
-
-We can define two new types of engine, TurboEngine, and StockEngine that inherit most of their attributes and behavior    from the base Engine class.  The only difference is that they accelerate and decelerate at different rates:
-
-
-```Javascript
+```JavaScript
 class Engine{
   constructor(){
     this.oilLevel = 100
@@ -280,297 +49,189 @@ class Engine{
   stop(){
     this.rpm = 0
   }
-
-  accelerate(){
-    console.log("Warning!  This is a base class method, should not be called")
-  }
-
-  decelerate(){
-    console.log("Warning!  This is a base class method, should not be called")
-  }
 }
 
-class TurboEngine extends Engine{
-  constructor(){
-    super()
-    this.horsepower = 450
-  }
-  accelerate(){
-    if(this.rpm != 0){
-      this.rpm += 750
-    }
-  }
+let engine = new Engine()
 
-  decelerate(){
-    if(this.rpm != 0){
-      this.rpm -= 750
-    }
-  }
-}
+console.log("rpm:", engine.rpm)
+// Output -->> rpm: 0
 
-class StockEngine extends Engine{
-  constructor(){
-    super()
-    this.horsepower = 250
-  }
-  accelerate(){
-    if(this.rpm != 0){
-      this.rpm += 250
-    }
-  }
+// call the method start on the engine object variable to alter the rpm
+engine.start()
+console.log("rpm:", engine.rpm)
+// Output -->> rpm: 500
 
-  decelerate(){
-    if(this.rpm != 0){
-      this.rpm -= 250
-    }
-  }
-}
-
+engine.stop()
+console.log("rpm:", engine.rpm)
+// Output -->> rpm: 0
 ```
 
+![Video with more details](https://s3.amazonaws.com/learn-site/curriculum/racecar-3.png)
 
-And When we take our racecars out for a test drive, here is the results
+# Inheritance
+Now we have an Engine class that has attributes and behavior. Just like in the real world, we are not limited to only having one type of engine. There can be many variations of engines, all of which share attributes and behaviors, but have additional attributes and behavior that are unique. JavaScript classes allow us to model this situation by using inheritance.
 
-![inheritance](https://s3.amazonaws.com/learn-site/curriculum/inheritance-1.png)
+We start with an Engine class that has properties common to all engines. Then we can create another class that can inherit from the Engine class but also have its own specialized data and methods. This is a `parent - child` inheritance relationship.
 
-## A note about ```super()```
+Here is our Engine class again:
 
-Did you notice that in the constructor of our child classes we called ```super()```?
-
-```Javascript
+```JavaScript
 class Engine{
   constructor(){
     this.oilLevel = 100
     this.rpm = 0
   }
-  ...
 
+  start(){
+    this.rpm = 500
+  }
+
+  stop(){
+    this.rpm = 0
+  }
+}
+```
+
+We can define a new type of engine called `TurboEngine` that inherits attributes and behavior from the base Engine class.
+
+To create inheritance we need two new JavaScript keywords:
+- `extends`- used in the declaration of the class, extending the data and behavior of the parent class (or the class we are inheriting from)
+- `super` - within in the constructor method we call super() which passes the attributes from the constructor in the parent class
+
+```JavaScript
+class TurboEngine extends Engine{
+  constructor(){
+    super()
+  }
+}
+var turbo = new TurboEngine()
+console.log(turbo)
+// Output -->> TurboEngine { oilLevel: 100, rpm: 0 }
+```
+Now we have a new class that is inheriting information from a parent class. By using `extends` and calling `super()` the turbo object variable contains all the information of the Engine class.
+
+The TurboEngine class also can have information that is specific to its class, like attributes (data) like horsepower and behavior (methods) like acceleration and deceleration.
+
+```JavaScript
 class TurboEngine extends Engine{
   constructor(){
     super()
     this.horsepower = 450
   }
-  ...
+  accelerate(){
+    this.rpm = 750
+  }
+  decelerate(){
+    this.rpm = 0
+  }
+}
+var turbo = new TurboEngine()
+console.log(turbo)
+// Output -->> TurboEngine { horsepower: 450, oilLevel: 100, rpm: 0 }
+turbo.accelerate()
+console.log("rpm:", turbo.rpm)
+// Output -->> rpm: 750
+```
+Now our Turbo engine has its own properties as well as the properties passed from its parent class.
 
+We can create another class called `StockEngine` that also inherits from Engine.
+
+```JavaScript
 class StockEngine extends Engine{
   constructor(){
     super()
     this.horsepower = 250
   }
-  ...
-```
-
-What is that all about?  When we inherit from a parent class we often times will overwrite methods defined on the parent   in the child, but we still want to call those parent methods.  In this case, we have setup work to do that in the parent  constructor, as well as work to do in the child. ```super()``` allows us access the parent method that has the same name.
-
-Here is the complete application for reference:
-
-
-```Javascript
-// ./racecar.js
-
-class Racecar{
-  constructor(engine){
-    this.engine = engine
-    this.speed = 0
-    this.gear = 1
-  }
-
-  start(){
-    this.engine.start()
-  }
-
-  shiftUp(){
-    if(this.gear < 5){
-      this.gear++
-      this.speed = this.calculateSpeed()
-    }
-  }
-
-  shiftDown(){
-    if(this.gear > 1){
-      this.gear --
-      this.speed = this.calculateSpeed()
-    }
-  }
-
   accelerate(){
-    this.engine.accelerate()
-    this.speed = this.calculateSpeed()
+    this.rpm = 250
   }
-
   decelerate(){
-    this.engine.decelerate()
-    this.speed = this.calculateSpeed()
-  }
-
-  calculateSpeed(){
-    return this.engine.rpm * this.gear / 50
+    this.rpm = 0
   }
 }
-
+var stock = new StockEngine()
+console.log(stock)
+// Output -->> StockEngine { horsepower: 250, oilLevel: 100, rpm: 0 }
+stock.accelerate()
+console.log("rpm:", stock.rpm)
+// Output -->> rpm: 250
+stock.fillOil()
+console.log("oilLevel:", stock.oilLevel)
+// Output -->> oilLevel: 150
 ```
+The class StockEngine has access to the information from the parent class of Engine as well as its own unique data and methods.
 
 
-```HTML
-// ./racecar.html
+## Challenges
 
-<html>
-  <head>
-    <script type='text/javascript' src='racecar.js'></script>
-  </head>
-  <body>
-    <script>
-      class Engine{
-        constructor(){
-          this.oilLevel = 100
-          this.rpm = 0
-        }
+1. **Story**: As a programmer, I can make a car.
+- Write a variable called myCar which is an instance of the class Car
 
-        start(){
-          this.rpm = 500
-        }
+2. **Story**: As a programmer, I can give my car a model on initialization.
+- The model for the car class can be "generic car"
 
-        stop(){
-          this.rpm = 0
-        }
+3. **Story**: As a programmer, I can give my car a year on initialization.
+- The year for the car class can be "myCar year"
 
-        accelerate(){
-          console.log("Warning!  This is a base class method, should not be called")
-        }
+4. **Story**:	As a programmer, I can tell how many wheels myCar has.
+- Calling the method wheels will return 4
 
-        decelerate(){
-          console.log("Warning!  This is a base class method, should not be called")
-        }
-      }
+4. **Story**:	As a programmer, I can make a Tesla car.
+- class Tesla inherits from class Car
+- create an object called myTesla which is a instance of class Tesla
 
-      class TurboEngine extends Engine{
-        constructor(){
-          super()
-          this.horsepower = 450
-        }
-        accelerate(){
-          if(this.rpm != 0){
-            this.rpm += 750
-          }
-        }
+5. **Story**: As a programmer, I can give my Tesla a model on initialization.
+- The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
-        decelerate(){
-          if(this.rpm != 0){
-            this.rpm -= 750
-          }
-        }
-      }
+6. **Story**: As a programmer, I can give my Tesla a year on initialization.
+- The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-      class StockEngine extends Engine{
-        constructor(){
-          super()
-          this.horsepower = 250
-        }
-        accelerate(){
-          if(this.rpm != 0){
-            this.rpm += 250
-          }
-        }
+7. **Story**:	As a programmer, I can make a Toyota car.
+- class Toyota inherits from class Car
+- create an object called myToyota which is a instance of class Toyota
 
-        decelerate(){
-          if(this.rpm != 0){
-            this.rpm -= 250
-          }
-        }
-      }
+8. **Story**: As a programmer, I can give my Toyota a model on initialization.
+- The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
+9. **Story**: As a programmer, I can give my Toyota a year on initialization.
+- The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
+10. **Story**:	As a programmer, I can make a Volkswagen car.
+- class Volkswagen inherits from class Car
+- create an object called myVolkswagen which is a instance of class Volkswagen
 
+11. **Story**: As a programmer, I can give my Volkswagen a model on initialization.
+- The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
-      let turbo = new TurboEngine()
-      let fastRacecar = new Racecar(turbo)
+12. **Story**: As a programmer, I can give my Volkswagen a year on initialization.
+- The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-      let stock = new StockEngine()
-      let slowRacecar = new Racecar(stock)
+13. **Story**: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 
-      console.log("Test drive the fast racecar")
-      fastRacecar.start()
-      console.log('accelerating')
-      fastRacecar.accelerate()
-      console.log('speed:', fastRacecar.speed)
+14. **Story**: As a programmer, I can turn the lights in all my cars on and off.
 
-      console.log('shifting Up')
-      fastRacecar.shiftUp()
-      console.log('speed:', fastRacecar.speed)
+15. **Story**:  As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
 
+16. **Story**:	As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
 
-      console.log("Test drive the slow racecar")
-      slowRacecar.start()
-      console.log('accelerating')
-      slowRacecar.accelerate()
-      console.log('speed:', slowRacecar.speed)
+17. **Story**:	As a programmer, I can speed my Tesla up by 10 per acceleration.
 
-      console.log('shifting Up')
-      slowRacecar.shiftUp()
-      console.log('speed:', slowRacecar.speed)
-    </script>
-  </body>
-</html>
+18. **Story**:	As a programmer, I can slow my Tesla down by 7 per braking.
 
-```
+19. **Story**:	As a programmer, I can speed my Toyota up by 5 per acceleration.
 
-## Process
+20. **Story**:	As a programmer, I can slow my Toyota down by 2 per braking.
 
-Before starting the implementation, copy each story into the editor as a comment, and it as pseudo code to help you write each method
+21. **Story**:	As a programmer, I can speed my Volkswagen up by 7 per acceleration.
 
-## Stories
+22. **Story**:	As a programmer, I can slow my Volkswagen down by 5 per braking.
 
-**Story**:	As a programmer, I can make a car.
-**Hint**:	Create a class called `Car`, and create a variable called `myCar` which contains an object of class `Car`.
+23. **Story**:  As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
+- The method can be created in the parent class and accessed by all child classes
 
-**Story**:	As a programmer, I can tell how many wheels a car has; default is four.
-
-**Story**:	As a programmer, I can make a Tesla car.
-**Hint**:	Create an variable called `myTesla` which is of class `Tesla` which inherits from class `Car`.
-
-**Story**:	As a programmer, I can make a Tata car.
-
-**Story**:	As a programmer, I can make a Toyota car.
-
-**Story**:	As a programmer, I can tell which model year a vehicle is from. Model years never change.
-**Hint**:	Make model year part of the initialization.
-
-**Story**:	As a programmer, I can turn on and off the lights on a given Car.
-**Hint**:	Create method(s) to allow programmer to turn lights on and off. Which class are the methods in?
-
-**Story**:	As a programmer, I can determine if the lights are on or off. Lights start in the off position.
-
-**Story**:  As a programmer, I can signal left and right. Turn signals starts off.
-
-**Story**:	As a programmer, I can determine the speed of a car. Speed starts at 0 km/h.
-
-**Story**:	As a programmer, I can speed my Teslas up by 10 per acceleration.
-
-**Story**:	As a programmer, I can slow my Teslas down by 7 per braking.
-
-**Story**:	As a programmer, I can speed my Tatas up by 2 per acceleration.
-
-**Story**:	As a programmer, I can slow my Tatas down by 1.25 per braking.
-
-**Story**:	As a programmer, I can speed my Toyotas up by 7 per acceleration.
-
-**Story**:	As a programmer, I can slow my Toyotas down by 5 per braking.
-
-**Story**:  As a programmer, I can call upon a car to tell me all it's information.
-**Hint**:   Implement `carInfo` method on one or more classes. You can call a super class's `carInfo` with `super`.
-
-**Story**:	As a programmer, I can keep a collection of two of each kind of vehicle, all from different years.
-**Hint**:	Create two of each vehicles, all from different model years, and put them into an Array.
-
-**Story**:	As a programmer, I can sort my collection of cars based on model year.
-
-**Story**:	As a programmer, I can sort my collection of cars based on model.
-**Hint**:	Sort based on class name.
-
-**Story**:	As a programmer, I can sort my collection of cars based on model and then year.
 
 [Go to next lesson: React Intro](../react/01react_intro_to_react.md)
 
-[Back to Javascript Higher Order Functions](./02js_higher_order_functions.md)
+[Back to Javascript Classes](./02js_classes.md)
 
 [Back to Syllabus](../README.md)
