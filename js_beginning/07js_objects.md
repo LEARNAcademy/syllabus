@@ -1,6 +1,21 @@
 # JavaScript Objects
 
-[![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)]
+[![YouTube](http://img.youtube.com/vi/TE7zIjAwtdM/0.jpg)](https://www.youtube.com/watch?v=TE7zIjAwtdM)
+
+## Object with Data
+
+Creating an object in JSON:
+
+```javascript
+var person = { name: "Alex Keaton", phone: 123456789 };
+```
+
+Then we can access the properties with the "dot" notation:
+
+```javascript
+person.name;    -> "Alex Keaton"
+person.phone;   -> 123456789
+```
 
 #### JSON: JavaScript Object Notation
 
