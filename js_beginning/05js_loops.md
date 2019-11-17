@@ -105,7 +105,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 3. Create a for loop that logs each even number from 1-20, and in the place of every odd number, returns the word "ODD"
 
-  Expected output -->> [ODD, 2, ODD, 4, ODD, 6 ...etc]
+  Expected output -->> ODD, 2, ODD, 4, ODD, 6 ...etc
 
 4. **Consider this variable:**
 
@@ -121,7 +121,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 * Create a loop that will log the remainder of each number when divided by 2
 
-  Expected output -->> [1, 1, 1, 0, 1]
+  Expected output -->> 1, 1, -1, 0, 1
 
 5. **Consider this variable:**
 
@@ -137,7 +137,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
   Write a for loop that iterates from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
 
-  Expected output -->> "0 is even" "1 is odd" "2 is even"
+  Expected output -->> "0 is even" "1 is odd" "2 is even" ...etc
 
 
 2. **Fizz Buzz**

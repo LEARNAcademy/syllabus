@@ -26,7 +26,6 @@ This section is building on Javascript foundations and introducing more advanced
 2. [Javascript Objects](./js_beginning/07js_objects.md)
 3. [Javascript Classes](./js_intermediate/js_classes.md)
 3. [Javascript Class Inheritance](./js_intermediate/05js_class_inheritance.md)
-4. [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
 
 #### Additional Topics:
 

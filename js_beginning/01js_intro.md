@@ -1,4 +1,4 @@
-# Basic Elements of JavaScript
+# JavaScript Introduction
 
 ## Overview
 
