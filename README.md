@@ -86,19 +86,12 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
 1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
-
 ### Bonus Material
 
 - [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 - [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
-## Unit Six: Professional Development Week
-
-Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
-
-- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
-
-## Unit Seven: Full Stack Ruby on Rails
+## Unit Six: Full Stack Ruby on Rails
 
 1. [Rails Forms](./Rails-C&V/05rails_forms.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
@@ -118,6 +111,12 @@ Additional Topics:
 - [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
 - [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
 - [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
+
+## Unit Seven: Professional Development Week
+
+Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
+
+- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
