@@ -194,7 +194,7 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 2. The World Translator: Write a function named helloWorld that takes 1 argument, a language code (e.g. "es", "de", "en") and returns "Hello, World" for the given language, for at least 3 languages (it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English)
 
-3. The Pluralizer: Write a function named pluralize that takes 2 arguments, a number and a singular noun and returns the number and pluralized form of the noun, if necessary
+3. The Pluralizer: Write a function named pluralizer that takes 2 arguments, a number and a singular noun and returns the number and pluralized form of the noun, if necessary
 
   pluralizer = (5, cat)
 
@@ -204,7 +204,7 @@ However, we can only have 1 return in a function.  Note that code after the func
 
   Expected outcome -->> "1 dog"
 
-- Bonus: Make it handle a few collective nouns like "sheep", "geese", "children", "people" and "species"
+- Bonus: Make it handle a few collective nouns like "sheep", "goose", "child", "person" and "species"
 
 ### EPIC Challenge: Magic8 Ball with HTML
 - As a user I can enter a question and get a random answer to my question.
