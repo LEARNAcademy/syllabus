@@ -45,16 +45,16 @@ There are programs that help add a bit of flare and functionality to your termin
 
 ## Working in Terminal
 
-* Open a terminal. 
+* Open a terminal
 * Change the look
-* Show what directory you are in.
-* List out all directories available.
-* Get to the desktop directory.
-* Create a new directory and get into the newly created directory.
-* Open the directory in a window.
-* Open the directory in Atom.
-* Go back to the desktop directory.
-* Drag and Drop for a directories path.
+* Show what directory you are in
+* List out all directories available
+* Get to the desktop directory
+* Create a new directory and get into the newly created directory
+* Open the directory in a window
+* Open the directory in Atom
+* Go back to the desktop directory
+* Drag and Drop for a directories path
 * Show passed commands used
 * Clear the Terminal
 * Arrow up
