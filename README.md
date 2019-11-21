@@ -30,6 +30,8 @@ This section is building on Javascript foundations and introducing more advanced
 #### Additional Topics:
 
 - [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
+- [Spread Syntax](./js_beginning.js_spread_operator.md)
+- [Template Literal](./js_beginning.js_template_literals.md)
 
 ## Unit Three: React
 
