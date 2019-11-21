@@ -1,6 +1,6 @@
 # Functions, Loops and Arrays (Oh My!)
 
-[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=TlAI9_bXobg)
 
 ## Putting it all together
 
