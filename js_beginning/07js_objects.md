@@ -1,6 +1,6 @@
 # JavaScript Objects
 
-[![YouTube](http://img.youtube.com/vi/TE7zIjAwtdM/0.jpg)](https://www.youtube.com/watch?v=TE7zIjAwtdM)
+[![YouTube](http://img.youtube.com/vi/xDmsrXDweB8/0.jpg)](https://www.youtube.com/watch?v=xDmsrXDweB8)
 
 ## Object with Data
 

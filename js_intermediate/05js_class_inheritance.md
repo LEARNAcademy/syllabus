@@ -1,6 +1,6 @@
 # JavaScript Class Inheritance
 
-[![YouTube](http://img.youtube.com/vi/LudiZKHYvMo/0.jpg)](https://www.youtube.com/watch?v=LudiZKHYvMo)
+[![YouTube](http://img.youtube.com/vi/Rx5_-Y_bG5E/0.jpg)](https://www.youtube.com/watch?v=Rx5_-Y_bG5E)
 
 ## Classes Review
 When we think of our application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with those objects.
