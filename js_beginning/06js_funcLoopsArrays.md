@@ -76,11 +76,13 @@ console.log(onlyEven(myArr2))
 5. Create a function that returns the highest number
 
   var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+
   Expected output -->> 67
 
 6. Create a function that returns the lowest number
 
   var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
+
   Expected output -->> -9
 
 7. Create a function that calculates the sum
