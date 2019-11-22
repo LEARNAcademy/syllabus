@@ -6,6 +6,10 @@ https://player.vimeo.com/video/155715320
 
 [![YouTube](http://img.youtube.com/vi/-CDpoSQTme0/0.jpg)](https://www.youtube.com/watch?v=-CDpoSQTme0)
 
+# Rails Forms
+
+[![YouTube](http://img.youtube.com/vi/9UGcF6pnAag/0.jpg)](https://www.youtube.com/watch?v=9UGcF6pnAag)
+
 # Completing the User Interface
 
 ## Set Up
