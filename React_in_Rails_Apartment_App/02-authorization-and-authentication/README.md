@@ -1,5 +1,7 @@
 # Single Page App Authentication
 
+[![YouTube](http://img.youtube.com/vi/S3bE8iW0T6c/0.jpg)](https://www.youtube.com/watch?v=S3bE8iW0T6c)]
+
 We start off with a discussion of a few concepts around authentication and authorization.  It's important to make the distinction clearly.
 
 ## Start Here
