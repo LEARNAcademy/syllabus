@@ -1,6 +1,6 @@
 # JavaScript Testing with Jest
 
-[![YouTube](http://img.youtube.com/vi/yEPIRmlIFTA/0.jpg)](https://www.youtube.com/watch?v=yEPIRmlIFTA)]
+[![YouTube](http://img.youtube.com/vi/em5X2zJH-N0/0.jpg)](https://www.youtube.com/watch?v=em5X2zJH-N0)]
 
 ## What is Testing?
 Testing is the process of automating quality assurance for your code.
