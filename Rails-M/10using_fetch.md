@@ -1,6 +1,6 @@
 # Getting Data from Backend to the Frontend
 
-[![YouTube](http://img.youtube.com/vi/Law40pSLeHM/0.jpg)](https://www.youtube.com/watch?v=Law40pSLeHM)]
+[![YouTube](http://img.youtube.com/vi/Law40pSLeHM/0.jpg)](https://www.youtube.com/watch?v=Law40pSLeHM)
 
 Now, switching gears back over to our frontend, let's look at how we consume data from an API in a React application.
 
