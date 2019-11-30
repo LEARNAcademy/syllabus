@@ -1,4 +1,8 @@
 # JavaScript Classes
+
+[![YouTube](http://img.youtube.com/vi/LudiZKHYvMo/0.jpg)](https://www.youtube.com/watch?v=LudiZKHYvMo)
+
+
 Classes are a particular type of function that contain data and behavior. Classes are the blueprints of objects. Just like functions, classes have their own scope.
 
 There are particular JavaScript keywords that are used to create and access information within a class:

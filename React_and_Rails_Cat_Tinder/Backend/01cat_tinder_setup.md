@@ -27,7 +27,7 @@ We're going to use the ```--api``` flag when building a new Rails application to
 
 ```
 $ gem install rails
-$ rails new cat_tinder --api -T --database=postgresql
+$ rails new cat_tinder -T --database=postgresql
 $ cd cat_tinder
 $ rails db:create
 ```

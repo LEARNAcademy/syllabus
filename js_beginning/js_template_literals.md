@@ -1,5 +1,8 @@
 # Template Literals in Javascript
 
+[![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)]
+
+
 Template literals in Javascript allow us to embed expressions in our string literals among other things. In other words, with a twist in syntax we can put Javascript expressions in our strings. Here we'll focus on some of the most useful implementations of template strings.
 
 There were a lot of technical terms in that description. Let's dive into implementation.
