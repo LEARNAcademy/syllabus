@@ -1,7 +1,6 @@
 # JS Spread Syntax
 
-The official definition: Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more
-arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded
+The official definition: Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded
 in places where zero or more key-value pairs (for object literals) are expected.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">MDN Spread Syntax</a>
@@ -10,7 +9,7 @@ Let's look at some use cases.
 
 ## Array concatenation
 
-Historically when we wanted to concatenate 2 arrays ( join 2 arrays) we had to use the Array **concat()** method:
+Historically when we wanted to concatenate 2 arrays (join 2 arrays) we had to use the Array **concat()** method:
 
 ```javascript
 // Pre ES6: .concat() method
@@ -18,9 +17,10 @@ Historically when we wanted to concatenate 2 arrays ( join 2 arrays) we had to u
 var arr1 = [0, 1, 2]
 var arr2 = [3, 4, 5]
 
-var combined = arr1.concat(arr2) -->> [0, 1, 2, 3, 4, 5]
+var combined = arr1.concat(arr2)
 
 console.log(combined)
+-->> [0, 1, 2, 3, 4, 5]
 ```
 
 While that wasn't terrible to use, we now have ability to use the spread operator to accomplish the same task:
@@ -33,9 +33,10 @@ var arr2 = [3, 4, 5]
 
 var combined = [...arr1, ...arr2]
 console.log(combined)
+-->> [0, 1, 2, 3, 4, 5]
 ```
 
-Notice the result is more declarative and more readable.
+Notice the code is more declarative and more readable.
 
 ## Array Duplication
 
@@ -109,7 +110,7 @@ Consider this function:
 
 ```javascript
 function combineAndFilterOdd(arrOne, arrTwo, arrThree){
-  return arrOne.concat(arrTwo).concat(arrThree).filter(num => num % 2 != 0)
+  return arrOne.concat(arrTwo).concat(arrThree).filter(num => num % 2 !== 0)
 }
 
 console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
