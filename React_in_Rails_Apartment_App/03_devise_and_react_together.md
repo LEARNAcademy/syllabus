@@ -28,8 +28,8 @@ For More detailed Description of setting up React: [Check here](./01-react-in-ra
 
 ### React Setup
 ```bash
-$ bundler add webpacker
-$ bundler add react-rails
+$ bundle add webpacker
+$ bundle add react-rails
 $ bundle install
 $ rails webpacker:install
 $ rails webpacker:install:react
@@ -59,7 +59,7 @@ $ rails g controller Pages
 #### config/routes.rb
 ```result
        1	Rails.application.routes.draw do
-		   2    devise_for :users
+       2          devise_for :users
        3	  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
        4	  root to: 'pages#root'
        5	end

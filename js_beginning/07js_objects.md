@@ -1,6 +1,7 @@
-# Working with and thinking about Objects
-[![YouTube](http://img.youtube.com/vi/1BZPSnXKK1M/0.jpg)](https://www.youtube.com/watch?v=1BZPSnXKK1M)
-]
+# JavaScript Objects
+
+[![YouTube](http://img.youtube.com/vi/xDmsrXDweB8/0.jpg)](https://www.youtube.com/watch?v=xDmsrXDweB8)
+
 ## Object with Data
 
 Creating an object in JSON:
@@ -16,433 +17,198 @@ person.name;    -> "Alex Keaton"
 person.phone;   -> 123456789
 ```
 
-## Object with Function/Method
+#### JSON: JavaScript Object Notation
 
-JSON Objects can also contain functions:
+Objects are collections of `key:value` pairs
+
+```JavaScript
+var person = {
+  name: "Alex Keaton",
+  phone: 123456789
+}
+```
+
+We can access the properties with "dot" notation referencing the name of the object and the key:
+
+```javascript
+person.name  -->> "Alex Keaton"
+person.phone -->> 123456789
+```
+
+## Object with Behavior
+
+JSON Objects can also contain functions. When a function belongs to an object it is called a method.
 
 ```javascript
 var person = {
   name: "Alex Keaton",
   phone: 123456789,
-  getData: function() { return this.name+"-"+this.phone }
-};
-
-person.getData();   -> "Alex Keaton-123456789"
-```
-
-## Classes
-
-Classes are like blueprints for objects, with a special 'constructor' function that you can use to create them:
-
-```javascript
-class Dog{
-  constructor(name, age){
-    this.name = name
-    this.age = age
-  }
-
-  description(){
-    return this.name + " is a " + this.age + " year old dog."
+  getData: function() {
+    return this.name+"-"+this.phone
   }
 }
 
-var rover = new Dog('Rover', 4)
-console.log(rover.description())
+person.getData() -->> "Alex Keaton-123456789"
 ```
-```result
-: Rover is a 4 year old dog.
-```
+## Iterating Over Objects
 
-## Objects are independent of each other:
+You can use .map() or .filter() on arrays of objects.  
 
-```javascript
-var plato = new Dog('Plato', 8)
-var bella = new Dog('Bella', 11)
-console.log(plato.description())
-console.log(bella.description())
-```
-```result
-: Plato is a 8 year old dog.
-: Bella is a 11 year old dog.
-```
+Example: Consider this toons variable. Use .map() or .filter() to return a new array with only the dogs.
 
-## However, object variables are references:
-
-```javascript
-var plato = new Dog('Plato', 8)
-var bella = new Dog('Bella', 11)
-
-console.log(plato.description())
-console.log(bella.description())
-
-bella = plato
-console.log(bella.description()) // !!!! bella got reassigned
-```
-```result
-: Plato is a 8 year old dog.
-: Bella is a 11 year old dog.
-: Plato is a 8 year old dog.
+```JavaScript
+var toons = [
+  {name: "Brian", animal: "dog"},
+  {name: "Tom", animal: "duck"},
+  {name: "Bugs", animal: "dog"},
+  {name: "Daffy", animal: "duck"},
+  {name: "Felix", animal: "dog"},
+  {name: "Tabby", animal: "cat"}
+]
+var animal = toons.filter(value => value.animal === "dog")
+console.log(animal)
 ```
 
-You can see this animated if you go to http://pythontutor.com, select javaScript, and paste in the code.
-For further in-depth information see <a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>
+## Object Destructuring
 
-## Class instances maintain internal state
+The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
+This is probably the most immediately useful type of destructuring. When destructuring an object you are essentially taking the properties of an object and breaking them out into individual, recallable variables.
 
-```javascript
-class Squirrel{
-  constructor(){
-    this.nutCount = 0
-  }
-
-  storeNut(){
-    this.nutCount += 1
-  }
-
-  eatNut(){
-    this.nutCount -= 1
-  }
+```JavaScript
+// A person object
+var person = {
+  firstName: 'Bruce',
+  lastName: 'Wayne'
 }
 
-var rocky = new Squirrel()
-console.log(rocky.nutCount)
-rocky.storeNut()
-console.log(rocky.nutCount)
-rocky.storeNut()
-console.log(rocky.nutCount)
-rocky.eatNut()
-console.log(rocky.nutCount)
+// Printing property values
+console.log(person.firstName)
+console.log(person.lastName)
+
+// Printing a full name
+console.log(`${person.firstName} ${person.lastName}`)
 ```
-```result
-: 0
-: 1
-: 2
-: 1
-```
+Here's what that code could like with object destructuring:
 
-And the objects are independent, just like before:
-
-```javascript
-class Squirrel{
-  constructor(){
-    this.nutCount = 0
-  }
-
-  storeNut(){
-    this.nutCount += 1
-  }
-
-  eatNut(){
-    this.nutCount -= 1
-  }
+```JavaScript
+// A person object
+var person = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
 }
 
-var rocky = new Squirrel()
-var alvin = new Squirrel()
-alvin.storeNut()
-alvin.storeNut()
-console.log("Rocky has ", rocky.nutCount )
-console.log("Alvin has ", alvin.nutCount )
-```
-```result
-: Rocky has  0
-: Alvin has  2
+// Making variables for firstName and lastName using destructuring
+var { firstName, lastName } = person
+
+// Printing property values
+console.log(firstName)
+console.log(lastName)
+
+// Printing a full name
+console.log(`${firstName} ${lastName}`)
 ```
 
-## Class instances can be used like any other 'thing' in javascript.  We can rewrite the above like this:
+Notice that an object destructuring assignment:
+- Starts with a variable keyword
+- List the variable names with curly braces
+  - **Note:** Variable names must correspond to property names of the object
+- Uses the assignment operator to assign the object unpack
+
+This may seem like a trivial feature, but object destructuring can save you loads of typing when it comes to objects with nested properties.
+
+Being comfortable with object destructuring allows you to make quick work of extracting and manipulating object properties.
+
+There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Destructuring Assignmment Operators</a>
+
+## Challenges
+
+1. **Consider this variable:**
 
 ```javascript
-class Squirrel{
-  constructor(){
-    this.nutCount = 0
-  }
-
-  storeNut(){
-    this.nutCount += 1
-  }
-
-  eatNut(){
-    this.nutCount -= 1
-  }
-}
-
-var squirrels = []
-squirrels.push(new Squirrel())
-squirrels.push(new Squirrel())
-
-squirrels[0].storeNut()
-squirrels[0].storeNut()
-
-for(var i=0; i < squirrels.length; i++){
-  console.log("Squirrel ", i, "nut count: ", squirrels[i].nutCount)
-}
-
-```
-```result
-: Squirrel  0 nut count:  2
-: Squirrel  1 nut count:  0
-```
-
-
-## Class instances can store any kind of data
-
-```javascript
-class DiceRoller{
-  constructor(){
-    this.rolls = []
-  }
-
-  roll(){
-    this.rolls.push(Math.ceil(Math.random() * 6))
-  }
-
-  lastRoll(){
-    return this.rolls[this.rolls.length - 1]
-  }
-}
-
-var roller = new DiceRoller()
-console.log("last: ", roller.lastRoll())
-roller.roll()
-console.log("last: ", roller.lastRoll())
-roller.roll()
-console.log("last: ", roller.lastRoll())
-console.log("all rolls ", roller.rolls)
-```
-```result
-: last:  undefined
-: last:  1
-: last:  4
-: all rolls  [ 1, 4 ]
-```
-
-
-## Some Conventions
-
-* Class names are always capitalized
-* Class names are PascalCased (like camelCase, but the first word is capitalized)
-* instances of classes are always lowercase
-
-## Resources
-
-For more information on objects see:
-<a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects" target="_blank">You Don't Know JS: Up & Going - Chapter 2: Into JavaScript</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects" target="_blank">MDN: Objects</a>
-
-For more information on closures see:
-<a href="http://www.javascriptenlightenment.com/" target="_blank">Javascript Enlightenment</a>, chapter 7.
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md#chapter-3-function-vs-block-scope" target="_blank">You Don't Know JS: Function vs. Block Scope</a>
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch5.md#chapter-5-scope-closure" target="_blank">You Don't Know JS: Scope Closure</a>
-(Caution: not for the faint of heart)
-
-
-### Object Challenges
-
-Working with functions and objects.
-
-#### Exercise 1
-
-Consider this variable:
-
-```javascript
-var person = { fName: "Arthur", lastName: "Dent" }
-```
-Write the code that accesses the first name of the person object.
-Then write the code that accesses the last name of the person object.
-
-#### Exercise 2
-
-Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
-
-#### Exercise 3
-
-Update the person object with a method that logs 'Arthur Dent is from planet Earth.'.
-
-
-#### Exercise 4
-Consider this variable:
-
-```javascript
-var product = { name: "chair", price: 14.99 }
-```
-
-Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
-
-#### Exercise 5
-
-Consider this variable:
-
-```javascript
-var lunch = { name: "PB and Banana", type: "sandwich", ingredients: ["bread", "peanut butter", "banana"] }
-```
-
-Write the code that accesses the ingredients property.
-
-#### Exercise 6
-
-Write the code that access the 3rd ingredient of the lunch object.
-
-#### Exercise 7
-
-Write a function that takes an argument like the lunch object and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-
-#### Exercise 8
-
-Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-
-### Class Challenges
-
-#### Exercise 1
-
-Consider this class.
-
-```javascript
-class Coffee {
-  constructor(type, cream=0, sugar=0){
-    this.type = type.toLowerCase()
-    this.cream = cream
-    this.sugar = sugar
-  }
-
-  coffeeProfile(){
-    return(`${this.type}: ${this.creams()}, ${this.sugars()}`)
-  }
-
-  creams(){
-    if (this.cream > 1){
-      return `${this.cream} creams`
-    } else {
-      return `${this.cream} cream`
-    }
-  }
-
-  sugars(){
-    if (this.sugar > 1){
-      return `${this.sugar} sugars`
-    } else {
-      return `${this.sugar} sugar`
-    }
-  }
+var person = {
+  firstName: "Arthur",
+  lastName: "Dent"
 }
 ```
+- Write the code that accesses the first name of the person object.
+- Write the code that accesses the last name of the person object.
+- Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
+- Update the person object with a method that logs "Arthur Dent is from planet Earth".
 
-Write the code that makes a black coffee.
+2. **Consider this variable:**
 
-#### Exercise 2
-
-Write the code that makes a coffee with 1 cream and 2 sugars.
-
-#### Exercise 3
-
-Write the code that makes a coffee with 2 sugars. Then write the code that outputs the coffee's profile.
-
-#### Exercise 4
-
-Write a Latte class that receives a type, a milk type (default to 'milk') and a number of shots (default to 1).
-
-#### Exercise 5
-
-Write a method for your Latte class that outputs the latte's profile.
-
-#### Exercise 6
-
-Write the code that makes a regular, single shot latte. Then, log the latte's profile.
-
-#### Exercise 7
-
-Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
-
-#### Exercise 8
-
-Write a class that accepts a product, and budget in its constructor.  Add a function that determines if the product is in budget, and displays the appropriate message:
-
-* "This product is in budget."
-* "This product is beyond budget."
-
-Here is some sample data:
 ```javascript
-var product = { name: "OledMonitor", price: 300.00 }
-var budget = 275.00
+var product = {
+  name: "chair", price: 14.99
+}
 ```
+- Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
-Then:
-
-Refactor the previous exercise to replace "Product" in the return to the name of the product.
-
-For example:
+3. **Consider this variable:**
 
 ```javascript
- checkBudget(product, budget, message)
- ----> "OledMonitor is beyond budget"
+var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 ```
+- Write the code that accesses the ingredients property.
+- Write the code that access the 3rd ingredient of the lunch object.
+- Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+- Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
-#### Exercise 9
+4. **Consider this variable:**
 
-Write a program to get the volume of a Cylinder with four decimal places using object classes.
-
-Volume of a cylinder : V = πr2h
-
-where r is the radius and h is the height of the cylinder.
-
-
-#### Exercise 10
-
-Write a program that calculates the total, tax, and weight of the items in a shopping cart.
-
-```javascript
-var cartItems = [
-  {
-    name: "banana",
-    price: 2.34,
-    weight: 1.2
-  },
-  {
-    name: 'Cereal',
-    price: 5.67,
-    weight: 2.2
-  },
-  {
-    name: 'Gogurt',
-    price: 3.99,
-    weight: 3.1
-  }
+```JavaScript
+var animals = [
+  { name: "Waffles", type: "dog", age: 12 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
 ]
 ```
-#### Stretch Goal
-Extend your shopping cart program by creating a new class called 'CartItem', and creating an instance of CartItem before passing each to the cart calculator.  Is it easier or harder to pass class instances around? Does it make the code easier to read and reason about?
+- Create a function that takes in any array of objects and returns a new array with only those of type cat.
+- Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
 
-#### SUPER STRETCH
-
-#### Exercise 11
-Write a program that has accessors to sort a list of books by title, author, or ID.  Your class should accept a list of books in its constructor, and have 3 accessor functions.
-
-Hint:  Research alpha and numeric sorting in javascript.
+5. **Consider this variable:**
 
 ```javascript
-var library = [
-   {
-       title:  'The Road Ahead',
-       author: 'Bill Gates',
-       libraryID: 1254
-   },
-   {
-       title: 'Walter Isaacson',
-       author: 'Steve Jobs',
-       libraryID: 4264
-   },
-   {
-       title: 'Mockingjay: The Final Book of The Hunger Games',
-       author: 'Suzanne Collins',
-       libraryID: 3245
-   }];
+let author = {
+    name: "H. G. Wells",
+    genre: "science fiction"
+}
+```
+- Write the code that destructures the author object and makes the following work:
+
+```javascript
+console.log(`${name} is a ${genre} author`)
+//-->> "H. G. Wells is a science fiction author"
+```
+6. **Consider this variable:**
+
+```javascript
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+}
+
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+}
 ```
 
+- Write a function called `describePokemon()` that take an object like the ones above and uses destructuring to return a description of the pokemon such that:
 
-## Links
+```javascript
+console.log(describePokemon(pokeOne))
+//-->> 'Charmandar is a Fire pokemon'
+console.log(describePokemon(pokeTwo))
+//-->> 'Magikarp is a Water pokemon'
+```
+[Go to next lesson: JavaScript Classes](../js_intermediate/js_classes.md)
 
-[Go to ES6 Syntax](../js_intermediate/07js_es6_syntax.md)
-
-[Back to Javascript Functions, Loops and Arrays](./06js_funcLoopsArrays.md)
+[Back to JavaScript Testing with Jest](./js_intermediate/js_testing_jest.md)
 
 [Back to Syllabus](../README.md)

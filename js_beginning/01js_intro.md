@@ -1,4 +1,4 @@
-# Basic Elements of JavaScript
+# JavaScript Introduction
 
 ## Overview
 
@@ -11,14 +11,13 @@ JavaScript takes in information in a very specific way. JS is a loosely typed la
 ## Primitive Data Types
 
 The basic data types are:
-<ul>
-<li>Number</li>
-<li>String</li>
-<li>Boolean</li>
-<li>Undefined</li>
-<li>Null</li>
-<li>Symbol</li>
-</ul>
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+- Symbol
+
 
 ### Numbers
 
@@ -200,54 +199,43 @@ b                   -> "world"
 c                   -> "hello world"
 ```
 
-
-
 We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
-
 
 
 ## Challenges
 
 Open up a JS file in atom, run your program in terminal with node.
 
-#### Arithmetic Challenge
+**Arithmetic Challenges**
+- Add 34 and 71
+- Subtract 67 from 123
+- Multiply 56 and 23
+- Divide 45 by 5
+- Calculate 5 to the power of 7
+- Find the remainder of 33/6
 
-<ul>
-<li>Add, subtract, multiple, and divide integers and floats</li>
-<li>Find the remainder of 33/6</li>
-<li>Calculate 5 to the power of 7</li>
-</ul>
+**String Challenges**
+- Find the length of a string containing your name
+- Does your string include the letter "e"?
 
-#### String Challenge
-
-<ul>
-<li>Find the length of a string containing your name</li>
-<li>Does your string include the letter "e"?</li>
-<li>Concat two strings and find the length</li>
-</ul>
+**Boolean Challenges (return true or false)**
+- Is 34 divided by 3 greater than 67 divided by 2?
+- Does 5 evaluate to the same as "5"?
+- Does 5 strictly equal "5"?
+- Does !3 strictly equal 3?
+- Does "LEARN".length strictly equal 5 AND "Student".length strictly equal 7?
+- Does "LEARN".length strictly equal 5 OR "Student".length strictly equal 10?
 
 
-### Variables Challenge
+**Variables Challenges**
+- Set a variable called favNum equal to your favorite number
+- Log your favorite number divided by 2
+- Set another variable called otherNum equal to 13
+- What is favNum divided by otherNum?
+- Save a string as a variable
+- Find the length of the string
+- Use the method charAt() to find what letter is at the 3rd index
 
-<ul>
-<li>Set a variable called favNum equal to your favorite number</li>
-<li>What is your favorite number divided by 2?</li>
-<li>Set another variable called otherNum equal to 13</li>
-<li>Divide favNum by otherNum</li>
-<li>Is otherNum greater than favNum?</li>
-</ul>
-
-<ul>
-<li>Save a string as a variable</li>
-<li>Find the length of the string</li>
-<li>Use the method charAt() to find what letter is at the 3rd index</li>
-</ul>
-
-<ul>
-<li>Try combining different data types to see what happens</li>
-</ul>
-
-[Go to Javascript Conditions](./02js_conditions.md)
-
+[Go to next lesson: Javascript Conditionals](./02js_conditions.md)
 
 [Back to Syllabus](../README.md)

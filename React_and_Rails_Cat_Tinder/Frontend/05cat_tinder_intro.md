@@ -1,6 +1,8 @@
 # Introduction
 
-Let's refer back to the wireframes, and recall what our interface is going to look like:
+Before jumping into the code it helps to set up a wireframe that we can refer back to at any point during the development of our app.
+
+Here's what our app is going to look like:
 
 ![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
 
@@ -13,7 +15,17 @@ $ cd cat-tinder-frontend
 $ yarn add react-bootstrap react-router-dom
 $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
+## Cloud9 users: In the package.json file modify the scripts code to set the default to port 8081
 
+```  
+"scripts": {
+    "start": "PORT=8081 react-scripts start", //Modified for Cloud 9 Users
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+**Remember**: Be sure to add :8081 to the end of your preview url: `<aws-preview-url>:8081`.
 
 ## Add a theme
 
@@ -44,7 +56,7 @@ class App extends Component {
 			<Router>
 				<Switch>
 					<Route exact path="/cats" component={Cats} />
-					<Route exact patch="/" component={NewCat} />
+					<Route exact path="/" component={NewCat} />
 				</Switch>
 			</Router>
 		</div>
@@ -57,6 +69,8 @@ export default App;
 ````
 
 We haven’t really built any components yet, so this code will throw an error, but we have set up our basis for handling requests.
+
+
 
 ## Challenge
 

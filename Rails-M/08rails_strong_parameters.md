@@ -1,5 +1,7 @@
 # Better Params: Strong Parameters
 
+[![YouTube](http://img.youtube.com/vi/yh8nVSihMyM/0.jpg)](https://www.youtube.com/watch?v=yh8nVSihMyM)
+
 As part of managing form parameters in Rails, versions of Rails 4+ also have a feature known as "strong parameters" or "whitelisting". It is a way for us to manage exactly what goes into creating new object instances, and helps us keep unwanted information -- usually from malicious hackers -- out of the database.
 
 ## Strong params in the controller
@@ -41,10 +43,21 @@ In the controller's `create` method, we can see that this list is referenced whe
 
 ```ruby
 def create
-    @contact = Contact.new(contact_params)
-	...
+    @contact = Contact.create(contact_params)
 end
 ```
+
+Or alternatively
+
+```ruby
+def create
+    @contact = Contact.new(contact_params)
+    ...
+    @contact.save
+end
+```
+
+`.new` will create a new object, while `.create` will create it and save it to the database. If you use `.new`, you need to follow up with `.save` for it to actually be saved. If you have actions you wish to do before putting the object into the database, consider using `.new` instead.
 
 ## Strong params in the form
 
@@ -110,7 +123,7 @@ You have been tasked with creating an application to allow store owners to gener
 
 - As a store owner,  I need to generate customer accounts that require a first name, last name, email, phone number
 - As a store owner, I need customer emails to be unique
-- As a store owner, I need to generate orders that require belong to a customer
+- As a store owner, I need to generate orders that belong to a customer
 - As a store owner, I need each order to have a product name and quantity
 
 - As a store owner, I see a new customer form

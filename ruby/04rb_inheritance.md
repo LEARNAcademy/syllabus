@@ -17,6 +17,11 @@ Inheritance means that classes inherit the external interface of the superclasse
 
 <img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/12/original_is-a.png?1464387871"/>
 
+### Classes have Relationships
+In your Car challenge, you have at minimum a Vehicle class and a Car class. There can be as many Cars as you want to make, and they will share a lot of the same attributes as Vehicle. Any time you identify this kind of relationship forming, whether it's one to many or one to one, it's a strong indication that there should be inheritance between the two classes. This will allow you to share methods across related classes.
+
+### Objects are Interrelated
+Creating a program in Ruby is a little bit like playing Jenga; all the bits and pieces rely on each other to stand up, and removing the wrong piece can wreak havoc. Because of their relationships, objects impact each other and you have to remember those relationships as you're writing your code. Take the example of the Vitamin class from this morning's presentation. Vitamin and Apple have a many to many relationship. There can be as many Apples with Vitamins as you want to create, and you can create them using the method you already wrote for creating items in the Fruit class, which is pretty cool. But what happens when you write a method in the Fruit class to grab all Fruit with Vitamins, and it grabs an instance of the Fruit class that doesn't inherit from Vitamin? You'll get an error. One solution to this is creating a separate array for storing items with Vitamins in Fruit, so the two types don't clash. Remembering how your objects impact each other is very important when writing applications in Ruby.
 
 ## has-a, has-many
 Aggregation/composition/contains, has-a (uses): one class uses another class
@@ -32,7 +37,7 @@ Objects, meaning instances of a class, are realizations of a class that can be i
 
 This style of programming is called object oriented, even if the programming to some extent focuses on classes.
 
-## Ruby Inheritance <
+### Ruby Inheritance
 Since inheritance is a relation between two classes, to create the relation we use <. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
 
 ```RUBY
@@ -77,3 +82,4 @@ apple_one.spoils
 => "Spoils in 7 days"
 ```
 
+[Back to Syllabus](../README.md)

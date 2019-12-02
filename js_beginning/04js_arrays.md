@@ -175,85 +175,95 @@ console.log(newArr);
 
 And finally, let's look at **.indexOf** and **lastIndexOf**.
 
-```javascript
-
+```JavaScript
 var arr1 = ["S", 2, "y", 3, "y", 1, "t" ]
 
-console.log(array2.indexOf("t"))
+console.log(arr1.indexOf("t"))
 6
 
-console.log(array2.lastIndexOf("y"));
+console.log(arr1.lastIndexOf("y"));
 4
 ```
+## Array Destructuring
 
-# Challenges
-Array Methods Practice
+The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
+Array destructuring allows us to assign values from an array to variables. Though array destructuring won't be immediately useful to us, it's good to know a little bit about what it affords us.
 
- Below are exercises in using array methods. Beneath each prompt write the code to fulfill the exercise requirement.
+```javascript
+let [firstVal, secondVal] = [1, 2]
 
-**Exercise 1** -  Consider this variable:
- var groceryList2 = ["chips", "dip", "cookies"]
+console.log(firstVal)   // => 1
+console.log(secondVal)  // => 2
+```
 
- * Write the code that will add "soda" to the end of the original array.
+Notice that an array destructuring assigment:
 
-**Exercise 2** - Consider this variable:
-var numbers2 = [2, 4, 6, 8, 10]
+- Starts with a variable keyword
+- In square brackets lists some variable names
+- Uses the assignment operator to assign the array to unpack
 
-* Write the code that will add the number 0 to the beginning of the original array.
+Also notice that the variables are assigned in order. As in, the first variable name is assigned the first value of the value array.
 
-**Exercise 3** - Consider this variable:
- var groceryList1 = ["apples", "carrots", "oatmeal"]
 
- * Write the code that will add "granola" to the end of array without altering the original array.
+## Challenges
 
-**Exercise 4** - Consider this variable:
- var numbers1 = [1, 2, 3, 4, 5]
+1. **Consider this variable:**
+```JavaScript
+  var groceryList = ["chips", "dip", "cookies"]
+```
+- Write the code that will add "soda" to the end of the original array.
+- Write the code that will add "granola" to the end of array without altering the original array.
 
- * Write the code that will add the number 0 to the beginning of the array without altering the original array.
+2. **Consider this variable:**
+```JavaScript
+  var numbers = [2, 4, 6, 8, 10]
+```
+- Write the code that will add the number 0 to the beginning of the array.
 
- **Exercise 5** - Consider this variable:
- var numbers3 = [2, 13, 6, 8, 4, 2]
+- Write the code that will add the number 12 to the end of the array.
 
- * Write the code that finds the index of the first appearance of the number 2.
+- Write the code that will remove the first number from the array.
 
- * Write the code that finds the index of the last appearance of the number 2.
+- Write the code that will add the number 0 to the beginning of the array without altering the original array.
 
-**Exercise 6** - Consider this variable:
+3. **Consider this variable:**
+```JavaScript
+  var numSet = [2, 13, 6, 8, 4, 2]
+```
+- Write the code that finds the index of the first appearance of the number 2.
+
+- Write the code that finds the index of the last appearance of the number 2.
+
+4. **Consider this variable:**
+
+```JavaScript
  var chars = ["y", "a", "r", "r", "a"]
+```
+- Write the code that brings all the letters in the chars array together into a string.
 
- * Write the code that brings all the letters in the chars array together into a string.
+- Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
 
- *  Write the code that reverses the order of the letters in the chars array and saves it into a variable called charsReversed.
+- Write the code that brings all the letters in the charsReversed array together into a string with a hyphen between each letter.
 
- * Write the code that brings all the letters in the charsReversed array together into a string with a hyphen between each letter.
+- Write the code that brings all the letters in the charsReversed Array together into a string without separators.
 
- * Write the code that brings all the letters in the charsReversed Array together into a string without separators.
+5. **Create two arrays consisting of three first names of your cohort members in each.**
 
-**Exercise 7** - Create an array with your siblings names, and an array with your parents names.
+- Sort the names in alphabetical order.
 
-* Sort your siblings names in alphabetical order.
+- Sort the names in reverse alphabetical order.
 
-* Sort your parents names in reverse alphabetical order.
+- Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
 
-* Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
+### STRETCH Challenge: Magic8 Ball
 
-* Sort all the names in reverse alphabetical order.
-
-## Magic 8 Ball
-
-#### Story
-* As a user I can enter a question and get a random answer to my question.
-
-#### Goal:
-* Create an array with the following answers: Yup!, Fuhgeddaboudit, Maybe, Ask: what would your mother do?, Ask: what would an Australian do, then do the opposite, Your answer here.
-* Set a variable called question so you can test different questions.
-* Create a random number to select one of the answers (hint: use Math.random().
-* Output the random answer.
-
-#### Stretch goal:
-* Create an html page linked to the javascript file - you will need to research onClick events, document.getElementById and innerHTML. (we will do more of this next week).
+- Create an array with 6 different (appropriate) Magic 8 Ball answers
+- Create a random number to select one of the answers (hint: use Math.random()
+- Output the random answer
 
 
-[Go to Javascript Loops](./05js_loops.md)
+[Go to next lesson: Javascript Loops](./05js_loops.md)
 
-[Back to Javascript Functions](./05js_functions.md)
+[Back to Javascript Conditionals](./02js_conditions.md)
+
+[Back to Syllabus](../README.md)

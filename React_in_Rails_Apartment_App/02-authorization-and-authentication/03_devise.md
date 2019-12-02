@@ -1,9 +1,5 @@
-#### Part 1
-[![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
 
-#### Part 2
-[![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
-
+[![YouTube](http://img.youtube.com/vi/qHC8NEDlB8U/0.jpg)](https://www.youtube.com/watch?v=qHC8NEDlB8U)
 
 # Adding Devise
 These intstructions were taken from the [Devise Github Repo](https://github.com/plataformatec/devise#getting-started).  Devise is a complicated and powerful piece of software.  You'll want to refer back to this link when you have questions about how it all works.
@@ -174,7 +170,7 @@ We need to remove the "User" input from our generated form for a new bike:
 
 Then, in the ```create``` method of the controller, we can assign it to the current user with the help of a Devise helper method.
 
-#### app/controllers/bikes_controller.rb |sed 27,39!d
+#### app/controllers/bikes_controller.rb
 ```result
 :     27	  def create
 :     28	    @bike = current_user.bikes.new(bike_params)

@@ -27,6 +27,7 @@
 <br/>
 
 #### *Day 2 - Job Search - Getting the Interview*
+
 1) **[State of the Tech Industry](https://drive.google.com/open?id=1JPjLKtPmOoTyiL-huMuAxetdkuvo1sb3)**
 <br/> This will provide an overview of the state of both the national and local tech job market. We will review key information important to your job search and your future career path.
 
@@ -37,6 +38,7 @@
 <br/> Your resume is one of the most important materials you need for your job search. Selecting the right format and presenting the best content is key to getting in the door for a job interview!
 <br/>
 <br/>
+
 *Additional Resources:*
 
 * [Action Verb List](https://drive.google.com/open?id=1ROvxS333SR8B3HQYYSykNgcxVh7wvfZV)
@@ -74,6 +76,7 @@
 * Step 9: Join Groups & Follow Companies
 <br/>
 <br/>
+
 *Additional Resources:*
 
   * [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/open?id=1rYp25sx6kC_aNVlLPOtfa6VDAPOEmKyB)
@@ -97,7 +100,7 @@
 3) **[Tech Talks](https://drive.google.com/open?id=1bI66Xh3EjS9UrpUDFlW51T_duOxejVsG)**
 <br/> During your 12th week, every member of your cohort will be creating and presenting 5-7 minute Tech Talks on a topic of your choice! This session will review the key components to a tech talk and provide some valuable resources.
 <br/>
-<br/> *Additional Resources:*
+<br/>
 
 * [Tech Talk Topic Starters/Ideas](https://drive.google.com/open?id=1sWF7I6Zdw5R0kFgTnKw1SFHgpmMbWj_K)
 <br/> This list provides ideas of past tech talks to get your brain stirring to come up with your own topic!
@@ -108,7 +111,6 @@
 5) **[Building Portfolios](https://drive.google.com/open?id=1_2BvaU30PKbmA1KIYHxGtY_VWUOH9-kuU8ra7keZ3Y8)**
 <br/> Portfolios are a necessity to get that first and sometimes even second job. This resource provides alumni samples as well as resources for building your own portfolio from scratch or using an existing template.
 <br/>
-<br/> *Additional Resources:*
 
 * [How to Build Impressive Portfolio Sites](https://drive.google.com/open?id=1G2r9gFyyHHsTjN-d4iDT1z_Sdx2V4bN8QwFVJbMbUlo)
 <br/> This resource provides some great tips on making your portfolio site and how to stand out.

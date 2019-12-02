@@ -1,13 +1,12 @@
-# Intro to React: React Components
+# React Introduction
 
 # [React Video](https://player.vimeo.com/video/229416697)
 
 ## What is React?
 
-React is a Javascript library for building user interfaces.  We can use it to
-build webpages, mobile web pages, and even native mobile applications.  It is
-component based, which means that we use it to build many small parts, and then join them together to form entire applications.  This turns out to be extremely scalable.  It was created from Facebook as that application grew and
-became more dynamic.
+React is a Javascript library for building user interfaces. We can use it to
+build webpages, mobile web pages, and even native mobile applications. It is
+component based, which means that we use it to build many small parts, and then join them together to form entire applications. This turns out to be extremely scalable. It was created from Facebook as that application grew and became more dynamic.
 
 ## Read the docs
 
@@ -17,10 +16,9 @@ React has great documentation for just starting with the framework, and as you g
 
 ## React Components
 
-We'll start with an app that is composed of just a single component, and from
-there build out more useful and engaging features for our users. Everything in React is a component, from the outer most container of the whole page, to a single line of text or button, its all components, and every component that is visible on the page has a render function.
+Everything in React is a component. From the outer most container of the whole page, to a single line of text or button, it's all components. Every component that is visible on the page has a render function. We'll start with an app that is composed of a single component, and from there build out more useful and engaging features for our users.
 
-There a different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with class components.
+There are different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with class components.
 
 Here's a complete React application, containing just one component, with one line of text:
 

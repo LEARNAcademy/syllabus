@@ -34,6 +34,6 @@ $ rails db:seed
 
 [Go to Cat Tinder: API Endpoints](./03cat_tinder_API_Endpoints.md)
 
-[Back to Cat Tinder: Seeds](./01cat_tinder_setup.md)
+[Back to Cat Tinder: Cat Tinder Setup](./01cat_tinder_setup.md)
 
 [Back to Syllabus](../../README.md)

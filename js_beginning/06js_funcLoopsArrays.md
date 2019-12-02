@@ -1,155 +1,190 @@
-## Functions, Loops and Arrays (Oh My!)
+# Functions, Loops and Arrays (Oh My!)
 
-[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=TlAI9_bXobg)
 
+## Putting it all together
 
+Functions can utilize arrays, loops, and conditionals in combination to procure a particular outcome. Here are some examples of putting it all together.
 
-
-In some cases, we will need to build functions that utilize all of these topics.  Let's put all these concepts together with the following exercise.
-
-1.  Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
+* Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
 
 ```JavaScript
-var arr1 = [1, 5, 7, 3, 10]
+var myArr1 = [1, 5, 7, 3, 10]
 
 function mult5(array){
-    let newArr = []
-    for(let i = 0; i < array.length; i++){
-        newArr.push(array[i] * 5)
-    }
-    return newArr
+  let newArr = []
+  for(let i=0; i<array.length; i++){
+    newArr.push(array[i] * 5)
+  }
+  return newArr
 }
 
-console.log(mult5(arr1));
-
+console.log(mult5(myArr1))
 ```
 
-Notice that we created an empty array inside our function and used the **.push()** method to populate our empty array.  We then returned our newly populated array.  Later we will learn how to greatly reduce this amount of code by using a built in higher order function called .map().
+Notice that we created an empty array inside our function and used the **.push()** method to populate our empty array. The function then returned the newly populated array.
 
-The above functions works great when we want to do something with each item in an array, but what if we wanted to return only certain items from an array? Let's look at another exercise.
+In the following example, we can add a nested conditional statement to return only certain items from the array.
 
-1.  Create a function that takes in an array and returns a new array with only the even numbers.
+* Create a function that takes in an array and returns a new array with only the even numbers.
 
 ```JavaScript
-var arr1 = [1, 2, 7, 4, 10, 8, 9]
+var myArr2 = [1, 2, 7, 4, 10, 8, 9]
 
-function only_even(array){
-    let newArr = []
-    for(let i = 0; i < array.length; i++){
-        if(array[i] % 2 === 0){
-            newArr.push(array[i])
-        }
+function onlyEven(array){
+  let newArr = []
+  for(let i=0; i<array.length; i++){
+    if(array[i] % 2 === 0){
+      newArr.push(array[i])
     }
-    return newArr
+  }
+  return newArr
 }
 
-console.log(only_even(arr1));
+console.log(onlyEven(myArr2))
 ```
-
-Notice that we used a conditional inside our loop that was inside our function.  Later we will learn a higher order function that greatly reduces this code called .filter().
 
 ## Challenges
 
-You can refer to the lecture notes above, but do not copy and paste them.  Try building them from scratch.
+**DON'T FORGET TO PSEUDO CODE**
 
-DON'T FORGET TO PSEUDO CODE
+1. Write a function that takes in an array and returns a new array with all numbers multiplied by 3.
 
-Write a function that takes in an array and returns a new array with all numbers multiplied by 3.
+  var testArr1 = [3, 9, 15, 4, 10]
 
-* var arr1 = [3, 9, 15, 4, 10]
-* expected output -> [9, 27, 45, 12, 30]
-
-
-Write a function that takes in an array and returns a new array with only odd numbers.
-
-* var arr2 = [2, 7, 3, 5, 8, 10, 13]
-* expected output = [7, 3, 5, 13]
-
-Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
-
-* var sent = "Hello There"
-* expected output = "HELLO THERE"
-
-Write a function that takes in an array of numbers and letters and returns a new array with only the letters. HINT: use typeof method.
-
-* var combo_arr = [7, "n", "i", "c", 10, "e", "w", 3, "o", "r", "k"]
-
-Create a function that finds the highest number.
- * `highestNumber([1,4,2])` should return 4
-
- * Hint: create a variable called max, and assign it a reasonable start value; then use a for loop: if an element is higher than max, change max.
-
-Create a function that finds the lowest number.
- * `lowestNumber([1,4,2])` should return 1
-
-Create a function that calculate the sum.
- * `sum([1,2,3])` should return 6
- * `sum([])` should return 0
-
-Create a function that calculate the mean value.
- * `mean([1,2,3])` should return 2
-
-Create a function that finds the index of the highest number.
- * `indexHighestNumber([1,4,2])` should return 1
+  Expected output -->> [9, 27, 45, 12, 30]
 
 
-## Epic Challenges
+2. Write a function that takes in an array and returns a new array with only odd numbers.
 
+  var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 
-#### Pre-fill
-Write a Javascript function called fillArray to create a specified number of elements with a pre-filled numeric values in an array.
+  Expected output -->> [-7, 3, 5, 13]
 
-fillArray(6, 0) should return [0, 0, 0, 0, 0, 0]
-fillArray(4, 11) should return [11, 11, 11, 11]
+3. Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
 
-#### Clean Function
-Write a Javascript function to filter false, null, 0 and blank values from an array.
+  var myMessage = "Hello There"
 
-* filterArrayValues([58, '', 'abcd', true, null, false, 0])
-* should return [58, "abcd", true]
+  Expected output -->> "HELLO THERE"
 
-## Hi/Low Game
+4. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the typeof method
 
-#### Goal
+  var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 
-* Create a function that plays the following game: The computer picks a secret random integer between 1 and 100 (both inclusive), and repeatedly asks the user for guesses.
-* If the user's guess is too high or too low, the computer notifies them of that
-* Otherwise, if the user guesses the secret number correctly, the computer displays a winning message and the game is over.
+  Expected output -->> "nicework"
 
-Hint: See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">Math.random()</a>
-#### Stretch goal 1
+5. Create a function that returns the highest number
 
-Create an HTML page and link your javascript file.  You can use prompt() and alert()
+  var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
 
-#### Stretch goal 2
+  Expected output -->> 67
 
+6. Create a function that returns the lowest number
 
-If the user has not guessed the secret number in seven tries, the user loses.
+  var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
 
+  Expected output -->> -9
 
+7. Create a function that calculates the sum
 
+  var addThese1 = [1, 2, 3, 4]
 
+  Expected output -->> 10
 
-#### Palindrome
-Create a function that takes in a string and returns whether the string is a palindrome (same forward and backwards).
+  var addThese2 = []
 
-* var str = "damon nomad"
-* expected output -> "Yes damon nomad is a palindrome"
+  Expected output -->> 0
 
-#### Vowels Removed
-Create a function that takes in a string and returns a new string with all the vowels removed.
+8. Create a function that calculates the mean value
 
-* var str = "javascript is awesome"
-* expected output -> "jvscrpt s wsm"
+  var meanChecker = [1, 2, 3]
+  Expected output -->> 2
 
-#### Merge Arrays
-Create a function that merges two arrays, takes in two arrays as arguments returns one array with no duplicate values.
+9. Create a function that finds the index of the highest number
 
-* var arr1 = [3, 7, 10, 5, 4, 3]
-* var arr2 = [7, 8, 2, 1, 5, 4]
-* expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
+  var indexHighestNumber = [1, 4, 2]
 
-[Go to Javascript Objects](./07js_objects.md)
+  Expected output -->> 1
 
+10. Create a function that takes in a string and returns only the middle value
 
-[Back to Javascript Loops](./05js_loops.md)
+  var testString1 = "hello"
+  Expected output -->> "l"
+  var testString2 = "boogeyman"
+  Expected output -->> "e"
+
+### STRETCH Challenges
+
+1. Palindrome: Create a function that takes in a string and determines whether the string is a palindrome (the same word forward and backwards)
+
+  var isPalindrome1 = "racecar"
+
+  Expected output -->> "Yes racecar is a palindrome"
+
+  var isPalindrome2 = "albatross"
+
+  Expected output -->> "No albatross is not a palindrome"
+
+2. Vowels Removed: Create a function that takes in a string and returns a new string with all the vowels removed
+
+  var fullString1 = "javascript is awesome"
+
+  Expected output -->> "jvscrpt s wsm"
+
+  var fullString2 = "I am a LEARN student"
+
+  Expected output -->> "m LRN stdnt"
+
+3. Merge Arrays: Create a function that takes in two arrays as arguments and returns one array with no duplicate values.
+
+  var arr1 = [3, 7, 10, 5, 4, 3, 3]
+
+  var arr2 = [7, 8, 2, 3, 1, 5, 4]
+
+  Expected output -->> [3, 7, 10, 5, 4, 8, 2, 1]
+
+4. Clean Function: Create a function that filters false, null, 0 and blank values from an array.
+
+  var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+
+  Expected output -->> [58, "abcd", true]
+
+5. Pre-fill: Write a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+
+  fillArray = (6, 0)
+
+  expected output -->> [0, 0, 0, 0, 0, 0]
+
+  fillArray = (4, 11)
+
+  expected output -->> [11, 11, 11, 11]
+
+6. Create a function named addUp that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+  addUp = (4)
+
+  Expected output -->> 10
+
+  addUp = (13)
+
+  Expected output -->> 91
+
+  addUp = (600)
+
+  Expected output  -->> 180300
+
+### EPIC Challenge
+
+#### High/Low Game
+- Create an HTML page and link your JavaScript file
+- More information about linking HTML to JavaScript [here](../tools_and_resources/linking_html_and_javascript.md)
+- As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive)
+- As a user, when I see if my guess is too high or too low
+- As a user, if I guess the number correctly I am notified that I won
+- STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
+
+[Go to next lesson: Higher Order Functions](../js_intermediate/02js_higher_order_functions.md)
+
+[Back to Javascript Functions](./03js_functions.md)
+
+[Back to Syllabus](../README.md)

@@ -4,23 +4,23 @@ https://player.vimeo.com/video/137862860
 
 ### Let's get on the same page with some common terms...
 
-****PostgresSQL or just Postgres**  - is an open source object-relational database management system
+**PostgresSQL or just Postgres**  - is an open source object-relational database management system
 
 **SQL** - Structured Query Language designed for managing data held in a relational database management system
 
-**Model** - representation of a set of data 
+**Model** - representation of a set of data
 
-**Instance**  - A single row entry in a database 
+**Instance** - A single row entry in a database
 
 **Schema** - a description of the names and types of fields in a table
 
 **Attributes** - the keys in a key/value pair (ex. column headers in a table)
 
-**Relation or Table** - A collection of instances that contain the same attributes 
+**Relation or Table** - A collection of instances that contain the same attributes
 
 **Primary Key** - unique identifier for each instance (automatically generated in rails)
 
-### Model of a person
+### Model of a Person
 ```
 Given Name: Korben
 Family Name: Dallas
@@ -54,7 +54,7 @@ Each row must have a unique way of identifying itself to other parts of the prog
 
 In Rails, every row of a table has a primary key named "id", and that ID is guaranteed to be unique.  This prevents problems like two Person instances being confused for each other because they have the same name. We can always tell them apart by their ID.
 
-### Our Model of a person
+### Our Model of a Person
 
 We've added in a primary key for this instance of Person:
 ```
@@ -88,7 +88,7 @@ Use of operators can be grouped with parenthesis.
 
 Here are examples of the last set of operators:
 
-```
+```sql
 > SELECT * FROM persons WHERE age  BETWEEN 13 AND 17;
 > SELECT * FROM persons WHERE name BETWEEN 'Judith' AND 'Wilma';
 > SELECT * FROM persons WHERE hair IN ('red', 'brown');
@@ -103,7 +103,7 @@ For the `LIKE` operator, the `%` is a wildcard, meaning it can stand for any num
 You can order the result set of a query by adding an `ORDER BY` clause after the `WHERE` clause.
 For instance your can sort the results by name:
 
-```
+```sql
 > SELECT *
   FROM persons
   WHERE age BETWEEN 13 AND 17
@@ -117,11 +117,11 @@ You can append `ASC` or `DESC` to make the order ascending or descending.
 A `SELECT` can be limited to only return a maximum number of rows by adding a `LIMIT` after the `WHERE` clause.
 The following examples limits the number of rows in the result set to ten:
 
-```
-> SELECT *
-  FROM persons
-  WHERE age BETWEEN 13 AND 17
-  LIMIT 10;
+```sql
+SELECT *
+FROM persons
+WHERE age BETWEEN 13 AND 17
+LIMIT 10;
 ```
 
 ## Working with NULL
@@ -132,211 +132,235 @@ So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NUL
 
 * Most functions and expressions yield `NULL` if `NULL` is an argument
 * You can account for `NULL` with
-  * `IS NULL`,
-  * `IS NOT NULL` or
-  * `COALESCE` which returns first non-`NULL` value
+* `IS NULL`,
+* `IS NOT NULL` or
+* `COALESCE` which returns first non-`NULL` value
 
+# Database Operations
 
-  # Database Operations
+https://player.vimeo.com/video/137862865
 
-  https://player.vimeo.com/video/137862865
+## Open the 'Country' database that already exists on your class computer
 
-  ## Open the 'Country' database that already exists on your class computer
+Have a look around, and get familiar with the tables and columns
 
-   Have a look around, and get familiar with the tables and columns
+You can also do some SELECT statements to see the data
 
-  You can also do some SELECT statements to see the data
+```sql
+SELECT
+  code,
+  name,
+  population
+FROM
+  country;
+```
 
-  ```sql
-      SELECT
-        code,
-        name,
-        population
-      FROM
-        country;
-  ```
+![simple select](/assets/sql-lessons/querying/simple-select.png)
 
-  ![simple select](/assets/sql-lessons/querying/simple-select.png)
+What's up with that order?
+* Not by code
+* Not by name
+* Not by population
 
-  What's up with that order?
-  * Not by code
-  * Not by name
-  * Not by population
+SQL is a function of sets
+* A set is just a collection of things
+* Not ordered by default
+* No Loops
+* IN SQL, think about sets, which are groups of similar records, not loops
 
-  SQL is a function of sets
-  * A set is just a collection of things
-  * Not ordered by default
-  * No Loops
-  * IN SQL, think about sets, which are groups of similar records, not loops
+## Try these queries on for size
 
-  ## Try these queries on for size
+#### A Set
+![Set](/assets/sql-lessons/querying/set.png)
+![Where](/assets/sql-lessons/querying/where.png)
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM
+  country
+where
+  gnp > 1e+6
+````
 
-  #### A Set
-  ![Set](/assets/sql-lessons/querying/set.png)
-  ![Where](/assets/sql-lessons/querying/where.png)
-  ````
-      SELECT
-        code,
-        name,
-        population,
-        gnp
-      FROM
-        country
-      where
-        gnp > 1e+6
-  ````
+![Set Result](/assets/sql-lessons/querying/set-result.png)
 
-  ![Set Result](/assets/sql-lessons/querying/set-result.png)
+#### Negation
+![Negation](/assets/sql-lessons/querying/negation.png)
 
-  #### Negation
-  ![Negation](/assets/sql-lessons/querying/negation.png)
+````sql
+SELECT
+  *        <-- means all columns
+FROM
+  country
+WHERE
+  NOT(continent = 'North America')
+````
 
-  ````
-      SELECT
-        *        -- means all columns
-      FROM
-        country
-      WHERE
-        NOT(continent = 'North America')
-  ````
+#### Union
 
-  #### Union
+![Union](/assets/sql-lessons/querying/union.png)
+![Union Continuity](/assets/sql-lessons/querying/union-continuity.png)
 
-  ![Union](/assets/sql-lessons/querying/union.png)
-  ![Union Continuity](/assets/sql-lessons/querying/union-continuity.png)
+#### Intersection
 
-  #### Intersection
+![Intersection](/assets/sql-lessons/querying/intersection.png)
+````sql
+SELECT code, name, population, gnp FROM country WHERE population > 1e+8
+INTERSECT
+SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
+````
 
-  ![Intersection](/assets/sql-lessons/querying/intersection.png)
-  ````
-      SELECT code, name, population, gnp FROM country WHERE population > 1e+8
-      INTERSECT
-      SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
-  ````
+![Union Results](/assets/sql-lessons/querying/union-results.png)
 
-  ![Union Results](/assets/sql-lessons/querying/union-results.png)
+#### Difference
 
-  #### Difference
+![Difference](/assets/sql-lessons/querying/difference.png)
+````sql
+SELECT * FROM country WHERE NOT(continent = 'North America')
+EXCEPT
+SELECT * FROM country WHERE lifeexpectancy > 50
+````
+![Difference Results](/assets/sql-lessons/querying/difference-results.png)
 
-  ![Difference](/assets/sql-lessons/querying/difference.png)
-  ````
-      SELECT * FROM country WHERE NOT(continent = 'North America')
-      EXCEPT
-      SELECT * FROM country WHERE lifeexpectancy > 50
-  ````
-  ![Difference Results](/assets/sql-lessons/querying/difference-results.png)
+#### Boolean Expressions
 
-  #### Boolean Expressions
+Writing this:
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM country
+WHERE population > 1e+8
+UNION
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM country
+WHERE gnp > 1e+6
+````
 
-  Writing this:
-  ````
-      SELECT code, name, population, gnp FROM country WHERE population > 1e+8
-      UNION
-      SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
-  ````
+Is the same as this:
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM
+  country
+WHERE
+  population > 1e+8
+OR
+  gnp > 1e+6
+````
 
-  Is the same as this:
-  ````
-      SELECT
-        code,
-        name,
-        population,
-        gnp
-      FROM
-        country
-      WHERE
-        population > 1e+8
-        OR
-        gnp > 1e+6
-  ````
+Writing this:
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM country
+WHERE population > 1e+8
+INTERSECT
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM country
+WHERE gnp > 1e+6
+````
 
-  Writing this:
-  ````
-      SELECT code, name, population, gnp FROM country WHERE population > 1e+8
-      INTERSECT
-      SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
-  ````
+Is the same as this:
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM
+  country
+WHERE
+  population > 1e+8
+AND
+  gnp > 1e+6;
+````
 
-  Is the same as this:
-  ````
-      SELECT
-        code,
-        name,
-        population,
-        gnp
-      FROM
-        country
-      WHERE
-        population > 1e+8
-        AND
-        gnp > 1e+6;
-  ````
+#### Functions and Expressions
 
-  #### Functions and Expressions
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp,
+  gnp / population
+AS gnp_per_capita   #give expressions a name
+FROM
+  country
+WHERE
+  population > 1e+8
+AND
+  gnp > 1e+6;
+````
 
-  ````
-      SELECT
-        code,
-        name,
-        population,
-        gnp,
-        gnp / population AS gnp_per_capita  # give expressions a name
-      FROM
-        country
-      WHERE
-        population > 1e+8
-        AND
-        gnp > 1e+6;
-  ````
+#### ORDER BY
+````sql
+SELECT
+  code,
+  name,
+  population,
+  gnp
+FROM
+  country
+where
+  gnp > 1e+6
+ORDER BY
+  name DESC;
+````
 
-  #### ORDER BY
-  ````
-      SELECT
-        code,
-        name,
-        population,
-        gnp
-      FROM
-        country
-      where
-        gnp > 1e+6
-      ORDER BY
-        name DESC;
-  ````
+#### WITH Subqueries
+``` sql
+WITH
+	populated_countries AS
+		(SELECT
+			code,
+			name,
+			population,
+			gnp
+		FROM
+			country
+		WHERE
+			population >0
+		)
+SELECT
+	code,
+	name,
+	population,
+	gnp,
+	gnp / population AS gnp_per_capita
+FROM
+	populated_countries
+WHERE
+	gnp / population > 0.03;
+```
 
-  #### WITH Subqueries
-  ```
-  WITH
-  	populated_countries AS
-  		(SELECT
-  			code,
-  			name,
-  			population,
-  			gnp
-  		FROM
-  			country
-  		WHERE
-  			population >0
-  		)
-  SELECT
-  	code,
-  	name,
-  	population,
-  	gnp,
-  	gnp / population AS gnp_per_capita
-  FROM
-  	populated_countries
-  WHERE
-  	gnp / population > 0.03;
-  ```
+## Summary
+In this section we've taken a look at the different types of SQL queries. You can use to create sets. We tackled WHERE clauses, Negation, Unions, Intersections, Differences, and the boolean expressions AND and OR. Then we evaluated functions and ORDER BY clauses. The SQL language is very mature, and full featured.  We've only touched the surface of what you can do with SQL.
 
-  ## Summary
-  In this section we've taken a look at the different types of SQL queries. You can use to create sets.  We tackled WHERE clauses, Negation, Unions, Intersections, Differences, and the boolean expressions AND and OR. Then we evaluated functions and ORDER BY clauses.  The SQL language is very mature, and full featured.  We've only touched the surface of what you can do with SQL.
+### Resources
+The country database is from http://www.stat.fi/worldinfigures
 
-  ### Resources
-  The country database is from http://www.stat.fi/worldinfigures
-
-  # Group by and Aggregate Functions
+# Group by and Aggregate Functions
 
 ## Understanding Group By
 
@@ -353,7 +377,7 @@ If we've created a table called "cars" that contains a make, a color, and mileag
 
 If we want to group by color, we can:
 
-```
+```sql
 SELECT color
 FROM cars
 GROUP BY color;
@@ -369,7 +393,7 @@ blue
 ```
 
 Asking to print a column like `make`:
-```
+```sql
 SELECT color, make
 FROM cars
 GROUP BY color;
@@ -382,7 +406,7 @@ would result in an error like this one:
 What this means is that that when you group by color, each row of the `make` column would have to contain a set of values instead of one single value.
 We *can* ask for the number of blue cars that exist, however -- which would be using an aggregate function, `COUNT` -- and would look like this:
 
-```
+```sql
 SELECT color, count(cars.id) AS number_of_cars
 FROM cars
 GROUP BY color;
@@ -399,7 +423,7 @@ color   | number_of_cars
 
 SQL has a variety of aggregate functions that can be used with `GROUP BY` in addition to `COUNT`, such as `SUM`, `AVG`, `MIN`, and `MAX`. For example, if one wanted to view the average miles per gallon of cars by color:
 
-```
+```sql
 SELECT color, avg(cars.mileage) AS avg_mileage
 FROM cars
 GROUP BY color;
@@ -414,28 +438,26 @@ color   |    avg_mileage
 
 Or, for the greatest mileage by car color:
 
-```
+```sql
 SELECT color, max(cars.mileage) AS max_mileage
 FROM cars
 GROUP BY color;
 ```
-
 ```
  color  | max_mileage
 --------+-------------
  yellow |           8
  blue   |           7
 ```
-# Challenges
-Setup
-Open pgAdmin
+
+# Challenges: Set Up
 
 You may need to add the Country database.  If so follow these instructions...
 
 * open PGadmin
 * click on add new server
 * click on connection tab
-* in hostname/address type  127.0.0.1
+* in hostname/address type  `127.0.0.1` or `localhost`
 * change username from postgres to learn
 * password = SDlearn123
 * click save
@@ -446,10 +468,10 @@ To run a query follow these steps...
 * click on tools tab at the top
 * click on Query Tool
 * Type your query
-* Click on lightening bolt  to run query
+* Click on lightning bolt to run query
 
 
-SQL Country Database Challenges
+## Challenges: SQL Country Database
 
 Save your queries in a file if you want to keep them for posterity.
 
@@ -468,19 +490,12 @@ Save your queries in a file if you want to keep them for posterity.
 
 #### `ORDER BY`
 
-* Which fifteen countries have the lowest life expectancy? highest life expectancy?
-* Which five countries have the lowest population density? highest population density?
-* Which is the smallest country, by area and population? the 10 smallest countries, by area and population?
-* Which is the biggest country, by area and population? the 10 biggest countries, by area and population?
-
-#### `WITH`
-
-* Of the smallest 10 countries, which has the biggest gnp?
-(hint: use `WITH` and `LIMIT`)
-* Of the smallest 10 countries, which has the biggest per capita gnp?
-* Of the biggest 10 countries, which has the biggest gnp?
-* Of the biggest 10 countries, which has the biggest per capita gnp?
-* What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
+* Which fifteen countries have the lowest life expectancy?
+* Which fifteen countries have the highest life expectancy?
+* Which five countries have the lowest population density (density = population / surfacearea)?
+* Which countries have the highest population density?
+* Which is the smallest country, by area and population (first by area, then by population)?
+* Which is the biggest country, by area and population (first by area, then by population)?
 
 #### `GROUP BY`
 
@@ -502,6 +517,15 @@ Save your queries in a file if you want to keep them for posterity.
 * What is the total population of all continents?
 * What is the average life expectancy for all continents?
 * Which countries have the letter ‘z’ in the name? How many?
+
+#### `WITH`
+
+* Of the smallest 10 countries, which has the biggest gnp?
+(hint: use `WITH` and `LIMIT`)
+* Of the smallest 10 countries, which has the biggest per capita gnp?
+* Of the biggest 10 countries, which has the biggest gnp?
+* Of the biggest 10 countries, which has the biggest per capita gnp?
+* What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
 
 
 [Go to SQL Joins](./08rails_sql_joins.md)
