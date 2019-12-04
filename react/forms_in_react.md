@@ -1,176 +1,216 @@
-# Forms in React
+# React Forms and Passing Props
 
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
 
-Today we're going to take a closer look at managing state in Components, and handling state changes among components as they work together on the page. We've been working with both state and props to manage state in components. Recall that state is for managing internal state of a component, and props are used to communicate state between components. As you work more with react you'll begin to use component state less and less, keeping state contained in a few top level, 'smart', components and relying on props to pass state to other components.
+Today we're going to take a closer look at managing state in Components, and handling state changes among components as they work together on the page. We've been working with both state and props to manage state in components. Recall that state is for managing internal state of a component, and props are used to communicate state between components. As you work more with react you'll begin to use component state less and less, keeping state contained in a few top level, `logic or smart`, components and relying on props to pass state to other components.
 
-Let's take a closer look at the difference between component state and props by adding an input element to the page. We'll start by creating a Header component that takes a greeting, and displays it:
+Let's take a closer look at the difference between component state and props by adding an input element to the page.
 
-**src/Header.js**
-```javascript
-
-import React, { Component } from 'react';
-
-class Header extends Component {
-  render() {
-    return (
-      <h1>Hello {this.props.greeting} </h1>
-    );
-  }
-}
-
-export default Header;
-```
-
-This component is 'Pure', or 'dumb'. It just accepts a greeting in props, and displays it.
-
-In App.js, we add a greeting to the components state, and then can user the Header component to display a greeting.
+We'll create a smart component that holds state and passes information to a child component called `Greeter`.
 
 **src/App.js**
 ```javascript
-import React, { Component } from 'react';
-import Header from './Header'
+import React, { Component } from 'react'
+import Greeter from './Greeter'
 
-class App extends Component {
+class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      greeting: 'Bob'
+      name: "Bob"
     }
   }
-
   render() {
     return (
       <div>
-        <div>
-          <Header greeting={this.state.greeting} />
-        </div>
+        <Greeter name={ this.state.name } />
       </div>
-    );
+    )
   }
 }
 ```
 
-Next, lets add an input element to the App component so we can update the greeting.
+Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It just accepts a greeting in props, and displays it.
+
+**src/Greeter.js**
+```javascript
+import React, { Component } from 'react'
+
+class Greeter extends Component {
+  render() {
+    return (
+      <h1>Hello, { this.props.greeting }! </h1>
+    )
+  }
+}
+
+export default Greeter
+```
+
+In the browser we will see: `Hello, Bob!`
+
+To increase the functionality of our app, let's add a way for our user to enter their name rather than having a hardcoded name in state. To do this we need a text input and a method that will update state as our user types in the input.
 
 **src/App.js**
 ```javascript
-import React, { Component } from 'react';
-import Header from './Header'
+import React, { Component } from 'react'
+import Greeter from './Greeter'
 
-class App extends Component {
+class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      greeting: 'Bob'
+      name: ""
     }
   }
 
-  updateGreeting = (e) => {
-    this.setState({greeting: e.target.value})
-  }
-
-  render() {
-    return (
-      <div>
-        <div>
-          <Header greeting={this.state.greeting} />
-        </div>
-        <div>
-          <input value={this.state.greeting} onChange={this.updateGreeting} />
-        </div>
-      </div>
-    );
-  }
-}
-
-export default App;
-```
-**Notice** that for the input, we need both a `value` and `onChange`. You may have thought at first that because we set the value of the input to the value of greeting in our component state that the input would be bound correctly to component state, but it doesn't work. `<input>` has its own internal state, so we need to use the props 'value' and 'onChange' to pass the proper context into it. The input is re-rendered every time the state of the component changes, resetting the value of the input to whatever the component state is at that moment. By using `onChange` that action is passed back up the the App component and handled correctly.
-
-Also notice that we call `.bind(this)` on our `onChange()` handler. This binds the context of the function to the App component where we are managing state for the app. `<input>` in React is just another component, and we are passing the `onChange` handler in as a prop. `<input>` doesn't have 'greeting' set in its state, so the state change would be silently ignored. By calling `.bind(this)`, we make sure that state on that App component is updated, and everything works as we expect.
-
-## Moving the input to a component
-
-As our app grows, we'll likely want to move the `<input>` into its own component. When doing this, we still want to manage state for the application in App, so we pass a handler function down into the new component for it to call when the input value is changed. We're just passing the functionality of `updateGreeting` along here, first App passes it to GreetingInput. GreetingInput is the middleman, translating the value from the input, and communicating that back up to App.
-
-**src/Greeting.js**
-
-```javascript
-import React, { Component } from 'react';
-
-class GreetingInput extends Component {
   handleChange = (e) => {
-    this.props.updateGreeting(e.target.value)
+    this.setState({ name: e.target.value })
   }
 
-  render() {
-    return (
-      <input value={this.props.greeting} onChange={this.handleChange} />
-    );
-  }
-}
-
-export default GreetingInput;
-```
-
-Then up in App.js, we import GreetingInput, and pass our handler in
-
-**src/App.js**
-
-```javascript
-import React, { Component } from 'react';
-import Header from './Header'
-import GreetingInput from './GreetingInput'
-
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      greeting: 'Bob'
-    }
-  }
-
-  updateGreeting = (greeting) => {
-    this.setState({greeting: greeting})
-  }
   render() {
     return (
       <div>
-        <div>
-          <Header greeting={this.state.greeting} />
-        </div>
-        <div>
-          <GreetingInput greeting={this.state.greeting} updateGreeting={this.updateGreeting} />
-        </div>
+        <input
+          value={ this.state.name }
+          onChange={ this.handleChange }
+        />
+        <Greeter name={ this.state.name } />
       </div>
-    );
+    )
+  }
+}
+export default App
+```
+In our example, the JSX input tag takes two attributes:
+  - `value` of our state object
+  - `onChange` that calls a method called handleChange that will collect the information entered in the input and update state!
+
+**Notice** that for the input, we need both a `value` and `onChange`. `<input>` has its own internal state, so we need to use the props `value` and `onChange` to pass the proper context into it. The input is re-rendered every time the state of the component changes.
+
+The information from the input is passed to the child `Greeter` component.
+
+We can change the user output by adding a method in the `Greeter` component.
+
+**src/Greeter.js**
+```javascript
+import React, { Component } from 'react'
+
+class Greeter extends Component {
+
+  capitalizer = (userInput) => {
+    return userInput.toUpperCase()
+  }
+
+  render() {
+    return (
+      <h1>Hello, { this.capitalizer(this.props.name) }! </h1>
+    )
   }
 }
 
-export default App;
+export default Greeter
 ```
 
-## Review
+## Input as a component
 
-- What are the two properties that we need to connect with an input field?
-- In your own words, what does "bind(this)" do?
-- What does pure vs impure mean?
-- In our implementation is GreetingInput a pure or impure component?
+As our app grows, we'll likely want to move the `<input />` into its own component.
 
-## Exercise - Robot
+Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
 
-- Create the following page as a set of React components. When you type in the text box, it should update all 3 result labels
+**src/NameInput.js**
+```javascript
+import React, { Component } from 'react'
+
+class NameInput extends Component {
+
+  handleChange = (e) => {
+    this.props.updateName(e.target.value)
+  }
+
+  render() {
+    return (
+      <input
+        value={ this.props.name }
+        onChange={ this.handleChange }
+      />
+    )
+  }
+}
+
+export default NameInput
+```
+
+
+**src/App.js**
+```javascript
+import React, { Component } from 'react'
+import Greeter from './Greeter'
+import NameInput from './NameInput'
+
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      name: ""
+    }
+  }
+
+  updateName = (name) => {
+    this.setState({ name: name })
+  }
+
+  render() {
+    return (
+      <div>
+        <Greeter name={ this.state.name } />
+        <NameInput
+          name={ this.state.name }
+          updateName={ this.updateName }
+        />
+      </div>
+    )
+  }
+}
+
+export default App
+```
+
+
+## Challenges
+
+### 1) Listening Robot
+
+#### User Stories
+
+- As a user, I see a page with a text input.
+- As a user, I see titles of three robots waiting for my text.
+- As a user, when I enter text I see the robots responses update in real time.
+
+### Developer Stories
+
+- As a developer, I have one parent component that holds state (logic or smart component).
+- As a developer, I have three child components that do not hold state (display or dumb component).
+- As a developer, I have an input in my parent component.
+- As a developer, I can call an onChange method in the input tag.
+- As a developer, I can create a handleChange method that will update state in my parent component.
+- As a developer, I can pass the updated state as props to the child components.
+- As a developer, I can see the child components display the user input.
+- As a developer, I can create modification to the user input text by creating a method in my child component.
 
 ![Active Listening Robot Challenge](../assets/robot_active_listening.png)
 
-## Exercise 2 - Mad Libs
-Create a Madlibs game based on the following wireframe and user stores
+## 2) Mad Libs
+
+#### User Stories
+- As a user, I can see a page with many text inputs. - As a user, I can see labels next to the text inputs indicating what part of speech (or type of word) should be entered into each text form: nouns, pronouns, verbs, adjectives, and adjectives
+- As a user, after I have filled out the text inputs I can click a 'Submit' button.
+- As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms passed into a silly paragraph.
+- As a user, I can click a 'Clear' button that removes the story and the text inputs and returns the page to the original state.
+
+### Developer Stories
+
+- As a developer, I have one parent component that holds state (logic or smart component).
+- As a developer, I have
 
 ![Mad Libs](../assets/madlibs.png)
-
-### Stories
-* As a user, When I first go to the app, I should not see an incomplete story.
-* As a user, I should be presented with a list of nouns, pronouns, verbs, adjectives, and adjectives to fill in.
-* As a user, when I click the 'Submit' button, I should see a unique story based on the words I've filled in.
-* As a user, when I click the 'Clear' button, I should see the story reset to empty.
