@@ -88,8 +88,6 @@ export default App;
 ```
 **Notice** that for the input, we need both a `value` and `onChange`. You may have thought at first that because we set the value of the input to the value of greeting in our component state that the input would be bound correctly to component state, but it doesn't work. `<input>` has its own internal state, so we need to use the props 'value' and 'onChange' to pass the proper context into it. The input is re-rendered every time the state of the component changes, resetting the value of the input to whatever the component state is at that moment. By using `onChange` that action is passed back up the the App component and handled correctly.
 
-Also notice that we call `.bind(this)` on our `onChange()` handler. This binds the context of the function to the App component where we are managing state for the app. `<input>` in React is just another component, and we are passing the `onChange` handler in as a prop. `<input>` doesn't have 'greeting' set in its state, so the state change would be silently ignored. By calling `.bind(this)`, we make sure that state on that App component is updated, and everything works as we expect.
-
 ## Moving the input to a component
 
 As our app grows, we'll likely want to move the `<input>` into its own component. When doing this, we still want to manage state for the application in App, so we pass a handler function down into the new component for it to call when the input value is changed. We're just passing the functionality of `updateGreeting` along here, first App passes it to GreetingInput. GreetingInput is the middleman, translating the value from the input, and communicating that back up to App.
@@ -154,8 +152,7 @@ export default App;
 ## Review
 
 - What are the two properties that we need to connect with an input field?
-- In your own words, what does "bind(this)" do?
-- What does pure vs impure mean?
+- What does smart vs dumb mean in relation to component?
 - In our implementation is GreetingInput a pure or impure component?
 
 ## Exercise - Robot

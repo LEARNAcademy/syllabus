@@ -102,7 +102,7 @@ With that call to the Content component within the App component's render, we no
 
 The goal of the following challenge is to for you to practice nesting components and getting familiar with class based component syntax.
 
-Clone your starter code [here](https://github.com/learn-academy-2019-alpha/react-intro-challenge)
+Clone your starter code [here](https://github.com/learn-academy-2019-foxtrot/react-intro-challenge)
 
 Here are your stories:
 
