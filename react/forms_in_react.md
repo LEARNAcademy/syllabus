@@ -11,35 +11,44 @@ We'll create a smart component that holds state and passes information to a chil
 **src/App.js**
 ```javascript
 import React, { Component } from 'react'
+// importing the Greeter component
 import Greeter from './Greeter'
 
 class App extends Component{
   constructor(props){
     super(props)
+    // creating a state object that contains a key of "name" and a value of "Bob"
     this.state = {
       name: "Bob"
     }
   }
-  render() {
-    return (
+
+  render(){
+    return(
       <div>
-        <Greeter name={ this.state.name } />
+        {/* <Greeter /> is getting passed the information from the state object as props called "name" */}
+        <Greeter
+          name={ this.state.name }
+        />
       </div>
     )
   }
 }
+export default App
 ```
 
-Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It just accepts a greeting in props, and displays it.
+Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It accepts a greeting in props, and displays it.
 
 **src/Greeter.js**
 ```javascript
 import React, { Component } from 'react'
 
+// Greeter is a dumb/display component that does not hold state
 class Greeter extends Component {
   render() {
+    // We are passing the state object value as props called "name" <name={ this.state.name }> from the parent App.js
     return (
-      <h1>Hello, { this.props.greeting }! </h1>
+      <h1>Hello, { this.props.name }! </h1>
     )
   }
 }
@@ -54,28 +63,35 @@ To increase the functionality of our app, let's add a way for our user to enter 
 **src/App.js**
 ```javascript
 import React, { Component } from 'react'
+// importing the Greeter component
 import Greeter from './Greeter'
 
 class App extends Component{
   constructor(props){
     super(props)
+    // changing the state object to hold an empty string
     this.state = {
       name: ""
     }
   }
 
   handleChange = (e) => {
+    // a method that will take the value from an input and save it in the state key "name"
     this.setState({ name: e.target.value })
   }
 
   render() {
     return (
       <div>
+        {/* adding a JSX tag <input /> that will call the handleChange method and pass the value of the state object */}
         <input
           value={ this.state.name }
           onChange={ this.handleChange }
         />
-        <Greeter name={ this.state.name } />
+        {/* same information being passed as props to <Greeter /> */}
+        <Greeter
+          name={ this.state.name }
+        />
       </div>
     )
   }
@@ -97,13 +113,16 @@ We can change the user output by adding a method in the `Greeter` component.
 import React, { Component } from 'react'
 
 class Greeter extends Component {
+  // Greeter is a dumb/display component that does not hold state
 
   capitalizer = (userInput) => {
+    // a display component can have its own methods that act on the information being passed as props
     return userInput.toUpperCase()
   }
 
   render() {
     return (
+      {/* calling a method and passing the information from the input */}
       <h1>Hello, { this.capitalizer(this.props.name) }! </h1>
     )
   }
@@ -116,54 +135,36 @@ export default Greeter
 
 As our app grows, we'll likely want to move the `<input />` into its own component.
 
-Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
-
-**src/NameInput.js**
-```javascript
-import React, { Component } from 'react'
-
-class NameInput extends Component {
-
-  handleChange = (e) => {
-    this.props.updateName(e.target.value)
-  }
-
-  render() {
-    return (
-      <input
-        value={ this.props.name }
-        onChange={ this.handleChange }
-      />
-    )
-  }
-}
-
-export default NameInput
-```
-
-
 **src/App.js**
 ```javascript
 import React, { Component } from 'react'
+// importing the Greeter component
 import Greeter from './Greeter'
+// importing the NameInput component that we are about to create
 import NameInput from './NameInput'
 
 class App extends Component{
   constructor(props){
     super(props)
+    // state object stays the same
     this.state = {
       name: ""
     }
   }
 
   updateName = (name) => {
+    // this method is passed as props to <NameInput /> so the value from the child component can be passed back "up river" to the parent App.js
     this.setState({ name: name })
   }
 
   render() {
     return (
       <div>
-        <Greeter name={ this.state.name } />
+        {/* <Greeter /> gets the same information as props */}
+        <Greeter
+          name={ this.state.name }
+        />
+        {/* <NameInput /> gets the information from state and a method as props  */}
         <NameInput
           name={ this.state.name }
           updateName={ this.updateName }
@@ -176,6 +177,33 @@ class App extends Component{
 export default App
 ```
 
+Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
+
+**src/NameInput.js**
+```javascript
+import React, { Component } from 'react'
+
+class NameInput extends Component {
+  // NameInput is a dumb/display component that does not hold state
+
+  handleChange = (e) => {
+    // method that takes the value from the input and calls updateName
+    this.props.updateName(e.target.value)
+  }
+
+  render() {
+    // the JSX tag <input /> has the value of name coming as props from App.js
+    return (
+      <input
+        value={ this.props.name }
+        onChange={ this.handleChange }
+      />
+    )
+  }
+}
+
+export default NameInput
+```
 
 ## Challenges
 
@@ -203,14 +231,11 @@ export default App
 ## 2) Mad Libs
 
 #### User Stories
-- As a user, I can see a page with many text inputs. - As a user, I can see labels next to the text inputs indicating what part of speech (or type of word) should be entered into each text form: nouns, pronouns, verbs, adjectives, and adjectives
+- As a user, I can see a page with many text inputs.
+- As a user, I can see labels next to the text inputs indicating what part of speech (or type of word) should be entered into each text form: nouns, pronouns, verbs, adjectives, and adjectives.
+- As a user, I can fill out the inputs.
 - As a user, after I have filled out the text inputs I can click a 'Submit' button.
-- As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms passed into a silly paragraph.
+- As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms to create a funny story.
 - As a user, I can click a 'Clear' button that removes the story and the text inputs and returns the page to the original state.
-
-### Developer Stories
-
-- As a developer, I have one parent component that holds state (logic or smart component).
-- As a developer, I have
 
 ![Mad Libs](../assets/madlibs.png)
