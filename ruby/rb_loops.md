@@ -69,8 +69,9 @@ Note the original array is untouched.
 
 ## Challenges
 
-- Write a loop that prints from 1 to 20. Try it with all the loops covered in this lesson. Do it again counting down from 20 to 1.
-- Write a program which takes a number and prints "Valid" if the number is between 1 and 10 (inclusive) and "Invalid" otherwise.
+- Write a loop that prints from 1 to 20.
+- Write a loop that prints 20 to 1.
+- Create an array of 10 numbers. Write loop that multiplies the numbers by 5.
 - Create an array of words. Iterate through the array using .each and a block, then print each of those words in all capitals.
 
 ### Stretch Challenges: FIZZBUZZ
