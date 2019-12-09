@@ -63,6 +63,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 2. [Ruby Conditionals](./ruby/rb_conditionals.md)
 2. [Ruby Methods](./ruby/rb_methods.md)
 2. [Ruby Loops](./ruby/rb_loops.md)
+2. [Ruby Hashes](./ruby/rb_hashes.md)
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
 5. [Objects and Beyond, Car Challenge](./ruby/05_objects_and_beyond.md)

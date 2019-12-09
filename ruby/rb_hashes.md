@@ -1,43 +1,59 @@
-**Hash**
+# Ruby Hashes
 
-Now on to hashes. A hash is a collection of unique keys and their values, in other words, it's like a dictionary of key value pairs and can be easily created by using its implicit form:
-````RUBY
-burger_rating = { "Bacon Burger" => 10, "Guacamole Burger" => 9 }
-````
-Hashes allow an alternate syntax form where your keys are always symbols. Instead of
-````RUBY
-order_form = { :number_of_tacos => 10, :meat_type => "Carne Asada" }
-````
-You could write it as:
+A hash is a collection of unique keys and their values. A hash is like an array but instead of the values being referenced by an index, the values are reference by their unique key. Hashes can be constructed in multiple ways.
 
-````RUBY
-order_form = { number_of_tacos: 10, meat_type: "Carne Asada" }
-````
-Each named key is a symbol you can access in the hash:
-````RUBY
-order_form[:number_of_tacos]  # => 10
-````
-A Hash can also be created through its ::new method:
+Keys are strings and values are assigned using a hash rocket `=>`:
+
 ```RUBY
-burger_rating = Hash.new
-burger_rating["Double Cheese Burger"] = 10
+> shopping_cart = { "apples" => 5, "kiwis" => 2 }
 ```
 
-Hashes have a default value that is returned when accessing keys that do not exist in the hash. If no default is set nil is used. You can set the default value by sending it as an argument to ::new
+Keys are symbols and values are assigned using a hash rocket `=>`:
 
-**.each loop with a Hash and string interpolation**
+```RUBY
+> shopping_cart = { :yogurt => 6, :flour => "All Purpose" }
+```
+
+Key value pairs much like a JavaScript object:
+
+```RUBY
+> shopping_cart = { granola: "almond", bananas: 3 }
+```
+
+Accessing a value from the hash:
+
+```RUBY
+> shopping_cart[:granola]
+# => "almond"
+```
+
+A hash can also be created through the `new` method:
+
+```RUBY
+> shopping_cart = Hash.new
+> shopping_cart["lettuce"] = "spring mix"
+# --or--
+> shopping_cart[:cheese] = "Cheddar"
+> shopping_cart
+# => {"lettuce"=>"spring mix", :cheese=>"Cheddar"}
+```
+
+## each Loop and Hashes
 
 .each calls block once for each key in the hash, passing the key-value pair as parameters.
 
 If no block is given, an enumerator is returned instead.
 ```RUBY
-    burger_rating = { "Bacon Burger" => 10, "Quacamole Burger" => 9 }
-    burger_rating.each {|key, value| puts "The #{key} has a rating of #{value}" }
+> shopping_cart = { "apples" => 5, "kiwis" => 2 }
+# => {"apples"=>5, "kiwis"=>2}
 
-    produces:
+> shopping_cart.each do |key, value|
+    puts "Get #{value} #{key} from the store."
+  end
+# Get 5 apples from the store.
+# Get 2 kiwis from the store.
+```
 
-    The Bacon Burger has a rating of 10
-    The Quacamole Burger has a rating of 9
- ```
+[Go to Objects and Classes](03rb_classes_objects.md)
 
 [Back to Syllabus](../README.md)

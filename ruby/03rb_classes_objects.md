@@ -186,6 +186,4 @@ Classes are made up of Nouns (data) and Verbs (methods). Take a look at your Veh
 
 [Go to Ruby Inheritance](./04rb_inheritance.md)
 
-[Back to Ruby Conditions, Methods, Loops, and Hashes](./02rb_cond_methods_loops_hashes.md)
-
 [Back to Syllabus](../README.md)
