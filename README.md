@@ -60,7 +60,9 @@ React is a powerful Javascript library used to build more complicated web applic
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
 1. [Ruby Intro](./ruby/01rb_intro.md)
-2. [Ruby Conditions](./ruby/02rb_cond_methods_loops_hashes.md)
+2. [Ruby Conditionals](./ruby/rb_conditionals.md)
+2. [Ruby Methods](./ruby/rb_methods.md)
+2. [Ruby Loops](./ruby/rb_loops.md)
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
 5. [Objects and Beyond, Car Challenge](./ruby/05_objects_and_beyond.md)

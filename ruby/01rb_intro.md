@@ -168,14 +168,25 @@ To do this, create a file. Ruby can be run from a file with any sort of name, bu
 
 To run a file with Ruby code in it, you give the command ruby and then a path to the file. So to execute a ruby file called run_it.rb in your current directory, you would run: ruby run_it.rb
 
-To show code output in Ruby we need a command to log the code. In Ruby we use `puts` or for short `p`. It is similar to `console.log()` in JavaScript.
+**Output**
 
+The puts (short for "put string") and print commands are both used to display the results of evaluating Ruby code. The primary difference between them is that puts adds a newline after executing, and print does not.
+
+Example in IRB:
 ````RUBY
-> name = 'Learn Student'
-> puts name     # => "Learn Student"
-````
+print "Hello World"
+Hello World # => nil
 
-Ruby also has a command for user input in the terminal called `gets`. It is a bit like `prompt()` in JavaScript.
+puts "Hello World"
+Hello World
+# => nil
+````
+In the example you can see differences and the newline the puts method adds.
+
+**Input**
+
+Ruby also has a command for user input in the terminal called `gets`. It is a bit like `prompt()` in JavaScript. And just like `prompt()`, the input value from gets needs to be stored in a variable to access later.
+
 
 ````RUBY
 > puts 'Enter your name'
@@ -214,10 +225,10 @@ Remember that floats are numbers with a decimal point whereas integers have no f
 
 - Set a variable called my_favorite_number equal to your favorite number.
 - Calculate your favorite number divided by 2.
-- Set another variable called someones_favorite equal to 13
-- Change the value of someones_favorite to 7
-- Subtract your favorite number from someones
-Change the value of my favorite number to be 26 times its current value
+- Set another variable called someones_favorite equal to 13.
+- Change the value of someones_favorite to 7.
+- Subtract my_favorite_number from someones_favorite.
+- Change the value of my favorite number to be 26 times its current value.
 
 ## Strings Challenges
 
@@ -237,6 +248,6 @@ Change the value of my favorite number to be 26 times its current value
 - Reverse the array.
 - Get one element from the array.
 
-[Go to Ruby Conditions, Methods, Loops, and Hashes](./02rb_cond_methods_loops_hashes.md)
+[Go to Ruby Conditionals](./rb_conditionals.md)
 
 [Back to Syllabus](../README.md)
