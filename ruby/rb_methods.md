@@ -95,13 +95,13 @@ nums.each_with_index() { |element, index| puts "#{index.to_s} #{element.to_s}" }
 ```
 
 
-## Challenges: Intro
+## Challenges
 
 - Create a method called sum_these_numbers which takes two integers as an argument and prints their sum to the screen.
 - Create a method called is_even, which takes a single integer, and which then returns true if the number is even, and false otherwise.
 
 
-### Challenge: Password Checker
+## Challenge: Password Checker
 
 ### User Stories
 
