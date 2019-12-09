@@ -71,7 +71,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 7. [Ruby TDD](./ruby/08rb_testing.md)
 8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
 9. [Challenge: TDD Ruby Task List](./ruby/07rb_tasklist_challenge.md)
-10. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
+10. [Challenge: Text Based Story Game](./ruby/08rb_textbased_story.md)
 
 ## Unit Five: Ruby on Rails Models and Postgres
 
