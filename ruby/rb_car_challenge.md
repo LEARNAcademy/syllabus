@@ -5,11 +5,10 @@
 **Story**:	As a programmer, I can make a car.
 **Hint**:	Create a class called `Car`, and create a variable called `my_car` which contains an object of class `Car`.
 
-**Story**: As a programmer, I can give my car a model on initialization.
-- The model for the car class can be "generic car"
+**Story**: As a programmer, I can give my car a model on initialization. **Hint**: The model for the car class can be "generic car"
 
 **Story**: As a programmer, I can give my car a year on initialization.
-- The year for the car class can be "my_car year"
+**Hint**: The year for the car class can be "my_car year"
 
 **Story**:	As a programmer, I can tell how many wheels a car has. The default is four.
 **Hint**:	`initialize` the car to have four wheels, then create a method to return the number of wheels.
