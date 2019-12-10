@@ -77,6 +77,6 @@ Note the original array is untouched.
 ### Stretch Challenges: FIZZBUZZ
 - Write a program that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
 
-[Go to Ruby Hashes](./rb_hashes.rb)
+[Go to Ruby Hashes](./rb_hashes.md)
 
 [Back to Syllabus](../README.md)

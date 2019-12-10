@@ -117,7 +117,7 @@ On the registration page, the user has to enter a user ID and a password, which 
 
 ### Developer Stories
 
-- Write a function that tests is the User ID and password are the same.
+- Write a function that tests if the User ID and password are the same.
 - Write a function that checks whether the user ID is at least six characters long.
 - Write a function that checks whether the password is at least six characters long.
 - Write a function that checks whether the password contains one of the following: !#$.
