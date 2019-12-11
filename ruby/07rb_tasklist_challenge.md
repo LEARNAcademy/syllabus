@@ -1,3 +1,5 @@
+# Challenge: Tasklist with TDD
+
 ## How To Complete a Story
 
 For each story:
@@ -7,7 +9,7 @@ For each story:
 1. Then run the test(s) and see that they fail.
 1. Then implement the class/method, with comments, so that it passes the tests one at a time and you understand what you have created.
 
-## Starting User Stories
+## User Stories
 
 **Story:**	As a developer, I can create a Task.
 
@@ -48,7 +50,7 @@ For each story:
 
 **Story:**	As a developer, I can create a to do item for an anniversary (a yearly recurring event) .
 **Hint:**   An Anniversary has a month and a day.
-**Hint:**	An Anniversary is a special kind of DueDateTask where the due date changes depending on the current date (override the `due_date` method to return the next annivesary date).
+**Hint:**	An Anniversary is a special kind of DueDateTask where the due date changes depending on the current date (override the `due_date` method to return the next anniversary date).
 
 **Story:**	As a developer, I can print an item for an anniversary with field labels and values.
 

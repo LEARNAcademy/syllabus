@@ -1,11 +1,11 @@
-# TDD Car Challenge
+# Challenge: Car Challenge with TDD
 
 ## Process
 
 Before starting the implementation, copy each story into the editor as a comment, and use the function recipe to guide the implementation of each method.
 
 
-**Keep each class in it's own file with it's own test file.** 
+**Keep each class in it's own file with it's own test file.**
 
 ## Stories
 
