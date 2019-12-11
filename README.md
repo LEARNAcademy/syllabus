@@ -67,7 +67,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
 5. [Challenge: Ruby Car Challenge](./ruby/rb_car_challenge.md)
-1. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
+1. [Challenge: Text Based Story Game](./ruby/08rb_textbased_story.md)
 6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
 7. [Ruby TDD](./ruby/08rb_testing.md)
 8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
