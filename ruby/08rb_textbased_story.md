@@ -1,10 +1,10 @@
+# Challenge: Text-Based Game
 
 ## What is a Text-Based Game?
 
 The whole point of a text-based game is to create a story with mulitple paths and endings. The player must interact with the story to move through the game, the fun is in what decisions they make and how that changes the game. But how do we interact with text? There are many ways you can do so, and the more ways you include, the more interesting the game becomes.
 
 In the start there is a very simple interaction. The player simply responds to questions posed by the game, like, “I remember your face! What is your name?” or maybe something like “Open your eyes!” and then the player replies with "opening eyes", etc.
-
 
 
 ## Ideas for Text-Based Games
@@ -32,7 +32,5 @@ Whichever method you choose is completely up to you. You need to find out for yo
 Check out these links to see what other people have thought up for text-based game adventures:
 
 - <a href="http://playfic.com/explore/popular">Playfic</a>
-
-[Back to Ruby Task List Challenge](./07rb_tasklist_challenge.md)
 
 [Back to Syllabus](../README.md)
