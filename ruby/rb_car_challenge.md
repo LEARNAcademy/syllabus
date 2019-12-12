@@ -59,8 +59,6 @@
 **Story**: As a programmer, I can keep a collection of two of each kind of car model, all from different years.
 **Hint**:	Create two of each vehicles, all from different model years, and put them into an array.
 
-**Story**: As a programmer, I can sort my collection of cars based on model year.
-
 **Story**: As a programmer, I can sort my collection of cars based on model.
 
 **Story**: As a programmer, I can sort my collection of cars based on year.
