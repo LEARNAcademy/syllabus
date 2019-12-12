@@ -144,10 +144,11 @@ We expect car.speed to be a number. We use the Numeric class in our test because
 ...
 ```
 
-The Outcome
+## The Outcome
 The outcome of our labor - the deliverables - are the specification of the software, the rspec file, and an implementation that works according to the specification.
 
-```bash
+car_spec.rb
+```
 require 'rspec'
 require_relative 'car'
 
@@ -186,6 +187,9 @@ describe Car do
   end
 
 end
+```
+car.rb
+```
 class Car
 
   def initialize
@@ -219,6 +223,21 @@ Put the following in the file:
 
 ```
 --color --format documentation
+```
+
+## AWS Set Up
+To set up your environment in AWS you will need to enter a few commands into the terminal.  Setting up your files and running ```rspec car_spec.rb``` in your terminal will operate the same as a local development environment.
+
+### Terminal Commands for AWS RSPEC Set Up
+
+```
+sudo apt install ruby-rspec-core
+gem install rspec
+```
+After running those commands in the terminal of AWS you are able to run your test.
+
+```
+rspec car_spec.rb
 ```
 
 ## Resources
