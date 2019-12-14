@@ -2,7 +2,7 @@
 
 Rails and ActiveRecord have an incredibly rich query syntax to help your code that looks up information in the database readable and maintainable.  We only need to learn a few rules specific to ActiveRecord in order to unlock a powerful tool to interact with the database.
 
-This lecture is going to cover a few methods that we need to complete the ActiveRecord Countries challenge.  There are many, many more.  The best place to go for more information is the Rails [https://guides.rubyonrails.org/active_record_querying.html](ActiveRecord docs) themselves.
+This lecture is going to cover a few methods that we need to complete the ActiveRecord Countries challenge.  There are many, many more.  The best place to go for more information is the Rails [ActiveRecord docs](https://guides.rubyonrails.org/active_record_querying.html) themselves.
 
 ## where
 
@@ -87,4 +87,4 @@ countries = Country
 
 
 ## So much more to discover
-ActiveRecord is a crown jewel of the Rails framework.  There is much more to learn and take advantage of here by practicing and exploring the [https://guides.rubyonrails.org/active_record_querying.html](documentation).
+ActiveRecord is a crown jewel of the Rails framework.  There is much more to learn and take advantage of here by practicing and exploring the [documentaiton](https://guides.rubyonrails.org/active_record_querying.html).
