@@ -85,7 +85,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
 1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
 1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [ActiveRecord Query Syntax](Rails-M/03_rails_active_record_query_syntax.md)
+1. [ActiveRecord Query Syntax](./Rails-M/03_rails_active_record_query_syntax.md)
 1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Views](./Rails-C&V/02rails_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
