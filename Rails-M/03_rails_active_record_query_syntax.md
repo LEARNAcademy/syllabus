@@ -54,7 +54,7 @@ country = Country
 # generates the sql:
 # "SELECT \"country\".* FROM \"country\" ORDER BY surfacearea ASC LIMIT 1"
 
-# note: "surfacearea DESC" would reverse that sort over
+# note: "surfacearea DESC" would reverse that sort order
 ```
 
 ### Pluck
