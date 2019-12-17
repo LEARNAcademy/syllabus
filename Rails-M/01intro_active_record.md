@@ -222,14 +222,33 @@ select * from contacts;
 ```
 
 ### Challenge
-Create, Update, Insert, DELETE with ActiveRecord and '''Rails c'''
+Create, Update, Insert, DELETE with ActiveRecord and ```Rails c```
 1. Create an Rails app named 'rolodex'
+- ```rails new rolodex -d postgresql -T```
+- ```cd rolodex```
+
 1. Run ```rails db:create``` to setup your database
-1. Create a persons model with a first_name, last_name, and phone. All fields should be strings.  You can use migrations to do this
+- ```rails db:create```
+1. Create a Person model with a first_name, last_name, and phone. All fields should be strings.  You can generate a model to do this
+- ```rails generate model Person first_name:string last_name:string phone:string```
+
 1. Run ```rails db:migrate``` from the command line
-1. Open up Rails console
-1. Add five or more family members to the persons table.
-1. How many have the same last_name as you? (Look up the information using ActiveRecord queries)
-1. Add yourself into the persons table.
-1. Update all family members with the same last_name as you,to have the same phone number as you. 
-1. Delete all family members not with your last_name.
+- ```rails db:migrate```
+
+2. Open up Rails console
+- ``` rails console```
+
+3. Add five or more family members to the persons table.
+- ```Person.create(first_name: 'John', last_name: 'Clark', phone: '555-1212')```
+
+4. How many have the same last_name as you? (Look up the information using ActiveRecord queries)
+- ```Person.where(last_name: 'Clark').count```
+
+5. Add yourself into the persons table.
+- ```Person.create(last_name: 'Clark', first_name: 'Matt', phone: '555-0011')```
+
+6. Update all family members with the same last_name as you,to have the same phone number as you.
+- ```Person.where(last_name: 'Clark').map{|person| person.update(phone: '555-0011')}```
+
+7. Delete all family members not with your last_name.
+- ```Person.where.not(last_name: 'Clark').destroy_all```
