@@ -49,17 +49,10 @@ rails s
 
 We should be able to connect to localhost and connect to mydbapp_development in psql.
 
-## Create Table
+## Create Table using Migtations
 
-When we covered SQL, we were able to create tables directly using SQL commands,  for example, if we intended to create a ```contacts``` table, we could open a psql command line and enter:
-```
-create table contacts (id serial PRIMARY KEY, name varchar, email varchar);
-\d contacts
-```
+In a Rails app, we create tables using migrations. Migrations are files that run SQL commands for us.  Rails maintains a history for us of the migrations that have already run, and those that need to be run.  This is how Rails is able to maintain consistency between the database you run locally for development, and the one that runs in production.  You want them to stay the same, and Rails gives you the tools to do that.
 
-In a Rails app, we do the same thing using migrations. Migrations are files that run SQL commands for us.  Rails maintains a history for us of the migrations that have already run, and those that need to be run.  This is how Rails is able to maintain consistency between the database you run locally for development, and the one that runs in production.  You want them to stay the same, and Rails gives you the tools to do that.
-
-#### Create Table Migration
 [Rails Migration Documentation](https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html)
 
 Rails has a generator to create migrations for us.  Inside of our Rails app run:
