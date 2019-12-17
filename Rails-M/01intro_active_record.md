@@ -220,3 +220,16 @@ select * from contacts;
 ----+------+--------------+---------------------
   1 | Joe  | joe@home.com | 1990-05-01 00:00:00
 ```
+
+### Challenge
+Create, Update, Insert, DELETE with ActiveRecord and '''Rails c'''
+1. Create an Rails app named 'rolodex'
+1. Run ```rails db:create``` to setup your database
+1. Create a persons model with a first_name, last_name, and phone. All fields should be strings.  You can use migrations to do this
+1. Run ```rails db:migrate``` from the command line
+1. Open up Rails console
+1. Add five or more family members to the persons table.
+1. How many have the same last_name as you? (Look up the information using ActiveRecord queries)
+1. Add yourself into the persons table.
+1. Update all family members with the same last_name as you,to have the same phone number as you. 
+1. Delete all family members not with your last_name.
