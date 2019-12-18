@@ -51,6 +51,7 @@ React is a powerful Javascript library used to build more complicated web applic
 
 **Additional Topics**:
 
+- [Portfolio Resources](./tools_and_resources/portfolio.md)
 - [Smart and Dumb Components](./react/smart_and_dumb_components.md)
 - [Testing Props with Jest](./react/testing_props_with_jest.md)
 - [React Component Lifecycle](./react/react_component_lifecycle.md)
