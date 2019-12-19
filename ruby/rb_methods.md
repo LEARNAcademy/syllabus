@@ -115,31 +115,14 @@ On the registration page, the user has to enter a user ID and a password, which 
 - User ID cannot contain the following characters: !#$ or spaces
 - Password cannot be the word "password".
 
-### Developer Stories
-
-- Write a function that tests if the User ID and password are the same.
-- Write a function that checks whether the user ID is at least six characters long.
-- Write a function that checks whether the password is at least six characters long.
-- Write a function that checks whether the password contains one of the following: !#$.
-- Write a function that checks whether the user ID contains !#$ or any spaces.
-- Write a function that checks whether the password is the word "password".
-
 ### User Stories: Stretch
 
 - As a user, I can enter my user ID and password and find out if the they are acceptable.
-
-### Developer Stories: Stretch
-
-- Write a method called validate_password that lets a user input both user ID and password.
-- Then use the methods above to evaluate if the user ID and password combination is acceptable or not.
-- Tells user what the result is.
 
 ### User Stories: Super Stretch
 
 - As a user, my password has to contain at least one digit.
 
-### Developer Stories: Super Stretch
-- Write a method that determines if the password contains "0","1", "2" ... "9".
 
 
 [Go to Ruby Loops](./rb_loops.md)

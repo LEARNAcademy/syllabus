@@ -52,3 +52,5 @@ REST architecture achieves statelessness by:
 In an application built in this style the client knows nothing about the status of the server and the server knows nothing about the status of the client. All they know are the messages they exchange.
 
 Now you don’t have to fret too much about implementing this from scratch because the Rails framework is built to implement a RESTful web application. In fact, working in a Rails framework is an excellent way to the learn the ins and outs of building a RESTful web service.
+
+[Back to Syllabus](../README.md)
