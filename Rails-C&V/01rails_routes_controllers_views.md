@@ -8,12 +8,15 @@
 
 ## Overview
 - Understanding the basics of creating a request response cycle in Rails
+- Generating a view for the user
+- Navigating between views
 
 ## Learning Objectives
 - Understanding the anatomy of a Rails route
 - Using generate to create a controller
 - Creating a method in the controller
 - Creating a view with html.erb
+- Linking between views
 
 ## Vocabulary
 - public file
@@ -72,9 +75,9 @@ Output in terminal:
       create      app/assets/stylesheets/main.scss
 ```
 
-Now we can add methods to our controller file that was created in the generate command.
+Now we can add methods to the controller file that was created in the generate command.
 
-The controller, in its `answer` method defines what should happen when it is reached. In this case, it renders some html that reads "This is the answer".
+Adding a method to the controller defines what should happen when it is reached. In this case, it renders some html that reads "This is the answer".
 
 **app/controllers/main_controller.rb**:
 ```ruby
@@ -159,7 +162,7 @@ The generate command creates a directory in the `app/views` named after our cont
 **views/main/question.html.erb**:
 
 ```
-Hello!
+Hello?
 ```
 **app/controllers/main_controller.rb**:
 ```ruby
@@ -171,7 +174,6 @@ class MainController < ApplicationController
   def question
     @our_question = "Why did the chicken cross the road?"
     render "question.html.erb"
-    # we don't actually need the word render as rails will make that connection
   end
 end
 ```
@@ -184,6 +186,24 @@ My joke: <%= @our_question %>!
 
 Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded ruby". By wrapping our Ruby code in those symbols, it will execute on the page and then print the outcome.
 
+#### Navigating Between Views
+
+So far we have created controllers that manages our routes and views through directly manipulating the url. To make this process more dynamic we can add code to our view so the user can click a link to move between pages.
+
+**views/main/question.html.erb**:
+```
+<h3>Wanna hear a joke?</h3>
+<%= link_to "Tell Me!", "/question" %>
+```
+`link_to` inside embedded Ruby tags take a string that will become the hyperlink and the route that will be added to the end of `localhost:3000`
+
+Earlier in our code we created our own landing page so our user won't see the Rails boilerplate code. To navigate back to the landing page we created just pass a "/" as the route.
+
+```
+<h3>Back to Landing Page</h3>
+<%= link_to "Home", "/" %>
+```
+
 ### Review
 
 - The `routes.rb` file defines all the urls your application is prepared to respond to (it's like the address book of your Rails app)
@@ -191,6 +211,7 @@ Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded rub
 - The controller method will ultimately do the work you require and send the appropriate response
 
 ## Challenges
+For each section below, generate a new controller to handle the methods, routes, and views.
 
 #### Joke
 - As a user, I can go to the url 'localhost:3000/question' and be asked a joke.
@@ -202,10 +223,11 @@ Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded rub
 - As a user, I can see a page called 'localhost:3000/team' and see a list of the team members who built this application.
 - As a user, I can see your team page when I visit 'localhost:3000'.
 
-### Stretch Challenges
+#### Links
 
-- As a user, I can visit landing page that has links to all your other pages
-- As a user, I can return to the landing page from within any of the other pages
-
+- As a user, I can visit a landing page that has a link to my joke.
+- As a user, when I am on my joke page, I can click a link that will take me to the page with the answer.
+- As a user, I can visit the landing page and see links to all recommendation lists.
+- As a user, I can return to the landing page from within any of the other pages.
 
 [Back to Syllabus](../README.md)
