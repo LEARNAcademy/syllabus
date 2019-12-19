@@ -102,6 +102,10 @@ Using ActiveRecord in `rails console`:
 * Create a credit card in the database for that owner
 * Create another owner with two other credit cards
 
+Here is a decent schema to start out with:
+
+![CC and Owner schmea](./assets/cc-owner-schema.jpeg)
+
 Check that everything is in the database from `psql`.
 
 ### Stretch Challenge
