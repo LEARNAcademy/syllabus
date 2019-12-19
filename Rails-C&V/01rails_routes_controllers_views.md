@@ -208,7 +208,7 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 
 - The `routes.rb` file defines all the urls your application is prepared to respond to (it's like the address book of your Rails app)
 - Each route will point to a method (street) on a controller (city) file
-- The controller method will ultimately do the work you require and send the appropriate response
+- The controller method will ultimately do the work you require and send the appropriate view response
 
 ## Challenges
 For each section below, generate a new controller to handle the methods, routes, and views.
