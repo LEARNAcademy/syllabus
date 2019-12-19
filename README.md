@@ -67,11 +67,12 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
 5. [Challenge: Ruby Car Challenge](./ruby/rb_car_challenge.md)
-1. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
+1. [Challenge: Text Based Story Game](./ruby/08rb_textbased_story.md)
 6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
 7. [Ruby TDD](./ruby/08rb_testing.md)
 8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
 9. [Challenge: TDD Ruby Task List](./ruby/07rb_tasklist_challenge.md)
+
 
 ## Unit Five: Ruby on Rails Models and Postgres
 
@@ -79,12 +80,12 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
 1. [Postgres Joins](./sql/08rails_sql_joins.md)
-1. [Info: CRUD with Postgres](./sql/00postgres_crud_intro.md)
 1. [Info: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
 1. [Intro to Rails](./Rails-C&V/rails_intro.md)
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
 1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
-1. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
+1. [ActiveRecord Query Syntax](./Rails-M/03_rails_active_record_query_syntax.md)
 1. [Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
 1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)

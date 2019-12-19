@@ -235,7 +235,7 @@ As a user, I can see many color boxes on the page all acting independently of on
 
 As a user, I can add or delete as many color boxes as I want.  All of them act independently of one another.
 
-[Go to React State](./05react_props.md)
+[Go to React Props](./05react_props.md)
 
 
 [Back to React Nested Components](./03react_create_react_app.md)
