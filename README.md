@@ -169,3 +169,4 @@ Using React and Rails to create an asynchronous full stack application with test
 1. [Heroku](./heroku/README.md)
 
 ## Unit Twelve: Internship Preparation
+1. [React Native](./react_native/01_expo.md)
