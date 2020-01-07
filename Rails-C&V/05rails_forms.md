@@ -104,7 +104,7 @@ Inside the embedded Ruby are a series of html tags. There is a label for the inp
 ```html
 <h1>Add a New Post</h1>
 
-<%= form_with url: "/model_name", local: true do %>
+<%= form_with url: "/model_name(s)", local: true do %>
   <label for="title">Title</label>
   <input type="text" name="title">
   <br>
