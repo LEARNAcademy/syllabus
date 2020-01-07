@@ -4,6 +4,8 @@ Data validations can be used in the model `class` to insure incomplete, invalid,
 
 Here are a list of validations that can be implemented.
 
+[Rails Guides](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
+
 #### Length
 
 ```
