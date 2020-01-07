@@ -57,10 +57,10 @@ We need to add a route that will show our user a page where they can enter infor
 Rails.application.routes.draw do
 
   # the get route called 'new' will allow our user to create a new entry
-  get "model_name/new" => "model_name#new"
+  get "model_name(s)/new" => "model_name(s)#new"
 
   # the post route that will 'create' a new item in the database
-  post "model_name" => "model_name#create"
+  post "model_name(s)" => "model_name(s)#create"
 
 end
 ```
