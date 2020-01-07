@@ -81,7 +81,6 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
 1. [Postgres Joins](./sql/08rails_sql_joins.md)
-1. [Info: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
 1. [Intro to Rails](./Rails-C&V/rails_intro.md)
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
 1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
@@ -94,11 +93,13 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 ### Bonus Material
 
+- [RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
 - [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 - [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Full Stack Ruby on Rails
 
+1. [Rails Restful Routes and CRUD Actions](./Rails-C&V/rails_rest_crud.md)
 1. [Rails Forms](./Rails-C&V/05rails_forms.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
 1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
