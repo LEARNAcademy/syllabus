@@ -57,10 +57,10 @@ We need to add a route that will show our user a page where they can enter infor
 Rails.application.routes.draw do
 
   # the get route called 'new' will allow our user to create a new entry
-  get "model_name/new" => "model_name#new"
+  get "model_names/new" => "model_names#new"
 
   # the post route that will 'create' a new item in the database
-  post "model_name" => "model_name#create"
+  post "model_names" => "model_names#create"
 
 end
 ```
@@ -79,12 +79,12 @@ class ModelNameController < ApplicationController
 
   # the create method defines an instance variable that will create a new instance of the model with a title and content provided by the user
   def create
-    @post = ModelName.create(
+    @instance_variable_name = ModelName.create(
       title: params[:title],
       content: params[:content]
     )
     # if the user successfully creates a new post Rails will route to a view of that post, otherwise it will stay on the form
-    if @post.valid?
+    if @instance_variable_name.valid?
       redirect_to @post
     else
       render action: :new
@@ -104,7 +104,7 @@ Inside the embedded Ruby are a series of html tags. There is a label for the inp
 ```html
 <h1>Add a New Post</h1>
 
-<%= form_with url: "/model_name", local: true do %>
+<%= form_with url: "/model_names", local: true do %>
   <label for="title">Title</label>
   <input type="text" name="title">
   <br>
