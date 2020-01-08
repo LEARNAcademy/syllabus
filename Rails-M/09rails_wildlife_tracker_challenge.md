@@ -21,7 +21,7 @@ An animal has the following information: common name, latin name, kingdom (mamma
 
 - **Story**:  As the consumer of the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
 
- - *Hint*:   An animal has_many sightings.
+ - *Hint*:   An animal has_many sightings.  (rails g resource Sighting animal_id:integer ...)
 
 - **Story**:  As the consumer of the API I can update an animal sighting in the database.
 
