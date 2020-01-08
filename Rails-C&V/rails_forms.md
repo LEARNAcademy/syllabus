@@ -57,10 +57,17 @@ We need to add a route that will show our user a page where they can enter infor
 Rails.application.routes.draw do
 
   # the get route called 'new' will allow our user to create a new entry
+<<<<<<< HEAD:Rails-C&V/rails_forms.md
   get "model_names/new" => "model_names#new"
 
   # the post route that will 'create' a new item in the database
   post "model_names" => "model_names#create"
+=======
+  get "model_name(s)/new" => "model_name(s)#new"
+
+  # the post route that will 'create' a new item in the database
+  post "model_name(s)" => "model_name(s)#create"
+>>>>>>> b0277819fd4843aa4f817b07be564df42f840067:Rails-C&V/05rails_forms.md
 
 end
 ```
@@ -104,7 +111,11 @@ Inside the embedded Ruby are a series of html tags. There is a label for the inp
 ```html
 <h1>Add a New Post</h1>
 
+<<<<<<< HEAD:Rails-C&V/rails_forms.md
 <%= form_with url: "/model_names", local: true do %>
+=======
+<%= form_with url: "/model_name(s)", local: true do %>
+>>>>>>> b0277819fd4843aa4f817b07be564df42f840067:Rails-C&V/05rails_forms.md
   <label for="title">Title</label>
   <input type="text" name="title">
   <br>
