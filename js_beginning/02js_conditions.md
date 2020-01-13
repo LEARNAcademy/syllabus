@@ -20,7 +20,7 @@ if(this thing evaluates to true) {
 
 ## If/Else
 
-All conditional must have an `if` statement. If the set condition is true the program will continue to run. If the condition is not true, nothing will happen.
+All conditionals must have an `if` statement. If the set condition is true, the program will continue to run. If the condition is not true, nothing will happen.
 
 ```javascript
 var carOn = true
@@ -29,7 +29,7 @@ if(carOn === true) {
     console.log("The engine is running.");
 }
 ```
-If we want our code to execute something if the `if` condition is not true we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
+If we want our code to execute something if the `if` condition is not true, we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
 
 ```javascript
 var carOn = false
@@ -40,7 +40,7 @@ if(carOn === true) {
     console.log("The engine is off.");
 }
 ```
-If we want more options in our decision structure we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
+If we want more options in our decision structure, we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is that you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
 
 ```javascript
 var carOn = true
