@@ -1,8 +1,8 @@
 # JavaScript Arrays
 
-Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But often, we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an array, which is just a list of things grouped together.
+Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an array, which is just a list of things grouped together.
 
-Here are a few examples of arrays assigned to variables -
+Here are a few examples of arrays assigned to variables: -
 
 ```JavaScript
 var months = ["January", "February", "March", "April", "May"]
@@ -12,9 +12,9 @@ var numbers = [17, 15, 14, 3, 5, 10]
 var combined = [17, "January", 15, "February", 14, "March", 3, "April", 5, "May", 10]
 
 ```
-Notice that strings in an array have quotes but numbers don't need them.
+Notice that strings in an array have quotes, but numbers don't need them.
 
-The anatomy of an array consist of the following characteristics
+The anatomy of an array consists of the following characteristics:
 
 * Opening and closing **square brackets** [ ] with a comma in between each item.
 
@@ -22,14 +22,14 @@ The anatomy of an array consist of the following characteristics
 
 * And a hidden **index** that exists behind each value
 
-Note that the **index starts at 0** and increases by 1 each time.  So the first value we see is actually at index 0.
+Note that the **index starts at 0** and increases by 1 each time.  So, the first value we see is actually at index 0.
 
 ```JavaScript
 var letters = ["l", "e", "a", "r", "n", " ", "S", "D"]
 
 ```
 
-In the above example, the first letter "l" is at index 0 and the letter "r" is at index 3.  So the letter "S"
+In the above example, the first letter "l" is at index 0 and the letter "r" is at index 3.  So, the letter "S"
  is at what index?
 
 
@@ -53,7 +53,7 @@ undefined
 
 #### Changing Elements
 
-We can also reassign values in an array by using the variable, sqaure brackets and the index with an '=' and a new value.
+We can also reassign values in an array by using the variable, square brackets, and the index with an '=' and a new value.
 
 ```javascript
 
@@ -69,7 +69,7 @@ console.log(letters);
 
 ```
 #### Built-in Methods
-Javascript has many array methods that help us to manipulate our arrays.  Let's look at a few examples including:
+JavaScript has many array methods that help us to manipulate our arrays.  Let's look at a few examples:
 
 * **.length** - gives you the length of an array (a read only property, not a function).
 
@@ -137,7 +137,7 @@ var letters2 = ["d", "a", "y"]
 console.log(letters.concat(letters2))
 ["m", "o", "n", "d", "a", "y"]
 ```
-Notice that we get the output that we want but because **.concat()** is an accessor method, we need a way to use our combined array later in our program.  We do this by setting it to a variable.
+Notice that we get the output that we want. But, because **.concat()** is an accessor method, we need a way to use our combined array later in our program.  We do this by setting it to a variable.
 
 ```JavaScript
 var letters = ["m", "o", "n"]
@@ -149,7 +149,7 @@ console.log(combined);
 ["m", "o", "n", "d", "a", "y"]
 ```
 
-In this next example we are setting a variable called 'join' and using the **.join("")** method.  This takes our array and turns it into a string.  You can also see that we need to put quotes in the parentheses of the method.  What happens if you put a space between the quotes?  What if we put a symbol like '$' ?
+In this next example, we are setting a variable called 'joined' and using the **.join("")** method.  This takes our array and turns it into a string.  You can also see that we need to put quotes in the parentheses of the method.  What happens if you put a space between the quotes?  What if we put a symbol like '$' ?
 
 
 
@@ -186,7 +186,7 @@ console.log(arr1.lastIndexOf("y"));
 ```
 ## Array Destructuring
 
-The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
+The destructuring assignment is really just a special way of assigning variables in JavaScript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
 Array destructuring allows us to assign values from an array to variables. Though array destructuring won't be immediately useful to us, it's good to know a little bit about what it affords us.
 
 ```javascript
