@@ -29,7 +29,13 @@ We now would trigger a POST type request to the backend, and rails would handle 
 
 ## Challenge
 
-Create a ```handleNewCat``` function in ```Cats.js``` that only does one thing: ```console.log()``` the information from the NewCat form. Pass the handleNewCat function to the NewCat component as props, and then run the handleNewCat function in NewCat.js when a user clicks the form submit button. You'll also want to clear the form data in NewCat.js  
+* Create a ```handleNewCat``` function in ```Cats.js``` that only does one thing: ```console.log()``` the information from the NewCat form. 
+
+* Pass the handleNewCat function to the NewCat component as props
+
+* then run the handleNewCat function in NewCat.js when a user clicks the form submit button. 
+
+* You'll also want to clear the form data in NewCat.js  
 
 
 #### Where to go from here
