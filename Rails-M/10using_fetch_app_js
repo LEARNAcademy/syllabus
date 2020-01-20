@@ -1,0 +1,47 @@
+import React from 'react';
+import './App.css';
+
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      spiritAnimals: [],
+      error: null,
+    }
+    this.getSpiritAnimals()
+  }
+
+  getSpiritAnimals = () => {
+    fetch("http://<your cloud 9 IP address or localhost>:8080/spirit_animals")
+    .then((resp)=>{
+      return resp.json()
+    })
+    .then((animals)=>{
+      this.setState({ spiritAnimals: animals })
+    })
+    .catch((error)=>{
+      this.setState({ error: `Sorry, there was a problem.  ${error.message}`})
+    })
+  }
+
+  render(){
+    const { error, spiritAnimals } = this.state
+    return (
+      <div className="App">
+        <h1>The Spirit Animals</h1>
+        {error &&
+          <div>
+            <bold>{error}</bold>
+          </div>
+        }
+        <ul>
+        {spiritAnimals.map((animal, index)=>{
+          return(<li key={index}>{animal.name}</li>)
+        })}
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default App;

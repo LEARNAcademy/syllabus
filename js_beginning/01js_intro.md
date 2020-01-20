@@ -27,7 +27,7 @@ Numbers can be integers (positive, negative or zero) as well as fractions of a w
 
 We can perform mathematical calculations with numbers in JavaScript.
 
-```javascript
+```JavaScript
 1           -> 1
 1.0         -> 1
 
@@ -72,7 +72,7 @@ When we use the + on strings it combines the strings in a process called concate
 
 ##### Built-in String Functions/Methods
 
-The JavaScript language has some pre-made functionality called, built-in functions and methods that can be used on the strings.
+The JavaScript language has some pre-made functionality that can be used on the strings called, built-in functions and methods .
 
 ```
 "hello".charAt(1)       -> "e"
@@ -80,9 +80,15 @@ The JavaScript language has some pre-made functionality called, built-in functio
 "hello".includes("he")  -> true
 ```
 
+A function is a JavaScript procedure - a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it (unless it is built-in).
+[More about functions](https://www.w3schools.com/js/js_functions.asp)
+
+JavaScript methods are actions that can be performed on objects. A JavaScript method is a property containing a function definition.
+[More about methods](https://www.w3schools.com/js/js_object_methods.asp)
+
 ### Boolean
 
-Boolean expressions in JavaScript return `true` or `false`. Even though true and false are words they are not strings, they represent the value of true/false.
+Boolean expressions in JavaScript return `true` or `false`. Even though true and false are words, they are not strings. They represent the value of true/false.
 
 ```
 true                 -> true
@@ -154,7 +160,7 @@ Symbol is a new data type created for the JS update ECMAScript 2015. Symbols are
 
 ## Type Coercion
 
-Because JavaScript is a loosely typed language it does a funky thing called type coercion. If we combine data from different types, JS tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
+Because JavaScript is a loosely typed language, it does a funky thing called type coercion. If we combine data from different types, JS tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
 
 ```
 "2" + 2             -> "22"
@@ -199,7 +205,7 @@ b                   -> "world"
 c                   -> "hello world"
 ```
 
-We have gone over most of the building blocks that compose a javascript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
+We have gone over most of the building blocks that compose a JavaScript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
 
 
 ## Challenges
