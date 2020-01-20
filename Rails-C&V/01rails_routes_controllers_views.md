@@ -1,9 +1,9 @@
 # Rails: Controllers, Routes, Views
 
-### Intro:
+## Video: Intro to Rails
 [![YouTube](http://img.youtube.com/vi/WMnFpgYJoCo/0.jpg)](https://www.youtube.com/watch?v=WMnFpgYJoCo)]
 
-### Views:
+## Video: Rails Views
 [![YouTube](http://img.youtube.com/vi/rDRvdTuEopg/0.jpg)](https://www.youtube.com/watch?v=rDRvdTuEopg)]
 
 ## Overview
@@ -15,7 +15,7 @@
 - Understanding the anatomy of a Rails route
 - Using generate to create a controller
 - Creating a method in the controller
-- Creating a view with html.erb
+- Creating a view with` html.erb`
 - Linking between views
 
 ## Vocabulary

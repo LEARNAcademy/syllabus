@@ -1,5 +1,6 @@
 # Rails: Parameters
 
+## Video: Rails Params
 [![YouTube](http://img.youtube.com/vi/FrQJX4UoX4k/0.jpg)](https://www.youtube.com/watch?v=FrQJX4UoX4k)
 ]
 
@@ -122,7 +123,7 @@ Number is: <%= @result_string %>
 ```
 
 `params` is a method returning a `ActionController::Parameters` which is a hash of parameters submitted in the request.
-For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parameters.html" target="_blank" >here</a>
+For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parameters.html" target="blank">here</a>
 
 
 ## Challenges

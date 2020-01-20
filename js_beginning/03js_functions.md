@@ -164,8 +164,8 @@ console.log(greeting("Tom"))
 
 output -> "Tom"
 output -> "Hello Tom"
-
 ```
+
 However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
 
 

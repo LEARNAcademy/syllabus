@@ -85,7 +85,7 @@ if(number === 100) {
 
 ## Resources:
 
-Some further reading and resources here: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">Conditionals from MDN</a>
+Some further reading and resources here: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="blank">Conditionals from MDN</a>
 
 ## Challenges
 

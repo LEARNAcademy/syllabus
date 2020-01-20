@@ -1,6 +1,31 @@
 # Forms in React
 
+## Video: Forms
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
+
+## Overview
+- Creating a form in React that when submitted will update the UI of the page
+
+## Learning Objectives
+- Understanding managing state and state changes in React components
+
+## Vocabulary
+- component
+- 'smart', logic, or impure components
+- 'dumb', display, or pure components
+
+#### Creating a new React app:
+```
+yarn create react-app myApp
+cd myApp
+yarn start
+```
+
+React generates a browser page at:
+`http://localhost:3000`
+or
+`127.0.0.1:3000`
+
 
 Today we're going to take a closer look at managing state in Components, and handling state changes among components as they work together on the page. We've been working with both state and props to manage state in components. Recall that state is for managing internal state of a component, and props are used to communicate state between components. As you work more with react you'll begin to use component state less and less, keeping state contained in a few top level, 'smart', components and relying on props to pass state to other components.
 
@@ -9,12 +34,12 @@ Let's take a closer look at the difference between component state and props by 
 **src/Header.js**
 ```javascript
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Header extends Component {
   render() {
     return (
-      <h1>Hello {this.props.greeting} </h1>
+      <h1>Hello, { this.props.greeting } </h1>
     );
   }
 }
@@ -22,7 +47,7 @@ class Header extends Component {
 export default Header;
 ```
 
-This component is 'Pure', or 'dumb'. It just accepts a greeting in props, and displays it.
+This component is 'pure', or 'dumb'. It just accepts a greeting in props, and displays it.
 
 In App.js, we add a greeting to the components state, and then can user the Header component to display a greeting.
 
@@ -43,7 +68,7 @@ class App extends Component {
     return (
       <div>
         <div>
-          <Header greeting={this.state.greeting} />
+          <Header greeting={ this.state.greeting } />
         </div>
       </div>
     );
@@ -51,7 +76,7 @@ class App extends Component {
 }
 ```
 
-Next, lets add an input element to the App component so we can update the greeting.
+Next, let's add an input element to the App component so we can update the greeting.
 
 **src/App.js**
 ```javascript
@@ -67,17 +92,17 @@ class App extends Component {
   }
 
   updateGreeting = (e) => {
-    this.setState({greeting: e.target.value})
+    this.setState({ greeting: e.target.value })
   }
 
   render() {
     return (
       <div>
         <div>
-          <Header greeting={this.state.greeting} />
+          <Header greeting={ this.state.greeting } />
         </div>
         <div>
-          <input value={this.state.greeting} onChange={this.updateGreeting} />
+          <input value={ this.state.greeting } onChange={ this.updateGreeting } />
         </div>
       </div>
     );
@@ -104,7 +129,7 @@ class GreetingInput extends Component {
 
   render() {
     return (
-      <input value={this.props.greeting} onChange={this.handleChange} />
+      <input value={ this.props.greeting } onChange={ this.handleChange } />
     );
   }
 }
@@ -136,10 +161,10 @@ class App extends Component {
     return (
       <div>
         <div>
-          <Header greeting={this.state.greeting} />
+          <Header greeting={ this.state.greeting } />
         </div>
         <div>
-          <GreetingInput greeting={this.state.greeting} updateGreeting={this.updateGreeting} />
+          <GreetingInput greeting={ this.state.greeting } updateGreeting={ this.updateGreeting } />
         </div>
       </div>
     );
@@ -155,13 +180,13 @@ export default App;
 - What does smart vs dumb mean in relation to component?
 - In our implementation is GreetingInput a pure or impure component?
 
-## Exercise - Robot
+## Challenge: Listening Robot
 
 - Create the following page as a set of React components. When you type in the text box, it should update all 3 result labels
 
 ![Active Listening Robot Challenge](../assets/robot_active_listening.png)
 
-## Exercise 2 - Mad Libs
+## Challenge: Mad Libs
 Create a Madlibs game based on the following wireframe and user stores
 
 ![Mad Libs](../assets/madlibs.png)
@@ -170,4 +195,4 @@ Create a Madlibs game based on the following wireframe and user stores
 * As a user, When I first go to the app, I should not see an incomplete story.
 * As a user, I should be presented with a list of nouns, pronouns, verbs, adjectives, and adjectives to fill in.
 * As a user, when I click the 'Submit' button, I should see a unique story based on the words I've filled in.
-* As a user, when I click the 'Clear' button, I should see the story reset to empty.
+* As a user, when I click the 'Clear' button, I should see the forms reset.
