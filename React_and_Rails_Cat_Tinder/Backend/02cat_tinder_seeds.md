@@ -24,7 +24,7 @@ cat_attributes.each do |attributes|
   Cat.create(attributes)
 end
 ```
-Notice that this is just plain old Ruby code, we can put whatever we like in here, and every time we call ```rake db:seed``` it will be executed.
+Notice that this is just plain old Ruby code, we can put whatever we like in here, and every time we call ```rails db:seed``` it will be executed.
 
 ```
 $ rails db:seed
