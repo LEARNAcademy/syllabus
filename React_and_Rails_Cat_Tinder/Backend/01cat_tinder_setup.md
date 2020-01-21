@@ -39,7 +39,7 @@ $ bundle install
 $ rails generate rspec:install
 ```
 
-This adds 'rspec-rails' to the Gemfile, and instructs Rails to only load rspec when we are in development or test mode, and not production.  The ```rails g rspec:install``` command installs all the necessary files to create and run our tests.
+The echo command above inserts that as a line of code into the Gemfile. It instructs Rails to only load rspec when we are in development or test mode, and not production.  The ```rails g rspec:install``` command installs all the necessary files to create and run our tests.
 
 Next its time to add a Cat resource.  The following command will add the Model, Migration, Controller, and Route for cats.
 
