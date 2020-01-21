@@ -23,7 +23,7 @@ We're going to build an application to help our users' cats socialize and be wel
 By the end of this section, you'll have a Rails app setup as an API with one test route.  You'll be able to receive JSON requests, and respond with data encoded in JSON format.
 
 ## Let's get started
-We're going to use the ```--api``` flag when building a new Rails application to customize our new Rails app to have just what we need.  The app communicates in JSON, instead of HTML/CSS/Javascript, so we don't need to clutter the app up with support for all of those file types.  Open up a command line prompt, and enter the following commands:
+We start by creating a new Rails application, exactly how we're used to doing.
 
 ```
 $ gem install rails
