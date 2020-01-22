@@ -25,7 +25,7 @@
 - Higher test coverage
 - Adding Google analytics
 
-##Things to Think About
+## Things to Think About
 - Step out of your comfort zone:
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
