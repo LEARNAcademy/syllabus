@@ -64,19 +64,25 @@
 ## Timeline
 
 #### Prework:
-- Wk. 8 
-  - Wednesday
-    - Project Discussion
-  - Friday
-    - Decide on Project Idea
-    - Wireframing
-- Wk. 9
-  - Monday
-    - Elevator Pitch
-    - Wireframing
-  - Thursday
-    - Trello, DBSchema
-    - Start coding in the afternoon
+
+### Week 8
+
+#### Wednesday
+- Project Discussion
+
+#### Friday
+- Decide on Project Idea
+- Wireframing
+
+### Week 9
+
+#### Monday
+- Elevator Pitch
+- Wireframing
+
+### Thursday
+- Trello, DBSchema
+- Start coding in the afternoon
     
 ### Week 10
 
@@ -85,14 +91,16 @@
 - Kickoff
 - Mob programming
 
+### Tuesday
+- Deploy
+
 #### Thursday
 - First client Check-in
-- Deploy
 
 #### Friday
 - MVP done and pushed to Github
 
-### Week 2
+### Week 11
 
 #### Monday
 - Client Check-in
