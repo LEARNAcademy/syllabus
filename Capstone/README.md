@@ -15,6 +15,7 @@
 - A well written readme (with link to live application)
 - New github organization (for everyone to share)
 - Slack channel - invite all instructors and admin staff
+- Heroku Account
 - Trello Board
 - Team Name
 
@@ -63,12 +64,21 @@
 ## Timeline
 
 #### Prework:
-- Choose Project,
-- Project planning in morning
-- Wireframing
-- DB schema
-
-### Week 1
+- Wk. 8 
+  - Wednesday
+    - Project Discussion
+  - Friday
+    - Decide on Project Idea
+    - Wireframing
+- Wk. 9
+  - Monday
+    - Elevator Pitch
+    - Wireframing
+  - Thursday
+    - Trello, DBSchema
+    - Start coding in the afternoon
+    
+### Week 10
 
 #### Monday
 - Planning
