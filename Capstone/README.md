@@ -47,11 +47,11 @@
 
 ## End of Week Goals
 - Week 1: MVP - Minimum Viable Product
-  - Client walk through with Matt
+  - Client walk through with Instructor
   - Deployed
 
 - Week 2: Icebox
-  - Client walk through with Matt
+  - Client walk through with Instructor
 
 ## Additional Notes
 - Scrum/Agile presentation
