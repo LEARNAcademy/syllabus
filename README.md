@@ -163,6 +163,7 @@ Using React and Rails to create an asynchronous full stack application with test
 4. [Apartment App](https://github.com/learn-academy-2019-delta/exercise-apartment-app)(Multi Day Exercise)
 
 ## Unit Ten: Capstone Project, Week 1
+1. [Capstone Requirements](./Capstone.md)
 1. [ActiveStorage](./Rails_ActiveStorage/README.md)
 2. [JBuilder](./Rails_JBuilder/README.md)
 3. [has_many_through](./Rails_has_many_through/README.md)
