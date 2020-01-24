@@ -41,9 +41,9 @@ rails g controller Pages
 
 #### config/routes.rb
 ```result
-: Rails.application.routes.draw do
-:   root to: 'pages#root'
-: end
+ Rails.application.routes.draw do
+   root to: 'pages#root'
+ end
 ```
 
 ### 4) Render Our first component
@@ -59,17 +59,17 @@ And we can add some starting text we'll see when its rendered to assure that all
 
 #### app/javascript/components/MainApp.js
 ```result
-: import React from "react"
-: import PropTypes from "prop-types"
-: class MainApp extends React.Component {
-:   render () {
-:     return (
-:       <h1>React MainApp Component</h1>
-:     );
-:   }
-: }
-:
-: export default MainApp
+ import React from "react"
+ import PropTypes from "prop-types"
+ class MainApp extends React.Component {
+   render () {
+     return (
+       <h1>React MainApp Component</h1>
+     );
+   }
+ }
+
+ export default MainApp
 ```
 
 #### Place Component on Page
