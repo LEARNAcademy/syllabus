@@ -65,7 +65,7 @@ Last thing to do is call the createCat() method when from the NewCat component, 
 ```
 // ... the NewCat form ...
 		</form>
-	{this.props.success &&
+	{this.state.success &&
 		<Redirect to="/cats" />
 	}
 </div>
