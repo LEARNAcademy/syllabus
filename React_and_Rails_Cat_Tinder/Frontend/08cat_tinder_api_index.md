@@ -22,7 +22,7 @@ class App extends Component {
       this.getCats() // Call our fetch method when the component loads for the first time
     }
     
-    componentnWillMount(){
+    componentWillMount(){
     	this.getCats();
     }
 
