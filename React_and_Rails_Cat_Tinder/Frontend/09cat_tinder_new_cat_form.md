@@ -85,7 +85,6 @@ class NewCat extends Component {
           age: '',
           enjoys: ''
       },
-      success: false
     }
   }
 
