@@ -7,6 +7,14 @@ class CatsController < ApplicationController
 end
 ```
 
+## Update Application Controller
+We need to update the application controller to allow requests from applications other than this Rails app (the React app runs all on its own).  To do this, we add this line to the ApplicationController:
+
+```ruby
+class ApplicationController < ActionController::Base
+    skip_before_action :verify_authenticity_token # <- Add this line
+end
+```
 Our app needs two routes to start, and index listing all the cats, and a 'create' route so that users can submit new cat information to the application.
 
 ## Routes for Cats
