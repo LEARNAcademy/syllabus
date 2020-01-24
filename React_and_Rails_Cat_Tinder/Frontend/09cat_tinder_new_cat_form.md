@@ -97,7 +97,7 @@ class NewCat extends Component {
   handleSubmit = () => {
     this.props.onSubmit(this.state.form)
     .then(()=>{
-      this.setState({success: true})
+      this.setState({success: true}) //This triggers the redirect
     })
   }
 
