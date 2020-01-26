@@ -43,7 +43,7 @@ React is a powerful Javascript library used to build more complicated web applic
 4. [React State](./react/04react_state.md/)
 5. [React Props](./react/05react_props.md/)
 6. [React State and Props](./react/06react_state_and_props.md/)
-7. [React Forms](./react/forms_in_react.md/)
+7. [React Forms](./react/forms.md/)
 8. [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9. [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10. [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)

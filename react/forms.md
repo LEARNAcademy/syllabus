@@ -1,9 +1,37 @@
 # React Forms and Passing Props
 
+## Previous Lecture
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
 
-Today we're going to take a closer look at managing state in Components, and handling state changes among components as they work together on the page. We've been working with both state and props to manage state in components. Recall that state is for managing internal state of a component, and props are used to communicate state between components. As you work more with react you'll begin to use component state less and less, keeping state contained in a few top level, `logic or smart`, components and relying on props to pass state to other components.
+## Overview
+- Taking a closer look at managing state in components
+- Handling state changes in components
+- Managing the internal state of a component with state and communicating state between components with props
+- Adding a form to a component that will update state
 
+## Learning Objectives
+- Understanding how a component passes information from state to another component as props
+- Adding input fields
+- Creating a method to handle DOM event changes (what the user types)
+- Creating a method to set state with the user input
+
+
+## Vocabulary
+- state
+- props
+- input, value, onChange
+- dumb/display component
+- smart/logic component
+- DOM event, often shortened to `e`
+
+#### Creating a new React app:
+```
+yarn create react-app myApp
+cd myApp
+yarn start
+```
+
+## Step 1
 Let's take a closer look at the difference between component state and props by adding an input element to the page.
 
 We'll create a smart component that holds state and passes information to a child component called `Greeter`.
@@ -37,6 +65,7 @@ class App extends Component{
 export default App
 ```
 
+## Step 2
 Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It accepts a greeting in props, and displays it.
 
 **src/Greeter.js**
@@ -55,9 +84,9 @@ class Greeter extends Component {
 
 export default Greeter
 ```
-
 In the browser we will see: `Hello, Bob!`
 
+## Step 3
 To increase the functionality of our app, let's add a way for our user to enter their name rather than having a hardcoded name in state. To do this we need a text input and a method that will update state as our user types in the input.
 
 **src/App.js**
@@ -75,9 +104,9 @@ class App extends Component{
     }
   }
 
-  handleChange = (e) => {
+  handleChange = (event) => {
     // a method that will take the value from an input and save it in the state key "name"
-    this.setState({ name: e.target.value })
+    this.setState({ name: event.target.value })
   }
 
   render() {
@@ -106,6 +135,7 @@ In our example, the JSX input tag takes two attributes:
 
 The information from the input is passed to the child `Greeter` component.
 
+## Step 4
 We can change the user output by adding a method in the `Greeter` component.
 
 **src/Greeter.js**
@@ -131,7 +161,7 @@ class Greeter extends Component {
 export default Greeter
 ```
 
-## Input as a component
+## Step 5
 
 As our app grows, we'll likely want to move the `<input />` into its own component.
 
@@ -177,6 +207,7 @@ class App extends Component{
 export default App
 ```
 
+## Step 6
 Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
 
 **src/NameInput.js**
@@ -186,9 +217,9 @@ import React, { Component } from 'react'
 class NameInput extends Component {
   // NameInput is a dumb/display component that does not hold state
 
-  handleChange = (e) => {
+  handleChange = (event) => {
     // method that takes the value from the input and calls updateName
-    this.props.updateName(e.target.value)
+    this.props.updateName(event.target.value)
   }
 
   render() {
