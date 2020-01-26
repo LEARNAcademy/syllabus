@@ -43,7 +43,11 @@ React is a powerful Javascript library used to build more complicated web applic
 4. [React State](./react/04react_state.md/)
 5. [React Props](./react/05react_props.md/)
 6. [React State and Props](./react/06react_state_and_props.md/)
+<<<<<<< HEAD
 7. [React Forms](./react/forms.md/)
+=======
+7. [React Forms](./react/forms_in_react.md)
+>>>>>>> master
 8. [Challenge: React Dice Roller](./react/08dice_roller.md/)
 9. [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
 10. [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
@@ -51,6 +55,7 @@ React is a powerful Javascript library used to build more complicated web applic
 
 **Additional Topics**:
 
+- [Portfolio Resources](./tools_and_resources/portfolio.md)
 - [Smart and Dumb Components](./react/smart_and_dumb_components.md)
 - [Testing Props with Jest](./react/testing_props_with_jest.md)
 - [React Component Lifecycle](./react/react_component_lifecycle.md)
@@ -60,15 +65,19 @@ React is a powerful Javascript library used to build more complicated web applic
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
 1. [Ruby Intro](./ruby/01rb_intro.md)
-2. [Ruby Conditions](./ruby/02rb_cond_methods_loops_hashes.md)
+2. [Ruby Conditionals](./ruby/rb_conditionals.md)
+2. [Ruby Methods](./ruby/rb_methods.md)
+2. [Ruby Loops](./ruby/rb_loops.md)
+2. [Ruby Hashes](./ruby/rb_hashes.md)
 3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
 4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
-5. [Objects and Beyond, Car Challenge](./ruby/05_objects_and_beyond.md)
+5. [Challenge: Ruby Car Challenge](./ruby/rb_car_challenge.md)
+1. [Challenge: Text Based Story Game](./ruby/08rb_textbased_story.md)
 6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
 7. [Ruby TDD](./ruby/08rb_testing.md)
 8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
 9. [Challenge: TDD Ruby Task List](./ruby/07rb_tasklist_challenge.md)
-10. [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
+
 
 ## Unit Five: Ruby on Rails Models and Postgres
 
@@ -76,26 +85,26 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
 1. [Postgres Joins](./sql/08rails_sql_joins.md)
-1. [Info: CRUD with Postgres](./sql/00postgres_crud_intro.md)
-1. [Info: RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
 1. [Intro to Rails](./Rails-C&V/rails_intro.md)
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
 1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
-1. [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [Intro to Rails Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-1. [Rails Views](./Rails-C&V/02rails_views.md)
+1. [ActiveRecord Query Syntax](./Rails-M/03_rails_active_record_query_syntax.md)
+1. [Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
 1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
 1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
 ### Bonus Material
 
+- [RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
 - [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
 - [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Full Stack Ruby on Rails
 
-1. [Rails Forms](./Rails-C&V/05rails_forms.md)
+1. [Rails Restful Routes and CRUD Actions](./Rails-C&V/rails_rest_crud.md)
+1. [Rails Forms](./Rails-C&V/rails_forms.md)
 1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
 1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
 1. [Postman](./tools_and_resources/postman.md)
@@ -166,3 +175,4 @@ Using React and Rails to create an asynchronous full stack application with test
 1. [Heroku](./heroku/README.md)
 
 ## Unit Twelve: Internship Preparation
+1. [React Native](./react_native/01_expo.md)

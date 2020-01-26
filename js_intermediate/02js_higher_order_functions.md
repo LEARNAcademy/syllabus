@@ -5,7 +5,7 @@
 
 A higher-order function is simply a function that either takes in another function as an argument or returns another function.
 
-We will focus on two higher order functions for this lesson -
+We will focus on two higher-order functions for this lesson -
 **.map()** and **.filter()** both have three built-in arguments - the value, index, and array.
 
 * .map(value, index, array)
@@ -89,7 +89,7 @@ function only_even(array){
 console.log(only_even(arr1));
 ```
 
-So in the above example we have created a function that takes an array as an argument, loops through the array and returns a new array containing only the even numbers.
+So, in the above example, we have created a function that takes an array as an argument, loops through the array, and returns a new array containing only the even numbers.
 
 #### Using .filter()
 
@@ -107,7 +107,7 @@ console.log(only_even(arr));
 
 ## .map() vs .filter()
 
-When deciding which higher-order function to use remember that .map() will do something to each item in an array and return the same number of items.  Whereas .filter() will return a new, smaller array `filtered` based on your specified criteria.
+When deciding which higher-order function to use, remember that .map() will do something to each item in an array and return the same number of items.  Whereas .filter() will return a new, smaller array `filtered` based on your specified criteria.
 
 ## Challenges
 

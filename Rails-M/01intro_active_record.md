@@ -49,17 +49,10 @@ rails s
 
 We should be able to connect to localhost and connect to mydbapp_development in psql.
 
-## Create Table
+## Create Table using Migtations
 
-When we covered SQL, we were able to create tables directly using SQL commands,  for example, if we intended to create a ```contacts``` table, we could open a psql command line and enter:
-```
-create table contacts (id serial PRIMARY KEY, name varchar, email varchar);
-\d contacts
-```
+In a Rails app, we create tables using migrations. Migrations are files that run SQL commands for us.  Rails maintains a history for us of the migrations that have already run, and those that need to be run.  This is how Rails is able to maintain consistency between the database you run locally for development, and the one that runs in production.  You want them to stay the same, and Rails gives you the tools to do that.
 
-In a Rails app, we do the same thing using migrations. Migrations are files that run SQL commands for us.  Rails maintains a history for us of the migrations that have already run, and those that need to be run.  This is how Rails is able to maintain consistency between the database you run locally for development, and the one that runs in production.  You want them to stay the same, and Rails gives you the tools to do that.
-
-#### Create Table Migration
 [Rails Migration Documentation](https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html)
 
 Rails has a generator to create migrations for us.  Inside of our Rails app run:
@@ -227,3 +220,35 @@ select * from contacts;
 ----+------+--------------+---------------------
   1 | Joe  | joe@home.com | 1990-05-01 00:00:00
 ```
+
+### Challenge
+Create, Update, Insert, DELETE with ActiveRecord and ```Rails c```
+1. Create an Rails app named 'rolodex'
+- ```rails new rolodex -d postgresql -T```
+- ```cd rolodex```
+
+1. Run ```rails db:create``` to setup your database
+- ```rails db:create```
+1. Create a Person model with a first_name, last_name, and phone. All fields should be strings.  You can generate a model to do this
+- ```rails generate model Person first_name:string last_name:string phone:string```
+
+1. Run ```rails db:migrate``` from the command line
+- ```rails db:migrate```
+
+2. Open up Rails console
+- ``` rails console```
+
+3. Add five or more family members to the persons table.
+- ```Person.create(first_name: 'John', last_name: 'Clark', phone: '555-1212')```
+
+4. How many have the same last_name as you? (Look up the information using ActiveRecord queries)
+- ```Person.where(last_name: 'Clark').count```
+
+5. Add yourself into the persons table.
+- ```Person.create(last_name: 'Clark', first_name: 'Matt', phone: '555-0011')```
+
+6. Update all family members with the same last_name as you,to have the same phone number as you.
+- ```Person.where(last_name: 'Clark').map{|person| person.update(phone: '555-0011')}```
+
+7. Delete all family members not with your last_name.
+- ```Person.where.not(last_name: 'Clark').destroy_all```

@@ -256,7 +256,7 @@ class Coffee {
 
 3. Volume of a Cylinder
 
-- Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+- Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr<sup>2</sup>h (r is the radius and h is the height of the cylinder)
 
 - Write the code that creates three unique cylinder objects
 

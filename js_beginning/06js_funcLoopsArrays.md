@@ -11,7 +11,7 @@ Functions can utilize arrays, loops, and conditionals in combination to procure 
 ```JavaScript
 var myArr1 = [1, 5, 7, 3, 10]
 
-function mult5(array){
+const mult5 = (array) => {
   let newArr = []
   for(let i=0; i<array.length; i++){
     newArr.push(array[i] * 5)
@@ -31,7 +31,7 @@ In the following example, we can add a nested conditional statement to return on
 ```JavaScript
 var myArr2 = [1, 2, 7, 4, 10, 8, 9]
 
-function onlyEven(array){
+const onlyEven = (array) => {
   let newArr = []
   for(let i=0; i<array.length; i++){
     if(array[i] % 2 === 0){

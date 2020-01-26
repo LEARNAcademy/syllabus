@@ -9,10 +9,11 @@ Be sure and read over the [instructions](./additional-topics/07rails_cloud9_acce
 ## The API Stories
 
 
+- **Story**:  As the consumer of the API I can list all animals in a database.
+  -- Hint: make a few animals using Rails Console
+  
 - **Story**:  As the consumer of the API I can create an animal and save it in the database.
 An animal has the following information: common name, latin name, kingdom (mammal, insect, etc.).
-
-- **Story**:  As the consumer of the API I can list all animals in a database.
 
 - **Story**:  As the consumer of the API I can update an animal in the database.
 
@@ -20,7 +21,7 @@ An animal has the following information: common name, latin name, kingdom (mamma
 
 - **Story**:  As the consumer of the API I can create a sighting of an animal with date (use the datetime datatype), latitude and longitude.
 
- - *Hint*:   An animal has_many sightings.
+ - *Hint*:   An animal has_many sightings.  (rails g resource Sighting animal_id:integer ...)
 
 - **Story**:  As the consumer of the API I can update an animal sighting in the database.
 

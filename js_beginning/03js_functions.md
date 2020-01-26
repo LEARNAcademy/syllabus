@@ -30,7 +30,7 @@ Great! We have a function. But this function has not yet been used in our progra
 ```javascript
 greeting()
 ```
- Notice that we used the same name that we gave our variable that points to the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
+Notice that we used the same name that we gave our variable that points to the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
 
 In order to see the output of our function, let's wrap our function call in a **console.log** like this..
 
@@ -73,11 +73,11 @@ output -->> Hello Carol
 
 ## Other Syntax for functions
 
-There are lots of ways to write functions. The primary one we use today, and the one shown above is called an arrow (or fat arrow) function using `ES6 syntax`. Below is a version you'll see in older Javascript. It accomplishes primarily the same thing, with a few differences in scope. ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to.
+There are lots of ways to write functions. The primary one we use today, and the one shown above is called an arrow (or fat arrow) function using `ES6 syntax`. Below is a version you'll see in older JavaScript. It accomplishes primarily the same thing, with a few differences in scope. ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to. For reference: [https://www.w3schools.com/js/js_es6.asp](https://www.w3schools.com/js/js_es6.asp)
 
 ### Old-School function declarations
 
-The word `function` is a keyword in Javascript, and we can use it to declare a function.
+The word `function` is a keyword in JavaScript, and we can use it to declare a function.
 
 ```JavaScript
 function greeting(name){
@@ -90,29 +90,29 @@ output >> Hello Sally
 ```
 
 
-## Pseudo Code
+## Pseudocode
 
 There are two things that are hard about writing functions. The first thing is deciding exactly what your function needs to do, and the second hard thing is figuring out the code that will make that happen.
 
-Since both of those things are hard in the first place, it is really confusing to try and do both at once. So, it is common practice to write what we call pseudo code, which isn't actually code at all, just normal words.
+Since both of those things are hard in the first place, it is really confusing to try and do both at once. So, it is common practice to write what we call pseudocode, which isn't actually code at all, just normal words.
 
-Writing pseudo code is a really good mental habit to get into, because it breaks up the hard parts about writing functions into two separate stages. It goes like this:
+Writing pseudocode is a really good mental habit to get into, because it breaks up the hard parts about writing functions into two separate stages. It goes like this:
 
 
 1. Write out all the logical steps of what you need to do -- no code allowed
 
 2. Turn those logical steps into actual code
 
-This is great, because it means that while you are thinking up your logic, you aren't distracted by how to write it in code. And conversely, when you are writing code, you aren't also trying to think of what comes next.
+This is great, because it means that while you are thinking up your logic, you're not distracted by how to write it in code. And conversely, when you are writing code, you're not also trying to think of what comes next.
 
 
 
-Let's look at an example using pseudo code and adding a conditional inside the function.
+Let's look at an example using pseudocode and adding a conditional inside the function.
 
 Exercise: Write a function called tallEnough that takes an argument of a person's height as an argument and tells whether or not the person is tall enough to ride the rollercoaster.
 
-Here's what the pseudo code might look like:
-```Javascript
+Here's what the pseudocode might look like:
+```JavaScript
 //create a function called tallEnough
 
 //takes in 1 number as an arguments
@@ -121,7 +121,7 @@ Here's what the pseudo code might look like:
 
 //otherwise return 'allowed to ride rollercoaster'
 ```
-Now let's build the actual code around the pseudo code.
+Now let's build the actual code around the pseudocode.
 
 ```JavaScript
 //create a function called tall_enough
@@ -164,14 +164,14 @@ console.log(greeting("Tom"))
 
 output -> "Tom"
 output -> "Hello Tom"
-
 ```
+
 However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
 
 
 ## Challenges
 
-**DON'T FORGET TO PSEUDO CODE**
+**DON'T FORGET TO PSEUDOCODE**
 
 1. Write a function named marco that returns "polo".
 
@@ -216,8 +216,8 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 ### Practice functions with [Edabit](https://edabit.com/challenges/javascript)
 
-[Go to next lesson: Javascript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
+[Go to next lesson: JavaScript Functions, Loops, and Arrays](./06js_funcLoopsArrays.md)
 
-[Back to Javascript Conditionals](./02js_conditions.md)
+[Back to JavaScript Conditionals](./02js_conditions.md)
 
 [Back to Syllabus](../README.md)

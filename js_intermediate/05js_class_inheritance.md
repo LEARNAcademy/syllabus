@@ -178,7 +178,7 @@ The class StockEngine has access to the information from the parent class of Eng
 
 4. **Story**:	As a programmer, I can make a Tesla car.
 - class Tesla inherits from class Car
-- create an object called myTesla which is a instance of class Tesla
+- Create an object called myTesla which is a instance of class Tesla
 
 5. **Story**: As a programmer, I can give my Tesla a model on initialization.
 - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class

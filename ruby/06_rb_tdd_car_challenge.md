@@ -1,11 +1,11 @@
-# TDD Car Challenge
+# Challenge: Car Challenge with TDD
 
 ## Process
 
 Before starting the implementation, copy each story into the editor as a comment, and use the function recipe to guide the implementation of each method.
 
 
-**Keep each class in it's own file with it's own test file.** 
+**Keep each class in it's own file with it's own test file.**
 
 ## Stories
 
@@ -26,9 +26,9 @@ Before starting the implementation, copy each story into the editor as a comment
 
 **Story**:	As a programmer, I can honk the horn of a Toyota car which makes the sound "whoop".
 
-**Story**:	As a programmer, I can make a Tata car.
+**Story**:	As a programmer, I can make a Honda car.
 
-**Story**:	As a programmer, I can honk the horn of a Tata car - "beep".
+**Story**:	As a programmer, I can honk the horn of a Honda car - "beep".
 
 **Story**:	As a programmer, I can make a Tesla car.
 
@@ -50,9 +50,9 @@ Before starting the implementation, copy each story into the editor as a comment
 
 **Story**:	As a programmer, I can slow my Teslas down by 7 km/h per braking.
 
-**Story**:	As a programmer, I can speed my Tatas up by 2 km/h per acceleration.
+**Story**:	As a programmer, I can speed my Hondas up by 2 km/h per acceleration.
 
-**Story**:	As a programmer, I can slow my Tatas down by 1.25 km/h per braking.
+**Story**:	As a programmer, I can slow my Hondas down by 1.25 km/h per braking.
 
 **Story**:	As a programmer, I can speed my Toyotas up by 7 km/h per acceleration.
 

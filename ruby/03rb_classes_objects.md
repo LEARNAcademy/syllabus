@@ -47,7 +47,7 @@ a_person.get_given_name
 ```
 
 ### Instance Variables
-The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @given_name belongs to class Person. Each "instance" of the class Person has it's own set of instance variables independent of other Person objects.
+The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @given_name belongs to class Person. Each "instance" of the class `Person` has it's own set of instance variables independent of other `Person` objects.
 
 You can't just access an instance variable from outside of an object, as you can with variables in JavaScript.
 
@@ -185,7 +185,5 @@ Class.class
 Classes are made up of Nouns (data) and Verbs (methods). Take a look at your Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @wheels and @model_year -- are what make your object what it is: the class Vehicle (also a noun). The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
 
 [Go to Ruby Inheritance](./04rb_inheritance.md)
-
-[Back to Ruby Conditions, Methods, Loops, and Hashes](./02rb_cond_methods_loops_hashes.md)
 
 [Back to Syllabus](../README.md)
