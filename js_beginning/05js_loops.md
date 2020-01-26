@@ -3,7 +3,9 @@
 [![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=4PcRcvgIXNk)
 
 
-Javascript has many types of loops including...
+The for statement creates a loop that is executed as long as a condition is true. The loop will continue to run as long as the condition is true. It will only stop when the condition becomes false. 
+
+JavaScript has many types of loops including:
 
 * [For](https://www.w3schools.com/js/js_loop_for.asp)
 * [For/In](https://www.w3schools.com/js/js_loop_for.asp)
@@ -12,11 +14,11 @@ Javascript has many types of loops including...
 * [ForEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 * and More
 
-For now we are going to focus on breaking down the `for loop`.
+For now, we are going to focus on breaking down the `for loop`.
 
 #### For Loop
 
-This is the most common type of loop you will see used in Javascript. It gives you the most control over how you are iterating over items by letting you define:
+This is the most common type of loop you will see used in JavaScript. It gives you the most control over how you are iterating over items by letting you define:
 
 1. Where the count (index) starts
 2. How many iterations we want the loop to go through
@@ -51,7 +53,7 @@ for(let i=0; i<arr.length; i++){
 }
 ```
 
-So what's going on in the above example?  During each loop the array[i] is being replaced with..
+So, what's going on in the above example?  During each loop the array[i] is being replaced with..
 
 arr[0] which becomes 5 * 3
 
@@ -76,18 +78,18 @@ for(let i=0; i<arr.length; i++){
 }
 ```
 
-Notice the indentation in the above example. This helps us to see if we have closed all of our open curly brackets.  We can see that the first closing curly closes our if/else statement and the last closing curly closes our for loop.
+Notice the indentation in the above example. This helps us to see if we have closed all of our open curly brackets.  We can see that the first closing curly closes our if/else statement, and the last closing curly closes our for loop.
 
 
 ## Scope - var/let/const
 
 **Scope** refers to where a variable is accessible or visible. The two main types of scope are:
 
-- **Global** - variables that can been seen and used anywhere in the program.
+- **Global** - variables that can be seen and used anywhere in the program.
 
 - **Local** - also know as lexical or block scope. Variables in local scope can only be used within the block/function/loop that it is assigned.
 
-Notice that in our loops we use `let` to assign `i` or `index` to a starting value. In the most recent updates to Javascript (ES6) `let` and `const` were added to deal with scoping issues.  Prior to this, `var` was the only way to assign variables which were always global and sometimes caused problems. Now we have:
+Notice that in our loops we use `let` to assign `i` or `index` to a starting value. In the most recent updates to JavaScript (ES6) `let` and `const` were added to deal with scoping issues.  Prior to this, `var` was the only way to assign variables which were always global and sometimes caused problems. Now we have:
 
 - **var** - puts the variable in global scope and may or may not be reassigned.  
 
