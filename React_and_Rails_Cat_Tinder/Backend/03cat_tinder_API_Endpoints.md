@@ -1,6 +1,6 @@
 # API Endpoints
 
-In the previous steps we generated a controller for Cats, but its pretty bare bones currently.  In fact, it doesn't actually have any routes at all!  Never fear, we're going to take care of that right now.  
+In the previous steps we generated a controller for Cats, but it's pretty bare bones currently.  In fact, it doesn't actually have any routes at all!  Never fear, we're going to take care of that right now.  
 
 ```ruby
 class CatsController < ApplicationController
@@ -127,7 +127,7 @@ And once again, this fails because we have no code in the controller to make it 
 And we're Green!  This isn't quite production ready code, but its enough to get our first test of the endpoint to pass, which is what we're after, so we're happy.  
 
 ## Summary
-In this section, we've built out our first API endpoint to handle requests for listing and creating cats.  In the next section, we're going to deal with validating that the information passed to the ```create``` route is what we expect and handle situations when its not.
+In this section, we've built out our first API endpoint to handle requests for listing and creating cats.  In the next section, we're going to deal with validating that the information passed to the ```create``` route is what we expect and handle situations when it's not.
 
 #### Where to go from here
 
