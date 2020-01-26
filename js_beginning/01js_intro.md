@@ -242,6 +242,6 @@ Open up a JS file in atom, run your program in terminal with node.
 - Find the length of the string
 - Use the method charAt() to find what letter is at the 3rd index
 
-[Go to next lesson: Javascript Conditionals](./02js_conditions.md)
+[Go to next lesson: JavaScript Conditionals](./02js_conditions.md)
 
 [Back to Syllabus](../README.md)
