@@ -112,6 +112,6 @@ Here are your stories:
 
 [Go to next lesson: Create React App](./create-react-app.md)
 
-[Back to Intro to React](./intro.md)
+[Back to React Intro](./intro.md)
 
 [Back to Syllabus](../README.md)

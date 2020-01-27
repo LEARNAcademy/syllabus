@@ -250,6 +250,6 @@ Remember that floats are numbers with a decimal point whereas integers have no f
 
 [Go to next lesson: Ruby Conditionals](./conditionals.md)
 
-[Back to React State and Props](../react/state-and-props.md)
+[Back to React Forms and Functional Props](../react/forms.md)
 
 [Back to Syllabus](../README.md)

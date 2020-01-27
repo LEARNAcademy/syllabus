@@ -262,6 +262,6 @@ class Coffee {
 
 [Go to next lesson: JavaScript Inheritance](./class-inheritance.md)
 
-[Back to JavaScript Classes](./classes.md)
+[Back to JavaScript Objects](./objects.md)
 
 [Back to Syllabus](../README.md)

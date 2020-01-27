@@ -78,7 +78,7 @@ Here we start to see the power of these mechanisms working together. We are now 
 Let's now take a look at how to use props in tandem with state.
 
 
-[Go to next lesson: State and Props](./state-and-props.md)
+[Go to next lesson: React State and Props](./state-and-props.md)
 
 [Back to React State](./state.md)
 

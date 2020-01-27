@@ -98,7 +98,7 @@ Using a well thought out state tree and nested component structure, construct an
 
 ![dice game](../assets/dice-game.png)
 
-[Go to next lesson: Forms and Functional Props](./forms.md)
+[Go to next lesson: React Forms and Functional Props](./forms.md)
 
 [Back to React Props](./props.md)
 

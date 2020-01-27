@@ -148,8 +148,8 @@ Use .map() or .filter() to complete the following exercises:
 
   Expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
 
-[Go to next lesson: Javascript Testing with Jest](./jest.md)
+[Go to next lesson: JavaScript Testing with Jest](./jest.md)
 
-[Back to Higher-Order Functions](./higher-order-functions.md)
+[Back to JavaScript Functions, Loops, and Arrays](./functions-loops-arrays.md)
 
 [Back to Syllabus](../README.md)

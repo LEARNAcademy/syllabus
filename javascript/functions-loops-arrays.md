@@ -183,7 +183,7 @@ console.log(onlyEven(myArr2))
 - As a user, if I guess the number correctly I am notified that I won
 - STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
 
-[Go to next lesson: Higher Order Functions](./higher-order-functions.md)
+[Go to next lesson: JavaScript Higher-Order Functions](./higher-order-functions.md)
 
 [Back to Javascript Functions](./functions.md)
 
