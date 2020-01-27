@@ -86,6 +86,8 @@ One of the easiest ways to do this in Rails is to use the 'bootstrap' Rubygem.  
 bundle add bootstrap
 ```
 
+Restart the Rails server if it is running.
+
 #### 6) Add bootstrap to our Stylesheet
 
 We need to add the Bootstrap css rules to our main application stylesheet.  We're using the bootstrap gem, so we need to change `application.css` to be named `application.scss`.  This will cause the stylesheet to be loaded through the SASS engine, and alow us to import Bootstrap via a SASS ```@import``` statement.
