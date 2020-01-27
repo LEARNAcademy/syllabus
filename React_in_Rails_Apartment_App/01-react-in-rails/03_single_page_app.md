@@ -16,21 +16,13 @@ We'll re-visit:
 ```bash
 rails new single_page_app
 cd single_page_app
-bundle add webpacker react-rails
+bundle add react-rails
 bundle install
 rails webpacker:install
 rails webpacker:install:react
 rails generate react:install
 yarn install
 ```
-
-### 2) Add the webpack to the layout
-
-#### app/views/layouts/application.html.erb
-```result
-<%= javascript_pack_tag 'application' %>
-```
-
 
 ### 3) Add root route and view to Rails App
 
@@ -75,8 +67,8 @@ And we can add some starting text we'll see when its rendered to assure that all
 #### Place Component on Page
 #### app/views/pages/root.html.erb
 ```result
-: <h1>Single Page App Example</h1>
-: <%= react_component('MainApp') %>
+ <h1>Single Page App Example</h1>
+ <%= react_component('MainApp') %>
 ```
 
 ![single page app with component](../assets/single-page-app-with-component.png)
@@ -103,13 +95,13 @@ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scs
 ```
 
 #### app/assets/stylesheets/application.scss
-```result
-: /*
-:  *= require_tree .
-:  *= require_self
-:  */
-:
-:  @import 'bootstrap';
+```css
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'bootstrap';
 ```
 
 ** Note, there are many ways to add bootstrap to a Rails app, all of which will work equally well with our single page React application.
@@ -124,25 +116,25 @@ Once that is done, we can use Reactstrap components on our page.  Let's try it o
 
 #### app/javascript/components/MainApp.js
 ```result
-: import React from "react"
-: import PropTypes from "prop-types"
-: import { Nav, NavItem, NavLink } from 'reactstrap'
-: class MainApp extends React.Component {
-:   render () {
-:     return (
-:       <Nav>
-:         <NavItem>
-:           <NavLink href="#">Link</NavLink>
-:         </NavItem>
-:         <NavItem>
-:           <NavLink disabled href="#">Disabled Link</NavLink>
-:         </NavItem>
-:       </Nav>
-:     );
-:   }
-: }
-:
-: export default MainApp
+ import React from "react"
+ import PropTypes from "prop-types"
+ import { Nav, NavItem, NavLink } from 'reactstrap'
+ class MainApp extends React.Component {
+   render () {
+     return (
+       <Nav>
+         <NavItem>
+           <NavLink href="#">Link</NavLink>
+         </NavItem>
+         <NavItem>
+           <NavLink disabled href="#">Disabled Link</NavLink>
+         </NavItem>
+       </Nav>
+     );
+   }
+ }
+
+ export default MainApp
 ```
 
 ![reactstrap nav](../assets/react-strap-nav.png)
@@ -171,17 +163,17 @@ We need some pages in our React single page app  to route too.  For this example
 #### app/javascript/components/pages/Home.js
 
 ```result
-: import React, { Component } from 'react'
-:
-: class Home extends Component {
-:   render() {
-:     return(
-:       <h1>Home Page</h1>
-:     )
-:   }
-: }
-:
-: export default Home
+ import React, { Component } from 'react'
+
+ class Home extends Component {
+   render() {
+     return(
+       <h1>Home Page</h1>
+     )
+   }
+ }
+
+ export default Home
 ```
 
 The other two are mostly the same.
@@ -194,10 +186,10 @@ The Rails Router has a convenient feature that we can use to achieve this separa
 
 #### config/routes.rb
 ```result
-:      1	Rails.application.routes.draw do
-:      2	  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
-:      3	  root to: 'pages#root'
-:      4	end
+      1	Rails.application.routes.draw do
+      2	  get '*path', to: 'pages#root', constraints: ->(request){ request.format.html? }
+      3	  root to: 'pages#root'
+      4	end
 ```
 
 * Line 2 - Notice the "constraints" section on line 2.  This states that all html traffic goes to "pages#root", our React app.
@@ -209,42 +201,42 @@ Pretty cool!
 
 #### app/javascript/components/MainApp.js
 ```result
-:      1	import React from "react"
-:      2	import PropTypes from "prop-types"
-:      3	import { Nav, NavItem, NavLink} from 'reactstrap'
-:      4	import { BrowserRouter as  Router, Route, Link } from 'react-router-dom'
-:      5
-:      6	// Pages
-:      7	import Home from './pages/Home'
-:      8	import AboutUs from './pages/AboutUs'
-:      9	import LearnMore from './pages/LearnMore'
-:     10
-:     11	class MainApp extends React.Component {
-:     12	  render () {
-:     13	    return (
-:     14	      <Router>
-:     15	        <div>
-:     16	          <Nav>
-:     17	            <NavItem>
-:     18	              <NavLink to="/" tag={Link}>Home</NavLink>
-:     19	            </NavItem>
-:     20	            <NavItem>
-:     21	              <NavLink to="/about" tag={Link}>About Us</NavLink>
-:     22	            </NavItem>
-:     23	            <NavItem>
-:     24	              <NavLink to="/more" tag={Link}>Learn More</NavLink>
-:     25	            </NavItem>
-:     26	          </Nav>
-:     27	          <Route path="/" exact component={Home} />
-:     28	          <Route path="/about" component={AboutUs} />
-:     29	          <Route path="/more" component={LearnMore} />
-:     30	        </div>
-:     31	      </Router>
-:     32	    );
-:     33	  }
-:     34	}
-:     35
-:     36	export default MainApp
+      1	import React from "react"
+      2	import PropTypes from "prop-types"
+      3	import { Nav, NavItem, NavLink} from 'reactstrap'
+      4	import { BrowserRouter as  Router, Route, Link } from 'react-router-dom'
+      5
+      6	// Pages
+      7	import Home from './pages/Home'
+      8	import AboutUs from './pages/AboutUs'
+      9	import LearnMore from './pages/LearnMore'
+     10
+     11	class MainApp extends React.Component {
+     12	  render () {
+     13	    return (
+     14	      <Router>
+     15	        <div>
+     16	          <Nav>
+     17	            <NavItem>
+     18	              <NavLink to="/" tag={Link}>Home</NavLink>
+     19	            </NavItem>
+     20	            <NavItem>
+     21	              <NavLink to="/about" tag={Link}>About Us</NavLink>
+     22	            </NavItem>
+     23	            <NavItem>
+     24	              <NavLink to="/more" tag={Link}>Learn More</NavLink>
+     25	            </NavItem>
+     26	          </Nav>
+     27	          <Route path="/" exact component={Home} />
+     28	          <Route path="/about" component={AboutUs} />
+     29	          <Route path="/more" component={LearnMore} />
+     30	        </div>
+     31	      </Router>
+     32	    );
+     33	  }
+     34	}
+     35
+     36	export default MainApp
 ```
 
 ## 13) Re-Load the page.
