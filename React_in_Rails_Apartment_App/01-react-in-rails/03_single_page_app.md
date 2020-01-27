@@ -7,7 +7,7 @@ We've seen how to create React components and use them on a webpage in a Rails a
 We'll re-visit:
 1. component file organization
 2. react-router
-3. react-bootstrap
+3. reactstrap
 
 ## Setting up the application
 
@@ -41,9 +41,9 @@ rails g controller Pages
 
 #### config/routes.rb
 ```result
-: Rails.application.routes.draw do
-:   root to: 'pages#root'
-: end
+ Rails.application.routes.draw do
+   root to: 'pages#root'
+ end
 ```
 
 ### 4) Render Our first component
@@ -59,17 +59,17 @@ And we can add some starting text we'll see when its rendered to assure that all
 
 #### app/javascript/components/MainApp.js
 ```result
-: import React from "react"
-: import PropTypes from "prop-types"
-: class MainApp extends React.Component {
-:   render () {
-:     return (
-:       <h1>React MainApp Component</h1>
-:     );
-:   }
-: }
-:
-: export default MainApp
+ import React from "react"
+ import PropTypes from "prop-types"
+ class MainApp extends React.Component {
+   render () {
+     return (
+       <h1>React MainApp Component</h1>
+     );
+   }
+ }
+
+ export default MainApp
 ```
 
 #### Place Component on Page
@@ -85,10 +85,10 @@ And we can add some starting text we'll see when its rendered to assure that all
 In previous examples of using Bootstrap with React, we've used the excellent [React Bootstrap](https://react-bootstrap.github.io/) module.  For this example, we're going to use the equally excellent [Reactstrap](https://reactstrap.github.io/) package.  The do the same things, and eventually one may 'win' out over the other, but as of 2019, either is a great choice to use in your applications.  Its the same process for each when including them into a Rails backed project.
 
 ### 5) Add Bootstrap to Rails.
-Reactstrap (and react-bootstrap) does not include Bootstrap's core CSS.  This means that we need to add those CSS files the the project ourselves.
+Reactstrap (and react-bootstrap) does not include Bootstrap's core CSS.  This means that we need to add those CSS files the the project ourselves.  This process is a little different than a stand alone react application because Rails serves CSS files in its own way.
 
 #### There is a Gem for Bootstrap
-One of the easiest ways to do this is to use the 'bootstrap' Rubygem.  We can add it to our project like so:
+One of the easiest ways to do this in Rails is to use the 'bootstrap' Rubygem.  We can add it to our project like so:
 
 ```bash
 bundle add bootstrap

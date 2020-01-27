@@ -15,6 +15,7 @@
 - A well written readme (with link to live application)
 - New github organization (for everyone to share)
 - Slack channel - invite all instructors and admin staff
+- Heroku Account
 - Trello Board
 - Team Name
 
@@ -24,7 +25,7 @@
 - Higher test coverage
 - Adding Google analytics
 
-##Things to Think About
+## Things to Think About
 - Step out of your comfort zone:
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
@@ -46,11 +47,11 @@
 
 ## End of Week Goals
 - Week 1: MVP - Minimum Viable Product
-  - Client walk through with Matt
+  - Client walk through with Instructor
   - Deployed
 
 - Week 2: Icebox
-  - Client walk through with Matt
+  - Client walk through with Instructor
 
 ## Additional Notes
 - Scrum/Agile presentation
@@ -63,26 +64,43 @@
 ## Timeline
 
 #### Prework:
-- Choose Project,
-- Project planning in morning
-- Wireframing
-- DB schema
 
-### Week 1
+### Week 8
+
+#### Wednesday
+- Project Discussion
+
+#### Friday
+- Decide on Project Idea
+- Wireframing
+
+### Week 9
+
+#### Monday
+- Elevator Pitch
+- Wireframing
+
+### Thursday
+- Trello, DBSchema
+- Start coding in the afternoon
+    
+### Week 10
 
 #### Monday
 - Planning
 - Kickoff
 - Mob programming
 
+### Tuesday
+- Deploy
+
 #### Thursday
 - First client Check-in
-- Deploy
 
 #### Friday
 - MVP done and pushed to Github
 
-### Week 2
+### Week 11
 
 #### Monday
 - Client Check-in
