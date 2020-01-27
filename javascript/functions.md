@@ -213,6 +213,6 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 [Go to next lesson: JavaScript Functions, Loops, and Arrays](./functions-loops-arrays.md)
 
-[Back to JavaScript Conditionals](./conditionals.md)
+[Back to JavaScript Loops](./loops.md)
 
 [Back to Syllabus](../README.md)
