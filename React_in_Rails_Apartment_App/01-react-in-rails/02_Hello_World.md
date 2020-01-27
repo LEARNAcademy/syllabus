@@ -23,11 +23,6 @@ $ cd hello_world
 
 2) Add the React Gems
 
-For Rails 5.3 and below:
-```bash
-$ bundler add webpacker
-```
-
 ```bash
  
 $ bundler add react-rails
@@ -52,21 +47,19 @@ $ rails g react:component HelloWorld
 ```
 
 6) Update the new Component
-```bash
-cat app/javascript/components/HelloWorld.js
-```
-```result
-: import React from "react"
-: import PropTypes from "prop-types"
-: class HelloWorld extends React.Component {
-:   render () {
-:     return (
-:       <h1>Hello World</h1>
-:     );
-:   }
-: }
-:
-: export default HelloWorld
+```app/javascript/components/HelloWorld.js```
+```ruby
+ import React from "react"
+ import PropTypes from "prop-types"
+ class HelloWorld extends React.Component {
+   render () {
+     return (
+       <h1>Hello World</h1>
+     );
+   }
+ }
+
+ export default HelloWorld
 ```
 
 7) Create a Homepage and add the Route to Rails
