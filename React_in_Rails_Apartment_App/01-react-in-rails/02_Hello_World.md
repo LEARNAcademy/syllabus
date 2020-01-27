@@ -25,7 +25,7 @@ $ cd hello_world
 
 ```bash
  
-$ bundler add react-rails
+$ bundle add react-rails
 $ bundle install
 ```
 
