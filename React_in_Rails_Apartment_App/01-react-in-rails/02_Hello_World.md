@@ -36,11 +36,6 @@ $ rails webpacker:install:react
 $ rails generate react:install
 ```
 
-4) Add Webpack to the Rails Application Layout if it is not already there (Rails 5.3 and below) (/app/views/layouts/application.html.erb)
-```html
-<%= javascript_pack_tag 'application' %>
-```
-
 5) Generate a new React component
 ```bash
 $ rails g react:component HelloWorld
