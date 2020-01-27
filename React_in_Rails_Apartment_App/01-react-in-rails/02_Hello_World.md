@@ -67,20 +67,18 @@ $ rails g react:component HelloWorld
 ```bash
 $ rails g controller Pages
 ```
-```bash
-cat config/routes.rb
-```
+``` config/routes.rb ```
 ```result
-: Rails.application.routes.draw do
-:   root to: "pages#index"
-: end
+ Rails.application.routes.draw do
+   root to: "pages#index"
+ end
 ```
 
 8) Add homepage, and React Component
 
 #### app/views/pages/index.html.erb
-```result
-: <%= react_component("HelloWorld") %>
+```ruby
+ <%= react_component("HelloWorld") %>
 ```
 
 9) Start a Rails server
