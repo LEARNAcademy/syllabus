@@ -4,82 +4,78 @@
 
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
 
-1. [Javascript Intro](./js_beginning/01js_intro.md)
-2. [Javascript Conditionals](./js_beginning/02js_conditions.md)
-3. [Javascript Arrays](./js_beginning/04js_arrays.md)
-4. [Javascript Loops](./js_beginning/05js_loops.md)
-5. [Javascript Functions](./js_beginning/03js_functions.md)
-6. [Javascript Functions, Loops, and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-7. [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
+1. [JavaScript Intro](./javascript/intro.md)
+2. [JavaScript Conditionals](./javascript/conditionals.md)
+3. [JavaScript Arrays](./javascript/arrays.md)
+4. [JavaScript Loops](./javascript/loops.md)
+5. [JavaScript Functions](./javascript/functions.md)
+6. [JavaScript Functions, Loops, and Arrays](./javascript/functions-loops-arrays.md)
+7. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
+1. [JavaScript Testing with Jest](./javascript/jest.md)
+2. [JavaScript Objects](./javascript/objects.md)
+3. [JavaScript Classes](./javascript/classes.md)
+3. [JavaScript Class Inheritance](./javascript/class-inheritance.md)
 
 #### Additional Topics:
 
 - [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
 - [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
+- [Spread Syntax](./javascript/spread-operator.md)
+- [Template Literal](./javascript/template-literals.md)
 
-## Unit Two: Intermediate Javascript
+## Unit Two: Intro to React
 
-This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
+React is a powerful Javascript library used to build more complicated web applications.
 
-1. [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-2. [Javascript Objects](./js_beginning/07js_objects.md)
-3. [Javascript Classes](./js_intermediate/js_classes.md)
-3. [Javascript Class Inheritance](./js_intermediate/05js_class_inheritance.md)
+1. [React Intro](./react/intro.md/)
+2. [React Components](./react/nested-components.md)
+3. [Create React App](./react/create-react-app.md)
+4. [React State](./react/state.md/)
 
 #### Additional Topics:
 
 - [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
-- [Spread Syntax](./js_beginning/js_spread_operator.md)
-- [Template Literal](./js_beginning/js_template_literals.md)
 
-## Unit Three: React
+## Unit Three: Intermediate React
 
-React is a powerful Javascript library used to build more complicated web applications.
+Here we explore more of what React offers and do our first multi-day project.
 
-1. [React Intro](./react/01react_intro_to_react.md/)
-2. [React Components](./react/02react_nested_components.md)
-3. [Create React App](./react/03react_create_react_app.md)
-4. [React State](./react/04react_state.md/)
-5. [React Props](./react/05react_props.md/)
-6. [React State and Props](./react/06react_state_and_props.md/)
-7. [React Forms](./react/forms.md/)
-8. [Challenge: React Dice Roller](./react/08dice_roller.md/)
-9. [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
-10. [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
-11. [Challenge: React Battleship](./react/11react_battleship.md)
+1. [React Props](./react/props.md/)
+6. [React State and Props](./react/state-and-props.md/)
+7. [React Forms and Functional Props](./react/forms.md/)
 
 **Additional Topics**:
 
 - [Portfolio Resources](./tools_and_resources/portfolio.md)
-- [Smart and Dumb Components](./react/smart_and_dumb_components.md)
-- [Testing Props with Jest](./react/testing_props_with_jest.md)
-- [React Component Lifecycle](./react/react_component_lifecycle.md)
+- [Smart and Dumb Components](./react/smart-and-dumb-components.md)
+- [Testing Props with Jest](./react/testing-props-with-jest.md)
+- [React Component Lifecycle](./react/component-lifecycle.md)
 
 ## Unit Four: Ruby
 
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
-1. [Ruby Intro](./ruby/01rb_intro.md)
-2. [Ruby Conditionals](./ruby/rb_conditionals.md)
-2. [Ruby Methods](./ruby/rb_methods.md)
-2. [Ruby Loops](./ruby/rb_loops.md)
-2. [Ruby Hashes](./ruby/rb_hashes.md)
-3. [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
-4. [Ruby Inheritance](./ruby/04rb_inheritance.md)
-5. [Challenge: Ruby Car Challenge](./ruby/rb_car_challenge.md)
-1. [Challenge: Text Based Story Game](./ruby/08rb_textbased_story.md)
-6. [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
-7. [Ruby TDD](./ruby/08rb_testing.md)
-8. [Challenge: TDD Car Challenge](./ruby/06_rb_tdd_car_challenge.md)
-9. [Challenge: TDD Ruby Task List](./ruby/07rb_tasklist_challenge.md)
+1. [Ruby Intro](./ruby/intro.md)
+2. [Ruby Conditionals](./ruby/conditionals.md)
+2. [Ruby Methods](./ruby/methods.md)
+2. [Ruby Loops](./ruby/loops.md)
+2. [Ruby Hashes](./ruby/hashes.md)
+3. [Ruby Classes and Objects](./ruby/classes_objects.md)
+4. [Ruby Inheritance](./ruby/inheritance.md)
+6. [Ruby Testing with RSPEC](./ruby/rspec.md)
+1. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
+
+**Additional Topics**:
+- [Ruby Test Driven Development](./ruby/tdd.md)
+- [Ruby Behavior Driven Development](./ruby/bdd.md)
 
 
 ## Unit Five: Ruby on Rails Models and Postgres
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1. [Intro to Postgres](./sql/07rails_intro_postgres.md)
+1. [Intro to Postgres](./sql/intro_postgres.md)
 1. [Postgres Joins](./sql/08rails_sql_joins.md)
 1. [Intro to Rails](./Rails-C&V/rails_intro.md)
 1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)

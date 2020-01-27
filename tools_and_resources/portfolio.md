@@ -11,3 +11,6 @@ During Week 3 you will be encouraged to start building your portfolio.  During y
 
 * [How to Craft a Stand-Out Web Developer Portfolio](https://drive.google.com/open?id=1A_8u1EsxaBQtL11TRmC4nGGECDlJJapVW7pdbYWRRVE)
 <br/> An additional resource that provides some great tips on making your portfolio site and how to stand out.
+
+
+[Back to Syllabus](../README.md)

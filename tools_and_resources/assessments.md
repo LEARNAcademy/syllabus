@@ -93,3 +93,6 @@
 - Open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
 - When your code is merged and your branch is deleted your assessment is DONE!!
+
+
+[Back to Syllabus](../README.md)

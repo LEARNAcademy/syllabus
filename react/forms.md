@@ -270,3 +270,10 @@ export default NameInput
 - As a user, I can click a 'Clear' button that removes the story and the text inputs and returns the page to the original state.
 
 ![Mad Libs](../assets/madlibs.png)
+
+
+[Go to next lesson: Intro to Ruby](../ruby/intro.md)
+
+[Back to React State and Props](./state-and-props.md)
+
+[Back to Syllabus](../README.md)
