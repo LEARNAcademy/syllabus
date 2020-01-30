@@ -9,7 +9,7 @@ Programming is the art of solving very complex problems or processes by breaking
 
 One of the tools that helps us break down problems is the `if/else` decision structure. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says,
 `if one thing is true, do this, otherwise, do this other thing.`
-In fact, the javascript code for creating these decision structures reads almost like our sentence did:
+In fact, the JavaScript code for creating these decision structures reads almost like our sentence did:
 ```
 if(this thing evaluates to true) {
     console.log(do this thing)
@@ -17,6 +17,7 @@ if(this thing evaluates to true) {
     console.log(do this other thing)
 }
 ```
+Note: Console.log() will print things to your console(terminal/developer tools) so you can see your code working.
 
 ## If/Else
 
