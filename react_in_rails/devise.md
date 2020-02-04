@@ -211,7 +211,7 @@ We start off with a discussion of a few concepts around authentication and autho
 - [Example Completed Application](https://github.com/LEARNAcademy/devise_and_react_example)
 
 
-[Go to next lesson: Devise and React](./devise_and_react_in_rails.md)
+[Go to next lesson: Devise and React in Rails](./devise_and_react_in_rails.md)
 
 [Back to React Routing in Rails](./react_routing_in_rails.md)
 

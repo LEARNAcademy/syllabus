@@ -42,4 +42,6 @@ Divide each story into smaller tasks and commit to GitHub when each task is comp
 - Is everything secure?
 
 
+[Back to Devise and React in Rails](./devise_and_react_in_rails.md)
+
 [Back to Syllabus](../README.md)
