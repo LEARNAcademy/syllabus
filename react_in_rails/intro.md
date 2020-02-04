@@ -1,4 +1,4 @@
-# Intro to React IN a Rails Application
+# React IN a Rails Application Introduction
 
 ## Video: React in Rails
 [![YouTube](http://img.youtube.com/vi/ZkYxPZcISGQ/0.jpg)](https://www.youtube.com/watch?v=ZkYxPZcISGQ)
@@ -87,6 +87,6 @@ Generate a Rails controller and create the view. The controller name matches the
 - Follow these instructions to create your own "Hello World" React in Rails application
 
 
-[Go to next lesson: React Routing in Rails](./react_routing_in_rails..md)
+[Go to next lesson: React Routing in Rails](./react_routing_in_rails.md)
 
 [Back to Syllabus](../README.md)

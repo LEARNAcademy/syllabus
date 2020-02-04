@@ -153,10 +153,11 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: React in Rails and Authentication
 1. [React In Rails Intro](./react_in_rails/intro.md)
-2. [React Routing in Rails](./react_in_rails/react-routing-in-rails.md)
-2. [Authorization and Authentication](./react_in_rails/)
-2. [Devise](./react_in_rails/02-authorization-and-authentication/README.md)
-4. [Challenge: Apartment App](./react_in_rails/)
+2. [React Routing in Rails](./react_in_rails/react_routing_in_rails.md)
+2. [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
+2. [Devise](./react_in_rails/devise.md)
+2. [Devise and React in Rails](./react_in_rails/devise_and_react_in_rails.md)
+4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
 ## Unit Ten: Capstone Project, Week 1
 1. [Capstone Requirements](./Capstone/README.md)

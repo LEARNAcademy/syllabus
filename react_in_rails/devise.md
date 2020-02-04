@@ -213,6 +213,6 @@ We start off with a discussion of a few concepts around authentication and autho
 
 [Go to next lesson: Devise and React](./devise_and_react_in_rails.md)
 
-[Back to React Routing in rails](./react_routing_in_rails.md)
+[Back to React Routing in Rails](./react_routing_in_rails.md)
 
 [Back to Syllabus](../README.md)

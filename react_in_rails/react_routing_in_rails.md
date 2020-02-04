@@ -207,6 +207,6 @@ export default App
 
 [Go to next lesson: Devise](./devise.md)
 
-[Back to Intro to React IN a Rails Application](./intro.md)
+[Back to React IN a Rails Application Introduction](./intro.md)
 
 [Back to Syllabus](../README.md)
