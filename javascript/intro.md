@@ -210,7 +210,7 @@ We have gone over most of the building blocks that compose a JavaScript program.
 
 ## Challenges
 
-Open up a JS file in atom, run your program in terminal with node.
+Open up a terminal and start node (type "node" to start). Then:
 
 **Arithmetic Challenges**
 - Add 34 and 71
