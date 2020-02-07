@@ -4,7 +4,7 @@
 
 ## What is React?
 
-React is a Javascript library for building user interfaces. We can use it to
+React is a JavaScript library for building user interfaces. We can use it to
 build webpages, mobile web pages, and even native mobile applications. It is
 component based, which means that we use it to build many small parts, and then join them together to form entire applications. This turns out to be extremely scalable. It was created from Facebook as that application grew and became more dynamic.
 
@@ -16,9 +16,17 @@ React has great documentation for just starting with the framework, and as you g
 
 ## React Components
 
-Everything in React is a component. From the outer most container of the whole page, to a single line of text or button, it's all components. Every component that is visible on the page has a render function. We'll start with an app that is composed of a single component, and from there build out more useful and engaging features for our users.
+Functions, which you learned about last week, are encapsulated and resuable blocks of code. As developers, we want to write as few lines of code as possible. When we repeat code, it makes the developer gods cry. So, that is why we put code that we want to resuse in a function, and call that function when we want to use that code!
 
-There are different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with class components.
+Everything in React is a component, and components are amalogous to functions. They share characteristics and can be used in a similar way. Think about Facebook for a second. From the outer most container of the whole page, to a single line of text or button, they are all components. 
+
+Every component returns something in the same way that a function returns something. Everything that is visible on the page is made up of smart and dumb components. Smart components hold all of the logic, and dumb components hold all the user interface elements. Just like in functions, when we pass in arguments, in components we pass **props** from smart components down the river to dumb components. But, in React, what is unique is that dumb components can send data back up the river to the smart component using **state**.
+
+We'll cover props and state later in the course.
+
+For now, we'll start with an app that is composed of a single component, and from there build out more useful and engaging features for our users.
+
+There are different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with class components, or smart components.
 
 Here's a complete React application, containing just one component, with one line of text:
 
@@ -70,7 +78,7 @@ There's a lot there. But let's focus on the React portion. It's the section in `
 
 Here we start with the class definition of our component. Notice that it extends from the React.Component class. Within this class is a single method, the render method. Notice that the render method does one thing, return a single html element.
 
-The final lines in script define a container and tell React to render our component in the container.
+The final lines in `<script>` define a container and tell React to render our component in the container.
 
 This is the barest React application. It is composed of a single component. Recall though that a page in a typical React application is composed of many components. As our application grows in complexity, we will begin to require nested components.
 
