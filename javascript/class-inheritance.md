@@ -66,8 +66,6 @@ console.log("rpm:", engine.rpm)
 // Output -->> rpm: 0
 ```
 
-![Video with more details](https://s3.amazonaws.com/learn-site/curriculum/racecar-3.png)
-
 # Inheritance
 Now we have an Engine class that has attributes and behavior. Just like in the real world, we are not limited to only having one type of engine. There can be many variations of engines, all of which share attributes and behaviors, but have additional attributes and behavior that are unique. JavaScript classes allow us to model this situation by using inheritance.
 
