@@ -44,7 +44,7 @@ var person = {
   name: "Alex Keaton",
   phone: 123456789,
   getData: function() {
-    return this.name+"-"+this.phone
+    return `${this.name}-${this.phone}`
   }
 }
 
