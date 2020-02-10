@@ -1,8 +1,28 @@
 # JavaScript Introduction
 
 ## Overview
+- JavaScript is a versatile and powerful scripting language used to make a webpage dynamic
 
-JavaScript is a versatile and powerful scripting language used to make a webpage dynamic.
+## Learning Objectives
+- Interacting with JavaScript's primitive data types
+- Exploring built-in methods
+- Exploring type coercion in JavaScript
+
+## Vocabulary
+- data types
+- concatenation
+- type coercion
+- floats
+- modulo operator
+- bang operator
+
+## Useful Commands
+- $ node
+- control c
+
+## Additional Resources
+- <a href="https://www.w3schools.com/js/js_datatypes.asp" target="blank">JavaScript Data Types</a>
+- <a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="blank">JavaScript Built-in Functions Organized By Data Type</a>
 
 ## Data Types
 
@@ -72,7 +92,7 @@ When we use the + on strings it combines the strings in a process called concate
 
 ##### Built-in String Functions/Methods
 
-The JavaScript language has some pre-made functionality that can be used on the strings called, built-in functions and methods .
+The JavaScript language has some pre-made functionality that can be used on the strings called built-in functions.
 
 ```
 "hello".charAt(1)       -> "e"
@@ -81,10 +101,9 @@ The JavaScript language has some pre-made functionality that can be used on the 
 ```
 
 A function is a JavaScript procedure - a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it (unless it is built-in).
-[More about functions](https://www.w3schools.com/js/js_functions.asp)
+
 
 JavaScript methods are actions that can be performed on objects. A JavaScript method is a property containing a function definition.
-[More about methods](https://www.w3schools.com/js/js_object_methods.asp)
 
 ### Boolean
 
@@ -96,7 +115,6 @@ false                -> false
 ```
 
 ##### Comparison Operators
-
 Comparison operators will return a Boolean value.
 
 ```
@@ -109,7 +127,7 @@ true === false      -> false
 3 === "3"           -> false
 ```
 ##### Relational operators
-Relational operators return a Boolean value
+Relational operators return a Boolean value.
 
 ```
 greater than
@@ -160,7 +178,7 @@ Symbol is a new data type created for the JS update ECMAScript 2015. Symbols are
 
 ## Type Coercion
 
-Because JavaScript is a loosely typed language, it does a funky thing called type coercion. If we combine data from different types, JS tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
+Because JavaScript is a loosely typed language, it does a funky thing called type coercion. If we combine data from different types, JavaScript tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
 
 ```
 "2" + 2             -> "22"
@@ -210,7 +228,7 @@ We have gone over most of the building blocks that compose a JavaScript program.
 
 ## Challenges
 
-Open up a terminal and start node (type "node" to start). Then:
+Open up a terminal and start node (type "node" to start). To exit the node console use control-c twice. Then:
 
 **Arithmetic Challenges**
 - Add 34 and 71
@@ -231,7 +249,6 @@ Open up a terminal and start node (type "node" to start). Then:
 - Does !3 strictly equal 3?
 - Does "LEARN".length strictly equal 5 AND "Student".length strictly equal 7?
 - Does "LEARN".length strictly equal 5 OR "Student".length strictly equal 10?
-
 
 **Variables Challenges**
 - Set a variable called favNum equal to your favorite number
