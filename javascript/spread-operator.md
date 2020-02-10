@@ -1,15 +1,32 @@
-# JS Spread Syntax
+# JavaScript Spread Syntax
 
+## Video: Spread Syntax
+[![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)
 
-[![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)]
+## Overview
+- Spread syntax was introduced in the ES6 update
+- Spread syntax expands an iterable to its individual elements
+- Spread syntax allows a dynamic number of arguments to be passed in a function
 
-The official definition: Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more
+## Learning Objectives
+- Exploring use cases for spread syntax
+
+## Vocabulary
+- spread syntax ...
+- iterable
+
+## Additional Resources
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="blank">MDN Spread Syntax</a>
+- <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js" target="blank">Deduping function challenge</a> refactored to make use of spread syntax
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
+Offical MDN Definition: Spread syntax allows an iterable (such as an array or string) to be expanded in places where zero or more
 arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded
 in places where zero or more key-value pairs (for object literals) are expected.
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="blank">MDN Spread Syntax</a>
-
-Let's look at some use cases.
 
 ## Array concatenation
 
@@ -24,7 +41,7 @@ var arr2 = [3, 4, 5]
 var combined = arr1.concat(arr2)
 
 console.log(combined)
--->> [0, 1, 2, 3, 4, 5]
+--> [0, 1, 2, 3, 4, 5]
 ```
 
 While that wasn't terrible to use, we now have ability to use the spread operator to accomplish the same task:
@@ -37,7 +54,7 @@ var arr2 = [3, 4, 5]
 
 var combined = [...arr1, ...arr2]
 console.log(combined)
--->> [0, 1, 2, 3, 4, 5]
+--> [0, 1, 2, 3, 4, 5]
 ```
 
 Notice the code is more declarative and more readable.
@@ -50,8 +67,11 @@ The spread operator also makes duplicating an array very simple.
 var arr1 = [1, 2, 3]
 var arr2 = [...arr1]
 
-console.log(arr2) -->> [1, 2, 3]
-console.log(arr1) -->> [1, 2, 3]
+console.log(arr2)
+--> [1, 2, 3]
+
+console.log(arr1)
+--> [1, 2, 3]
 ```
 
 Where we may have duplicated the array using a map or slice, we now have again a more declarative technique for doing the same at our disposal. Just like the previously mentioned techniques, the spread operator is non destructive.
@@ -61,8 +81,12 @@ var arr1 = [1, 2, 3]
 var arr2 = [...arr1]
 arr2.push(4)
 
-console.log(arr2) -->> [1, 2, 3, 4]
-console.log(arr1) -->> [1, 2, 3]
+console.log(arr2)
+--> [1, 2, 3, 4]
+
+console.log(arr1)
+--> [1, 2, 3]
+
 // arr1 remains unaffected
 ```
 
@@ -78,19 +102,17 @@ function createSentence(w1, w2, w3) {
 }
 
 console.log(createSentence("hello", "there", "world"))
--->> "Hello there world"
+--> "Hello there world"
 
 // With spread operator
 
 createSentence(...words){
-    return words.join(" ")
+  return words.join(" ")
 }
 
 console.log(createSentence("hello", "y'all", "what's", "up", "doc"))
--->> "hello y'all what's up doc"
+--> "hello y'all what's up doc"
 ```
-
-For another example look at <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js" target="blank">this </a> deduping function challenge refactored to make use of spread syntax.
 
 ## Challenges
 

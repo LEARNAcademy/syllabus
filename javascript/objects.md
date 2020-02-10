@@ -1,62 +1,88 @@
 # JavaScript Objects
 
+## Video: Objects
 [![YouTube](http://img.youtube.com/vi/xDmsrXDweB8/0.jpg)](https://www.youtube.com/watch?v=xDmsrXDweB8)
 
-## Object with Data
+## Overview
+- Objects are variables that contain a collection of key:value pairs
+- Objects are the cross section of data and behavior (methods)
+
+## Learning Objectives
+- Understanding the anatomy of an object
+- Accessing the values from objects using the keys
+- Creating methods that return information from the object
+
+## Vocabulary
+- JSON
+- key: value pairs
+- methods
+- dot notation
+- this
+- destructuring
+
+## Additional Resources
+-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="blank">Destructuring Assignmment Operators</a>
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
+## Object with Data: JSON
+- JSON stands for JavaScript Object Notation
+- Objects are collections of `key:value` pairs
 
 Creating an object in JSON:
 
 ```javascript
-var person = { name: "Alex Keaton", phone: 123456789 };
-```
+var person = {name: "Alex Keaton", phone: 123456789}
 
-Then we can access the properties with the "dot" notation:
+// OR written like:
 
-```javascript
-person.name;    -> "Alex Keaton"
-person.phone;   -> 123456789
-```
-
-#### JSON: JavaScript Object Notation
-
-Objects are collections of `key:value` pairs
-
-```JavaScript
 var person = {
   name: "Alex Keaton",
   phone: 123456789
 }
 ```
 
-We can access the properties with "dot" notation referencing the name of the object and the key:
+In this example the `keys` are name and phone and the `values` are "Alex Keaton" and 123456789.
+
+Then we can access the `value` from the object with "dot" notation by calling the name of the variable and the `key`:
 
 ```javascript
-person.name  -->> "Alex Keaton"
-person.phone -->> 123456789
+console.log(person.name)
+--> "Alex Keaton"
+console.log(person.phone)
+--> 123456789
 ```
 
 ## Object with Behavior
 
-JSON Objects can also contain functions. When a function belongs to an object it is called a method.
+- Objects can also contain functions. When a function belongs to an object it is called a method.
+- **this** is a JavaScript keyword that references the object.
+- **this** can be used to create a variable accessing the value within the object.
+
 
 ```javascript
 var person = {
   name: "Alex Keaton",
   phone: 123456789,
   getData: function() {
-    return `${this.name}-${this.phone}`
+    return `${this.name}'s phone number is ${this.phone}`
   }
 }
 
-person.getData() -->> "Alex Keaton-123456789"
+console.log(person.getData())
+--> "Alex Keaton's phone number is 123456789"
 ```
+
 ## Iterating Over Objects
 
-You can use .map() or .filter() on arrays of objects.  
+Objects can be single indexes of an array. You can use .map() or .filter() on arrays of objects.  
 
 Example: Consider this toons variable. Use .map() or .filter() to return a new array with only the dogs.
 
-```JavaScript
+```javascript
 var toons = [
   {name: "Brian", animal: "dog"},
   {name: "Tom", animal: "duck"},
@@ -67,6 +93,7 @@ var toons = [
 ]
 var animal = toons.filter(value => value.animal === "dog")
 console.log(animal)
+--> [ { name: 'Brian', animal: 'dog' }, { name: 'Bugs', animal: 'dog' }, { name: 'Felix', animal: 'dog' } ]
 ```
 
 ## Object Destructuring
@@ -74,27 +101,30 @@ console.log(animal)
 The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
 This is probably the most immediately useful type of destructuring. When destructuring an object you are essentially taking the properties of an object and breaking them out into individual, recallable variables.
 
-```JavaScript
+```javascript
 // A person object
 var person = {
-  firstName: 'Bruce',
-  lastName: 'Wayne'
+  firstName: "Bruce",
+  lastName: "Wayne"
 }
 
 // Printing property values
 console.log(person.firstName)
+--> "Bruce"
 console.log(person.lastName)
+--> "Wayne"
 
 // Printing a full name
 console.log(`${person.firstName} ${person.lastName}`)
+--> "Bruce Wayne"
 ```
 Here's what that code could like with object destructuring:
 
-```JavaScript
+```javascript
 // A person object
 var person = {
-    firstName: 'Bruce',
-    lastName: 'Wayne'
+  firstName: 'Bruce',
+  lastName: 'Wayne'
 }
 
 // Making variables for firstName and lastName using destructuring
@@ -102,10 +132,13 @@ var { firstName, lastName } = person
 
 // Printing property values
 console.log(firstName)
+--> "Bruce"
 console.log(lastName)
+--> "Wayne"
 
 // Printing a full name
 console.log(`${firstName} ${lastName}`)
+--> "Bruce Wayne"
 ```
 
 Notice that an object destructuring assignment:
@@ -118,7 +151,7 @@ This may seem like a trivial feature, but object destructuring can save you load
 
 Being comfortable with object destructuring allows you to make quick work of extracting and manipulating object properties.
 
-There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="blank">Destructuring Assignmment Operators</a>
+There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page:
 
 ## Challenges
 
@@ -160,7 +193,7 @@ var lunch = {
 
 4. **Consider this variable:**
 
-```JavaScript
+```javascript
 var animals = [
   { name: "Waffles", type: "dog", age: 12 },
   { name: "Fluffy", type: "cat", age: 14 },
@@ -183,7 +216,7 @@ let author = {
 
 ```javascript
 console.log(`${name} is a ${genre} author`)
-//-->> "H. G. Wells is a science fiction author"
+--> "H. G. Wells is a science fiction author"
 ```
 6. **Consider this variable:**
 
@@ -199,13 +232,13 @@ let pokeTwo = {
 }
 ```
 
-- Write a function called `describePokemon()` that take an object like the ones above and uses destructuring to return a description of the pokemon such that:
+- Write a function called `describePokemon()` that take an object like the ones above and uses destructuring to return a description of the Pokemon such that:
 
 ```javascript
 console.log(describePokemon(pokeOne))
-//-->> 'Charmandar is a Fire pokemon'
+--> "Charmandar is a Fire pokemon"
 console.log(describePokemon(pokeTwo))
-//-->> 'Magikarp is a Water pokemon'
+--> "Magikarp is a Water pokemon"
 ```
 
 [Go to next lesson: JavaScript Classes](./classes.md)

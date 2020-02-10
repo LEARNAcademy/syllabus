@@ -1,5 +1,14 @@
 # Weekly Assessments
 
+## TL;DR
+- Accept assignment via Slack
+- Clone repository
+- Create branch
+- Code
+- Git add, commit, push
+- Create pull request
+- Merge code after review
+
 ## Overview
 - Procedure for obtaining and submitting weekly assessments
 - Assessment is accessed through GitHub Classroom
@@ -14,7 +23,6 @@
 - Understanding the process of merging approved code
 - Learning basic git command line tools
 
-
 ## Vocabulary
 - git
 - branch
@@ -28,15 +36,6 @@
 - `git add .`
 - `git commit -m "useful information here"`
 - `git push origin <branch-name>`
-
-## TL;DR
-- Accept assignment via Slack
-- Clone repository
-- Create branch
-- Code
-- Git add, commit, push
-- Create pull request
-- Merge code after review
 
 ## Detailed Process
 
@@ -77,22 +76,11 @@
 - Follow the URL and click the green `Compare & pull request` button
 - Leave any note you feel will be prudent for the instructors and click the green `Create pull request` button
 
-#### After your code has been reviewed
-- An instructor will review your code, leave you comments, and either approve your merge or ask for request changes be made
-
-#### If your code is NOT approved
-- Go back to your code in AWS and make any necessary changes
-- `git add .`
-- `git commit -m "requested changes made"`
-- `git push`
-- May have to enter your GitHub username (handle) and password (the password will not show up as you type)
-- This process will **update your existing pull request**
-- Send a Slack message to the instructor who left you comments notifying them of your updated pull request
-
-#### If your code is approved
+#### After your code has been approved
+- An instructor will review your code and leave you comments
 - Open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
-- When your code is merged and your branch is deleted your assessment is DONE!!
+- When your code is merged and your branch is deleted your assessment is **DONE**!!
 
 
 [Back to Syllabus](../README.md)

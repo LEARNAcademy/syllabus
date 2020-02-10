@@ -1,14 +1,47 @@
 # JavaScript Classes
 
+## Video: Video Name
 [![YouTube](http://img.youtube.com/vi/LudiZKHYvMo/0.jpg)](https://www.youtube.com/watch?v=LudiZKHYvMo)
 
+## Overview
+- Classes are the blueprint for objects
+- Classes are reusable and customizable, much like functions
 
+## Learning Objectives
+- Understanding the anatomy of a class
+- Creating a object with unique data from a class
+- Understanding the purpose of a constructor
+- Understanding the difference between an object and a class
+
+## Vocabulary
+- class
+- object
+- constructor
+- this
+- new
+- PascalCase
+
+## Additional Resources
+- <a href="http://www.javascriptenlightenment.com/" target="blank">Javascript Enlightenment</a>
+- <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects" target="blank">You Don't Know JS: Up & Going - Chapter 2: Into JavaScript</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects" target="blank">MDN: Objects</a>
+- <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md#chapter-3-function-vs-block-scope" target="blank">You Don't Know JS: Function vs. Block Scope</a>
+- <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch5.md#chapter-5-scope-closure" target="blank">You Don't Know JS: Scope Closure</a>
+(Caution: not for the faint of heart)
+- <a href="https://github.com/airbnb/javascript" target="blank">Airbnb JavaScript Style Guidelines</a>
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
+## Classes
 Classes are a particular type of function that contain data and behavior. Classes are the blueprints of objects. Just like functions, classes have their own scope.
 
 There are particular JavaScript keywords that are used to create and access information within a class:
-- `constructor`: a special method for creating and initializing objects
-- `this`: a JavaScript keyword that refers to the object it belongs to
-- `new`: used when creating a new instance of a class (an object)
+- **constructor:** a special method for creating and initializing objects
+- **this:** a JavaScript keyword that refers to the object it belongs to
+- **new:** used when creating a new instance of a class (an object)
 
 Class syntax conventions:
 
@@ -16,7 +49,7 @@ Class syntax conventions:
 - Class names are PascalCased (like camelCase, but the first word is capitalized)
 - Instance of classes (objects) are always lowercase
 
-```JavaScript
+```javascript
 class Squirrel{
   constructor(){
     this.nutCount = 0
@@ -35,21 +68,24 @@ class Squirrel{
 var rocky = new Squirrel()
 
 console.log(rocky.nutCount)
-// Output -->> 0
+--> 0
+
 rocky.storeNut()
 console.log(rocky.nutCount)
-// Output -->> 1
+--> 1
+
 rocky.storeNut()
 console.log(rocky.nutCount)
-// Output -->> 2
+--> 2
+
 rocky.eatNut()
 console.log(rocky.nutCount)
-// Output -->> 1
+--> 1
 ```
 
 Just like functions, classes are reusable. Each object created from the class is independent from each other.
 
-```JavaScript
+```javascript
 class Squirrel{
   constructor(){
     this.nutCount = 0
@@ -71,14 +107,15 @@ alvin.storeNut()
 alvin.storeNut()
 
 console.log("Rocky has ", rocky.nutCount )
-// Output -->> Rocky has 0
+--> "Rocky has 0"
+
 console.log("Alvin has ", alvin.nutCount )
-// Output -->> Alvin has 2
+--> "Alvin has 2"
 ```
 
 Class instances can be used like any other 'thing' in JavaScript. We can rewrite the above like this:
 
-```JavaScript
+```javascript
 class Squirrel{
   constructor(){
     this.nutCount = 0
@@ -129,19 +166,22 @@ class DiceRoller{
 
 var roller = new DiceRoller()
 console.log("Roll:", roller.lastRoll())
-// Output -->> Roll: undefined
+--> Roll: undefined
+
 roller.roll()
 console.log("Roll:", roller.lastRoll())
-// Output -->> Roll: 6
+--> Roll: 6
+
 roller.roll()
 console.log("Roll:", roller.lastRoll())
-// Output -->> Roll: 4
+--> Roll: 4
+
 console.log("All Rolls:", roller.rolls)
-// Output -->> All Rolls: [ 6, 4 ]
+--> All Rolls: [ 6, 4 ]
 ```
 The constructor method can take arguments. This creates objects with unique data.
 
-```JavaScript
+```javascript
 class Dog{
   constructor(name, age){
     this.name = name
@@ -155,54 +195,37 @@ class Dog{
 // now when creating the new object, the constructor method is expecting two arguments: a name and an age
 var rover = new Dog('Rover', 4)
 console.log(rover.description())
-// Output -->> Rover is a 4 year old dog.
+--> "Rover is a 4 year old dog."
 ```
 We can use the Dog class to create many different dog objects with different properties.
 
-```JavaScript
+```javascript
 var plato = new Dog('Plato', 8)
 var bella = new Dog('Bella', 11)
+
 console.log(plato.description())
-// Output -->> Plato is a 8 year old dog.
+--> "Plato is a 8 year old dog."
+
 console.log(bella.description())
-// Output -->> Bella is a 11 year old dog.
+--> "Bella is a 11 year old dog."
 ```
 
 Objects are still just variables that reference a class. Variables in JavaScript can be reassigned.
 
-```JavaScript
+```javascript
 var plato = new Dog('Plato', 8)
 var bella = new Dog('Bella', 11)
 
 console.log(plato.description())
-// Output -->> Plato is a 8 year old dog.
+--> "Plato is a 8 year old dog."
+
 console.log(bella.description())
-// Output -->> Bella is a 11 year old dog.
+--> "Bella is a 11 year old dog."
 bella = plato
 console.log(bella.description())
-// Output -->> Plato is a 8 year old dog.
+--> "Plato is a 8 year old dog."
 // !!!! bella got reassigned
 ```
-
-## Resources
-
-For more information on objects see:
-<a href="http://www.javascriptenlightenment.com/" target="blank">Javascript Enlightenment</a>
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects" target="blank">You Don't Know JS: Up & Going - Chapter 2: Into JavaScript</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects" target="blank">MDN: Objects</a>
-
-For more information on closures see:
-<a href="http://www.javascriptenlightenment.com/" target="blank">Javascript Enlightenment</a>, chapter 7.
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md#chapter-3-function-vs-block-scope" target="blank">You Don't Know JS: Function vs. Block Scope</a>
-<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch5.md#chapter-5-scope-closure" target="blank">You Don't Know JS: Scope Closure</a>
-(Caution: not for the faint of heart)
-
-A great style guide for Javascript:
-[Air B & B](https://github.com/airbnb/javascript)
-
-
-You can see this animated if you go to http://pythontutor.com, select javaScript, and paste in the code.
-For further in-depth information see <a href="http://www.javascriptenlightenment.com/" target="blank">Javascript Enlightenment</a>
 
 ## Challenges
 

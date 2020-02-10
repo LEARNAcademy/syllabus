@@ -1,12 +1,32 @@
 # JavaScript Higher-Order Functions
 
+## Video: Higher-Order Functions
 [![YouTube](http://img.youtube.com/vi/nIDcPIr94bk/0.jpg)](https://www.youtube.com/watch?v=nIDcPIr94bk)
 
+## Overview
+- Higher-order functions are functions that take in another function as an argument OR returns a function as an output
 
-A higher-order function is simply a function that either takes in another function as an argument or returns another function.
+## Learning Objectives
+- Understanding the anatomy of a higher-order function
+- Understanding the use for .map()
+- Understanding the use for .filter()
+- Understanding the three specific arguments available to .map() and .filter()
 
-We will focus on two higher-order functions for this lesson -
-**.map()** and **.filter()** both have three built-in arguments - the value, index, and array.
+## Vocabulary
+- higher-order function
+- value, index, array
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
+## Higher-Order Functions
+A higher-order function is simply a function that either takes in another function as an argument or returns another function as an output.
+
+We will focus on two higher-order functions for this lesson - **.map()** and **.filter()** both have three built-in arguments - the value, index, and array.
+
+What the arguments are named is arbitrary, but the order will always be the same. The higher-order functions have to take at least one argument (value) but can take two or three if needed.
 
 * .map(value, index, array)
 * .filter(value, index, array)
@@ -14,9 +34,9 @@ We will focus on two higher-order functions for this lesson -
 
 1. The **value** at each index of an array
 
-2.  The **index** of the array that we are looping through   
+2. The **index** of the array that we are iterating through   
 
-3.  The **array** that map was called on
+3. The **array** that higher-order function was called on
 
 
 ## .map()
@@ -25,48 +45,68 @@ The .map() function iterates through an array and returns a new array of the sam
 
 Here is an example of iterating using a for loop:
 
-```JavaScript
-var arr = [5, 3, 2, 9, 8]
+```javascript
+var myArray = [5, 3, 2, 9, 8]
 
 for(let i=0; i<arr.length; i++){
-    console.log(arr[i] * 3)
+  console.log(myArray[i] * 3)
 }
 ```
 
 Now let's look at this same objective with .map()
 
-```JavaScript
-var arr = [5, 3, 2, 9, 8]
+```javascript
+var myArray = [5, 3, 2, 9, 8]
 
-var newArr = arr.map(function(value){
+const multiplier = myArray.map(value => {
     return value * 3
 })
 
-console.log(newArr)
+console.log(multiplier)
 ```
 
-And using arrow functions we can reduce the code even further.
+Because we are using an arrow functions we can reduce the code even further. If there is only one line of code to be executed we can remove the return keyword as the return is implied.
 
-```JavaScript
-var arr = [5, 3, 2, 9, 8]
+```javascript
+var myArray = [5, 3, 2, 9, 8]
 
-var newArr = arr.map(value => value * 3)
+const multiplier = myArray.map(value => value * 3)
 
-console.log(newArr)
+console.log(multiplier)
 ```
 
-And finally let's put all that together in a function that can take in any array.
+And finally let's wrap the .map() logic in a function that can take in any array to make the function reusable.
 
-```JavaScript
-var arr = [5, 3, 2, 9, 8]
+```javascript
+var myArray = [5, 3, 2, 9, 8]
 
-mult3 = (array) => {
-  let newArr = array.map(value => value * 3)
-  return newArr
-    }
-console.log(mult3(arr))
+const multiplier = (array) => {
+  return array.map(value => value * 3)
+}
+console.log(multiplier(myArray))
 ```
-Notice that .map() loops through the specified array AND pushes the updated values into a new array.
+
+Notice that .map() iterates through the specified array AND returns a new array with the updated values.
+
+Here is another example with pseudocoding:
+```javascript
+// create a function that takes in an array and returns each word capitalized
+var fruitArray = ["banana", "mango", "apple", "grape"]
+
+// declare a function that takes in an array
+const capitalizer = (array) => {
+  // create a local variable that maps through the array
+  let eachItem = array.map(value => {
+    // with each value access the first index and capitalize the letter then concatenate the remainder of the word
+    return value[0].toUpperCase() + value.substring(1)
+  })
+  // return the local variable joined into a string
+  return eachItem.join(" ")
+}
+// logging the function and pass in the array
+console.log(capitalizer(fruitArray))
+```
+**Note:** - This function has a return for the outer function AND a return for the higher-order function.
 
 ## .filter()
 
@@ -74,9 +114,10 @@ The .filter() function loops through an array and returns a new array with only 
 
 Here is an example of iterating and returning a subset using a for loop:
 
-```JavaScript
-var arr1 = [1, 2, 7, 4, 10, 8, 9]
-function only_even(array){
+```javascript
+var numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
+
+const onlyEven = (array) => {
   let newArr = []
   for(let i=0; i<array.length; i++){
     if(array[i] % 2 === 0){
@@ -86,24 +127,40 @@ function only_even(array){
   return newArr
 }
 
-console.log(only_even(arr1));
+console.log(onlyEven(numbersArray1))
 ```
 
 So, in the above example, we have created a function that takes an array as an argument, loops through the array, and returns a new array containing only the even numbers.
 
 #### Using .filter()
 
-```JavaScript
-var arr = [1, 2, 7, 4, 10, 8, 9]
+```javascript
+var numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
 
-only_even = (array) => {
-  let newArr = array.filter(value => value % 2 === 0)
-  return newArr
+const onlyEven = (array) => {
+  return array.filter(value => value % 2 === 0)
 }
 
-console.log(only_even(arr));
-
+console.log(onlyEven(numbersArray1))
 ```
+
+Here is another example with pseudocoding:
+```javascript
+// create a function that returns only the values at the odd indexes
+var numbers = [4, 24, 5, 9, 0, 78]
+
+// declare a function that takes in an array
+const getOnlyOddIndex = (array) => {
+  // return a higher-order function that takes in the value and the index
+  return array.filter((value, index) => {
+    // return only the values that have an odd index
+    return index % 2 !== 0
+  })
+}
+// log the function and pass in the array
+console.log(getOnlyOddIndex(numbers))
+```
+
 
 ## .map() vs .filter()
 
@@ -119,18 +176,18 @@ Use .map() or .filter() to complete the following exercises:
 
   var arr1 = [3, 9, 15, 4, 10]
 
-  Expected output -->> [30, 90, 150, 40, 100]
+  Expected output --> [30, 90, 150, 40, 100]
 
 2. Write a function that takes in an array and returns a new array with only odd numbers.
 
   var arr2 = [2, 7, 3, 5, 8, 10, 13]
 
-  Expected output -->> [7, 3, 5, 13]
+  Expected output --> [7, 3, 5, 13]
 
 3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use typeof method
 
   var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
-  Expected output -->> "nicework"
+  Expected output --> "nicework"
 
 ### STRETCH Challenges
 
@@ -138,7 +195,7 @@ Use .map() or .filter() to complete the following exercises:
 
   var str = "javascript is awesome"
 
-  Expected output -->> "jvscrpt s wsm"
+  Expected output --> "jvscrpt s wsm"
 
 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
