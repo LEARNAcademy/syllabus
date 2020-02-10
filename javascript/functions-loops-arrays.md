@@ -1,14 +1,24 @@
-# Functions, Loops and Arrays (Oh My!)
+# Functions, Loops, and Arrays (Oh My!)
 
+## Video: Putting It All Together
 [![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=TlAI9_bXobg)
 
-## Putting it all together
+## Overview
+- Functions can utilize arrays, loops, and conditionals in combination to procure a particular outcome
 
-Functions can utilize arrays, loops, and conditionals in combination to procure a particular outcome. Here are some examples of putting it all together.
+## Learning Objectives
+- Creating a function that takes in an argument and uses loops, array methods, and/or conditionals to return a particular output
+- Creating an empty array within the scope of the function to push particular values into
 
-* Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
 
-```JavaScript
+## Putting It All Together
+- Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
+
+```javascript
 var myArr1 = [1, 5, 7, 3, 10]
 
 const mult5 = (array) => {
@@ -26,9 +36,9 @@ Notice that we created an empty array inside our function and used the **.push()
 
 In the following example, we can add a nested conditional statement to return only certain items from the array.
 
-* Create a function that takes in an array and returns a new array with only the even numbers.
+- Create a function that takes in an array and returns a new array with only the even numbers.
 
-```JavaScript
+```javascript
 var myArr2 = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
@@ -52,66 +62,66 @@ console.log(onlyEven(myArr2))
 
   var testArr1 = [3, 9, 15, 4, 10]
 
-  Expected output -->> [9, 27, 45, 12, 30]
+  Expected output --> [9, 27, 45, 12, 30]
 
 
 2. Write a function that takes in an array and returns a new array with only odd numbers.
 
   var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 
-  Expected output -->> [-7, 3, 5, 13]
+  Expected output --> [-7, 3, 5, 13]
 
 3. Write a function that takes in a string and returns a new string with every letter capitalized. HINT: you do not need arrays or loops.
 
   var myMessage = "Hello There"
 
-  Expected output -->> "HELLO THERE"
+  Expected output --> "HELLO THERE"
 
 4. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the typeof method
 
   var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 
-  Expected output -->> "nicework"
+  Expected output --> "nicework"
 
 5. Create a function that returns the highest number
 
   var highestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
 
-  Expected output -->> 67
+  Expected output --> 67
 
 6. Create a function that returns the lowest number
 
   var lowestNumber = [1, 45, 4, 2, 7, 67, -9, 0, 6]
 
-  Expected output -->> -9
+  Expected output --> -9
 
 7. Create a function that calculates the sum
 
   var addThese1 = [1, 2, 3, 4]
 
-  Expected output -->> 10
+  Expected output --> 10
 
   var addThese2 = []
 
-  Expected output -->> 0
+  Expected output --> 0
 
 8. Create a function that calculates the mean value
 
   var meanChecker = [1, 2, 3]
-  Expected output -->> 2
+  Expected output --> 2
 
 9. Create a function that finds the index of the highest number
 
   var indexHighestNumber = [1, 4, 2]
 
-  Expected output -->> 1
+  Expected output --> 1
 
 10. Create a function that takes in a string and returns only the middle value
 
   var testString1 = "hello"
-  Expected output -->> "l"
+  Expected output --> "l"
   var testString2 = "boogeyman"
-  Expected output -->> "e"
+  Expected output --> "e"
 
 ### STRETCH Challenges
 
@@ -119,21 +129,21 @@ console.log(onlyEven(myArr2))
 
   var isPalindrome1 = "racecar"
 
-  Expected output -->> "Yes racecar is a palindrome"
+  Expected output --> "Yes racecar is a palindrome"
 
   var isPalindrome2 = "albatross"
 
-  Expected output -->> "No albatross is not a palindrome"
+  Expected output --> "No albatross is not a palindrome"
 
 2. Vowels Removed: Create a function that takes in a string and returns a new string with all the vowels removed
 
   var fullString1 = "javascript is awesome"
 
-  Expected output -->> "jvscrpt s wsm"
+  Expected output --> "jvscrpt s wsm"
 
   var fullString2 = "I am a LEARN student"
 
-  Expected output -->> "m LRN stdnt"
+  Expected output --> "m LRN stdnt"
 
 3. Merge Arrays: Create a function that takes in two arrays as arguments and returns one array with no duplicate values.
 
@@ -141,37 +151,37 @@ console.log(onlyEven(myArr2))
 
   var arr2 = [7, 8, 2, 3, 1, 5, 4]
 
-  Expected output -->> [3, 7, 10, 5, 4, 8, 2, 1]
+  Expected output --> [3, 7, 10, 5, 4, 8, 2, 1]
 
 4. Clean Function: Create a function that filters false, null, 0 and blank values from an array.
 
   var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 
-  Expected output -->> [58, "abcd", true]
+  Expected output --> [58, "abcd", true]
 
 5. Pre-fill: Write a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 
   fillArray = (6, 0)
 
-  expected output -->> [0, 0, 0, 0, 0, 0]
+  expected output --> [0, 0, 0, 0, 0, 0]
 
   fillArray = (4, 11)
 
-  expected output -->> [11, 11, 11, 11]
+  expected output --> [11, 11, 11, 11]
 
 6. Create a function named addUp that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
 
   addUp = (4)
 
-  Expected output -->> 10
+  Expected output --> 10
 
   addUp = (13)
 
-  Expected output -->> 91
+  Expected output --> 91
 
   addUp = (600)
 
-  Expected output  -->> 180300
+  Expected output  --> 180300
 
 ### EPIC Challenge
 
@@ -185,6 +195,6 @@ console.log(onlyEven(myArr2))
 
 [Go to next lesson: JavaScript Higher-Order Functions](./higher-order-functions.md)
 
-[Back to Javascript Functions](./functions.md)
+[Back to JavaScript Functions](./functions.md)
 
 [Back to Syllabus](../README.md)
