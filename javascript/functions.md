@@ -1,23 +1,55 @@
 # JavaScript Functions
 
+## Video: Functions
 [![YouTube](http://img.youtube.com/vi/K2ACS1cfCCI/0.jpg)](https://www.youtube.com/watch?v=K2ACS1cfCCI)
 
+## Overview
+- Functions are reusable pieces of code that only execute when "called" and always return an output
+- Functions can have information passed into the scope of the function through an "argument"
+- Functions are designed to be used many times in a program and should be as generic as possible while still being descriptive as to their purpose
+
+## Learning Objectives
+- Understanding the anatomy of a function
+- Understanding the difference and the use of return and console.log()
+- Understanding the use of arguments in a function
+- Exploring the use of pseudocode as a learning tool
+
+## Vocabulary
+- const
+- function declaration
+- arrow functions (fat arrow)
+- function call/invocation
+- return
+- arguments
+- pseudocode
+
+## Additional Resources
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
+## Additional Resources
+- <a href="https://www.w3schools.com/js/js_functions.asp" target="blank">W3Schools JavaScript Functions</a>
+- <a href="https://edabit.com/challenges/javascript" target ="blank">Edabit Code Challenges</a>
+
+## Functions
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
 It is important to remember that there is a difference between a **function declaration** - creating the instructions, and a **function call** - following the instructions to perform a task.
 
-
 For example, look at this **function declaration:**
 
-```JavaScript
-var greeting = () => {
-    return "Hello There"
+```javascript
+const greeting = () => {
+  return "Hello There"
 }
 ````
 
 Notice the pieces of a function:
 
-1.  Assigning a function to a variable.
+1.  Assigning a function to a variable
 2.  The name of the function
 3.  Parentheses which can also take 'arguments'
 4.  The fat arrow syntax
@@ -27,66 +59,98 @@ Notice the pieces of a function:
 
 
 Great! We have a function. But this function has not yet been used in our program because we do not have a function call.  A **function call** looks like this....
+
 ```javascript
 greeting()
+--> Hello There
 ```
+
 Notice that we used the same name that we gave our variable that points to the function. Calling the function by its name will tell the program to run through the steps declared in the greeting function.
 
 In order to see the output of our function, let's wrap our function call in a **console.log** like this..
 
 
-```JavaScript
-var greeting = () => {
-    return "Hello There"
+```javascript
+const greeting = () => {
+  return "Hello There"
 }
-console.log(greeting())
 
-output -->> Hello There
+console.log(greeting())
+--> Hello There
 ```
 
 ## Function Arguments
-
 Functions often require external information in order to run. Pieces of outside information that is used when a function runs are called **arguments** to that function.  We put the arguments inside the parentheses of the function.
 
 Let's rebuild our greeting() function to make it a little more versatile by allowing it to take in a name as an argument.
 
-```JavaScript
-greeting = (name) => {
-    return "Hello " + name
+```javascript
+const greeting = (name) => {
+  return `Hello ${name}`
 }
 
 console.log(greeting("Sally"))
-output -->> Hello Sally
+--> Hello Sally
 ```
 Notice that in the function we created a **placeholder** called `name`. This allows us to pass any name we want through the function during the function call.
 
 The function is an encapsulated machine that can be called many times and give a unique output.
 
-```JavaScript
+```javascript
 console.log(greeting("Sam"))
-output -->> Hello Sam
+--> Hello Sam
 console.log(greeting("John"))
-output -->> Hello John
+--> Hello John
 console.log(greeting("Carol"))
-output -->> Hello Carol
+--> Hello Carol
 ```
 
-## Other Syntax for functions
+## Functions With Multiple Arguments
+Functions can take multiple pieces of information as arguments.
 
-There are lots of ways to write functions. The primary one we use today, and the one shown above is called an arrow (or fat arrow) function using `ES6 syntax`. Below is a version you'll see in older JavaScript. It accomplishes primarily the same thing, with a few differences in scope. ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to. For reference: [https://www.w3schools.com/js/js_es6.asp](https://www.w3schools.com/js/js_es6.asp)
+```javascript
+const multiplier = (num1, num2) => {
+  return num1 * num2
+}
+```
+The number of arguments in the function must match the information being passed into the function call.
 
-### Old-School function declarations
+```javascript
+console.log(multiplier(3, 5))
+--> 15
+console.log(multiplier(5, 8))
+--> 40
+```
+
+The values being passed into a function can also be variables.
+```javascript
+var myNumber1 = 3
+var myNumber2 = 5
+var myNumber3 = 8
+
+console.log(multiplier(myNumber1, myNumber2))
+--> 15
+console.log(multiplier(myNumber2, myNumber3))
+--> 40
+```
+The variable should not be named the same as the arguments in the function.
+
+## Other Syntax for Functions
+
+There are lots of ways to write functions. The primary one we use today, and the one shown above is called an arrow (or fat arrow) function using `ES6 syntax`. Below is a version you'll see in older JavaScript. It accomplishes primarily the same thing, with a few differences in scope. ES6 syntax is quickly taking over and you should stick with it unless there is a reason not to. For reference: <a href="https://www.w3schools.com/js/js_es6.asp" target="blank">ES6</a>
+
+### Other Ways to Declare a Function
 
 The word `function` is a keyword in JavaScript, and we can use it to declare a function.
 
-```JavaScript
+```javascript
 function greeting(name){
-    return "Hello " + name
+  return `Hello ${name}`
 }
 
 console.log(greeting("Sally"))
 
-output >> Hello Sally
+--> Hello Sally
 ```
 
 
@@ -105,47 +169,46 @@ Writing pseudocode is a really good mental habit to get into, because it breaks 
 
 This is great, because it means that while you are thinking up your logic, you're not distracted by how to write it in code. And conversely, when you are writing code, you're not also trying to think of what comes next.
 
-
-
 Let's look at an example using pseudocode and adding a conditional inside the function.
 
 Exercise: Write a function called tallEnough that takes an argument of a person's height as an argument and tells whether or not the person is tall enough to ride the rollercoaster.
 
 Here's what the pseudocode might look like:
-```JavaScript
-//create a function called tallEnough
 
-//takes in 1 number as an arguments
-
-//if number is less than 40 return 'can not ride rollercoaster' (if/else statement)
-
-//otherwise return 'allowed to ride rollercoaster'
 ```
+// create a function called tallEnough
+
+// takes in 1 number as an arguments
+
+// if number is less than 40 return 'can not ride rollercoaster' (if/else statement)
+
+// otherwise return 'allowed to ride rollercoaster'
+```
+
 Now let's build the actual code around the pseudocode.
 
-```JavaScript
-//create a function called tall_enough
-//takes in 1 number as an arguments
-var tallEnough = (number) => {
-  //if number is less than 40 return 'can not ride rollercoaster'(if/else statement)
+```javascript
+// create a function called tallEnough
+// takes in 1 number as an arguments
+const tallEnough = (number) => {
+  // if number is less than 40 return "Can not ride rollercoaster" (if/else statement)
   if(number < 40){
     return "Can not ride rollercoaster"
-  //otherwise return 'allowed to ride rollercoaster'
+  // otherwise return "Allowed to ride rollercoaster"
   } else {
     return "Allowed to ride rollercoaster"
   }
 }
 
 console.log(tallEnough(58))
-output -->> "Allowed to ride rollercoaster"
+--> "Allowed to ride rollercoaster"
 
 console.log(tallEnough(37))
-output -->> "Can not ride rollercoaster"
+--> "Can not ride rollercoaster"
 
 console.log(tallEnough(24)
-output -->> "Can not ride rollercoaster"
+--> "Can not ride rollercoaster"
 ```
-
 
 ## Verify
 
@@ -155,15 +218,14 @@ Notice that we called 'tallEnough' several times using different test cases.  Yo
 Notice that we can call console.log() as many times as we want and we can even call console.log inside functions like this...
 
 ```javascript
-var greeting = (name) => {
-    console.log(name)
-    return "Hello " + name
+const greeting = (name) => {
+  console.log(name)
+  return `Hello ${name}`
 }
 
 console.log(greeting("Tom"))
-
-output -> "Tom"
-output -> "Hello Tom"
+--> "Tom"
+--> "Hello Tom"
 ```
 
 However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
@@ -198,18 +260,16 @@ However, we can only have 1 return in a function.  Note that code after the func
 
 3. The Pluralizer: Write a function named pluralizer that takes 2 arguments, a number and a singular noun and returns the number and pluralized form of the noun, if necessary
 
-  pluralizer = (5, cat)
+  const pluralizer = (5, cat)
 
-  Expected outcome -->> "5 cats"
+  Expected outcome --> "5 cats"
 
-  pluralizer = (1, dog)
+  const pluralizer = (1, dog)
 
-  Expected outcome -->> "1 dog"
+  Expected outcome --> "1 dog"
 
 - Bonus: Make it handle a few collective nouns like "sheep", "goose", "child", "person" and "species"
 
-
-### Practice functions with [Edabit](https://edabit.com/challenges/javascript)
 
 [Go to next lesson: JavaScript Functions, Loops, and Arrays](./functions-loops-arrays.md)
 
