@@ -1,6 +1,26 @@
+# React Nested Components
+
+## Overview
+- React components are independent and reusable pieces of code
+- Class components serve a similar purpose as functions, but work in isolation and returns JSX via a render function
+
+## Learning Objectives
+- Understanding the anatomy of a basic React component
+- Creating a basic React class component
+- Creating child components
+- Calling React child components inside the return of the parent component
+
+## Vocabulary
+- React
+- class component
+- render
+- return
+- component call
+- JSX
+
 ## What is JSX?
 
-JavaScript is what you all have been learning up to this point. And now, we will introduce you to syntax extension to JavaScript, or `jsx`. JSX is JavaScript flavored HTML that behaves almost like HTML with a couple small exceptions -- most notably JSX uses the syntax `className` rather than HTML's `class` because `class` is reserved for HTML. 
+JavaScript is what you all have been learning up to this point. And now, we will introduce you to syntax extension to JavaScript, or `jsx`. JSX is JavaScript flavored HTML that behaves almost like HTML with a couple small exceptions -- most notably JSX uses the syntax `className` rather than HTML's `class` because `class` is reserved for HTML.
 
 As the building block of React Components, you all will be using JSX a lot.
 
@@ -44,67 +64,67 @@ Here we have set up an App component to return an empty div. Firstly, let's talk
 
 Next, we have a `return()` which is similar to the built-in JS function `return`. It is returning the content inside of the parentheses. In React, when working with smart components, we need the JSX to live inside a single tag, which goes inside the `return()`, which lives inside the `render(){}`.
 
-In React, the component renders only one JSX element. Therefore, it is imparative to wrap all of your elements in a single containing tag. In the example above, we created an empty `div` to house the JSX code we will be writing. This is were we will nest our other components.
+In React, the component renders only one JSX element. Therefore, it is imperative to wrap all of your elements in a single containing tag. In the example above, we created an empty `div` to house the JSX code we will be writing. This is were we will nest our other components.
 
 Next, we will define another component class:
 
 ```html
 <script type="text/babel">
-      class App extends React.Component{
-        render(){
-          return(
-            <div></div>
-          )
-        }
-      }
+  class App extends React.Component{
+    render(){
+      return(
+        <div></div>
+      )
+    }
+  }
 
-      class Content extends React.Component{
-        render(){
-            return(
-                <div>
-                    <h1>Title</h1>
-                    <p>
-                        This is app content.
-                    </p>
-                </div>
-            )
-        }
-      }
-      const domContainer = document.querySelector('#react-container');
-      ReactDOM.render(<App />, domContainer);
-    </script>
+  class Content extends React.Component{
+    render(){
+      return(
+        <div>
+          <h1>Title</h1>
+          <p>
+            This is app content.
+          </p>
+        </div>
+      )
+    }
+  }
+  const domContainer = document.querySelector('#react-container');
+  ReactDOM.render(<App />, domContainer);
+</script>
  ```
 
  Finally, we call the component within the main component. In our case, the App component:
 
  ```html
 <script type="text/babel">
-      class App extends React.Component{
-        render(){
-          return(
-            <div>
-                <Content />
-            </div>
-          )
-        }
-      }
+  class App extends React.Component{
+    render(){
+      return(
+        <div>
+          <Content />
+        </div>
+      )
+    }
+  }
 
-      class Content extends React.Component{
-        render(){
-            return(
-                <div>
-                    <h1>Title</h1>
-                    <p>
-                        This is app content.
-                    </p>
-                </div>
-            )
-        }
-      }
-      const domContainer = document.querySelector('#react-container');
-      ReactDOM.render(<App />, domContainer);
-    </script>
- ```
+  class Content extends React.Component{
+    render(){
+      return(
+        <div>
+          <h1>Title</h1>
+          <p>
+            This is app content.
+          </p>
+        </div>
+      )
+    }
+  }
+  const domContainer = document.querySelector('#react-container');
+  ReactDOM.render(<App />, domContainer);
+</script>
+```
 
 With that call to the Content component within the App component's render, we now have a nested component. This pattern allows us to start building more complex applications. But, at this stage it helps to have some project structure built into our application. For that we'll turn to `yarn create react-app **your app name**`.
 

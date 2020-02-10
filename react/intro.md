@@ -1,24 +1,29 @@
 # React Introduction
 
-# [React Video](https://player.vimeo.com/video/229416697)
+## Video: React
+[React Video](https://player.vimeo.com/video/229416697)
+
+## Overview
+- React is a JavaScript library for building user interfaces
+- Everything in React is a component
+
+## Additional Resources
+- <a href="https://reactjs.org/" target="blank">React Documentation</a>
 
 ## What is React?
 
-React is a JavaScript library for building user interfaces. We can use it to
-build webpages, mobile web pages, and even native mobile applications. It is
+React is used to build webpages, mobile web pages, and even native mobile applications. It is
 component based, which means that we use it to build many small parts, and then join them together to form entire applications. This turns out to be extremely scalable. It was created from Facebook as that application grew and became more dynamic.
 
 ## Read the docs
 
 React has great documentation for just starting with the framework, and as you grow into bigger and more complex applications. You'll want to bookmark their documentation and refer to it often.
 
-[React Documentation](https://facebook.github.io/react/)
-
 ## React Components
 
-Functions, which you learned about last week, are encapsulated and resuable blocks of code. As developers, we want to write as few lines of code as possible. When we repeat code, it makes the developer gods cry. So, that is why we put code that we want to resuse in a function, and call that function when we want to use that code!
+Functions, which you learned about last week, are encapsulated and reusable blocks of code. As developers, we want to write as few lines of code as possible. When we repeat code, it makes the developer gods cry. So, that is why we put code that we want to reuse in a function, and call that function when we want to use that code!
 
-Everything in React is a component, and components are amalogous to functions. They share characteristics and can be used in a similar way. Think about Facebook for a second. From the outer most container of the whole page, to a single line of text or button, they are all components. 
+Everything in React is a component, and components are analogous to functions. They share characteristics and can be used in a similar way. Think about Facebook for a second. From the outer most container of the whole page, to a single line of text or button, they are all components.
 
 Every component returns something in the same way that a function returns something. Everything that is visible on the page is made up of smart and dumb components. Smart components hold all of the logic, and dumb components hold all the user interface elements. Just like in functions, when we pass in arguments, in components we pass **props** from smart components down the river to dumb components. But, in React, what is unique is that dumb components can send data back up the river to the smart component using **state**.
 
