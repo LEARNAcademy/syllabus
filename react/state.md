@@ -1,52 +1,66 @@
-# React and State
+# React State
+
+## Video: Using State in React
 [![YouTube](http://img.youtube.com/vi/5xFUQd3wuT4/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
 
+## Overview
+- React state is an object managed within a component
+- Methods in the program can update the value of the state object and therefore change what appears in the browser
+
+## Learning Objectives
+- Creating a "smart" component in React within the constructor method
+- Understanding how to update the state object
+
+## Vocabulary
+- constructor
+- dumb/pure/display component
+- smart/impure/logic component
+- setState()
+
+## Set Up
+- $ yarn create react-app app-name
+- $ cd app-name
+- Open the application in a text editor
+- Delete the unnecessary boilerplate code
+- $ yarn start
+
+## State
+Everything in React is a component. Components can be broken down into two basic categories: components that hold state and components that do not hold state.
+
+But what is state?
+
+**State is an object that stores a component's dynamic data and determines how the component renders and behaves.**
+
+To make a component dynamic, the value of state must often be changed by the application. To change the value of state we use a JavaScript method called `setState()`. You should never manipulate this.state directly. The React DOM will re-render every time you call setState and update the component.
 
 
-By now we know that everything in react is a component and that **State** and **Props** are two key concepts of this front-end javascript library.
+## Counter Example
 
-# State
+Here is an example that creates a simple counter in React.
 
-React states are objects that are managed within a component.  We can use the state object to represent instances of our visual displays.
+**src/App.js**
 
-Here are a few more key points about state...
-
-* A component *without* state is called a 'pure component' or a 'dumb component'
-* A component with state is called an 'impure component' or a 'smart component'
-* React maintains state as an object with key value pairs.
-* The values of these keys can be strings, numbers, arrays, booleans, a component call, anything really
-* You can change that object by calling **setState()**
-* React will re-render every time you call setState
-* You should **NOT** change this.state directly, ever. Use this.setState.
-
-
-Let's look at an example of a simple counter app that has state.  First, here's our app component that is calling the counter component.
-
-````javascript
-import React, { Component } from 'react';
-import Counter from './counter'
+```javascript
+import React, { Component } from 'react'
+import Counter from './Counter'
 
 class App extends Component {
   render() {
     return (
      <Counter />
-    );
+    )
   }
 }
 
-export default App;
-````
+export default App
+```
 
-Notice how we have imported counter at the top and called Counter in the return section.
+We imported counter and called a Counter component in the return section. Now we will create the Counter component. Our Counter component will hold state.
 
+**src/Counter.js**
 
-
-
-
-```` javascript
-
-import React, { Component } from 'react';
-
+```javascript
+import React, { Component } from 'react'
 
 class Counter extends Component {
   constructor(props){
@@ -57,25 +71,54 @@ class Counter extends Component {
   }
 
   render() {
-
     return (
-        <div>
-        <h1>counter: {this.state.count}</h1>
-        </div>
-
-    );
+      <div>
+        <h2>Counter: { this.state.count }</h2>
+      </div>
+    )
   }
 }
 
-export default Counter;
-````
+export default Counter
+```
 
-Notice that we created a constructor, passed in props and also called super and passed in props.  We will learn more about props soon, but for now let's focus on the state object which is called with 'this.state' and set equal to an oject with one key value pair (key = count, value = 0)
+Notice that we created a constructor, passed in props and also called super and passed in props.  We will learn more about props soon, but for now let's focus on the state object which is called with `this.state` and set equal to an object with one key:value pair (key = count, value = 0).
 
-We then see a render and a return.  In the return section we are simply calling this.state.count in order to get our current state to display.  We can simplify this slightly with object destructuring.
+We then see a render method and a return. In the return section we are displaying the value of our state object by calling `this.state.count`.
+
+We can simplify this slightly with object destructuring.
 
 ````javascript
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
+class Counter extends Component {
+  constructor(props){
+    super(props)
+      this.state = {
+        count: 0
+      }
+  }
+
+  render() {
+    let { count } = this.state
+
+    return (
+      <div>
+        <h2>Counter: { count }</h2>
+      </div>
+    )
+  }
+}
+
+export default Counter
+````
+
+In the render section we destructure the count out of the state object by setting the count equal to `this.state` and then use the new variable count in the return.  
+
+Next, we will create a button to increase the value of the counter by one per click. The button will have an onClick that calls a method named handleChange.
+
+````javascript
+import React, { Component } from 'react'
 
 class Counter extends Component {
   constructor(props){
@@ -86,55 +129,26 @@ class Counter extends Component {
 }
 
   render() {
-      let { count } = this.state
+    let { count } = this.state
 
     return (
-        <div>
-        <h1>Counter: {count}</h1>
-        </div>
-    );
+      <div>
+        <h2>Counter: { count }</h2>
+        <button onClick = { this.handleChange }>
+          Press Me!
+        </button>
+      </div>
+    )
   }
 }
 
-export default Counter;
-````
-
-In the render section we set count equal to this.state and then used our new variable count in the return.  
-
-Now let's build a way for us to update the count with a button.  First, let's put a button in the return section and add an onclick equal to a handle change function.
-
-````javascript
-import React, { Component } from 'react';
-
-class Counter extends Component {
-  constructor(props){
-    super(props)
-      this.state = {
-        count: 0
-    }
-}
-
-  render() {
-      let { count } = this.state
-
-    return (
-        <div>
-        <h1>count: {count}</h1>
-        <button onClick = {this.handleChange}>Press Me!</button>
-        </div>
-    );
-  }
-}
-
-export default Counter;
+export default Counter
 ````
 
 Now let's create our handleChange function so our application knows what to do when the button is pressed.
 
 ````javascript
-
-
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Counter extends Component {
   constructor(props){
@@ -145,95 +159,68 @@ class Counter extends Component {
   }
 
   handleChange = () => {
-      let newCount = this.state.count + 1
-      this.setState({count: newCount})
+    let newCount = this.state.count + 1
+    this.setState({ count: newCount })
   }
 
   render() {
     let { count } = this.state
 
     return (
-        <div>
-        <h1>count: {count}</h1>
-        <button onClick = {this.handleChange}>Press Me!</button>
-        </div>
-    );
+      <div>
+        <h2>Counter: { count }</h2>
+        <button onClick = { this.handleChange }>
+          Press Me!
+        </button>
+      </div>
+    )
   }
 }
 
-export default Counter;
+export default Counter
 ````
-As you can see above, the handleChange function makes a copy of of this.state.count and adds one to it. We then save that into the variable called newCount.  Finally, we update our state by calling this.setState() and setting our count that is in state to our newCount that we just created.  Now we have a fully functioning button that increments by 1 every time the button is pressed and displays the current count.
 
-Now the power of React begins to emerge because back on our App component, we can add multiple Counter component calls and see all of them on the page operating independently of one another!!
+The handleChange function takes `this.state.count` and adds one to the value then saves the new value in a variable called newCount. By calling `this.setState()` and setting the state object key `count` to our newCount variable.
+
+Now we have a fully functioning button that increments by one every time the button is pressed and displays the current count.
+
+Now the power of React begins to emerge because back on our App component, we can add multiple Counter component calls and see all of them on the page operating independently of one another!
 
 ````javascript
-
-import React, { Component } from 'react';
-import Counter from './counter'
+import React, { Component } from 'react'
+import Counter from './Counter'
 
 class App extends Component {
   render() {
     return (
-    <div>
-         <Counter />
-         <Counter />
-         <Counter />
-         <Counter />
-    </div>
-    );
+      <div>
+        <Counter />
+        <Counter />
+        <Counter />
+        <Counter />
+      </div>
+    )
   }
 }
 
-export default App;
+export default App
 ````
 
-# Challenges
+## Challenge: Color Box
 
-### Challenge 1 - Light Bulb Challenge
-
-In the terminal,
-* make sure you're on the desktop and use create-react-app plus your project name
-* cd into your project
-* type atom .
-* take out any starter code you want to remove
-
-As a user I can see a square on the screen with the word 'off' in the middle.
-
-As a user I can click anywhere on the square. When I click the square the words change from 'off' to 'on' and then back 'off' again.
+#### User Stories
+- As a user, I can see a white square on the screen
+- As a user, when I click on the square the name of a color appears in the box
+- As a user, each time I click the box I see a new color name
+- As a user, I can cycle through a list of color names, one per click - green, blue, yellow, red, purple, orange
+- As a user, when I click the box, the background changes to match the name of the color name displayed in the box
+- As a user, I can see many color boxes on the page all acting independently of one another
 
 #### Stretch
 
-As a user, when I click the box the color goes from white to yellow. (still with the words on or off in the middle)
-
-#### Super Stretch
-
-As a user, instead of seeing a box, I see a picture of a light switch in the off position and a white light bulb.
-
-As a user, when I click on the light switch it turns on and the light bulb changes from white to yellow.  
-
-#### Epic Stretch
-
-As a user I see multiple different lightbulbs and switches that act independently of each other.
-
-As a user I can add or remove a light switch/bulb from the webpage.
-
-
-### Challenge 2 - Color Box Challenges
-
-As a user, I can see a white square on the screen.
-
-As a user, when I click on the square a word shows up (a color). Each time I click it cycles through a list of these colors (one per click) -  white, green, blue, yellow, red, purple, orange.
-
-#### Stretch
-
-As a user, when the box is cycling through the words, the background is the same as the color word.
-
-As a user, I can see many color boxes on the page all acting independently of one another.
-
-#### Super Stretch
-
-As a user, I can add or delete as many color boxes as I want.  All of them act independently of one another.
+- As a user, I can see a button to add or remove color boxes
+- As a user, when I click the add button, I can add one colorbox that acts independently of the other colorboxes
+- As a user, when I click the remove button, I can remove one colorbox
 
 [Go to next lesson: React Props](./props.md)
 
