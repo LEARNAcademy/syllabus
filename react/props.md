@@ -30,7 +30,7 @@ $ yarn start
 
 Since React is component based, communication between the components is very important. Where nested components gave us the ability to build modular interfaces and state gave us a means of tracking and updating data within components, props give us the ability to communicate by passing data and methods between components. Specifically, it gives us the ability to pass data down to nested components.
 
-In a real React application, props for the most part come from state. In a very practical sense, props are a snapshot of state that are passed on to components tasked with displaying and/or letting a user interact with that information.
+In a React application, props (for the most part) come from state. In a very practical sense, props are a snapshot of state that are passed on to components tasked with displaying and/or letting a user interact with that information.
 
 Information gets passed from the parent component to the child component through the component call. It is very similar to how a function get passed information through an argument.
 
@@ -53,9 +53,9 @@ export default App
 ```
 Within the `<GreetPerson />` component call we are passing a variable `name` that contains the string "Bob".
 
-Th variable is now available to the `GreetPerson` component as props.
+The variable is now available to the `GreetPerson` component as props.
 
-To call `name` as props in the component we use `this.props.name`
+To call `name` as props in the child component we use `this.props.name`
 
 **src/components/GreetPerson.js**
 ```javascript
@@ -90,8 +90,10 @@ class App extends Component{
   }
   render(){
     return(
-      <GreetPerson name={ this.state.personOne } />
-      <GreetPerson name={ this.state.personTwo } />
+      <div>
+        <GreetPerson name={ this.state.personOne } />
+        <GreetPerson name={ this.state.personTwo } />
+      </div>
     )
   }
 }
@@ -99,9 +101,9 @@ class App extends Component{
 export default App
 ```
 
-Now, the variable `name` contains information from state is available to `GreetPerson` as props. The component `GreetPerson` is being called twice, each with different information from the state object. Now our component is more dynamic and reusable.
+The variable `name` is assigned information from state. `name` is available to `GreetPerson` as props. The component `GreetPerson` is being called twice, each with different information from the state object.
 
-Here we start to see the power of these mechanisms working together. We are now reusing a component to display different sets of information. We can begin to see how using props and components can make for an extremely dynamic application.
+Here we start to see the power of these mechanisms working together. We are reusing a component to display different sets of information. Using props and components can make for an extremely dynamic application.
 
 **src/components/GreetPerson.js**
 ```javascript
@@ -110,18 +112,18 @@ import React, { Component } from 'react'
 class GreetPerson extends Component{
   render(){
     return(
-      <h1>Hi, {this.props.name}!</h1>
+      <h1>Hi, { this.props.name }!</h1>
     )
   }
 }
 export default GreetPerson
 ```
 
-Notice very little has changed but the potential of our application shifts dramatically. First, we added state to the App component by setting up a constructor with two values in state. Then, in the return we changed the hardcoded names to references to items in state. In moving the values into state, we've centralized our data and made them available to any other components in the App component.
+Notice very little has changed but the potential of our application shifts dramatically. First, we added state to the App component by setting up a constructor with two values in state. Then, in the return we changed the hardcoded names to reference the items in state. In moving the values into state, we've centralized our data and made them available to any other components in the App component.
 
 ## Refactor: Mapping a Component Call
 
-With a little more refactoring and DRYing up our code using a programmatic approach, this becomes even more dynamic.
+With a little refactoring and DRYing up our code using a programmatic approach, this can become even more dynamic.
 
 **src/App.js**
 ```javascript
@@ -140,19 +142,21 @@ class App extends Component{
   }
   render(){
     return(
-      this.state.people.map(person => <GreetPerson name={ person } />
+      <div>
+        this.state.people.map(person => <GreetPerson name={ person } />
+      </div>
     )
   }
 }
 export default GreetPerson
 ```
-The refactor includes creating an array of names in our state object. Then, in order to render the components, we can use map() to iterate over the names of the `people` array and return a GreetPerson component for each name.
+The refactor includes creating an array of names in the state object. Then, to render the components we can use map() to iterate over the names of the `people` array and return a `GreetPerson` component for each name.
 
 Now, as we add things to state, the component updates without any more code!
 
 ## Passing a Method as Props
 
-We can pass behavior as props to the child component as well as information. The process is very similar. In this example, we  can create a button that when clicked will greet different people from our array. To accomplish this, we can pass a both the state object and a method to our child component.
+We have explored passing information as props, but we can pass behavior as well. The process is very similar. In this example, we can create a button that when clicked will greet different people from our array. To accomplish this, we can pass both the state object and a method to our child component.
 
 **src/App.js**
 ```javascript
@@ -188,7 +192,9 @@ class App extends Component{
 export default App
 ```
 
-Now we are passing both data and information to our child component. `GreetPerson` has access to `person` as `this.props.person` and `greeting` as `this.props.greeting`.
+Now we are passing both data and behavior to our child component `GreetPerson`:
+1. Data: the component has access to `this.state.people` as `this.props.person` through the variable `person`
+2. Behavior: the component has access to `handleGreeting` as `this.props.greeting` through the variable `greeting`
 
 
 **src/components/GreetPerson.js**
@@ -218,7 +224,7 @@ Using a well thought out state tree and nested component structure, construct an
 ![dice game](../assets/dice-game.png)
 
 - As a user, I can see an application called Dice Roller
-  - As a developer, I can create a React file structure with `App.js` as my stateful component
+  - As a developer, I can create a React application with `App.js` as my stateful component
   - As a developer, I can create two child components that will accept props from `App.js`
 - As a user, I can click a box and see the outcome of my current "roll"
   - As a developer, I can pass a method from `App.js` to my dice component to display a number between 1 and 6
