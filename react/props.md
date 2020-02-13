@@ -188,7 +188,7 @@ class App extends Component{
 export default App
 ```
 
-Now we are passing both data and information to our child component. `GreetPerson` has access to `person` as `this.props.person` and `greeting` as `this.props.person`.
+Now we are passing both data and information to our child component. `GreetPerson` has access to `person` as `this.props.person` and `greeting` as `this.props.greeting`.
 
 
 **src/components/GreetPerson.js**
