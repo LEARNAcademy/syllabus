@@ -61,7 +61,7 @@ To call `name` as props in the component we use `this.props.name`
 ```javascript
 import React, { Component } from 'react'
 
-class GreetPerson extends React.Component{
+class GreetPerson extends Component{
   render(){
     return(
       <h1>Hi, { this.props.name }!</h1>
