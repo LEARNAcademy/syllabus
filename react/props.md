@@ -114,6 +114,7 @@ class GreetPerson extends Component{
     )
   }
 }
+export default GreetPerson
 ```
 
 Notice very little has changed but the potential of our application shifts dramatically. First, we added state to the App component by setting up a constructor with two values in state. Then, in the return we changed the hardcoded names to references to items in state. In moving the values into state, we've centralized our data and made them available to any other components in the App component.
@@ -143,11 +144,72 @@ class App extends Component{
     )
   }
 }
+export default GreetPerson
 ```
 The refactor includes creating an array of names in our state object. Then, in order to render the components, we can use map() to iterate over the names of the `people` array and return a GreetPerson component for each name.
 
 Now, as we add things to state, the component updates without any more code!
 
+## Passing a Method as Props
+
+We can pass behavior as props to the child component as well as information. The process is very similar. In this example, we  can create a button that when clicked will greet different people from our array. To accomplish this, we can pass a both the state object and a method to our child component.
+
+**src/App.js**
+```javascript
+import React, { Component } from 'react'
+import GreetPerson from './GreetPerson'
+
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      people: [
+        "Bob",
+        "Teddy",
+        "Joe"
+      ],
+      currentPerson: 0
+    }
+  }
+  handleGreeting = () => {
+    let nextPerson = Math.floor(Math.random() * this.state.people.length)
+    this.setState({ currentPerson: nextPerson })
+  }
+
+  render(){
+    return(
+      <GreetPerson
+        person={ this.state.people[this.state.currentPerson] }
+        greeting={ this.handleGreeting }
+      />
+    )
+  }
+}
+export default App
+```
+
+Now we are passing both data and information to our child component. `GreetPerson` has access to `person` as `this.props.person` and `greeting` as `this.props.person`.
+
+
+**src/components/GreetPerson.js**
+```javascript
+import React, { Component } from 'react'
+
+class GreetPerson extends Component{
+  render(){
+    return(
+      <div>
+        <h1>Hello, { this.props.person }!</h1>
+        <button onClick={ this.props.greeting }>Greet Next Person</button>
+      </div>
+    )
+  }
+}
+
+export default GreetPerson
+```
+
+The button in `GreetPerson` is responsible for calling the method in our parent component. If we wanted to add more names in our application, the only thing we would have to modify is the number of items in our array. The rest of our application is dynamic!
 
 ## Challenge: Dice Roller
 
@@ -159,7 +221,7 @@ Using a well thought out state tree and nested component structure, construct an
   - As a developer, I can create a React file structure with `App.js` as my stateful component
   - As a developer, I can create two child components that will accept props from `App.js`
 - As a user, I can click a box and see the outcome of my current "roll"
-  - As a developer, I can pass a function from `App.js` to my dice component to display a number between 1 and 6
+  - As a developer, I can pass a method from `App.js` to my dice component to display a number between 1 and 6
 - As a user, I can see my roll logged
   - As a developer, I can pass the value of the roll to a log component
 - As a user, I can see the roll log continue to grow as I roll the dice
