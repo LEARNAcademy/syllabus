@@ -1,6 +1,6 @@
 # How The Internet Works
 
-### Request/response cycle
+### Request/Response Cycle
 - IP address (Internet Protocol) is a unique set of four numbers separated by periods
 - 127.0.0.1 "localhost" or home
 - Every computer has an IP address
@@ -31,7 +31,7 @@ Made up of status codes:
 - 400's - client side error
 - 500's - server side error
 
-<a href="https://http.cat/" target="_blank">Cat Codes</a>
+<a href="https://http.cat/" target="blank">Cat Codes</a>
 
 ### CRUD
 The basic actions a website should be able to do:
