@@ -26,7 +26,7 @@
 
 #### Creating a new React app:
 ```
-yarn create react-app myApp
+yarn create react-app my-app
 cd myApp
 yarn start
 ```
