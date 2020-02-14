@@ -152,7 +152,7 @@ class Greeter extends Component {
 
   render() {
     return (
-      {/* calling a method and passing the information from the input */}
+      // calling a method and passing the information from the input
       <h1>Hello, { this.capitalizer(this.props.name) }! </h1>
     )
   }
