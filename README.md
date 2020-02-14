@@ -35,7 +35,7 @@ React is a powerful Javascript library used to build more complicated web applic
 
 #### Additional Topics:
 
-- [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
+- [Intro to How the Internet Works](./tools_and_resources/how-the-internet-works-intro.md)
 
 ## Unit Three: Intermediate React
 
