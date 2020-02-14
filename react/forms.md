@@ -40,7 +40,7 @@ We'll create a smart component that holds state and passes information to a chil
 ```javascript
 import React, { Component } from 'react'
 // importing the Greeter component
-import Greeter from './Greeter'
+import Greeter from './components/Greeter'
 
 class App extends Component{
   constructor(props){
@@ -68,7 +68,7 @@ export default App
 ## Step 2
 Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It accepts a greeting in props, and displays it.
 
-**src/Greeter.js**
+**src/components/Greeter.js**
 ```javascript
 import React, { Component } from 'react'
 
@@ -93,7 +93,7 @@ To increase the functionality of our app, let's add a way for our user to enter 
 ```javascript
 import React, { Component } from 'react'
 // importing the Greeter component
-import Greeter from './Greeter'
+import Greeter from './components/Greeter'
 
 class App extends Component{
   constructor(props){
@@ -138,7 +138,7 @@ The information from the input is passed to the child `Greeter` component.
 ## Step 4
 We can change the user output by adding a method in the `Greeter` component.
 
-**src/Greeter.js**
+**src/components/Greeter.js**
 ```javascript
 import React, { Component } from 'react'
 
@@ -169,9 +169,9 @@ As our app grows, we'll likely want to move the `<input />` into its own compone
 ```javascript
 import React, { Component } from 'react'
 // importing the Greeter component
-import Greeter from './Greeter'
+import Greeter from './components/Greeter'
 // importing the NameInput component that we are about to create
-import NameInput from './NameInput'
+import NameInput from './components/NameInput'
 
 class App extends Component{
   constructor(props){
@@ -210,7 +210,7 @@ export default App
 ## Step 6
 Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
 
-**src/NameInput.js**
+**src/components/NameInput.js**
 ```javascript
 import React, { Component } from 'react'
 
