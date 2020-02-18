@@ -10,7 +10,7 @@ But what does that mean?
 
 It's a bit tricky to explain what an "object" is; but, loosely speaking, it's a thing that you send a message to. All the action in Ruby happens because you send a message to an object.
 
-In order for an object to respond meaningfully to a message, it must somehow possess internal knowledge of that message a pre-existing, primed response, saying what should happen when this particular message arrives.
+In order for an object to respond meaningfully to a message, it must somehow possess internal knowledge of that message and have a pre-existing, primed response saying what should happen when this particular message arrives.
 
 This primed response is called a method. In other words, a method is simply a set of instructions saying what an object should do in response to a particular message.
 
@@ -24,7 +24,7 @@ Correct styling conventions for Ruby made for code that is easy to read. You can
 
 ### Numbers (Integers)
 
-Integer operators and arithmetic in Ruby are very similar to what you've seen so far in Javascript:
+Integer operators and arithmetic in Ruby are very similar to what you've seen so far in JavaScript:
 
 ```RUBY
 > 1 + 3   # => 4
@@ -78,7 +78,7 @@ Ruby style guides say to use single quotes whenever suitable. A notable exceptio
 
 ### Calling Methods on Objects: The DOT!
 
-In Ruby, methods are called on an objects (remember, in Ruby everything is an object) using dot-notation: first, the name of the object, then a dot, then the method.
+In Ruby, methods are called on objects (remember, in Ruby everything is an object) using dot-notation: first, the name of the object, then a dot, then the method.
 
 Example:
 ````RUBY
@@ -97,7 +97,7 @@ Example:
 
 ### Variables
 
-In Ruby variables do not require a declaration such as var or let. In Ruby variables are created with a single equal sign. The casing convention in Ruby is snake_case.
+In Ruby, variables do not require a declaration such as var or let. In Ruby, variables are created with a single equal sign. The casing convention in Ruby is snake_case.
 
 ```RUBY
 > my_num               # => ERROR  
@@ -122,7 +122,7 @@ String interpolation is replacing variables within a string with the values they
 
 ### Arrays
 
-Arrays are ordered collections of objects. Arrays can hold objects of any data type and each element can be reference by an index. Arrays are zero based, so the index of the first element is zero.
+Arrays are ordered collections of objects. Arrays can hold objects of any data type and each element can be referenced by an index. Arrays are zero based, so the index of the first element is zero.
 
 ```RUBY
 > my_nums = [8, 9, 10, 11, 12, 13]
@@ -150,27 +150,27 @@ Like strings you can call methods on an array to interact with it.
 ```
 The append operator `<<` (a.k.a. "the shovel") basically sticks something at the end of the array.
 
-It's good to note that the array is not permanently changed by calling the method reverse on it. It returns a new array with the elements reversed.
+It's good to note that the array is not permanently changed by calling the method `.reverse` on it. It returns a new array with the elements reversed.
 
 ## Running Ruby: IRB
 
 If you are using a Mac, Ruby comes preinstalled on your machine. To use it, open the terminal and type `irb` (interactive ruby shell) into terminal. And that's it! You're all set to start coding in Ruby.
 
-The IRB prompts with >
+The IRB prompts with `>`
 
-**Troubleshooting:** IRB is much like console in Google Chrome. You can program in Ruby but entering code line by line can be difficult. If you find yourself with a prompt that says 1 or ? or " or ' IRB is expecting you to finish close your string or method.
+**Troubleshooting:** IRB is much like console in Google Chrome. You can program in Ruby but entering code line by line can be difficult. If you find yourself with a prompt that says `1` or `?` or `"` or `'` IRB is expecting you to finish close your string or method.
 
-If you are stuck in the middle of an incorrect statement and want to start over, press Ctrl-C and you will get a clean > prompt.
+If you are stuck in the middle of an incorrect statement and want to start over, press Ctrl-C and you will get a clean `>` prompt.
 
 ## Running Ruby: Terminal
 
 To do this, create a file. Ruby can be run from a file with any sort of name, but it is common to give a ruby file a .rb extension.
 
-To run a file with Ruby code in it, you give the command ruby and then a path to the file. So to execute a ruby file called run_it.rb in your current directory, you would run: ruby run_it.rb
+To run a file with Ruby code in it, you give the command `ruby` and then a path to the file. So to execute a ruby file called run_it.rb in your current directory, you would run: `ruby run_it.rb`
 
 **Output**
 
-The puts (short for "put string") and print commands are both used to display the results of evaluating Ruby code. The primary difference between them is that puts adds a newline after executing, and print does not.
+The `puts` (short for "put string") and `print` commands are both used to display the results of evaluating Ruby code. The primary difference between them is that `puts` adds a newline after executing, and `print` does not.
 
 Example in IRB:
 ````RUBY
@@ -181,7 +181,7 @@ puts "Hello World"
 Hello World
 # => nil
 ````
-In the example you can see differences and the newline the puts method adds.
+In the example you can see differences and the newline the `puts` method adds.
 
 **Input**
 
@@ -214,7 +214,7 @@ The string output from `gets` includes the return you type to enter the user inp
 ## Challenges
 
 ### Arithmetic Challenges
-Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, 1 and 1.0 are different types of things with slightly different behaviors.
+Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, `1` and `1.0` are different types of things with slightly different behaviors.
 
 - Add, subtract, multiply and divide some numbers and floats.
 - Find the remainder of dividing two numbers using the modulo operator (%).
