@@ -85,8 +85,9 @@ class Greeter extends Component {
 export default Greeter
 ```
 
-## Alternative (Recommended) Dumb Component
-```
+## Alternative Dumb Component
+**src/components/Greeter.js**
+```javascript
 import React from 'react'
 
 // Greeter is a dumb/display component that does not hold state
@@ -175,8 +176,9 @@ class Greeter extends Component {
 
 export default Greeter
 ```
-## Alternate way of doing App.js
-```
+## Alternate Smart Component (passing methods to dumb components)
+**src/App.js**
+```javascript
 import React, { Component } from 'react'
 // importing the Greeter component
 import Greeter from './components/Greeter'
@@ -219,8 +221,9 @@ class App extends Component{
   export default App
   ```
   
-## Alternate way of doing this (Greeter.js)
-```
+## Alternate dumb component (using inherited methods)
+**src/components/Greeter.js**
+```javascript
 import React from 'react'
 
 const Greeter = (props) => {
@@ -339,10 +342,11 @@ When submitting a form, you need to handle the submit functionality. This is whe
 When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
 
 We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
-```
+
+```javascript
 handleFormSubmit = event => {
-event.preventDefault();
-//whatever we want the form to do
+  event.preventDefault();
+  //whatever we want the form to do
 }
 ```
 
