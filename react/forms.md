@@ -84,6 +84,21 @@ class Greeter extends Component {
 
 export default Greeter
 ```
+
+## Alternative (Recommended) Dumb Component
+```
+import React from 'react'
+
+// Greeter is a dumb/display component that does not hold state
+ const Greeter = (props) => {
+    // We are passing the state object value as props called "name" <name={ this.state.name }> from the parent App.js
+    return (
+      <h1>Hello, { props.name }! </h1>
+    )
+}
+
+export default Greeter
+```
 In the browser we will see: `Hello, Bob!`
 
 ## Step 3
