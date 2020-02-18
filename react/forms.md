@@ -175,6 +175,65 @@ class Greeter extends Component {
 
 export default Greeter
 ```
+## Alternate way of doing App.js
+```
+import React, { Component } from 'react'
+// importing the Greeter component
+import Greeter from './components/Greeter'
+
+class App extends Component{
+    constructor(props){
+      super(props)
+      // changing the state object to hold an empty string
+      this.state = {
+        name: ""
+      }
+    }
+  
+    handleChange = (event) => {
+      // a method that will take the value from an input and save it in the state key "name"
+      this.setState({ name: event.target.value })
+    }
+
+    capitalizer = (userInput) => {
+        // a display component can have its own methods that act on the information being passed as props
+        return userInput.toUpperCase()
+      }
+  
+    render() {
+      return (
+        <div>
+          {/* adding a JSX tag <input /> that will call the handleChange method and pass the value of the state object */}
+          <input
+            value={ this.state.name }
+            onChange={ this.handleChange }
+          />
+          {/* same information being passed as props to <Greeter /> */}
+          <Greeter
+            name={ this.state.name } capitalizer={this.capitalizer}
+          />
+        </div>
+      )
+    }
+  }
+  export default App
+  ```
+  
+## Alternate way of doing this (Greeter.js)
+```
+import React from 'react'
+
+const Greeter = (props) => {
+  // Greeter is a dumb/display component that does not hold state
+
+    return (
+      // calling a method and passing the information from the input
+      <h1>Hello, { props.capitalizer(props.name) }! </h1>
+    )
+}
+
+export default Greeter
+```
 
 ## Step 5
 
