@@ -334,9 +334,9 @@ export default NameInput
 ![Active Listening Robot Challenge](../assets/robot_active_listening.png)
 
 ## Submit
-When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `HandleFormSubmit`. 
+When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `handleFormSubmit`. 
 
-When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically sumitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
+When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
 
 We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
 ```
