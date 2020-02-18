@@ -265,7 +265,8 @@ When submitting a form, you need to handle the submit functionality. This is whe
 When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically sumitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
 
 We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
-```handleFormSubmit = event => {
+```
+handleFormSubmit = event => {
 event.preventDefault();
 //whatever we want the form to do
 }
