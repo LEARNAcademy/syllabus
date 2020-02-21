@@ -172,7 +172,7 @@ We've been talking throughout this class about how everything in Ruby is an obje
 
 **Given Classes**
 
-Every object in Ruby belongs to a class. Another way of saying: each object is an instance of class. To find out what class an object is a part of you can call `.class` on any object and it will tell you. Once you know what class the object belongs to it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
+Again, every object in Ruby belongs to a class. Another way of saying: each object is an instance of class. Once you know what class the object belongs to (by using the `.class` method), it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
 
 ```RUBY
 hello.class
@@ -182,7 +182,23 @@ true.class
 Class.class
 ```
 
-Classes are made up of Nouns (data) and Verbs (methods). Take a look at your Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @wheels and @model_year -- are what make your object what it is: the class Vehicle (also a noun). The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
+Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @year, @make, and @model -- are what your object is composed of. The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
+
+```RUBY
+class Vehicle
+  
+  def initialize(year)
+    @year = year
+    @make = make
+    @model = model
+  end
+  
+  def get_vehicle_info
+    puts "This is a #{ year } #{ make } #{ model }."
+  end
+  
+end
+```
 
 
 ## Challenge: Tasklist
@@ -190,9 +206,13 @@ Classes are made up of Nouns (data) and Verbs (methods). Take a look at your Veh
 ### User Stories
 
 **Story:**	As a developer, I can create a Task.
+
 **Story:**	As a developer, I can give a Task a title and retrieve it.
+
 **Story:**	As a developer, I can give a Task a description and retrieve it.
+
 **Story:**	As a developer, I can mark a Task done.
+
 **Story:**	As a developer, when I print a Task that is done, its status is shown.
 
 
