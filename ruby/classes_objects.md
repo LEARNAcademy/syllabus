@@ -78,6 +78,7 @@ class Jedi
   def title
     @title
   end
+  
 end
 
 # Create a new instance of the class Jedi. Call it chosen_one
