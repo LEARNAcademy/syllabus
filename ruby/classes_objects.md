@@ -133,7 +133,7 @@ end
 > bedroom_wall = SquareFoot.new
 
 # bedroom_wall has an initialize method that requires some information, so you will get an error:
-# ArgumentError: wrong number of arguments (2 for 0)
+# ArgumentError (wrong number of arguments (given 0, expected 2))
 
 # Let's properly create a new instance of SquareFoot by passing in some arguments
 > bedroom_wall = SquareFoot.new(9, 12)
@@ -143,7 +143,7 @@ end
 
 Arguments passed to a class are not automatically held anywhere. In order to save the values of the arguments, you will need to put those values into instance varibles like we did above using `@height` and `@width`.
 
-One more example, but this one is looking for an argument to be passed when the object is initialized. There will be an error if the `.new` method does not have an argument.
+One more example. Again, there will be an error if the `.new` method does not have an argument.
 
 ```RUBY
 class Animal
