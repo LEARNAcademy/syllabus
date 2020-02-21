@@ -187,14 +187,21 @@ Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicl
 ```RUBY
 class Vehicle
   
-  def initialize(year)
+  def initialize(year, make, model)
     @year = year
     @make = make
     @model = model
   end
   
   def get_vehicle_info
-    puts "This is a #{ year } #{ make } #{ model }."
+    @year
+    @make
+    @model
+  end
+  
+  def show_vehicle_info
+    # When using string interpolation with an instance variable, you can simply put a # followed by the name of the variable
+    puts "This is a #@year #@make #@model."
   end
   
 end
