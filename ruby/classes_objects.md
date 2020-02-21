@@ -161,10 +161,6 @@ end
 kitten = Animal.new
 # ArgumentError (wrong number of arguments (given 0, expected 1))
 
-> kitten = Animal.new :sweet
-# #<Baz:0x007fb5331de210 @attitude=:sweet>
-> kitten.attitude
-# :sweet
 > kitten = Animal.new 'sweet'
 # #<Baz:0x007fb5331de210 @attitude="sweet">
 > kitten.attitude
