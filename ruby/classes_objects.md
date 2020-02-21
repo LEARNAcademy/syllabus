@@ -155,6 +155,7 @@ class Animal
   def attitude
     @attitude
   end
+  
 end
 
 # New instance of the class without an argument, which gives error:
