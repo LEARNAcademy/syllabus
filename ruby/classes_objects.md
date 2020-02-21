@@ -1,6 +1,6 @@
 # RUBY CLASSES
 
-In Ruby, all values are objects and all objects belong to a class. The class defines what data and behavior are defined in the object.
+In Ruby, all values are objects and all objects belong to a class. The class defines what data and behavior exist in the object.
 
 Note that this class concept is not (directly) related to JavaScript's class. A Ruby class is most similar in JavaScript to a prototype, but Ruby classes are a bit different.
 
