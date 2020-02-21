@@ -49,7 +49,7 @@ person_one.get_name
 ```
 
 ### Instance Variables
-The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @given_name belongs to class Person. Each "instance" of the class `Person` has it's own set of instance variables independent of other `Person` objects.
+The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @name belongs to class Person. Each "instance" of the class `Person` has it's own set of instance variables independent of other `Person` objects.
 
 You can't just access an instance variable from outside of an object, as you can with variables in JavaScript. Think local scope.
 
