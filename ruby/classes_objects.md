@@ -41,7 +41,7 @@ person_one = Person.new
 person_one.set_name('Jon Snow')
 ```
 
-Then you can call the method that contains the variable given_name:
+Then you can call the method that contains the variable `@name`:
 
 ```RUBY
 person_one.get_name
