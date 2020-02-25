@@ -84,6 +84,22 @@ class Greeter extends Component {
 
 export default Greeter
 ```
+
+## Alternative Dumb Component
+**src/components/Greeter.js**
+```javascript
+import React from 'react'
+
+// Greeter is a dumb/display component that does not hold state
+ const Greeter = (props) => {
+    // We are passing the state object value as props called "name" <name={ this.state.name }> from the parent App.js
+    return (
+      <h1>Hello, { props.name }! </h1>
+    )
+}
+
+export default Greeter
+```
 In the browser we will see: `Hello, Bob!`
 
 ## Step 3
@@ -156,6 +172,67 @@ class Greeter extends Component {
       <h1>Hello, { this.capitalizer(this.props.name) }! </h1>
     )
   }
+}
+
+export default Greeter
+```
+## Alternate Smart Component (passing methods to dumb components)
+**src/App.js**
+```javascript
+import React, { Component } from 'react'
+// importing the Greeter component
+import Greeter from './components/Greeter'
+
+class App extends Component{
+    constructor(props){
+      super(props)
+      // changing the state object to hold an empty string
+      this.state = {
+        name: ""
+      }
+    }
+  
+    handleChange = (event) => {
+      // a method that will take the value from an input and save it in the state key "name"
+      this.setState({ name: event.target.value })
+    }
+
+    capitalizer = (userInput) => {
+        // a display component can have its own methods that act on the information being passed as props
+        return userInput.toUpperCase()
+      }
+  
+    render() {
+      return (
+        <div>
+          {/* adding a JSX tag <input /> that will call the handleChange method and pass the value of the state object */}
+          <input
+            value={ this.state.name }
+            onChange={ this.handleChange }
+          />
+          {/* same information being passed as props to <Greeter /> */}
+          <Greeter
+            name={ this.state.name } capitalizer={this.capitalizer}
+          />
+        </div>
+      )
+    }
+  }
+  export default App
+  ```
+  
+## Alternate dumb component (using inherited methods)
+**src/components/Greeter.js**
+```javascript
+import React from 'react'
+
+const Greeter = (props) => {
+  // Greeter is a dumb/display component that does not hold state
+
+    return (
+      // calling a method and passing the information from the input
+      <h1>Hello, { props.capitalizer(props.name) }! </h1>
+    )
 }
 
 export default Greeter
@@ -258,6 +335,22 @@ export default NameInput
 - As a developer, I can create modification to the user input text by creating a method in my child component.
 
 ![Active Listening Robot Challenge](../assets/robot_active_listening.png)
+
+## Submit
+When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `handleFormSubmit`. 
+
+When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
+
+We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
+
+```javascript
+handleFormSubmit = event => {
+  event.preventDefault();
+  //whatever we want the form to do
+}
+```
+
+This code will prevent the form from submitting the form AND from refreshing the page. Make sure you add the necessary code AFTER the .preventDefault() method so that your form actually does something.
 
 ## 2) Mad Libs
 
