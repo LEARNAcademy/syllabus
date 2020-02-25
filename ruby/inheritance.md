@@ -3,23 +3,11 @@
 ## Class
 Class can be an abstract concept when you first come across it. To start, **class definition** describes the structure and behavior of a set of objects. Objects, meaning instances of a class, are realizations of a class that can be interacted with and store data. Objects are independent of each other. For example, with a class definition, we have the blueprint for an Apple. Objects allow us to interact with those classes directly in our code. Below we will use the "blueprint" of an apple to create some apples.
 
-**************************ADD PICS*************************
+<img src="https://i.ibb.co/TRdWxFp/download.jpg" alt="download" border="0">
+
+We just utilized the "DNA" of an apple (Class Apple), to make three brand new, independent apples with different data stored in "color".
 
 This style of programming is called object oriented, even if the programming to some extent focuses on classes.
-
-## Inheritance
-Inheritance is a relationship between two classes. For instance, an Apple `"is a"` Fruit. Apple and Fruit have an inheritance relationship based on their shared features.
-
-`Fruit` is the superclass ("super"/bigger) because it encompasses `Apple` and `Citrus`. The superclass will have the broader **class definition**. In this example, `Apple` is further down the inheritance hierarchy.
-
-Classes further down from the superclass have more features specific to what they are -- `Apple` has more specific features and characteristics than the broad umbrella `Fruit` -- making them more specialized.
-
-Inheritance means that classes inherit the external interface of the superclasses. Therefore, classes can access and use their superclass' methods. Remember, instance variables are specific to each new instance of a class. That means that instance variables are not inherited.
-
-<img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/12/original_is-a.png?1464387871"/>
-
-## has-a, has-many
-
 
 ### Ruby Inheritance
 Since inheritance is a relation between two classes, to create the relation we use `<`. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
@@ -63,6 +51,21 @@ my_dog = Lab.new("Pointer", "Jax").to_s #(Pointer, Jax)
 ```
 
 Because this code behaves as expected, you may be tempted to say that these variables are inherited. But remember, that is not how Ruby works. In the above code, Pointer defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable @breed, which makes those variables come into existence for a particular instance of Pointer.
+
+## Class Relationships
+Think about our example above. Pointer `"is_a"` Dog. Pointer and Dog have an inheritance relationship based on their shared features.
+
+`Dog` is the superclass ("super"/bigger) because it encompasses `Pointer` and `Shepherd`. The superclass should contain methods and variables that would be useful for the classes that inherit from it. In this example, `Pointer` is further down the inheritance hierarchy.
+
+Classes further down from the superclass have more features specific to what they are -- `Pointer` can have more specific features and characteristics than the broad umbrella `Dog` -- making them more specialized.
+
+Inheritance means that classes inherit the external interface of the superclasses. Therefore, classes can access and use their superclass' methods. Remember, instance variables are specific to each new instance of a class. That means that instance variables are not inherited.
+
+<img src="https://i.ibb.co/5LyRHj7/download.jpg" alt="download" border="0">
+
+
+## has_many, belongs_to
+
 
 
 ## Challenge: Car Challenge
