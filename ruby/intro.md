@@ -209,18 +209,6 @@ In Ruby variables do not require a declaration such as var, let, or const. In Ru
 
 > my_num            
 => 1
-
-> foo = 'foo'       
-=> "foo"
-
-> foo               
-=> "foo"
-
-> foo = foo + ' bar'
-=> "foo bar"
-
-> foo               
-=> "foo bar"
 ```
 
 ### String Interpolation
@@ -242,7 +230,6 @@ my_nums = [8, 9, 10, 11, 12, 13]
 ```
 
 ### Array Methods
-
 Just like strings you can call methods on arrays.
 
 ```ruby
@@ -293,7 +280,6 @@ Just like strings you can call methods on arrays.
 The append operator `<<` (a.k.a. "the shovel") basically sticks something at the end of the array.
 
 ### Accessors vs Mutators
-
 For the most part, Ruby methods are all accessors, meaning they do not mutate the object they are called on. For a method to permanently change the object it is called on, follow it with a bang operator.
 
 ```ruby
@@ -329,13 +315,15 @@ The `puts` (short for "put string") and `print` commands are both used to displa
 Example in IRB:
 ```ruby
 print "Hello World"
-Hello World => nil
+Hello World
+=> nil
 
 puts "Hello World"
 Hello World
 => nil
 ```
 In the example you can see differences and the newline the puts method adds.
+
 
 **Input:**
 Ruby also has a command for user input in the terminal called `gets`. It is a bit like `prompt()` in JavaScript. And just like `prompt()`, the input value from gets needs to be stored in a variable to access later.
