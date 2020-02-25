@@ -68,7 +68,7 @@ Alternatively, you can consider the colon to mean "thing named" so `id:` is "the
 A Symbol is the most basic Ruby object you can create. It's just a name and an internal ID. Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. Symbols are more efficient than strings. Two strings with the same contents are two different objects, but for any given name there is only one Symbol object. This can save both time and memory.
 
 
-Accessing a value from the hash:
+Accessing a value from the hash with a string:
 
 ```ruby
 > shopping_cart["granola"]
@@ -76,7 +76,7 @@ Accessing a value from the hash:
 ```
 
 ## Interacting with Ruby Hashes
-Accessing a value from the hash:
+Accessing a value from the hash with a symbol:
 
 ```ruby
 > shopping_cart[:granola]
@@ -90,14 +90,14 @@ Accessing a value from the hash:
 If no block is given, an enumerator is returned instead.
 
 ```ruby
-> shopping_cart = { "apples" => 5, "kiwis" => 2 } => {"apples"=>5, "kiwis"=>2}
+> shopping_cart = { "apples" => 5, "kiwis" => 2 }
 
 > shopping_cart.each do |key, value|
     puts "Get #{value} #{key} from the store."
   end
 
-Get 5 apples from the store.
-Get 2 kiwis from the store.
+=> Get 5 apples from the store.
+=> Get 2 kiwis from the store.
 => {"apples"=>5, "kiwis"=>2}
 ```
 
