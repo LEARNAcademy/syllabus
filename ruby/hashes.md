@@ -60,7 +60,7 @@ Accessing a value from the hash:
 
 ## each Loop and Hashes
 
-.each calls block once for each key in the hash, passing the key-value pair as parameters.
+.each calls a block once for each key in the hash, passing the key-value pair as parameters.
 
 If no block is given, an enumerator is returned instead.
 
