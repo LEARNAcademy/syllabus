@@ -56,10 +56,10 @@ For the rest of this class, we'll be using symbols for our keys, because symbols
 ## Symbols
 
 ### Symbols vs Strings
-Some people confuse symbols with variables, but they have nothing to do with variables. Instead, a symbol is a lot more like a string. As you know by now, strings are used to work with data, but symbols are identifiers. In the above example, `granola` representst the `@granola` instance variable. You should use symbols as names or labels for things (like methods) & use strings when you care more about the data (individual characters).
+Some people confuse symbols with variables, but they have nothing to do with variables. Instead, a symbol is a lot more like a string. As you know by now, strings are used to work with data, but symbols are identifiers. In the above example, `granola` represents the `@granola` instance variable. You should use symbols as names or labels for things (like methods) & use strings when you care more about the data (individual characters).
 
 ### Symbol Syntax
-The cool thing about symbols is that you don't have to pre-declare them and they're guaranteed to be unique. 
+The cool thing about symbols is that you don't have to pre-declare them and they're guaranteed to be unique.
 
 There's no need to assign some kind of value to a symbol - Ruby takes care of that for you. Ruby also guarantees that no matter where it appears in your program, a particular symbol will have the same value.
 
@@ -70,11 +70,10 @@ A Symbol is the most basic Ruby object you can create. It's just a name and an i
 
 Accessing a value from the hash:
 
-```RUBY
+```ruby
 > shopping_cart["granola"]
 # => "almond"
 ```
-
 
 ## Interacting with Ruby Hashes
 Accessing a value from the hash:

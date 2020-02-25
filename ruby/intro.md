@@ -226,7 +226,7 @@ String interpolation is replacing variables within a string with the values they
 Arrays are ordered collections of objects. Arrays can hold objects of any data type and each element can be reference by an index. Arrays are zero based, so the index of the first element is zero.
 
 ```ruby
-my_nums = [8, 9, 10, 11, 12, 13]
+nums = [8, 9, 10, 11, 12, 13]
 ```
 
 ### Array Methods
@@ -261,7 +261,9 @@ Just like strings you can call methods on arrays.
 
 # Reassign the value at a particular index in an array
 > nums[2] = 100
-=> [13, 12, 100, 11, 10, 9, 8]
+=> 100
+> nums
+=> [8, 9, 100, 11, 12, 13]
 
 # If the index doesn't exist, Ruby will assign the value and fill the in between indexes with nil
 > nums[20] = 23
