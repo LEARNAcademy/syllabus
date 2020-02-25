@@ -2,7 +2,7 @@
 
 ## If/Else/End
 
-Conditionals in Ruby use the keywords `if` `else` and `end`. Simple evaluations in Ruby don't need to be wrapped in () and code blocks don't have {} so indentation is super important. Just like JavaScript the else block is a catch all and does not take an evaluation.
+Conditionals in Ruby use the keywords `if` `else` and `end`. Simple evaluations in Ruby don't need to be wrapped in (), and code blocks don't have {}. So, indentation is super important. Just like JavaScript, the else block is a catch all and does not take an evaluation.
 
 ```Ruby
 my_num = 1
@@ -15,7 +15,7 @@ end
 
 ## If/Elsif/Else/End
 
-To add additional evaluations to an `if/else` code block, Ruby offers the keyword `elsif`. After the if statement you can use as many `elsif` statements as you want. Ending with an `else` will capture all the leftover possibilities.
+To add additional evaluations to an `if/else` code block, Ruby offers the keyword `elsif`. After the if statement, you can use as many `elsif` statements as you want. Ending with an `else` will capture all the leftover possibilities.
 
 ```RUBY
 my_num = 1
@@ -30,7 +30,7 @@ end
 
 ## Unless
 
-Ruby also offers `unless` as a way to make conditional statements. `Unless` is just like if !(...). It is just like an `if` in reverse. It's a conditional statement that executes only if the condition is false, instead of true.
+Ruby also offers `unless` as a way to make conditional statements. `Unless` is just like if !(...). It is just like an `if` in reverse. It's a conditional statement that executes only if the condition is false instead of true.
 
 ```RUBY
 x = 1
