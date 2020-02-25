@@ -1,16 +1,12 @@
-# React Forms and Passing Props
+# React Formss
 
 ## Previous Lecture
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
 
-## Overview
-- Taking a closer look at managing state in components
-- Handling state changes in components
-- Managing the internal state of a component with state and communicating state between components with props
+
 - Adding a form to a component that will update state
 
-## Learning Objectives
-- Understanding how a component passes information from state to another component as props
+
 - Adding input fields
 - Creating a method to handle DOM event changes (what the user types)
 - Creating a method to set state with the user input
