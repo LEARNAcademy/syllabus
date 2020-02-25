@@ -55,7 +55,7 @@ end
 
 ## Unless
 
-Ruby also offers `unless` as a way to make conditional statements. `Unless` is just like if !(...). It is just like an `if` in reverse. It's a conditional statement that executes only if the condition is false, instead of true.
+Ruby also offers `unless` as a way to make conditional statements. `Unless` is just like if !(...). It is just like an `if` in reverse. It's a conditional statement that executes only if the condition is false instead of true.
 
 ```ruby
 my_num = 10
