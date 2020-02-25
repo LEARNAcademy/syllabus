@@ -66,7 +66,73 @@ Inheritance means that classes inherit the external interface of the superclasse
 
 ## has_many, belongs_to
 
+There's specific terminology that exists when referring to the different relationships between objects. These terms will come into play more when we get into databases, etc. but it's valuable to make a habit of being aware of these realtionships. 
 
+For example, take this class called `Artist`.
+
+```RUBY
+class Artist
+  # initialize method ensures that every instance of "Artist" will have a name and an empty array for songs
+  def initialize(name)
+    @name = name
+    @songs = []
+  end
+
+  def name
+    # get method to expose @name to other objects
+    @name
+  end
+
+  def add_songs(song)
+    # method to add songs to @song array using shovel operator
+    @songs << song
+  end
+
+  def songs
+    #get method to expose @song array to other objects
+    @songs
+  end
+end
+```
+
+The as you can see, `Artist` has the ability to hold some songs. Let's create a class called `Songs` as a blueprint for all other song objects.
+
+```RUBY
+class Songs
+  # initialize method to ensure all new instances of "Song" will have a title
+  def initialize(title)
+    @title = title
+  end
+
+  def title
+    #get method to expose @title to other objects
+    @title
+  end
+end
+```
+
+Now we can bring it all together:
+
+```RUBY
+# Create a new instance of Artist
+`britney = Artist.new("Britney Spears")`
+
+# Create some new instances of Song
+song1 = Songs.new("Baby One More Time")
+song2 = Songs.new("Sometimes")
+song3 = Songs.new("Toxic")
+
+# Call the function "add_songs" from the "britney" instance of Artist. Pass in the new instances of Song we created above.
+britney.add_songs(song1.name)
+britney.add_songs(song2.name)
+britney.add_songs(song3.name)
+
+# display all of britney's songs
+p britney.songs
+#["Baby One More Time", "Sometimes", "Toxic"]
+```
+
+Congrats we've made some relationships between objects! In this example, `britney` **has_many** `songs`, and each song belongs_to `britney`. Objects don't always have_many, though. Think about Britney Spears' body guard in the early 2000's. Let's assume that person had to guard Britney full-time. That relationship would be `body_guard` **has_one** client.
 
 ## Challenge: Car Challenge
 
