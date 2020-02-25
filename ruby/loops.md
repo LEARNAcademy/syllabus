@@ -1,70 +1,146 @@
-# Ruby Loops
+# Ruby Loops and Higher Order Functions
 
-Ruby has lots of looping methods. Ruby uses the basic `do/end` keywords to create a block. By adding a method we can create iteration.
+## Overview
+- Ruby has lots of looping methods
+- Ruby uses the basic `do/end` keywords to create a block or {}
+
+## Learning Objectives
+- Interacting with Ruby loops
+- Exploring the do/end vs {} syntax
+
+## Vocabulary
+- do/end
+- times do
+- each do
+- map
+- blocks
+
+## Set Up
+- Create a file with the extension `.rb`
+- In terminal run `ruby` followed by the file name
 
 ## times do
 
 Time Loop will repeat code a certain number of times.
 
-```RUBY
-> my_num = 5   
-      # => 5
+```ruby
+my_num = 5
+=> 5
+
 > my_num.times do
->   puts 'hello'
-> end
-      # => "hello"
-      # => "hello"
-      # => "hello"
-      # => "hello"
-      # => "hello"
-      # => 5
-  >
+   puts 'hello'
+ end
+
+hello
+hello
+hello
+hello
+hello
+=> 5
 ```
 
 ## each do
 
 Each loop will let you do something with every element of an array.
 
-```RUBY
-> my_array = [1, 2, 3]
+```ruby
+> nums = [1, 2, 3]
 
-> my_array.each do |element|
-    puts element
+> nums.each do |value|
+    puts value
   end
-# 1
-# 2
-# 3
-# => [1, 2, 3]
+1
+2
+3
+=> [1, 2, 3]
 
-> my_array   
-# => [1, 2, 3]
+> nums  
+=> [1, 2, 3]
 ````
 Note the original array is untouched.
+
+## Ruby Blocks
+
+Ruby has anonymous functions similar to JavaScript. They are called blocks. Blocks can be created with the `do/end` keywords **OR** with {}.
+
+```ruby
+# Block with a `do/end`
+> nums.each do |value|
+    puts value
+  end
+1
+2
+3
+=> [1, 2, 3]
+
+
+# Block with {}
+> nums.each { |value| puts value }
+1
+2
+3
+=> [1, 2, 3]
+```
+
+Blocks can have multiple parameters.
+
+```ruby
+# Block with a `do/end`
+> nums.each_with_index do |value, index|
+    puts "#{index.to_s} #{value.to_s}"
+  end
+0 1
+1 2
+2 3
+=> [1, 2, 3]
+
+
+# Block with {}
+> nums.each_with_index { |value, index| puts "#{index.to_s} #{value.to_s}" }
+0 1
+1 2
+2 3
+=> [1, 2, 3]
+```
 
 ## map
 
 Ruby's map method also lets you do something with every element of an array. Map returns a new array filled with whatever gets returned by the block each time it runs.
 
-````RUBY
+```ruby
 > my_array = [1, 2, 3]
 
-> my_array.map do |n|
-    n * n
+# Block with a `do/end`
+> my_array.map do |value|
+    value * value
   end
-# => [1, 4, 9]
+=> [1, 4, 9]
 
 > my_array
-# => [1, 2, 3]
+=> [1, 2, 3]
 
-# --or--
+# --OR--
 
-> my_array.map { |n| n * n }
-# => [1, 4, 9]
+# Block with {}
+> my_array.map { |value| value * value }
+=> [1, 4, 9]
 
 > my_array                   
-# => [1, 2, 3]
-````
-Note the original array is untouched.
+=> [1, 2, 3]
+```
+Note the original array is untouched. To modify the original array use the bang operator.
+
+```ruby
+> my_array = [1, 2, 3]
+
+> my_array.map! do |value|
+    value * value
+  end
+=> [1, 4, 9]
+
+> my_array
+=> [1, 4, 9]
+```
 
 
 ## Challenges
