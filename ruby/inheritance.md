@@ -7,7 +7,7 @@ Class can be an abstract concept when you first come across it. To start, **clas
 
 We just utilized the "DNA" of an apple (Class Apple), to make three brand new, independent apples with different data stored in "color".
 
-This style of programming is called object oriented, even if the programming to some extent focuses on classes.
+This style of programming is called object-oriented, even if the programming focuses on classes to some extent.
 
 ### Ruby Inheritance
 Since inheritance is a relation between two classes, to create the relation we use `<`. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
