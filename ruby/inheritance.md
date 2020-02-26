@@ -98,7 +98,7 @@ end
 The as you can see, `Artist` has the ability to hold some songs. Let's create a class called `Songs` as a blueprint for all other song objects.
 
 ```RUBY
-class Songs
+class Song
   # initialize method to ensure all new instances of "Song" will have a title
   def initialize(title)
     @title = title
@@ -115,12 +115,12 @@ Now we can bring it all together:
 
 ```RUBY
 # Create a new instance of Artist
-`britney = Artist.new("Britney Spears")`
+britney = Artist.new("Britney Spears")
 
 # Create some new instances of Song
-song1 = Songs.new("Baby One More Time")
-song2 = Songs.new("Sometimes")
-song3 = Songs.new("Toxic")
+song1 = Song.new("Baby One More Time")
+song2 = Song.new("Sometimes")
+song3 = Song.new("Toxic")
 
 # Call the function "add_songs" from the "britney" instance of Artist. Pass in the new instances of Song we created above.
 britney.add_songs(song1.name)
