@@ -61,7 +61,7 @@ Classes further down from the superclass have more features specific to what the
 
 Inheritance means that classes inherit the external interface of the superclasses. Therefore, classes can access and use their superclass' methods. Remember, instance variables are specific to each new instance of a class. That means that instance variables are not inherited.
 
-<img src="https://i.ibb.co/5LyRHj7/download.jpg" alt="download" border="0">
+<img src="https://i.ibb.co/mNjcxpy/download.jpg" alt="download" border="0">
 
 
 ## has_many, belongs_to
