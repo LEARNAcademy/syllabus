@@ -5,6 +5,22 @@ https://player.vimeo.com/video/137862869
 Putting the 'Relational' in 'Relational Databases'
 
 ## Table aliases
+**From W3Schools**
+> SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+> Aliases are often used to make column names more readable.
+
+>An alias only exists for the duration of the query.
+
+> Aliases can be useful when:
+> - There are more than one table involved in a query
+> - Functions are used in the query
+> - Column names are big or not very readable
+> - Two or more columns are combined together
+
+[SQL Aliases - https://www.w3schools.com/sql/sql_alias.asp](https://www.w3schools.com/sql/sql_alias.asp)
+
+
 ![Table Aliases](/assets/sql-lessons/joins/table-aliases.png)
 
 ## Aliases in SELECT clauses
