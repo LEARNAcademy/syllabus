@@ -41,13 +41,13 @@ class Pointer < Dog
   
 end 
 
-my_dog = Lab.new("Pointer", "Jax").to_s 
+my_dog = Pointer.new("Pointer", "Jax").to_s 
 ```
 
 The to_s method in class Pointer references @breed variable from the superclass Dog. This code works as you probably expect it to:
 
 ```RUBY
-my_dog = Lab.new("Pointer", "Jax").to_s #(Pointer, Jax)
+my_dog = Pointer.new("Pointer", "Jax").to_s #(Pointer, Jax)
 ```
 
 Because this code behaves as expected, you may be tempted to say that these variables are inherited. But remember, that is not how Ruby works. In the above code, Pointer defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable @breed, which makes those variables come into existence for a particular instance of Pointer.
@@ -123,9 +123,9 @@ song2 = Song.new("Sometimes")
 song3 = Song.new("Toxic")
 
 # Call the function "add_songs" from the "britney" instance of Artist. Pass in the new instances of Song we created above.
-britney.add_songs(song1.name)
-britney.add_songs(song2.name)
-britney.add_songs(song3.name)
+britney.add_songs(song1.title)
+britney.add_songs(song2.title)
+britney.add_songs(song3.title)
 
 # display all of britney's songs
 p britney.songs
