@@ -34,16 +34,29 @@
 - Write the tests and the code in the same file
 - $ yarn jest
 
+## Testing Code
+One of the fastest ways to prove to future employers that you care about your code, and know what you are doing is to write good tests.  Your tests speak volumes about you as a developer, as much or more than the actual code.  Not all developers do this, so you can easily set yourself apart.  It's almost like cheating the job hunt.  Show off your tests and you'll get lots of second interviews.
+
+In short, there is no end to the winning when you write tests for your code.  You win, your coworkers win, your employer wins, your users win, and your future self wins when you come back to the code in 6 months.
+
 
 ## Why Test?
+- Better Code
+- Less Bugs
+- Help your job hunt
 - Forces the developer to think about the input and output before beginning to code
 - Avoid feature creep - stay focused on essential piece of the program
 - Tests can save you lots of time bug fixing a new feature
 - Communicates to other developers the intent of the function
-- Allows for "safe" refactoring of code
+- Allows for "safe" and confident refactoring of code
 
 ## TDD
 **Test Driven Development**
+There is another, and even more powerful benefit to writing tests for your code as well.  When we write our tests first, then write the code required to make them pass, we as developers, are think about our code in a different, more logical way.  Breaking the code into a series of tests helps us break the big problem down into much smaller ones, and smaller problems are easier to solve, so we write dramatically better code because of it.
+
+If that is not enough to convince you to write great tests for your code, here is one more benefit, which is equally as important.  If you have solid tests, and decide that you want to refactor some part of your application because either the requirements of the application changed, or you have realized a better way, you are free to do so with confidence.  During the entire refactor, you are confident that you aren't braking your app because your tests pass.  Its incredibly liberating!
+
+**Process**
 - Write the test first
 - Run your testing suit to see a failing test
 - Write the code
