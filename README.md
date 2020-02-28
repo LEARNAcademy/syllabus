@@ -57,17 +57,14 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 1. [Ruby Intro](./ruby/intro.md)
 2. [Ruby Conditionals](./ruby/conditionals.md)
-2. [Ruby Methods](./ruby/methods.md)
-2. [Ruby Loops](./ruby/loops.md)
-2. [Ruby Hashes](./ruby/hashes.md)
-3. [Ruby Classes and Objects](./ruby/classes_objects.md)
-4. [Ruby Inheritance](./ruby/inheritance.md)
-6. [Ruby Testing with RSPEC](./ruby/rspec.md)
+3. [Ruby Methods](./ruby/methods.md)
+4. [Ruby Loops](./ruby/loops.md)
+5. [Ruby Hashes](./ruby/hashes.md)
+6. [Ruby Classes and Objects](./ruby/classes_objects.md)
+7. [Ruby Inheritance](./ruby/inheritance.md)
+1. [Ruby Testing with RSPEC](./ruby/rspec.md)
 1. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
 
-**Additional Topics**:
-- [Ruby Test Driven Development](./ruby/tdd.md)
-- [Ruby Behavior Driven Development](./ruby/bdd.md)
 
 
 ## Unit Five: Ruby on Rails Models and Postgres
