@@ -25,7 +25,6 @@
 
 ## Useful Commands
 - $ gem install rspec
-- $ rspec spec
 
 ## Additional Resources
 - <a href="http://betterspecs.org" target="blank">Better Specs</a>, which shows tons of examples of what you should and shouldn't do with RSpec
