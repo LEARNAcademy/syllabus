@@ -137,7 +137,7 @@ Imagine that we want to change the ```<p>``` text to read "Welcome to LEARN".  L
 ### Failing test output
 Notice the running test command you have,  It has notice that we made a code change, and re-run our test for us.  ... And we have a failing test!  This is a very good thing, as we know what we now need to do to our code.
 
-![failing-enzyme-test](../../assets/cat-tinder/failing-enzyme-test.png)
+![failing-enzyme-test](../assets/failing-enzyme-test.png)
 
 ### Getting our test GREEN
 
@@ -155,7 +155,7 @@ Our test lets us know exactly what we need to do to get it to pass, so let's do 
   </p>
 ```
 
-![passing-enzyme-test](../../assets/cat-tinder/passing-enzyme-test.png)
+![passing-enzyme-test](../assets/passing-enzyme-test.png)
 
 ## Jest Matchers
 

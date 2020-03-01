@@ -1,4 +1,4 @@
-# React Formss
+# React Forms
 
 ## Previous Lecture
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
@@ -187,7 +187,7 @@ class App extends Component{
         name: ""
       }
     }
-  
+
     handleChange = (event) => {
       // a method that will take the value from an input and save it in the state key "name"
       this.setState({ name: event.target.value })
@@ -197,7 +197,7 @@ class App extends Component{
         // a display component can have its own methods that act on the information being passed as props
         return userInput.toUpperCase()
       }
-  
+
     render() {
       return (
         <div>
@@ -216,7 +216,7 @@ class App extends Component{
   }
   export default App
   ```
-  
+
 ## Alternate dumb component (using inherited methods)
 **src/components/Greeter.js**
 ```javascript
@@ -330,12 +330,12 @@ export default NameInput
 - As a developer, I can see the child components display the user input.
 - As a developer, I can create modification to the user input text by creating a method in my child component.
 
-![Active Listening Robot Challenge](../assets/robot_active_listening.png)
+![Active Listening Robot Challenge](./assets/robot_active_listening.png)
 
 ## Submit
-When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `handleFormSubmit`. 
+When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `handleFormSubmit`.
 
-When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere). 
+When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere).
 
 We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
 
@@ -358,7 +358,7 @@ This code will prevent the form from submitting the form AND from refreshing the
 - As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms to create a funny story.
 - As a user, I can click a 'Clear' button that removes the story and the text inputs and returns the page to the original state.
 
-![Mad Libs](../assets/madlibs.png)
+![Mad Libs](./assets/madlibs.png)
 
 
 [Go to next lesson: Intro to Ruby](../ruby/intro.md)

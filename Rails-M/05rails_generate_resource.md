@@ -25,7 +25,7 @@ rails generate resource Guitar strings:integer manufacturer:string model:string 
 
 Rails does some work for me and I receive this output:
 
-![Generate Resource Output](../assets/generate-resource.png)
+![Generate Resource Output](./assets/generate-resource.png)
 
 With that one command, Rails creates just about everything I need to start working with guitars as a data resource.
 
@@ -45,7 +45,7 @@ rails routes
 
 There's a lot that's output to the screen but lets focus on this section:
 
-![Resource Routes](../assets/resource-routes.png)
+![Resource Routes](./assets/resource-routes.png)
 
 What we see is that Rails generated all the routes required for us to build out the CRUD functionality for our guitars. All we really need to do is tell our controller what we want it do for each request.
 
@@ -65,7 +65,7 @@ From looking at my `rails routes` output I can see that I need to create an `ind
 ```ruby
 class GuitarsController < ApplicationController
 
-    def index 
+    def index
         @guitars = Guitar.all
         render json: @guitars
     end

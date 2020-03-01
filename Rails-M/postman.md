@@ -8,7 +8,7 @@ This page provides an overview of the Postman tool and a couple of examples to h
 
 The request dashboard of Postman looks something like this:
 
-![Postman Layout](../assets/postman/postman-interface-layout.png)
+![Postman Layout](./assets/postman-interface-layout.png)
 
 Here we've highlighted the essential sections of the interface. The first 3 components (verb selector, url input, and send button) are the main components that allow you set up and make a request. The response section is where you can expect the result of a request. There are a few more important pieces to the interface but their utility is best demonstrated through example.
 
@@ -20,11 +20,11 @@ This is the simplest kind of request we can make so let's start with that.
 2) Enter the url that points to the index method of your application.
 3) Click **Send**   
 
-![Get Request with Postman](../assets/postman/postman-get-send.png)
+![Get Request with Postman](./assets/postman-get-send.png)
 
 That result should appear in the response section at the bottom of the page as JSON:
 
-![Get Response in Postman](../assets/postman/postman-index-json.png)
+![Get Response in Postman](./assets/postman-index-json.png)
 
 ## A POST in Postman
 
@@ -38,8 +38,8 @@ POST type requests through Postman are a little more involved.
 6) Add the appropriate JSON
 7) Click **Send**
 
-![Post Request in Postman](../assets/postman/postman-post-send.png)
+![Post Request in Postman](./assets/postman-post-send.png)
 
 That result should appear in the response section at the bottom of the page as JSON:
 
-![Post Response in Postman](../assets/postman/postman-create-json.png)
+![Post Response in Postman](./assets/postman-create-json.png)

@@ -21,21 +21,21 @@ Putting the 'Relational' in 'Relational Databases'
 [SQL Aliases - https://www.w3schools.com/sql/sql_alias.asp](https://www.w3schools.com/sql/sql_alias.asp)
 
 
-![Table Aliases](/assets/sql-lessons/joins/table-aliases.png)
+![Table Aliases](./assets/joins/table-aliases.png)
 
 ## Aliases in SELECT clauses
-![Alias in SELECT](/assets/sql-lessons/joins/alias-in-select.png)
+![Alias in SELECT](./assets/joins/alias-in-select.png)
 
 ## Aliases in ON clauses
-![Alias in ON Clause](/assets/sql-lessons/joins/alias-on-clause.png)
+![Alias in ON Clause](./assets/joins/alias-on-clause.png)
 
 ## JOINs in FROM
 * specifies a table or set
 * Join gives us all the fields from all the sets that match the ON clause
 
-![Using ON in FROM](/assets/sql-lessons/joins/using-on-in-from.png)
+![Using ON in FROM](./assets/joins/using-on-in-from.png)
 
-![ON In FROM](/assets/sql-lessons/joins/on-in-from-2.png)
+![ON In FROM](./assets/joins/on-in-from-2.png)
 
 #### Using JOINS in the rest of our query
 * The result of a JOIN is a set
@@ -43,7 +43,7 @@ Putting the 'Relational' in 'Relational Databases'
 
 Join gives us all the fields from all the combinations of rows that match the ON clause
 
-![result of joins](/assets/sql-lessons/joins/result-of-join.png)
+![result of joins](./assets/joins/result-of-join.png)
 
 ## Three-way JOINs
 
@@ -121,11 +121,11 @@ https://player.vimeo.com/video/137863295
 In our countries database, how would we list all countries along with their capital cities?
 What happens if some countries don't have a capital city record?
 
-![left outer joins](/assets/sql-lessons/joins-2/left-outer-join.png)
+![left outer joins](./assets/joins-2/left-outer-join.png)
 
 We can look for sets that specifically are missing the right side of a join
 
-![left outer join with null](/assets/sql-lessons/joins-2/left-outer-join-null.png)
+![left outer join with null](./assets/joins-2/left-outer-join-null.png)
 # Challenges
 
 ### Country Database Join Challenge

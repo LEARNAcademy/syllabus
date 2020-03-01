@@ -221,7 +221,7 @@ The button in `GreetPerson` is responsible for calling the method in our parent 
 
 Using a well thought out state tree and nested component structure, construct an application that rolls a die and keeps track of the numbers rolled.  Here is a wireframe to help you start planning your application:
 
-![dice game](../assets/dice-game.png)
+![dice game](./assets/dice-game.png)
 
 - As a user, I can see an application called Dice Roller
   - As a developer, I can create a React application with `App.js` as my stateful component

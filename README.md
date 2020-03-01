@@ -42,7 +42,7 @@ React is a powerful Javascript library used to build more complicated web applic
 Here we explore more of what React offers and do our first multi-day project.
 
 1. [React Props](./react/props.md/)
-7. [React Forms and Functional Props](./react/forms.md/)
+2. [React Forms and Functional Props](./react/forms.md/)
 
 **Additional Topics**:
 
@@ -62,12 +62,12 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 5. [Ruby Hashes](./ruby/hashes.md)
 6. [Ruby Classes and Objects](./ruby/classes_objects.md)
 7. [Ruby Inheritance](./ruby/inheritance.md)
-1. [Ruby Testing with RSPEC](./ruby/rspec.md)
-1. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
+8. [Ruby Testing with RSPEC](./ruby/rspec.md)
+9. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
 
 
 
-## Unit Five: Ruby on Rails Models and Postgres
+## Unit Five: Intro to Postgres and Ruby on Rails Models
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 

@@ -68,7 +68,7 @@ This commmand will generate our spec file at this path **spec/models/contact_spe
 
 To test out our spec setup we can run `rspec`. If it's set up correctly, we'll see pending tests for our contact model:
 
-![Pending Tests](../../assets/rspec-rails-models/rspec-models-pending.png)
+![Pending Tests](../assets/rspec-models-pending.png)
 
 That pending message is set up in the generated spec file (**spec/models/contact_spec.rb**):
 
@@ -95,7 +95,7 @@ Here our spec checks that there are errors for the name field if we attempt to c
 
 When we run our specs we should see it fail as expected, receiving an empty errors array for the name field.
 
-![Failing Name Presence](../../assets/rspec-rails-models/rspec-models-failing.png)
+![Failing Name Presence](../assets/rspec-models-failing.png)
 
 We write just enough code for it to pass.
 
@@ -109,7 +109,7 @@ end
 
 When we run our specs again, we'll see it pass.
 
-![Failing Name Presence](../../assets/rspec-rails-models/rspec-models-passing.png)
+![Failing Name Presence](../assets/rspec-models-passing.png)
 
 Let's go ahead and apply a presence validation to emails as well.
 
@@ -165,7 +165,3 @@ end
 If we run our tests now, we'll see that we're passing.
 
 This is the workflow that we can use to add model tests as the required data for our application evolves. As you are writing specs, it often helps to think of other ways that bad data can break your application. When you can think about your application in this way, you can begin to see the other ways that your data ought to be tested.
-
-
-
-
