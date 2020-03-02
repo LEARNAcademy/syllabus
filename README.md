@@ -66,28 +66,22 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 9. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
 
 
-
-## Unit Five: Intro to Postgres and Ruby on Rails Models
+## Unit Five: Intro to Postgres and Ruby on Rails Model
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
 1. [Intro to Postgres](./sql/intro_postgres.md)
-1. [Postgres Joins](./sql/08rails_sql_joins.md)
-1. [Intro to Rails](./Rails-C&V/rails_intro.md)
-1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
+2. [Postgres Joins](./sql/08rails_sql_joins.md)
+3. [Intro to Rails](./rails_model/intro.md)
+1. [Intro to Active Record ](./rails_model/01intro_active_record.md)
 1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
-1. [ActiveRecord Query Syntax](./Rails-M/03_rails_active_record_query_syntax.md)
+1. [Active Record Relationships ](./rails_model/02rails_activerecord_relationships.md)
+1. [ActiveRecord Query Syntax](./rails_model/03_rails_active_record_query_syntax.md)
+1. [Challenge: Active Record Tasks ](./rails_model/03rails_active_record_tasks.md)
+1. [Challenge: Active Record Task List](./rails_model/04rails_active_record_tasklist.md)
 1. [Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
-1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
-1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
-### Bonus Material
-
-- [RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
-- [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
-- [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Full Stack Ruby on Rails
 
