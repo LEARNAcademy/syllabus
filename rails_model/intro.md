@@ -47,6 +47,6 @@ or
 
 [Go to next lesson: Rails Active Record Introduction](./active_record_intro.md)
 
-[Back to Postgresql Joins](../sql/08_rails_sql_joins.md)
+[Back to Postgresql Joins](../sql/08rails_sql_joins.md)
 
 [Back to Syllabus](../README.md)
