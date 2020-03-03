@@ -1,4 +1,4 @@
-# Rails Introduction
+# Ruby on Rails Introduction
 
 ## Overview
 - "Learning to build a modern web application is daunting. Ruby on Rails makes it much easier and more fun. It includes everything you need to build fantastic applications, and you can learn it with the support of our large, friendly community." -- Rails Docs

@@ -243,6 +243,6 @@ Created database 'rolodex_test'
 
 [Go to next lesson: Rails Active Record Migrations](./migrations.md)
 
-[Back to Rails Introduction](./intro.md)
+[Back to Ruby on Rails Introduction](./intro.md)
 
 [Back to Syllabus](../README.md)
