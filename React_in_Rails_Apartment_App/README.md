@@ -20,3 +20,24 @@ The Devise documentation is also great. Devise is so flexible and ubiquitous, th
 2. [React and Rails Together](./01-react-in-rails/02_Hello_World.md)
 2. [Single Page React App in Rails](./01-react-in-rails/03_single_page_app.md)
 3. [Putting it all together](./03_devise_and_react_together.md)
+
+
+
+
+
+### A Word about Devise
+If you are changing the columns on your User model that is using Devise, and you want to add those params to the user registration form, you need to let Devise know about the new parameters.  Devise doesn't normally expose its controller methods to us to update the strong params like we would another controller, so we need to handle it a bit differently.  To do this for the example above of adding first_name and last_name, we update the ApplicationController like so:
+
+```ruby
+class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+  end
+end
+```
+
+You can [read more about Devise and strong params here](https://github.com/plataformatec/devise#strong-parameters).
