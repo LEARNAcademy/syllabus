@@ -72,3 +72,12 @@ end
 $ rails db:migrate
 
 The database schema is now updated!
+
+
+Rails Active Record Introduction
+
+[Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
+
+[Back to Rails Active Record Introduction](./active_record_intro.md)
+
+[Back to Syllabus](../README.md)

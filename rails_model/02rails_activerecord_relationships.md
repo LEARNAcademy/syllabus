@@ -84,6 +84,18 @@ phone.contact
 Notice that we do not have to use any IDs, foreign keys or joins -- life is good!
 
 
+Foreign Key columns are named according to the related table name in singular with `_id` appended.
+
+For Example:
+
+Model file will look like:
+`to_do.rb`
+Class name inside the `to_do.rb` file:
+`class ToDo`
+Table name will be snake_case plural:
+`to_dos`
+Foreign key column linking to the `to_dos` table:
+`to_do_id`
 
 
 
@@ -106,7 +118,6 @@ Here is a decent schema to start out with:
 
 ![CC and Owner schmea](./assets/cc-owner-schema.jpeg)
 
-Check that everything is in the database from `psql`.
 
 ### Stretch Challenge
 

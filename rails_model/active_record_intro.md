@@ -1,4 +1,4 @@
-# Active Record Introduction
+# Rails Active Record Introduction
 
 ## Video: Active Record Details
 [![YouTube](http://img.youtube.com/vi/R5vpRwpWctY/0.jpg)](https://www.youtube.com/watch?v=R5vpRwpWctY)
@@ -239,3 +239,10 @@ Created database 'rolodex_test'
 ## Stretch Challenges
 - Update all the family members with the same last_name as you, to have the same phone number as you.
 - Remove all family members that do not have your last_name.
+
+
+[Go to next lesson: Rails Active Record Migrations](./migrations.md)
+
+[Back to Rails Introduction](./intro.md)
+
+[Back to Syllabus](../README.md)
