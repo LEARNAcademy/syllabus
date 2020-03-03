@@ -73,6 +73,13 @@ $ rails db:migrate
 
 The database schema is now updated!
 
+## Challenges
+- Create a new rails application called favorite_movies
+- Create the database
+- Generate a model with a title attribute and a genre attribute
+- Add five entries to the database in Rails console
+- Create a migration to add a new column to the database called movie_length
+- Update the values of the existing attributes to include a movie_length value
 
 [Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
 

@@ -13,14 +13,9 @@
 ## Additional Resources
 - <a href="https://guides.rubyonrails.org/active_record_querying.html" target="blank">Active Record Docs</a>
 
-## Set Up
 
-
-
-
-
-  We only need to learn a few rules specific to ActiveRecord in order to unlock a powerful tool to interact with the database.
-# SQL vs. Active Record
+## SQL vs. Active Record
+We only need to learn a few rules specific to ActiveRecord in order to unlock a powerful tool to interact with the database.
 
 Active Record is a Rails-specific wrapper for SQL queries. It's shorter, easier to type, and often looks nicer, but under the hood it's the same old SQL.
 
