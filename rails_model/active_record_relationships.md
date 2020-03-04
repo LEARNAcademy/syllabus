@@ -1,20 +1,23 @@
-# Active Record One-to-Many Relationships
+# Rails Active Record Relationships
 
+## Video: Active Record Associations
 [![YouTube](http://img.youtube.com/vi/CM520EfUI7k/0.jpg)](https://www.youtube.com/watch?v=CM520EfUI7k)
-]
+## Video: Foreign Keys
+[![YouTube](http://img.youtube.com/vi/QpFPd4tlGoA/0.jpg)](https://www.youtube.com/watch?v=QpFPd4tlGoA)
+
+## Overview
 
 ## Read the Docs
 There is a lot to Active Record relationships.  Read the documentation to see all the ways that Active Record can [help you leverage the power of SQL relationships](https://guides.rubyonrails.org/association_basics.html)
 
-## Set Up Table
+
 
 From the Command line:
 
 ```bash
-bundle exec  rails generate migration CreatePhones
+rails generate model CreatePhones
 ```
 
-Fill out the migration with:
 
 ```ruby
 class CreatePhones < ActiveRecord::Migration[5.2]
@@ -99,11 +102,13 @@ Foreign key column linking to the `to_dos` table:
 
 
 
-# Challenges
+## Challenge: Credit Cards and Owners
 
-## Create a Database
+## Set Up
+- Create a new rails application and database
+- Create a model for credit card
 
-After making your Rails app and creating the database, create migrations to generate the following tables:
+
 A credit card has a number, an expiration date, and an owner. An owner has a name and address, and can have multiple credit cards.
 
 ## Manipulating Data
@@ -122,4 +127,4 @@ Here is a decent schema to start out with:
 ### Stretch Challenge
 
 * Add a credit limit to each card
-* Using Active Record in `rails console`, find the total credit extended to the owner with two credit cards
+* Find the total credit extended to the owner with two credit cards

@@ -8,6 +8,9 @@ As a programmer, I can create a new Task record with a title, which is a string,
 As a programmer, I can list all Task records.
 
 **Story**:
+As a programmer, I can add a 'done' attribute to my Task.
+
+**Story**:
 As a programmer, I can set a Task record to done given the ID of the record.
 
 **Story**:
