@@ -1,4 +1,4 @@
-# Active Record Validations
+# Rails Active Record Validations
 
 Data validations can be used in the model `class` to insure incomplete, invalid, or incorrect data from being saved in the database.
 

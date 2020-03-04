@@ -76,7 +76,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Intro to Active Record](./rails_model/active_record_intro.md)
 1. [Rails Migrations](./rails_model/migrations.md)
 1. [Challenge: Active Record Tasks](./rails_model/challenge_active_record_tasks.md)
-1. [Active Record Relationships ](./rails_model/active_record_relationships.md)
+1. [Active Record Associations](./rails_model/active_record_associations.md)
 1. [Challenge: Active Record Task List](./rails_model/challenge_active_record_tasklist.md)
 1. [Active Record Validations](./rails_model/active_record_validations.md)
 1. [Active Record Query Syntax](./rails_model/active_record_query_syntax.md)
