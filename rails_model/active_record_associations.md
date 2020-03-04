@@ -28,10 +28,10 @@
 
 #### Creating a new Rails app:
 ```
-rails new my_app -d postgresql -T
-cd my_app
-rails db:create
-rails server
+$ rails new my_app -d postgresql -T
+$ cd my_app
+$ rails db:create
+$ rails server
 ```
 
 In a browser navigate to:

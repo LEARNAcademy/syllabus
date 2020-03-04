@@ -39,10 +39,10 @@
 
 #### Creating a new Rails app:
 ```
-rails new dog_app -d postgresql -T
-cd dog_app
-rails db:create
-rails server
+$ rails new dog_app -d postgresql -T
+$ cd dog_app
+$ rails db:create
+$ rails server
 ```
 
 In a browser navigate to:
