@@ -205,6 +205,6 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 
 [Go to next lesson: Rails Active Record Validations](./active_record_validations.md)
 
-[Back to Rails Active Record Migrations](./active_record_intro.md)
+[Back to Rails Active Record Migrations](./active_record_migrations.md)
 
 [Back to Syllabus](../README.md)

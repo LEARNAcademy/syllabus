@@ -98,12 +98,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Intro to Fetch](./Rails-M/10using_fetch.md)
 
 Additional Topics:
-- [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
-- [SQL vs. Active Record](./Rails-M/additional-topics/05rails_sql_vs_activerecord.md)
-- [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
-- [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
-- [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
-- [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
+- [Rails Model Testing](./rails_model/rails_model_tests.md)
 - [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 
 ## Unit Seven: Professional Development Week
