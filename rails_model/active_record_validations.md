@@ -127,3 +127,9 @@ Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_v
 	- **Hint:** Read about :scope in the Rails validation docs
 - As a developer, I want to validate associated addresses on accounts
 	- **Hint:** Read about validates_associated in the Rails validation docs
+
+  [Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
+
+  [Back to Rails Active Record Associations](./active_record_associations.md)
+
+  [Back to Syllabus](../README.md)
