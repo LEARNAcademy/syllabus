@@ -36,7 +36,7 @@ or
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter. Let's do an example.
 
-#### The Controller
+## The Controller
 From the command line, we can add a new Rails controller with a rails command:
 ```
 rails generate controller main
@@ -74,24 +74,21 @@ end
 
 Try navigating to `localhost:3000/answer`. Here we are trying to reach the method `answer` we have created in our controller. At this point, we will see an error that no route matches "/answer"
 
-#### The Route
+## The Route
 
-In order for our Rails server to respond to a request to this url, it needs a particular path and an http verb. A file is created when you run `rails new` that is intended to be the home of all those valid urls. It is the `routes.rb` file in the `config` folder of your Rails app.
+In order for our Rails server to respond to a request to this url, it needs a particular path and an http verb. A `routes.rb` file in the `config` folder is created when you run `rails new`. This file is intended to house all valid urls in your application.
+
+<img src="https://i.ibb.co/7r7kVM9/config-routes.png" alt="config-routes" border="0" />
 
 **config/routes.rb**
-```ruby
-Rails.application.routes.draw do
-  get '/answer' => 'main#answer'
-  # get is the http action we are sending with the url to the server
-  # /answer is the url
-  # main is the name of the controller
-  # answer is the name of the method in the controller
-```
-The route here is essentially adding an address for your application. Meaning now when you navigate to `localhost:3000/answer` in the browser, Rails will determine that you have requested the `/answer` route and that it needs to find the `main` controller and run its `answer` method.
+
+<img src="https://i.ibb.co/L8tf1xt/routes-explained.png" alt="routes-explained" border="0" />
+
+The route here is essentially adding an address to your application. Now when you navigate to `localhost:3000/answer` in the browser, Rails will determine that you have requested the `/answer` route and that it needs to find the `main` controller and run its `answer` method.
 
 This completes the Rails response to the `/answer` request. When we visit `localhost:3000/answer`, we should see a white page with the text "This is the answer".
 
-#### Add Another Route
+### Add Another Route
 Let's program another response. Let's say we want our Rails program to be able to respond to requests for:
 
 `localhost:3000/question`
@@ -122,9 +119,9 @@ end
 
 Now, our Rails app has all the information to display a response to the `/question` request. When we visit `localhost:3000/question`, we should see a white page with the text "This is the question".
 
-## Landing Page
+### Landing Page
 
-Rather than seeing the boiler plate Rails page as the 'landing page' (or the page the user sees when they first visit your site) we can modify the `routes.rb` file to create a new landing page.
+A landing page is what the user sees when they first visit your site. Rather than seeing the boiler plate Rails page as the landing page, we can modify the `routes.rb` file to create a new one using `root`.
 
 ```ruby
 Rails.application.routes.draw do
@@ -134,11 +131,19 @@ Rails.application.routes.draw do
 end
 ```
 
-#### The View
+### Controller Challenges
+For each section below: generate a new controller, methods to reach, and routes.
 
-So far our routes and controllers are only returning a basic string from the controller method. The generate controller command also creates a place for us to make more complex views.
+### Joke
+- As a user, I can go to the url 'localhost:3000/question' and see the set-up for a joke.
+- As a user, I can go to the url 'localhost:3000/answer' and see the punchline to the joke.
 
-The generate command creates a directory in the `app/views` named after our controller. Inside this folder create a new file called `question.html.erb`
+
+## The View
+
+So far our routes and controllers are only returning a basic string from the controller method. But, the generate controller command also creates a place for us to make more complex views.
+
+The generate command creates a directory in the `app/views` named after our controller. Inside this folder create a _new file_ called `question.html.erb`
 - `question` references the name of the method in the controller
 - `erb` extension stands for `embedded ruby`. It means that these views can have Ruby values in them and even evaluate some Ruby logic!
 
