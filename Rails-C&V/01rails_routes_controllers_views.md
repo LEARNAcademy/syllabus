@@ -19,7 +19,6 @@
 - Linking between views
 
 ## Vocabulary
-- public file
 - controller
 - view
 - routes
@@ -38,15 +37,6 @@ In a browser navigate to:
 `http://localhost:3000`
 or
 `127.0.0.1:3000`
-
-### Creating a Public View
-
-Rails has a folder called `/public`. Anything we put into this folder will be accessible by the rest of the application just by asking for it in the url.
-- Create a file with the extension `html` in the `/public` directory called `myfile.html`
-- Add html `<h1>Hello World!</h1>`
-- Navigate to `localhost:3000/myfile`
-
-As neat as the `/public` directory is for quickly setting up easy-to-access pages, as developers, we typically need a way to create more application endpoints that allow us more control and the ability to do more work in responding to a user request. In short, we need to program a response.
 
 ### Rails Response
 
