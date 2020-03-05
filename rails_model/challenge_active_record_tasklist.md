@@ -1,4 +1,4 @@
-# Active Record Tasklists
+# Rails Active Record Tasklist Challenge
 
 **Story**:
 As a programmer, I can create a TaskList that has a title and description.

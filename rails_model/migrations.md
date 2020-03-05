@@ -1,4 +1,4 @@
-# Rails Migrations
+# Rails Model Migrations
 
 ## Video: Adding Columns to a Database
 [![YouTube](http://img.youtube.com/vi/M6Zr-q_2c80/0.jpg)](https://www.youtube.com/watch?v=M6Zr-q_2c80)

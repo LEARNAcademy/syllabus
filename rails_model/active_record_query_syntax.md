@@ -9,13 +9,14 @@
 - Exploring the differences between SQL queries and Active Record
 
 ## Vocabulary
-## Useful Commands
+- aggregate
+- pluck
+
 ## Additional Resources
 - <a href="https://guides.rubyonrails.org/active_record_querying.html" target="blank">Active Record Docs</a>
 
-
 ## SQL vs. Active Record
-We only need to learn a few rules specific to ActiveRecord in order to unlock a powerful tool to interact with the database.
+We only need to learn a few rules specific to Active Record in order to unlock a powerful tool to interact with the database.
 
 Active Record is a Rails-specific wrapper for SQL queries. It's shorter, easier to type, and often looks nicer, but under the hood it's the same old SQL.
 
@@ -141,12 +142,10 @@ Similarly, in place of SQL methods that involve directly manipulating the databa
   <tbody>
 </table>
 
-This lecture is going to cover a few methods that we need to complete the ActiveRecord Countries challenge.  There are many, many more.  The best place to go for more information is the Rails [ActiveRecord docs](https://guides.rubyonrails.org/active_record_querying.html) themselves.
-
 ## where
 
 ### First
-Our first example will find the first country in the database with a code of 'RUS' :
+Find the first country in the database with a code of 'RUS' :
 ```ruby
 russia = Country.where(code: 'RUS').first
 # Generates the following sql:
@@ -178,11 +177,11 @@ countries = Country
 "SELECT \"country\".* FROM \"country\" WHERE (governmentform LIKE '%Monarchy%')"
 ```
 
-That opens up a whole new realm of possibilities, doesn't it?  If you can dream up a query you want to run, you can probably do it with ActiveRecord's flexible where method.
+That opens up a whole new realm of possibilities, doesn't it?  If you can dream up a query you want to run, you can probably do it with Active Record's flexible where method.
 
 ### Order, and limit
 
-Want to get the first record based on one column in the database?  We can do that with ActiveRecord like this:
+Want to get the first record based on one column in the database?  We can do that with Active Record like this:
 
 ```ruby
 country = Country
@@ -224,6 +223,8 @@ countries = Country
   .sum
 ```
 
+## Challenge
+Link available via Slack from GitHub Classroom
 
 [Go to next lesson: Rails Routes, Controllers and Views](../Rails-C&V/01rails_routes_controllers_views.md)
 

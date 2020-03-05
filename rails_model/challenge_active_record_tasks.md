@@ -1,4 +1,4 @@
-# Active Record Tasks
+# Rails Active Record Tasks Challenge
 
 
 **Story**: As a programmer, I can create a new Task record with a title, which is a string, and description, which is a string.
