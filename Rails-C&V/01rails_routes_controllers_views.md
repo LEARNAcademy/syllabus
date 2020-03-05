@@ -55,9 +55,9 @@ Output in terminal:
       create      app/assets/stylesheets/main.scss
 ```
 
-Rails has created some files for us! Let's take a look at where they live in our filr structure:
+Rails has created some files for us! Let's take a look at where they live in our file structure:
 
-<img src="https://i.ibb.co/DWJgBm8/generate-controller-files.png" alt="generate-controller-files" border="0">
+<img src="https://i.ibb.co/k564cRR/generate-controller-files.png" alt="generate-controller-files" border="0" />
 
 Now we can add methods to the controller file that was created in the generate command.
 
