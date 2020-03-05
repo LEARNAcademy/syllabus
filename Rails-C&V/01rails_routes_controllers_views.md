@@ -55,13 +55,13 @@ Output in terminal:
       create      app/assets/stylesheets/main.scss
 ```
 
-Rails has created some files for us! Let's take a look at where they live in our file structure:
+Let's take a look at where these new files live in our file structure:
 
 <img src="https://i.ibb.co/k564cRR/generate-controller-files.png" alt="generate-controller-files" border="0" />
 
 Now we can add methods to the controller file that was created in the generate command.
 
-Adding a method to the controller defines what should happen when it is reached. In this case, it renders some html that reads "This is the answer".
+Inside the controller, we will define what should happen when methods are reached. In this case, the method renders some html that reads "This is the answer".
 
 **app/controllers/main_controller.rb**:
 ```ruby
@@ -72,7 +72,7 @@ class MainController < ApplicationController
 end
 ```
 
-Now if we navigate to the browser `localhost:3000/answer` we see an error that no route matches "/answer"
+Try navigating to `localhost:3000/answer`. Here we are trying to reach the method `answer` we have created in our controller. At this point, we will see an error that no route matches "/answer"
 
 #### The Route
 
