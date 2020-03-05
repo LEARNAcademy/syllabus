@@ -1,13 +1,39 @@
 # Rails Active Record Validations
 
-Data validations can be used in the model `class` to insure incomplete, invalid, or incorrect data from being saved in the database.
+## Overview
+- Validations are used to ensure that only valid data is saved into your database.
+- There are lots of ways to validate data, in this section we will talk about model validations.
 
-Here are a list of validations that can be implemented.
+## Learning Objectives
+- Exploring the implementation of model validations
+- Practicing with validation syntax
 
-[Rails Guides](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
+## Vocabulary
+- validations
 
-#### Length
+## Additional Resources
+- <a href="https://guides.rubyonrails.org/active_record_validations.html#acceptance" target="blank">Active Record Validations</a>
+## Set Up
 
+#### Creating a new Rails app:
+```
+$ rails new myapp -d postgresql -T
+$ cd myapp
+$ rails db:create
+$ rails server
+```
+
+In a browser navigate to:
+`http://localhost:3000`
+
+## Validates Presence
+```
+class Person < ApplicationRecord
+  validates :name, :login, :email, presence: true
+end
+```
+
+## Validates Length
 ```
 class Person < ApplicationRecord
   validates :name, length: { minimum: 2 }
@@ -17,15 +43,8 @@ class Person < ApplicationRecord
 end
 ```
 
-#### Presence
-
-```
-class Person < ApplicationRecord
-  validates :name, :login, :email, presence: true
-end
-```
-
-Starting in Rails 5,  belongs_to side of relationships is validated by default
+## Validates belongs_to
+Starting in Rails 5 the belongs_to side of relationships is validated by default.
 ```
 class Phone < ApplicationRecord
 	belongs_to :person  #default validation for belongs to: presence: true
@@ -40,7 +59,7 @@ end
 ```
 
 
-#### Uniqueness
+## Validates Uniqueness
 
 ```
 class Account < ApplicationRecord
@@ -77,39 +96,34 @@ end
 
 >> person = Person.new
 >> person.valid? 			# => false
->> peroson.errors[:name] 	# => ["can't be blank"]	# array of error messages for name field
+>> person.errors[:name] 	# => ["can't be blank"]	# array of error messages for name field
 ```
 
-## Resource
 
-For more information. See <a href="http://guides.rubyonrails.org/v4.2/active_record_validations.html" target="_blank" >Active Record Validations</a>
+## Challenges
 
-## Active Record Validations Intro Challenges
+You have been tasked to set up an Account model for a your company. The application must be secure.
 
-You have been tasked to set up an Account model for the users in your company’s application and they want it to be secure.
-
-### Stories:
-
-- As a developer, I need to generate accounts that require a username, a password, and an email
-- As a developer, I need each password to be unique
+### Stories for Account:
+- As a developer, I need to generate a model called Account that has a username, a password, and an email
+- As a developer, I need username, password, and email to be required
 - As a developer, I need every username to be at least 5 characters long
 - As a developer, I need each username to be unique
 - As a developer, I need each password to be at least 6 characters long
+- As a developer, I need each password to be unique
+
+### Stories for Address:
+- As a developer, I want my Account model to have many associated Addresses
+- As a developer, I want Address to have street_number, street_name, city, state, and zip attributes
+- As a developer, I want to validate all fields on Address
+
 
 ### Stretch Challenges
+Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations):
 
-These will require a little bit of research to implement. Visit this link on [Custom Validations](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations) for documentation on how to implement custom methods for validation.
-
-- As a developer, I need each password to have at least one number
-- As a developer, I need each password to have at least one special character
-
-### Super Stretch Challenges
-- As a developer, I want accounts to have a has_many associated Addresses
-- As a developer, I want addresses to have street_number, street_name, city, state, and zip attributes
-- As a developer, I want to validate all fields on an address
-- As a developer, I want to validate that (street_number, street_name, zip) are unique for within an account
-	- ** Hint:  Read about :scope in the Rails validation docs
+- As a developer, I need each Account password to have at least one number
+- As a developer, I need each Account password to have at least one special character
+- As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account
+	- **Hint:** Read about :scope in the Rails validation docs
 - As a developer, I want to validate associated addresses on accounts
-	- ** Hint:  Read about validates_associated in the Rails validation docs
-
-For all these challenges check your work by exploring the ActiveRecord commands. (new, valid?, create, etc.)
+	- **Hint:** Read about validates_associated in the Rails validation docs
