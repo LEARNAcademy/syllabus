@@ -1,11 +1,5 @@
 # Rails: Controllers, Routes, Views
 
-## Video: Intro to Rails
-[![YouTube](http://img.youtube.com/vi/WMnFpgYJoCo/0.jpg)](https://www.youtube.com/watch?v=WMnFpgYJoCo)]
-
-## Video: Rails Views
-[![YouTube](http://img.youtube.com/vi/rDRvdTuEopg/0.jpg)](https://www.youtube.com/watch?v=rDRvdTuEopg)]
-
 ## Overview
 - Understanding the basics of creating a request response cycle in Rails
 - Generating a view for the user
@@ -40,11 +34,7 @@ or
 
 ### Rails Response
 
-To understand how to program a response, we need to have an idea of how a request is made to the Rails server. As you may recall, a typical request starts with a url. In other words, a url is typed into the browser address bar and the user hits enter.
-
-We've worked with some urls previously but take this one for example:
-
-`localhost:3000/answer`
+To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter. Let's do an example.
 
 #### The Controller
 From the command line, we can add a new Rails controller with a rails command:
@@ -64,6 +54,10 @@ Output in terminal:
       invoke    scss
       create      app/assets/stylesheets/main.scss
 ```
+
+Rails has created some files for us! Let's take a look at where they live in our filr structure:
+
+<img src="https://i.ibb.co/DWJgBm8/generate-controller-files.png" alt="generate-controller-files" border="0">
 
 Now we can add methods to the controller file that was created in the generate command.
 
