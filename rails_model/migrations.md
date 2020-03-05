@@ -81,7 +81,7 @@ The database schema is now updated!
 - Create a migration to add a new column to the database called movie_length
 - Update the values of the existing attributes to include a movie_length value
 
-[Go to next lesson: Rails Active Record Associations](./active_record_associations.md)
+[Go to next lesson: Rails Associations](./associations.md)
 
 [Back to Rails Active Record Introduction](./active_record_intro.md)
 

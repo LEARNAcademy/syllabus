@@ -225,8 +225,8 @@ countries = Country
 ```
 
 
-[Go to next lesson: Rails Active Record Relations](./)
+[Go to next lesson: Rails Routes, Controllers and Views](../Rails-C&V/01rails_routes_controllers_views.md)
 
-[Back to Rails Migrations](./migrations.md)
+[Back to Rails Validations](./validations.md)
 
 [Back to Syllabus](../README.md)

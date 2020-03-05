@@ -241,7 +241,7 @@ Created database 'rolodex_test'
 - Remove all family members that do not have your last_name.
 
 
-[Go to next lesson: Rails Active Record Migrations](./migrations.md)
+[Go to next lesson: Rails Migrations](./migrations.md)
 
 [Back to Ruby on Rails Introduction](./intro.md)
 

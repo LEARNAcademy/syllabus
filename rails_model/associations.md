@@ -1,4 +1,4 @@
-# Rails Active Record Associations
+# Rails Model Associations
 
 ## Video: Active Record Associations
 [![YouTube](http://img.youtube.com/vi/CM520EfUI7k/0.jpg)](https://www.youtube.com/watch?v=CM520EfUI7k)
@@ -204,8 +204,8 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 - Add a credit limit to each card
 - Find the total credit extended to the owner with multiple credit cards
 
-[Go to next lesson: Rails Active Record Validations](./active_record_validations.md)
+[Go to next lesson: Rails Validations](./validations.md)
 
-[Back to Rails Active Record Migrations](./active_record_migrations.md)
+[Back to Rails Migrations](./migrations.md)
 
 [Back to Syllabus](../README.md)

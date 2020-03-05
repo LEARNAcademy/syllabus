@@ -88,14 +88,12 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 1. [Rails Restful Routes and CRUD Actions](./Rails-C&V/rails_rest_crud.md)
 1. [Rails Forms](./Rails-C&V/rails_forms.md)
-1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
-1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
+1. [Strong Params](./rails_model/08rails_strong_parameters.md)
 1. [Postman](./tools_and_resources/postman.md)
-1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
-1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
-1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+1. [Rails Resource Generator: Read Operations](./rails_model/05rails_generate_resource.md)
+1. [Rails Resource Generator Continued: Create and Delete Operations](./rails_model/06rails_generate_resource_cont.md)
+1. [Challenge: Wildlife Tracker](./Rails-C&V/09rails_wildlife_tracker_challenge.md)
 1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-1. [Intro to Fetch](./Rails-M/10using_fetch.md)
 
 Additional Topics:
 - [Rails Model Testing](./rails_model/rails_model_tests.md)
