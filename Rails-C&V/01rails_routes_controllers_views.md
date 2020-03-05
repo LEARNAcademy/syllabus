@@ -34,9 +34,20 @@ or
 
 ### Rails Response
 
-To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter. Let's do an example.
+To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter.
 
 ## The Controller
+
+What the heck is a controller?? The Rails controller is the logical center of your application. It coordinates the interaction between the user, the views, and the model.
+
+The controller:
+- is responsible for routing external requests to internal actions. It handles people-friendly URLs extremely well
+- manages caching
+- manages helper modules, which extend the capabilities of the view templates without bulking up their code
+- manages sessions, giving users the impression of an ongoing interaction with our applications
+
+Let's see the controller in action!
+
 From the command line, we can add a new Rails controller with a rails command:
 ```
 rails generate controller main
