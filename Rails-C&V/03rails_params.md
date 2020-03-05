@@ -26,7 +26,7 @@ Let's start with creating a controller called `main` and method called greeting.
 class MainController < ApplicationController
 
   def greeting
-    @name = "Foxtrot Class"
+    @name = "Alpha Class"
     render 'greeting.html.erb'
   end
 
@@ -54,7 +54,7 @@ class MainController < ApplicationController
 end
 ```
 
-Note that instead of hardcoding in a name we're asking Rails to check its params hash and assign the name key to our `@name` instance variable.
+Note that instead of hardcoding in a name, we're asking Rails to check its params hash and assign the name key to our `@name` instance variable.
 
 ### Routes with Params
 
@@ -68,10 +68,10 @@ Rails.application.routes.draw do
   get '/greeting' => 'main#greeting'
 ```
 
-Now the URL can accept a name parameter by passing in a value for name.
-`http://localhost:3000/greeting?name=Foxtrot`
+Now the URL can accept a name parameter by passing in a value for name. This can be done by adding a "?" + name + the user input.
+`http://localhost:3000/greeting?name=Alpha`
 
-The page will display `Hello, Foxtrot!`
+Now the page will display `Hello, Alpha!`
 
 **Using params**: Parameters allow us to add more information to our program by passing a value into the route rather than directly to the URL.
 
@@ -82,12 +82,12 @@ Rails.application.routes.draw do
   # added /:name to the route
 ```
 
-What we've done now, is create a Rails route that expects a parameter that will end in a `/:param`. In this case, a param called `name`.
+What we've done now is create a Rails route that expects a url that will end in a `/:param`. In this case, the param is called `name`.
 
 
-With this update to our routes, instead of using the question mark and equal signs to pass in a parameter, we can enter: `http://localhost:3000/greeting/foxtrot`
+With this update to our routes, instead of using the question mark and equal signs to pass in a parameter, we can simply enter: `http://localhost:3000/greeting/Friends`
 
-The page will display `Hello, Foxtrot!`
+The page will display `Hello, Friends!`
 
 ### Controller Arguments
 
