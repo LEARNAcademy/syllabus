@@ -135,24 +135,30 @@ end
 For each section below: generate a new controller, methods to reach, and routes.
 
 ### Joke
+- As a user, I can go to the url 'localhost:3000/' and see a welcome message as well as you and your partner's names.
 - As a user, I can go to the url 'localhost:3000/question' and see the set-up for a joke.
 - As a user, I can go to the url 'localhost:3000/answer' and see the punchline to the joke.
 
 
 ## The View
 
-So far our routes and controllers are only returning a basic string from the controller method. But, the generate controller command also creates a place for us to make more complex views.
+So far our routes and controllers are only returning a basic string from the controller method. But, we probably want to make more complex views.
 
 The generate command creates a directory in the `app/views` named after our controller. Inside this folder create a _new file_ called `question.html.erb`
 - `question` references the name of the method in the controller
 - `erb` extension stands for `embedded ruby`. It means that these views can have Ruby values in them and even evaluate some Ruby logic!
 
+Let's add some text to the new file:
 
 **views/main/question.html.erb**:
-
 ```
 Hello?
 ```
+
+Now, when we navigate to 'localhost:3000/question', we should see simple text saying "Hello?"
+
+Going back to our controller, we can create an instance variable (since we are inside the class MainController), that we will render in our view:
+
 **app/controllers/main_controller.rb**:
 ```ruby
 class MainController < ApplicationController
@@ -167,6 +173,8 @@ class MainController < ApplicationController
 end
 ```
 
+Back in our view, we will refer back to the instance variable we set within the `question` method in the controller.
+
 **views/main/question.html.erb**:
 
 ```
@@ -179,7 +187,7 @@ Those `<%= %>` symbols are what makes this an `.html.erb` file, or "embedded rub
 
 So far we have created controllers that manages our routes and views through directly manipulating the url. To make this process more dynamic we can add code to our view so the user can click a link to move between pages.
 
-**views/main/question.html.erb**:
+**views/main/home.html.erb**:
 ```
 <h3>Wanna hear a joke?</h3>
 <%= link_to "Tell Me!", "/question" %>
@@ -188,6 +196,7 @@ So far we have created controllers that manages our routes and views through dir
 
 Earlier in our code we created our own landing page so our user won't see the Rails boilerplate code. To navigate back to the landing page we created just pass a "/" as the route.
 
+**views/main/question.html.erb**:
 ```
 <h3>Back to Landing Page</h3>
 <%= link_to "Home", "/" %>
@@ -196,13 +205,13 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 ### Review
 
 - The `routes.rb` file defines all the urls your application is prepared to respond to (it's like the address book of your Rails app)
-- Each route will point to a method (street) on a controller (city) file
+- Each route will point to a method on a controller file
 - The controller method will ultimately do the work you require and send the appropriate view response
 
 ## Challenges
 For each section below, generate a new controller to handle the methods, routes, and views.
 
-#### Joke
+#### Joke... again ;)
 - As a user, I can go to the url 'localhost:3000/question' and be asked a joke.
 - As a user, I can go to the url 'localhost:3000/answer' and see the response to the joke.
 
