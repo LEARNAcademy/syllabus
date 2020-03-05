@@ -72,7 +72,7 @@ Let's take a look at where these new files live in our file structure:
 
 Now we can add methods to the controller file that was created in the generate command.
 
-Inside the controller, we will define what should happen when methods are reached. In this case, the method renders some html that reads "This is the answer".
+Inside the controller, we define what we want to happen when a method is reached. In this case, when the `answer` method is triggered, it will render some html that reads "This is the answer".
 
 **app/controllers/main_controller.rb**:
 ```ruby
@@ -83,7 +83,7 @@ class MainController < ApplicationController
 end
 ```
 
-We access the method in the controller through our url request. This is done by appending **"/" + the name of your method** to localhost:3000. Try navigating to `localhost:3000/answer`. At this point, we will see an error that no route matches "/answer"
+We access the method in the controller through our url request. This is done by appending **"/" + the name of your method** to localhost:3000. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches "/answer"
 
 ## The Route
 
