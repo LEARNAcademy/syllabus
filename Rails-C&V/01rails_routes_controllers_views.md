@@ -83,7 +83,7 @@ class MainController < ApplicationController
 end
 ```
 
-We access the method in the controller through our url request. This is done by appending **"/" + the name of your method** to localhost:3000. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches "/answer"
+We access the method in the controller through our url request. This is done by appending **/ + the name of your method** to localhost:3000. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches "/answer"
 
 ## The Route
 
