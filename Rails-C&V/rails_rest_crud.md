@@ -1,4 +1,4 @@
-# Rails Restful Routes and CRUD Actions
+# Rails RESTful Routes and CRUD Actions
 
 ## Overview
 - Rails follows a RESTful pattern for interaction between the client and the server
