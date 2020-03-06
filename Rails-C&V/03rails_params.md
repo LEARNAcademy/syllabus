@@ -129,7 +129,7 @@ For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parame
 ## Challenges
 
 - As a user, I can visit a page that takes a number and displays that number cubed
-- As a user, I can visit a page that takes 2 numbers and displays where or not the first number is evenly divisible by the second
+- As a user, I can visit a page that takes 2 numbers and displays whether or not the first number is evenly divisible by the second
 - As a user, I can visit a page that takes in a string and displays how many characters are in the string
 - As a user, I can visit a page that takes a string and displays whether it is a palindrome
 - As a user, I can visit a page that takes a noun, verb, adjective, adverb, and  uses them to display a short silly story
