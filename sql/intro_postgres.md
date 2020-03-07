@@ -36,14 +36,14 @@ In our program, a person has an email, a family_name, and several other attribut
 A single row entry in a database can also be called an "instance".  We need a way to keep track of all the instances of our Person model.
 
 A collection of instances that contain the same attributes is called a relation or a table.  Tables allow us to better organize models.
-![table](/assets/sql-lessons/intro-to-databases/this-is-a-table.png)
+![table](./assets/intro-to-databases/this-is-a-table.png)
 A schema is a description of the names and types of fields in a table.
 
-![table](/assets/sql-lessons/intro-to-databases/schema.png)
+![table](./assets/intro-to-databases/schema.png)
 
-![table](/assets/sql-lessons/intro-to-databases/rows.png)
+![table](./assets/intro-to-databases/rows.png)
 
-![table](/assets/sql-lessons/intro-to-databases/fields.png)
+![table](./assets/intro-to-databases/fields.png)
 
 
 ## One More Thing
@@ -155,7 +155,7 @@ FROM
   country;
 ```
 
-![simple select](/assets/sql-lessons/querying/simple-select.png)
+![simple select](./assets/querying/simple-select.png)
 
 What's up with that order?
 * Not by code
@@ -171,8 +171,8 @@ SQL is a function of sets
 ## Try these queries on for size
 
 #### A Set
-![Set](/assets/sql-lessons/querying/set.png)
-![Where](/assets/sql-lessons/querying/where.png)
+![Set](./assets/querying/set.png)
+![Where](./assets/querying/where.png)
 ````sql
 SELECT
   code,
@@ -185,10 +185,10 @@ where
   gnp > 1e+6
 ````
 
-![Set Result](/assets/sql-lessons/querying/set-result.png)
+![Set Result](./assets/querying/set-result.png)
 
 #### Negation
-![Negation](/assets/sql-lessons/querying/negation.png)
+![Negation](./assets/querying/negation.png)
 
 ````sql
 SELECT
@@ -201,29 +201,29 @@ WHERE
 
 #### Union
 
-![Union](/assets/sql-lessons/querying/union.png)
-![Union Continuity](/assets/sql-lessons/querying/union-continuity.png)
+![Union](./assets/querying/union.png)
+![Union Continuity](./assets/querying/union-continuity.png)
 
 #### Intersection
 
-![Intersection](/assets/sql-lessons/querying/intersection.png)
+![Intersection](./assets/querying/intersection.png)
 ````sql
 SELECT code, name, population, gnp FROM country WHERE population > 1e+8
 INTERSECT
 SELECT code, name, population, gnp FROM country WHERE gnp > 1e+6
 ````
 
-![Union Results](/assets/sql-lessons/querying/union-results.png)
+![Union Results](./assets/querying/union-results.png)
 
 #### Difference
 
-![Difference](/assets/sql-lessons/querying/difference.png)
+![Difference](./assets/querying/difference.png)
 ````sql
 SELECT * FROM country WHERE NOT(continent = 'North America')
 EXCEPT
 SELECT * FROM country WHERE lifeexpectancy > 50
 ````
-![Difference Results](/assets/sql-lessons/querying/difference-results.png)
+![Difference Results](./assets/querying/difference-results.png)
 
 #### Boolean Expressions
 
@@ -528,6 +528,6 @@ Save your queries in a file if you want to keep them for posterity.
 * What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
 
 
-[Go to SQL Joins](./08rails_sql_joins.md)
+[Go to next lesson: SQL Joins](./08rails_sql_joins.md)
 
 [Back to Syllabus](../README.md)

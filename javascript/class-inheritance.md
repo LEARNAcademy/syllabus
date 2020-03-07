@@ -1,6 +1,25 @@
 # JavaScript Class Inheritance
 
+## Video: Video Name
 [![YouTube](http://img.youtube.com/vi/Rx5_-Y_bG5E/0.jpg)](https://www.youtube.com/watch?v=Rx5_-Y_bG5E)
+
+## Overview
+- Classes can inherit information from other classes creating a parent-child relationship
+- Class inheritance keeps code from being repetitive
+
+## Learning Objectives
+- Understanding the flow of information from the parent class to the child class
+
+## Vocabulary
+- inheritance
+- Object Oriented Programming (OOP)
+- extends
+- super()
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
 
 ## Classes Review
 When we think of our application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with those objects.
@@ -9,11 +28,11 @@ A car, for example is an object that is made up of many smaller objects. It has 
 
 Classes define attributes (data) and behaviors (methods). An engine has attributes such as horsepower, oil level, and rpm. It has behaviors as well, such as start, accelerate, and stop.
 
-**Classes themselves are not real things,** but rather definitions of things. Think of classes as the product of an engineer sitting at a desk with a pencil and paper designing exactly what he or she wants the engine to be. Those plans then go to the manufacturing floor (our our running application) and are made into real things which can interact with other things (objects).
+**Classes themselves are not real things,** but rather definitions of things. Think of classes as the product of an engineer sitting at a desk with a pencil and paper designing exactly what he or she wants the engine to be. Those plans then go to the manufacturing floor (our running application) and are made into real things which can interact with other things (objects).
 
 Let's take a look at an example of an Engine class, and then creating an application around it where the engine can be built and used.
 
-```JavaScript
+```javascript
 class Engine{
   constructor(){
     this.oilLevel = 100
@@ -23,19 +42,21 @@ class Engine{
 
 // calling new Engine() is just like sending the plans to the production floor to have it built
 let engine = new Engine()
+console.log(engine)
+--> Engine { oilLevel: 100, rpm: 0 }
 
 // now that we have an instance of our engine to interact with
 
 console.log("oil:", engine.oilLevel)
-// Output -->> oil: 100
+--> "oil:" 100
+
 console.log("rpm:", engine.rpm)
-// Output -->> rpm: 0
+--> "rpm:" 0
 ```
-![racecar 1](https://s3.amazonaws.com/learn-site/curriculum/racecar-1.png)
 
 That's a start! We now have an engine, and can ask it details about its current state. But what if we want to be able to turn the engine on, and have it do some work for us? Remember that classes are collections of attributes and behavior, we can add a method to the class that turns the engine on and off.
 
-```JavaScript
+```javascript
 class Engine{
   constructor(){
     this.oilLevel = 100
@@ -54,19 +75,17 @@ class Engine{
 let engine = new Engine()
 
 console.log("rpm:", engine.rpm)
-// Output -->> rpm: 0
+--> "rpm:" 0
 
 // call the method start on the engine object variable to alter the rpm
 engine.start()
 console.log("rpm:", engine.rpm)
-// Output -->> rpm: 500
+--> "rpm:" 500
 
 engine.stop()
 console.log("rpm:", engine.rpm)
-// Output -->> rpm: 0
+--> "rpm:" 0
 ```
-
-![Video with more details](https://s3.amazonaws.com/learn-site/curriculum/racecar-3.png)
 
 # Inheritance
 Now we have an Engine class that has attributes and behavior. Just like in the real world, we are not limited to only having one type of engine. There can be many variations of engines, all of which share attributes and behaviors, but have additional attributes and behavior that are unique. JavaScript classes allow us to model this situation by using inheritance.
@@ -75,7 +94,7 @@ We start with an Engine class that has properties common to all engines. Then we
 
 Here is our Engine class again:
 
-```JavaScript
+```javascript
 class Engine{
   constructor(){
     this.oilLevel = 100
@@ -98,7 +117,7 @@ To create inheritance we need two new JavaScript keywords:
 - `extends`- used in the declaration of the class, extending the data and behavior of the parent class (or the class we are inheriting from)
 - `super` - within in the constructor method we call super() which passes the attributes from the constructor in the parent class
 
-```JavaScript
+```javascript
 class TurboEngine extends Engine{
   constructor(){
     super()
@@ -106,13 +125,14 @@ class TurboEngine extends Engine{
 }
 var turbo = new TurboEngine()
 console.log(turbo)
-// Output -->> TurboEngine { oilLevel: 100, rpm: 0 }
+--> TurboEngine { oilLevel: 100, rpm: 0 }
 ```
+
 Now we have a new class that is inheriting information from a parent class. By using `extends` and calling `super()` the turbo object variable contains all the information of the Engine class.
 
 The TurboEngine class also can have information that is specific to its class, like attributes (data) like horsepower and behavior (methods) like acceleration and deceleration.
 
-```JavaScript
+```javascript
 class TurboEngine extends Engine{
   constructor(){
     super()
@@ -127,16 +147,18 @@ class TurboEngine extends Engine{
 }
 var turbo = new TurboEngine()
 console.log(turbo)
-// Output -->> TurboEngine { horsepower: 450, oilLevel: 100, rpm: 0 }
+--> TurboEngine { oilLevel: 100, rpm: 0, horsepower: 450 }
+
 turbo.accelerate()
 console.log("rpm:", turbo.rpm)
-// Output -->> rpm: 750
+--> "rpm:" 750
 ```
+
 Now our Turbo engine has its own properties as well as the properties passed from its parent class.
 
 We can create another class called `StockEngine` that also inherits from Engine.
 
-```JavaScript
+```javascript
 class StockEngine extends Engine{
   constructor(){
     super()
@@ -151,13 +173,15 @@ class StockEngine extends Engine{
 }
 var stock = new StockEngine()
 console.log(stock)
-// Output -->> StockEngine { horsepower: 250, oilLevel: 100, rpm: 0 }
+--> StockEngine { oilLevel: 100, rpm: 0, horsepower: 250 }
+
 stock.accelerate()
 console.log("rpm:", stock.rpm)
-// Output -->> rpm: 250
-stock.fillOil()
-console.log("oilLevel:", stock.oilLevel)
-// Output -->> oilLevel: 150
+--> "rpm:" 250
+
+stock.decelerate()
+console.log("rpm:", stock.rpm)
+--> "rpm:" 0
 ```
 The class StockEngine has access to the information from the parent class of Engine as well as its own unique data and methods.
 

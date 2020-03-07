@@ -1,45 +1,70 @@
 # Ruby Methods
 
-## Simple Method
+## Overview
+- Methods are used to create customized bits of functionality that can be called as many times as we need
+- Ruby methods can take any number of arguments
 
-Methods are used to create small bits of functionality that can be called as many times as we need.
+## Learning Objectives
+- Using Ruby syntax to create a simple method
+- Passing arguments to a Ruby method
+- Calling a method and logging an outcome to the terminal
+
+## Vocabulary
+- def/end
+- Implicit return
+
+## Additional Resources
+- <a href="https://www.w3resource.com/ruby/ruby-methods.php" target="blank">Ruby Methods</a>
+
+## Set Up
+- Create a file with the extension `.rb`
+- In terminal run `ruby` followed by the file name
+
+## Method Syntax
 
 To create methods in Ruby we use the keywords `def` and `end`.
 
+`def` stands for defines. `def` is followed with the name of the method. The block of code ends with the keyword `end`. In between is the code to be executed.
+
 Example:
-```RUBY
-def hi
-  puts "Hello World!"
+```ruby
+# defines a method called greeter
+def greeter
+  "Hello World!"
 end
 ```
-`def hi` defines the method and gives it the name `hi`. In between is the code to be executed. The block of code ends with the keyword `end`.
 
-Now we can call the method repeatedly by referencing the name `hi`.
+Now we can call the method repeatedly by referencing the name `greeter`.
 
 In IRB:
-```RUBY
->hi
+```
+>greeter
 Hello World!
 =>nil
->hi
+
+>greeter
 Hello World!
 =>nil
->hi
+
+>greeter
 Hello World!
 =>nil
 ```
 
+## Implicit Return
+Ruby has an implicit return, which means the value of the last line of a method is automatically returned without using the keyword `return`.
+
+
+## Local Variables
 When defining methods with variables within them, those variables stay local to that method.
 
-```RUBY
-def hi
+```ruby
+def fun_message
   response = "This is so much fun"
   puts response
 end
-```
-In IRB:
-```RUBY
-> hi
+
+> fun_message
 This is so much fun
 => nil
 
@@ -48,50 +73,29 @@ This is so much fun
 ```
 
 ## Method with Parameters
-
 Methods can also take parameters:
 
-```RUBY
+```ruby
+def greeter name
+  "Hello, #{name}!"
+end
+
+> greeter 'LEARN Student'
+=> "Hello, LEARN Student!"
+```
+
+While Ruby doesn't require parentheses around the arguments for a method, it is best practice to use parentheses if there is more than one argument.
+
+```ruby
 def add(num1, num2)
   num1 + num2
 end
-```
 
-Ruby has an implicit return, which means the value of the last line of a method is automatically returned without using the keyword `return`.
+> add 1, 3
+=> 4
 
-To call the method:
-```RUBY
-> add(1, 2)   # => 3
-> add 1, 3    # => 4
-```
-
-Parentheses are optional. They are typically used to make your code easier to read if passing multiple parameters.
-
-
-## Ruby Blocks
-
-Ruby has anonymous functions similar to Javascript. They are called blocks. Blocks can be created with the `do/end` keywords or with {}.
-
-```RUBY
-# Block with a `do/end`
-nums.each() do |element|
-  puts element
-end
-
-# Block with {}
-nums.each() { |element| puts element }
-```
-
-Blocks can have multiple parameters.
-
-```RUBY
-# Block with a `do/end`
-nums.each_with_index() do |element, index|
-  puts "#{index.to_s} #{element.to_s}"
-end
-
-# Block with {}
-nums.each_with_index() { |element, index| puts "#{index.to_s} #{element.to_s}" }
+> add(1, 2)
+=> 3
 ```
 
 

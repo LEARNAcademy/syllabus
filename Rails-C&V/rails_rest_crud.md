@@ -1,4 +1,4 @@
-# Rails Restful Routes and CRUD Actions
+# Rails RESTful Routes and CRUD Actions
 
 ## Overview
 - Rails follows a RESTful pattern for interaction between the client and the server
@@ -40,10 +40,10 @@ or
 - REST stands for Representational State Transfer
 - REST is a pattern to follow when structuring routes between the server and the client
 - RESTful routes are an attempt to bring the operations that can be applied to an object into HTTP requests
-- Creating, Reading, Updating, and Deleting will accomplish almost all the tasks needed to do to an object creating a standard language and structure across all of the objects in our application 
+- Creating, Reading, Updating, and Deleting will accomplish almost all the tasks needed to do to an object creating a standard language and structure across all of the objects in our application
 
 Examples of routes for a model called `Photo` and a controller called `photos_controller`:
-![rails routes](../assets/rails-routes.png)
+![rails routes](./assets/rails-routes.png)
 
 ### Anatomy of a Rails Route
 Rails routes follow two basic structures:

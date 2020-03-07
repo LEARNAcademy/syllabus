@@ -35,15 +35,14 @@ React is a powerful Javascript library used to build more complicated web applic
 
 #### Additional Topics:
 
-- [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
+- [Intro to How the Internet Works](./tools_and_resources/how-the-internet-works-intro.md)
 
 ## Unit Three: Intermediate React
 
 Here we explore more of what React offers and do our first multi-day project.
 
 1. [React Props](./react/props.md/)
-6. [React State and Props](./react/state-and-props.md/)
-7. [React Forms and Functional Props](./react/forms.md/)
+2. [React Forms and Functional Props](./react/forms.md/)
 
 **Additional Topics**:
 
@@ -58,61 +57,46 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 1. [Ruby Intro](./ruby/intro.md)
 2. [Ruby Conditionals](./ruby/conditionals.md)
-2. [Ruby Methods](./ruby/methods.md)
-2. [Ruby Loops](./ruby/loops.md)
-2. [Ruby Hashes](./ruby/hashes.md)
-3. [Ruby Classes and Objects](./ruby/classes_objects.md)
-4. [Ruby Inheritance](./ruby/inheritance.md)
-6. [Ruby Testing with RSPEC](./ruby/rspec.md)
-1. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
-
-**Additional Topics**:
-- [Ruby Test Driven Development](./ruby/tdd.md)
-- [Ruby Behavior Driven Development](./ruby/bdd.md)
+3. [Ruby Methods](./ruby/methods.md)
+4. [Ruby Loops](./ruby/loops.md)
+5. [Ruby Hashes](./ruby/hashes.md)
+6. [Ruby Classes and Objects](./ruby/classes_objects.md)
+7. [Ruby Inheritance](./ruby/inheritance.md)
+8. [Ruby Testing with RSPEC](./ruby/rspec.md)
+9. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
 
 
-## Unit Five: Ruby on Rails Models and Postgres
+## Unit Five: Intro to Postgres and Ruby on Rails Model
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
 1. [Intro to Postgres](./sql/intro_postgres.md)
-1. [Postgres Joins](./sql/08rails_sql_joins.md)
-1. [Intro to Rails](./Rails-C&V/rails_intro.md)
-1. [Rails Model: Intro to Active Record ](./Rails-M/01intro_active_record.md)
-1. [Foreign Keys and Relations](./sql/10rails_foreign_keys_and_relations.md)
-1. [Active Record Relationships ](./Rails-M/02rails_activerecord_relationships.md)
-1. [ActiveRecord Query Syntax](./Rails-M/03_rails_active_record_query_syntax.md)
+2. [Postgres Joins](./sql/08rails_sql_joins.md)
+3. [Intro to Rails](./rails_model/intro.md)
+1. [Intro to Active Record](./rails_model/active_record_intro.md)
+1. [Rails Migrations](./rails_model/migrations.md)
+1. [Challenge: Active Record Tasks](./rails_model/challenge_active_record_tasks.md)
+1. [Active Record Associations](./rails_model/active_record_associations.md)
+1. [Challenge: Active Record Task List](./rails_model/challenge_active_record_tasklist.md)
+1. [Active Record Validations](./rails_model/active_record_validations.md)
+1. [Active Record Query Syntax](./rails_model/active_record_query_syntax.md)
 1. [Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
-1. [Challenge: Active Record Tasks ](./Rails-M/03rails_active_record_tasks.md)
-1. [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
 
-### Bonus Material
-
-- [RESTful Web Application Framework](./Rails-C&V/00rails_http_intro.md)
-- [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
-- [Rails Cookies](./Rails-C&V/04rails_cookies.md)
 
 ## Unit Six: Full Stack Ruby on Rails
 
 1. [Rails Restful Routes and CRUD Actions](./Rails-C&V/rails_rest_crud.md)
 1. [Rails Forms](./Rails-C&V/rails_forms.md)
-1. [Strong Params](./Rails-M/08rails_strong_parameters.md)
-1. [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
+1. [Strong Params](./Rails-C&V/08rails_strong_parameters.md)
 1. [Postman](./tools_and_resources/postman.md)
-1. [Rails Resource Generator: Read Operations](./Rails-M/05rails_generate_resource.md)
-1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-M/06rails_generate_resource_cont.md)
-1. [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+1. [Rails Resource Generator: Read Operations](./Rails-C&V/05rails_generate_resource.md)
+1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-C&V/06rails_generate_resource_cont.md)
+1. [Challenge: Wildlife Tracker](./Rails-C&V/09rails_wildlife_tracker_challenge.md)
 1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
-1. [Intro to Fetch](./Rails-M/10using_fetch.md)
 
 Additional Topics:
-- [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
-- [SQL vs. Active Record](./Rails-M/additional-topics/05rails_sql_vs_activerecord.md)
-- [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
-- [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
-- [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
-- [Rails Model Testing](./Rails-M/additional-topics/rails_model_tests.md)
+- [Rails Model Testing](./rails_model/rails_model_tests.md)
 - [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 
 ## Unit Seven: Professional Development Week

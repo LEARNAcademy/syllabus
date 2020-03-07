@@ -1,11 +1,28 @@
-# Template Literals in Javascript
+# JavaScript Template Literals
 
-[![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)]
+## Video: Template Literals
+[![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)
 
+## Overview
+- Template literals in Javascript allow us to embed expressions in our string literals
 
-Template literals in Javascript allow us to embed expressions in our string literals among other things. In other words, with a twist in syntax we can put Javascript expressions in our strings. Here we'll focus on some of the most useful implementations of template strings.
+## Learning Objectives
+- Understanding the syntax of template literals
+- Understanding passing expressions into template literals
 
-There were a lot of technical terms in that description. Let's dive into implementation.
+## Vocabulary
+- Template literal
+- String interpolation
+
+## Additional Resources
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Nesting_templates" target="blank">Nesting Templates</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates" target="blank">Tagged Templates</a>
+
+## Set Up
+- Create a file in a text editor with the extension `.js`
+- In terminal, cd into the appropriate folder
+- $ node filename.js
+
 
 ## String Interpolation
 
@@ -25,7 +42,7 @@ console.log(`Now the fruit is a ${fruit}`)
 
 Let's look at the important pieces here:
 
-- The back tick characters (``) are used to signal the start and end of a template string
+- The back tick characters are used to signal the start and end of a template string
 - A dollar sign ($) indicates the start of an embedded expression
 - The curly braces ({}) indicate the beginning and end of the javascript expression. In this case, fruit is the expression we're asking javascript to evaluate.
 
@@ -61,14 +78,13 @@ Again, our gains are:
 - Easy to write expressions
 - Very readable code
 
-String interpolation is essentially at the core of the template literal feature of ES6 and many of it's additional features build on this piece. That said, getting comfortable with just this piece will get you a long way in understanding the more complex template literal implementations.
+String interpolation is essentially at the core of the template literal feature of ES6 and many of its additional features build on this piece. That said, getting comfortable with just this piece will get you a long way in understanding the more complex template literal implementations.
 
 ## Multi-line Strings
 
 Template literals also makes it super easy to make multi-line strings.
 
 ```javascript
-
 // Pre ES6
 
 let oldLongString = "This\nis\na\nlong\nstring"
@@ -88,14 +104,10 @@ console.log(longString)
 
 Note that the ES6 version again is very easy to read and write.
 
-## Other uses
+## Other Uses
 
 Template literals have a few other uses that are a bit beyond the scope of what is useful at this point in the course. That's not to say that you won't ever utilize them.
 
-Here are some links to some resources for those usages:
-
-- [Nesting Templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Nesting_templates)
-- [Tagged Templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates)
 
 ## Challenges
 
@@ -159,8 +171,11 @@ Write a function takes a burger object and returns a descriptive string.
 For example:
 
 ```javascript
-describeBurger(beanBurger)     // -->> 'black bean burger with cheddar and no onions
-describeBurger(turkeyBurger)   // -->> 'turkey burger with swiss and onions
+describeBurger(beanBurger)
+--> "black bean burger with cheddar and no onions"
+
+describeBurger(turkeyBurger)
+--> "turkey burger with swiss and onions"
 ```
 
 [Back to Syllabus](../README.md)
