@@ -135,12 +135,13 @@ Using React and Rails to create an asynchronous full stack application with test
 18. [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_new_cat_form.md)
 
 
-## Unit Nine: Authentication
-
-1. [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
-2. [Devise](./React_in_Rails_Apartment_App/02-authorization-and-authentication/README.md)
-3. [Skateboard App](https://github.com/LEARNAcademy/devise-with-single-page-app-pair)(Pair Exercise)
-4. [Apartment App](https://github.com/learn-academy-2019-delta/exercise-apartment-app)(Multi Day Exercise)
+## Unit Nine: React in Rails and Authentication
+1. [React In Rails Intro](./react_in_rails/intro.md)
+2. [React Routing in Rails](./react_in_rails/react_routing_in_rails.md)
+2. [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
+2. [Devise](./react_in_rails/devise.md)
+2. [Devise and React in Rails](./react_in_rails/devise_and_react_in_rails.md)
+4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
 ## Unit Ten: Capstone Project, Week 1
 1. [Capstone Requirements](./Capstone/README.md)
