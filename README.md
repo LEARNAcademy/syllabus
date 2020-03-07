@@ -89,7 +89,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Restful Routes and CRUD Actions](./Rails-C&V/rails_rest_crud.md)
 1. [Rails Forms](./Rails-C&V/rails_forms.md)
 1. [Strong Params](./Rails-C&V/08rails_strong_parameters.md)
-1. [Postman](./tools_and_resources/postman.md)
+1. [Postman](./Rails-C&V/postman.md)
 1. [Rails Resource Generator: Read Operations](./Rails-C&V/05rails_generate_resource.md)
 1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-C&V/06rails_generate_resource_cont.md)
 1. [Challenge: Wildlife Tracker](./Rails-C&V/09rails_wildlife_tracker_challenge.md)

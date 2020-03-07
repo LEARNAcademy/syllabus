@@ -26,7 +26,7 @@ Let's start with creating a controller called `main` and method called greeting.
 class MainController < ApplicationController
 
   def greeting
-    @name = "Foxtrot Class"
+    @name = "Alpha Class"
     render 'greeting.html.erb'
   end
 
