@@ -1,10 +1,42 @@
 # Rails Generate Resource: Create and Delete
 
-To round out our knowledge on the development flow using a rails generated resource we'll cover 2 more CRUD actions: Create and Delete.
+## Overview
+- To round out our knowledge on the development flow using a rails generated resource we'll cover two more CRUD actions: Create and Delete.
+- For this section we'll be using Postman to interact with our JSON API.
 
-For this section we'll be using Postman to interact with our JSON API. Here's some resource material on Postman to get you started: [Postman Resource](../tools_and_resources/postman.md)
+## Learning Objectives
+- Creating CRUD functionality in an application
+- Creating a JSON response for the Create and Delete methods
+- Interacting with Postman
 
-## Coding a create response
+## Vocabulary
+- Postman
+- API
+- resource
+- CRUD
+- JSON
+
+## Useful Commands
+- $ rails routes
+
+## Additional Resources
+- [Postman Resource](./postman.md)
+
+## Set Up
+
+#### Creating a new Rails app:
+```
+$ rails new guitar -d postgresql -T
+$ cd guitar
+$ rails db:create
+$ rails server
+```
+
+In a browser navigate to:
+`http://localhost:3000`
+
+
+## Create
 
 First we'll tackle building the method to create a guitar.
 
@@ -13,22 +45,22 @@ We'll update `guitars_controller.rb` like so:
 ```ruby
 class GuitarsController < ApplicationController
 
-    #...index/show methods...
+  #...index/show methods...
 
-    def create
-        @guitar = Guitar.new(guitar_params)
-        if @guitar.save
-            render json: @guitar, status: 201
-        else
-            render json: @guitar.errors, status: 422
-        end
+  def create
+    @guitar = Guitar.create(guitar_params)
+    if @guitar.valid?
+      render json: @guitar
+    else
+      render json: @guitar.errors
     end
+  end
 
-    private
+  private
+  def guitar_params
+    params.require(:guitar).permit(:strings, :manufacturer, :model, :color)
+  end
 
-    def guitar_params
-        params.require(:guitar).permit(:strings, :manufacturer, :model, :color)
-    end
 end
 ```
 
@@ -36,51 +68,50 @@ Now we've set up strong params for our controller and we have added a method to 
 
 Let's try out our new endpoint through Postman.
 
-We'll set up our request like so (from our [Postman resource](../tools_and_resources/postman.md)):
-
-![Post Request in Postman](../assets/postman/postman-post-send.png)
+![Post Request in Postman](./assets/postman-post-send.png)
 
 When we click send, given that we've formatted our request correctly, we should see a response like this:
 
-![Post Response in Postman](../assets/postman/postman-create-json.png)
+![Post Response in Postman](./assets/postman-create-json.png)
 
 Notice that we get the newly created guitar in the body of our response.
 
-##  Coding a destroy response
+## Destroy
 
-The destroy action is the conventional Rails action for implementing the **D**elete operation. Let's build out that action.
+The destroy action is the conventional Rails action for implementing the Delete operation. Let's build out that action.
 
 We'll add a destroy method to our `guitars_controller.rb`:
 
 ```ruby
 def destroy
-    @guitar = Guitar.find(params[:id])
-    if @guitar && @guitar.destroy
-        render json: @guitar, status: 200
-    else
-        render json: { errors: "Could not destroy guitar " }, status: 400
-    end
+  @guitar = Guitar.find(params[:id])
+  if @guitar.destroy
+    render json: @guitar
+  else
+    render json: @guitar.errors
+  end
 end
 ```
 
 Once that's set up, we'll recall our routes or run `rails routes` in my terminal:
 
-![Rails routes](../assets/resource-routes.png)
+![Rails routes](./assets/resource-routes.png)
 
 We see that our delete action is mapped to `/guitars/:id` so that's what we'll attempt to reach in Postman. Let's try to delete the guitar we just created.
 
 We'll build our request like so:
 
-![Delete request in Postman](../assets/postman/postman-delete-send.png)
+![Delete request in Postman](./assets/postman-delete-send.png)
 
 Notice that we've selected the `DELETE` verb and set up the url with the `id` of the guitar we want delete.
 
 When we hit send, we should get back the item we just deleted:
 
-![Deleted Guitar](../assets/postman/postman-create-json.png)
+![Deleted Guitar](./assets/postman-create-json.png)
 
 Now if we try to show the guitar we just deleted, we should receive an error:
 
-![Postman 404](../assets/postman/postman-404.png)
+![Postman 404](./assets/postman-404.png)
 
-The only CRUD action left is the **U**pdate, but we'll leave that up to you to put together.
+
+[Back to Syllabus](../README.md)
