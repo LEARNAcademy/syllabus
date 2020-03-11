@@ -4,14 +4,14 @@
 The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland. Before they give the go-ahead, they need to do an environmental impact study. They've asked you to build an app so that the rangers can report wildlife sightings.
 
 ## Cloud 9 Users
-Be sure and read over the [instructions](./additional-topics/07rails_cloud9_access.md) on making your app in development available to Postman.
+Be sure and read over the [instructions](./postman.md) on making your app in development available to Postman.
 
 ## The API Stories
 
 
 - **Story**:  As the consumer of the API I can list all animals in a database.
   -- Hint: make a few animals using Rails Console
-  
+
 - **Story**:  As the consumer of the API I can create an animal and save it in the database.
 An animal has the following information: common name, latin name, kingdom (mammal, insect, etc.).
 
