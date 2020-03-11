@@ -1,46 +1,13 @@
 # Rails Active Record Tasklist Challenge
 
 **Story**:
-As a programmer, I can create a TaskList that has a title and description.
+As a programmer, I can create a Tasklist that has a title and description.
 
 **Story**:
-As a programmer, a TaskLists have many Tasks.
+As a programmer, a Tasklists have many Tasks.
 
 **Story**:  
-As a programmer, I can create a new Task record that belongs to.
-
-**Story**:
-A Task has a title, which is a string, and description, which is a string.
-
-**Story**:
-As a programmer, I can list all Task records.
-
-**Story**:
-As a programmer, I can set a Task record to done given the ID of the record.
-
-**Story**:
-As a programmer, I can list all the records that are done.
-
-**Story**:
-As a programmer, I can list all the records that are not done.
-
-**Story**:
-As a programmer, I can update the title and description of a Task record given the ID of the record.
-
-**Story**:
-As a programmer, I can destroy a Task record given the ID of the record.
-
-**Story**:
-As a programmer, I can set a Task record with a due date, which is a timestamp.
-
-**Story**:
-As a programmer, I can list all the records with a due date.
-
-**Story**:
-As a programmer, I can list all the records with a due date today.
-
-**Story**:
-As a programmer, I can list all the records without a due date.
+As a programmer, I can create a new Task record that belongs to a Tasklist.
 
 **Story**:
 As a programmer, I can add multiple comments to a Task record. Comments should have a content field, which is a string.

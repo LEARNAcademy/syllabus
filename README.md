@@ -90,8 +90,8 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Forms](./Rails-C&V/rails_forms.md)
 1. [Strong Params](./Rails-C&V/08rails_strong_parameters.md)
 1. [Postman](./Rails-C&V/postman.md)
-1. [Rails Resource Generator: Read Operations](./Rails-C&V/05rails_generate_resource.md)
-1. [Rails Resource Generator Continued: Create and Delete Operations](./Rails-C&V/06rails_generate_resource_cont.md)
+1. [Rails Resource Generator: Read Operations](./Rails-C&V/resource_index_show.md)
+1. [Rails Resource Generator: Create and Delete Operations in Postman](./Rails-C&V/resource_create_delete.md)
 1. [Challenge: Wildlife Tracker](./Rails-C&V/09rails_wildlife_tracker_challenge.md)
 1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
 

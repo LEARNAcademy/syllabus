@@ -1,4 +1,4 @@
-# Generating a Resource in Rails Cont.
+# Rails Generate Resource: Create and Delete
 
 To round out our knowledge on the development flow using a rails generated resource we'll cover 2 more CRUD actions: Create and Delete.
 

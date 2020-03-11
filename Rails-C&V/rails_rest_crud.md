@@ -26,10 +26,10 @@
 
 #### Creating a new Rails app:
 ```
-rails new myapp -d postgresql -T
-cd myapp
-rails db:create
-rails server
+$ rails new myapp -d postgresql -T
+$ cd myapp
+$ rails db:create
+$ rails server
 ```
 In a browser navigate to:
 `http://localhost:3000`
