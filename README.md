@@ -93,7 +93,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Rails Resource Generator: Read Operations](./Rails-C&V/resource_index_show.md)
 1. [Rails Resource Generator: Create and Delete Operations in Postman](./Rails-C&V/resource_create_delete.md)
 1. [Challenge: Wildlife Tracker](./Rails-C&V/wildlife_tracker_challenge.md)
-1. [Consuming APIs](https://github.com/LEARNAcademy/APIConsumer/blob/master/README.md)
+1. [Consuming APIs](./external-api/fetch.md)
 
 Additional Topics:
 - [Rails Model Testing](./rails_model/rails_model_tests.md)
