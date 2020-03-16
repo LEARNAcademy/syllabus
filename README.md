@@ -1,5 +1,16 @@
 # Syllabus
 
+## Resources
+- [AWS Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
+- [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
+- [Portfolio Resources](./tools_and_resources/portfolio.md)
+
+## Programming Tools
+- [Intro to Programming](./tools_and_resources/intro_to_programming.md)
+- [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
+- [Intro Terminal](./tools_and_resources/terminal.md)
+- [Intro to Atom](./tools_and_resources/atom.md)
+
 ## Unit One: Javascript Foundations
 
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
@@ -18,9 +29,6 @@ This is your introduction to programming through the Javascript programming lang
 
 #### Additional Topics:
 
-- [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
-- [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
-- [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 - [Spread Syntax](./javascript/spread-operator.md)
 - [Template Literal](./javascript/template-literals.md)
 
@@ -46,7 +54,6 @@ Here we explore more of what React offers and do our first multi-day project.
 
 **Additional Topics**:
 
-- [Portfolio Resources](./tools_and_resources/portfolio.md)
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
 - [React Component Lifecycle](./react/component-lifecycle.md)
