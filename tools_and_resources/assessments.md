@@ -12,7 +12,7 @@
 ## Overview
 - Procedure for obtaining and submitting weekly assessments
 - Assessment is accessed through GitHub Classroom
-- Assessment is cloned to a local or AWS environment
+- Assessment is cloned to a local (your machine/local text editor) or AWS Cloud9 environment
 - Assessment is submitted as a **pull request**
 - Assessments will be valuable to you as reference and interview question prep
 
@@ -37,10 +37,17 @@
 - `git commit -m "useful information here"`
 - `git push origin <branch-name>`
 
+## Troubleshooting
+- In Cloud9 if you are getting a weird error as you are trying to run node, double check that you are in the right directory: $ pwd
+- Did you save?
+- Git add/commit/push happens in the terminal, creating a PR happens in the browser on GitHub
+- Did you fully and properly read the instructions?
+
 ## Detailed Process
 
 #### GitHub Classroom
 - The instructors will send a link via Slack to your assessment in GitHub Classroom
+- GitHub Classroom is a tool that allows each student to create their own repository  
 - Click on the link and accept the assignment and GitHub Classroom will create a repository in your cohort's organization
 - Click the link to see your repository
 - Click the green button `Clone or download`
@@ -54,8 +61,9 @@
 - Click `Create environment`
 
 #### In the AWS Terminal
-- Type `git clone` and paste the link you copied from the repository
-- cd into the assessment folder
+- AWS provides a text editor and a terminal as well as a layout of the file structure
+- Type `git clone` and paste the link you copied from your git repository
+- cd into the assessment directory
 - You should see the full name of the assessment followed by your GitHub handle followed by (master) in the terminal file path
 - This means you are on the master branch of your repository
 - Type `git checkout -b <branch-name>` (no quotes or spaces in your branch name)

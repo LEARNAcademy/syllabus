@@ -4,6 +4,7 @@
 - [AWS Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 - [Portfolio Resources](./tools_and_resources/portfolio.md)
+- [Portfolio Template](./portfolio-v001)
 
 ## Programming Tools
 - [Intro to Programming](./tools_and_resources/intro_to_programming.md)
