@@ -16,7 +16,7 @@
 
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
 
-1. [JavaScript Intro](./javascript/intro.md)
+1. [JavaScript Introduction](./javascript/intro.md)
 2. [JavaScript Conditionals](./javascript/conditionals.md)
 3. [JavaScript Arrays](./javascript/arrays.md)
 4. [JavaScript Loops](./javascript/loops.md)
@@ -37,7 +37,7 @@ This is your introduction to programming through the Javascript programming lang
 
 React is a powerful Javascript library used to build more complicated web applications.
 
-1. [React Intro](./react/intro.md/)
+1. [React Introduction](./react/intro.md/)
 2. [React Components](./react/nested-components.md)
 3. [Create React App](./react/create-react-app.md)
 4. [React State](./react/state.md/)
@@ -63,7 +63,7 @@ Here we explore more of what React offers and do our first multi-day project.
 
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
-1. [Ruby Intro](./ruby/intro.md)
+1. [Ruby Introduction](./ruby/intro.md)
 2. [Ruby Conditionals](./ruby/conditionals.md)
 3. [Ruby Methods](./ruby/methods.md)
 4. [Ruby Loops](./ruby/loops.md)
@@ -78,7 +78,7 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1. [Intro to Postgres](./sql/intro_postgres.md)
+1. [Postgres Introduction](./sql/intro_postgres.md)
 2. [Postgres Joins](./sql/08rails_sql_joins.md)
 3. [Intro to Rails](./rails_model/intro.md)
 1. [Intro to Active Record](./rails_model/active_record_intro.md)
@@ -117,30 +117,30 @@ Professional development is dedicated to preparing for your  internship and the 
 
 Using React and Rails to create an asynchronous full stack application with testing.
 
+### React Routing
+4. [React Routing Introduction](./cat-tinder/react-router/intro.md)
+7. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
+
 ### Front End Setup
-1. [Testing with Jest and Enzyme](./React_and_Rails_Cat_Tinder/Frontend/01react_testing_jest_enzyme.md)
-2. [Testing Structure in React](./React_and_Rails_Cat_Tinder/Frontend/02react_testing_app_structure.md)
-3. [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
-4. [React Routing](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/01-react-router-intro.md)
-5. [Portfolio Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/02-portfolio-challenge.md)
-6. [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-recipes-challenge.md)
-7. [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-dynamic-routes.md)
-8. [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_intro.md)
-9. [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_cats.md)
-10. [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_new_cats.md)
-11. [Cat Tinder frontend: NewCat Functionality Overview](./React_and_Rails_Cat_Tinder/Frontend/10cat_tinder_form_submit.md)
+1. [Testing with Jest and Enzyme](./cat-tinder/Frontend/01react_testing_jest_enzyme.md)
+2. [Testing Structure in React](./cat-tinder/Frontend/02react_testing_app_structure.md)
+3. [React Testing Interactions](./cat-tinder/Frontend/03react_testing_interactions.md)
+8. [Cat Tinder Frontend: Intro and Wireframes](./cat-tinder/Frontend/05cat_tinder_intro.md)
+9. [Cat Tinder Frontend: Cats Component](./cat-tinder/Frontend/06cat_tinder_cats.md)
+10. [Cat Tinder Frontend: NewCat Component](./cat-tinder/Frontend/07cat_tinder_new_cats.md)
+11. [Cat Tinder Frontend: NewCat Functionality Overview](./cat-tinder/Frontend/10cat_tinder_form_submit.md)
 
 ### Back End Setup
 
-12. [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
-13. [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
-14. [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
-15. [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
-16. [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
+12. [Cat Tinder backend: API setup](./cat-tinder/Backend/01cat_tinder_setup.md)
+13. [Cat Tinder backend: Seeds](./cat-tinder/Backend/02cat_tinder_seeds.md)
+14. [Cat Tinder backend: API Endpoints ](./cat-tinder/Backend/03cat_tinder_API_Endpoints.md)
+15. [Cat Tinder backend: Validations](./cat-tinder/Backend/04cat_tinder_validations.md)
+16. [Cat Tinder backend: CORS](./cat-tinder/Backend/05cat_tinder_CORS.md)
 
 ### Bringing it together!
-17. [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_api_index.md)
-18. [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_new_cat_form.md)
+17. [Cat Tinder frontend: API Calls and Active Record](./cat-tinder/Frontend/08cat_tinder_api_index.md)
+18. [Cat Tinder frontend: NewCat](./cat-tinder/Frontend/09cat_tinder_new_cat_form.md)
 
 
 ## Unit Nine: React in Rails and Authentication

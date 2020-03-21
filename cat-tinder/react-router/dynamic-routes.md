@@ -1,7 +1,24 @@
-# Dynamic Routes
+# React Dynamic Routes
+
+## Overview
+## Learning Objectives
+## Vocabulary
+## Useful Commands
+## Additional Resources
+## Set Up
+
+#### Creating a new React app:
+```
+- $ yarn create react-app my-app
+- $ cd my-app
+- $ yarn add react-router-dom
+- $ yarn start
+```
+- create a directory in *src* called *pages*
+
 Imagine that we have a list of recipes in a chunk of JSON, and we want to create a page to show the details of each of them.
 
-** Note, this is very much like a previous challenge, only this time, we're going to use dynamic routes and a single 'Recipe' component so that our app can support an infinite amount of recipes without us having to update the code for each one.;j
+**Note,** this is very much like a previous challenge, only this time, we're going to use dynamic routes and a single 'Recipe' component so that our app can support an infinite amount of recipes without us having to update the code for each one.
 
 ## Architecture we're working towards
 ![Recipe Architecture](https://s3.amazonaws.com/learn-site/curriculum/React/recipes-architecture.png)
@@ -9,7 +26,7 @@ Imagine that we have a list of recipes in a chunk of JSON, and we want to create
 ## Mock Recipe store
 We're going to use a mock again to store our Recipe data.  Eventually we'd want to hook this up to the backend, but for now we're happy with mock data as long as we know that the real data will have the same shape.
 
-```bash
+```
 cat ./src/store/recipes.js
 ```
 
@@ -136,33 +153,33 @@ cat -n src/App.js |sed '37,42!d'
 ```
 
 ```html
-37	          <Switch>
-38	            <Route
-39	              path="/recipe/:id"
-40	              component={Recipe}
-41	            />
-42	          </Switch>
+ <Switch>
+   <Route
+     path="/recipe/:id"
+     component={Recipe}
+   />
+ </Switch>
 ```
 
 If we were to translate line 39 into plain english, it would read something like, "For any URL that begins with '/recipe/' and ends with a value, this Route matches, additionally, pass the ending value to the page component."
 
-Finishing up App.js, we notice that the links in the nav loop over all the recipes from our mock data (and eventually real data) and construct the proper link.  Our UI is now completly flexible and able to accomodate whatever data we recieve from the backend api.
+Finishing up App.js, we notice that the links in the nav loop over all the recipes from our mock data (and eventually real data) and construct the proper link.  Our UI is now completely flexible and able to accommodate whatever data we receive from the backend api.
 
-```bash
+```
 cat -n src/App.js | sed '26,35!d'
 ```
 
 ```html
-26	            <h2>Recipes</h2>
-27	            <ul>
-28	              {recipes.map((recipe)=>
-29	                <li>
-30	                  <Link to={`/recipe/${recipe.id}`}>
-31	                    {recipe.name}
-32	                  </Link>
-33	                </li>
-34	              )}
-35	            </ul>
+ <h2>Recipes</h2>
+ <ul>
+   { recipes.map((recipe)=>
+     <li>
+       <Link to={`/recipe/${recipe.id}`}>
+         { recipe.name }
+       </Link>
+     </li>
+   )}
+</ul>
 ```
 
 ## Recipe Detail Page
@@ -198,11 +215,10 @@ cat -n src/pages/Recipe.js |sed '7,23!d'
 21	      this.setState({recipeId: this.props.match.params.id})
 22	    }
 23	  }
-...
 ```
 The constructor hooks into the components lifecycle before the component is placed on the page the first time.
 
-```componentDidUpdate()``` is called every time props or state changes on a component.  We *must* check to make sure that there is an actual change to handle here (line 20), otherwise we'll find ourselves in an endless loop.
+`componentDidUpdate()` is called every time props or state changes on a component.  We *must* check to make sure that there is an actual change to handle here (line 20), otherwise we'll find ourselves in an endless loop.
 
 We've now assigned the ID of our object to state, and we're ready to lookup the recipe data from our mock data, and display it.  Here's the complete Recipe component that show's how to do this:
 
