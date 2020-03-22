@@ -89,7 +89,7 @@ We import BrowserRouter because we are routing between web pages rendered in a b
 **src/App.js**
 
 ```javascript
-import React, { Component } from "react"
+import React from "react"
 // 1. Import the components that are needed for React Router
 import {
   BrowserRouter as Router,
@@ -185,6 +185,17 @@ To avoid having multiple routes satisfied by a URL at the same time, we can also
   <Route path="/tomato/" component={ Tomato } />
   <Route path="/" component={ Home } />
 </Switch>
+```
+
+Make sure to add `Switch` to the react-router-dom import statement
+
+```javascript
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from "react-router-dom"
 ```
 
 #### No Match (404)
