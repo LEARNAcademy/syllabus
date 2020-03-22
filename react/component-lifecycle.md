@@ -149,4 +149,9 @@ Now as we click, we can observe something really interesting about what our `han
 Experiments like these reveal a great deal about what is happening in React under the hood. Taking time to understand the component lifecycle in React will help you better debug your applications and give you a few additional tools for creating functionality in your React components.
 
 
+### Component Lifecycle
+Before the app loads on a page, nothing exists of course, then something happens, and React starts up on the page.  At that point, some components are loaded onto the page but not all of them.  Afterwards, the user can begin to interact with the web page.  They may click a link for example, and our router springs into action. At that point, a new Component may be loaded onto the page, or if it already exists on the page, it may just be refreshed with new props.
+
+These actions, initializing, receiving props, unloading, etc. are what we refer to as component lifecycle. [React's docs](https://reactjs.org/docs/react-component.html) are mandatory reading for understanding this stuff, so take a few minutes and head over there to read them.  Pay special attention to the lifecycle sections to better understand this topic.
+
 [Back to Syllabus](../README.md)

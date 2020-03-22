@@ -1,4 +1,4 @@
-# React Routing
+# React Routing Introduction
 
 ## Video: React Router
 [![YouTube](http://img.youtube.com/vi/GqNurNBKPAw/0.jpg)](https://www.youtube.com/watch?v=GqNurNBKPAw)
@@ -129,7 +129,7 @@ class App extends Component{
                   <Link to="/about/">About</Link>
                 </li>
                 <li>
-                  <Link to="/tomato/">Tomato</Link>
+                  <Link to="/tomato">Tomato</Link>
                 </li>
               </ul>
             </nav>
@@ -224,11 +224,15 @@ After importing the component, we can add a Route:
 
 Now going to any URL except for the ones listed in our Routes will show the user our Not Found page.
 
-
-## Challenges
-Create a React application for your favorite recipes using React Router.
+## Challenge
+Create a React application for your favorite movies or TV shows using React Router.
 
 ## User stories
 - As a user, when I visit your site, I can see a header and a description of your site.
-- As a user, when I visit your site, I can see a list of your five favorite recipes.
-- As a user, I can click on any of the recipes and see the recipe ingredients.
+- As a user, when I visit your site, I can see a list of your five favorite movies or TV shows.
+- As a user, I can click on any of the movies or TV shows names and see the movie or TV show details.
+- As a user, I can see an error page if I enter an invalid URL.
+
+[Go to next lesson: React Dynamic Routes](./dynamic-routes.md)
+
+[Back to Syllabus](.../README.md)

@@ -118,8 +118,8 @@ Professional development is dedicated to preparing for your  internship and the 
 Using React and Rails to create an asynchronous full stack application with testing.
 
 ### React Routing
-4. [React Routing Introduction](./cat-tinder/react-router/intro.md)
-7. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
+1. [React Routing Introduction](./cat-tinder/react-router/intro.md)
+1. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 
 ### Front End Setup
 1. [Testing with Jest and Enzyme](./cat-tinder/Frontend/01react_testing_jest_enzyme.md)
@@ -144,10 +144,10 @@ Using React and Rails to create an asynchronous full stack application with test
 
 
 ## Unit Nine: React in Rails and Authentication
-1. [React In Rails Intro](./react_in_rails/intro.md)
+1. [React In Rails Introduction](./react_in_rails/intro.md)
 2. [React Routing in Rails](./react_in_rails/react_routing_in_rails.md)
 2. [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
-2. [Devise](./react_in_rails/devise.md)
+2. [Devise Introduction](./react_in_rails/devise.md)
 2. [Devise and React in Rails](./react_in_rails/devise_and_react_in_rails.md)
 4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
