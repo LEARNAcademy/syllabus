@@ -1,6 +1,7 @@
 # Syllabus
 
 ## Resources
+- [Remote Pairing](./tools_and_resources/remote-pairing.md)
 - [AWS Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 - [Portfolio Resources](./tools_and_resources/portfolio.md)

@@ -235,4 +235,4 @@ Create a React application for your favorite movies or TV shows using React Rout
 
 [Go to next lesson: React Dynamic Routes](./dynamic-routes.md)
 
-[Back to Syllabus](.../README.md)
+[Back to Syllabus](../../README.md)
