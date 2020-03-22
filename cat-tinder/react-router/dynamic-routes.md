@@ -214,4 +214,4 @@ Refactor your favorite movie or TV show application using React Router dynamic r
 
 [Back to React Routing Introduction](./intro.md)
 
-[Back to Syllabus](.../README.md)
+[Back to Syllabus](../../README.md)
