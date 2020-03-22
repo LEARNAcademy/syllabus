@@ -53,20 +53,20 @@ Since we have three different pages, it is best practice to create a file for ea
 
 Here's the code for the Home component:
 ```javascript
-import React, { Component } from "react"
+import React from "react"
 
-class Home extends Component{
-  render(){
-    return(
-      <React.Fragment>
-        <h1>Home</h1>
-      </React.Fragment>
-    )
-  }
+const Home = () => {
+   return(
+     <>
+       <h1>Home</h1>
+     </>
+   )
 }
 export default Home
 ```
-The other two components can look similar.
+Notice we are defining `Home` as an UI/Functional (dumb) component that simply affects the UI of the page. There is no logic happening, hence why it is in a `function` rather than a `class`.The other two components can look similar.
+
+Remember, all of your code needs to be wrapped in one element. We have used `<div>` in the past, but we can also use `<React.Fragment>` as well. To simplify event more, we can use `<>` which is shorthand for `<React.Fragment>`.
 
 ## React Router
 
@@ -105,45 +105,40 @@ import Tomato from "./pages/Tomato"
 ```
 
 #### Router Components
-In this example, we are using React Router to create an unordered list for navigation.
+In this example, we are using React Router to create an unordered list for navigation. Notice that we are just importing files at this point, and there is no logic that is being added. Therefore, this is a UI/Functional (dumb) component that we will be working with.
 
 **src/App.js**
 
 ```javascript
-class App extends Component{
-  render(){
-    return(
-      <React.Fragment>
-      // 3. The set of links and paths are all wrapped in the "BrowserRouter as Router" component
+const App = () => {
+    return (
+      {/* 3. The set of links and paths are all wrapped in the "BrowserRouter as Router" component */}
         <Router>
-          <div>
-            <h1>Here is App.js Handling Our Routing</h1>
-            // 4. Using a semantic tag to denote the navigation links
-            <nav>
-              <ul>
-                <li>
-                  // 5. Creating the anchor tags using the Link component from React Router
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about/">About</Link>
-                </li>
-                <li>
-                  <Link to="/tomato">Tomato</Link>
-                </li>
-              </ul>
-            </nav>
+            <div>
+                <h1>Here is App.js Handling Our Routing</h1>
+                {/* 4. Using a semantic tag to denote the navigation links */}
+                <nav>
+                    <ul>
+                    <li>
+                        {/* 5. Creating the anchor tags using the Link component from React Router */}
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about/">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/tomato">Tomato</Link>
+                    </li>
+                    </ul>
+                </nav>
 
-            // 6. Calling the components we imported from "pages" to render in response to the Link
-            <Route path="/" exact component={ Home } />
-            <Route path="/about/" component={ AboutUs } />
-            <Route path="/tomato/" component={ Tomato } />
-
-          </div>
+                {/* 6. Calling the components we imported from "pages" to render in response to the Link */}
+                <Route path="/" exact component={ Home } />
+                <Route path="/about/" component={ AboutUs } />
+                <Route path="/tomato/" component={ Tomato } />
+            </div>
         </Router>
-      </React.Fragment>
     )
-  }
 }
 export default App
 ```
@@ -197,21 +192,19 @@ When creating applications, it is important to think about the "unhappy path." I
 
 Here's the code for the NotFound component:
 ```javascript
-import React, { Component } from "react"
+import React from "react"
 
-class NotFound extends Component{
-  render(){
+const NotFound = () => {
     return(
       <React.Fragment>
         <h3>Sorry, something went wrong.</h3>
       </React.Fragment>
     )
-  }
 }
 export default NotFound
 ```
 
-After importing the component, we can add a Route:
+After importing the component, we can add exact back in to the root Route and add a new Route for NotFound that does not have any path associated:
 
 ```html
 <Switch>
