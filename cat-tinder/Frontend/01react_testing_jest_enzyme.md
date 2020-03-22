@@ -1,6 +1,16 @@
-# React Testing Tools
+# React Testing With Jest and Enzyme
 
-## [Jest and Enzyme Video](https://player.vimeo.com/video/227512341)
+## Video: [Jest and Enzyme Video](https://player.vimeo.com/video/227512341)
+
+## Overview
+## Learning Objectives
+## Vocabulary
+## Useful Commands
+- $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
+
+## Additional Resources
+## Set Up
+
 
 There are two main tools you'll use to test your React applications: Jest and Enzyme.
 
@@ -9,7 +19,7 @@ There are two main tools you'll use to test your React applications: Jest and En
 Jest is a testing framework built right into React when you use create-react-app.  Its maintained by the good folks at
 Facebook, and they've done a great job of making testing a pleasure as you write your code.
 
-#### Try this
+
 ```
 $ create-react-app jest-example
 $ cd jest-example
