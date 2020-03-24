@@ -210,7 +210,7 @@ Refactor your favorite movie or TV show application using React Router dynamic r
 - As a user, when I visit your site, I can see a list of your five favorite movies or TV shows.
 - As a user, I can click on any of the movies or TV shows names and see the movie or TV show details.
 
-[Go to next lesson: ](./.md)
+[Go to next lesson: Cat Tinder Introduction and Wireframes](../frontend/intro.md)
 
 [Back to React Routing Introduction](./intro.md)
 

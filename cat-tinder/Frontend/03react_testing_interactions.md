@@ -1,4 +1,4 @@
-# Interacting with DOM Elements
+# Cat Tinder Interacting with DOM Elements
 
 ## [Testing Interactions Video](https://player.vimeo.com/video/227512883)
 

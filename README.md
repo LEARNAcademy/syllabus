@@ -122,16 +122,14 @@ Using React and Rails to create an asynchronous full stack application with test
 1. [React Routing Introduction](./cat-tinder/react-router/intro.md)
 1. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 
-### Front End Setup
-1. [Testing with Jest and Enzyme](./cat-tinder/Frontend/01react_testing_jest_enzyme.md)
-2. [Testing Structure in React](./cat-tinder/Frontend/02react_testing_app_structure.md)
-3. [React Testing Interactions](./cat-tinder/Frontend/03react_testing_interactions.md)
-8. [Cat Tinder Frontend: Intro and Wireframes](./cat-tinder/Frontend/05cat_tinder_intro.md)
-9. [Cat Tinder Frontend: Cats Component](./cat-tinder/Frontend/06cat_tinder_cats.md)
-10. [Cat Tinder Frontend: NewCat Component](./cat-tinder/Frontend/07cat_tinder_new_cats.md)
-11. [Cat Tinder Frontend: NewCat Functionality Overview](./cat-tinder/Frontend/10cat_tinder_form_submit.md)
+### Cat Tinder Frontend
+1. [Cat Tinder Introduction and Wireframes](./cat-tinder/frontend/intro.md)
+1. [Cat Tinder Testing with Jest and Enzyme](./cat-tinder/frontend/jest-enzyme.md)
+9. [Cat Tinder Index Component](./cat-tinder/frontend/cat-index.md)
+10. [Cat Tinder Create New Cat Component](./cat-tinder/frontend/cat-create.md)
+11. [Cat Tinder Frontend: NewCat Functionality Overview](./cat-tinder/frontend/10cat_tinder_form_submit.md)
 
-### Back End Setup
+### Cat Tinder Backend
 
 12. [Cat Tinder backend: API setup](./cat-tinder/Backend/01cat_tinder_setup.md)
 13. [Cat Tinder backend: Seeds](./cat-tinder/Backend/02cat_tinder_seeds.md)
