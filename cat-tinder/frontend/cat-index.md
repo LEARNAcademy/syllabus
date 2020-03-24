@@ -106,11 +106,11 @@ This will pass the array of cat objects to the *CatIndex.js* component. Let's ad
 { this.props.cats.map((cat, index) => {
   return(
     <ListGroup key={ index }>
-      <ListGroupItemHeading>{ cat.name }</ListGroupItemHeading>
-      <ListGroupItemText>{ cat.age } - { cat.enjoys }</ListGroupItemText>
+      <h4>{ cat.name }</h4>
+      <small>{ cat.age } - { cat.enjoys }</small>
     </ListGroup>
-  )
-})}
+    )
+  })}
 ```
 
 ## Finishing the Test
@@ -133,8 +133,8 @@ it('CatIndex renders without crashing', () => {
 })
 
 it('Renders the cats', ()=>{
-  const component = mount(<Cats cats={cats} />)
-  const headings = component.find('h4 > .cat-name')
+  const component = mount(<CatIndex cats={ cats }/>)
+  const headings = component.find('h4')
   expect(headings.length).toBe(3)
 })
 ```

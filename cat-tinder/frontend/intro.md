@@ -93,7 +93,7 @@ We don't have any links, but we can still navigate to each page in the browser. 
 - Create CatShow file
 
 
-[Go to next lesson: React Testing With Jest and Enzyme](./jest-enzyme.md)
+[Go to next lesson: Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
 
 [Back to React Dynamic Routes](../react-router/dynamic-routes.md)
 
