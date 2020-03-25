@@ -1,11 +1,5 @@
-# API Endpoints
+# Cat Tinder API Endpoints
 
-In the previous steps we generated a controller for Cats, but it's pretty bare bones currently.  In fact, it doesn't actually have any routes at all!  Never fear, we're going to take care of that right now.  
-
-```ruby
-class CatsController < ApplicationController
-end
-```
 
 ## Update Application Controller
 We need to update the application controller to allow requests from applications other than this Rails app (the React app runs all on its own).  To do this, we add this line to the ApplicationController:
@@ -14,8 +8,13 @@ We need to update the application controller to allow requests from applications
 class ApplicationController < ActionController::Base
     skip_before_action :verify_authenticity_token # <- Add this line
 end
+
 ```
-Our app needs two routes to start, and index listing all the cats, and a 'create' route so that users can submit new cat information to the application.
+```ruby
+class CatsController < ApplicationController
+end
+```
+Our app needs two routes to start, an 'index' listing all the cats, and a 'create' route so that users can submit new cat information to the application.
 
 ## Routes for Cats
 
@@ -43,7 +42,7 @@ The name of these routes is important.  Rails knows to route the requests in the
 We start with the index route.  In this endpoint, we want to return all of the cats that the application knows about.  Later on, we may want to add search and/or pagination, but for now we'll keep things simple and just return all the cats.
 
 ### Create a spec
-We're going to practice Test Driven Development, so let's start with a test.  We'll add a `requests` folder to the `spec` folder that rspec generated. Then, we'll add our test file:
+We're going to practice Test Driven Development, so let's start with a test.  We'll add a `requests` folder to the `spec` folder that RSPEC generated. Then, we'll add our test file:
 
 **/spec/requests/cats_spec.rb**
 
@@ -70,12 +69,12 @@ describe "Cats API", type: :request do
 end
 ```
 
-When we run that spec, it fails of course, because we don't have any code in the controller to respond to the request correctly.  This failure is a good thing!
+When we run that spec, it fails of course, because we don't have any code in the controller to respond to the request correctly. Yay failure!
 
 
 Now we can write the controller code to make it pass:
 
-```Ruby
+```ruby
 def index
   cats = Cat.all
   render json: cats
@@ -87,7 +86,7 @@ If you followed the setup in the last module, then you should already have a cat
 
 ![Cat Tinder Index](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat_tinder_index.png)
 
-## The Create Route
+## Create
 Next we'll tackle the 'create' route.  Let's start with adding a new test:
 
 ```ruby
@@ -137,10 +136,12 @@ And we're Green!  This isn't quite production ready code, but its enough to get 
 ## Summary
 In this section, we've built out our first API endpoint to handle requests for listing and creating cats.  In the next section, we're going to deal with validating that the information passed to the ```create``` route is what we expect and handle situations when it's not.
 
-#### Where to go from here
+## Challenges
+- Add an Index endpoint to your application
+- Add an Create endpoint to your application
 
-[Go to Cat Tinder: Validations](./04cat_tinder_validations.md)
+[Go to next lesson: Cat Tinder API Validations](./validations.md)
 
-[Back to Cat Tinder: Seeds](./02cat_tinder_seeds.md)
+[Back to Cat Tinder API Seeds](./seeds.md)
 
 [Back to Syllabus](../../README.md)

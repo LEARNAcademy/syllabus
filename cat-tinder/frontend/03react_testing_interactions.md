@@ -106,7 +106,7 @@ test('changes button text when button clicked a second time', () => {
 And here is the Component to make these tests pass:
 
 #### /src/App.js
-```jsx
+```javascript
 import React, { Component } from 'react';
 import {
   Col,

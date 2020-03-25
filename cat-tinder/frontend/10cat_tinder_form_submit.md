@@ -41,7 +41,7 @@ We're setting ourselves up to submit new cat data to the server.  For now, we'll
 * You'll also want to clear the form data in NewCat.js
 
 
-[Go to Cat Tinder: Rails API Setup](../Backend/01cat_tinder_setup.md)
+[Go to Cat Tinder: Rails API Setup](../backend/api_intro.md)
 
 [Back to Cat Tinder: NewCat Component](./cat-create.md)
 

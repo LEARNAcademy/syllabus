@@ -34,6 +34,7 @@ $ rails server
 
 - `rails new app_name`: generates a new folder with the entire Rails directory structure with all the code you need to run our simple application right out of the box
 - `rails new app_app -d postgresql -T`: Rails comes with a default SQL database called SQLite, passing the flags `-d postgresql -T` will replace the default database with postgres
+-  The `-T` flag tells rails to skip adding the default Minitest framework, as we're going to use Rspec instead
 - `rails db:create`: sets up an empty database
 - `rails server` or `rails s`: starts the Rails application by starting the server
 
