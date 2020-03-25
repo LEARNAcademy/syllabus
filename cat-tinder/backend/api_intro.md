@@ -13,8 +13,6 @@
 - API
 - JSON
 
-## Useful Commands
-## Additional Resources
 ## Set Up
 
 #### Creating a new Rails app:
@@ -30,7 +28,6 @@ $ rails server
 
 In a browser navigate to:
 `http://localhost:3000`
-
 
 ## API Technologies
 Creating our own API opens up a new world of possibilities for building engaging, interactive applications.  We can begin to accept user input, store and manipulate that input in the backend, and then provide a personalized experience for our user, perfectly suited to the task he/she is trying to achieve.

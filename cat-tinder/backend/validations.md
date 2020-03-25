@@ -127,7 +127,7 @@ And now, we're Green!
 - Add the appropriate request validations to ensure the API is sending useful information to the frontend developer
 - Add a validation to assure that the enjoys value is at least 10 characters long
 
-[Go to Cat Tinder: CORS](../connecting/05cat_tinder_CORS.md)
+[Go to next lesson: Cat Tinder API CORS](./CORS.md)
 
 [Back to Cat Tinder API Endpoints](./api_endpoints.md)
 
