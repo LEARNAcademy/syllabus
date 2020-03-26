@@ -15,7 +15,7 @@
 ## Set Up
 
 #### Cloud 9 Users
-Be sure and review the [instructions](../../Rails-M/additional-topics/07rails_cloud9_access.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker with Postman.
+Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker with Postman.
 
 ## Fetching Our Data
 The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON. We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because we're going to be famous).
