@@ -3,7 +3,7 @@
 Time to build the form to add new cats.
 
 ## New Cat Tests
-**src/pages/__tests__/NewCat.js**
+**src/pages/`__tests__`/NewCat.js**
 
 ```javascript
 import React from 'react'

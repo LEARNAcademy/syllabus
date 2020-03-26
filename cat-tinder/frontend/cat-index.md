@@ -12,7 +12,7 @@
 
 ## CatIndex Tests
 
-**src/pages/__tests__/CatIndex.js**
+**src/pages/`__tests__`/CatIndex.js**
 
 ```javascript
 import React from 'react'
@@ -120,7 +120,7 @@ We need our test to send some JSON data to *pages/CatIndex.js* the same way *App
 
 Below, you’ll notice that we’re using an import statement for a thing called mount from Enzyme. It will allow us to pass information to a component we are testing.
 
-**src/pages/__tests__/CatIndex.js**
+**src/pages/`__tests__`/CatIndex.js**
 
 ```javascript
 import cats from '../../cats'

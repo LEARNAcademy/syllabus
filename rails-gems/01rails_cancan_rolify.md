@@ -13,7 +13,7 @@ A good example of authorization in action is the sharing of Google Documents.  S
 
 Let's get started with our new app:
 
-```rails new gradecentral -T --database=postgresql```
+`rails new gradecentral -d postgresql -T`
 
 ## Set up Devise
 
