@@ -1,4 +1,4 @@
-# Creating a new cat
+# Cat Tinder Creating Cats
 
 We already have a getCats call, now we need to make a new method to create a new cat when a user submits the form.
 
@@ -18,9 +18,9 @@ class App extends Component {
             }
       this.getDogs()
     }
-    
+
     //... The get cats method is also here
-    
+
     createCat = (cat)=>{
       return fetch('http://localhost:3000/cats', {
       	body: JSON.stringify(cat),  // <- we need to stringify the json for fetch
@@ -35,7 +35,7 @@ class App extends Component {
         }
       })
     }
-    
+
     render() {
       return (
         <Router>
@@ -44,9 +44,9 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/cats/" render={(props) => <Cats cats={this.state.cats}/> } />
-			
+
 			<!-- Notice that we pass the onSubmit method down to the NewCat component -->
-                        <Route exact path="/newcat" render={(props) => < NewCat onSubmit={this.createCat} />} /> 
+                        <Route exact path="/newcat" render={(props) => < NewCat onSubmit={this.createCat} />} />
                     </Switch>
                 </div>
         </Router>
@@ -104,25 +104,24 @@ class NewCat extends Component {
   render() {
       return (
         <div>
-            
-	    <!-- FORM INPUTS ARE HERE -->
-          
+
+	    {*/ FORM INPUTS ARE HERE /*}
+
             <button onClick={this.handleSubmit} className="btn btn-primary">Submit</button>
 
-            {this.state.success && <Redirect to="/cats/" /> }
+            { this.state.success && <Redirect to="/cats/" /> }
         </div>
 
-      );
+      )
     }
 }
 ```
 
 ## Stretch Challenges
-
 - As a user, when I am on the cat index page, I can click on a cat and see its profile page.
 - As a user, when viewing a cat's profile page, I can edit the cat's info.
 - As a user, I can delete a cat.
 
-[Back to Cat Tinder: Cats Index API Call](./08cat_tinder_api_index.md)
+[Back to Cat Tinder Fetching Cats](./fetch.md)
 
 [Back to Syllabus](../../README.md)

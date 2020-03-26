@@ -66,7 +66,7 @@ That's it!  We can now accept POST, PUT, and DELETE requests in our server side 
 ## Challenge
 - Enable CORS in your Cat API
 
-[Go to next lesson: Cat Tinder: API Calls](../frontend/08cat_tinder_api_index.md)
+[Go to next lesson: Cat Tinder Fetching Cats](../connection/fetch.md)
 
 [Back to Cat Tinder API Validations](./validations.md)
 

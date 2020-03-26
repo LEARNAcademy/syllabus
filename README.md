@@ -138,8 +138,8 @@ Using React and Rails to create an asynchronous full stack application with test
 12. [Cat Tinder CORS](./cat-tinder/backend/CORS.md)
 
 ### Bringing it together!
-13. [Cat Tinder API Calls and Active Record](./cat-tinder/Frontend/08cat_tinder_api_index.md)
-14. [Cat Tinder NewCat](./cat-tinder/Frontend/09cat_tinder_new_cat_form.md)
+13. [Cat Tinder Fetching Cats](./cat-tinder/connecting/fetch.md)
+14. [Cat Tinder NewCat](./cat-tinder/connecting/cat-form.md)
 
 
 ## Unit Nine: React in Rails and Authentication
