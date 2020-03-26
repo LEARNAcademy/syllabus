@@ -151,7 +151,7 @@ Using React and Rails to create an asynchronous full stack application with test
 4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
 ## Unit Ten: Capstone Project, Week 1
-1. [Capstone Requirements](./Capstone/README.md)
+1. [Capstone Requirements](./capstone/README.md)
 1. [ActiveStorage](./Rails_ActiveStorage/README.md)
 2. [JBuilder](./Rails_JBuilder/README.md)
 3. [has_many_through](./Rails_has_many_through/README.md)

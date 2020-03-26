@@ -28,7 +28,7 @@ class App extends Component {
     this.state = {
       cats: [], // We start with an empty array, so the component can finish rendering before we make our fetch request
     }
-    this.getCats() // Call our fetch method when the component loads for the first time
+    this.getCats() // Calls our fetch method when the component loads for the first time
     }
 
     componentWillMount(){

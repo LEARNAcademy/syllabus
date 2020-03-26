@@ -1,120 +1,128 @@
 # Cat Tinder Creating Cats
 
-We already have a getCats call, now we need to make a new method to create a new cat when a user submits the form.
+## Overview
+- We already have a `getCats()` fetch call, now we need to make a new method to create a new cat when a user submits the form.
 
-The createCat fetch call is going to be a little bit different than getCats, because creating something in the rails requires a POST type HTTP request (think back to your rails routes).
+## Learning Objectives
+- Sending a new cat entry from the frontend React form to the database
+- Redirecting to the Cat Index after the user submits a New Cat
+
+## Vocabulary
+- post
+- HTTP request
+- fetch
+
+## POSTing Cats
+The `createCat()` fetch call is going to be a little bit different than `getCats()`, because creating something in the Rails app requires a POST type HTTP request (think back to your rails routes).
 
 A POST type request means that we are "posting" or sending information along with the request. Information that must be handled. In this case, by specifying the HTTP verb `POST`, attaching some information, and directing it to the rails "/cats" route will mean that the attached information is used to create a new cat instance in the database.
 
-Here is the code:
-
-#### src/App.js
+**src/App.js**
 ```javascript
 class App extends Component {
-    constructor(props){
-        super(props)
-            this.state = {
-                dogs: [],
-            }
-      this.getDogs()
-    }
-
-    //... The get cats method is also here
-
-    createCat = (cat)=>{
-      return fetch('http://localhost:3000/cats', {
-      	body: JSON.stringify(cat),  // <- we need to stringify the json for fetch
-      	headers: {  // <- We specify that we're sending JSON, and expect JSON back
-      		'Content-Type': 'application/json'
-      	},
-      	method: "POST"  // <- Here's our verb, so the correct endpoint is invoked on the server
-      })
-      .then((response) => {
-        if(response.ok){
-          return this.getCats()
-        }
-      })
-    }
-
-    render() {
-      return (
-        <Router>
-            <Header />
-                <div>
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route exact path="/cats/" render={(props) => <Cats cats={this.state.cats}/> } />
-
-			<!-- Notice that we pass the onSubmit method down to the NewCat component -->
-                        <Route exact path="/newcat" render={(props) => < NewCat onSubmit={this.createCat} />} />
-                    </Switch>
-                </div>
-        </Router>
-      );
-    }
-}
-```
-Read that through a few times to see if you can get the gist of what's going on.
-
-## Passing the New Cat information
-
-
-Last thing to do is call the createCat() method when from the NewCat component, and add the redirect element in NewCat.js. You can do this a variety of ways, but here is one example:
-
-#### pages/NewCat.js
-```
-// ... the NewCat form ...
-		</form>
-	{this.state.success &&
-		<Redirect to="/cats" />
-	}
-</div>
-```
-Notice the ```this.props.success``` statement. If this evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist. You will need to pass a "success" value in props to finish this functionality.
-
-Here is an almost complete NewCat.js as an example:
-
-```javascript
-class NewCat extends Component {
   constructor(props){
     super(props)
     this.state = {
-      success: false,
-      form: {
-          name: '',
-          age: '',
-          enjoys: ''
-      },
+      // empty array to hold the cats coming from the backend
+      cats: []
     }
+    this.getCats()
   }
-
-  handleChange = (e) => {
-    const { form } = this.state
-    form[e.target.name] = e.target.value
-    this.setState({form: form})
+  componentDidMount(){
+  	this.getCats()
   }
+  //... The get cats method is here
 
-  handleSubmit = () => {
-    this.props.onSubmit(this.state.form)
-    .then(()=>{
-      this.setState({success: true}) //This triggers the redirect
+  createCat = (newcat) => {
+    return fetch("http://localhost:3000/cats", {
+      // converting an object to a string
+    	body: JSON.stringify(newcat),
+      // specify the info being sent in JSON and the info returning should be JSON
+    	headers: {
+    		"Content-Type": "application/json"
+    	},
+      // HTTP verb so the correct endpoint is invoked on the server
+    	method: "POST"
+    })
+    .then((response) => {
+      // if the response is good call the getCats method
+      if(response.ok){
+        return this.getCats()
+      }
     })
   }
 
   render() {
-      return (
-        <div>
-
-	    {*/ FORM INPUTS ARE HERE /*}
-
-            <button onClick={this.handleSubmit} className="btn btn-primary">Submit</button>
-
-            { this.state.success && <Redirect to="/cats/" /> }
-        </div>
-
-      )
-    }
+    return (
+      <>
+        <Router>
+          <Switch>
+            // pass the createCat method as props to NewCat
+            <Route exact path="/newcat" render={ (props) => <NewCat handleSubmit={ this.createCat } /> }
+            />
+            //
+            <Route exact path="/catindex" render={ (props) => <CatIndex cats={ this.state.cats } /> }
+            />
+          </Switch>
+        </Router>
+      </>
 }
+```
+
+## Call and Redirect
+The last thing to do is call the `createCat()` method being passed as props to the *NewCat.js*, and add the redirect element.
+
+**pages/NewCat.js**
+```javascript
+<Link to="/catindex">
+  <Button
+    name="submit"
+    id="submit"
+    onClick={ this.handleSubmit }
+  >
+    Create a New Profile
+  </Button>
+  { this.state.success && <Redirect to="./catindex"/> }
+</Link>
+```
+Notice the `this.state.success` statement. This sets up conditional rendering. If `this.state.success` evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist.
+
+You will need to create a "success" value in state to finish this functionality.
+
+**src/pages/NewCat.js**
+```javascript
+class NewCat extends Component{
+  constructor(props){
+    super(props)
+    // small amount of state to manage the form
+    this.state = {
+      // success value defaulting to false to manage the redirect functionality
+      success: false,
+      form:{
+        name: "",
+        age: "",
+        enjoys: ""
+      }
+    }
+  }
+
+  handleSubmit = (event) => {
+    // keeps React from refreshing the page unnecessarily
+    event.preventDefault()
+    // a function call being passed from App.js
+    this.props.handleSubmit(this.state.form)
+    this.setState({
+      success: true
+    })
+  }
+
+  handleChange = (event) => {
+    // destructuring form out of state
+    let { form } = this.state
+    form[event.target.name] = event.target.value
+    // setting state to the updated form
+    this.setState({ form: form })
+  }
 ```
 
 ## Stretch Challenges
