@@ -31,7 +31,7 @@ class App extends Component {
     this.getCats() // Calls our fetch method when the component loads for the first time
     }
 
-    componentWillMount(){
+    componentDidMount(){
     	this.getCats()
     }
 
@@ -61,7 +61,7 @@ What is this code doing?
 
 The big things to note are that we call fetch (which is a promise) and use the value returned from the promise to update state.
 
-`ComponentWillMount()` is part of the React component lifecycle and always runs right before render. This means, that right before we have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the database to set state.
+`ComponentDidMount()` is part of the React component lifecycle and always runs right before render. This means, that right before we have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the database to set state.
 
 ## Starting Servers
 We have two applications running separately from each other. They will run on two different ports.
