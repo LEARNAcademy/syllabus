@@ -1,4 +1,5 @@
 # Devise
+[![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
 
 ## Overview
 Using the Devise gem to create authentication and authorization for a React in Rails application
@@ -201,10 +202,6 @@ We start off with a discussion of a few concepts around authentication and autho
 
 
 ##### Part 1
-[![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
-
-##### Part 2
-[![YouTube](http://img.youtube.com/vi/wUT5PWS6itI/0.jpg)](https://www.youtube.com/watch?v=wUT5PWS6itI)
 
 - [Devise Single Page App](../03_devise_and_react_together.md)(Group Exercise)
 
