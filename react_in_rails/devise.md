@@ -193,20 +193,6 @@ Then, in the create method of the controller, we can assign it to the current us
 
 
 
-# Single Page App Authentication
-
-[![YouTube](http://img.youtube.com/vi/S3bE8iW0T6c/0.jpg)](https://www.youtube.com/watch?v=S3bE8iW0T6c)]
-
-We start off with a discussion of a few concepts around authentication and authorization.  It's important to make the distinction clearly.
-
-
-
-##### Part 1
-
-- [Devise Single Page App](../03_devise_and_react_together.md)(Group Exercise)
-
-- [Example Completed Application](https://github.com/LEARNAcademy/devise_and_react_example)
-
 
 [Go to next lesson: Devise and React in Rails](./devise_and_react_in_rails.md)
 
