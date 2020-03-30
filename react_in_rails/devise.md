@@ -19,7 +19,7 @@ Using the Devise gem to create authentication and authorization for a React in R
 
 
 ### Set Up Devise
-- $ rails new devise_app -T postgresql -d
+- $ rails new devise_app -d postgresql -T
 - $ cd devise_app
 - $ bundle add devise
 - $ rails generate devise:install
