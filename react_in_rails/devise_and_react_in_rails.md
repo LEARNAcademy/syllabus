@@ -14,7 +14,7 @@ This example combines what we've learned about Devise with what we've learned ab
 
 
 ### Set Up Devise
-- $ rails new devise_and_react_app -T postgresql -d
+- $ rails new devise_and_react_app -d postgresql -T
 - $ cd devise_and_react_app
 - $ bundle add devise
 - $ rails generate devise:install
