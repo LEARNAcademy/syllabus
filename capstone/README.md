@@ -87,7 +87,8 @@
 ### Week 10
 
 #### Monday
-- Planning
+- Planning (Wireframes, User/Job Stories, Define Team Roles)
+- Get Product Sign-off
 - Kickoff
 - Mob programming
 
