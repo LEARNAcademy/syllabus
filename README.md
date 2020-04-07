@@ -1,5 +1,7 @@
 # Syllabus
 
+Welcome to the LEARN Syllabus! This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a Pull Request to fix any errors, expand definitions, or further explain concepts.
+
 ## Resources
 - [Remote Pairing](./tools_and_resources/remote-pairing.md)
 - [AWS Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
@@ -150,14 +152,17 @@ Using React and Rails to create an asynchronous full stack application with test
 2. [Devise and React in Rails](./react_in_rails/devise_and_react_in_rails.md)
 4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
-## Unit Ten: Capstone Project, Week 1
-1. [Capstone Requirements](./capstone/README.md)
+## Unit Ten: Capstone Project, MVP
+1. [Capstone Schedules](./capstone/schedule.md)
+1. [Capstone Requirements](./capstone/requirements.md)
 1. [ActiveStorage](./Rails_ActiveStorage/README.md)
-2. [JBuilder](./Rails_JBuilder/README.md)
-3. [has_many_through](./Rails_has_many_through/README.md)
-
-## Unit Eleven: Capstone Project, Week 2
 1. [Heroku](./heroku/README.md)
+
+Additional Topics:
+1. [JBuilder](./Rails_JBuilder/README.md)
+2. [has_many_through](./Rails_has_many_through/README.md)
+
+## Unit Eleven: Capstone Project, Icebox
 
 ## Unit Twelve: Internship Preparation
 1. [React Native](./react_native/01_expo.md)
