@@ -3,7 +3,7 @@
 ### Week 8: Ideation
 **Planning is critical to the success of your project.** Proper planning can help avoid wasting time and ensure your team is on the same page.
 
-This week you will find out your groups for the Capstone project and come up with an **idea**. We recommend creating a shared gmail address that can be used for creating group accounts. Create a Google doc where everyone can offer ideas during the brainstorming process.
+This week you will get your group assignments for the Capstone project and come up with an **idea**. We recommend creating a shared gmail address that can be used for creating group accounts. Create a Google doc where everyone can offer ideas during the brainstorming process.
 
 ### Week 9: Elevator Pitch, Wireframes, DB Schema
 This week you will get together with your group periodically for planning sessions. During these sessions, you will come up with an **elevator pitch** for your project. The pitch should succinctly explain your project's purpose and functionality.
@@ -86,3 +86,5 @@ Your group will make the final push to Heroku and celebrate a project well done!
 
 ### Week 12: Demo
 It's time to show off your hard work!
+
+[Back to Syllabus](../README.md)

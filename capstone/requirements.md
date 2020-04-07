@@ -21,9 +21,10 @@
 - Accessible design features
 - Higher test coverage
 - Adding Google analytics
+- Continuous Integration
 
 ## Additional Technologies
-- Gmail account
+- Gmail account / Google docs
 - New GitHub organization (for everyone to share)
 - Slack channel - invite all instructors and admin staff
 - Heroku Account
@@ -36,3 +37,6 @@
 - Organization and clear communication - make sure everyone is on the same page
 - Setting Clear Goals - Trello
 - Make sure everyone feels included
+
+
+[Back to Syllabus](../README.md)
