@@ -8,9 +8,11 @@ Welcome to the LEARN Syllabus! This repository is a reflection of the current st
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
 - [Portfolio Resources](./tools_and_resources/portfolio.md)
 - [Portfolio Template](./portfolio-v001)
+- [How to Ask a Tech Question](./tools_and_resources/questions.md)
+- [Intro to How the Internet Works](./tools_and_resources/how-the-internet-works-intro.md)
 
 ## Programming Tools
-- [Intro to Programming](./tools_and_resources/intro_to_programming.md)
+- [Tech Stack](./tools_and_resources/techstack.md)
 - [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
 - [Intro Terminal](./tools_and_resources/terminal.md)
 - [Intro to Atom](./tools_and_resources/atom.md)
@@ -45,10 +47,6 @@ React is a powerful Javascript library used to build more complicated web applic
 3. [Create React App](./react/create-react-app.md)
 4. [React State](./react/state.md/)
 
-#### Additional Topics:
-
-- [Intro to How the Internet Works](./tools_and_resources/how-the-internet-works-intro.md)
-
 ## Unit Three: Intermediate React
 
 Here we explore more of what React offers and do our first multi-day project.
@@ -56,7 +54,7 @@ Here we explore more of what React offers and do our first multi-day project.
 1. [React Props](./react/props.md/)
 2. [React Forms and Functional Props](./react/forms.md/)
 
-**Additional Topics**:
+#### Additional Topics:
 
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
@@ -106,7 +104,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Challenge: Wildlife Tracker](./Rails-C&V/wildlife_tracker_challenge.md)
 1. [Consuming APIs](./external-api/fetch.md)
 
-Additional Topics:
+#### Additional Topics:
 - [Rails Model Testing](./rails_model/rails_model_tests.md)
 - [Challenge: Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
 
@@ -158,7 +156,7 @@ Using React and Rails to create an asynchronous full stack application with test
 1. [ActiveStorage](./Rails_ActiveStorage/README.md)
 1. [Heroku](./heroku/README.md)
 
-Additional Topics:
+#### Additional Topics:
 1. [JBuilder](./Rails_JBuilder/README.md)
 2. [has_many_through](./Rails_has_many_through/README.md)
 
