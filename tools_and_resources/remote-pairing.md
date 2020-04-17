@@ -4,7 +4,7 @@ An important part of being successful in a remote dev team is effective pair pro
 
 ### Why We Utilize Pair Programming
 - Different people have different knowledge and strengths which can lead to better solutions
-- Distributing cognitive load and use individualized skills when driving and navigating
+- Distributing cognitive load and use individualized skills (typing syntax vs. problem solving) when driving and navigating
 - Coding can feel overwhelming, so focusing on one aspect of the job at hand can help focus energy on problem solving
 - Two sets of eyes makes it easier to catch mistakes and produce high-quality code
 - A pair can hold each other accountable so you'll be less likely to be tempted to take shortcuts or jump around without finishing the task you are on
