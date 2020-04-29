@@ -147,9 +147,7 @@ Make sure you try different options and change the variables to ensure properly 
 
 - Write an `if/else` statement that takes a variable of a boolean, number, or string  datatype and logs the data type of the variable **HINT**: use the JS operator `typeof`.
 
-**EPIC Challenge: Password Checker**
-
-- Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password". If the user’s password is equal to 8 or more characters OR includes `!`, then log "that password is strong enough!". Log "password is not strong enough" for every other input.
+- Create a password checker using a single `if/else` statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password!" If the user’s password is  8 or more characters OR includes `!`, then log "That password is strong enough." Log "That  is not a valid password." for every other input.
 
 
 [Go to next lesson: JavaScript Arrays](./arrays.md)

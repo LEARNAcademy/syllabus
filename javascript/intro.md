@@ -228,8 +228,6 @@ We have gone over most of the building blocks that compose a JavaScript program.
 
 ## Challenges
 
-Open up a terminal and start node (type "node" to start). To exit the node console use control-c twice. Then:
-
 **Arithmetic Challenges**
 - Add 34 and 71
 - Subtract 67 from 123
