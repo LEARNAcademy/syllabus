@@ -54,7 +54,7 @@ In short, there is no end to the winning when you write tests for your code.  Yo
 **Test Driven Development**
 There is another, and even more powerful benefit to writing tests for your code as well.  When we write our tests first, then write the code required to make them pass, we as developers, are think about our code in a different, more logical way.  Breaking the code into a series of tests helps us break the big problem down into much smaller ones, and smaller problems are easier to solve, so we write dramatically better code because of it.
 
-If that is not enough to convince you to write great tests for your code, here is one more benefit, which is equally as important.  If you have solid tests, and decide that you want to refactor some part of your application because either the requirements of the application changed, or you have realized a better way, you are free to do so with confidence.  During the entire refactor, you are confident that you aren't braking your app because your tests pass.  Its incredibly liberating!
+If that is not enough to convince you to write great tests for your code, here is one more benefit, which is equally as important.  If you have solid tests, and decide that you want to refactor some part of your application because either the requirements of the application changed, or you have realized a better way, you are free to do so with confidence.  During the entire refactor, you are confident that you aren't breaking your app because your tests pass.  Its incredibly liberating!
 
 **Process**
 - Write the test first
