@@ -12,7 +12,7 @@
 ## Overview
 - Procedure for obtaining and submitting weekly assessments
 - Assessment is accessed through GitHub Classroom
-- Assessment is cloned to a local machine
+- Assessment is cloned to a local (your machine/local text editor) or AWS Cloud9 environment
 - Assessment is submitted as a **pull request**
 - Assessments will be valuable to you as reference and interview question prep
 
@@ -38,8 +38,8 @@
 - `git push origin <branch-name>`
 
 ## Troubleshooting
+- In Cloud9 if you are getting a weird error as you are trying to run node, double check that you are in the right directory: $ pwd
 - Did you save?
-- Are you in the correct directory?
 - Git add/commit/push happens in the terminal, creating a PR happens in the browser on GitHub
 - Did you fully and properly read the instructions?
 
@@ -53,11 +53,19 @@
 - Click the green button `Clone or download`
 - Click the clipboard icon on the side of the dropdown
 
-#### In Terminal
-- cd into an appropriate location
+#### AWS
+- Log in and go to Cloud 9
+- Create environment
+- Name the environment something descriptive so you can keep track of each assignment, click `Next step`
+- On the Configure Settings page, change the Platform to Ubuntu Server 18.04 LTS, click `Next step`
+- Click `Create environment`
+
+#### In the AWS Terminal
+- AWS provides a text editor and a terminal as well as a layout of the file structure
 - Type `git clone` and paste the link you copied from your git repository
 - cd into the assessment directory
-- You should see the full name of the assessment followed by your GitHub handle
+- You should see the full name of the assessment followed by your GitHub handle followed by (master) in the terminal file path
+- This means you are on the master branch of your repository
 - Type `git checkout -b <branch-name>` (no quotes or spaces in your branch name)
 - Terminal will say `Switched to a new branch <branch-name>`
 
@@ -71,10 +79,10 @@
 - `git add .`
 - `git commit -m "completed assessment"`
 - `git push origin <branch-name>`
-- On GitHub refresh the page and find the green `Compare & pull request` button
+- May have to enter your GitHub username (handle) and password (the password will not show up as you type)
+- After you push, terminal will generate a GitHub URL that will take you to your pull request
+- Follow the URL and click the green `Compare & pull request` button
 - Leave any note you feel will be prudent for the instructors and click the green `Create pull request` button
-
-**You have successfully submitted your assessment!**
 
 #### After your code has been approved
 - An instructor will review your code and leave you comments
