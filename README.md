@@ -47,6 +47,9 @@ React is a powerful Javascript library used to build more complicated web applic
 3. [Create React App](./react/create-react-app.md)
 4. [React State](./react/state.md/)
 
+#### Additional Topics:
+- [Ternary Operators](./javascript/ternary.md)
+
 ## Unit Three: Intermediate React
 
 Here we explore more of what React offers and do our first multi-day project.
