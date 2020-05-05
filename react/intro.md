@@ -69,16 +69,16 @@ There's a lot there. But let's focus on the React portion. It's the section in `
 
 ```html
 <script type="text/babel">
-      class HelloReact extends React.Component{
-        render(){
-          return(
-            <h1>Hello React!</h1>
-          )
-        }
-      }
-      const domContainer = document.querySelector('#react-container');
-      ReactDOM.render(<HelloReact />, domContainer);
-    </script>
+  class HelloReact extends React.Component{
+    render(){
+      return(
+        <h1>Hello React!</h1>
+      )
+    }
+  }
+  const domContainer = document.querySelector('#react-container');
+  ReactDOM.render(<HelloReact />, domContainer);
+</script>
 ```
 
 Here we start with the class definition of our component. Notice that it extends from the React.Component class. Within this class is a single method, the render method. Notice that the render method does one thing, return a single html element.
