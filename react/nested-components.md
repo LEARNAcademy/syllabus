@@ -90,8 +90,8 @@ Next, we will define another component class:
       )
     }
   }
-  const domContainer = document.querySelector('#react-container');
-  ReactDOM.render(<App />, domContainer);
+  const domContainer = document.querySelector('#react-container')
+  ReactDOM.render(<App />, domContainer)
 </script>
  ```
 
@@ -122,7 +122,7 @@ Next, we will define another component class:
     }
   }
   const domContainer = document.querySelector('#react-container');
-  ReactDOM.render(<App />, domContainer);
+  ReactDOM.render(<App />, domContainer)
 </script>
 ```
 
@@ -132,7 +132,38 @@ With that call to the Content component within the App component's render, we no
 
 The goal of the following challenge is for you to practice nesting components and getting familiar with class based component syntax.
 
-Clone your starter code [here](https://github.com/learn-academy-2020-alpha/react-intro-challenge)
+Create a new HTML file. Copy the following code into your file:
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Intro to React</title>
+
+</head>
+<body>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      render(){
+        return(
+          <h1>Hello React!</h1>
+        )
+      }
+    }
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+  </script>
+</body>
+</html>
+```
+
 
 Here are your stories:
 
