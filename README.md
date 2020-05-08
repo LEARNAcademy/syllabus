@@ -46,9 +46,11 @@ React is a powerful Javascript library used to build more complicated web applic
 2. [React Components](./react/nested-components.md)
 3. [Create React App](./react/create-react-app.md)
 4. [React State](./react/state.md/)
+4. [React State with Images](./react/state-with-images.md/)
 
 #### Additional Topics:
 - [Ternary Operators](./javascript/ternary.md)
+- [Component Lifecycle](./react/component-lifecycle.md)
 
 ## Unit Three: Intermediate React
 
