@@ -239,6 +239,6 @@ Using a well thought out state tree and nested component structure, construct an
 
 [Go to next lesson: React Forms and Functional Props](./forms.md)
 
-[Back to React State](./state.md)
+[Back to React State with Images](./state-with-images.md)
 
 [Back to Syllabus](../README.md)

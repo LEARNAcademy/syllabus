@@ -32,3 +32,9 @@ $ yarn start
 - As a user, I can see two buttons: 1) Add a Light Switch and 2) Remove a Light Switch.
 - As a user, when I click the Add button I can another Light Switch.
 - As a user, when I click the Remove button I can delete a Light Switch.
+
+[Go to next lesson: React Props](./props.md)
+
+[Back to React State](./state.md)
+
+[Back to Syllabus](../README.md)
