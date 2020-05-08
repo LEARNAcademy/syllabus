@@ -30,8 +30,9 @@ $ yarn start
 
 **Stretch Challenge**
 - As a user, I can see two buttons: 1) Add a Light Switch and 2) Remove a Light Switch.
-- As a user, when I click the Add button I can another Light Switch.
-- As a user, when I click the Remove button I can delete a Light Switch.
+- As a user, when I click the Add button I can another Light Switch with its accompanying Light Bulb.
+- As a user, when I see multiple Light Switch/Light Bulb combinations, they all operate independently of each other.
+- As a user, when I click the Remove button I can delete a Light Switch with its accompanying Light Bulb.
 
 [Go to next lesson: React Props](./props.md)
 
