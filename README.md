@@ -63,7 +63,6 @@ Here we explore more of what React offers and do our first multi-day project.
 
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
-- [React Component Lifecycle](./react/component-lifecycle.md)
 
 ## Unit Four: Ruby
 
