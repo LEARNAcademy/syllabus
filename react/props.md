@@ -23,7 +23,6 @@ $ yarn create react-app sample-app
 $ cd sample-app
 $ yarn start
 ```
-- create a directory in *src* called *pages*
 - create a directory in *src* called *components*
 
 ## Communication Between Components
