@@ -101,8 +101,8 @@ If no block is given, an enumerator is returned instead.
 => {"apples"=>5, "kiwis"=>2}
 ```
 
-[Go to next lesson: Ruby Classes and Objects](./classes_objects.md)
+[Go to next lesson: Ruby Blocks](./blocks.md)
 
-[Back to Ruby Loops](./loops.md)
+[Back to Ruby Methods](./methods.md)
 
 [Back to Syllabus](../README.md)
