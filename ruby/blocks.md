@@ -1,27 +1,32 @@
-# Ruby Loops and Higher Order Functions
+# Ruby Blocks
 
 ## Overview
-- Ruby has lots of looping methods
-- Ruby uses the basic `do/end` keywords to create a block or {}
+- Ruby has lots of iteration methods
+- Ruby uses the keywords `do/end` or {} to create a block of code to be executed
 
 ## Learning Objectives
-- Interacting with Ruby loops
+- Passing a block to a Ruby iteration method
 - Exploring the do/end vs {} syntax
 
 ## Vocabulary
+- blocks
 - do/end
 - times do
 - each do
+- while
 - map
-- blocks
 
 ## Set Up
 - Create a file with the extension `.rb`
 - In terminal run `ruby` followed by the file name
 
-## times do
+## Ruby Blocks
 
-Time Loop will repeat code a certain number of times.
+Ruby has anonymous functions similar to JavaScript. They are called blocks. Blocks can be created with the `do/end` keywords **OR** with {}. Blocks are code that is passed to a method.
+
+### times do
+
+Times method is a very basic method that will repeat code a certain number of times.
 
 ```ruby
 my_num = 5
@@ -39,9 +44,9 @@ hello
 => 5
 ```
 
-## each do
+### each do
 
-Each loop will let you do something with every element of an array.
+Each method will let you do something with every element of an object or array.
 
 ```ruby
 > nums = [1, 2, 3]
@@ -59,9 +64,7 @@ Each loop will let you do something with every element of an array.
 ````
 Note the original array is untouched.
 
-## Ruby Blocks
 
-Ruby has anonymous functions similar to JavaScript. They are called blocks. Blocks can be created with the `do/end` keywords **OR** with {}.
 
 ```ruby
 # Block with a `do/end`
@@ -103,7 +106,23 @@ Blocks can have multiple parameters.
 => [1, 2, 3]
 ```
 
-## map
+### While
+The while method is a little bit different in that it doesn't take a block as an argument. A while loop requires a starting value and runs until a particular condition is met.
+
+```ruby
+> i = 0
+> while i < 5
+>   puts i
+>   i += 1
+> end
+0
+1
+2
+3
+4
+```
+
+### map do
 
 Ruby's map method also lets you do something with every element of an array. Map returns a new array filled with whatever gets returned by the block each time it runs.
 
@@ -145,13 +164,20 @@ Note the original array is untouched. To modify the original array use the bang 
 
 ## Challenges
 
-- Write a loop that prints from 1 to 20.
-- Write a loop that prints 20 to 1.
-- Create an array of 10 numbers. Write loop that multiplies the numbers by 5.
-- Create an array of words. Iterate through the array using .each and a block, then print each of those words in all capitals.
+- Write a loop that prints the numbers 1 to 20.
+- Write a loop that prints the numbers 1 to 20 using a different approach than previously used.
+- Write a loop that prints only even numbers from 20 to 0.
+- Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
+- Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
+- Create a method that takes in an array of numbers and returns the largest number in the array.
+- Create a method that takes in an array of numbers and returns the smallest number in the array.
+- Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+- Create a method that takes in a string and determines if the string is a palindrome.
+- Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
+- Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
-### Stretch Challenges: FIZZBUZZ
-- Write a program that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
+### FIZZBUZZ
+- Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
 
 [Go to next lesson: Ruby Classes and Objects](./classes_objects.md)
 
