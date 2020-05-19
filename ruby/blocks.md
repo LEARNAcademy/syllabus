@@ -172,7 +172,6 @@ Note the original array is untouched. To modify the original array use the bang 
 - Create a method that takes in an array of numbers and returns the largest number in the array.
 - Create a method that takes in an array of numbers and returns the smallest number in the array.
 - Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
-- Create a method that takes in a string and determines if the string is a palindrome.
 - Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercased letters should be returned lowercased and all lowercased letters should be returned uppercased.
 - Create a method that takes in an array of words and returns all the words that start with a particular letter. Ex) Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
 
