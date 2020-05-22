@@ -527,7 +527,6 @@ Save your queries in a file if you want to keep them for posterity.
 * Of the biggest 10 countries, which has the biggest per capita gnp?
 * What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
 
-
-[Go to next lesson: SQL Joins](./08rails_sql_joins.md)
+[Go to next lesson: Intro to Rails](../rails_model/intro.md)
 
 [Back to Syllabus](../README.md)
