@@ -458,7 +458,7 @@ You may need to add the Country database.  If so follow these instructions...
 * click on add new server
 * click on connection tab
 * in hostname/address type  `127.0.0.1` or `localhost`
-* change username from postgres to learn
+* change username from postgres to learnacademy
 * password = SDlearn123
 * click save
 
@@ -468,38 +468,30 @@ To run a query follow these steps...
 * click on tools tab at the top
 * click on Query Tool
 * Type your query
-* Click on lightning bolt to run query
+* Click on play button to run query
 
 
 ## Challenges: SQL Country Database
 
 Save your queries in a file if you want to keep them for posterity.
 
-#### `WHERE`
+#### WHERE
+* What is the population of the US? (HINT: 278357000)
+* What is the area of the US? (HINT: 9.36352e+06)
+* List the countries in Africa that have a population smaller than 30,000,000 and a life expectancy of more than 45? (HINT: 37 entries)
+* Which countries are something *like* a republic? (HINT: Are there 122 or 143?)
+* Which countries are some kind of republic and achieved independence after 1945? (HINT: 92 entries)
+* Which countries achieved independence after 1945 and are *not* some kind of republic? (HINT: 27 entries)
 
-* What is the population of the US?
-(HINT: starts with 2, ends with 000)
-* What is the area of the US?
-(starts with 9, ends with million square miles)
-* List the countries in Africa that have a population smaller than 30,000,000 and a life expectancy of more than 45?
-(all 37 of them)
-* Which countries are something _like_ a republic?
-(are there 122 or 143 countries or ?)
-* Which countries are some kind of republic and achieved independence after 1945?
-* Which countries achieved independence after 1945 and are _not_ some kind of republic?
-
-#### `ORDER BY`
-
-* Which fifteen countries have the lowest life expectancy?
-* Which fifteen countries have the highest life expectancy?
-* Which five countries have the lowest population density (density = population / surfacearea)?
-* Which countries have the highest population density?
+#### ORDER BY
+* Which fifteen countries have the lowest life expectancy? (HINT: starts with Zambia)
+* Which fifteen countries have the highest life expectancy? (HINT: starts with Andorra)
+* Which five countries have the lowest population density (density = population / surfacearea)? (HINT: starts with Greenland)
+* Which countries have the highest population density?(HINT: starts with Macao)
 * Which is the smallest country, by area and population (first by area, then by population)?
 * Which is the biggest country, by area and population (first by area, then by population)?
 
-#### `GROUP BY`
-
-* How big are the continents in terms of area and population?
+#### GROUP BY
 * Which region has the highest average gnp?
 * Who is the most influential head of state measured by population?
 * Who is the most influential head of state measured by surface area?
@@ -518,7 +510,7 @@ Save your queries in a file if you want to keep them for posterity.
 * What is the average life expectancy for all continents?
 * Which countries have the letter ‘z’ in the name? How many?
 
-#### `WITH`
+#### WITH
 
 * Of the smallest 10 countries, which has the biggest gnp?
 (hint: use `WITH` and `LIMIT`)
