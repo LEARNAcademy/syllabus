@@ -229,11 +229,12 @@ Created database 'rolodex_test'
 - Open up Rails console.
 
 **Actions**
-- Insert five family members into the Person table in the Rails console.
-- Use the `.all` command to see all the items in the database.
+- Add five family members into the Person table in the Rails console.
+- Retrieve all the items in the database.
 - Add yourself to the Person table.
-- How many have the same last_name as you?
+- Retrieve all the entries that have the same last_name as you.
 - Update the phone number of the last entry in the database.
+- Retrieve the first_name of the third Person in the database.
 
 
 ## Stretch Challenges
