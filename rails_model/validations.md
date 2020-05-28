@@ -95,8 +95,8 @@ class Person < ApplicationRecord
 end
 
 >> person = Person.new
->> person.valid? 			    # => false
->> person.errors[:name] 	# => ["can't be blank"]	# array of error messages for name field
+>> person.valid?         # => false
+>> person.errors[:name]  # => ["can't be blank"] array of error messages for name field
 ```
 
 
