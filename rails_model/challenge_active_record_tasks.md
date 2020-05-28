@@ -3,6 +3,8 @@
 
 **Story**: As a programmer, I can create a new Task record with a title, which is a string, and description, which is a string.
 
+**Story**: As a programmer, I can add 5 tasks to my application.
+
 **Story**: As a programmer, I can list all Task records.
 
 **Story**: As a programmer, I can add a 'done' attribute to my Task.
