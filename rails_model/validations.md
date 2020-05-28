@@ -44,17 +44,17 @@ end
 ```
 
 ## Validates belongs_to
-Starting in Rails 5 the belongs_to side of relationships is validated by default.
+Starting in Rails 5 the `belongs_to` side of relationships is validated by default.
 ```
 class Phone < ApplicationRecord
-	belongs_to :person  #default validation for belongs to: presence: true
+  belongs_to :person  #default validation for belongs to presence: true
 end
 ```
 
-If you want an optional belongs_to relationship, you can set it up like this:
+If you want an optional `belongs_to` relationship, you can set it up like this:
 ```
 class Phone < ApplicationRecord
-	belongs_to :person, optional: true
+  belongs_to :person, optional: true
 end
 ```
 
@@ -82,9 +82,9 @@ valid?
 invalid?
 ```
 
-The bang versions (e.g. save!) raise an exception if the record is invalid. The non-bang versions don't, save and update return false, create just returns the object.
+The bang versions (e.g. save!) raise an exception if the record is invalid. `save` and `update` will return `false`, `create` just returns the object the method was called on if it is invalid.
 
-To verify whether or not an object is valid, Rails uses the valid? method. You can also use this method on your own. valid? triggers your validations and returns true if no errors were found in the object, and false otherwise.
+To verify whether or not an object is valid, Rails uses the `valid?` method. You can also use this method on your own. `valid?` triggers your validations and returns true if no errors were found in the object, and false otherwise.
 
 ## To Access Errors
 
@@ -95,7 +95,7 @@ class Person < ApplicationRecord
 end
 
 >> person = Person.new
->> person.valid? 			# => false
+>> person.valid? 			    # => false
 >> person.errors[:name] 	# => ["can't be blank"]	# array of error messages for name field
 ```
 
@@ -128,8 +128,8 @@ Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_v
 - As a developer, I want to validate associated addresses on accounts
 	- **Hint:** Read about validates_associated in the Rails validation docs
 
-  [Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
+[Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
 
-  [Back to Rails Associations](./associations.md)
+[Back to Rails Associations](./associations.md)
 
-  [Back to Syllabus](../README.md)
+[Back to Syllabus](../README.md)
