@@ -9,6 +9,6 @@
 **Story**: As a programmer, I can add multiple comments to a Task record. Comments should have a content field, which is a string.
 	**Hint**: A Task has many Comments.
 
-**Story**: As a programmer, I can list all the Task with their comments.
+**Story**: As a programmer, I can retrieve a Task and list all the comments.
 
 [Back to Syllabus](../README.md)
