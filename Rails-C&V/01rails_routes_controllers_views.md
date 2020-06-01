@@ -222,7 +222,7 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 ## Challenges
 For each section below, generate a new controller to handle the methods, routes, and views.
 
-#### Joke... again ;)
+#### Joke... again but with views ;)
 - As a user, I can go to the url 'localhost:3000/question' and be asked a joke.
 - As a user, I can go to the url 'localhost:3000/answer' and see the response to the joke.
 
