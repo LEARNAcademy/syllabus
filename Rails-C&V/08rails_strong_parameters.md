@@ -12,12 +12,12 @@ A controller's strong parameters will be all the way down at the bottom of the f
 controllers/contacts_controller.rb
 ```ruby
 def contact_params
-	params.require(:contact).permit(:name, :phone, :email, :address)
+  params.require(:contact).permit(:name, :phone, :email, :address)
 end
 ```
 
 In this method if the application asks for `contact_params`, those parameters will require a Contact object, formatted into a hash. At this step in the process, a new Contact will look something like this:
-```
+```ruby
 {
   :contact => {
 
@@ -29,9 +29,9 @@ Inside of that Contact hash, the `contact_params` method allows parameters like 
 ```
 {
   :contact => {
-              :name => 'Eleanor',
-              :phone => '1-800-WHITE-HOUSE',
-              :email => 'eleanor@rooselvelt.com'
+    :name => 'Eleanor',
+    :phone => '1-800-WHITE-HOUSE',
+    :email => 'eleanor@rooselvelt.com'
   }
 }
 
@@ -43,7 +43,7 @@ In the controller's `create` method, we can see that this list is referenced whe
 
 ```ruby
 def create
-    @contact = Contact.create(contact_params)
+  @contact = Contact.create(contact_params)
 end
 ```
 
@@ -51,9 +51,8 @@ Or alternatively
 
 ```ruby
 def create
-    @contact = Contact.new(contact_params)
-    ...
-    @contact.save
+  @contact = Contact.new(contact_params)
+  @contact.save
 end
 ```
 
@@ -63,7 +62,7 @@ end
 
 Now that strong params are established in the controller, we need to format the params into the above hash structure in order for Rails to accept our params.
 
-```erb
+```html
 <form action="create" action="POST">
   <label for="name">Name:</label>
   <input id="name" name="contact[name]">
@@ -79,14 +78,14 @@ Notice that it's the name attribute of our inputs that are different. Here we ar
 
 Now if we use the form, we should see a successful create of our contact.
 
-## Permitting parameters
+## Permitting Parameters
 
 Most of the time, strong parameters are a feature we don't have to think about. If we want to add a new attribute to Contact, however, it's important to remember to add it to the strong parameters list. Otherwise, our form for creating new Contacts will silently drop the information we've told it to ignore. For example, if we created a new column for storing fax numbers without updating our `contact_params` method, the response in the Rails server would look like this:
 
 ```
 Started POST "/contacts/" for ::1 at 2016-09-14 14:27:56 -0700
 Processing by ContactsController#create as HTML
-  Parameters: {"contact"=>{"name"=>"test", "phone"=>"555-1212", "email"=>"test1@test.com", "address"=>"123 main st", "fax"=>"123-1234"}}
+  Parameters: {"contact"=>{"name"=>"test", "phone"=>"555-1212", "email"=>"test1@test.com", "address"=>"123 main St", "fax"=>"123-1234"}}
 Unpermitted parameter: fax
 ```
 
@@ -95,7 +94,7 @@ We can see all of the parameters being sent in, but our controller recognized "f
 controllers/contacts_controller.rb
 ```ruby
 def contact_params
-	params.require(:contact).permit(:name, :phone, :email, :address, :fax)
+  params.require(:contact).permit(:name, :phone, :email, :address, :fax)
 end
 ```
 
@@ -140,5 +139,5 @@ You have been tasked with creating an application to allow store owners to gener
 - As a store owner, I can see pending orders
 - As a store owner, I can see my pending orders by account
 
-### Challenge 3: Keychain App 
+### Challenge 3: Keychain App
 Make an application that allows me to store all of my passwords for all of my various accounts under one username (user has_many passwords) and security question/answer. After submitting my passwords, I will need to retrieve them by submitting my username and security question/answer.

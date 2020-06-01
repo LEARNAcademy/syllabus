@@ -78,13 +78,12 @@ save
 save!
 update
 update!
-valid?
-invalid?
 ```
 
 The bang versions (e.g. save!) raise an exception if the record is invalid. `save` and `update` will return `false`, `create` just returns the object the method was called on if it is invalid.
 
-To verify whether or not an object is valid, Rails uses the `valid?` method. You can also use this method on your own. `valid?` triggers your validations and returns true if no errors were found in the object, and false otherwise.
+### Valid?
+To verify whether or not an object is valid, Rails uses the `.valid?` method. You can also use this method on your own. `valid?` triggers your validations and returns true if no errors were found in the object, and false otherwise.
 
 ## To Access Errors
 
@@ -128,7 +127,7 @@ Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_v
 - As a developer, I want to validate associated addresses on accounts
 	- **Hint:** Read about validates_associated in the Rails validation docs
 
-[Go to next lesson: Rails Active Record Query Syntax](./active_record_query_syntax.md)
+[Go to next lesson: Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 
 [Back to Rails Associations](./associations.md)
 

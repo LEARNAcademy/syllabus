@@ -91,7 +91,6 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [Active Record Associations](./rails_model/associations.md)
 1. [Challenge: Active Record Task List](./rails_model/challenge_active_record_tasklist.md)
 1. [Active Record Validations](./rails_model/validations.md)
-1. [Active Record Query Syntax](./rails_model/active_record_query_syntax.md)
 1. [Rails Routes, Controllers and Views](./Rails-C&V/01rails_routes_controllers_views.md)
 1. [Rails Params](./Rails-C&V/03rails_params.md)
 
