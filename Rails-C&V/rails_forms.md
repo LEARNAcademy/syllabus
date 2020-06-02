@@ -119,7 +119,6 @@ Inside the embedded Ruby are a series of html tags. There is a label for the inp
 - As a developer, my blog post can have a title and content.
 - As a developer, I can add new blog posts to my database.
 - As a developer, my blog application can have many comments for each post. The comment has an author and content.
-title and content.
 - As a developer, I can add new comments to the blog posts in my database.
 - As a user, I can see all the blog titles listed on the home page of the application.
 - As a user, I can click on the title of a blog and be routed to a page where I see the title and content of the blog post I selected.
