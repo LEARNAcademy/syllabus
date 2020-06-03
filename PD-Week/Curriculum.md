@@ -14,7 +14,6 @@
 <br/>
 
 *Additional Resources:*
-
 * [Discover Your Transferable Skills Activity](https://drive.google.com/open?id=1yON0yMhiDcIvnNs2lZI8QZY5xK6nSv0F)
 <br/> This activity can help you get started in identifying some of your transferable skills if you feel lost.
 
@@ -37,8 +36,8 @@
 <br/> Your resume is one of the most important materials you need for your job search. Selecting the right format and presenting the best content is key to getting in the door for a job interview!
 <br/>
 <br/>
-*Additional Resources:*
 
+*Additional Resources:*
 * [Action Verb List](https://drive.google.com/open?id=1N1zm-Vb0M8FFsJQ1apwENz-USB8XvP5_)
 <br/> This resource has a list of action verbs to help build strong contribution/accomplishment statements for your resume and make your past work experience active.
 
@@ -74,8 +73,8 @@
 * Step 9: Join Groups & Follow Companies
 <br/>
 <br/>
-*Additional Resources:*
 
+*Additional Resources:*
   * [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/open?id=17YLL5QTPp9p9iD1GVcfAYX2AaMcIK8PV)
 <br/> This resource covers **EVERY** aspect of LinkedIn. Go back to this resource when questions come up regarding your LinkedIn account or if you want to elevate it **10X** more!
 
@@ -97,7 +96,7 @@
 3) **[Tech Talks](https://drive.google.com/open?id=1HFAnbkmOLGQ7_KkFdlBMYsDYWdCl57uP)**
 <br/> During your 12th week, every member of your cohort will be creating and presenting 5-7 minute Tech Talks on a topic of your choice! This session will review the key components to a tech talk and provide some valuable resources.
 <br/>
-<br/> *Additional Resources:*
+<br/>
 
 * [Tech Talk Topic Starters/Ideas](https://drive.google.com/open?id=1avA3-pbCBTVRiRY0ZU-8QtXTmutZJ0Vy)
 <br/> This list provides ideas of past tech talks to get your brain stirring to come up with your own topic!
@@ -108,7 +107,6 @@
 5) **[Building Portfolios](https://drive.google.com/open?id=1DQwAdn45yVuZReyBb_rmqEHjGrbzkKzOahpoJsMPmAM)**
 <br/> Portfolios are a necessity to get that first and sometimes even second job. This resource provides alumni samples as well as resources for building your own portfolio from scratch or using an existing template.
 <br/>
-<br/> *Additional Resources:*
 
 * [How to Build Impressive Portfolio Sites](https://drive.google.com/open?id=18FU90DvbomBfPAEXvBRYwsvtUdcXycu3I5QAH68PSE8)
 <br/> This resource provides some great tips on making your portfolio site and how to stand out.
