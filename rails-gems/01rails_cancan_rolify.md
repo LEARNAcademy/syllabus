@@ -214,7 +214,7 @@ end
 Now we can clear out the session cookies, and sign in with our existing user, then try:
 http://localhost:3000/grades/new
 
-Which should display an ugly, red "CanCan::Acess Denied" page.
+Which should display an ugly, red "CanCan::Access Denied" page.
 In fact, almost all views should be stopped by CanCan because our user is role-less. That's not a whole lot of fun -- let's fix that.
 
 ## Roles

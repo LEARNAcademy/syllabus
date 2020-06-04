@@ -19,7 +19,7 @@
 
 **Story**: As a programmer, I can destroy a Task record given the ID of the record.
 
-**Story**: As a programmer, I can set a Task record with a due date.
+**Story**: As a programmer, I can set a Task record with a due date. (Hint: Use the data type *datetime*)
 
 **Story**: As a programmer, I can list all the records with a due date.
 
