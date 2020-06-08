@@ -226,8 +226,5 @@ countries = Country
 ## Challenge
 Link available via Slack from GitHub Classroom
 
-[Go to next lesson: Rails Routes, Controllers and Views](../Rails-C&V/01rails_routes_controllers_views.md)
-
-[Back to Rails Validations](./validations.md)
 
 [Back to Syllabus](../README.md)

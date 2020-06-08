@@ -26,7 +26,7 @@ Let's start with creating a controller called `main` and method called greeting.
 class MainController < ApplicationController
 
   def greeting
-    @name = "Alpha Class"
+    @name = "LEARN Class"
     render 'greeting.html.erb'
   end
 
@@ -69,9 +69,9 @@ Rails.application.routes.draw do
 ```
 
 Now the URL can accept a name parameter by passing in a value for name. This can be done by adding a "?" + name + the user input.
-`http://localhost:3000/greeting?name=Alpha`
+`http://localhost:3000/greeting?name=LEARN`
 
-Now the page will display `Hello, Alpha!`
+Now the page will display `Hello, LEARN!`
 
 **Using params**: Parameters allow us to add more information to our program by passing a value into the route rather than directly to the URL.
 

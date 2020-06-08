@@ -1,8 +1,8 @@
-# Using Cookie
+# Using Cookies
 
 If we want our variables to persist in between page refreshes or redirects, storing them in cookies is a fantastic way to keep them in the browser history.
 
-```
+```ruby
 class MainController < ApplicationController
 
   def answers
@@ -43,7 +43,7 @@ Then, in method `try`:
 * On first call, store a secret number in a cookie
 * On each call, check the secret number against the guess (the parameter).
 * Then, set an instance variable to the result (call it @result) of the guess (high/low/win).
-* Then, render try.html.erb.
+* Then, render `try.html.erb`
 * If you do not win, repeat 2-3. If you win, repeat 1-2-3.
 
 Then, in *try.html.erb*:
@@ -55,7 +55,7 @@ Create and display a counter for the number of tries attempted.
 
 #### Stretch Challenge Two
 
-Create a route (`/new_game`) and controller method (`reset`) to reset the game.
+Create a route `/new_game` and controller method `reset` to reset the game.
 
 
 #### Stretch Challenge Three

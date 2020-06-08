@@ -141,3 +141,9 @@ You have been tasked with creating an application to allow store owners to gener
 
 ### Challenge 3: Keychain App
 Make an application that allows me to store all of my passwords for all of my various accounts under one username (user has_many passwords) and security question/answer. After submitting my passwords, I will need to retrieve them by submitting my username and security question/answer.
+
+
+
+[Back to Rails Forms](./rails_forms.md)
+
+[Back to Syllabus](../README.md)

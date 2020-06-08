@@ -50,7 +50,7 @@ Let's see the controller in action!
 
 From the command line, we can add a new Rails controller with a rails command:
 ```
-rails generate controller main
+$ rails generate controller main
 ```
 
 Rails creates all the files associated with this particular controller.
@@ -95,7 +95,7 @@ In order for our Rails server to respond to a request to this url, it needs a pa
 
 <img src="https://i.ibb.co/L8tf1xt/routes-explained.png" alt="routes-explained" border="0" />
 
-The route here is essentially adding an address to your application. Now when you navigate to `localhost:3000/answer` in the browser, Rails will determine that you have requested the `/answer` route and that it needs to find the `main` controller and run its `answer` method.
+The route here is essentially adding an address to your application. Now when you navigate to `localhost:3000/answer` in the browser, Rails will determine that you have requested the `/answer` route and that it needs to find the `main` controller and run the `answer` method.
 
 This completes the Rails response to the `/answer` request. When we visit `localhost:3000/answer`, we should see a white page with the text "This is the answer".
 
@@ -166,7 +166,7 @@ Let's add some text to the new file:
 Hello?
 ```
 
-Now, when we navigate to 'localhost:3000/question', we should see simple text saying "Hello?"
+Now, when we navigate to `localhost:3000/question`, we should see simple text saying "Hello?"
 
 Going back to our controller, we can create an instance variable (since we are inside the class MainController), that we will render in our view:
 

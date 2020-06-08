@@ -1,7 +1,6 @@
+# Layout
 
-## Layout
-
-Have you noticed how your views actually contain a valid HTML document, but you never write the `<body>` and `<title>` and other tags like that yourself? That's because they're in the app/views/layouts/application.html.erb file, which looks something like this:
+Have you noticed how your views actually contain a valid HTML document, but you never write the `<body>` and `<title>` and other tags like that yourself? That's because they're in the `app/views/layouts/application.html.erb` file, which looks something like this:
 
 *app/views/layouts/application.html.erb*
 
@@ -21,7 +20,7 @@ Have you noticed how your views actually contain a valid HTML document, but you 
 </body>
 </html>
 ```
-The <%= yield %> bit of code is where your views are inserted. If you ever want to change something on all of your pages - such as adding a logo or nav bar - this layout file is the place to do it.
+The `<%= yield %>` bit of code is where your views are inserted. If you ever want to change something on all of your pages - such as adding a logo or nav bar - this layout file is the place to do it.
 
 If we want to make every page have a different `<title>` we need a way to set it in each view, and then retrieve it in the layout. Here's how to set it in a view:
 
@@ -30,7 +29,6 @@ If we want to make every page have a different `<title>` we need a way to set it
 ```erb
 <% content_for(:title, "New contact | Wikipages") %>
 <h1>New contact</h1>
-...
 ```
 
 We have seen code wrapped in `<%= %>` before.  That means it is Ruby code that we want to be printed to the page.  When you want to execute code in the view without printing the output, all you need to do is not use the "=" sign like in our `<% %>`-wrapped code snippet above.
@@ -94,7 +92,7 @@ Now, let's add the flash message to the layout, right above the page content:
 ```
 If we check a password, we can see our flash message. And if we refresh the page, it disappears.
 
-# Challenges
+## Challenges
 
 The goal of these challenges is to get practice coding up forms to send information to your controllers and send information back out to the user based on the form information received.
 

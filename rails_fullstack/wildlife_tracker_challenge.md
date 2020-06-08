@@ -29,11 +29,11 @@ An animal has the following information: common name, latin name, kingdom (mamma
 - **Story**:  As the consumer of the API, I can run a report to list all sightings during a given time period.
 
 - *Hint*: Your controller can look something like this:
-```
+```ruby
 class SightingsController < ApplicationController
   def index
-    @sightings = Sighting.where(start_date: params[:start_date]..params[:end_date])
-    render json: @sightings
+    sightings = Sighting.where(start_date: params[:start_date]..params[:end_date])
+    render json: sightings
   end
 end
 ```
@@ -56,4 +56,7 @@ Remember to add the start_date and end_date to what is permitted in your strong 
 
 ## Super Stretch Challenge
 - **Story**: As the consumer of the API, I can submit sighting data along with new animals in 1 api call
-	- Look into ```accepts_nested_attributes_for```
+	- Look into `accepts_nested_attributes_for`
+
+
+[Back to Syllabus](../README.md)

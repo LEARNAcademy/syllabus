@@ -10,7 +10,7 @@ The request dashboard of Postman looks something like this:
 
 ![Postman Layout](./assets/postman-interface-layout.png)
 
-Here we've highlighted the essential sections of the interface. The first 3 components (verb selector, url input, and send button) are the main components that allow you set up and make a request. The response section is where you can expect the result of a request. There are a few more important pieces to the interface but their utility is best demonstrated through example.
+Here we've highlighted the essential sections of the Postman interface. The first 3 components (verb selector, url input, and send button) are the main components that allow you set up and make a request. The response section is where you can expect the result of a request. There are a few more important pieces to the interface but their utility is best demonstrated through example.
 
 ## A Simple GET to an `index`
 
@@ -48,7 +48,7 @@ That result should appear in the response section at the bottom of the page as J
 
 # Cloud 9 and Postman
 
-In order to see our app in Postman, we need to expost the running Rails application to the intenet by poking a hole through the AWS firewall.
+In order to see our app in Postman, we need to expose the running Rails application to the internet by poking a hole through the AWS firewall.
 
 ![ec2](https://content.screencast.com/users/mclark8/folders/Jing/media/de3baa8a-4304-45fe-98a1-bbe4b48f40a2/00000517.png)
 
@@ -70,4 +70,7 @@ Then Looking under the sharing options for the Cloud 9 server, and copy the IP a
 
 ![ip address](https://content.screencast.com/users/mclark8/folders/Jing/media/b2ada5dd-9452-4123-a3c9-d6564a942305/00000522.png)
 
-*Note you will use the application IP plus :8080 (ie, xx.xx.xx.xxx:8080) in the browser and in Postman
+**Note:** you will use the application IP plus :8080 (ie, xx.xx.xx.xxx:8080) in the browser and in Postman
+
+
+[Back to Syllabus](../README.md)

@@ -1,5 +1,8 @@
 # React Consuming External APIs Using Fetch
 
+## Video: Fetch
+[![YouTube](http://img.youtube.com/vi/Law40pSLeHM/0.jpg)](https://www.youtube.com/watch?v=Law40pSLeHM)
+
 ## Overview
 - In modern web applications, communication between the frontend application and the backend server happens using JSON.
 - APIs are packets full of raw data (JSON) meant to be consumed by other websites.
