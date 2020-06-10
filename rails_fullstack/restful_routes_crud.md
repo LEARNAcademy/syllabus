@@ -129,4 +129,9 @@ get '/resource_name/:id' => 'resource_name#show', as: 'resource_name'
 - The RESTful protocol is a pattern followed by developers to implement CRUD operations
 - Rails *Convention Over Configuration* gives us strict guidelines for controller methods and routes
 
+
+[Go to next lesson: Rails Forms](./forms.md)
+
+[Back to Rails Params](./params.md)]
+
 [Back to Syllabus](../README.md)

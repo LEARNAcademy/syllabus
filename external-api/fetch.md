@@ -82,3 +82,5 @@ The response delivers the JSON payload to the application.
 ## Stretch Challenge
 - Use the [NYTimes Developer](https://developer.nytimes.com/) API and docs to create a more complex application
 - Safely save the API key
+
+[Back to Syllabus](../README.md)

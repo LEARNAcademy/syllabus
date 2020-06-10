@@ -239,4 +239,8 @@ For each section below, generate a new controller to handle the methods, routes,
 - As a user, I can visit the landing page and see links to all recommendation lists.
 - As a user, I can return to the landing page from within any of the other pages.
 
+[Go to next lesson: Rails Params](./params.md)
+
+[Back to Active Record Validations](../rails_model/validations.md)
+
 [Back to Syllabus](../README.md)

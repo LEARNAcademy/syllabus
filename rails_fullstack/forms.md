@@ -132,6 +132,6 @@ Inside the embedded Ruby are a series of html tags. There is a label for the inp
 
 [Go to next lesson: Rails Strong Parameters](./strong_parameters.md)
 
-[Back to Rails Restful Routes and CRUD Actions](./rails_rest_crud.md)
+[Back to Rails Restful Routes and CRUD Actions](./restful_routes_crud.md)
 
 [Back to Syllabus](../README.md)

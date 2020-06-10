@@ -127,7 +127,7 @@ Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_v
 - As a developer, I want to validate associated addresses on accounts
 	- **Hint:** Read about validates_associated in the Rails validation docs
 
-[Go to next lesson: Rails Routes, Controllers and Views](./rails_fullstack/routes_controllers_views.md)
+[Go to next lesson: Rails Routes, Controllers and Views](../rails_fullstack/routes_controllers_views.md)
 
 [Back to Rails Associations](./associations.md)
 

@@ -134,4 +134,7 @@ For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parame
 - As a user, I can visit a page that takes a string and displays whether it is a palindrome
 - As a user, I can visit a page that takes a noun, verb, adjective, adverb, and  uses them to display a short silly story
 
+
+[Go to next lesson: Rails Restful Routes and CRUD Actions](./restful_routes_crud.md)
+
 [Back to Syllabus](../README.md)

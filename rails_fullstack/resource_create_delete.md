@@ -20,7 +20,7 @@
 - $ rails routes
 
 ## Additional Resources
-- [Postman Resource](./postman.md)
+- [Postman](./postman.md)
 
 ## Set Up
 
@@ -113,5 +113,8 @@ Now if we try to show the guitar we just deleted, we should receive an error:
 
 ![Postman 404](./assets/postman-404.png)
 
+[Go to next lesson: Wildlife Tracker Challenge](./wildlife_tracker_challenge.md)
+
+[Back to Generate Resource Index and Show](./resource_index_show.md)
 
 [Back to Syllabus](../README.md)

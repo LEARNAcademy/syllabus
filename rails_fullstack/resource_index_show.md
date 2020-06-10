@@ -17,6 +17,8 @@
 - $ rails routes
 
 ## Additional Resources
+- [Postman](./postman.md)
+
 ## Set Up
 
 #### Creating a new Rails app:
@@ -145,5 +147,9 @@ Additionally, '`/guitars`', will show all the guitars in the database.
 The key here is that after generating the resource, we really only needed to define the method that a particular route requires to work.
 
 Next we'll tackle some more involved CRUD methods and how to interact with them using Postman.
+
+[Go to next lesson: Rails Generate Resource Create and Delete](./resource_index_show.md)
+
+[Back to Rails Strong Parameters](./strong_parameters.md)
 
 [Back to Syllabus](../README.md)

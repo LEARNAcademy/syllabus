@@ -116,3 +116,6 @@ The goal of these challenges is to get practice coding up forms to send informat
 
 ## Stretch Challenge
 - Add some other validations into your 'Sign In' (ie, no numbers in a user_id/special character & number required in password)
+
+
+[Back to Syllabus](../README.md)

@@ -65,3 +65,6 @@ Accept and store user name, and use it in the views.
 #### Stretch Challenge Four
 
 Encrypt the secret number.
+
+
+[Back to Syllabus](../README.md)

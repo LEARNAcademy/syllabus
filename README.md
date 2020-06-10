@@ -97,12 +97,12 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 ## Unit Six: Full Stack Ruby on Rails
 
-1. [Rails Restful Routes and CRUD Actions](./rails_fullstack/rails_rest_crud.md)
-1. [Rails Forms](./rails_fullstack/rails_forms.md)
+1. [Rails Restful Routes and CRUD Actions](./rails_fullstack/restful_routes_crud.md)
+1. [Rails Forms](./rails_fullstack/forms.md)
 1. [Rails Strong Parameters](./rails_fullstack/strong_parameters.md)
 1. [Postman](./rails_fullstack/postman.md)
-1. [Rails Resource Generator: Read Operations](./rails_fullstack/resource_index_show.md)
-1. [Rails Resource Generator: Create and Delete Operations in Postman](./rails_fullstack/resource_create_delete.md)
+1. [Rails Generate Resource: Index and Show](./rails_fullstack/resource_index_show.md)
+1. [Rails Generate Resource: Create and Delete](./rails_fullstack/resource_create_delete.md)
 1. [Challenge: Wildlife Tracker](./rails_fullstack/wildlife_tracker_challenge.md)
 1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
