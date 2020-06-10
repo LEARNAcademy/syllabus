@@ -137,6 +137,6 @@ For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parame
 
 [Go to next lesson: Rails Restful Routes and CRUD Actions](./restful_routes_crud.md)
 
-[Back to Rails Routes, Controllers and Views](./rails_fullstack/routes_controllers_views.md)
+[Back to Rails Routes, Controllers and Views](./routes_controllers_views.md)
 
 [Back to Syllabus](../README.md)
