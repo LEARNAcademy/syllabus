@@ -148,7 +148,7 @@ The key here is that after generating the resource, we really only needed to def
 
 Next we'll tackle some more involved CRUD methods and how to interact with them using Postman.
 
-[Go to next lesson: Rails Generate Resource Create and Delete](./resource_index_show.md)
+[Go to next lesson: Rails Generate Resource Create and Delete](./resource_create_delete.md)
 
 [Back to Rails Strong Parameters](./strong_parameters.md)
 

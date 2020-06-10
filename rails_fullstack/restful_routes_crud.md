@@ -132,6 +132,6 @@ get '/resource_name/:id' => 'resource_name#show', as: 'resource_name'
 
 [Go to next lesson: Rails Forms](./forms.md)
 
-[Back to Rails Params](./params.md)]
+[Back to Rails Params](./params.md)
 
 [Back to Syllabus](../README.md)
