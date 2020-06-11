@@ -1,4 +1,4 @@
-# Cat Tinder Introduction and Wireframes
+README.md# Cat Tinder Introduction and Wireframes
 
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
@@ -58,7 +58,7 @@ Create a CatIndex file and a CatShow file in the pages directory.
 
 **src/App.js**
 ```javascript
-import React, { Component } from "react"
+import React, { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./App.css"
 
@@ -66,12 +66,11 @@ import Header from "./components/Header"
 import CatIndex from "./pages/CatIndex"
 import CatShow from "./pages/CatShow"
 
-class App extends Component{
-  render(){
+const App = () => {
     return(
       <React.Fragment>
-        <Header />
         <Router>
+        <Header />
           <Switch>
             <Route exact path="/cat/:id" component={ CatShow } />
             <Route exact path="/" component={ CatIndex } />
@@ -79,7 +78,6 @@ class App extends Component{
         </Router>
       </React.Fragment>
     )
-  }
 }
 export default App
 ````
