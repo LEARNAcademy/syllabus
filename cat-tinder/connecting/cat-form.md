@@ -17,60 +17,89 @@ The `createCat()` fetch call is going to be a little bit different than `getCats
 
 A POST type request means that we are "posting" or sending information along with the request. Information that must be handled. In this case, by specifying the HTTP verb `POST`, attaching some information, and directing it to the rails "/cats" route will mean that the attached information is used to create a new cat instance in the database.
 
-**src/App.js**
+**src/NewCat.js**
 ```javascript
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      // empty array to hold the cats coming from the backend
-      cats: []
-    }
-    this.getCats()
-  }
-  componentDidMount(){
-  	this.getCats()
-  }
-  //... The get cats method is here
 
-  createCat = (newcat) => {
+import React, { useState } from 'react'
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import {Link} from 'react-router-dom'
+
+const NewCat = () => {
+  //in the following Hooks:
+    // `cats` is the equivalent of:
+      // this.state.cats
+    // `setCats` is the equivalent of:
+      // setState({cats: whatever-data })
+    // useState sets `cats` to be an empty array when the component loads
+  const [cats, setCats] = useState([
+    
+  ])
+  
+  const [form, setState] = useState({
+    name: '',
+    age: '',
+    enjoys: ''
+  })
+  
+  const pushCats = (freshCat) => {
+    // fetch URL to post new state of `cats` to database
     return fetch("http://localhost:3000/cats", {
-      // converting an object to a string
-    	body: JSON.stringify(newcat),
-      // specify the info being sent in JSON and the info returning should be JSON
-    	headers: {
-    		"Content-Type": "application/json"
-    	},
-      // HTTP verb so the correct endpoint is invoked on the server
-    	method: "POST"
-    })
-    .then((response) => {
-      // if the response is good call the getCats method
-      if(response.ok){
-        return this.getCats()
-      }
+      body: JSON.stringify(freshCat),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
     })
   }
-
-  render() {
-    return (
-      <>
-        <Router>
-          <Switch>
-            // pass the createCat method as props to NewCat
-            <Route exact path="/newcat" render={ (props) => <NewCat handleSubmit={ this.createCat } /> }
-            />
-            //
-            <Route exact path="/catindex" render={ (props) => <CatIndex cats={ this.state.cats } /> }
-            />
-          </Switch>
-        </Router>
-      </>
+  return(
+    <div>
+      <h1 id="new-cat-header">Add Yo' Kitties, bro.</h1>
+      <Form id="form">
+        <FormGroup>
+          <Label htmlFor="name" id="name">Name</Label>
+          <Input
+            type="text"
+            name="name"
+            onChange={ handleChange }
+            value={ form.name }
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="age" id="age">Age</Label>
+          <Input
+            type="number"
+            name="age"
+            onChange={ handleChange }
+            value={ form.age }
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="enjoys" id="enjoys">What it do?</Label>
+          <Input
+            type="text"
+            name="enjoys"
+            onChange={ handleChange }
+            value={ form.enjoys }
+          />
+        </FormGroup>
+        <Button
+          name="submit"
+          color="primary"
+          id="submit"
+          onClick={handleSubmit }
+        >
+          Add dat Profile
+      
+        </Button> <Link to="/cats" className="float-right btn btn-warning">View dem Kitties</Link>
+      </Form>
+    </div>
+  )
 }
+export default NewCat
 ```
 
 ## Call and Redirect
-The last thing to do is call the `createCat()` method being passed as props to the *NewCat.js*, and add the redirect element.
+The last thing to do is call the `pushCats()` method and add the redirect element.
 
 **pages/NewCat.js**
 ```javascript
@@ -78,50 +107,39 @@ The last thing to do is call the `createCat()` method being passed as props to t
   <Button
     name="submit"
     id="submit"
-    onClick={ this.handleSubmit }
+    onClick={ handleSubmit }
   >
     Create a New Profile
   </Button>
-  { this.state.success && <Redirect to="./catindex"/> }
+  { success && <Redirect to="./catindex"/> }
 </Link>
 ```
-Notice the `this.state.success` statement. This sets up conditional rendering. If `this.state.success` evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist.
+Notice the `success` statement. This sets up conditional rendering. If `success` evaluates to "true" the redirect will run. As long as it evaluates to "false", the program will act as if the redirect doesn't even exist.
 
 You will need to create a "success" value in state to finish this functionality.
 
 **src/pages/NewCat.js**
 ```javascript
-class NewCat extends Component{
-  constructor(props){
-    super(props)
-    // small amount of state to manage the form
-    this.state = {
-      // success value defaulting to false to manage the redirect functionality
-      success: false,
-      form:{
-        name: "",
-        age: "",
-        enjoys: ""
-      }
-    }
-  }
+const [success, setSuccess] = useState({success: false})
 
-  handleSubmit = (event) => {
-    // keeps React from refreshing the page unnecessarily
-    event.preventDefault()
-    // a function call being passed from App.js
-    this.props.handleSubmit(this.state.form)
-    this.setState({
-      success: true
+  const handleChange = e => {
+    setState({
+      //take all the existing form data and,...
+      ...form,
+      //...add new data to the end as it is typed
+      [e.target.name]: e.target.value
     })
   }
-
-  handleChange = (event) => {
-    // destructuring form out of state
-    let { form } = this.state
-    form[event.target.name] = event.target.value
-    // setting state to the updated form
-    this.setState({ form: form })
+  const handleSubmit = (event) => {
+    // keeps react from refreshing the page unnessarily
+    event.preventDefault()
+    // show the current state in the console (should see all cats created)
+    console.log(form)
+    // set the `cats` state to include all cats
+    // since the current state of `cats` is immutable, it cannot be changed, we need to create a copy of it and add the new cat to it
+    setCats(cats => [...cats,form])
+    // send all cats in the newly created state to the backend to post to the database
+    pushCats(form)
   }
 ```
 
