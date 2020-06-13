@@ -76,11 +76,15 @@ The response delivers the JSON payload to the application.
 
 
 ## Challenge
-- Create a React application that shows the user their current location and IP address.
-- Use the API and documentation [here:](https://ipapi.co/api/?shell#complete-location)
+- Create a React application that shows the user their current location and IP address
+- Use [this](https://ipapi.co/api/?shell#complete-location) API and documentation 
 
 ## Stretch Challenge
-- Use the [NYTimes Developer](https://developer.nytimes.com/) API and docs to create a more complex application
+- Use an external API and docs to create an application of your choice
+  - [Here](https://developer.nytimes.com/) are the NYTimes Developer docs
 - Safely save the API key
 
+<<<<<<< HEAD
 [Back to Syllabus](../README.md)
+=======
+>>>>>>> 0faccda6ed15c189e8c20944c5ab564c4db47a67
