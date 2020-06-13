@@ -12,8 +12,27 @@ This week you will get together with your group periodically for planning sessio
 
 Setting up your **database** will be one of the first steps in your project. It is a good idea to draw out your database schema and define the relationships of each table.
 
+
+##### Friday: Stories and Green Light
+Stories take your wireframes and DB schema and turn them into actionable items. Stories are a detailed "to do" list for every part of your application. Stories keep the team focused on the overall goal of the application as well as keeping the individual developers on task.
+
+Example of a story:
+```
+As a [user-type], I need to [task], so that I can [benefit].
+
+- [user-type] - The user that will be performing the task and receiving the benefit
+- [task] - What the user needs to do in order to receive the benefit
+- [benefit] - The outcome if the user successfully performs the task
+
+Ex: As an admin, I need to be able to add or delete accounts, so that I can manage the users of my app more effectively.
+```
+
+Once you have completed all the prep items, your group will present your plan to an instructor.
+
 ### Week 10: Coding the MVP
 The capstone project is two weeks long and can be divided into two one-week sprints. The first sprint is getting the basic functionality of your application, or your **Minimum Viable Product**.
+
+We recommend mobbing the initial set up so the team starts out on the same page.
 
 #### A Day in the Life
 Each team should define a schedule and hold each other accountable to stick with the plan. Here is an example of a daily schedule.
@@ -43,24 +62,6 @@ Each team should define a schedule and hold each other accountable to stick with
 - Discuss actions items for tomorrow
 
 4:50 - Check out with the class
-
-##### Monday: Stories and Green Light
-Stories take your wireframes and DB schema and turn them into actionable items. Stories are a detailed "to do" list for every part of your application. Stories keep the team focused on the overall goal of the application as well as keeping the individual developers on task.
-
-Example of a story:
-```
-As a [user-type], I need to [task], so that I can [benefit].
-
-- [user-type] - The user that will be performing the task and receiving the benefit
-- [task] - What the user needs to do in order to receive the benefit
-- [benefit] - The outcome if the user successfully performs the task
-
-Ex: As an admin, I need to be able to add or delete accounts, so that I can manage the users of my app more effectively.
-```
-
-Once you have completed all the prep items, your group will present your plan to an instructor. Once the instructor approves, you may begin coding.
-
-We recommend mobbing the initial set up so the team starts out on the same page.
 
 ##### Wednesday: Client Check-in
 A client check-in is an opportunity for the development team to share their progress with the client (or an instructor in our case). It is also a time to discuss any scoping issues or time constraints that may have surfaced.
