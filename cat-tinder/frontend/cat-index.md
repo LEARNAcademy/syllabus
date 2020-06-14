@@ -46,6 +46,7 @@ render(){
 
 Test should pass because we have a component that can be rendered. It imports React and has a render function, it does not yet show real content.
 
+
 ## Fake Cats
 Let's add some fake (placeholder) cat data to play with. Later this information will come from the rails backend as a JSON payload, but for now let's just get something up that we can see and work with.
 
@@ -79,7 +80,7 @@ export default cats
 
 The fake cats variable can be passed into the state object in App.js.
 
-```
+```JavaScript
 import cats from './cats'
 
 class App extends Component{
@@ -148,7 +149,7 @@ The tests should now pass.
 - Add tests for CatShow
 
 
-[Go to next lesson: Cat Tinder Create New Cat Component](./cat-create.md)
+[Go to next lesson: Cat Tinder React Hooks](./cat-create.md)
 
 [Back to Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
 
