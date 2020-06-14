@@ -49,20 +49,15 @@ Once you have a view that satisfies the tests, you’ll be ready to refactor you
 ## Controlled components
 Thinking ahead just a bit, we're going to need to pass the values from our form back up to the calling component. In order to do this easily, we will hold the values typed in by the user in state. To “watch” our inputs and save values into state, we need to switch our inputs to being “controlled components” (meaning watched by state). Or, in other words, add a 'value', and an 'onChange' attribute to the inputs. Then we can manage the value of the inputs in the components’ internal state until the form is submitted.
 
-We start by adding state to the component in a constructor:
+We start by adding state to the component in a function:
 
 **src/pages/NewCat.js**
 ```javascript
-constructor(props){
-  super(props)
-  this.state = {
-    form:{
+const [form, setState] = useEffect({
       name: '',
       age: '',
       enjoys: ''
-    }
-  }
-}
+})
 ```
 And then for each input, we use an arrow function to bind its value to state. We'll add a name to the input too, and an onChange() callback, as we're going to need those next. Here is 'name', the other two are nearly identical.
 
@@ -75,8 +70,8 @@ And then for each input, we use an arrow function to bind its value to state. We
     <Input
       type="text"
       name="name"
-      onChange={ this.handleChange }
-      value={ this.state.form.name }
+      onChange={ handleChange }
+      value={ form.name }
     />
   </FormGroup>
 </Form>
@@ -87,10 +82,13 @@ So what does handleChange() look like?
 **src/pages/NewCat.js**
 
 ```javascript
-handleChange = (event) => {
-  let { form } = this.state
-  form[event.target.name] = event.target.value
-  this.setState({ form: form })
+handleChange = e => {
+    setState({
+        //take all the existing form data and,...
+        ...form,
+        //...add new data to the end as it is typed
+        [e.target.name]: e.target.value
+    })
 }
 ```
 
