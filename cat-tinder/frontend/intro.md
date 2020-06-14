@@ -1,4 +1,4 @@
-README.md# Cat Tinder Introduction and Wireframes
+# Cat Tinder Introduction and Wireframes
 
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
@@ -58,7 +58,7 @@ Create a CatIndex file and a CatShow file in the pages directory.
 
 **src/App.js**
 ```javascript
-import React, { useState } from "react"
+import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./App.css"
 
