@@ -22,35 +22,32 @@ The frontend is going to ask the Rails API for information, then Rails will use 
 
 **/src/App.js**
 ```javascript
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      cats: [], // We start with an empty array, so the component can finish rendering before we make our fetch request
-    }
-    this.getCats() // Calls our fetch method when the component loads for the first time
-    }
+import React, {useState, useEffect} from 'react'
+// import necessary components from reactstrap
+import { Container, Row, Col, ListGroup, ListGroupItem, Button} from 'reactstrap'
+import {Link} from 'react-router-dom'
+const CatList = () => {
+  //Create an empty array to hold all the cats
+  const [newCats, setNewCats] = useState([])
+  //useEffect hook lets us GET all cats from the database when the component loads
+  //the empty array after the comma means that it will get triggered automatically only once
+  useEffect(() =>{
+    grabCats()},[])
 
-    componentDidMount(){
-    	this.getCats()
-    }
-
-    getCats = () => {
-       // Making a fetch request to the url of our Rails app
-       // fetch returns a promise
-      fetch("http://localhost:3000/cats")
-      .then((response)=>{
-        //Make sure we get a successful response back
-        if(response.status === 200){
-          // We need to convert the response to JSON
-          // This also returns a promise
-          return(response.json())  
-        }
-      })
-      .then((catsArray)=>{
-         //Finally, we can assign the cats to state, and they will render
-        this.setState({ cats: catsArray })
-      })
+  async function grabCats () {
+    try {
+      //GET data from the backend
+      let response = await fetch("http://localhost:3000/cats")
+      let data = await response.json();
+      //all good?
+      if(response.status === 200) {
+        //check the console to make sure we have all the cats
+        console.log("data", data)
+        //populate the newCats state array with data
+        setNewCats(data)
+      }
+    } catch (err) {
+        console.log(err)
     }
   }
 ```
@@ -61,7 +58,7 @@ What is this code doing?
 
 The big things to note are that we call fetch (which is a promise) and use the value returned from the promise to update state.
 
-`ComponentDidMount()` is part of the React component lifecycle and always runs right before render. This means, that right before we have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the database to set state.
+`useEffect()` is part of React Hooks land always runs right before render. This means, that right before we have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the database to set state.
 
 ## Starting Servers
 We have two applications running separately from each other. They will run on two different ports.
