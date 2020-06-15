@@ -124,7 +124,7 @@ const App = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about/">About</Link>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
                         <Link to="/tomato">Tomato</Link>
@@ -134,8 +134,8 @@ const App = () => {
 
                 {/* 6. Calling the components we imported from "pages" to render in response to the Link */}
                 <Route path="/" exact component={ Home } />
-                <Route path="/about/" component={ AboutUs } />
-                <Route path="/tomato/" component={ Tomato } />
+                <Route path="/about" component={ AboutUs } />
+                <Route path="/tomato" component={ Tomato } />
             </div>
         </Router>
     )
@@ -148,8 +148,8 @@ Here are the 3 routes in our sample project:
 
 ```html
 <Route path="/" exact component={ Home } />
-<Route path="/about/" component={ AboutUs } />
-<Route path="/tomato/" component={ Tomato } />
+<Route path="/about" component={ AboutUs } />
+<Route path="/tomato" component={ Tomato } />
 ```
 
 At their most basic, routes have a path, and a component prop. The path specifies a matcher for the browser's URL, and the component prop specifies which component to render when there is a match.
@@ -166,8 +166,8 @@ If we remove the **exact** from the Home Route we get some unintended consequenc
 
 ```html
 <Route path="/" component={ Home } />
-<Route path="/about/" component={ AboutUs } />
-<Route path="/tomato/" component={ Tomato } />
+<Route path="/about" component={ AboutUs } />
+<Route path="/tomato" component={ Tomato } />
 ```
 
 Now, if our user navigates to the AboutUs page both the Home and the AboutUs components are rendering. This is because the Home path "/" is satisfied by the URL "localhost:3000/about" as well as the AboutUs path.
@@ -181,8 +181,8 @@ To avoid having multiple routes satisfied by a URL at the same time, we can also
 
 ```html
 <Switch>
-  <Route path="/about/" component={ AboutUs } />
-  <Route path="/tomato/" component={ Tomato } />
+  <Route path="/about" component={ AboutUs } />
+  <Route path="/tomato" component={ Tomato } />
   <Route path="/" component={ Home } />
 </Switch>
 ```
@@ -219,9 +219,9 @@ After importing the component, we can add exact back in to the root Route and ad
 
 ```html
 <Switch>
-  <Route path="/about/" component={ AboutUs } />
-  <Route path="/tomato/" component={ Tomato } />
   <Route path="/" exact component={ Home } />
+  <Route path="/about" component={ AboutUs } />
+  <Route path="/tomato" component={ Tomato } />
   <Route component={ NotFound } />
 </Switch>
 ```
@@ -236,7 +236,5 @@ Create a React application for your favorite movies or TV shows using React Rout
 - As a user, when I visit your site, I can see a list of your five favorite movies or TV shows.
 - As a user, I can click on any of the movies or TV shows names and see the movie or TV show details.
 - As a user, I can see an error page if I enter an invalid URL.
-
-[Go to next lesson: React Dynamic Routes](./dynamic-routes.md)
 
 [Back to Syllabus](../../README.md)
