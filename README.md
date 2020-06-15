@@ -123,7 +123,6 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ### React Routing
 1. [React Routing Introduction](./cat-tinder/react-router/intro.md)
-2. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 
 ### Cat Tinder Frontend
 3. [Cat Tinder Introduction and Wireframes](./cat-tinder/frontend/intro.md)
@@ -147,6 +146,7 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: React in Rails and Authentication
 1. [React IN Rails Introduction](./react_in_rails/intro.md)
+2. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 2. [React Routing IN Rails](./react_in_rails/react_routing_in_rails.md)
 2. [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
 2. [Devise Introduction](./react_in_rails/devise.md)
