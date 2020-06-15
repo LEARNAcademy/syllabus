@@ -3,7 +3,7 @@
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
 - We are creating a full-stack, decoupled application. This means we are actually creating two separate applications. A React application for the frontend and a Rails API that handles our data.
-- The goal of the application is to have full CRUD functionality.
+- The goal of the application is to have see all the cats in the database and add new cats to the database.
 
 ## Learning Objectives
 - Creating wireframes for Cat Tinder
