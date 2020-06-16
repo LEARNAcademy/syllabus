@@ -3,7 +3,7 @@
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
 - We are creating a full-stack, decoupled application. This means we are actually creating two separate applications. A React application for the frontend and a Rails API that handles our data.
-- The goal of the application is to have see all the cats in the database and add new cats to the database.
+- The goal of the application is to see all the cats in the database and be able to add new cats to the database.
 
 ## Learning Objectives
 - Creating wireframes for Cat Tinder
@@ -52,19 +52,18 @@ Here's what our app is going to look like:
 ## Getting Starting
 The first goal of our app is to get our base file structure ready to go. *App.js* will be in charge of handling the routes and displaying the components.
 
-We will start with the **read** part of CRUD. We need a page that will show all the cats (index) and a page that will show one cat (show). The index page will be our home page for the purposes of routing.
+We will start with the **read** part of CRUD. We need a page that will show all the cats. The index page will be our home page for the purposes of routing.
 
-Create a CatIndex file and a CatShow file in the pages directory.  
+Create a CatIndex file in the pages directory.  
 
 **src/App.js**
 ```javascript
-import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import "./App.css"
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.css'
 
-import Header from "./components/Header"
-import CatIndex from "./pages/CatIndex"
-import CatShow from "./pages/CatShow"
+import Header from './components/Header'
+import CatIndex from './pages/CatIndex'
 
 const App = () => {
     return(
@@ -72,7 +71,6 @@ const App = () => {
         <Router>
         <Header />
           <Switch>
-            <Route exact path="/cat/:id" component={ CatShow } />
             <Route exact path="/" component={ CatIndex } />
           </Switch>
         </Router>
@@ -82,13 +80,10 @@ const App = () => {
 export default App
 ````
 
-We don't have any links, but we can still navigate to each page in the browser. Our app will accept a param, but nothing will render as we have not built that functionality yet.
-
 ## Challenge: Cat Tinder Initial Set Up
 - Create a new file *src/components/Header.js*
 - Use Reactstrap to create the header UI
 - Create CatIndex file
-- Create CatShow file
 
 
 [Go to next lesson: Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
