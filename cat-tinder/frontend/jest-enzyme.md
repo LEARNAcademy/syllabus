@@ -4,7 +4,7 @@
 
 ## Overview
 - There are two main tools you'll use to test your React applications: Jest and Enzyme.
-- Jest is a testing framework built right into React when you use create a new React app.
+- Jest is a JavaScript testing framework that is added to React when you use the command yarn create react-app.
 - Enzyme is a JavaScript testing utility for React that makes it easier to test your React Components' output.
 
 ## Learning Objectives
