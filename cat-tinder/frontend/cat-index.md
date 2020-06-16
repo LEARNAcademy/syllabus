@@ -149,7 +149,8 @@ The tests should now pass.
 - Add tests for CatShow
 
 
-[Go to next lesson: Cat Tinder React Hooks](./cat-create.md)
+[Go to next lesson: Cat Tinder React Hooks](./hooks.md)
+
 
 [Back to Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
 
