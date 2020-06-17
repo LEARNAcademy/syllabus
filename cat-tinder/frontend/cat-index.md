@@ -32,6 +32,8 @@ it('CatIndex renders without crashing', () => {
 **src/pages/CatIndex.js**
 
 ```javascript
+import { ListGroup, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
+
 render(){
   return(
     <React.Fragment>
@@ -90,10 +92,11 @@ class App extends Component{
       allCats: cats
     }
   }
+  //Suggestion to include a note about adding the render since we are changing this to a class we need to ensure there is a render here. Maybe add the entire section of code here as refrence and then below call at the parts of the code that are important//
 ```
 
 ## Passing Props in the Router
-We need to send this cats JSON array from state to the CatIndex component as props. To do this we need to update the router to allow us to pass props in the component.
+We need to send this cats JSON array from state to the CatIndex component as props. To do this we need to update the router in App.js to allow us to pass props in the component.
 
 ```javascript
 <Route exact path="/" render={ (props) => <CatIndex cats={ this.state.allCats } /> } />
@@ -102,6 +105,7 @@ We need to send this cats JSON array from state to the CatIndex component as pro
 This will pass the array of cat objects to the *CatIndex.js* component. Let's add some Reactstrap code and map over the array of objects.
 
 **src/pages/CatIndex.js**
+//I would add a note about having to have this code within the pre-exisiting react fragments on the page//
 
 ```javascript
 { this.props.cats.map((cat, index) => {

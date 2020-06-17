@@ -87,6 +87,8 @@ In this case, we're expecting the things to be the same.  We could expect them t
 - Add Enzyme to your application
 - Add a `__test__` directory with files for each existing component
 
+//Something I ran into during this section is that we needed to create a new __tests__ folder within the src/components folder and add our Header Component test there.//
+
 [Go to next lesson: Cats Tinder Index Component](./cat-index.md)
 
 [Back to Cat Tinder Introduction and Wireframes](./intro.md)

@@ -3,6 +3,12 @@
 ## Overview
 - Refactor your code to include React Hooks using functional components
 
+//Suggestion: Make sure the class has completed the previous 3 tutorials prior to giving your lecture on hooks:
+1. Cat Tinder Introduction and Wireframes
+2. Cat Tinder Testing with Jest and Enzyme
+3. Cat Tinder Index Component//
+
+
 ## Learning Objectives
 - Update class components to be functional components
 - Using React Hooks useState and useEffect
