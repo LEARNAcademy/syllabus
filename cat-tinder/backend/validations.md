@@ -64,7 +64,7 @@ Green!
 ### Request Specs
 Here's a test to assure that we get the correct response status when we submit a create request without a name for a cat.
 
-**spec/requests/cats_spec.rb**
+**spec/requests/cats_request_spec.rb**
 ```ruby
  it "doesn't create a cat without a name" do
    cat_params = {
@@ -90,16 +90,14 @@ $ rspec spec/requests
 ```
 Failures:
 
-1) Cats API doesn't create a cat without a name
-  Failure/Error: expect(response.status).to eq 422
-    expected: 422
-    got: 204
-Finished in 0.0172 seconds (files took 1.57 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/requests/cats_spec.rb:43 # Cats API doesn't create a cat without a name
+  1) Cats does not create a cat without a name
+     Failure/Error: expect(response.status).to eq 422
+     
+       expected: 422
+            got: 200
+     
+       (compared using ==)
+     # ./spec/requests/cats_request_spec.rb:40:in `block (2 levels) in <main>'
 ```
 And the results from running the full test suite give us a failure. Great! We expected a 422 response which is the server letting us know that we submitted an "Unprocessable Entity", but that's not what we got back. So how do we make that test pass? Let's add a validation.
 
