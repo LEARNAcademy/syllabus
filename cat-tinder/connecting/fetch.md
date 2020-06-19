@@ -20,7 +20,7 @@ Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a 
 ## Fetching Our Data
 The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON. We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because we're going to be famous).
 
-**/src/App.js**
+**/src/pages/CatIndex.js**
 ```javascript
 import React, {useState, useEffect} from 'react'
 // import necessary components from reactstrap
