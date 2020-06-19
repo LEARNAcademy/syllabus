@@ -120,7 +120,7 @@ You will need to create a "success" value in state to finish this functionality.
 
 **src/pages/NewCat.js**
 ```javascript
-const [success, setSuccess] = useState({success: false})
+const [success, setSuccess] = useState(false)
 
   const handleChange = e => {
     setState({
