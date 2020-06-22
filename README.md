@@ -146,12 +146,14 @@ Using React and Rails to create an asynchronous full stack application with test
 
 ## Unit Nine: React in Rails and Authentication
 1. [React IN Rails Introduction](./react_in_rails/intro.md)
-2. [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 2. [React Routing IN Rails](./react_in_rails/react_routing_in_rails.md)
 2. [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
 2. [Devise Introduction](./react_in_rails/devise.md)
 2. [Devise and React IN Rails](./react_in_rails/devise_and_react_in_rails.md)
 4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
+
+#### Additional Topics:
+- [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 
 ## Unit Ten: Capstone Project, MVP
 1. [Capstone Schedules](./capstone/schedule.md)
