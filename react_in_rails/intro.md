@@ -26,8 +26,8 @@
 ### Set Up
 The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
 - $ rails new hello_world -d postgresql -T
-- $ rails db:create
 - $ cd hello_world
+- $ rails db:create
 - $ bundle add react-rails
 - $ bundle install
 - $ rails webpacker:install
