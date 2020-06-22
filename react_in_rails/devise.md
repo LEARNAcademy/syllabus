@@ -31,7 +31,9 @@ Using the Devise gem to create authentication and authorization for a React in R
 - navigate to `http://localhost:3000/users/sign_in` and see a log in page
 - navigate to `http://localhost:3000/users/sign_up` and see a sign up page
 
-
+### Adding mailer settings 
+You’ll need to set up the default URL options for the Devise mailer in each environment. In the config/environments/development.rb file, add the following code at the end of the previous code inside the file:
+```config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }```
 ### Controller Filters and Helpers
 
 Devise will create some helpers to use inside your controllers and views. To set up a controller with user authentication, just add this before_action (assuming your devise model is 'User'):
