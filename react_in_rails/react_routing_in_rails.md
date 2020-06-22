@@ -168,7 +168,6 @@ import { BrowserRouter as  Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import AboutMe from './pages/AboutMe'
 import LearnMore from './pages/LearnMore'
-import './styles.css'
 
 class App extends React.Component {
   render() {
