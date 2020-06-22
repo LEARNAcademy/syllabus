@@ -24,8 +24,9 @@
 
 
 ### Set Up
-A database is not needed for this project so the typical `rails new` command with the Postgresql flags can be shortened. The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
-- $ rails new hello_world
+The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
+- $ rails new hello_world -d postgresql -T
+- $ rails db:create
 - $ cd hello_world
 - $ bundle add react-rails
 - $ bundle install
@@ -37,16 +38,16 @@ A database is not needed for this project so the typical `rails new` command wit
 
 ### Step 1: React Component
 Create a React component in the Rails application using a generate command
-- $ rails g react:component HelloWorld
+- $ rails g react:component App
 - The install commands created a directory in *app* called *javascript*
-- In *app/javascript* there will be another directory called *components* that will contain our *HelloWorld* React component with some basic code
+- In *app/javascript* there will be another directory called *components* that will contain our *App* React component with some basic code
 - Add an `h1` tag to the React component
 
 **app/javascript/components/HelloWorld.js**
 ```javascript
 import React from "react"
 import PropTypes from "prop-types"
-class HelloWorld extends React.Component {
+class App extends React.Component {
   render () {
     return (
       <React.Fragment>
@@ -56,7 +57,7 @@ class HelloWorld extends React.Component {
   }
 }
 
-export default HelloWorld
+export default App
 ```
 
 ### Step 2: Rails Routes
@@ -77,7 +78,7 @@ Generate a Rails controller and create the view. The controller name matches the
 
 **app/views/pages/index.html.erb**
 ```javascript
- <%= react_component "HelloWorld" %>
+ <%= react_component "App" %>
 ```
 
 ### Step 4: Start the Rails server
