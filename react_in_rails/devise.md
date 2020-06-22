@@ -120,11 +120,6 @@ Associate Bikes to Users:
 	  has_many :bikes
 	end
 ```
-
-We need to remove the "User" input from our generated form for a new bike:
-
-
-
 Then, in the create method of the controller, we can assign it to the current user with the help of a Devise helper method.
 
 **app/controllers/bikes_controller.rb**
@@ -145,9 +140,6 @@ Then, in the create method of the controller, we can assign it to the current us
 ```
 
 ### 10) Now when we test it out, we can see in the console that Bikes are assigned to the user
-
-
-
 
 
 [Go to next lesson: Devise and React in Rails](./devise_and_react_in_rails.md)
