@@ -35,7 +35,6 @@ This example combines what we've learned about Devise with what we've learned ab
 ### Generate a New React Component
 - $ rails g react:component App
 
-
 ### Add a Homepage
 - $ rails g controller Home
 
@@ -50,13 +49,21 @@ end
 ```
 This route directs all HTML traffic to the 'home#root' route, but ignores non HTML traffic, like our API requests will be.  That is perfect to interact with the React router eventually if and when that gets added to your app.
 
+### Add a method to your Home Controller
+#### /controllers/home_controller.rb
+```ruby
+  def root
+  end
+ ```
+ 
 ### Add a Homepage and React Component
 Next, we'll add a homepage view, and add our react component to it.  We want to pass three pieces of information down from Rails into our React App.
 1) If user is logged in or not
 2) Relative URL of login screen (from Devise)
 3) Relative URL of logout endpoint (also from Devise)
 
-**app/views/pages/homepage.html.erb**
+**app/views/home/home.html.erb**
+Add a new layout to the view, then add the code to render the App.js component and pass in the props for logged_in, sign_in_route, and sign_out_route:
 ```
 <%= react_component("App", {
     logged_in: user_signed_in?,
@@ -113,6 +120,7 @@ class App extends React.Component {
 
 export default App
 ```
+
 
 [Go to next lesson: Apartment App](./apartment_app.md)
 
