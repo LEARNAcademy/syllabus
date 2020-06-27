@@ -64,13 +64,16 @@ First, we'll need to set up a brand new rails app, which we will call "user"
 
 In our terminal, we will type the following commands:
 ```
-$ rails new user -d postgresql -T
-$ cd user
+$ rails new test_app -d postgresql -T
+$ cd test_app
+$ rails g model User
 $ rails db:create
 $ rails server
 ```
+We specifically do not assign any columns to this database. We will add those later, via a migration! 
 
-Then we can check to see if the server is running correctly by navigating in our browser to:
+
+For now, lets check to see if the server is running correctly by navigating in our browser to:
 
 `http://localhost:3000`
 or
@@ -80,7 +83,7 @@ or
 Now that we have our application up and running, we will need to add the first_name and last_name columns to a User table. For this example, we'll use snake_case for our naming convention.
 
 ```
-$ rails generate migration add_name_to_users
+$ rails generate migration add_name_to_user
 ```
 
 A new file is added to the migrate directory with the timestamp appeneded to the front of the snake_case naming we gave it. Rails uses this timestamp to determine which migration should be run and in what order. When we open the file up, we will find the starter code for the migration already built out for us.
