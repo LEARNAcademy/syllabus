@@ -134,9 +134,11 @@ class AddNameToUsers < ActiveRecord::Migration[6.0]
 end
 ```
 
-After we save the file, we are ready to tell rails to make the changes by running the rails db:migrate command in terminal.
+After we save the file, we are ready to tell rails to make the changes by running the migrate command in terminal.
 
+```
 $ rails db:migrate
+```
 
 The database schema is now updated!
 
