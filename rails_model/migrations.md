@@ -66,7 +66,7 @@ In our terminal, we will type the following commands:
 ```
 $ rails new test_app -d postgresql -T
 $ cd test_app
-$ rails g model User
+$ rails generate model User
 $ rails db:create
 $ rails server
 ```
