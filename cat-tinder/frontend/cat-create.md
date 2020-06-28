@@ -53,7 +53,7 @@ We start by adding state to the component in a function:
 
 **src/pages/NewCat.js**
 ```javascript
-const [form, setState] = useEffect({
+const [form, setState] = useState({
       name: '',
       age: '',
       enjoys: ''

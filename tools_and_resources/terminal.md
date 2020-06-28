@@ -44,15 +44,16 @@ There are programs that help add a bit of flare and functionality to your termin
 - Open a terminal
 - Show what directory you are in
 - List out all directories available
-- Get to the desktop directory
-- Create a new directory and get into the newly created directory
-- Open the directory in a window
-- Open the directory in Atom
+- Navigate to the desktop directory
+- Create a new directory and navigate into the newly created directory
+- Open the directory in a text editor
 - Go back to the desktop directory
-- Drag and Drop for a directories path
 - Show passed commands used
 - Clear the Terminal
-- Arrow up
+- Arrow up to the previous command
 - Increase the Terminal text size
+
+## Stretch Challenges
 - Change the look of your terminal
+- Drag and Drop for a directories path
 - Move cursor to beginning of text
