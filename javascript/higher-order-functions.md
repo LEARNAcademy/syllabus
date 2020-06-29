@@ -8,13 +8,13 @@
 
 ## Learning Objectives
 - Understanding the anatomy of a higher-order function
-- Understanding the use for .map()
-- Understanding the use for .filter()
-- Understanding the three specific arguments available to .map() and .filter()
+- Understanding the use of .map()
+- Understanding the use of .filter()
+- Understanding the specific arguments available to higher order functions
 
 ## Vocabulary
 - higher-order function
-- value, index, array
+- value, index
 
 ## Set Up
 - Create a file in a text editor with the extension `.js`

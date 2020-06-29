@@ -23,8 +23,6 @@
 - arguments
 - pseudocode
 
-## Additional Resources
-
 ## Set Up
 - Create a file in a text editor with the extension `.js`
 - In terminal, cd into the appropriate folder

@@ -31,6 +31,7 @@ After your team has decided on the technology to be used, select who will be the
 - cd into the project and perform basic set up procedures
 
 Once the set up is complete and **before any coding takes place**, the driver will:
+- $ git pull origin master
 - $ git add .
 - $ git commit -m "initial commit"
 - $ git push origin master
@@ -56,12 +57,13 @@ Once everyone has technology set up and the plan has been established, begin fir
 Establish a schedule that works for your team. We recommend the Pomodoro method: [Tomato Timer](https://tomato-timer.com/)
 
 When a driver's shift comes to an end:
+- $ git pull origin master
 - $ git add .
 - $ git commit -m "meaningful message"
 - $ git push origin master
 
 When a new driver's shift begins:
-- $ git pull
+- $ git pull origin master
 
 **Communicate constantly. Stay engaged. Work hard. Build awesome things.**
 
