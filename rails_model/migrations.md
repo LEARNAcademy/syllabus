@@ -60,12 +60,12 @@ In the exercise below, we'll be creating a brand new rails application, but we w
 
 #### Creating a new Rails app:
 
-First, we'll need to set up a brand new rails app, which we will call "user"
+First, we'll need to set up a brand new rails app, which we will call "migrations_practice"
 
 In our terminal, we will type the following commands:
 ```
-$ rails new test_app -d postgresql -T
-$ cd test_app
+$ rails new migrations_practice -d postgresql -T
+$ cd migrations_practice
 $ rails generate model User
 $ rails db:create
 $ rails server
