@@ -143,7 +143,7 @@ Make sure you try different options and change the variables to ensure properly 
 
 **STRETCH Challenges**
 
-- Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available.
+- Write an `if/else` statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available."
 
 - Write an `if/else` statement that takes a variable of a boolean, number, or string  datatype and logs the data type of the variable **HINT**: use the JS operator `typeof`.
 
