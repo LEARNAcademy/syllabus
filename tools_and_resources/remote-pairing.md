@@ -1,5 +1,7 @@
 # Remote Pairing Protocol
 
+- [ Troubleshooting Tips ](#troubleshooting -tips)
+
 An important part of being successful in a remote dev team is effective pair programming.
 
 ### Why We Utilize Pair Programming
@@ -64,6 +66,11 @@ When a driver's shift comes to an end:
 
 When a new driver's shift begins:
 - $ git pull origin master
+
+#### Troubleshooting Tips
+- If you tried to push and get an error: `git pull origin master`
+- If you are dropped into a vim environment: `:wq`
+
 
 **Communicate constantly. Stay engaged. Work hard. Build awesome things.**
 

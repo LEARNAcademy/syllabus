@@ -13,7 +13,7 @@ Welcome to the LEARN Syllabus! This repository is a reflection of the current st
 
 ## Programming Tools
 - [Tech Stack](./tools_and_resources/techstack.md)
-- [Introduction to git and GitHub](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
+- [Introduction to git and GitHub](./tools_and_resources/github.md)
 - [Intro Terminal](./tools_and_resources/terminal.md)
 - [Intro to Atom](./tools_and_resources/atom.md)
 
