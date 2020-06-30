@@ -1,6 +1,6 @@
 # Remote Pairing Protocol
 
-- [ Troubleshooting Tips ](#troubleshooting -tips)
+- [ Troubleshooting Tips ](#troubleshooting-tips)
 
 An important part of being successful in a remote dev team is effective pair programming.
 
