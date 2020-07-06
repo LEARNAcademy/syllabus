@@ -4,13 +4,14 @@
 [![YouTube](http://img.youtube.com/vi/xDmsrXDweB8/0.jpg)](https://www.youtube.com/watch?v=xDmsrXDweB8)
 
 ## Overview
-- Objects are variables that contain a collection of key:value pairs
-- Objects are the cross section of data and behavior (methods)
+- Objects are a datatype that contain collections of key:value pairs
+- Objects are the cross section of data (static information) and behavior (methods)
 
 ## Learning Objectives
 - Understanding the anatomy of an object
 - Accessing the values from objects using the keys
 - Creating methods that return information from the object
+- Exploring object destructuring
 
 ## Vocabulary
 - JSON
@@ -21,7 +22,7 @@
 - destructuring
 
 ## Additional Resources
--  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="blank">Destructuring Assignmment Operators</a>
+-  For a fantastic list of all the things you can do with destructuring, go to the MDN page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="blank">Destructuring Assignmment Operators</a>
 
 ## Set Up
 - Create a file in a text editor with the extension `.js`
@@ -52,11 +53,12 @@ Then we can access the `value` from the object with "dot" notation by calling th
 ```javascript
 console.log(person.name)
 --> "Alex Keaton"
+
 console.log(person.phone)
 --> 123456789
 ```
 
-## Object with Behavior
+## Object with Behavior: Method
 
 - Objects can also contain functions. When a function belongs to an object it is called a method.
 - **this** is a JavaScript keyword that references the object.
@@ -76,29 +78,30 @@ console.log(person.getData())
 --> "Alex Keaton's phone number is 123456789"
 ```
 
-## Iterating Over Objects
+## Iterating Over Arrays With Objects
 
-Objects can be single indexes of an array. You can use .map() or .filter() on arrays of objects.  
+Objects can be single indexes of an array. You can use `.map()` or `.filter()` on arrays of objects.  
 
-Example: Consider this toons variable. Use .map() or .filter() to return a new array with only the dogs.
+Example: Consider this toons variable. Use `.map()` or `.filter()` to return a new array with only the dogs.
 
 ```javascript
 var toons = [
   {name: "Brian", animal: "dog"},
-  {name: "Tom", animal: "duck"},
-  {name: "Bugs", animal: "dog"},
+  {name: "Donald", animal: "duck"},
+  {name: "Goofy", animal: "dog"},
   {name: "Daffy", animal: "duck"},
-  {name: "Felix", animal: "dog"},
+  {name: "Pluto", animal: "dog"},
   {name: "Tabby", animal: "cat"}
 ]
 var animal = toons.filter(value => value.animal === "dog")
 console.log(animal)
---> [ { name: 'Brian', animal: 'dog' }, { name: 'Bugs', animal: 'dog' }, { name: 'Felix', animal: 'dog' } ]
+--> [ { name: 'Brian', animal: 'dog' }, { name: 'Goofy', animal: 'dog' }, { name: 'Pluto', animal: 'dog' } ]
 ```
 
 ## Object Destructuring
 
 The destructuring assignment is really just a special way of assigning variables in Javascript. What's great about the destructuring assignment is that it allows you to take something like an array or an object and unpack their values into individual variables.
+
 This is probably the most immediately useful type of destructuring. When destructuring an object you are essentially taking the properties of an object and breaking them out into individual, recallable variables.
 
 ```javascript
@@ -151,7 +154,6 @@ This may seem like a trivial feature, but object destructuring can save you load
 
 Being comfortable with object destructuring allows you to make quick work of extracting and manipulating object properties.
 
-There are tons that you can do with this concept of destructuring, and it can be used in all sorts of ways. For a fantastic list of all the things you can do with destructuring, go to the MDN page:
 
 ## Challenges
 
