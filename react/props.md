@@ -142,7 +142,7 @@ class App extends Component{
   render(){
     return(
       <div>
-        this.state.people.map(person => <GreetPerson name={ person } />
+        { this.state.people.map(person => <GreetPerson name={ person } /> }
       </div>
     )
   }
