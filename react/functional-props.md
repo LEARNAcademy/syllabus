@@ -1,9 +1,8 @@
 # React Functional Props
 
 ## Overview
-- Taking a closer look at managing state in components
-- Handling state changes in components
-- Managing the internal state of a component with state and communicating state between components with props
+- Managing the internal state of a component and communicating between components with props
+- Exploring how to pass data and behavior between components with props and functions
 
 ## Learning Objectives
 - Understanding how a component passes data and behavior to another component as props
@@ -26,18 +25,18 @@ $ yarn start
 
 In React, each component should only be responsible for its own data and behavior. But often the component's data and behaviors rely on information from other components.
 
-To pass information between components, we use props. Props are great, but they are limited in their functionality. Props can only be passed in one direction. React has a one way flow of information through the component call.
+We can pass information to another component as props. Props are great, but they are limited in their functionality. Props can only be passed in one direction. React has a one way flow of information through the component call.
 
-This is information can be used to pass information using props from a parent component to a child component. The variable *name* is created to contain information from the state object. It is passed to the `GreetPerson` component inside of the component call. Then in the `GreetPerson` component the information is available by referencing the variable as props.
+Data and behavior can be passed using props from a parent component to a child component. The variable *name* is created to contain information from the state object. It is passed to the `GreetPerson` component inside of the component call. Then in the `GreetPerson` component the information is available by referencing the variable as props.
 
-**App.js**
+**src/App.js**
 ```javascript
 <GreetPerson name={ this.state.name } />
 ```
 
-**components/GreetPerson.js**
+**src/components/GreetPerson.js**
 ```javascript
-<p>Hello, { this.props.name }!
+<p>Hello, { this.props.name }!</p>
 ```
 
 So what happens when the component receiving props needs to send information back to the component it received props from?
@@ -49,10 +48,10 @@ As we know, functions are pretty handy. Functions can be created in one place an
 ## Colorbox Refactor
 To explore functional props, we can take the concept of the Color Box Challenge and refactor the functionality. The base construction of the app will include `App.js` as a stateful component and `colorOptions.js` as a display component.
 
-Here is the user story for our application:
+Here are the user stories for our application:
 - As a user, I can see a box on the screen.
 - As a user, I can see a series of buttons with color names.
-- As a user, I can click a button and change the color of the box to indicated color.
+- As a user, I can click a button and change the color of the box to the indicated color.
 
 **src/App.js**
 ```javascript
@@ -79,7 +78,7 @@ class App extends Component{
 }
 ```
 
-**components/ColorOptions.js**
+**src/components/ColorOptions.js**
 ```javascript
 class ColorOptions extends Component{
   render(){
@@ -119,7 +118,7 @@ render(){
 }
 ```
 
-**components/ColorOptions.js**
+**src/components/ColorOptions.js**
 ```javascript
 render(){
   return(
@@ -134,7 +133,7 @@ Now there is one component for every color in the array. `this.props.value` is c
 
 Now we can create a function in the `ColorOptions` component that will alert the name of the color when the button is clicked. By adding an `onClick` to the button, an alert will be called for every click.
 
-**components/ColorOptions.js**
+**src/components/ColorOptions.js**
 ```javascript
 assignColor = () => {
   alert(this.props.value)
@@ -155,7 +154,7 @@ changeColor = (color) => {
 }
 ```
 
-**components/ColorOptions.js**
+**src/components/ColorOptions.js**
 ```javascript
 assignColor = () => {
   this.props.changeColor(this.props.value)
