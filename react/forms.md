@@ -1,12 +1,12 @@
 # React Forms
 
-## Previous Lecture
+# Video: Forms and Functional Props
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
 
-
+## Overview
 - Adding a form to a component that will update state
 
-
+## Learning Objectives
 - Adding input fields
 - Creating a method to handle DOM event changes (what the user types)
 - Creating a method to set state with the user input
@@ -22,9 +22,9 @@
 
 #### Creating a new React app:
 ```
-yarn create react-app myApp
-cd myApp
-yarn start
+$ yarn create react-app sample-app
+$ cd sample-app
+$ yarn start
 ```
 
 ## Step 1

@@ -6,7 +6,8 @@
 - Managing the internal state of a component with state and communicating state between components with props
 
 ## Learning Objectives
-- Understanding how a component passes information from state to another component as props
+- Understanding how a component passes data and behavior to another component as props
+- Understanding the relationship between components with respect to the flow of information
 
 ## Vocabulary
 - state
@@ -16,7 +17,163 @@
 
 #### Creating a new React app:
 ```
-yarn create react-app my-app
-cd myApp
-yarn start
+$ yarn create react-app app-name
+$ cd app-name
+$ yarn start
 ```
+
+## Passing Information "Up the River"
+
+In React, each component should only be responsible for its own data and behavior. But often the component's data and behaviors rely on information from other components.
+
+To pass information between components, we use props. Props are great, but they are limited in their functionality. Props can only be passed in one direction. React has a one way flow of information through the component call.
+
+This is information can be used to pass information using props from a parent component to a child component. The variable *name* is created to contain information from the state object. It is passed to the `GreetPerson` component inside of the component call. Then in the `GreetPerson` component the information is available by referencing the variable as props.
+
+**App.js**
+```javascript
+<GreetPerson name={ this.state.name } />
+```
+
+**components/GreetPerson.js**
+```javascript
+<p>Hello, { this.props.name }!
+```
+
+So what happens when the component receiving props needs to send information back to the component it received props from?
+
+Since props only get passed in one direction, there is no direct way in React to send information back "up the river." But there is a programmatic solution!
+
+As we know, functions are pretty handy. Functions can be created in one place and called in another place. Functions can also take in information in the form of an argument. Knowing this, we can utilize the power of functions to pass information from a one component to another.
+
+## Colorbox Refactor
+To explore functional props, we can take the concept of the Color Box Challenge and refactor the functionality. The base construction of the app will include `App.js` as a stateful component and `colorOptions.js` as a display component.
+
+Here is the user story for our application:
+- As a user, I can see a box on the screen.
+- As a user, I can see a series of buttons with color names.
+- As a user, I can click a button and change the color of the box to indicated color.
+
+**src/App.js**
+```javascript
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      // an array of all the color options
+      colors: ["red", "green", "yellow", "blue", "purple"],
+      // the current color of the square
+      currentColor: ""
+    }
+  }
+
+  render(){
+    return(
+      <>
+        <h1>Color Picker</h1>
+        {/* Adding some styling to a div to create a square with a background color */}
+        <div style={{ height: "100px", width: "100px", border: "2px solid black", backgroundColor: this.state.currentColor  }}></div>
+      </>
+    )
+  }
+}
+```
+
+**components/ColorOptions.js**
+```javascript
+class ColorOptions extends Component{
+  render(){
+    return(
+      <>
+        // setting up the button that will eventually change the color of the box
+        <button></button>
+      </>
+    )
+  }
+}
+```
+
+The goal of the `ColorOptions` component is to be called once for every item in the colors array. To make this both dynamic and DRY (Don't Repeat Yourself), we can map over the array and return the component call for every iteration.
+
+**src/App.js**
+```javascript
+render(){
+  let color = this.state.colors.map((value, index) => {
+    {/* the map method must have a return */}
+    return(
+      {/* mapping over the component call and pass the value to the component */}
+      <ColorOptions
+        value={ value }
+        key={ index }
+      />
+    )
+  })
+  return(
+    <>
+      <h1>Color Picker</h1>
+      <div style={{ height: "100px", width: "100px", border: "2px solid black", backgroundColor: this.state.currentColor  }}></div>
+      {/* rendering the variable that contains the mapped component calls */}
+      { color }
+    </>
+  )
+}
+```
+
+**components/ColorOptions.js**
+```javascript
+render(){
+  return(
+    <React.Fragment>
+      <button>Change the box to { this.props.value }</button>
+    </React.Fragment>
+  )
+}
+```
+
+Now there is one component for every color in the array. `this.props.value` is coming from the value of the map method in `App.js`. It is being passed to each component and can be called as props.
+
+Now we can create a function in the `ColorOptions` component that will alert the name of the color when the button is clicked. By adding an `onClick` to the button, an alert will be called for every click.
+
+**components/ColorOptions.js**
+```javascript
+assignColor = () => {
+  alert(this.props.value)
+}
+```
+
+This is great, but we need the box to change to the color that is associate with the button click. The logic for the color change is in `App.js` so, we need to tell `App.js` what button is being clicked.
+
+So how does that happen?
+
+## Functional Props
+Following the idea of functional props, we can create a function inside of `App.js` that gets called inside of the `ColorOptions` component. Then, we can pass the information `this.props.value` to the function call as an argument.
+
+**src/App.js**
+```javascript
+changeColor = (color) => {
+  this.setState({ currentColor: color })
+}
+```
+
+**components/ColorOptions.js**
+```javascript
+assignColor = () => {
+  this.props.changeColor(this.props.value)
+}
+```
+
+To connect these two functions, the last step is to make the function available to `ColorOptions` by passing `this.changeColor` through the component call.
+
+**src/App.js**
+```javascript
+<ColorOptions
+  value={ value }
+  key={ index }
+  changeColor={ this.changeColor }
+/>
+```
+
+
+## Challenge
+
+Follow the syllabus example above to create your own refactored Colorbox Challenge.
