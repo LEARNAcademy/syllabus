@@ -57,6 +57,7 @@ React is a powerful Javascript library used to build more complicated web applic
 Here we explore more of what React offers and do our first multi-day project.
 
 1. [React Props](./react/props.md/)
+2. [React Functional Props](./react/functional-props.md/)
 2. [React Forms and Functional Props](./react/forms.md/)
 
 #### Additional Topics:
