@@ -46,7 +46,7 @@ Since props only get passed in one direction, there is no direct way in React to
 As we know, functions are pretty handy. Functions can be created in one place and called in another place. Functions can also take in information in the form of an argument. Knowing this, we can utilize the power of functions to pass information from a one component to another.
 
 ## Colorbox Refactor
-To explore functional props, we can take the concept of the Color Box Challenge and refactor the functionality. The base construction of the app will include `App.js` as a stateful component and `colorOptions.js` as a display component.
+To explore functional props, we can take the concept of the Colorbox Challenge and refactor the functionality. The base construction of the app will include `App.js` as a stateful component and `ColorOptions.js` as a display component.
 
 Here are the user stories for our application:
 - As a user, I can see a box on the screen.
