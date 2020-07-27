@@ -19,13 +19,13 @@ https://player.vimeo.com/video/137862860
 - PostgreSQL
 - schema
 - tables, rows, columns
-- relational database
+- relational databases
 - database tables
 - primary key
 
 
 ### SQL and PostgreSQL
-**SQL**, short for Structured Query Language, is a domain-specific language used for communicating with relational databases. **PostgreSQL**, also called just **Postgres**, is one type of SQL. Postgres is an open source object-relational database management system, which means Postgres looks at databases through an object-oriented programming (oop) lens.
+**SQL**, short for Structured Query Language, is a domain-specific language used for communicating with relational databases. **PostgreSQL**, also called just **Postgres**, is one type of SQL. Postgres is an open source object-relational database management system, which means Postgres looks at databases through an object-oriented programming (OOP) lens.
 
 ### Relational Databases
 A relational database is almost exactly like an Excel spreadsheet or Google Sheets document with information displayed in **rows** and **columns**. A **table** is one set of rows and columns. A database can have many tables that have relationships to each other. The description of the layout of all the tables in a database and the name and data type of each column within each table in a database is called a **schema**.

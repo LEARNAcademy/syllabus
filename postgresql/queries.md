@@ -11,7 +11,7 @@
 ## Learning Objectives
 - Familiarization with the syntax of a query statement
 - Exploring PGAdmin
-- Analyzing a data set and extracting the necessary information
+- Analyzing a data set and extracting the necessary information through a query
 
 ## Vocabulary
 - query
