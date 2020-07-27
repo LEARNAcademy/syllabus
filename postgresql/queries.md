@@ -260,7 +260,7 @@ Save your queries in a file if you want to keep them for posterity.
 - Which five countries have the lowest population density (density = population / surfacearea)? (HINT: starts with Greenland)
 - Which countries have the highest population density?(HINT: starts with Macao)
 - Which is the smallest country, by area and population (first by area - .4, then by population - 50)?
-- Which is the biggest country, by area and population (first by area - 9.5729e+06, then by population - 146934000)?
+- Which is the biggest country, by area and population (first by area - 1.70754e+07, then by population - 1277558000)?
 
 #### Subqueries: WITH
 - What are the forms of government for the top ten countries by surface area? (HINT: Number 10 is Kazakstan)
