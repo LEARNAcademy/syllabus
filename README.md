@@ -84,7 +84,11 @@ Ruby is a backend, object-oriented programming language. Here you will learn the
 
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1. [Postgres Introduction](./sql/intro_postgres.md)
+### PostgreSQL
+1. [PostgreSQL Introduction](./postgresql/intro_postgres.md)
+1. [PostgreSQL Queries](./postgresql/queries.md)
+
+### Ruby on Rails
 1. [Intro to Rails](./rails_model/intro.md)
 1. [Intro to Active Record](./rails_model/active_record_intro.md)
 1. [Rails Migrations](./rails_model/migrations.md)
