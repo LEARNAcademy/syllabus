@@ -81,7 +81,7 @@ The generate model command creates a lot of good stuff for us. It creates a file
 class Dog < ApplicationRecord
 end
 ```
-It also creates the database schema. This is the "shape" of the database: the columns and data types of those columns.
+It also creates the database schema. This is the "shape" of the database: the columns and data types of those columns. The database columns you just created will not appear in the schema until you've migrated your changes.
 
 **db/schema.rb**
 ```ruby
