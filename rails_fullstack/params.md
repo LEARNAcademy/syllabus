@@ -2,7 +2,7 @@
 
 ## Video: Rails Params
 [![YouTube](http://img.youtube.com/vi/FrQJX4UoX4k/0.jpg)](https://www.youtube.com/watch?v=FrQJX4UoX4k)
-]
+
 
 ## Overview
 - Parameters (params) are how your Rails server receives information from the user to dynamically modify the view
