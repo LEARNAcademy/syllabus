@@ -155,6 +155,23 @@ The database schema is now updated!
 - Update the values of the existing attributes to include a movie_length value
 - Generate a migration to rename the column 'category' to 'genre'
 
+
+## Tasks Challenge
+
+**Story**: As a programmer, I can create a new Task record with a title, which is a string, and description, which is a string.
+**Story**: As a programmer, I can add 5 tasks to my application.
+**Story**: As a programmer, I can list all Task records.
+**Story**: As a programmer, I can add a 'done' attribute to my Task.
+**Story**: As a programmer, I can set a Task record to 'done' given the ID of the record.
+**Story**: As a programmer, I can list all the records that are done.
+**Story**: As a programmer, I can list all the records that are not done.
+**Story**: As a programmer, I can update the title and description of a Task record given the ID of the record.
+**Story**: As a programmer, I can destroy a Task record given the ID of the record.
+**Story**: As a programmer, I can set a Task record with a due date.
+**Story**: As a programmer, I can list all the records with a due date.
+**Story**: As a programmer, I can list all the records with a due date today.
+**Story**: As a programmer, I can list all the records without a due date.
+
 [Go to next lesson: Rails Associations](./associations.md)
 
 [Back to Rails Active Record Introduction](./active_record_intro.md)
