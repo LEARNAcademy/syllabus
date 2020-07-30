@@ -142,14 +142,18 @@ $ rails db:migrate
 
 The database schema is now updated!
 
-## Challenges
-- Create a new rails application called favorite_movies
+## Favorite Movies Challenge
+
+### Setup
+- Create a new rails application called 'favorite_movies'.
 - Create the database
-- Generate a model with a title attribute and a category attribute
+- Generate a Movie model with a title attribute and a category attribute
+
+### Challenges
 - Add five entries to the database in Rails console
 - Create a migration to add a new column to the database called movie_length
 - Update the values of the existing attributes to include a movie_length value
-- Generate a migration to rename the column name category to genre
+- Generate a migration to rename the column 'category' to 'genre'
 
 [Go to next lesson: Rails Associations](./associations.md)
 
