@@ -142,14 +142,40 @@ $ rails db:migrate
 
 The database schema is now updated!
 
-## Challenges
-- Create a new rails application called favorite_movies
+## Favorite Movies Challenge
+
+### Setup
+- Create a new rails application called 'favorite_movies'.
 - Create the database
-- Generate a model with a title attribute and a category attribute
+- Generate a Movie model with a title attribute and a category attribute
+
+### Challenges
 - Add five entries to the database in Rails console
 - Create a migration to add a new column to the database called movie_length
 - Update the values of the existing attributes to include a movie_length value
-- Generate a migration to rename the column name category to genre
+- Generate a migration to rename the column 'category' to 'genre'
+
+
+## Tasks Challenge
+
+### Setup
+- Create a new rails application called 'tasklist'.
+- Create the database
+- Generate a Task model with a title attribute and a description attribute
+
+### User Stories
+- As a programmer, I can add 5 tasks to my application.
+- As a programmer, I can list all Task records.
+- As a programmer, I can add a 'done' attribute to my Task.
+- As a programmer, I can set a Task record to 'done' given the ID of the record.
+- As a programmer, I can list all the records that are done.
+- As a programmer, I can list all the records that are not done.
+- As a programmer, I can update the title and description of a Task record given the ID of the record.
+- As a programmer, I can destroy a Task record given the ID of the record.
+- As a programmer, I can set a Task record with a due date.
+- As a programmer, I can list all the records with a due date.
+- As a programmer, I can list all the records with a due date today.
+- As a programmer, I can list all the records without a due date.
 
 [Go to next lesson: Rails Associations](./associations.md)
 

@@ -186,16 +186,16 @@ To create the association between the Person and the Email table we had to assig
 ## Troubleshooting Tip
 It is an easy mistake to forget a foreign key. It is also a common beginner mistake to mislabel the column or to make a mistake when assigning the data type. If this happens, migrations are your friend. Create a migration to update your database.
 
-## Challenge: Credit Cards and Owners
+## Banking Challenge
 
-**Set Up**
+### Setup
 - Create a new rails application and database
 - Create a model for owner
 - An owner has a name and address, and can have multiple credit cards
 - Create a model for credit card
 - A credit card has a number, an expiration date, and an owner
 
-**Interactions**
+### Challenges
 - Create three owners and save them in the database
 - Create a credit card in the database for each owner
 - Add two more credit cards to one of the owners
@@ -203,6 +203,19 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 ### Stretch Challenge
 - Add a credit limit to each card
 - Find the total credit extended to the owner with multiple credit cards
+
+## Tasklist Challenge
+
+### Setup
+- Working from the Tasks challenge, add the following user stories:
+
+### User Stories
+- As a programmer, I can create a Tasklist that has a title and description.
+- As a programmer, a Tasklists have many Tasks.
+- As a programmer, I can create a new Task record that belongs to a Tasklist.
+- As a programmer, I can add multiple comments to a Task record. Comments should have a content field, which is a string.
+	**Hint**: A Task has many Comments.
+- As a programmer, I can retrieve a Task and list all the comments.
 
 [Go to next lesson: Rails Validations](./validations.md)
 
