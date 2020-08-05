@@ -5,6 +5,19 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 ## Cloud 9 Users
 Be sure and read over the [instructions](./postman.md) on making your app in development available to Postman.
 
+## Set Up
+
+#### Creating a new Rails app:
+```
+$ rails new myapp -d postgresql -T
+$ cd myapp
+$ rails db:create
+$ bundle add rspec-rails
+$ rails generate rspec:install
+$ rails server
+```
+
+
 ## The API Stories
 
 - **Story**:  As the consumer of the API I can list all animals in a database.
