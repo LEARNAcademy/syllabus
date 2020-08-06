@@ -17,24 +17,9 @@
 - index
 - show
 
-## Useful Terminal Commands
-- `rails routes` - shows all the route options for any rails model
-
 ## Additional Resources
-- <a href="https://guides.rubyonrails.org/routing.html" target="blank">Rails Routing from the Outside In</a>
-- <a href="./Rails-C&V/00rails_http_intro.md" target="blank">RESTful Web Application Framework</a>
-
-#### Creating a new Rails app:
-```
-$ rails new myapp -d postgresql -T
-$ cd myapp
-$ rails db:create
-$ rails server
-```
-In a browser navigate to:
-`http://localhost:3000`
-or
-`127.0.0.1:3000`
+- [ Rails Routing from the Outside In ](https://guides.rubyonrails.org/routing.html)
+- [ RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
 
 ### RESTful Routes
 - REST stands for Representational State Transfer
@@ -47,7 +32,8 @@ Examples of routes for a model called `Photo` and a controller called `photos_co
 
 ### Anatomy of a Rails Route
 Rails routes follow two basic structures:
-- Routes without params
+
+**Routes Without Params**
 ```ruby
 get '/photos' => 'photos#index'
 ```
@@ -56,7 +42,7 @@ get '/photos' => 'photos#index'
   - `photos#` is the name of the controller
   - `index` is the name of the controller method
 
-- Routes with params
+**Routes With Params**
 ```ruby
 delete '/photos/:id' => 'photos#destroy'
 ```
@@ -71,34 +57,34 @@ delete '/photos/:id' => 'photos#destroy'
 #### Index
 - The controller method **index** represents the **R** in CRUD and is the Rails convention for listing all the items in a particular model, or `show all`
 - The HTTP verb associated with index is **get**
-- The index route is: `get '/resource_names' => 'resource_name#index'`
+- The index route is: `get '/resources' => 'resources#index'`
 
 #### Show
 - The controller method **show** represents the **R** in CRUD and is the Rails convention for listing one item in a particular model, or `show one`
 - The HTTP verb associated with index is **get**
-- The show route is: `get '/resource_names/:id' => 'resource_name#show'`
+- The show route is: `get '/resources/:id' => 'resources#show'`
 
 #### New
 - The controller method **new** represents a midway point between **C** and **R** in CRUD and is the Rails convention for the route that displays a form to the user
 - The HTTP verb associated with new is **get**
-- The new route is: `get '/resource_names/new' => 'resource_name#new'`
+- The new route is: `get '/resources/new' => 'resources#new'`
 
 #### Create
 - The controller method **create** represents the **C** in CRUD and is the Rails convention for adding information to the database
 - The HTTP verb associated with create is **post**
-- The create route is: `post '/resource_names' => 'resource_name#create'`
+- The create route is: `post '/resources' => 'resources#create'`
 
 #### Update
 - The controller method **update** represents the **U** in CRUD and is the Rails convention for modifying information in the database
 - The HTTP verb associated with update is **put/patch**
-- The update route is: `put/patch '/resource_names/:id' => 'resource_name#update'`
+- The update route is: `put/patch '/resources/:id' => 'resources#update'`
 
 #### Delete
 - The controller method **delete** represents the **D** in CRUD and is the Rails convention for removing information from the database
 - The HTTP verb associated with delete is **delete** (shocking right?)
-- The delete route is: `delete '/resource_names/:id' => 'resource_name#destroy'`
+- The delete route is: `delete '/resources/:id' => 'resources#destroy'`
 
-## Linking Between Routes
+### Linking Between Routes
 
 #### link_to
 - A Ruby method used in the Rails **view**
@@ -112,16 +98,16 @@ delete '/photos/:id' => 'photos#destroy'
 - If the route requires a param, the helper method path will require an argument
 
 ```ruby
-get '/resource_name' => 'resource_name#index', as: 'all_resource_names'
-get '/resource_name/:id' => 'resource_name#show', as: 'resource_name'
+get '/resources' => 'resources#index', as: 'all_resources'
+get '/resources/:id' => 'resources#show', as: 'one_resource'
 ```
 ```ruby
 # helper method without param/argument
-<%= link_to "List Everything", all_resource_names_path %>
+<%= link_to "List Everything", all_resources_path %>
 ```
 ```ruby
 # helper method with param/argument
-<%= link_to "Show One Thing", resource_name_path(id) %>
+<%= link_to "Show One Thing", one_resource_path(id) %>
 ```
 
 ## Review
