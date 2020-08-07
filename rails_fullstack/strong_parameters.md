@@ -62,8 +62,8 @@ end
 
 Now that strong params are established in the controller, we need to format the params into the above hash structure in order for Rails to accept our params.
 
-```html
-<form action="create" action="POST">
+```ruby
+<%= form_with url: "/model_contact", local: true do %>
   <label for="name">Name:</label>
   <input id="name" name="contact[name]">
   <label for="phone">Phone:</label>
@@ -71,7 +71,7 @@ Now that strong params are established in the controller, we need to format the 
   <label for="email">Email:</label>
   <input id="email" name="contact[email]">
   <input type="submit" value="Submit Contact">
-</form>
+<% end %>
 ```
 
 Notice that it's the name attribute of our inputs that are different. Here we are first giving essentially the name of our class and passing it the name of the column in square brackets.
