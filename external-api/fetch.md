@@ -12,76 +12,64 @@
 
 ## Learning Objectives
 - Explore the variety of public APIs
-- Understanding the function of an API key
 - Understanding the process of making a fetch request to an API
-- Exploring Reactstrap components
 
 ## Vocabulary
 - API
 - JSON
 - endpoint
-- API key
 - fetch
-- promise
-
-## Additional Resources
-- <a href="https://reactstrap.github.io/components/listgroup/" target="blank">Reactstrap</a>
+- Promise
 
 ## Set Up
 
 #### Creating a new React app:
 ```
-$ yarn create react-app news-articles
-$ cd news-articles
+$ yarn create react-app my-app
+$ cd my-app
 $ yarn start
 ```
-
-#### Adding Reactstrap
-```
-$ npm install --save bootstrap
-$ npm install --save reactstrap react react-dom
-```
-- Import Bootstrap CSS in the src/index.js file `import 'bootstrap/dist/css/bootstrap.min.css'`
-- Import needed components
 
 ## Access a Free API
 - Google!
 - Look for good documentation
 
 
-## API Key
-- Many APIs will use a special key to grant authorization
-- This key should not be shared! It should not be pushed to GitHub
-- Create a file called *.env* in the outermost level of the react app
-- Save the API key using the format `REACT_APP_MY_KEY_NAME_HERE = "my-api-key"`
-- `REACT_APP_` is the key phrase needed for React
-- Add the *.env* file to the *.gitignore* file
-```
-# api keys
-.env
-```
-- Call the api key in the appropriate component
-```
-let apiKey = process.env.REACT_APP_MY_KEY_NAME_HERE
-```
 
-## Fetch
-Fetch is a JavaScript function that allows developers to make network requests.
+## Fetch and Promises
+Fetch is a JavaScript function that allows developers to make asynchronous network requests.
 
 The `fetch()` function takes one mandatory argument: the path to the resource you want to fetch.
 
-Fetch returns a Promise. When the response from the network request comes back, the promise id fulfilled.
+Fetch returns a Promise. A Promise is a JavaScript object. Promises represent the eventual completion or failure of an asynchronous operation and either the payload or the error.
 
-The response delivers the JSON payload to the application.
+When the response from the network request comes back, the promise is fulfilled.
+
+If the response is successful, a JSON payload is delivered to the application.
+
+```javascript
+fetch("https://api-url-here.com")
+.then((response) => {
+  if(response.status === 200){
+    return response.json()
+  }
+})
+.then((payload) => {
+  console.log(payload)
+})
+.catch(error => {
+  console.log(error)
+})
+```
 
 
 ## Challenge
 - Create a React application that shows the user their current location and IP address
-- Use [this](https://ipapi.co/api/?shell#complete-location) API and documentation
+- Use [this](https://ipapi.co/api/?shell#location-of-clients-ip) API and documentation
 
 ## Stretch Challenge
 - Use an external API and docs to create an application of your choice
-  - [Here](https://developer.nytimes.com/) are the NYTimes Developer docs
-- Safely save the API key
+- Here is the [ Nasa API ](https://api.nasa.gov/)
+
 
 [Back to Syllabus](../README.md)
