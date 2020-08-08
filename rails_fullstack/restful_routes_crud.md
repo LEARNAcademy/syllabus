@@ -80,7 +80,7 @@ delete '/photos/:id' => 'photos#destroy'
 - The update route is: `put/patch '/resources/:id' => 'resources#update'`
 
 #### Delete
-- The controller method **delete** represents the **D** in CRUD and is the Rails convention for removing information from the database
+- The controller method **destroy** represents the **D** in CRUD and is the Rails convention for removing information from the database
 - The HTTP verb associated with delete is **delete** (shocking right?)
 - The delete route is: `delete '/resources/:id' => 'resources#destroy'`
 
