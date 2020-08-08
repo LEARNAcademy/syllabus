@@ -1,14 +1,9 @@
 # Rails Forms
 
-https://player.vimeo.com/video/155715320
-
-## Video: Ruby Assessment & Rails Models Review
-
-[![YouTube](http://img.youtube.com/vi/-CDpoSQTme0/0.jpg)](https://www.youtube.com/watch?v=-CDpoSQTme0)
-
 ## Video: Rails Forms
-
 [![YouTube](http://img.youtube.com/vi/9UGcF6pnAag/0.jpg)](https://www.youtube.com/watch?v=9UGcF6pnAag)
+
+Additional Video: [ Rails Forms ](https://player.vimeo.com/video/155715320)
 
 ## Overview
 - Adding CRUD operations for the user to see, add, edit, and delete information from the database
@@ -27,50 +22,45 @@ https://player.vimeo.com/video/155715320
 
 #### Creating a new Rails app:
 ```
-$ rails new myapp -d postgresql -T
-$ cd myapp
+$ rails new blog -d postgresql -T
+$ cd blog
 $ rails db:create
 $ rails server
 ```
-
 In a browser navigate to:
 `http://localhost:3000`
 
-
-## Creating a Form
-As developers, we want our users to be able add information to our web application that is then stored in the database. So far, the only way we have adding new information to the database is through the terminal. Obviously, we want our user to have an easier way to add, update, and delete information.
-
-### Set up
 Prior to creating a form, there are a few things we want to have completed:
 - Models generated with appropriate attributes
 - Relationships between models defined
-- [Controller generated](./01rails_routes_controllers_views.md)
-- Routes and views created to see the information from the database displayed on the page
+- [Controller generated](./routes_controllers_views.md)
+- Routes and views created for the `index` and `show` routes/methods to display information on the page
+
+### Creating a Form
+As developers, we want our users to be able add information to our web application that is then stored in the database. So far, the only way we have adding new information to the database is through the terminal. Obviously, we want our user to have an easier way to add, update, and delete information.
 
 ### Route
-
 We need to add a route that will show our user a page where they can enter information in a form and a route that will post the information to the database.
 
 **config/routes.rb**
-
 ```ruby
 Rails.application.routes.draw do
 
   # the get route called 'new' will allow our user to create a new entry
-  get "model_names/new" => "model_names#new"
+  get "blog_posts/new" => "blog_posts#new"
 
   # the post route that will 'create' a new item in the database
-  post "model_names" => "model_names#create"
+  post "blog_posts" => "blog_posts#create"
 
 end
 ```
 
 ### Controller
 
-**app/controllers/model_name_controller.rb**
+**app/controllers/blog_posts_controller.rb**
 
 ```ruby
-class ModelNameController < ApplicationController
+class BlogPostsController < ApplicationController
   # the new method just needs to exist to route to the correct view
   def new
     # because of Rails naming conventions, we don't need to have a render here, but really this is happening:
@@ -79,14 +69,16 @@ class ModelNameController < ApplicationController
 
   # the create method defines an instance variable that will create a new instance of the model with a title and content provided by the user
   def create
-    @instance_variable_name = ModelName.create(
+    @blog_post = BlogPost.create(
       title: params[:title],
       content: params[:content]
     )
     # if the user successfully creates a new post Rails will route to a view of that post, otherwise it will stay on the form
-    if @instance_variable_name.valid?
-      redirect_to @instance_variable_name
+    if @blog_post.valid?
+      redirect_to @blog_post
       # this does the same thing as passing a route to the show page of the object: redirect_to '/model_names/#{instance_variable_name.id}'
+    else
+      render action: :new
     end
   end
 end
@@ -94,25 +86,27 @@ end
 
 ### View
 
-**views/model_name/new.html.erb**
+**views/blog_posts/new.html.erb**
 
-This form view requires a bit of Ruby syntax magic to bypass an authentication token Rails adds when users are submitting information to the database.
+With the release of Rails 6, we get a very convenient method called `form_with` that allows us to use a series of helper methods to create form elements. Form elements are items such as text inputs, radio button, and labels. By using the `form_with` method we can create forms in true Ruby-like fashion. When the code renders, Rails translates it into the corresponding HTML form tags.
 
-Inside the embedded Ruby are a series of html tags. There is a label for the input field for `title` and the same for the input field for `content` followed by a button that will submit that content to the database.
+`form_with` takes a code block and passes a local variable. In this example, the variable is `|form|` but it can be called whatever you want as long as it clearly communicates your intent. Form helper methods are then applied to the variable `form` and passed a symbol of the model attribute.
 
-```html
+```
 <h1>Add a New Post</h1>
 
-<%= form_with url: "/model_names", local: true do %>
-  <label for="title">Title</label>
-  <input type="text" name="title">
-  <br>
-  <label for="content">Content</label>
-  <textarea name="content"></textarea>
-  <br>
-  <input type="submit" value="submit">
+<%= form_with url: '/blog_posts', local: true do |form| %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :content %>
+  <%= form.check_box :content %>
+
+  <%= form.submit :create %>
 <% end %>
 ```
+
 
 ## Challenge: Blog Post
 - As a developer, I can create a blog application.

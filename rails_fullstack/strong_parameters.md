@@ -1,49 +1,79 @@
 # Better Params: Strong Parameters
 
+## Video: Validations and Strong Params
 [![YouTube](http://img.youtube.com/vi/yh8nVSihMyM/0.jpg)](https://www.youtube.com/watch?v=yh8nVSihMyM)
 
-As part of managing form parameters in Rails, versions of Rails 4+ also have a feature known as "strong parameters" or "whitelisting". It is a way for us to manage exactly what goes into creating new object instances, and helps us keep unwanted information -- usually from malicious hackers -- out of the database.
+## Overview
+- As part of managing parameters in Rails there is a feature known as "strong parameters"
+- Strong parameters (or "strong params") are a security feature of Rails
+- Strong params manage exactly what goes into creating new object instances and helps us keep unwanted information -- usually from malicious hackers -- out of the database
 
-## Strong params in the controller
+## Learning Objectives
+- Adding strong params to the `create` controller method
+- Implementing the keyword "private" in the controller
 
-A controller's strong parameters will be all the way down at the bottom of the file and will look something like this:
+## Set Up
 
+#### Creating a new Rails app:
+```
+$ rails new blog -d postgresql -T
+$ cd blog
+$ rails db:create
+$ rails server
+```
+In a browser navigate to:
+`http://localhost:3000`
 
-controllers/contacts_controller.rb
+## Strong Params
+Along with validation, strong params provide control over over what information is being allowed into a database. Strong params can dictate what attributes can be created and updated by setting restrictions on the controller methods.
+
+To implement strong params, we will create a new method in the controller that will be passed as an argument to the create and update methods in place of the individual parameters.
+
+Strong params have two methods that can be applied: **require** and **permit**. Require does exactly what you think. It requires the attributes passed in to be present in the create or update methods. Permit allows certain items to be present but if they are not present, that is still okay. But attributes that are not listed in the strong params will not be allowed to proceed.
+
+## Private
+Private is a keyword in Ruby that restricts the scope of where a method can be called. Since strong params are only meant to be used as arguments to controller methods, we can list them as `private` to the controller class. That way there is no chance they can be called from somewhere else in the program.
+
+Once the keyword `private` is implemented, everything below the keyword is included in its protection. So params are typically the last methods inside the controller.
+
+## Strong Params for APIs
+When creating an API, the controller's strong parameters will be all the way down at the bottom of the file and will look something like this:
+
+**controllers/blog_posts_controller.rb**
 ```ruby
-def contact_params
-  params.require(:contact).permit(:name, :phone, :email, :address)
+private
+
+def blog_post_params
+  params.require(:blog_post).permit(:title, :content)
 end
 ```
 
-In this method if the application asks for `contact_params`, those parameters will require a Contact object, formatted into a hash. At this step in the process, a new Contact will look something like this:
+In this method if the application asks for `blog_post_params`, those parameters will require a BlogPost object, formatted into a hash. At this step in the process, a new instance of BlogPost will look something like this:
 ```ruby
 {
-  :contact => {
+  :blog_post => {
 
   }
 }
 ```
 
-Inside of that Contact hash, the `contact_params` method allows parameters like name, phone, email, and address. These are the pieces of information that can be saved into the database as part of a Contact.
-```
+Inside of that BlogPost hash, the `blog_post_params` method allows parameters like title and content. These are the pieces of information that can be saved into the database as part of a BlogPost.
+```ruby
 {
-  :contact => {
-    :name => 'Eleanor',
-    :phone => '1-800-WHITE-HOUSE',
-    :email => 'eleanor@rooselvelt.com'
+  :blog_post => {
+    :title => 'Rails!',
+    :content => 'Learning Rails is super fun.',
   }
 }
-
 ```
 
-We can safely assume that these parameters correspond to columns in the Contacts table.
+We can safely assume that these parameters correspond to columns in the BlogPost table.
 
-In the controller's `create` method, we can see that this list is referenced when making new Contacts:
+In the controller's `create` method, we can see that this list is referenced when making a new BlogPost:
 
 ```ruby
 def create
-  @contact = Contact.create(contact_params)
+  @blog_post = BlogPost.create(blog_post_params)
 end
 ```
 
@@ -51,96 +81,59 @@ Or alternatively
 
 ```ruby
 def create
-  @contact = Contact.new(contact_params)
-  @contact.save
+  @blog_post = BlogPost.new(blog_post_params)
+  @blog_post.save
 end
 ```
 
 `.new` will create a new object, while `.create` will create it and save it to the database. If you use `.new`, you need to follow up with `.save` for it to actually be saved. If you have actions you wish to do before putting the object into the database, consider using `.new` instead.
 
-## Strong params in the form
+## Strong Params for Forms
+Strong params for forms don't require the model name, as the form is already connected to a particular model.
 
-Now that strong params are established in the controller, we need to format the params into the above hash structure in order for Rails to accept our params.
-
+**controllers/blog_posts_controller.rb**
 ```ruby
-<%= form_with url: "/model_contact", local: true do %>
-  <label for="name">Name:</label>
-  <input id="name" name="contact[name]">
-  <label for="phone">Phone:</label>
-  <input id="phone" name="contact[phone]">
-  <label for="email">Email:</label>
-  <input id="email" name="contact[email]">
-  <input type="submit" value="Submit Contact">
-<% end %>
-```
+private
 
-Notice that it's the name attribute of our inputs that are different. Here we are first giving essentially the name of our class and passing it the name of the column in square brackets.
+def blog_post_params
+  params.permit(:title, :content)
+end
+```
 
 Now if we use the form, we should see a successful create of our contact.
 
 ## Permitting Parameters
-
-Most of the time, strong parameters are a feature we don't have to think about. If we want to add a new attribute to Contact, however, it's important to remember to add it to the strong parameters list. Otherwise, our form for creating new Contacts will silently drop the information we've told it to ignore. For example, if we created a new column for storing fax numbers without updating our `contact_params` method, the response in the Rails server would look like this:
+Most of the time, strong parameters are a feature we don't have to think about. If we want to add a new attribute to BlogPost, however, it's important to remember to add it to the strong parameters list. Otherwise, our form for creating new BlogPost will silently drop the information we've told it to ignore. For example, if we created a new column for storing comments without updating our `blog_post_params` method, the response in the Rails server would look like this:
 
 ```
-Started POST "/contacts/" for ::1 at 2016-09-14 14:27:56 -0700
-Processing by ContactsController#create as HTML
-  Parameters: {"contact"=>{"name"=>"test", "phone"=>"555-1212", "email"=>"test1@test.com", "address"=>"123 main St", "fax"=>"123-1234"}}
-Unpermitted parameter: fax
+Started POST "/blog_posts/" for ::1 at 2016-09-14 14:27:56 -0700
+Processing by BlogPostController#create as HTML
+  Parameters: {"blog_post"=>{"title"=>"Rails!", "content"=>"Learning Rails is super fun.", "comments"=>"Sure is."}}
+Unpermitted parameter: comments
 ```
 
-We can see all of the parameters being sent in, but our controller recognized "fax" as an unpermitted parameter and won't save it to the database. If we update our method:
+We can see all of the parameters being sent in, but our controller recognized "comments" as an unpermitted parameter and won't save it to the database. If we update our method:
 
-controllers/contacts_controller.rb
+**controllers/blog_posts_controller.rb**
 ```ruby
-def contact_params
-  params.require(:contact).permit(:name, :phone, :email, :address, :fax)
+def blog_post_params
+  params.permit(:title, :content, :comments)
 end
 ```
 
-Now the entire Contact, fax number and all, will successfully be saved.
+Now the entire BlogPost, comments and all, will successfully be saved.
 
-## Validations and Strong Params Challenges
+## Blog Post Challenge, cont.
+Expand on the Blog Post challenge to add strong params and validations.
 
-### Challenge 1
+- As a developer, I can ensure that my create method will only allow the attributes I expect.
+- As a developer, I can ensure that all blog posts have titles and content for each post.
+- As a developer, I can ensure that all blog post titles are unique.
+- As a developer, I can ensure that blog post titles are at least 10 characters.
 
-Recall the Account model from the validations challenges. Your challenge is to connect that functionality to a form.
+### Stretch Challenges
+- As a developer, I can ensure that my edit method will only allow the attributes I expect.
 
-#### Stories:
-
-- As a user, I see a form asking for my username, password and email
-- As a user, I receive an error message and am asked to try again if my form is incomplete
-- As a user, I can see how my form was incomplete
-- As a developer, I need to protect my database from sql injections from the user sign up form
-- As a user, I see a user creation success page, when I've correctly filled out the form
-
-### Challenge 2: Store Order Scheduler
-
-You have been tasked with creating an application to allow store owners to generate customer accounts and schedule orders for their products (office supplies, restaurant inventory/groceries, video games, food, your choice). You have to make sure that every order is complete with all the required information.
-
-#### Stories:
-
-- As a store owner,  I need to generate customer accounts that require a first name, last name, email, phone number
-- As a store owner, I need customer emails to be unique
-- As a store owner, I need to generate orders that belong to a customer
-- As a store owner, I need each order to have a product name and quantity
-
-- As a store owner, I see a new customer form
-- As a store owner, I can add a customer account through the form
-- As a store owner, I can see an error if the form lacks information
-- As a store owner, I can see how the form was incomplete
-
-- As a store owner, I see an order form that asks for a product, quantity, customer account, and an estimated shipment date
-- As a store owner, I can submit an order
-- As a store owner, I can see an error if my order form lacks information
-- As a store owner, I can see how my order form was incomplete
-
-#### Super Stretch Challenges
-- As a store owner, I can see pending orders
-- As a store owner, I can see my pending orders by account
-
-### Challenge 3: Keychain App
-Make an application that allows me to store all of my passwords for all of my various accounts under one username (user has_many passwords) and security question/answer. After submitting my passwords, I will need to retrieve them by submitting my username and security question/answer.
 
 [Go to next lesson: Rails Resource Generator Read Operations](./resource_index_show.md)
 
