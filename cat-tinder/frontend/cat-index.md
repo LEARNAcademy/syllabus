@@ -44,7 +44,7 @@ render(){
 }
 ```
 
-Test should pass because we have a component that can be rendered. It imports React and has a render function, it does not yet show real content.
+Test should pass because we have a component that can be rendered. It imports React and has a render function. It does not yet show real content.
 
 
 ## Fake Cats
