@@ -148,7 +148,7 @@ The tests should now pass.
 - Add CatShow functionality
 - Add tests for CatShow
 
-[To Create New Cat Component](./cat-create.md)
+[Go to Create New Cat Component](./cat-create.md)
 
 [Back to Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
 
