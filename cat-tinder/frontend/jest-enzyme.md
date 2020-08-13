@@ -85,7 +85,12 @@ In this case, we're expecting the things to be the same.  We could expect them t
 
 ## Challenge: Cat Tinder Tests
 - Add Enzyme to your application
-- Add a `__test__` directory with files for each existing component
+- Add a `__test__` directory to your component folder with test files for each existing component
+  - Create a test for each component that checks if the component is rendering by a single tag.
+- Add a `__test__` directory to your pages folder and test files for each existing page.
+  - Create a test for each page, checking that the page is rendering by a single tag.
+
+  
 
 [Go to next lesson: Cats Tinder Index Component](./cat-index.md)
 
