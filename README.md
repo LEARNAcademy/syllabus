@@ -124,27 +124,24 @@ Professional development is dedicated to preparing for your  internship and the 
 
 Using React and Rails to create an asynchronous full stack application with testing.
 
-### React Routing
-1. [React Routing Introduction](./cat-tinder/react-router/intro.md)
-
 ### Cat Tinder Frontend
-3. [Cat Tinder Introduction and Wireframes](./cat-tinder/frontend/intro.md)
-4. [Cat Tinder Testing with Jest and Enzyme](./cat-tinder/frontend/jest-enzyme.md)
-5. [Cat Tinder Index Component](./cat-tinder/frontend/cat-index.md)
-6. [Cat Tinder Create New Cat Component](./cat-tinder/frontend/cat-create.md)
-7. [Cat Tinder NewCat Functionality Overview](./cat-tinder/frontend/10cat_tinder_form_submit.md)
+1. [Cat Tinder Introduction, Routing, and Wireframes](./cat-tinder/frontend/intro.md)
+2. [Cat Tinder Testing with Jest and Enzyme](./cat-tinder/frontend/jest-enzyme.md)
+3. [Cat Tinder Index Component](./cat-tinder/frontend/cat-index.md)
+4. [Cat Tinder Create New Cat Component](./cat-tinder/frontend/cat-create.md)
+5. [Cat Tinder NewCat Functionality Overview](./cat-tinder/frontend/10cat_tinder_form_submit.md)
 
 ### Cat Tinder Backend
 
-8. [Cat Tinder API Introduction](./cat-tinder/backend/api_intro.md)
-9. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
-10. [Cat Tinder API Endpoints](./cat-tinder/backend/api_endpoints.md)
-11. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
-12. [Cat Tinder CORS](./cat-tinder/backend/CORS.md)
+6. [Cat Tinder API Introduction](./cat-tinder/backend/api_intro.md)
+7. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
+8. [Cat Tinder API Endpoints](./cat-tinder/backend/api_endpoints.md)
+9. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
+10. [Cat Tinder CORS](./cat-tinder/backend/CORS.md)
 
 ### Bringing it together!
-13. [Cat Tinder Fetching Cats](./cat-tinder/connecting/fetch.md)
-14. [Cat Tinder NewCat](./cat-tinder/connecting/cat-form.md)
+11. [Cat Tinder Fetching Cats](./cat-tinder/connecting/fetch.md)
+12. [Cat Tinder NewCat](./cat-tinder/connecting/cat-form.md)
 
 
 ## Unit Nine: React in Rails and Authentication
