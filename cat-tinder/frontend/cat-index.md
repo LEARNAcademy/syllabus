@@ -44,7 +44,7 @@ render(){
 }
 ```
 
-Test should pass because we have a component that can be rendered. It imports React and has a render function, it does not yet show real content.
+Test should pass because we have a component that can be rendered. It imports React and has a render function. It does not yet show real content.
 
 
 ## Fake Cats
@@ -148,9 +148,7 @@ The tests should now pass.
 - Add CatShow functionality
 - Add tests for CatShow
 
-
-[Go to next lesson: Cat Tinder React Hooks](./hooks.md)
-
+[Go to Create New Cat Component](./cat-create.md)
 
 [Back to Cat Tinder Testing With Jest and Enzyme](./jest-enzyme.md)
 
