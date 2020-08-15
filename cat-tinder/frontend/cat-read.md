@@ -3,15 +3,18 @@
 ## Overview
 - Adding the CRUD "read" functionality of index and show to the frontend of Cat Tinder
 - Creating the ability to navigate between the home page, index page, and show page
+- Utilizing match params to access an object id
 
 ## Learning Objectives
-- Passing around mock data to index and show pages
-- Refactoring static routes into dynamic routes
-- Utilizing match params to access the object id
+- Applying the concept of RESTful routes to a React application
+- Analyzing the difference between static routes and dynamic routes
+- Following the thread of data flow through the index and show pages in a React application
 
 ## Additional Resources
-- [ Reactstrap ](https://reactstrap.github.io/)
-- [ NavLink ](https://reactrouter.com/web/api/NavLink)
+- [ Reactstrap Docs ](https://reactstrap.github.io/)
+- [ React-router Match Params ](https://scotch.io/courses/using-react-router-4/route-params)
+- [ React-router NavLink Docs ](https://reactrouter.com/web/api/NavLink)
+- [ JavaScript .find() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
 ## Cat Index Component Routing
 Now that we have the basic file structure of our Cat Tinder application, we need to start passing around data. In our application, `App.js` is in charge of all of the routes. With that, it makes sense to have `App.js` decide which data needs to be passed to the component associated with any given route.
@@ -36,7 +39,7 @@ We can refactor our static route into a dynamic route that will allow us to pass
 ## Cat Index Component
 With the new dynamic route, we have all the cats available in CatIndex as `this.props.cats`. To display the cats to the user, we can map over the array and use dot notation to access the name of each cat.
 
-Here is an opportunity to add Reactstap to our application to make our list of cat names look a little better.
+Here is an opportunity to add [ Reactstrap ](https://reactstrap.github.io/) to our application to make our list of cat names look a little better.
 
 After looking through the Reactstap documentation, we can add the necessary imports.
 
@@ -56,7 +59,9 @@ And now we can incorporate the Reactstrap components into our mapped array and s
     { this.props.cats.map((cat, index) => {
       return (
         <Card body key={ index }>
-          <CardTitle><h4>{ cat.name }</h4></CardTitle>
+          <CardTitle>
+            <h4>{ cat.name }</h4>
+          </CardTitle>
         </Card>
       )
     })}
@@ -65,15 +70,15 @@ And now we can incorporate the Reactstrap components into our mapped array and s
 ```
 
 ## Cat Show Component Routing
-The next step is being able to select one cat and see all the information associated with that particular cat. This will require refactoring our show route in `App.js` just like we did for the index route. But, we have to go a step further. We need to identify the id of the cat we want to view so we can pass the id as a param to the route.
+The next step is being able to select one cat and see all the information associated with that particular cat. This will require refactoring our show route in `App.js` just like we did for the index route. But we have to go a step further since show routes require an id param. We need to target the id of the cat we want to view.
 
-The React-router library offers us a helpful set of methods that allows us to collect information from the param of a route and save that information as a variable.
+The [ React-router ](https://scotch.io/courses/using-react-router-4/route-params) library offers us a helpful set of methods that allows us to collect information from the param of a route and save that information as a variable.
 
 ```javascript
 let id = props.match.params.id
 ```
 
-Now that we have the id saved as a variable, we can use JavaScript's `.find()` method to return the cat object.
+Now that we have the id saved as a variable, we can use [ JavaScript's .find() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method to return the cat object.
 ```javascript
 let id = props.match.params.id
 let cat = this.state.cats.find(cat => cat.id === parseInt(id))
@@ -127,7 +132,7 @@ Next we can add Reactstrap and the proper imports to create a nice page for each
 ## Connecting Cat Index and Show
 Now that our pages are working we need to create the flow that will allow our users to navigate between pages. We can do this by making our cat name into links that will navigate to the show page.
 
-We already have a route for the show page, we just need to add the appropriate link. We can use NavLink from React-router to turn the cat names into links connected to that particular cat id.
+We already have a route for the show page, we just need to add the appropriate link. We can use [ NavLink from React-router ](https://reactrouter.com/web/api/NavLink) to turn the cat names into links connected to that particular cat id.
 
 ```javascript
 <NavLink
@@ -150,9 +155,8 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can pass the cat mock data in state to my index component
 - As a user, I can see a page that lists of all the cat names
 - As a developer, I can refactor the show route to pass the param of id for one cat
-- As a developer, I can see a page featuring all the information for one cat
+- As a user, I can see a page featuring all the information for one cat
 - As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat
-
 
 
 [ Go to next lesson: Cat Tinder Create Functionality](./cat-create.md)
