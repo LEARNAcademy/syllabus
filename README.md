@@ -125,11 +125,11 @@ Professional development is dedicated to preparing for your  internship and the 
 Using React and Rails to create an asynchronous full stack application with testing.
 
 ### Cat Tinder Frontend
-1. [Cat Tinder Introduction, Routing, and Wireframes](./cat-tinder/frontend/intro.md)
-2. [Cat Tinder Testing with Jest and Enzyme](./cat-tinder/frontend/jest-enzyme.md)
-3. [Cat Tinder Index Component](./cat-tinder/frontend/cat-index.md)
-4. [Cat Tinder Create New Cat Component](./cat-tinder/frontend/cat-create.md)
-5. [Cat Tinder NewCat Functionality Overview](./cat-tinder/frontend/10cat_tinder_form_submit.md)
+1. [ Cat Tinder Introduction, Routing, and Wireframes ](./cat-tinder/frontend/intro.md)
+2. [ Cat Tinder Testing with Jest and Enzyme ](./cat-tinder/frontend/jest-enzyme.md)
+3. [ Cat Tinder Read Functionality ](./cat-tinder/frontend/cat-read.md)
+4. [ Cat Tinder Create Functionality ](./cat-tinder/frontend/cat-create.md)
+5. [ Cat Tinder NewCat Functionality Overview ](./cat-tinder/frontend/10cat_tinder_form_submit.md)
 
 ### Cat Tinder Backend
 
