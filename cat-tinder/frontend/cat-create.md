@@ -1,50 +1,46 @@
-# Cat Tinder Create New Cat Component
+# Cat Tinder Create Functionality
 
-Time to build the form to add new cats.
+## Overview
+- Adding the CRUD "create" functionality to the frontend of Cat Tinder
 
-## New Cat Tests
-**src/pages/`__tests__`/NewCat.js**
+## Learning Objectives
+- Applying the concept of RESTful routes to a React application
 
+## Additional Resources
+- [ Reactstrap Form Components ](https://reactstrap.github.io/components/form/)
+
+## Cat Create Form
+To create a new cat the first step is creating a form for the user to be able to add a new cat to the list of cat friends. We can utilize Reactstap to help with form styling.
+
+In each `<FormGroup>` tag there will be a label and an input. Each input tag will take two attributes. The first is `type` that describes what information can be entered into the field. The second is `name` that matches the cat attribute.
+
+**src/pages/CatNew.js**
 ```javascript
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Enzyme, { mount } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-import NewCat from '../NewCat'
-
-Enzyme.configure({ adapter: new Adapter() })
-
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<NewCat />, div)
-})
-
-it('has a name input', ()=>{
-  const component = mount(<NewCat />)
-  // looks for an id of name on the label tag
-  expect(component.find('label#name').text()).toBe("Name")
-})
-
-it('has a age input', ()=>{
-  const component = mount(<NewCat />)
-  // looks for an id of age on the label tag
-  expect(component.find('label#age').text()).toBe("Age")
-})
-
-it('has a enjoys input', ()=>{
-  const component = mount(<NewCat />)
-  // looks for an id of enjoys on the label tag
-  expect(component.find('label#enjoys').text()).toBe("Enjoys")
-})
-
-it('has a submit button', ()=>{
-  const component = mount(<NewCat />)
-  // looks for an id of submit on the button
-  expect(component.find('button#submit').text()).toBe("Add New Cat")
-})
+<Form>
+  <FormGroup>
+    <Label>Name</Label>
+    <Input
+      type="text"
+      name="name"
+    />
+  </FormGroup>
+</Form>
 ```
 
-Once you have a view that satisfies the tests, you’ll be ready to refactor your code to create a controlled form.
+Complete the process by importing the Reactstrap components.
+
+**src/pages/CatNew.js**
+```javascript
+import {
+  Form,
+  FormGroup,
+  Input,
+  Label
+} from 'reactstrap'
+```
+
+When we create new cats we want to collect the data and transmit the data as a 
+
 
 ## Controlled components
 Thinking ahead just a bit, we're going to need to pass the values from our form back up to the calling component. In order to do this easily, we will hold the values typed in by the user in state. To “watch” our inputs and save values into state, we need to switch our inputs to being “controlled components” (meaning watched by state). Or, in other words, add a 'value', and an 'onChange' attribute to the inputs. Then we can manage the value of the inputs in the components’ internal state until the form is submitted.
@@ -108,8 +104,8 @@ As a General Rule:
 ## Challenge
 - Create a component that fulfills the tests in this file. You will see that these tests assume we are using Reactstrap to create our view, and reference Reactstrap components that will need to be added to your `pages/NewCat.js` file.
 
-[Go to Cat Tinder: New Cat Functionality Overview](./10cat_tinder_form_submit.md)
+[ Go to Cat Tinder: New Cat Functionality Overview ](./10cat_tinder_form_submit.md)
 
-[Back to Cats Tinder Index Component](./cat-index.md)
+[ Back to Cats Tinder Read Functionality ](./cat-read.md)
 
-[Back to Syllabus](../../README.md)
+[ Back to Syllabus ](../../README.md)
