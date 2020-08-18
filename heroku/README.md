@@ -2,14 +2,14 @@
 
 ### Add the Heroku tools on your server
 
-On Ubuntu:
-```bash
-sudo snap install --classic heroku
+On a Mac:
+```
+$ brew tap heroku/brew && brew install heroku
 ```
 
-On a Mac:
-```bash
-brew tap heroku/brew && brew install heroku
+On Ubuntu (Cloud 9):
+```
+$ sudo snap install --classic heroku
 ```
 
 Afterwards, you can verify your installation (yours may be slightly different):
@@ -19,7 +19,7 @@ heroku/7.24.1 linux-x64 node-v11.14.0
 ```
 
 ### Login to Heroku
-Now we can login to heroku from the command line.  Here's what it looks like for me:
+Now we can login to Heroku from the command line.  Here's what it looks like for me:
 ```bash
 ubuntu:~/environment/users_app (master) $ heroku login -i
 heroku: Enter your login credentials
@@ -46,14 +46,14 @@ remote.heroku.fetch=+refs/heads/*:refs/remotes/heroku/*
 ```
 
 ### Adding your master.key
-We need to add the master.key that your app uses to decrypt your credentials.yml.enc file.  Copy the value in ```/config/master.key```, and use it in the following command:
+We need to add the master.key that your app uses to decrypt your `credentials.yml.enc` file.  Copy the value in `/config/master.key`, and use it in the following command:
 
-```bash
-heroku config:set RAILS_MASTER_KEY=<your-master-key>
+```
+$ heroku config:set RAILS_MASTER_KEY=<your-master-key>
 ```
 
-### Update the database config.
-Let's tell the app how to find the database when its running in production.  Heroku automatically setup a free postgresql database for us to get started with.  They also, and helpfully, provided an environment variable with its url for us to use.  We need to update our /config/database.yml file to use that environment variable, and we're all set:
+### Update the database config
+Let's tell the app how to find the database when its running in production. Heroku automatically setup a free postgresql database for us to get started with.  hey also, and helpfully, provided an environment variable with its url for us to use.  We need to update our `/config/database.yml` file to use that environment variable, and we're all set:
 
 ```yml
 production:
@@ -62,23 +62,23 @@ production:
 
 Finally, we're ready to push our code.
 
-```bash
-git push heroku master
+```
+$ git push heroku master
 ```
 
 And once that is done, we can migrate:
-```bash
-heroku run rails db:migrate
+```
+$ heroku run rails db:migrate
 ```
 
 You can find your URL to past into your browser with this command:
 
-```bash
-heroku apps:info
+```
+$ heroku apps:info
 ```
 
 Afterwards, you can follow your logs, and navigate to your application:
 
-```bash
-heroku logs --tail
+```
+$ heroku logs --tail
 ```
