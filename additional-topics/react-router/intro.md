@@ -219,9 +219,9 @@ After importing the component, we can add exact back in to the root Route and ad
 
 ```html
 <Switch>
-  <Route path="/" exact component={ Home } />
   <Route path="/about" component={ AboutUs } />
   <Route path="/tomato" component={ Tomato } />
+  <Route path="/" exact component={ Home } />
   <Route component={ NotFound } />
 </Switch>
 ```
