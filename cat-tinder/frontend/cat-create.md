@@ -1,7 +1,7 @@
 # Cat Tinder Create Functionality
 
 ## Overview
-- Adding the CRUD "create" functionality to the frontend of Cat Tinder
+- Adding the CRUD "create" functionality to the frontend of Cat Tinder using mock data
 - Adding a form to the project
 - Creating a method that will log the form data
 
@@ -188,7 +188,7 @@ As a developer, I have been commissioned to create an application where a user c
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 
-[ Go to next lesson: Cat Tinder Delete Functionality ](./cat-delete.md)
+[ Go to next lesson: Cat Tinder Edit Functionality ](./cat-edit.md)
 
 [ Back to Cats Tinder Read Functionality ](./cat-read.md)
 
