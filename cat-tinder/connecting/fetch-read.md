@@ -1,4 +1,4 @@
-# Cat Tinder Fetching Cats
+# Cat Tinder Read Functionality Fetch
 
 ## Overview
 - It is time to connect our applications!

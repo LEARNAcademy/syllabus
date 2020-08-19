@@ -184,7 +184,7 @@ As a developer, I have been commissioned to create an application where a user c
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 
-[ Go to next lesson: Cat Tinder API Intro ](../backend/api_intro.md)
+[ Go to next lesson: Cat Tinder API Introduction ](../backend/api_intro.md)
 
 [ Back to Cats Tinder Create Functionality ](./cat-create.md)
 

@@ -13,7 +13,7 @@
 - params
 
 ## Additional Resources
--  [Response Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- [Response Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## Validations
 As developers, it is our job to ensure no matter what, that our app responds in predictable ways to every request, and over many requests.
@@ -92,10 +92,10 @@ Failures:
 
   1) Cats does not create a cat without a name
      Failure/Error: expect(response.status).to eq 422
-     
+
        expected: 422
             got: 200
-     
+
        (compared using ==)
      # ./spec/requests/cats_request_spec.rb:40:in `block (2 levels) in <main>'
 ```
@@ -120,13 +120,15 @@ $ rspec spec/requests
 
 And now, we're Green!
 
-## Challenges
-- Add the appropriate model validations to ensure the user submits a name, an age, and what the cat enjoys
-- Add the appropriate request validations to ensure the API is sending useful information to the frontend developer
-- Add a validation to assure that the enjoys value is at least 10 characters long
+## Challenge: Cat Tinder API Validations
+As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-[Go to next lesson: Cat Tinder API CORS](./CORS.md)
+- As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, and what the cat enjoys
+- As a developer, I can add the appropriate request validations to ensure the API is sending useful information to the frontend developer
+- As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
 
-[Back to Cat Tinder API Endpoints](./api_endpoints.md)
+[ Go to next lesson: Cat Tinder API CORS ](./CORS.md)
 
-[Back to Syllabus](../../README.md)
+[ Back to Cat Tinder API Endpoints ](./api_endpoints.md)
+
+[ Back to Syllabus ](../../README.md)

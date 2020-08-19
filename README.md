@@ -129,15 +129,14 @@ Using React and Rails to create an asynchronous full stack application with test
 2. [ Cat Tinder Testing with Jest and Enzyme ](./cat-tinder/frontend/jest-enzyme.md)
 3. [ Cat Tinder Read Functionality ](./cat-tinder/frontend/cat-read.md)
 4. [ Cat Tinder Create Functionality ](./cat-tinder/frontend/cat-create.md)
-5. [ Cat Tinder NewCat Functionality Overview ](./cat-tinder/frontend/10cat_tinder_form_submit.md)
+5. [ Cat Tinder Edit Functionality ](./cat-tinder/frontend/cat-edit.md)
 
 ### Cat Tinder Backend
-
-6. [Cat Tinder API Introduction](./cat-tinder/backend/api_intro.md)
-7. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
-8. [Cat Tinder API Endpoints](./cat-tinder/backend/api_endpoints.md)
-9. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
-10. [Cat Tinder CORS](./cat-tinder/backend/CORS.md)
+6. [ Cat Tinder API Introduction ](./cat-tinder/backend/api_intro.md)
+7. [ Cat Tinder API Seeds ](./cat-tinder/backend/seeds.md)
+8. [ Cat Tinder API Endpoints ](./cat-tinder/backend/api_endpoints.md)
+9. [ Cat Tinder API Validations ](./cat-tinder/backend/validations.md)
+10. [ Cat Tinder CORS ](./cat-tinder/backend/CORS.md)
 
 ### Bringing it together!
 11. [Cat Tinder Fetching Cats](./cat-tinder/connecting/fetch.md)
