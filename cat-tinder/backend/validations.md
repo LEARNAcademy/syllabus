@@ -4,16 +4,12 @@
 - As developers we have to think about what happens when things don't go as we expect. What if data is submitted to our API that isn't complete, or has something else that causes it to be invalid? This could cause harm to our database or affect the user experience.
 
 ## Learning Objectives
-- Adding validations to our API
-
-## Vocabulary
-- model validations
-- request validations
-- response status
-- params
+- Implementing model validations
+- Implementing model specs in a Rails application
+- Implementing request specs in a Rails application
 
 ## Additional Resources
-- [Response Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- [ Response Codes ](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## Validations
 As developers, it is our job to ensure no matter what, that our app responds in predictable ways to every request, and over many requests.
@@ -25,7 +21,8 @@ We've started all of our backend coding with a failing test, and we now have goo
 
 Let's write a test for each of these cases.
 
-### Model Specs
+## Model Specs
+We can create a test that will look for an error if a cat is created without any attributes.
 
 **spec/models/cat_spec.rb**
 ```ruby
@@ -41,9 +38,11 @@ $ rspec spec/models
 ```
 1 example, 1 failure
 
-Failed examples:
+Failures:
 
-rspec ./spec/models/cat_spec.rb:6 # Cat should validate name
+  1) Cat should validate name
+     Failure/Error: expect(cat.errors[:name]).to_not be_empty
+       expected `[].empty?` to return false, got true
 ```
 
 As we run our specs, we see the test fails. But we can make it pass with one line of code in the model.
@@ -51,7 +50,6 @@ As we run our specs, we see the test fails. But we can make it pass with one lin
 **app/models/cat.rb**
 ```ruby
 class Cat < ApplicationRecord
-  #Here is the new line of code
   validates :name, presence: true
 end
 ```
@@ -60,6 +58,8 @@ $ rspec spec/models
 1 example, 0 failures
 ```
 Green!
+
+This process can be repeated to ensure our specs cover all the attributes of our cat model.
 
 ### Request Specs
 Here's a test to assure that we get the correct response status when we submit a create request without a name for a cat.

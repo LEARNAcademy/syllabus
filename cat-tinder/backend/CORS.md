@@ -74,7 +74,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the CORS gem to my Rails application
 - As a developer, I can add the `cors.rb` file to my application
 
-[ Go to next lesson: Cat Tinder Read Functionality Fetch ](../connecting/fetch-read.md)
+[ Go to next lesson: Cat Tinder Fetch for Read Functionality ](../connecting/fetch-read.md)
 
 [ Back to Cat Tinder API Validations ](./validations.md)
 

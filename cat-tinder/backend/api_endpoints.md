@@ -6,7 +6,6 @@
 
 ## Learning Objectives
 - Implementing request specs in a Rails application
-- Implementing model specs in a Rails application
 - Implementing appropriate endpoints in the cats controller
 
 ## Cats Routes
@@ -20,9 +19,6 @@ We need to create endpoints for the actions in our React application. For the ti
 class CatsController < ApplicationController
 
   def index
-  end
-
-  def show
   end
 
   def create
@@ -75,43 +71,6 @@ Now we can write the controller code to make it pass:
 def index
   cats = Cat.all
   render json: cats
-end
-```
-
-## Show Route
-Now we can make sure the show route is working correctly.
-
-**Create a Spec**  
-We're going to practice Test Driven Development, so let's start with a test. We'll add our test to the `cats_request_spec.rb` file:
-
-**/spec/requests/cats_request_spec.rb**
-```ruby
-it "gets one Cats" do
-  # Create a new cat in the Test Database (not the same one as development)
-  cat = Cat.create(name: 'Felix', age: 2, enjoys: 'Walks in the park')
-
-  # Make a request to the API
-  get "/cats/#{cat.id}"
-
-  # Convert the response into a Ruby Hash
-  json = JSON.parse(response.body)
-
-  # Assure that we got a successful response
-  expect(response).to have_http_status(:ok)
-
-  # Assure that we got one result back as expected
-  expect(cat.name).to eq 'Felix'
-end
-```
-
-When we run that spec, it fails of course, because we don't have any code in the controller to respond to the request correctly. Yay failure!
-
-Now we can write the controller code to make it pass:
-
-```ruby
-def show
-  cat = Cat.find(params[:id])
-  render json: cat
 end
 ```
 
@@ -169,10 +128,10 @@ As a developer, I have been commissioned to create an application where a user c
 
 - As a developer, I can add an index request spec to my application
 - As a developer, I can add an index endpoint to my application
-- As a developer, I can add a show request spec to my application
-- As a developer, I can add a show endpoint to my application
 - As a developer, I can add a create request spec to my application
 - As a developer, I can add a create endpoint to my application
+
+### Stretch Goals
 - As a developer, I can add a update endpoint to my application
 - As a developer, I can add a destroy endpoint to my application
 

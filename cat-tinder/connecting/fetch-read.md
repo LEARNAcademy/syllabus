@@ -1,11 +1,12 @@
-# Cat Tinder Read Functionality Fetch
+# Cat Tinder Fetch for Read Functionality
 
 ## Overview
 - It is time to connect our applications!
 - We will switch gears back to the frontend to load our cats.
+- We will have two applications running on our machine at the same time. The Rails app will run on `localhost:3000` and the React app will run on `localhost:3001`.
 
 ## Learning Objectives
-- Using fetch to request data from our Rails API
+- Implementing fetch to request data from our Rails API
 - Setting state with the JSON data that is returned from our fetch request
 
 ## Vocabulary
@@ -13,78 +14,67 @@
 - React lifecycle methods
 
 ## Set Up
+- The Rails app will run on `localhost:3000`
+- The React app will run on `localhost:3001`
 
 #### Cloud 9 Users
-Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a Cloud9 app to the world like we did for Wildlife Tracker with Postman.
+Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a Cloud 9 app to the world like we did for Wildlife Tracker with Postman.  
+Start your Rails server: port `8080` for AWS  
+Start your React server: `$ rails s -b 0.0.0.0` for 8081 on AWS
 
 ## Fetching Our Data
-The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON. We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because we're going to be famous).
+The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON.
 
-**/src/pages/CatIndex.js**
+We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because everyone will be using this app!).
+
+There will be a series of fetch requests to match the functionality required in our application. To start, we are going to load up all the cats from the database and save them into state. This will take the place of our mockCats. Since we want make this fetch call right away, we can wrap this fetch call in the React lifecycle method `componentDidMount()` which will run as soon as the app loads.
+
+The fetch request will be made to the URL that is running the Rails API. In this case, our Rails app is running on `localhost:3000`. We are making a request to the index route of our Rails app. Remembering our RESTful routes, we know that we need to make a request to a route called "/cats" to get all the cats.
+
+Our fetch call will return a Promise. If the Promise is resolved successfully we will get back an array of cat objects. We can set this array in state and replace the mock cats with real cats from the database.
+
+**/src/App.js**
 ```javascript
-import React, {useState, useEffect} from 'react'
-// import necessary components from reactstrap
-import { Container, Row, Col, ListGroup, ListGroupItem, Button} from 'reactstrap'
-import {Link} from 'react-router-dom'
-const CatList = () => {
-  //Create an empty array to hold all the cats
-  const [newCats, setNewCats] = useState([])
-  //useEffect hook lets us GET all cats from the database when the component loads
-  //the empty array after the comma means that it will get triggered automatically only once
-  useEffect(() =>{
-    grabCats()},[])
-
-  async function grabCats () {
-    try {
-      //GET data from the backend
-      let response = await fetch("http://localhost:3000/cats")
-      let data = await response.json();
-      //all good?
-      if(response.status === 200) {
-        //check the console to make sure we have all the cats
-        console.log("data", data)
-        //populate the newCats state array with data
-        setNewCats(data)
-      }
-    } catch (err) {
-        console.log(err)
-    }
+constructor(props){
+  super(props)
+  this.state = {
+    // remove the mock cats and start with an empty array
+    cats: []
   }
+}
+
+componentDidMount(){
+  fetch("http://localhost:3000/cats")
+  .then(response => {
+    // checking for a successful response
+    if(response.status === 200){
+       // convert the response to json
+       // returns a Promise
+      return(response.json())
+    }
+  })
+  .then(catsArray => {
+    // set the state with the data from the backend into the empty array
+    this.setState({ cats: catsArray })
+  })
+  .catch(errors => {
+    console.log("index errors:", errors)
+  })
+}
 ```
 
-## Breakdown
+As long as we have set up the frontend scaffolding correctly, the cat index and the cat show page should be working. But now we are pulling information from the database rather than mock data.
 
-What is this code doing?
 
-The big things to note are that we call fetch (which is a promise) and use the value returned from the promise to update state.
+## Challenge: Cat Tinder Fetch Read Functionality
+As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-`useEffect()` is part of React Hooks land always runs right before render. This means, that right before we have to show information on a page, React is going to preemptively use the code in our API folder to ask for some information and use the result from the database to set state.
+- As a developer, I can get the cats from the database and set the array in state
+- As a user, I can see all the cats
+- As a user, I can see the information for just one cat
 
-## Starting Servers
-We have two applications running separately from each other. They will run on two different ports.
+[ Go to next lesson: Cat Tinder Fetch for Create Functionality ](./fetch-create.md)
 
-Start your Rails server:
-  - `localhost:3000` for local
-  -  port `8080` for AWS
+[ Back to Cat Tinder API CORS ](../backend/CORS.md)
 
-Start your React server:
-- `localhost:3001` for local
-- `$ rails s -b 0.0.0.0` for 8081 on AWS
-
-Recall the wireframe we started out with?
-
-![wireframe](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
-
-This is where we've ended up:
-
-![cat tinder index](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-index.png)
-
-## Challenge
-- Add fetch to your Cat Tinder frontend
-- console.log() your state of cats
-
-[Go to next lesson: Cat Tinder Creating Cats](./cat-form.md)
-
-[Back to Cat Tinder API CORS](../backend/CORS.md)
-
-[Back to Syllabus](../../README.md)
+[ Back to Syllabus ](../../README.md)

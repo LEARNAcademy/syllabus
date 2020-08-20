@@ -114,11 +114,13 @@ Rails is full stack framework built into the Ruby programming language. Here you
 - [Rails Cookies](./rails_fullstack/cookies.md)
 - [Rails Layouts and Flash Messages](./rails_fullstack/layouts_flash_messages.md)
 
+
 ## Unit Seven: Professional Development Week
 
 Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
 
 - [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
@@ -139,8 +141,9 @@ Using React and Rails to create an asynchronous full stack application with test
 10. [ Cat Tinder CORS ](./cat-tinder/backend/CORS.md)
 
 ### Bringing it together!
-11. [Cat Tinder Fetching Cats](./cat-tinder/connecting/fetch.md)
-12. [Cat Tinder NewCat](./cat-tinder/connecting/cat-form.md)
+11. [ Cat Tinder Fetch for Read Functionality ](./cat-tinder/connecting/fetch-read.md)
+12. [ Cat Tinder Fetch for Create Functionality ](./cat-tinder/connecting/fetch-create.md)
+13. [ Cat Tinder Fetch for Edit Functionality ](./cat-tinder/connecting/fetch-edit.md)
 
 
 ## Unit Nine: React in Rails and Authentication
@@ -151,8 +154,6 @@ Using React and Rails to create an asynchronous full stack application with test
 2. [Devise and React IN Rails](./react_in_rails/devise_and_react_in_rails.md)
 4. [Challenge: Apartment App](./react_in_rails/apartment_app.md)
 
-#### Additional Topics:
-- [React Dynamic Routes](./cat-tinder/react-router/dynamic-routes.md)
 
 ## Unit Ten: Capstone Project, MVP
 1. [Capstone Schedules](./capstone/schedule.md)
