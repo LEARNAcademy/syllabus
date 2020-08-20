@@ -144,6 +144,7 @@ Using React and Rails to create an asynchronous full stack application with test
 11. [ Cat Tinder Fetch for Read Functionality ](./cat-tinder/connecting/fetch-read.md)
 12. [ Cat Tinder Fetch for Create Functionality ](./cat-tinder/connecting/fetch-create.md)
 13. [ Cat Tinder Fetch for Edit Functionality ](./cat-tinder/connecting/fetch-edit.md)
+14. [ Cat Tinder Fetch for Delete Functionality ](./cat-tinder/connecting/fetch-delete.md)
 
 
 ## Unit Nine: React in Rails and Authentication

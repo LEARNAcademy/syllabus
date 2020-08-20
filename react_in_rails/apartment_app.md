@@ -2,7 +2,7 @@
 Divide each story into smaller tasks and commit to GitHub when each task is complete.
 
 ## User Stories
-**Story:** As an un-registered guest on the website, I can go to a web page and see a list of available apartments. Apartments have: a street designation, a city, postal code, state, and country, in a addition to a building manager's contact info, which includes: name, phone number, and hours to contact
+**Story:** As an un-registered guest on the website, I can go to a web page and see a list of available apartments. Apartments have: a street designation, a city, postal code, state, and country
 
 **Story:** As an un-registered guest on the website, I can click on an apartment to view its details
 
