@@ -57,3 +57,6 @@ There are programs that help add a bit of flare and functionality to your termin
 - Change the look of your terminal
 - Drag and Drop for a directories path
 - Move cursor to beginning of text
+
+
+[ Back to Syllabus ](../README.md#programming-tools)

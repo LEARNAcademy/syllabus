@@ -11,10 +11,7 @@ Goddamn Idiotic Truckload of sh*t: when it breaks
 
 ## Setting up Git
 
-Instructions for mac: <br />
-https://www.atlassian.com/git/tutorials/install-git
-
-Scroll down to the section `Install Git with Homebrew`
+Instructions for mac: $ brew install git
 
 Instructions for windows: <br />
 https://git-scm.com/download/win
@@ -27,7 +24,7 @@ https://git-scm.com/download/win
 - Click on “New Repository” and name your repository
 - Click on “initialize a README”
 - Click “Create repository”
-- Click green button “clone or download”
+- Click green button `code`
 - Go to your terminal and cd onto the desktop
 - Type `git clone` and paste the link that you copied from GitHub
 - Now you will have a folder on your desktop.  **cd into that folder**
@@ -61,3 +58,6 @@ In terminal:
 - `$ git add .`
 - `$ git commit -m "message about current work"`
 - `$ git push origin master`
+
+
+[ Back to Syllabus ](../README.md#programming-tools)

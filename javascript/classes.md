@@ -283,8 +283,8 @@ class Coffee {
 
 - Write the code that creates three unique cylinder objects
 
-[Go to next lesson: JavaScript Inheritance](./class-inheritance.md)
+[ Go to next lesson: JavaScript Class Inheritance ](./class-inheritance.md)
 
-[Back to JavaScript Objects](./objects.md)
+[ Back to JavaScript Objects ](./objects.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

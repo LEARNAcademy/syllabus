@@ -1,4 +1,4 @@
-# JavaScript Spread Syntax
+# JavaScript Spread Operator
 
 ## Video: Spread Syntax
 [![YouTube](http://img.youtube.com/vi/72qhgQQNkOo/0.jpg)](https://www.youtube.com/watch?v=72qhgQQNkOo)
@@ -148,4 +148,4 @@ Refactor this function to use the spread operator to combine the array arguments
 
 Recall the **combineAndFilterOdd()** function from the previous exercise. Refactor the function to take any number of arguments.
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

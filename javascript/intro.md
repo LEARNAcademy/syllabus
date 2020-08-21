@@ -257,6 +257,6 @@ We have gone over most of the building blocks that compose a JavaScript program.
 - Find the length of the string
 - Use the method charAt() to find what letter is at the 3rd index
 
-[Go to next lesson: JavaScript Conditionals](./conditionals.md)
+[ Go to next lesson: JavaScript Conditionals ](./conditionals.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

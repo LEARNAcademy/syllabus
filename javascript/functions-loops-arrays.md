@@ -1,4 +1,4 @@
-# Functions, Loops, and Arrays (Oh My!)
+# JavaScript Functions, Loops, and Arrays (Oh My!)
 
 ## Video: Putting It All Together
 [![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=TlAI9_bXobg)
@@ -193,8 +193,8 @@ console.log(onlyEven(myArr2))
 - As a user, if I guess the number correctly I am notified that I won
 - STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message
 
-[Go to next lesson: JavaScript Higher-Order Functions](./higher-order-functions.md)
+[ Go to next lesson: JavaScript Higher-Order Functions ](./higher-order-functions.md)
 
-[Back to JavaScript Functions](./functions.md)
+[ Back to JavaScript Functions ](./functions.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

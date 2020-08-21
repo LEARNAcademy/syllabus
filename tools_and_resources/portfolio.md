@@ -25,4 +25,4 @@ Follow the instructions **exactly!**
 - Put your code in this repository - no nested files!
 - git add/commit/push like normal
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#resources)

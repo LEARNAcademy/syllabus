@@ -272,8 +272,8 @@ Also notice that the variables are assigned in order. As in, the first variable 
 - Sort all the names in alphabetical order. Hint: Combine the arrays into a single array.
 
 
-[Go to next lesson: JavaScript Loops](./loops.md)
+[ Go to next lesson: JavaScript Loops ](./loops.md)
 
-[Back to JavaScript Conditionals](./conditionals.md)
+[ Back to JavaScript Conditionals ](./conditionals.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

@@ -64,9 +64,5 @@ An API is a data to data interface, does not have any markup, just generates inf
 ### Example of JSON:
 {"copyright": "Copyright (c) 2016 The New York Times Company.  All Rights Reserved.", "num_results": 28970, "results": [{"age_group": "", "author": "Sophia Amoruso", "contributor": "by Sophia Amoruso", "contributor_note": "", "description": "An online fashion retailer traces her path to success.", "isbns": [{"isbn10": "039916927X", "isbn13": "9780399169274"}], "price": 0, "publisher": "Portfolio/Penguin/Putnam", "ranks_history": [{"asterisk": 0,"bestsellers_date": "2016-02-27", "dagger": 0, "display_name": "Business", "list_name": "Business Books", "primary_isbn10": "1591847931", "primary_isbn13": "9781591847939", "published_date": "2016-03-13", "rank": 8, "weeks_on_list": 0}], "reviews": [{"article_chapter_link": "", "book_review_link": "", "first_chapter_link": "", "sunday_review_link": ""}], "title": "#GIRLBOSS"}], "status": "OK"}
 
-### Attacks
-* Man in the middle - create a node that "listens" to the network on open wifi
-* Cross site scripting - embedding snippets of JS in a website that is run when the browser opens the page
-* DNS cache poisoning - changing the IP address in the your local storage so your computer goes to the poison address
-* DDOS attack - Distributed Denial of Service, bogs down the server with requests so that it appears the server is down
-* IDN Homograph attack - Changing a letter (ie Roman vs Cyrillic letters) to make the url appear normal but is actually a different character
+
+[ Back to Syllabus ](../README.md#resources)

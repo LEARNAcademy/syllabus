@@ -83,4 +83,4 @@
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
 
 
-[ Back to Syllabus ](../README.md#Resources)
+[ Back to Syllabus ](../README.md#resources)

@@ -254,8 +254,6 @@ The class StockEngine has access to the information from the parent class of Eng
 - The method can be created in the parent class and accessed by all child classes
 
 
-[Go to next lesson: React Intro](../react/intro.md)
+[ Back to JavaScript Classes ](./classes.md)
 
-[Back to JavaScript Classes](./classes.md)
-
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

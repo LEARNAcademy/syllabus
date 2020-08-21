@@ -34,4 +34,4 @@ Coding is tough. You will run into problems and you will get stuck. Communicatin
 
 [![YouTube](http://img.youtube.com/vi/Mhm4wrSV9Ns/0.jpg)](https://www.youtube.com/watch?v=Mhm4wrSV9Ns)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#resources)

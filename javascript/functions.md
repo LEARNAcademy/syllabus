@@ -185,7 +185,7 @@ Here's what the pseudocode might look like:
 
 Now let's build the actual code around the pseudocode.
 
-```javascript
+```
 // create a function called tallEnough
 // takes in 1 number as an arguments
 const tallEnough = (number) => {
@@ -269,8 +269,8 @@ However, we can only have 1 return in a function.  Note that code after the func
 - Bonus: Make it handle a few collective nouns like "sheep", "goose", "child", "person" and "species"
 
 
-[Go to next lesson: JavaScript Functions, Loops, and Arrays](./functions-loops-arrays.md)
+[ Go to next lesson: JavaScript Functions, Loops, and Arrays ](./functions-loops-arrays.md)
 
-[Back to JavaScript Loops](./loops.md)
+[ Back to JavaScript Loops ](./loops.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)

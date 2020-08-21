@@ -74,4 +74,4 @@ When a new driver's shift begins:
 
 **Communicate constantly. Stay engaged. Work hard. Build awesome things.**
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#resources)

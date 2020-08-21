@@ -243,8 +243,8 @@ console.log(describePokemon(pokeTwo))
 --> "Magikarp is a Water pokemon"
 ```
 
-[Go to next lesson: JavaScript Classes](./classes.md)
+[ Go to next lesson: JavaScript Classes ](./classes.md)
 
-[Back to JavaScript Testing with Jest](./jest.md)
+[ Back to JavaScript Testing with Jest ](./jest.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
