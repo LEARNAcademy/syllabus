@@ -3,19 +3,17 @@
 Welcome to the LEARN Syllabus! This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a Pull Request to fix any errors, expand definitions, or further explain concepts.
 
 ## Resources
-- [Remote Pairing](./tools_and_resources/remote-pairing.md)
-- [AWS Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
-- [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
-- [Portfolio Resources](./tools_and_resources/portfolio.md)
-- [Portfolio Template](./portfolio-v001)
-- [How to Ask a Tech Question](./tools_and_resources/questions.md)
-- [Intro to How the Internet Works](./tools_and_resources/how-the-internet-works-intro.md)
+- [ Accessing and Submitting Assessments ](./tools_and_resources/assessments.md)
+- [ Remote Pairing ](./tools_and_resources/remote-pairing.md)
+- [ Portfolio Resources ](./tools_and_resources/portfolio.md)
+- [ How to Ask a Tech Question ](./tools_and_resources/questions.md)
+- [ Intro to How the Internet Works ](./tools_and_resources/how-the-internet-works-intro.md)
 
 ## Programming Tools
-- [Tech Stack](./tools_and_resources/techstack.md)
-- [Introduction to git and GitHub](./tools_and_resources/github.md)
-- [Intro Terminal](./tools_and_resources/terminal.md)
-- [Intro to Atom](./tools_and_resources/atom.md)
+- [ Tech Stack ](./tools_and_resources/techstack.md)
+- [ Introduction to git and GitHub ](./tools_and_resources/github.md)
+- [ Intro Terminal ](./tools_and_resources/terminal.md)
+- [ Intro to Atom ](./tools_and_resources/atom.md)
 
 ## Unit One: Javascript Foundations
 

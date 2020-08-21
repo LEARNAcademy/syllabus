@@ -50,7 +50,7 @@
 - GitHub Classroom is a tool that allows each student to create their own repository  
 - Click on the link and accept the assignment and GitHub Classroom will create a repository in your cohort's organization
 - Click the link to see your repository
-- Click the green button `Clone or download`
+- Click the green button `Code`
 - Click the clipboard icon on the side of the dropdown
 
 #### In Terminal
@@ -62,7 +62,7 @@
 - Terminal will say `Switched to a new branch <branch-name>`
 
 #### Code!
-- Complete all the files in your assessment
+- COMPLETE all the files in your assessment
 - This is a chance for you to learn as well as for the instructors to see your code
 - Leave comments or questions about your code if you want specific feedback
 
@@ -83,4 +83,4 @@
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
 
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#Resources)
