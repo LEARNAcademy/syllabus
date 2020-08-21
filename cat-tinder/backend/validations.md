@@ -129,7 +129,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the appropriate request validations to ensure the API is sending useful information to the frontend developer
 - As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
 
-[ Go to next lesson: Cat Tinder API CORS ](./cors.md)
+[ Go to next lesson: Cat Tinder API CORS ](./corsE.md)
 
 [ Back to Cat Tinder API Endpoints ](./api_endpoints.md)
 
