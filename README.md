@@ -131,7 +131,7 @@ Using React and Rails to create an asynchronous full stack application with test
 7. [ Cat Tinder API Seeds ](./cat-tinder/backend/seeds.md)
 8. [ Cat Tinder API Endpoints ](./cat-tinder/backend/api_endpoints.md)
 9. [ Cat Tinder API Validations ](./cat-tinder/backend/validations.md)
-10. [ Cat Tinder API CORS ](./cat-tinder/backend/CORS.md)
+10. [ Cat Tinder API CORS ](./cat-tinder/backend/cors.md)
 
 ### Bringing it together!
 11. [ Cat Tinder Fetch for Read Functionality ](./cat-tinder/connecting/fetch-read.md)

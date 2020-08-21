@@ -9,7 +9,6 @@
 - Following the process of adding CORS to a Rails application
 
 ## Useful Commands
-- $ gem install rack-cors
 - $ bundle install
 
 ## Additional Resources

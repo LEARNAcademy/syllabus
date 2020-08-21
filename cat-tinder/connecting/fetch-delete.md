@@ -85,4 +85,4 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Back to Cats Tinder Edit Functionality ](./cat-edit.md)
 
-[ Back to Syllabus ](../../README.md#bringing-it-together!)
+[ Back to Syllabus ](../../README.md#bringing-it-together)

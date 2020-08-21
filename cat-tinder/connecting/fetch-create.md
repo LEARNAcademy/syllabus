@@ -65,6 +65,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder Fetch for Edit Functionality ](./fetch-edit.md)
 
-[ Back to Cat Tinder Fetch for Read Functionality ](./fetch.md)
+[ Back to Cat Tinder Fetch for Read Functionality ](./fetch-read.md)
 
-[ Back to Syllabus ](../../README.md#bringing-it-together!)
+[ Back to Syllabus ](../../README.md#bringing-it-together)
