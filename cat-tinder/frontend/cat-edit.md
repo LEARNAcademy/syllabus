@@ -186,6 +186,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder API Introduction ](../backend/api_intro.md)
 
-[ Back to Cats Tinder Create Functionality ](./cat-create.md)
+[ Back to Cat Tinder Create Functionality ](./cat-create.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-frontend)

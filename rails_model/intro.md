@@ -46,6 +46,6 @@ or
 ![Rails Boilerplate](./assets/yay-youre-on-rails.png)
 
 
-[Go to next lesson: Rails Active Record Introduction](./active_record_intro.md)
+[ Go to next lesson: Active Record Introduction ](./active_record_intro.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#ruby-on-rails)

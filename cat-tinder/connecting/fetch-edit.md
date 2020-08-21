@@ -67,4 +67,4 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Back to Cat Tinder Fetch for Create Functionality ](./fetch-create.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#bringing-it-together!)

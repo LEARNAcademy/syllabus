@@ -111,6 +111,6 @@ In this lesson, we learned about organizing a program's data into a relational d
 
 Relational databases were around long before Rails and will be here long after new technologies have take its place. Rails, and all web frameworks, can be thought of as tools to efficiently and securely bridge web pages and data stored in relational databases.
 
-[Go to next lesson: Postgres Queries](./queries.md)
+[ Go to next lesson: PostgreSQL Queries ](./queries.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#postgresql)

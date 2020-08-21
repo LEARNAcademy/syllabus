@@ -83,4 +83,4 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Back to Cat Tinder API Introduction ](./api_intro.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-backend)

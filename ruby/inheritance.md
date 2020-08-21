@@ -1,4 +1,4 @@
-# INHERITANCE
+# Ruby Inheritance
 
 ## Class
 Class can be an abstract concept when you first come across it. To start, **class definition** describes the structure and behavior of a set of objects. Objects, meaning instances of a class, are realizations of a class that can be interacted with and store data. Objects are independent of each other. For example, with a class definition, we have the blueprint for an Apple. Objects allow us to interact with those classes directly in our code. Below we will use the "blueprint" of an apple to create some apples.
@@ -18,12 +18,12 @@ class Dog
   def initialize(breed)  
     @breed = breed  
   end  
-  
+
 end
 ```
 Now we will create a new class called Pointer and have it inherit from Dog.
 
-When you invoke a superclass with arguments, Ruby sends a message to the _parent_ (`Dog`) of the _current object_ (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`. 
+When you invoke a superclass with arguments, Ruby sends a message to the _parent_ (`Dog`) of the _current object_ (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`.
 
 For example: below, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essitially borrowing `Dog`'s initialize method to assign an instance variable of @breed to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
 
@@ -34,14 +34,14 @@ class Pointer < Dog
     super(breed)  
     @name = name  
   end  
-  
+
   def to_s  
     "(#@breed, #@name)"  
   end  
-  
-end 
 
-my_dog = Pointer.new("Pointer", "Jax").to_s 
+end
+
+my_dog = Pointer.new("Pointer", "Jax").to_s
 ```
 
 The to_s method in class Pointer references @breed variable from the superclass Dog. This code works as you probably expect it to:
@@ -66,7 +66,7 @@ Inheritance means that classes inherit the external interface of the superclasse
 
 ## has_many, belongs_to
 
-There's specific terminology that exists when referring to the different relationships between objects. These terms will come into play more when we get into databases, etc. but it's valuable to make a habit of being aware of these realtionships. 
+There's specific terminology that exists when referring to the different relationships between objects. These terms will come into play more when we get into databases, etc. but it's valuable to make a habit of being aware of these realtionships.
 
 For example, take this class called `Artist`.
 
@@ -200,8 +200,8 @@ Congrats we've made some relationships between objects! In this example, `britne
 **Story**: As a programmer, I can sort my collection of cars based on year.
 **Hint**: Find out how the spaceship operator can help you with an array.
 
-[Go to next lesson: Ruby Testing with RSPEC](./rspec.md)
+[ Go to next lesson: Ruby Testing with RSpec ](./rspec.md)
 
-[Back to Ruby Classes and Objects](./classes_objects.md)
+[ Back to Ruby Classes and Objects ](./classes_objects.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

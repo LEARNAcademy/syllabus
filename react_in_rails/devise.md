@@ -1,4 +1,5 @@
-# Devise
+# Devise Introduction
+
 [![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
 
 ## Overview
@@ -31,7 +32,7 @@ Using the Devise gem to create authentication and authorization for a React in R
 - navigate to `http://localhost:3000/users/sign_in` and see a log in page
 - navigate to `http://localhost:3000/users/sign_up` and see a sign up page
 
-### Adding mailer settings 
+### Adding mailer settings
 You’ll need to set up the default URL options for the Devise mailer in each environment. In the config/environments/development.rb file, add the following code at the end of the previous code inside the file:
 ```config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }```
 ### Controller Filters and Helpers
@@ -142,8 +143,8 @@ Then, in the create method of the controller, we can assign it to the current us
 ### 10) Now when we test it out, we can see in the console that Bikes are assigned to the user
 
 
-[Go to next lesson: Devise and React in Rails](./devise_and_react_in_rails.md)
+[ Go to next lesson: Devise and React IN Rails ](./devise_and_react_in_rails.md)
 
-[Back to React Routing in Rails](./react_routing_in_rails.md)
+[ Back to React Routing IN Rails ](./react_routing_in_rails.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

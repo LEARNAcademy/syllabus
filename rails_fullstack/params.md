@@ -1,4 +1,4 @@
-# Rails: Parameters
+# Rails Parameters
 
 ## Video: Rails Params
 [![YouTube](http://img.youtube.com/vi/FrQJX4UoX4k/0.jpg)](https://www.youtube.com/watch?v=FrQJX4UoX4k)
@@ -134,9 +134,8 @@ For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parame
 - As a user, I can visit a page that takes a string and displays whether it is a palindrome
 - As a user, I can visit a page that takes a noun, verb, adjective, adverb, and  uses them to display a short silly story
 
+[ Go to next lesson: Rails RESTful Routes and CRUD Actions ](../rails_fullstack/restful_routes_crud.md)
 
-[Go to next lesson: Rails Restful Routes and CRUD Actions](./restful_routes_crud.md)
+[ Back to Rails Routes, Controllers and Views ](./routes_controllers_views.md)
 
-[Back to Rails Routes, Controllers and Views](./routes_controllers_views.md)
-
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#ruby-on-rails)

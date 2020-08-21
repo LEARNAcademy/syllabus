@@ -129,8 +129,8 @@ On the registration page, the user has to enter a user ID and a password, which 
 - As a user, my password has to contain at least one digit.
 
 
-[Go to next lesson: Ruby Hashes](./hashes.md)
+[ Go to next lesson: Ruby Blocks and Iterables ](./blocks.md)
 
-[Back to Ruby Conditionals](./conditionals.md)
+[ Back to Ruby Conditionals ](./conditionals.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

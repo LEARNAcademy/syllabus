@@ -1,4 +1,4 @@
-# Apartment App
+# Apartment App Challenge
 Divide each story into smaller tasks and commit to GitHub when each task is complete.
 
 ## User Stories
@@ -42,6 +42,6 @@ Divide each story into smaller tasks and commit to GitHub when each task is comp
 - Is everything secure?
 
 
-[Back to Devise and React in Rails](./devise_and_react_in_rails.md)
+[ Back to Devise and React IN Rails ](./devise_and_react_in_rails.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

@@ -1,4 +1,4 @@
-# Better Params: Strong Parameters
+# Rails Strong Parameters
 
 ## Video: Validations and Strong Params
 [![YouTube](http://img.youtube.com/vi/yh8nVSihMyM/0.jpg)](https://www.youtube.com/watch?v=yh8nVSihMyM)
@@ -135,8 +135,8 @@ Expand on the Blog Post challenge to add strong params and validations.
 - As a developer, I can ensure that my edit method will only allow the attributes I expect.
 
 
-[Go to next lesson: Rails Resource Generator Read Operations](./resource_index_show.md)
+[ Go to next lesson: Rails Generate Resource ](./generate_resource.md)
 
-[Back to Rails Forms](./forms.md)
+[ Back to Full-stack Rails ](./fullstack.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)

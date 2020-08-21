@@ -1,4 +1,4 @@
-# Rails Forms
+# Full-stack Rails
 
 ## Video: Rails Forms
 [![YouTube](http://img.youtube.com/vi/9UGcF6pnAag/0.jpg)](https://www.youtube.com/watch?v=9UGcF6pnAag)
@@ -124,8 +124,8 @@ With the release of Rails 6, we get a very convenient method called `form_with` 
 - As a user, I can delete my blog post.
 - As a user, I can update my blog post.
 
-[Go to next lesson: Rails Strong Parameters](./strong_parameters.md)
+[ Go to next lesson: Rails Strong Parameters ](./strong_parameters.md)
 
-[Back to Rails Restful Routes and CRUD Actions](./restful_routes_crud.md)
+[ Back to Rails RESTful Routes and CRUD Actions ](./restful_routes_crud.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)

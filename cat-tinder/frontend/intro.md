@@ -213,6 +213,6 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add `react-router-dom` to my application
 - As a developer, I can add routes to be able to navigate manually to all pages
 
-[ Go to next lesson: Cat Tinder Testing With Jest and Enzyme ](./jest-enzyme.md)
+[ Go to next lesson: Cat Tinder Testing with Jest and Enzyme ](./jest-enzyme.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-frontend)

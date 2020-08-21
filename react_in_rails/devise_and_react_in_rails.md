@@ -1,4 +1,4 @@
-# Devise and React in Rails
+# Devise and React IN Rails
 
 ## Video: Devise and React
 [![YouTube](http://img.youtube.com/vi/96Kd2dCsXm8/0.jpg)](https://www.youtube.com/watch?v=96Kd2dCsXm8)
@@ -114,8 +114,8 @@ class App extends React.Component {
 export default App
 ```
 
-[Go to next lesson: Apartment App](./apartment_app.md)
+[ Go to next lesson: Apartment App Challenge ](./apartment_app.md)
 
-[Back to Devise](./devise.md)
+[ Back to Devise Introduction ](./devise.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

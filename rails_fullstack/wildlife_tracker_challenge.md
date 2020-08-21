@@ -1,4 +1,4 @@
-# Wildlife Tracker with Nested Resources
+# Wildlife Tracker Challenge
 
 The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland. Before they give the go-ahead, they need to do an environmental impact study. They've asked you to build an app so that the rangers can report wildlife sightings.
 
@@ -72,4 +72,4 @@ Remember to add the start_date and end_date to what is permitted in your strong 
 	- Look into `accepts_nested_attributes_for`
 
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)

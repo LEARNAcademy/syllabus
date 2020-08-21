@@ -1,4 +1,4 @@
-# Ruby Blocks
+# Ruby Blocks and Iterables
 
 ## Overview
 - Ruby has lots of iteration methods
@@ -178,8 +178,8 @@ Note the original array is untouched. To modify the original array use the bang 
 ### FIZZBUZZ
 - Write a method that prints the numbers from 1 to 100. For multiples of three print Fizz instead of the number, for multiples of five print Buzz instead of the number, for numbers that are multiples of both three and five print FizzBuzz, for all other numbers print the number.
 
-[Go to next lesson: Ruby Classes and Objects](./classes_objects.md)
+[ Go to next lesson: Ruby Hashes ](./hashes.md)
 
-[Back to Ruby Hashes](./hashes.md)
+[ Back to Ruby Methods ](./methods.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

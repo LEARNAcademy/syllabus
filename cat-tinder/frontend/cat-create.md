@@ -190,6 +190,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder Edit Functionality ](./cat-edit.md)
 
-[ Back to Cats Tinder Read Functionality ](./cat-read.md)
+[ Back to Cat Tinder Read Functionality ](./cat-read.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-frontend)

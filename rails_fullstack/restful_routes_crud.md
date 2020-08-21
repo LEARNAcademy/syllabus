@@ -116,8 +116,8 @@ get '/resources/:id' => 'resources#show', as: 'one_resource'
 - Rails *Convention Over Configuration* gives us strict guidelines for controller methods and routes
 
 
-[Go to next lesson: Rails Forms](./forms.md)
+[ Go to next lesson: Full-stack Rails ](./fullstack.md)
 
-[Back to Rails Params](./params.md)
+[ Back to Rails Parameters ](./params.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)

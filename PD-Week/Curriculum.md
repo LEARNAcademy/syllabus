@@ -185,3 +185,6 @@
 
 3) **[Career Services Job Search Plans](https://drive.google.com/file/d/1neRnCYLwD2irXC2IipBfvU-4453DiJDN/view?usp=sharing)**
 <br/> This resource is a template of the Job Search plan we will create for you following your internship when you begin your Job Search. This document focuses on staying proactive and accountable to get you hired quickly!
+
+
+[ Back to Syllabus ](../README.md#unit-seven-professional-development-week)

@@ -204,8 +204,8 @@ export default App
 - Follow these instructions to create your own "Single Page Application" React in Rails application with reactstrap
 
 
-[Go to next lesson: Devise](./devise.md)
+[ Go to next lesson: Devise Introduction ](./devise.md)
 
-[Back to React IN a Rails Application Introduction](./intro.md)
+[ Back to React IN Rails Introduction ](./intro.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

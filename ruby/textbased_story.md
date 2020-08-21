@@ -28,9 +28,6 @@ In this method you let your imagination and creative juices flow at blazing spee
 Whichever method you choose is completely up to you. You need to find out for yourself what suits your design style. Are you a more organized person who likes to plan everything out or someone who just likes to go with the flow and follow wherever your fancy takes you.
 
 ## Need some inspiration?
+Check out [ Playfic ](http://playfic.com/explore/popular) to see what other people have thought up for text-based game adventures.
 
-Check out these links to see what other people have thought up for text-based game adventures:
-
-- <a href="http://playfic.com/explore/popular">Playfic</a>
-
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

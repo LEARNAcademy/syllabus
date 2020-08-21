@@ -1,4 +1,4 @@
-# Rails Active Record Validations
+# Active Record Validations
 
 ## Overview
 - Validations are used to ensure that only valid data is saved into your database.
@@ -125,13 +125,13 @@ Implementing [Custom Validations](https://guides.rubyonrails.org/active_record_v
 - As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account.
 	- **Hint:** Read about :scope in the Rails validation docs.
 - As a developer, I want to validate that the Address street_number and zip are numbers.
-- As a developer, I want to see a custom error message that says "Please, input numbers only." if street_number or zip code are not numbers. 
-  - **Hint:** Read about :message in the Rails validation docs. 
+- As a developer, I want to see a custom error message that says "Please, input numbers only." if street_number or zip code are not numbers.
+  - **Hint:** Read about :message in the Rails validation docs.
 - As a developer, I want to validate associated addresses on accounts.
 	- **Hint:** Read about validates_associated in the Rails validation docs.
 
-[Go to next lesson: Rails Routes, Controllers and Views](../rails_fullstack/routes_controllers_views.md)
+[ Go to next lesson: Rails Routes, Controllers and Views ](../rails_fullstack/routes_controllers_views.md)
 
-[Back to Rails Associations](./associations.md)
+[ Back to Active Record Associations ](./associations.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#ruby-on-rails)

@@ -1,4 +1,4 @@
-# Rails Model Associations
+# Active Record Associations
 
 ## Video: Active Record Associations
 [![YouTube](http://img.youtube.com/vi/CM520EfUI7k/0.jpg)](https://www.youtube.com/watch?v=CM520EfUI7k)
@@ -217,8 +217,8 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 	**Hint**: A Task has many Comments.
 - As a programmer, I can retrieve a Task and list all the comments.
 
-[Go to next lesson: Rails Validations](./validations.md)
+[ Go to next lesson: Active Record Validations ](./validations.md)
 
-[Back to Rails Migrations](./migrations.md)
+[ Back to Active Record Migrations ](./migrations.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#ruby-on-rails)

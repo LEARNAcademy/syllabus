@@ -1,4 +1,4 @@
-# RUBY CLASSES
+# Ruby Classes and Objects
 
 In Ruby, all values are objects and all objects belong to a class. The class defines what data and behavior exist in the object.
 
@@ -16,7 +16,7 @@ You can find out the class of something by calling the .class method.
 ```
 
 ### Making Your Own Class
-Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular). 
+Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular).
 
 In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance varible being locally scoped to the class it belongs to. Becuase of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to _set_ the value of an instance variable. The purpose of a `get` method is to _get_ or _access_ the value of an instance variable.
 
@@ -30,7 +30,7 @@ class Person
   def get_name
     @name
   end
-  
+
 end
 # Notice that the Person class is very re-usable and can be used for any name we want to pass it (no names are hard-coded in).
 
@@ -68,7 +68,7 @@ A class with an initialize method:
 
 ```RUBY
 class Jedi
-  
+
   # Create in initialize method that gives all new instances of Jedi the title "Knight"
   def initialize
     @title = "Knight"
@@ -78,7 +78,7 @@ class Jedi
   def title
     @title
   end
-  
+
 end
 
 # Create a new instance of the class Jedi. Call it chosen_one
@@ -101,7 +101,7 @@ class Fruit
   def vitamins
     @vitamins
   end
-  
+
 end
 
 # New instance (object) of the class:
@@ -127,7 +127,7 @@ class SquareFoot
     @height = height
     @width = width
   end
-  
+
 end
 
 # Create a new instance of the class SquareFoot. Call it bedroom_wall
@@ -156,7 +156,7 @@ class Animal
   def attitude
     @attitude
   end
-  
+
 end
 
 # New instance of the class without an argument, which gives error:
@@ -188,24 +188,24 @@ Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicl
 
 ```RUBY
 class Vehicle
-  
+
   def initialize(year, make, model)
     @year = year
     @make = make
     @model = model
   end
-  
+
   def get_vehicle_info
     @year
     @make
     @model
   end
-  
+
   def show_vehicle_info
     # When using string interpolation with an instance variable, you can simply put a # followed by the name of the variable
     puts "This is a #@year #@make #@model."
   end
-  
+
 end
 ```
 
@@ -227,8 +227,8 @@ end
 
 
 
-[Go to next lesson: Ruby Inheritance](./inheritance.md)
+[ Go to next lesson: Ruby Inheritance ](./inheritance.md)
 
-[Back to Ruby Hashes](./hashes.md)
+[ Back to Ruby Hashes ](./hashes.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

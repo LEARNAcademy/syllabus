@@ -95,6 +95,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder API Seeds ](./seeds.md)
 
-[ Back to Cats Tinder Edit Functionality ](../frontend/cat-edit.md)
+[ Back to Cat Tinder Edit Functionality ](../frontend/cat-edit.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-backend)

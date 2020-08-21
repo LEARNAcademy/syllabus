@@ -1,4 +1,4 @@
-# Cats Tinder Read Functionality
+# Cat Tinder Read Functionality
 
 ## Overview
 - Adding the CRUD "read" functionality of index and show to the frontend of Cat Tinder
@@ -159,8 +159,8 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat
 
 
-[ Go to next lesson: Cat Tinder Create Functionality](./cat-create.md)
+[ Go to next lesson: Cat Tinder Create Functionality ](./cat-create.md)
 
-[ Back to Cat Tinder Testing With Jest and Enzyme ](./jest-enzyme.md)
+[ Back to Cat Tinder Testing with Jest and Enzyme ](./jest-enzyme.md)
 
-[ Back to Syllabus ](../../README.md)
+[ Back to Syllabus ](../../README.md#cat-tinder-frontend)

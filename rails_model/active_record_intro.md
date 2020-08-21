@@ -1,4 +1,4 @@
-# Rails Active Record Introduction
+# Active Record Introduction
 
 ## Video: Active Record Details
 [![YouTube](http://img.youtube.com/vi/R5vpRwpWctY/0.jpg)](https://www.youtube.com/watch?v=R5vpRwpWctY)
@@ -242,8 +242,8 @@ Created database 'rolodex_test'
 - Remove all family members that do not have your last_name.
 
 
-[Go to next lesson: Rails Migrations](./migrations.md)
+[ Go to next lesson: Active Record Migrations ](./migrations.md)
 
-[Back to Ruby on Rails Introduction](./intro.md)
+[ Back to Ruby on Rails Introduction ](./intro.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#ruby-on-rails)

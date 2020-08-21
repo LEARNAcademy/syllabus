@@ -70,8 +70,8 @@ end
 
 Write the code that allows two users to input their moves in terminal for "Rock, Paper, Scissors" and determines the winner (or if a tie occurred).
 
-[Go to next lesson: Ruby Methods](./methods.md)
+[ Go to next lesson: Ruby Methods ](./methods.md)
 
-[Back to Ruby Intro](./intro.md)
+[ Back to Ruby Introduction ](./intro.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)

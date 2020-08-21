@@ -453,8 +453,6 @@ Now that we have a Garage class we can change the test to use the class name `de
 **Story:** As a developer with a TaskList with a collection of items with and without due dates and yearly recurring dates, I can list all the not completed items in order of due date and yearly dates for the current month, then the items without due dates.
 
 
-[Go to next lesson: Intro to Postgres](../sql/intro_postgres.md)
+[ Back to Ruby Inheritance ](./inheritance.md)
 
-[Back to Ruby Inheritance](./inheritance.md)
-
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-four-ruby)
