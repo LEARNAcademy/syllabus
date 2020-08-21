@@ -222,8 +222,8 @@ export default App
 - As a user, when I click the add button, I can add one colorbox that acts independently of the other colorboxes
 - As a user, when I click the remove button, I can remove one colorbox
 
-[Go to next lesson: React State with Images](./state-with-images.md)
+[ Go to next lesson: React State with Images ](./state-with-images.md)
 
-[Back to Create React App](./create-react-app.md)
+[ Back to Creating a New React Application ](./create-react-app.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)

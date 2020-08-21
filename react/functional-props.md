@@ -1,4 +1,4 @@
-# React Functional Props
+# React Functional Props - WIP
 
 ## Overview
 - Managing the internal state of a component and communicating between components with props
@@ -176,3 +176,7 @@ To connect these two functions, the last step is to make the function available 
 ## Challenge
 
 Follow the syllabus example above to create your own refactored Colorbox Challenge.
+
+
+
+[ Back to Syllabus ](../README.md#unit-three-intermediate-react)

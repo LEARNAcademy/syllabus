@@ -171,8 +171,8 @@ Here are your stories:
 - As a user, I can see a Content component that contains a list of all your classmates
 - As a user, I can see a Footer component with the names of you and your partner
 
-[Go to next lesson: Create React App](./create-react-app.md)
+[ Go to next lesson: Creating a New React Application ](./create-react-app.md)
 
-[Back to React Intro](./intro.md)
+[ Back to React Introduction ](./intro.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)

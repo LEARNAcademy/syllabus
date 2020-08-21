@@ -36,6 +36,6 @@ $ yarn start
 
 [Go to next lesson: React Props](./props.md)
 
-[Back to React State](./state.md)
+[ Back to React State ](./state.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)

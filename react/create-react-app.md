@@ -275,8 +275,8 @@ export default App
 - As a user, I can see a component with a list of your favorites
 - As a user, I can see a component containing a little blurb about the items on the list (one descriptive component per item)
 
-[Go to next lesson: React State](./state.md)
+[ Go to next lesson: React State ](./state.md)
 
-[Back to React Nested Components](./nested-components.md)
+[ Back to React Nested Components ](./nested-components.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)

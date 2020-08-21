@@ -12,4 +12,4 @@ They are also unavoidable.  Some of our components are going to be smart.  It's 
 
 ![smart vs dumb components](./assets/smart-vs-dumb-components.jpg)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-three-intermediate-react)

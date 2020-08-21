@@ -16,9 +16,7 @@ Welcome to the LEARN Syllabus! This repository is a reflection of the current st
 - [ Intro to Atom ](./tools_and_resources/atom.md)
 
 ## Unit One: Javascript Foundations
-
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
-
 1. [ JavaScript Introduction ](./javascript/intro.md)
 2. [ JavaScript Conditionals ](./javascript/conditionals.md)
 3. [ JavaScript Arrays ](./javascript/arrays.md)
@@ -32,50 +30,44 @@ This is your introduction to programming through the Javascript programming lang
 3. [ JavaScript Class Inheritance ](./javascript/class-inheritance.md)
 
 #### Additional Topics:
-
 - [ JavaScript Spread Operator ](./javascript/spread-operator.md)
 - [ JavaScript Template Literals ](./javascript/template-literals.md)
 - [ JavaScript Ternary Operator ](./javascript/ternary.md)
 
-## Unit Two: Intro to React
-
+## Unit Two: Introduction to React
 React is a powerful Javascript library used to build more complicated web applications.
-
 1. [ React Introduction ](./react/intro.md/)
-2. [ React Components ](./react/nested-components.md)
-3. [ Create React App ](./react/create-react-app.md)
+2. [ React Nested Components ](./react/nested-components.md)
+3. [ Creating a New React Application ](./react/create-react-app.md)
 4. [ React State ](./react/state.md/)
 4. [ React State with Images ](./react/state-with-images.md/)
 
 #### Additional Topics:
-- [ Component Lifecycle ](./react/component-lifecycle.md)
+- [ React Component Lifecycle ](./react/component-lifecycle.md)
 
 ## Unit Three: Intermediate React
-
 Here we explore more of what React offers and do our first multi-day project.
-
-1. [React Props](./react/props.md/)
-2. [React Functional Props](./react/functional-props.md/)
-2. [React Forms and Functional Props](./react/forms.md/)
+1. [ React Props ](./react/props.md/)
+2. [ React Functional Props ](./react/functional-props.md/)
+2. [ React Forms and Functional Props ](./react/forms.md/)
 
 #### Additional Topics:
-
-- [Smart and Dumb Components](./react/smart-and-dumb-components.md)
-- [Testing Props with Jest](./react/testing-props-with-jest.md)
+- [ Smart and Dumb Components ](./react/smart-and-dumb-components.md)
+- [ Testing Props with Jest ](./react/testing-props-with-jest.md)
 
 ## Unit Four: Ruby
 
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
 
-1. [Ruby Introduction](./ruby/intro.md)
-2. [Ruby Conditionals](./ruby/conditionals.md)
-3. [Ruby Methods](./ruby/methods.md)
-5. [Ruby Hashes](./ruby/hashes.md)
-4. [Ruby Blocks](./ruby/blocks.md)
-6. [Ruby Classes and Objects](./ruby/classes_objects.md)
-7. [Ruby Inheritance](./ruby/inheritance.md)
-8. [Ruby Testing with RSPEC](./ruby/rspec.md)
-9. [Challenge: Text Based Story Game](./ruby/textbased_story.md)
+1. [ Ruby Introduction ](./ruby/intro.md)
+2. [ Ruby Conditionals ](./ruby/conditionals.md)
+3. [ Ruby Methods ](./ruby/methods.md)
+5. [ Ruby Hashes ](./ruby/hashes.md)
+4. [ Ruby Blocks ](./ruby/blocks.md)
+6. [ Ruby Classes and Objects ](./ruby/classes_objects.md)
+7. [ Ruby Inheritance ](./ruby/inheritance.md)
+8. [ Ruby Testing with RSPEC ](./ruby/rspec.md)
+9. [ Challenge: Text Based Story Game ](./ruby/textbased_story.md)
 
 
 ## Unit Five: Intro to Postgres and Ruby on Rails Model

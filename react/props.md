@@ -240,4 +240,4 @@ Using a well thought out state tree and nested component structure, construct an
 
 [Back to React State with Images](./state-with-images.md)
 
-[Back to Syllabus](../README.md)
+[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
