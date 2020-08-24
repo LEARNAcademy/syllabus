@@ -19,9 +19,9 @@
 - [ Devise ](https://github.com/plataformatec/devise)
 - [ Devise Github Repo ](https://github.com/plataformatec/devise#getting-started)
 
-## Set Up Devise
-- $ rails new devise_app -d postgresql -T
-- $ cd devise_app
+## Set Up
+- $ rails new apartment_app -d postgresql -T
+- $ cd apartment_app
 - $ rails db:create
 - $ bundle add devise
 - $ rails generate devise:install

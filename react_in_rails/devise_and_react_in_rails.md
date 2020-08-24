@@ -61,7 +61,7 @@ The assets directory is used to store image files used in your application.
 The components directory is for helper components such as headers, footers, and buttons.
 
 **Pages**  
-The pages directory is for full views. The full view can consist of items from the assets and components directory as well a code unique to a page.
+The pages directory is for full views. The full view can consist of items from the assets and components directory as well the code unique to a page.
 
 ## Login/Logout Button
 With login status and routes in our React component, we can now add a button to log the user out or in.
@@ -112,17 +112,18 @@ class App extends React.Component {
 export default App
 ```
 
-This is good foundational code, but ultimately `App.js` is going to be in charge of "big picture" functionality like routing and fetch calls so it would make more sense to move this link to another component. 
-
-
+This is good foundational code, but ultimately `App.js` is going to be in charge of "big picture" functionality like routing and fetch calls so it would make more sense to move the sign_in and sign_out routes to another component.
 
 
 ## Challenge: Apartment App Devise with React
 As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
-
+- As a developer, I can add React components to my apartment app
+- As a developer, I ensure my app distinguishes the difference between JSON and HTML payloads in my routes
+- As a user, I can navigate to a log in page
+- As a user, I can log out
 
 [ Go to next lesson: Apartment App Challenge ](./apartment_app.md)
 
-[ Back to Apartment App Devise with React ](./devise.md)
+[ Back to Apartment App Devise Introduction ](./devise.md)
 
 [ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)
