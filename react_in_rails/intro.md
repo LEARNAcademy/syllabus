@@ -76,7 +76,7 @@ Generate a Rails controller and create the view. The controller name matches the
 - Add a file in *app/views/home* called *index.html.erb*
 - By calling the React Component in `erb` tags the component will be rendered in the browser through the Rails view
 
-**app/views/pages/index.html.erb**
+**app/views/home/index.html.erb**
 ```javascript
  <%= react_component "App" %>
 ```
