@@ -144,8 +144,8 @@ Using React and Rails to create an asynchronous full stack application with test
 ## Unit Nine: React in Rails and Authentication
 1. [ React IN Rails Introduction ](./react_in_rails/intro.md)
 2. [ React Routing IN Rails ](./react_in_rails/react_routing_in_rails.md)
-2. [ Devise Introduction ](./react_in_rails/devise.md)
-2. [ Devise and React IN Rails ](./react_in_rails/devise_and_react_in_rails.md)
+2. [ Apartment App Devise with React ](./react_in_rails/devise.md)
+2. [ Apartment App Devise with React ](./react_in_rails/devise_and_react_in_rails.md)
 4. [ Apartment App Challenge ](./react_in_rails/apartment_app.md)
 
 #### Additional Topics:

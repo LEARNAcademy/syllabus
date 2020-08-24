@@ -53,6 +53,18 @@ class App extends React.Component {
 export default App
 ```
 
+## Rails Controller and View
+Next, we need to generate a controller so that we can route the React component can be rendered in a Rails view. This is the only Rails view we will make. Everything else will come from the React components.
+- $ rails g controller Home
+- Add a file in *app/views/home* called *index.html.erb*
+- By calling the React Component in `erb` tags the component will be rendered in the browser through the Rails view
+
+**app/views/pages/index.html.erb**
+```javascript
+ <%= react_component "App" %>
+```
+Now we need to make sure we route to the appropriate file for our views.
+
 ## Rails Routes
 Create a route so the React component will be rendered in a Rails view.
 
@@ -61,17 +73,6 @@ Create a route so the React component will be rendered in a Rails view.
  Rails.application.routes.draw do
    root to: "home#index"
  end
-```
-
-## Rails Controller and View
-Generate a Rails controller and create the view. The controller name matches the route and the method called in the route must match the view file.
-- $ rails g controller Home
-- Add a file in *app/views/home* called *index.html.erb*
-- By calling the React Component in `erb` tags the component will be rendered in the browser through the Rails view
-
-**app/views/pages/index.html.erb**
-```javascript
- <%= react_component "App" %>
 ```
 
 ## Start the Rails Server

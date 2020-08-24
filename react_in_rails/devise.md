@@ -1,9 +1,10 @@
-# Devise Introduction
+# Apartment App Devise Introduction
 
 [![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
 
 ## Overview
 - A key component of web applications is the ability for a user to log in. This requires using the Devise gem to create authentication and authorization for a Rails application.
+- Before we move forward with the React portion, we will look at how Devise interacts with a Rails application.
 
 ## Learning Objectives
 - Understanding the difference between authorization and authentication
@@ -18,7 +19,7 @@
 - [ Devise ](https://github.com/plataformatec/devise)
 - [ Devise Github Repo ](https://github.com/plataformatec/devise#getting-started)
 
-### Set Up Devise
+## Set Up Devise
 - $ rails new devise_app -d postgresql -T
 - $ cd devise_app
 - $ rails db:create
@@ -27,95 +28,65 @@
 - $ rails generate devise User
 - $ rails db:migrate
 
-
-- navigate to `http://localhost:3000/users/sign_in` and see a log in page
-- navigate to `http://localhost:3000/users/sign_up` and see a sign up page
-
-### Adding mailer settings
+## Adding mailer settings
 You’ll need to set up the default URL options for the Devise mailer in each environment. In the *config/environments/development.rb* file, add the following code at the end of the previous code inside the file:
 ```
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
-### Controller Filters and Helpers
-Devise will create some helpers to use inside your controllers and views. To set up a controller with user authentication, just add this before_action (assuming your devise model is 'User'):
 
-### Add a resource
+Devise is a Rails gem that gives developers a collection of methods that create authorization and authentication. Using Devise, we can create a special model called User that gets Devise code injected into each new model instance. Just by running the setup commands we get Devise sign in and sign up forms as well as a lot of additional functionality that we will explore with the Apartment App challenge.
+
+Navigate to `http://localhost:3000/users/sign_in` and see a log in page.
+
+Navigate to `http://localhost:3000/users/sign_up` and see a sign up page.
+
+## Apartment Resource
+The Devise User model is going to have an association with the Apartment model. In this situation, the User will have many apartments and the Apartments will belong to a User.
 ```
-$ rails generate resource Bike brand:string model_year:integer model:string user_id:integer
+$ rails g resource Apartment street:string city:string state:string manager:string email:string price:string bedrooms:integer bathrooms:integer pets:string user_id:integer
 $ rails db:migrate
 ```
 
+## User and Apartment Associations
+The Apartments will belong to a User and a User will have many apartments.
 
-### Set root to "bikes#index"
-**config/routes.rb**
+**app/models/apartment.rb**
 ```ruby
-1	Rails.application.routes.draw do
-2	  resources :bikes
-3	  devise_for :users
-4	  root to: 'bikes#index'
-5	end
+class Apartment < ApplicationRecord
+  belongs_to :user
+end
 ```
 
-### Fire up application and make sure its working
-
-```
-rails s
-```
-
-### Protect All Bike Routes
-
-**app/controllers/bikes_controller.rb**
-```ruby
-class BikesController < ApplicationController
-  before_action :set_bike, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-```
-
-### Assign New Bikes to current_user
-
-Associate Bikes to Users:
-**app/models/bike.rb**
-```ruby
-	class Bike < ApplicationRecord
-	  belongs_to :user
-	end
-```
-
-### Assign Users to Bikes:
 **app/models/user.rb**
 ```ruby
-	class User < ApplicationRecord
-	  # Include default devise modules. Others available are:
-	  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-	  devise :database_authenticatable, :registerable,
-	         :recoverable, :rememberable, :validatable
-
-	  has_many :bikes
-	end
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  has_many :apartments
+end
 ```
-Then, in the create method of the controller, we can assign it to the current user with the help of a Devise helper method.
 
-**app/controllers/bikes_controller.rb**
+## Devise Code
+Looking around our app, we can see that Devise gets added to a few different spots. 1) The User model, which we already looked at. 2) The controller. This code is predominantly behind the scenes. 3) The routes. We can see that we have a resource for apartments and Devise routes for users.
+
+**config/routes.rb**
 ```ruby
-	  def create
-	    @bike = current_user.bikes.new(bike_params)
-
-	    respond_to do |format|
-	      if @bike.save
-	        format.html { redirect_to @bike, notice: 'Bike was successfully created.' }
-	        format.json { render :show, status: :created, location: @bike }
-	      else
-	        format.html { render :new }
-	        format.json { render json: @bike.errors, status: :unprocessable_entity }
-	      end
-	    end
-	  end
+Rails.application.routes.draw do
+  resources :apartments
+  devise_for :users
+end
 ```
 
-### 10) Now when we test it out, we can see in the console that Bikes are assigned to the user
+## Challenge: Apartment App Devise
+As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
 
+- As a developer, I can create a Rails application with Devise functionality
+- As a developer, I can create an Apartment resource with the appropriate attributes
+- As a developer, I can create an association between User and Apartments
 
-[ Go to next lesson: Devise and React IN Rails ](./devise_and_react_in_rails.md)
+[ Go to next lesson: Apartment App with React Components ](./devise_and_react_in_rails.md)
 
 [ Back to React Routing IN Rails ](./react_routing_in_rails.md)
 

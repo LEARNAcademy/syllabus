@@ -13,20 +13,20 @@ The backend app has the primary responsibility for maintaining security in an ap
 
 Authentication is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password; this process is called signing in or logging in.
 
-<a href="https://en.wikipedia.org/wiki/Authentication" target="blank">Wikipedia: Authentication</a>
+[ Authentication ](https://en.wikipedia.org/wiki/Authentication)
 
 ## Authorization
 
 Authorization is process of giving permission to an entity to access a resource. This is often done after an entity has been authenticated.
 
 For instance:
-* Logging into a mail server, gives you access to your email but not others' emails.
-* Logging into Google Drive gives me permission to read some files and permission to edit other files.
-* When I am on the internet in the US, I can watch certain movies on Netflix, but not when I am outside the US.
+- Logging into a mail server, gives you access to your email but not others' emails.
+- Logging into Google Drive gives me permission to read some files and permission to edit other files.
+- When I am on the internet in the US, I can watch certain movies on Netflix, but not when I am outside the US.
 
 The last instance shows an authorization scheme that is not dependent on au**then**tication.
 
-<a href="https://en.wikipedia.org/wiki/Authorization" target="blank">Wikipedia: Authorization</a>
+[ Authorization ](https://en.wikipedia.org/wiki/Authorization)
 
 ## Cookie Based Authentication
 There are many strategies for building a secure single page web application.  In class, we're going to use the excellent Devise gem, and the power of Rails to build a Cookie based system.  In your career, you'll also run across systems built on OAuth, JWT, and others.  All have their strengths and vulnerabilities.  Cookie based systems have been around for a long time, are battle tested, and have the additional benefit of being simpler to stand up.  In security and authentication systems, simpler is often better because there are fewer complexities in the code for bugs and thus vulnerabilities to hide.

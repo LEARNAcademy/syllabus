@@ -237,7 +237,7 @@ export default App
 ## Challenge: Single Page Application
 Follow these instructions to create your own React in Rails application with Reactstrap and React-router.
 
-[ Go to next lesson: Devise Introduction ](./devise.md)
+[ Go to next lesson: Apartment App Devise Introduction ](./devise.md)
 
 [ Back to React IN Rails Introduction ](./intro.md)
 
