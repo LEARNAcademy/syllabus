@@ -75,7 +75,7 @@ To keep the files organized, it is a good practice to create three directories i
 The assets directory is used to store image files used in your application.
 
 **Components**  
-The components directory is for pieces of reusable code such as headers, footers, and buttons.
+The components directory is for helper components such as headers, footers, and buttons.
 
 **Pages**  
 The pages directory is for full views. The full view can consist of items from the assets and components directory as well a code unique to a page.

@@ -3,7 +3,7 @@
 [![YouTube](http://img.youtube.com/vi/ypXAYSn4PqY/0.jpg)](https://www.youtube.com/watch?v=ypXAYSn4PqY)
 
 ## Overview
-Using the Devise gem to create authentication and authorization for a React in Rails application
+- A key component of web applications is the ability for a user to log in. This requires using the Devise gem to create authentication and authorization for a Rails application.
 
 ## Learning Objectives
 - Understanding the difference between authorization and authentication
@@ -14,18 +14,17 @@ Using the Devise gem to create authentication and authorization for a React in R
 - authorization
 
 ## Additional Resources
-- [Authentication vs Authorization](./authentication-vs-authorization.md)
-- [Devise](https://github.com/plataformatec/devise)
-- [Devise Github Repo](https://github.com/plataformatec/devise#getting-started)
-
+- [ Authentication vs Authorization ](./authentication-vs-authorization.md)
+- [ Devise ](https://github.com/plataformatec/devise)
+- [ Devise Github Repo ](https://github.com/plataformatec/devise#getting-started)
 
 ### Set Up Devise
 - $ rails new devise_app -d postgresql -T
 - $ cd devise_app
+- $ rails db:create
 - $ bundle add devise
 - $ rails generate devise:install
 - $ rails generate devise User
-- $ rails db:create
 - $ rails db:migrate
 
 
@@ -33,46 +32,19 @@ Using the Devise gem to create authentication and authorization for a React in R
 - navigate to `http://localhost:3000/users/sign_up` and see a sign up page
 
 ### Adding mailer settings
-You’ll need to set up the default URL options for the Devise mailer in each environment. In the config/environments/development.rb file, add the following code at the end of the previous code inside the file:
-```config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }```
+You’ll need to set up the default URL options for the Devise mailer in each environment. In the *config/environments/development.rb* file, add the following code at the end of the previous code inside the file:
+```
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+```
 ### Controller Filters and Helpers
-
 Devise will create some helpers to use inside your controllers and views. To set up a controller with user authentication, just add this before_action (assuming your devise model is 'User'):
 
 ### Add a resource
+```
+$ rails generate resource Bike brand:string model_year:integer model:string user_id:integer
+$ rails db:migrate
+```
 
-```
-- $ rails generate resource Bike brand:string model_year:integer model:string user_id:integer
-- $ rails db:migrate
-```
-
-```
- app
- ├── assets
- ├── channels
- ├── controllers
- │   ├── application_controller.rb
- │   ├── bikes_controller.rb
- │   └── concerns
- ├── helpers
- │   ├── application_helper.rb
- │   └── bikes_helper.rb
- ├── jobs
- ├── mailers
- ├── models
- │   ├── application_record.rb
- │   ├── bike.rb
- │   ├── concerns
- │   └── user.rb
- └── views
-     ├── bikes
-     └── layouts
-         ├── application.html.erb
-         ├── mailer.html.erb
-         └── mailer.text.erb
-
- 13 directories, 12 files
-```
 
 ### Set root to "bikes#index"
 **config/routes.rb**
@@ -94,9 +66,9 @@ rails s
 
 **app/controllers/bikes_controller.rb**
 ```ruby
-1	class BikesController < ApplicationController
-2	  before_action :set_bike, only: [:show, :edit, :update, :destroy]
-3	  before_action :authenticate_user!
+class BikesController < ApplicationController
+  before_action :set_bike, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 ```
 
 ### Assign New Bikes to current_user

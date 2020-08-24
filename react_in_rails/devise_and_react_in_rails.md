@@ -1,5 +1,5 @@
 # Devise and React IN Rails
-
+WIP
 ## Video: Devise and React
 [![YouTube](http://img.youtube.com/vi/96Kd2dCsXm8/0.jpg)](https://www.youtube.com/watch?v=96Kd2dCsXm8)
 
@@ -25,11 +25,9 @@ This example combines what we've learned about Devise with what we've learned ab
 
 ## Add React
 - $ bundle add react-rails
-- $ bundle install
 - $ rails webpacker:install
 - $ rails webpacker:install:react
 - $ rails generate react:install
-- $ yarn install
 
 
 ### Generate a New React Component
@@ -38,17 +36,17 @@ This example combines what we've learned about Devise with what we've learned ab
 
 ### Add a Homepage
 - $ rails g controller Home
-
+- ?? Add index here?
 ### Add a Route to the Homepage
 **config/routes.rb**
 ```ruby
 Rails.application.routes.draw do
   devise_for :users
-  get '*path', to: 'home#root', constraints: ->(request){ request.format.html? }
-  root to: 'home#root'
+  get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
+  root to: 'home#index'
 end
 ```
-This route directs all HTML traffic to the 'home#root' route, but ignores non HTML traffic, like our API requests will be.  That is perfect to interact with the React router eventually if and when that gets added to your app.
+This route directs all HTML traffic to the 'home#index' route, but ignores non HTML traffic, like our API requests will be.  That is perfect to interact with the React router eventually if and when that gets added to your app.
 
 ### Add a Homepage and React Component
 Next, we'll add a homepage view, and add our react component to it.  We want to pass three pieces of information down from Rails into our React App.
@@ -56,7 +54,7 @@ Next, we'll add a homepage view, and add our react component to it.  We want to 
 2) Relative URL of login screen (from Devise)
 3) Relative URL of logout endpoint (also from Devise)
 
-**app/views/pages/homepage.html.erb**
+**app/views/home/index.html.erb**
 ```
 <%= react_component("App", {
     logged_in: user_signed_in?,

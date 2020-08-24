@@ -8,36 +8,29 @@
 - Adding React components inside a Rails project simplifies the flow of information from the database to the view
 
 ## Learning Objectives
-- Understanding how to set up an environment that will serve React components inside a Rails application
+- Conceptualizing how to set up an environment that will serve React components inside a Rails application
 - Rendering a single React component in a Rails `html.erb` view
 
 ## Vocabulary
 - Asset Pipeline
 - webpacker
 
-## Useful Commands
-- $ spring stop
-- $ bundle install
-
 ## Additional Resources
-- <a href="https://github.com/reactjs/react-rails" target="blank">React-Rails project docs</a>
+- [ React-Rails project docs ](https://github.com/reactjs/react-rails)
 
-
-### Set Up
+## Set Up
 The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
 - $ rails new hello_world -d postgresql -T
 - $ cd hello_world
 - $ rails db:create
 - $ bundle add react-rails
-- $ bundle install
 - $ rails webpacker:install
 - $ rails webpacker:install:react
 - $ rails generate react:install
-- $ yarn install
 
 
-### Step 1: React Component
-Create a React component in the Rails application using a generate command
+## React Component
+Create a React component in the Rails application using a generate command.
 - $ rails g react:component App
 - The install commands created a directory in *app* called *javascript*
 - In *app/javascript* there will be another directory called *components* that will contain our *App* React component with some basic code
@@ -60,8 +53,8 @@ class App extends React.Component {
 export default App
 ```
 
-### Step 2: Rails Routes
-Create a route so the React component will be rendered in a Rails view
+## Rails Routes
+Create a route so the React component will be rendered in a Rails view.
 
 **config/routes.rb**
 ```ruby
@@ -70,7 +63,7 @@ Create a route so the React component will be rendered in a Rails view
  end
 ```
 
-### Step 3: Rails Controller and View
+## Rails Controller and View
 Generate a Rails controller and create the view. The controller name matches the route and the method called in the route must match the view file.
 - $ rails g controller Home
 - Add a file in *app/views/home* called *index.html.erb*
@@ -81,7 +74,7 @@ Generate a Rails controller and create the view. The controller name matches the
  <%= react_component "App" %>
 ```
 
-### Step 4: Start the Rails server
+## Start the Rails Server
 - $ rails s
 
 ## Challenge: Hello World
