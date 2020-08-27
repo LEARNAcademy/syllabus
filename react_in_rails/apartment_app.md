@@ -47,6 +47,4 @@ As a developer, I have been commissioned to create an application where a user c
 - Is everything secure?
 
 
-[ Back to Devise and React IN Rails ](./devise_and_react_in_rails.md)
-
 [ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

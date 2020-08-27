@@ -156,8 +156,8 @@ Using React and Rails to create an asynchronous full stack application with test
 ## Unit Ten: Capstone Project, MVP
 1. [ Capstone Schedules ](./capstone/schedule.md)
 1. [ Capstone Requirements ](./capstone/requirements.md)
-1. [ ActiveStorage ](./active-storage/README.md)
-1. [ Heroku ](./heroku.md)
+1. [ ActiveStorage ](./capstone/active-storage/README.md)
+1. [ Heroku ](./capstone/heroku.md)
 
 #### Additional Topics:
 - [ Rails JBuilder ](./jbuilder.md)
