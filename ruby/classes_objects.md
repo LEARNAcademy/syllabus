@@ -18,7 +18,7 @@ You can find out the class of something by calling the .class method.
 ### Making Your Own Class
 Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular).
 
-In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance varible being locally scoped to the class it belongs to. Becuase of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to _set_ the value of an instance variable. The purpose of a `get` method is to _get_ or _access_ the value of an instance variable.
+In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance variable being locally scoped to the class it belongs to. Becuase of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to _set_ the value of an instance variable. The purpose of a `get` method is to _get_ or _access_ the value of an instance variable.
 
 ```RUBY
 class Person
