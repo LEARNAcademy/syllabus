@@ -240,7 +240,7 @@ Also notice that the variables are assigned in order. As in, the first variable 
 
 - Write the code that will remove the first number from the array.
 
-- Write the code that will add the number 0 to the beginning of the array without altering the original array.
+- Write the code that will add the number 0 to the beginning of the array without altering the original array. HINT: it's not `.unshift`. You'll have to be creative! ;)
 
 3. **Consider this variable:**
 ```javascript
