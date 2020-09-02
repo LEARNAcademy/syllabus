@@ -166,7 +166,7 @@ Using React and Rails to create an asynchronous full stack application with test
 
 #### Additional Topics:
 - [ Rails JBuilder ](./capstone/jbuilder.md)
-- [ Rails has_many_through ](./capstone/Rails_has_many_through/README.md)
+- [ Rails has_many_through ](./capstone/has_many_through/README.md)
 
 
 ## Unit Eleven: Capstone Project, Icebox
