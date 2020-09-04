@@ -19,6 +19,11 @@ Welcome to the LEARN Syllabus! This repository is a reflection of the current st
 
 
 
+## Vocabulary
+- [ Ongoing Vocab List ](./vocabulary.md)
+
+
+
 ## Unit One: Javascript Foundations
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
 1. [ JavaScript Introduction ](./javascript/intro.md)
@@ -161,7 +166,7 @@ Using React and Rails to create an asynchronous full stack application with test
 
 #### Additional Topics:
 - [ Rails JBuilder ](./capstone/jbuilder.md)
-- [ Rails has_many_through ](./capstone/Rails_has_many_through/README.md)
+- [ Rails has_many_through ](./capstone/has_many_through/README.md)
 
 
 ## Unit Eleven: Capstone Project, Icebox
