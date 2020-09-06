@@ -1,6 +1,6 @@
 # Capstone Requirements
 
-## Project Requirements
+### Project Requirements
 - React inside of Rails
 - Minimum of one external API
   - Google Maps - https://github.com/LEARNAcademy/google-map-react
@@ -16,21 +16,21 @@
 - Team name
 - "About Us" page
 
-## Project Stretch Goals
+### Project Stretch Goals
 - Responsive Design (include a phone view for example)
 - Accessible design features
 - Higher test coverage
 - Adding Google analytics
 - Continuous Integration
 
-## Additional Technologies
+### Additional Technologies
 - Gmail account / Google docs
 - New GitHub organization (for everyone to share)
 - Slack channel - invite all instructors and admin staff
 - Heroku Account
 - Trello or GitHub Projects board for project management
 
-## Things to Think About
+### Things to Think About
 - Step out of your comfort zone
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
