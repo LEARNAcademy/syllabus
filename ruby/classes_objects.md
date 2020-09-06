@@ -1,12 +1,31 @@
 # Ruby Classes and Objects
 
+## Overview
+- In Ruby, everything belongs to a class. We can also create custom classes that hold data and behavior.
+
+## Learning Objectives
+- Using the correct syntax to create a class and an instance of the class (object)
+- Identifying the purpose of the initialize method
+- Identifying the difference between the *getter* and *setter* methods
+- Creating instance variables with correct syntax and referencing the variable's value correctly
+
+## Vocabulary
+- Instance variables
+- Getter and setter methods
+- `initialize` method
+
+## Set Up
+- Create a file with the extension `.rb`
+- In terminal run `ruby` followed by the file name
+
+## Ruby Classes
 In Ruby, all values are objects and all objects belong to a class. The class defines what data and behavior exist in the object.
 
 Note that this class concept is not (directly) related to JavaScript's class. A Ruby class is most similar in JavaScript to a prototype, but Ruby classes are a bit different.
 
 You can find out the class of something by calling the .class method.
 
-```RUBY
+```ruby
 > 1.class
 # Fixnum
 > 1.0.class
@@ -15,12 +34,12 @@ You can find out the class of something by calling the .class method.
 # String
 ```
 
-### Making Your Own Class
+## Making Your Own Class
 Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular).
 
-In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance variable being locally scoped to the class it belongs to. Becuase of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to _set_ the value of an instance variable. The purpose of a `get` method is to _get_ or _access_ the value of an instance variable.
+In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance variable being locally scoped to the class it belongs to. Because of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to *set* the value of an instance variable. The purpose of a `get` method is to *get* or *access* the value of an instance variable.
 
-```RUBY
+```ruby
 class Person
 
   def set_name(name)
@@ -43,30 +62,30 @@ person_one.set_name('Jon Snow')
 
 Then you can call the method that contains the variable `@name`:
 
-```RUBY
+```ruby
 person_one.get_name
 # 'Jon Snow'
 ```
 
-### Instance Variables
-The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable @name belongs to class Person. Each "instance" of the class `Person` has it's own set of instance variables independent of other `Person` objects.
+## Instance Variables
+The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable `@name` belongs to class Person. Each "instance" of the class `Person` has its own set of instance variables independent of other `Person` objects.
 
 You can't just access an instance variable from outside of an object, as you can with variables in JavaScript. Think local scope.
 
-```RUBY
+```
 irb(main):> person_one.name
 # returns an error
 NoMethodError (undefined method 'name' for #<Person:0x00007f812a1408b8 @name="Jon Snow">)
 ```
 
-### Initialization
+## Initialization
 Finally, you will often want something to happen at the time an object is created. Perhaps it has a property that is an array, and you want to ensure that it always starts as an empty array.
 
-The whole point of initialize is to allow you to create objects with arguments. If you give your class an initialize method, it will get executed immediately when an instance of the class is created. And _if_ it takes any arguments, you'll be required to give those when creating an instance.
+The whole point of initialize is to allow you to create objects with arguments. If you give your class an initialize method, it will get executed immediately when an instance of the class is created. And *if* it takes any arguments, you'll be required to give those when creating an instance.
 
 A class with an initialize method:
 
-```RUBY
+```ruby
 class Jedi
 
   # Create in initialize method that gives all new instances of Jedi the title "Knight"
@@ -91,7 +110,7 @@ end
 
 Here's another example. By creating a new instance of the Fruit class, we immediately initialize an instance variable with an empty array called `@vitamins`, which can have elements pushed to it:
 
-```RUBY
+```ruby
 class Fruit
 
   def initialize
@@ -120,7 +139,7 @@ apple.vitamins
 
 Now let's create a class that requires an argument:
 
-```RUBY
+```ruby
 class SquareFoot
 
   def initialize(height, width)
@@ -146,7 +165,7 @@ Arguments passed to a class are not automatically held anywhere. In order to sav
 
 One more example. Again, there will be an error if the `.new` method does not have an argument.
 
-```RUBY
+```ruby
 class Animal
 
   def initialize tude
@@ -169,14 +188,14 @@ kitten = Animal.new
 # "sweet"
 ```
 
-## OBJECT ORIENTED PROGRAMMING IN RUBY
+## Object Oriented Programming in Ruby
 We've been talking throughout this class about how everything in Ruby is an object, but it can be difficult to visualize what that means when it comes to building a program. Let's take a moment with your Car challenge to take apart how Ruby's object-oriented behavior actually impacts you as a programmer.
 
 **Given Classes**
 
 Again, every object in Ruby belongs to a class. Another way of saying: each object is an instance of class. Once you know what class the object belongs to (by using the `.class` method), it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
 
-```RUBY
+```ruby
 hello.class
 1.class
 1.0.class
@@ -184,9 +203,9 @@ true.class
 Class.class
 ```
 
-Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like @year, @make, and @model -- are what your object is composed of. The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
+Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like `@year`, `@make`, and `@model` -- are what your object is composed of. The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
 
-```RUBY
+```ruby
 class Vehicle
 
   def initialize(year, make, model)
@@ -211,20 +230,11 @@ end
 
 
 ## Challenge: Tasklist
-
-### User Stories
-
-**Story:**	As a developer, I can create a Task.
-
-**Story:**	As a developer, I can give a Task a title and retrieve it.
-
-**Story:**	As a developer, I can give a Task a description and retrieve it.
-
-**Story:**	As a developer, I can mark a Task done.
-
+**Story:**	As a developer, I can create a Task.  
+**Story:**	As a developer, I can give a Task a title and retrieve it.  
+**Story:**	As a developer, I can give a Task a description and retrieve it.  
+**Story:**	As a developer, I can mark a Task done.  
 **Story:**	As a developer, when I print a Task that is done, its status is shown.
-
-
 
 
 [ Go to next lesson: Ruby Inheritance ](./inheritance.md)
