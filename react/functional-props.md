@@ -1,4 +1,4 @@
-# React Functional Props - WIP
+# React Functional Prop
 
 ## Overview
 - Managing the internal state of a component and communicating between components with props
