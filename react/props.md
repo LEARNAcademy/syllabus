@@ -125,7 +125,7 @@ Notice very little has changed but the potential of our application shifts drama
 With a little refactoring and DRYing up our code using a programmatic approach, this can become even more dynamic.
 
 **src/App.js**
-```javascript
+```
 import React, { Component } from 'react'
 import GreetPerson from './components/GreetPerson'
 
@@ -236,8 +236,8 @@ Using a well thought out state tree and nested component structure, construct an
 - As a user, I can click a restart button that clears my roll log
 
 
-[Go to next lesson: React Forms and Functional Props](./forms.md)
+[ Go to next lesson: React Functional Props ](./functional-props.md)
 
-[Back to React State with Images](./state-with-images.md)
+[ Back to React State with Images ](./state-with-images.md)
 
 [ Back to Syllabus ](../README.md#unit-three-intermediate-react)

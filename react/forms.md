@@ -361,6 +361,6 @@ This code will prevent the form from submitting the form AND from refreshing the
 ![Mad Libs](./assets/madlibs.png)
 
 
-[Back to React State and Props](./state-and-props.md)
+[ Back to React Functional Props ](./functional-props.md)
 
 [ Back to Syllabus ](../README.md#unit-three-intermediate-react)
