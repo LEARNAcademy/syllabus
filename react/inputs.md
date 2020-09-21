@@ -24,8 +24,8 @@
 
 #### Creating a new React app:
 ```
-$ yarn create react-app app-name
-$ cd app-name
+$ yarn create react-app listening-robot
+$ cd listening-robot
 $ yarn start
 ```
 
