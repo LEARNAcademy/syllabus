@@ -55,9 +55,10 @@ React is a powerful Javascript library used to build more complicated web applic
 
 ## Unit Three: Intermediate React
 Here we explore more of what React offers and do our first multi-day project.
-1. [ React Props ](./react/props.md/)
-2. [ React Functional Props ](./react/functional-props.md/)
-2. [ React Forms and Functional Props ](./react/forms.md/)
+1. [ React Props ](./react/props.md)
+2. [ React Functional Props ](./react/functional-props.md)
+2. [ React Inputs and Events ](./react/inputs.md)
+2. [ React Forms and Functional Props ](./react/forms.md)
 
 #### Additional Topics:
 - [ Smart and Dumb Components ](./react/smart-and-dumb-components.md)
