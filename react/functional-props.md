@@ -187,7 +187,7 @@ As a developer, I am tasked with creating a food ordering application in React. 
 - As a user, I can see an image of my food selection on the menu
 
 
-[ Go to next lesson: React Forms ](./forms.md)
+[ Go to next lesson: React Inputs and Events ](./inputs.md)
 
 [ Back to React Props ](./props.md)
 
