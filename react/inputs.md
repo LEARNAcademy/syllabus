@@ -13,6 +13,7 @@
 
 ## Vocabulary
 - DOM event, often shortened to `e`
+- Event listeners
 - onChange
 - HTML input tags
 - Input attributes
