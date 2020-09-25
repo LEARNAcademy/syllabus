@@ -4,361 +4,252 @@
 [![YouTube](http://img.youtube.com/vi/vBpjxASFhPo/0.jpg)](https://www.youtube.com/watch?v=vBpjxASFhPo)
 
 ## Overview
-- Adding a form to a component that will update state
+- In this section, we will explore how to add a form to its own component in React.
+- After the user fills out the form, we will need to transfer the data from a from component to `App.js`.
+- We will use conditional rendering to control the output of submitted form data.
 
 ## Learning Objectives
-- Adding input fields
-- Creating a method to handle DOM event changes (what the user types)
-- Creating a method to set state with the user input
+- Creating forms in HTML/JSX
+- Creating a handler method to manage DOM event changes (what the user types)
+- Creating a method to pass information from a child to a parent component
 
 
 ## Vocabulary
-- state
-- props
-- input, value, onChange
-- dumb/display component
-- smart/logic component
-- DOM event, often shortened to `e`
+- Input tags
+- Value attribute
+- onChange attribute
+- Name attribute
+- Handler methods
+- Conditional rendering
+- Event, often shortened to `e`
 
 #### Creating a new React app:
 ```
-$ yarn create react-app sample-app
-$ cd sample-app
+$ yarn create react-app madlibs
+$ cd madlibs
 $ yarn start
 ```
 
-## Step 1
-Let's take a closer look at the difference between component state and props by adding an input element to the page.
+### Forms
+`<form>` is an HTML/JSX tag that wraps a collection of user inputs. Forms are a very common tool that allows developers to interact with a user. Managing form data appropriately is an important part of development.
 
-We'll create a smart component that holds state and passes information to a child component called `Greeter`.
+Forms are often held in their own component but the data that is collected needs to be accessed by other parts of the application. We will explore how to manage a form and manage the data flow between components.
 
-**src/App.js**
+In this example, we will build out a form that will take user information for a pet. The form will be in the pet component and will pass the information to `App.js` after all the data has been collected.
+
+`<form>` will be the outer most tag and will wrap a series of input tags. Another tag that will accompany each input is a label tag. `<label>` is exactly what it sounds like. It is a tag that provides context to each input.
+
+**src/components/Pet.js**
 ```javascript
 import React, { Component } from 'react'
-// importing the Greeter component
-import Greeter from './components/Greeter'
 
-class App extends Component{
-  constructor(props){
-    super(props)
-    // creating a state object that contains a key of "name" and a value of "Bob"
-    this.state = {
-      name: "Bob"
-    }
-  }
-
+class Pet extends Component{
   render(){
     return(
-      <div>
-        {/* <Greeter /> is getting passed the information from the state object as props called "name" */}
-        <Greeter
-          name={ this.state.name }
+      <React.Fragment>
+      <form>
+        <label>Name of pet:</label>
+        <input
+          type="text"
         />
-      </div>
+        <br />
+        <label>Type of pet:</label>
+        <input
+          type="text"
+        />
+        <br />
+        <label>Age of pet:</label>
+        <input
+          type="text"
+        />
+        <br />
+      </form>
+      </React.Fragment>
     )
   }
 }
 export default App
 ```
 
-## Step 2
-Now the child component `Greeter` will display the name value passed as props from the parent component. This component is `display or dumb`. It accepts a greeting in props, and displays it.
+### Input Attributes
+The next step is adding attributes to each input tag. We need to add a `value` attribute, an `onChange` attribute, and a `name` attribute. These attributes will be the first step in transferring information from the input field to our application.
 
-**src/components/Greeter.js**
+**Value**  
+`value` describes what is entered into the input field. It plays a role in the `handleChange` method as well as the connection to our state object.
+
+**onChange**  
+`onChange` is an event listener that gets assigned a handler method. `onChange` will automatically pass an event object to the handler method.
+
+**Name**  
+`name` also plays a role in the the `handleChange` method. It will allow this method to be dynamic. The assignment of each `name` attribute must exactly match its corresponding state key.
+
+**src/components/Pet.js**
 ```javascript
 import React, { Component } from 'react'
 
-// Greeter is a dumb/display component that does not hold state
-class Greeter extends Component {
-  render() {
-    // We are passing the state object value as props called "name" <name={ this.state.name }> from the parent App.js
-    return (
-      <h1>Hello, { this.props.name }! </h1>
-    )
-  }
-}
-
-export default Greeter
-```
-
-## Alternative Dumb Component
-**src/components/Greeter.js**
-```javascript
-import React from 'react'
-
-// Greeter is a dumb/display component that does not hold state
- const Greeter = (props) => {
-    // We are passing the state object value as props called "name" <name={ this.state.name }> from the parent App.js
-    return (
-      <h1>Hello, { props.name }! </h1>
-    )
-}
-
-export default Greeter
-```
-In the browser we will see: `Hello, Bob!`
-
-## Step 3
-To increase the functionality of our app, let's add a way for our user to enter their name rather than having a hardcoded name in state. To do this we need a text input and a method that will update state as our user types in the input.
-
-**src/App.js**
-```javascript
-import React, { Component } from 'react'
-// importing the Greeter component
-import Greeter from './components/Greeter'
-
-class App extends Component{
-  constructor(props){
-    super(props)
-    // changing the state object to hold an empty string
-    this.state = {
-      name: ""
-    }
-  }
-
-  handleChange = (event) => {
-    // a method that will take the value from an input and save it in the state key "name"
-    this.setState({ name: event.target.value })
-  }
-
-  render() {
-    return (
-      <div>
-        {/* adding a JSX tag <input /> that will call the handleChange method and pass the value of the state object */}
+class Pet extends Component{
+  render(){
+    return(
+      <React.Fragment>
+      <form>
+        <label>Name of pet:</label>
         <input
-          value={ this.state.name }
+          type="text"
+          name="petName"
+          value={ this.state.petName }
           onChange={ this.handleChange }
         />
-        {/* same information being passed as props to <Greeter /> */}
-        <Greeter
-          name={ this.state.name }
+        <br />
+        <label>Type of pet:</label>
+        <input
+          type="text"
+          name="petType"
+          value={ this.state.petType }
+          onChange={ this.handleChange }
         />
-      </div>
+        <br />
+        <label>Age of pet:</label>
+        <input
+          type="number"
+          name="petAge"
+          value={ this.state.petAge }
+          onChange={ this.handleChange }
+        />
+        <br />
+      </form>
+      </React.Fragment>
     )
   }
 }
 export default App
 ```
-In our example, the JSX input tag takes two attributes:
-  - `value` of our state object
-  - `onChange` that calls a method called handleChange that will collect the information entered in the input and update state!
 
-**Notice** that for the input, we need both a `value` and `onChange`. `<input>` has its own internal state, so we need to use the props `value` and `onChange` to pass the proper context into it. The input is re-rendered every time the state of the component changes.
+### State in the Form Component
+In React applications, we typically want to keep our logic (or smart) components high up in the application tree, meaning as close to the root directory as possible. This keeps the "decision making" in the app limited and reduces conflicting or unexpected behaviors. However, there are times when having state in a component can allow us to more effectively manage data flow. This is the case with a form. We need to bundle up our form data and be able to pass it around as a single entity.
 
-The information from the input is passed to the child `Greeter` component.
+To create the single entity for our form, we can create a nested object inside a single key called form. Then when we reference `this.state.form` we get back an object containing all of our form data. Note, the keys of the form object are *exactly* the same as the `name` attribute on each input.
 
-## Step 4
-We can change the user output by adding a method in the `Greeter` component.
 
-**src/components/Greeter.js**
-```javascript
-import React, { Component } from 'react'
-
-class Greeter extends Component {
-  // Greeter is a dumb/display component that does not hold state
-
-  capitalizer = (userInput) => {
-    // a display component can have its own methods that act on the information being passed as props
-    return userInput.toUpperCase()
-  }
-
-  render() {
-    return (
-      // calling a method and passing the information from the input
-      <h1>Hello, { this.capitalizer(this.props.name) }! </h1>
-    )
-  }
-}
-
-export default Greeter
+**src/components/Pet.js**
 ```
-## Alternate Smart Component (passing methods to dumb components)
-**src/App.js**
-```javascript
 import React, { Component } from 'react'
-// importing the Greeter component
-import Greeter from './components/Greeter'
 
-class App extends Component{
-    constructor(props){
-      super(props)
-      // changing the state object to hold an empty string
-      this.state = {
-        name: ""
+class Pet extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      form: {
+        petName: "",
+        petType: "",
+        petAge: ""
       }
     }
-
-    handleChange = (event) => {
-      // a method that will take the value from an input and save it in the state key "name"
-      this.setState({ name: event.target.value })
-    }
-
-    capitalizer = (userInput) => {
-        // a display component can have its own methods that act on the information being passed as props
-        return userInput.toUpperCase()
-      }
-
-    render() {
-      return (
-        <div>
-          {/* adding a JSX tag <input /> that will call the handleChange method and pass the value of the state object */}
-          <input
-            value={ this.state.name }
-            onChange={ this.handleChange }
-          />
-          {/* same information being passed as props to <Greeter /> */}
-          <Greeter
-            name={ this.state.name } capitalizer={this.capitalizer}
-          />
-        </div>
-      )
-    }
   }
-  export default App
-  ```
+```
+### onChange Handler Method
+The next step is connecting the form to the state object. This is done with a handler method that is called by the `onChange` attribute.
 
-## Alternate dumb component (using inherited methods)
-**src/components/Greeter.js**
+The handler method is needs to do a lot of heavy lifting. It is going to be called on every input field and needs to update the appropriate item in state. We can do this dynamically using the name attribute.
+
+First, we will destructure form out of state. Then we can use bracket notation to dynamically access the key of each item in the form object and assign it to the value the user is typing in that particular input field.
+
+**src/components/Pet.js**
 ```javascript
-import React from 'react'
-
-const Greeter = (props) => {
-  // Greeter is a dumb/display component that does not hold state
-
-    return (
-      // calling a method and passing the information from the input
-      <h1>Hello, { props.capitalizer(props.name) }! </h1>
-    )
+handleChange = (e) => {
+  const { form } = this.state
+  form[e.target.name] = e.target.value
+  this.setState({ form: form })
 }
-
-export default Greeter
 ```
 
-## Step 5
+### Submit
+Now that we have passed the user input into state, we need to create an action that will pass all the form data to `App.js`. We can add another input to the form that will be the type *submit*. Our input will appear to the user as a button with an `onClick` event listener that will call a handler method.
 
-As our app grows, we'll likely want to move the `<input />` into its own component.
+**src/components/Pet.js**
+```javascript
+<input
+  type="submit"
+  value="Submit Form"
+  onClick={ this.handleSubmit }
+/>
+```
+
+We can define the handler method, but before we go much further we need to switch gears and head over to `App.js`.
+
+**src/components/Pet.js**
+```javascript
+handleSubmit = () => {
+  // pending
+}
+```
+
+### Form in App.js
+In this example, `App.js` is the brains of the operation. After we collect the data from our form component we need to pass it to `App.js`. In order to get the information from a child component back to `App.js`, we need to create a method in `App.js` that can be called in the form component. This method will accept the form object from state in `Pet.js` as an argument and set it to state in `App.js`.
 
 **src/App.js**
-```javascript
-import React, { Component } from 'react'
-// importing the Greeter component
-import Greeter from './components/Greeter'
-// importing the NameInput component that we are about to create
-import NameInput from './components/NameInput'
-
+```
 class App extends Component{
   constructor(props){
     super(props)
-    // state object stays the same
     this.state = {
-      name: ""
+      form: null
     }
   }
 
-  updateName = (name) => {
-    // this method is passed as props to <NameInput /> so the value from the child component can be passed back "up river" to the parent App.js
-    this.setState({ name: name })
+  handleFormSubmit = (newPet) => {
+    this.setState({ form: newPet })
   }
-
-  render() {
-    return (
-      <div>
-        {/* <Greeter /> gets the same information as props */}
-        <Greeter
-          name={ this.state.name }
-        />
-        {/* <NameInput /> gets the information from state and a method as props  */}
-        <NameInput
-          name={ this.state.name }
-          updateName={ this.updateName }
-        />
-      </div>
-    )
-  }
-}
-
-export default App
 ```
 
-## Step 6
-Let's create a new child component called `NameInput` and move the input into this component. We need to refactor the `value` attribute and create a new `handleChange` method for this component.
+This method will need to be passed as props to `Pet.js`.
 
-**src/components/NameInput.js**
+### onClick Handler Method
+Now we can circle back to our `handleSubmit` method in `Pet.js` and update the method to call the `handleFormSubmit` method and pass the the form object.
+
+**src/components/Pet.js**
 ```javascript
-import React, { Component } from 'react'
-
-class NameInput extends Component {
-  // NameInput is a dumb/display component that does not hold state
-
-  handleChange = (event) => {
-    // method that takes the value from the input and calls updateName
-    this.props.updateName(event.target.value)
-  }
-
-  render() {
-    // the JSX tag <input /> has the value of name coming as props from App.js
-    return (
-      <input
-        value={ this.props.name }
-        onChange={ this.handleChange }
-      />
-    )
-  }
+handleSubmit = () => {
+  this.props.handleFormSubmit(this.state.form)
 }
-
-export default NameInput
 ```
 
-## Challenges
+### Conditional Rendering
+Now that `App.js` has the form object in state, we can display the information to the page. We want to be in control of when the information gets displayed so we can use a technique called conditional rendering. This means we will wait until the information is in the correct place before displaying it to the user.
 
-### 1) Listening Robot
-
-#### User Stories
-
-- As a user, I see a page with a text input.
-- As a user, I see titles of three robots waiting for my text.
-- As a user, when I enter text I see the robots responses update in real time.
-
-### Developer Stories
-
-- As a developer, I have one parent component that holds state (logic or smart component).
-- As a developer, I have three child components that do not hold state (display or dumb component).
-- As a developer, I have an input in my parent component.
-- As a developer, I can call an onChange method in the input tag.
-- As a developer, I can create a handleChange method that will update state in my parent component.
-- As a developer, I can pass the updated state as props to the child components.
-- As a developer, I can see the child components display the user input.
-- As a developer, I can create modification to the user input text by creating a method in my child component.
-
-![Active Listening Robot Challenge](./assets/robot_active_listening.png)
-
-## Submit
-When submitting a form, you need to handle the submit functionality. This is where we use a function that we are going to call `handleFormSubmit`.
-
-When handling a form submit, we need to prevent the default action from happening. Because, when a form is typically submitted, it will send the information wherever it needs to go and then refresh the page. We don't want the page to refresh, because then we will lose all of our data because the data, currently, does not persist (it is not stored anywhere).
-
-We want to stop those default actions from happening, so we use `event.preventDefault()` to take care of that for us. Here is an example of what that looks like:
-
+**src/App.js**
 ```javascript
-handleFormSubmit = event => {
-  event.preventDefault();
-  //whatever we want the form to do
+<Pet handleFormSubmit={ this.handleFormSubmit } />
+{ this.state.form &&
+  <div>
+    <p>Pet name: { this.state.form.petName }</p>
+    <p>Type of pet: { this.state.form.petType}</p>
+    <p>Pet age: { this.state.form.petAge }</p>
+  </div>
 }
 ```
 
-This code will prevent the form from submitting the form AND from refreshing the page. Make sure you add the necessary code AFTER the .preventDefault() method so that your form actually does something.
+We can use the JavaScript logical operator `&&` to set up a condition that requires both sides of a condition to be true in order for the entire statement - everything inside the curly braces - to be true. Prior to the form being submitted the value of `this.state.form` is null, a falsey value. Once the form is submitted the state object is updated to hold the form object, a truthy value. When the value in state is truthy, we see the contents of the `<div>` rendered on the page.
 
-## 2) Mad Libs
+### Prevent Default
+We may notice some strange behavior from our application, specifically that the page is refreshing after we submit the form. This is React working overtime, and we want to stop those default actions from happening. In the `handleSubmit` method, we can reference a method that belongs to the event object generated by the event listener `onClick` called prevent default.
 
-#### User Stories
+**src/components/Pet.js**
+```javascript
+handleSubmit = (e) => {
+  e.preventDefault()
+  this.props.handleFormSubmit(this.state.form)
+}
+```
+
+## Challenge: Mad Libs
+As a developer, I have been tasked with recreating the children's game [ Mad Libs ](https://www.madlibs.com/) as an app. Mad Libs requires the user to supply a series of random words that match the part of speech as indicated. When all the words have been supplied, the user can see their words added to a pre-written story. Hilarity ensues.
+
+![Mad Libs](./assets/madlibs.png)
 - As a user, I can see a page with many text inputs.
 - As a user, I can see labels next to the text inputs indicating what part of speech (or type of word) should be entered into each text form: nouns, pronouns, verbs, adjectives, and adjectives.
 - As a user, I can fill out the inputs.
 - As a user, after I have filled out the text inputs I can click a 'Submit' button.
 - As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms to create a funny story.
-- As a user, I can click a 'Clear' button that removes the story and the text inputs and returns the page to the original state.
-
-![Mad Libs](./assets/madlibs.png)
 
 
 [ Back to React Inputs and Events ](./inputs.md)
