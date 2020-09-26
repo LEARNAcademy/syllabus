@@ -1,0 +1,2 @@
+### Seeds
+Any information that we add to the database during development will live only on the machine where it was created. This means we cannot share database content via GitHub. But there is a cool tool that Rails offers us to help with this problem. There is a file in the `db` directory in our Rails app called `seeds.rb` where we can store Ruby code that will dynamically populate the database. This doesn't change the actions that will be performed in the terminal, but it can give us some starter code to work with.
