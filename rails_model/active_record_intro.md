@@ -10,30 +10,33 @@
 - Active Record is the interface between a Rails application and the database.
 - Rails has specific commands to create new tables in the database and to edit existing tables.
 - Active Record has its own syntax to query a database. The syntax is similar to SQL queries with a Ruby-flavor.
+- Seeds allow developers to share mock database content during the scaffolding phase of development.
 
 ## Learning Objectives
 - Exploring the model layer of the MVC paradigm in a Rails application
 - Understanding the difference between SQL and Active Record
 - Using a Rails generate command to create a database table
 - Following the Rails naming conventions for creating models
+- Conceptualizing the difference between seeded mock data and database content
 
 ## Vocabulary
-- Active Record
 - ORM
-- generate commands
-- migrations
-- model class
-- rails console
+- Active Record
+- Generate commands
+- Model class
+- Migrations
+- Database schema
+- Rails console
+- Primary key
+- Seeds
 
 ## Useful Commands
 - $ rails c
 - $ rails generate model ModelName
-- $ rails generate migration ModificationOnModel
 - $ rails db:migrate
 
 ## Additional Resources
-- <a href="https://api.rubyonrails.org/v5.2.0/classes/ActiveRecord/Migration.html" target="blank">Active Record Migrations</a>
-- <a href="https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e" target="blank">Rails Naming Conventions</a>
+- [ Rails Naming Conventions ](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
 ## Set Up
 
@@ -50,22 +53,40 @@ In a browser navigate to:
 or
 `127.0.0.1:3000`
 
-## Object-Relational Mapping
-ORM (Object-relational mapping) is a programming technique for converting data between incompatible systems using object-oriented programming languages. ORM is a tool that allows developers to write SQL queries using Rails.
+### Object-Relational Mapping
+**ORM** (Object-relational mapping) is a programming technique for converting data between incompatible systems using object-oriented programming languages. ORM is a tool that allows developers to write SQL queries using Rails.
 
-## Active Record
-Active Record is a Rails ORM. Active Record takes data which is stored in a database table and lets you interact with the data like a Ruby object.
+### Active Record
+**Active Record** is a Rails ORM. Active Record takes data which is stored in a database table and lets you interact with the data like a Ruby object.
 
-## Create a Model with Active Record
-To create a new table in the Postgres database Rails provides a convenient command: `rails generate model`
+### Creating Active Record Models
+One of the great things about working with Rails is that we are provided with a collection of **generate commands** that allows us to pass information through the command line which tasks Rails with setting up the corresponding file structure. This is particularly helpful as Rails is very picky about its naming conventions. We will explore many wonderful generate commands throughout our time working with Rails. Today we will start with the generate command that will allow us to create a new model. The generate command for model takes the name of the model we intend to create, the name of each column, and the data type of each column as arguments. The name of the model is uppercase and singular by convention.
 
-The generate command takes the name of the table, the name of each column, and the datatype of each column as arguments. The name of the table is uppercase and singular by convention.
-
+```
 $ rails generate model Dog name:string breed:string age:integer
+```
 
-#### Active Record Datatypes
+Anatomy of the command:
+- `rails generate`: the setup command passed to Rails
+- `model`: what we are generating
+- `Dog`: name of the model, uppercase and singular
+- `name`: the name of a column in the model
+- `string`: the data type associated with the name column
+- `breed`: the name of a column in the model
+- `string`: the data type associated with the name column
+- `age`: the name of a column in the model
+- `integer`: the data type associated with the name column
+
+Terminal output from the generate command:
+```
+Running via Spring preloader in process 4913
+      invoke  active_record
+      create    db/migrate/20200925202130_create_dogs.rb
+      create    app/models/dog.rb
+```
+
+**Active Record Datatypes**  
 Active Record has specific data types that can be used in each column in the table. Below are some commonly used data types:
-- primary_key - the unique identifier of each entry, Rails provides this automatically
 - string - limited to 255 characters
 - text - allows for larger character sets
 - integer
@@ -73,15 +94,31 @@ Active Record has specific data types that can be used in each column in the tab
 - datetime - formatted as: YYYY-MM-DD HH:MM:SS
 - boolean
 
-#### Rail Generate Model Command
-The generate model command creates a lot of good stuff for us. It creates a file inside *app/models* for the model class. The file name will be singular and snake_case.
+### Migrations
+**Migrations** are a tool that allows you to change the shape of your database over time. We will explore migrations in detail in a later section, but for now we need migrations to establish the initial setup of our database. Migrations are files that run SQL commands. Rails maintains a history with the migrations that have already run, and those that need to be run.
+
+```
+$ rails db:migrate
+```
+
+Terminal output from the generate command:
+```
+== 20200925202130 CreateDogs: migrating =======================================
+-- create_table(:dogs)
+   -> 0.2306s
+== 20200925202130 CreateDogs: migrated (0.2307s) ==============================
+```
+The migration command creates a timestamped file in *db/migrate* with the changes made to the database. In this case, the change is the initial creation of the Dog table.
+
+### What Did Rails Create?
+Once we have generated a model and run our database migration, we can take a look at all the good stuff that was created for us. There is now a file inside *app/models* for the **model class**. The file name will be singular and snake_case.
 
 **app/models/dog.rb**
 ```ruby
 class Dog < ApplicationRecord
 end
 ```
-It also creates the database schema. This is the "shape" of the database: the columns and data types of those columns. The database columns you just created will not appear in the schema until you've migrated your changes.
+It also creates the **database schema**. This is the "shape" of the database: the columns and data types of those columns.
 
 **db/schema.rb**
 ```ruby
@@ -95,127 +132,127 @@ It also creates the database schema. This is the "shape" of the database: the co
 ```
 Rails creates all this for us. The schema represents the current shape of the database and should not be modified directly.
 
-## Naming Conventions
-Naming conventions are a noteworthy aspect of the Rails principle convention over configuration. If you follow the naming conventions, Rails will take care of a lot of the heavy lifting needed to set up an application.
+### Active Record in Rails Console
+Database entries only live on the computer where they are created. Right now our data base has no entries.
 
-- Model Class - Singular and PascalCase
-- Model file name - Singular and snake_case
-- Database Table - Plural and snake_case
-
-## Migrations
-Now that we have created the initial shape of the database we need to run a migration. Migrations are files that run SQL commands. Rails maintains a history with the migrations that have already run, and those that need to be run.
-
-$ rails db:migrate
-
-Output in the terminal:
+Start the **Rails console** to interact directly with Active Record.
 ```
-== 20200303020724 CreateDogs: migrating =======================================
--- create_table(:dogs)
-   -> 0.0308s
-== 20200303020724 CreateDogs: migrated (0.0308s) ==============================
-```
-The migration command creates a timestamped file in *db/migrate* with the changes made to the database. In this case, the change is the initial creation of the Dog table.
-
-**app/migrate/2020030320724_create_dogs.rb**
-```ruby
-class CreateDogs < ActiveRecord::Migration[6.0]
-  def change
-    create_table :dogs do |t|
-      t.string :name
-      t.string :breed
-      t.integer :age
-
-      t.timestamps
-    end
-  end
-end
-```
-
-## Interacting with the Database in Rails Console
-Start the Rails console:
-
 $ rails c
-
-#### Insert an Entry
-
-Right now our data base has no entries. We can add data to the application in the Rails console.
-
-**.create**
 ```
-> Dog.create name: "Fido", breed: "Lab", age: 7
+
+**Create**  
+To add a new instance of our Dog class, we need to use the Active Record command `.create` and pass in key:value pairs of each column and the value to be stored in that column.
+```
+> Dog.create name: "Jax", breed: "German Shorthaired Pointer", age: 4
 ```
 Output in the terminal:
 ```
-Dog Create (27.8ms)  INSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Fido"], ["breed", "Lab"], ["age", 7], ["created_at", "2020-03-03 02:43:48.167973"], ["updated_at", "2020-03-03 02:43:48.167973"]]
-   (6.0ms)  COMMIT
-=> #<Dog id: 1, name: "Fido", breed: "Lab", age: 7, created_at: "2020-03-03 02:43:48", updated_at: "2020-03-03 02:43:48">
+Dog Create (27.7ms)  INSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Jax"], ["breed", "German Shorthaired Pointer"], ["age", 4], ["created_at", "2020-09-25 20:46:49.788800"], ["updated_at", "2020-09-25 20:46:49.788800"]]
+   (12.5ms)  COMMIT
+ => #<Dog id: 1, name: "Jax", breed: "German Shorthaired Pointer", age: 4, created_at: "2020-09-25 20:46:49", updated_at: "2020-09-25 20:46:49">
 ```
 Great! We successfully added content to the database.
 
-We can repeat this process to add more Dogs.
+We can repeat this process to add more instances of the class Dog.
 ```
-> Dog.create name: "George", breed: "Lab", age: 3
+> Dog.create name: "Bella", breed: "Yellow Lab", age: 12
+> Dog.create name: "Baby", breed: "Long Haired Dachshund", age: 11
 ```
-Terminal output:
-```
-=> #<Dog id: 2, name: "George", breed: "Lab", age: 3, created_at: "2020-03-03 02:56:50", updated_at: "2020-03-03 02:56:50">
-```
-Notice each Dog has an id number. We don't have to assign each Dog an id, Rails will do this automatically.
 
-#### Access and Update an Entry
-We may need to update an item in the database. To access one Dog entry we can create a variable.
+**Read**  
+Now that we have dogs in our database we can look at all the dogs as a collection, or look at each individual dog.
 
-**.find**
-```
-> george = Dog.find 2
-```
-Then when we call `george` we get back the entry with the id of 2:
-```
-=> #<Dog id: 2, name: "George", breed: "Lab", age: 3, created_at: "2020-03-03 02:56:50", updated_at: "2020-03-03 02:56:50">
-```
-Now using the variable, we can modify George's attributes. After we modify the variable, run `.save` to update the database.
-```
-> george.age = 6
-=> 6
-> george.save
-
-Dog Update (0.5ms) UPDATE "dogs" SET "age" = $1, "updated_at" = $2 WHERE "dogs"."id" = $3  [["age", 6], ["updated_at", "2020-03-03 03:07:42.658145"], ["id", 2]] (1.3ms) COMMIT
-```
-Now calling `Dog.all` will return updated information.
+Let's start with viewing the Dogs as a collection. We can use the Active Record command `.all` to see an array that holds all the dog objects. Calling `.all` on the class Dog in Active Record is the same as making the SQL query `SELECT * FROM dogs`.
 ```
 > Dog.all
-=> #<ActiveRecord::Relation [#<Dog id: 1, name: "Fido", breed: "Lab", age: 7, created_at: "2020-03-03 02:43:48", updated_at: "2020-03-03 02:43:48">, #<Dog id: 2, name: "George", breed: "Lab", age: 6, created_at: "2020-03-03 02:56:50", updated_at: "2020-03-03 03:07:42">]>
+```
+Output in the terminal:
+```
+=> #<ActiveRecord::Relation [#<Dog id: 1, name: "Jax", breed: "German Shorthaired Pointer", age: 4, created_at: "2020-09-25 20:46:49", updated_at: "2020-09-25 20:46:49">, #<Dog id: 2, name: "Bella", breed: "Yellow Lab", age: 12, created_at: "2020-09-25 20:47:55", updated_at: "2020-09-25 20:47:55">, #<Dog id: 3, name: "Baby", breed: "Long Haired Dachshund", age: 11, created_at: "2020-09-25 20:48:02", updated_at: "2020-09-25 20:48:02">]>
+```
+Notice each Dog has a key:value pair that is `id` and a number. This is called a **primary key** and is a unique identifier of each instance. We don't have to assign each Dog an id, Rails will do this automatically.
+
+There are many ways to retrieve just one dog from the database. We can use `.first` and `.last` to access the first and last entry respectively. We can also use the primary key to access a particular dog with the `.find` method.
+
+```
+> Dog.find 2
+```
+Output in the terminal:
+```
+=> #<Dog id: 2, name: "Bella", breed: "Yellow Lab", age: 12, created_at: "2020-09-25 20:47:55", updated_at: "2020-09-25 20:47:55">
 ```
 
-**.where**
-```
-> Dog.where age:6
-```
-Terminal output:
-```
-Dog Load (0.6ms) SELECT "dogs".* FROM "dogs" WHERE "dogs"."age" = $1 LIMIT $2 [["age", 6], ["LIMIT", 11]]
-=> #<ActiveRecord::Relation [#<Dog id: 2, name: "George", breed: "Lab", age: 6, created_at: "2020-03-03 02:56:50", updated_at: "2020-03-03 03:07:42">]>
-```
-**Note:** `where` methods returns a collection of entries, whereas `find` never selects more than one contact
+We can also retrieve a subset of dogs that meet a particular qualification using the Active Record `where` clause.
 
-#### Access and Remove an Entry
-We may need to remove an item in the database. To remove an item it first must be identified.
-
-**.destroy**
 ```
-> george = Dog.find 2
-> george.destroy
+> Dog.where age: 11
 ```
+Output in the terminal:
 ```
-(1.1ms) BEGIN Dog Destroy (1.0ms)  DELETE FROM "dogs" WHERE "dogs"."id" = $1 [["id", 2]] (6.1ms)  COMMIT
-=> #<Dog id: 2, name: "George", breed: "Lab", age: 6, created_at: "2020-03-03 02:56:50", updated_at: "2020-03-03 03:07:42">
+=> #<ActiveRecord::Relation [#<Dog id: 3, name: "Baby", breed: "Long Haired Dachshund", age: 11, created_at: "2020-09-25 20:48:02", updated_at: "2020-09-25 20:48:02">]>
 ```
-Now when we call `Dog.all` there is only one entry.
+
+Notice that even though only one dog met this qualification, we get back an array rather than a single item. This is the expected output for the `.where` clause.
+
+We can also pass a relational operator to the `.where` method.
+```
+Dog.where "age > 10"
+```
+
+Output in the terminal:
+```
+=> #<ActiveRecord::Relation [#<Dog id: 2, name: "Bella", breed: "Yellow Lab", age: 12, created_at: "2020-09-25 20:47:55", updated_at: "2020-09-25 20:47:55">, #<Dog id: 3, name: "Baby", breed: "Long Haired Dachshund", age: 11, created_at: "2020-09-25 20:48:02", updated_at: "2020-09-25 20:48:02">]>
+```
+
+**Edit**  
+We can update the instances in the database by accessing an individual dog and reassigning one of its keys. First we need to tell Active Record which dog we intend to update. When we find the correct dog we can save it to a variable. This variable is temporary and only exists within the context of this Rails console session. In other words, if you `exit` the console and return you will no longer have access to the variables you create.
+
+```
+> bella = Dog.find 2
+```
+Then when we call `bella` we get back the entry that matches the id of 2.
+
+Now using the variable, we can modify George's attributes. After we modify the variable, run `.save` to update the database.
+```
+> bella.age = 13
+> bella.save
+```
+
+Output in the terminal:
+```
+(0.3ms)  BEGIN
+Dog Update (27.9ms)  UPDATE "dogs" SET "age" = $1, "updated_at" = $2 WHERE "dogs"."id" = $3  [["age", 13], ["updated_at", "2020-09-25 21:32:00.722843"], ["id", 2]]
+(7.3ms)  COMMIT
+=> true
+```
+
+**Delete**  
+We may need to remove an item in the database. Just like edit, when we remove an item it first must be identified.
+
+```
+> bella = Dog.find 2
+> bella.destroy
+```
+
+Output in the terminal:
+```
+(1.4ms)  BEGIN
+Dog Destroy (0.5ms)  DELETE FROM "dogs" WHERE "dogs"."id" = $1  [["id", 2]]
+(12.3ms)  COMMIT
+=> #<Dog id: 2, name: "Bella", breed: "Yellow Lab", age: 13, created_at: "2020-09-25 20:47:55", updated_at: "2020-09-25 21:32:00">
+```
+Now when we call `Dog.all` we see the instance of Bella is no longer in the database.
+
+### A Note on Naming Conventions
+Naming conventions are a noteworthy aspect of the Rails principle convention over configuration. If you follow the naming conventions, Rails will take care of a lot of the heavy lifting needed to set up an application.
+
+- Model class - singular and PascalCase
+- Model file name - singular and snake_case
+- Database table - plural and snake_case
 
 
-
-## Challenges
-Create, Update, Insert, Delete with Active Record in the Rails console.
+## Challenge: Rolodex
+As a developer, I have been tasked with creating and testing a database model that will be used in a rolodex application. I want to ensure that the database behaves as expected and the necessary actions can be performed on the database instances.
 
 **Set Up**
 - Create a new Rails app named 'rolodex'.
@@ -236,8 +273,7 @@ Created database 'rolodex_test'
 - Update the phone number of the last entry in the database.
 - Retrieve the first_name of the third Person in the database.
 
-
-## Stretch Challenges
+**Stretch Challenges**
 - Update all the family members with the same last_name as you, to have the same phone number as you.
 - Remove all family members that do not have your last_name.
 

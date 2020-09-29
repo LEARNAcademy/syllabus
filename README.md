@@ -96,6 +96,9 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
 1. [ Rails Parameters ](./rails_fullstack/params.md)
 
+#### Additional Topics:
+- [ Rails Database Seeds ](./rails_fullstack/seeds.md)
+
 
 
 ## Unit Six: Ruby on Rails
