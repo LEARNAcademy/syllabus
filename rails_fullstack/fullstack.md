@@ -63,6 +63,8 @@ end
 class BlogPostsController < ApplicationController
   # the new method just needs to exist to route to the correct view
   def new
+    # creating an instance variable that is getting passed to the form
+    @herb = Herb.new
     # because of Rails naming conventions, we don't need to have a render here, but really this is happening:
     # render "new.html.erb"
   end
@@ -95,7 +97,7 @@ With the release of Rails 6, we get a very convenient method called `form_with` 
 ```
 <h1>Add a New Post</h1>
 
-<%= form_with url: '/blog_posts', local: true do |form| %>
+<%= form_with model: @blog_post, local: true do |form| %>
 
   <%= form.label :title %>
   <%= form.text_field :title %>

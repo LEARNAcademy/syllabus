@@ -29,7 +29,7 @@ Along with validation, strong params provide control over over what information 
 
 To implement strong params, we will create a new method in the controller that will be passed as an argument to the create and update methods in place of the individual parameters.
 
-Strong params have two methods that can be applied: **require** and **permit**. Require does exactly what you think. It requires the attributes passed in to be present in the create or update methods. Permit allows certain items to be present but if they are not present, that is still okay. But attributes that are not listed in the strong params will not be allowed to proceed.
+Strong params have two methods: **require** and **permit**. Require does exactly what you think. It requires the attributes passed in to be present in the create or update methods. Permit allows certain items to be present but if they are not present, that is still okay. But attributes that are not listed in the strong params will not be allowed to proceed.
 
 ## Private
 Private is a keyword in Ruby that restricts the scope of where a method can be called. Since strong params are only meant to be used as arguments to controller methods, we can list them as `private` to the controller class. That way there is no chance they can be called from somewhere else in the program.
@@ -88,19 +88,6 @@ end
 
 `.new` will create a new object, while `.create` will create it and save it to the database. If you use `.new`, you need to follow up with `.save` for it to actually be saved. If you have actions you wish to do before putting the object into the database, consider using `.new` instead.
 
-## Strong Params for Forms
-Strong params for forms don't require the model name, as the form is already connected to a particular model.
-
-**controllers/blog_posts_controller.rb**
-```ruby
-private
-
-def blog_post_params
-  params.permit(:title, :content)
-end
-```
-
-Now if we use the form, we should see a successful create of our contact.
 
 ## Permitting Parameters
 Most of the time, strong parameters are a feature we don't have to think about. If we want to add a new attribute to BlogPost, however, it's important to remember to add it to the strong parameters list. Otherwise, our form for creating new BlogPost will silently drop the information we've told it to ignore. For example, if we created a new column for storing comments without updating our `blog_post_params` method, the response in the Rails server would look like this:
@@ -117,7 +104,7 @@ We can see all of the parameters being sent in, but our controller recognized "c
 **controllers/blog_posts_controller.rb**
 ```ruby
 def blog_post_params
-  params.permit(:title, :content, :comments)
+  params.require(:blog_post).permit(:title, :content, :comments)
 end
 ```
 
