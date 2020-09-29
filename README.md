@@ -97,7 +97,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [ Rails Parameters ](./rails_fullstack/params.md)
 
 #### Additional Topics:
-- [ Rails Database Seeds ](./rails_fullstack/seeds.md)
+- [ Rails Database Seeds ](./rails_model/seeds.md)
 
 
 
