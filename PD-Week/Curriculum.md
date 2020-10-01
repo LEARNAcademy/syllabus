@@ -55,8 +55,7 @@
 <br/>
 
 *Additional Resources:*
-
-* [Discover Your Transferable Skills Activity](https://drive.google.com/file/d/12XMJvDnyg457cto7ihpAlYlTT9v0f2tg/view?usp=sharing)
+* [Discover Your Transferable Skills Activity](https://drive.google.com/file/d/1YEfwaIgH1qjdWFNZdgtr9oG11KKV1iVG/view?usp=sharing)
 <br/> This activity can help you get started in identifying some of your transferable skills if you feel lost.
 
 * [Ultimate Transferable Skills List](https://drive.google.com/file/d/1o1Q4Nl3Ej43I7q0-WT9hsioC2sehvzVl/view?usp=sharing)
@@ -81,8 +80,7 @@
 <br/>
 
 *Additional Resources:*
-
-* [Action Verb List](https://drive.google.com/file/d/1Dhv4RYuChLS_JjEIb-eVmxaG2XrduzIb/view?usp=sharing)
+* [Action Verb List](https://drive.google.com/file/d/1oP0cUdvSLyzIsOwDTbM_IbgXR4yMtsGK/view?usp=sharing)
 <br/> This resource has a list of action verbs to help build strong contribution/accomplishment statements for your resume and make your past work experience active.
 
 3) **[Cover Letters](https://drive.google.com/file/d/1fEbAok5FvvhWrPAHYTDSHZMfR_O0_ytL/view?usp=sharing)**
@@ -143,8 +141,7 @@
 <br/>
 
 *Additional Resources:*
-
-* [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/file/d/12m3JTT3BksFq2mO-FnwrojmfRk2YDaUN/view?usp=sharing)
+* [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/file/d/1oL-PJxTLUo7kU81-Rz2CZWh_22skA9Zn/view?usp=sharing)
 <br/> This resource covers **EVERY** aspect of LinkedIn. Go back to this resource when questions come up regarding your LinkedIn account or if you want to elevate it **10X** more!
 
 3) **[Networking Remotely - Strategies for a Global Pandemic](https://drive.google.com/file/d/1j9Ye_aA3nGK9G-p1TfC-snqRaZD5peSL/view?usp=sharing)**
@@ -173,9 +170,9 @@
 * [Remote Work Playbook by GitLab](https://drive.google.com/file/d/1YaVBuPAT2GaQyFemm8JJkoZCwX6l4i-X/view?usp=sharing)
 <br/> This ebook is a great resource from the largest all-remote company in the world. Check it out for some great tips and tricks for being a top remote employee!
 
-## *Week 12: Internship Prep, Tech Talks, & Career Services Beyond LEARN*
 
-1) **[Internship Prep Resources](https://docs.google.com/document/d/1Xq1p1CyiPdMc0HUQ4knXNbxXvKsZ0qnP8bQQLRJ7ygc/edit?usp=sharing)**
+## *Week 12: Internship Prep, Tech Talks, & Career Services Beyond LEARN*
+1) **[Internship Prep Resources](https://docs.google.com/document/d/1_mGn_9ZbFu-BoSO-WBN6fbBEW1ler4k5LMm5je8rN6E/edit?usp=sharing)**
 <br/> This resource has several starter resources for internship preparation. In addition, please look for more detailed preparation materials from your internship partner prior to Week 12!
 
 2) **[Tech Talk Presentations]**
@@ -188,3 +185,6 @@
 
 3) **[Career Services Job Search Plans](https://drive.google.com/file/d/14nEWuV5mGtPtR0Cj_baLJDsZXvgHZpeL/view?usp=sharing)**
 <br/> This resource is a template of the Job Search plan we will create for you following your internship when you begin your Job Search. This document focuses on staying proactive and accountable to get you hired quickly!
+
+
+[ Back to Syllabus ](../README.md#unit-seven-professional-development-week)

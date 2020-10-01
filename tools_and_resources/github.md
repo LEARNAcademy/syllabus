@@ -1,4 +1,6 @@
-# Github Resources
+# GitHub Resources
+
+[ Presentation ](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
 
 Git is a free, open-sourced version control system widely used in the programming world. It is a very powerful tool used for sharing and working on code and allows for many people to contribute to the same code base. Git was created in 2005 by Linus Torvalds, the creator of Linux, to track changes in source code. Git is accessed primarily through the command line.
 
@@ -9,49 +11,53 @@ Goddamn Idiotic Truckload of sh*t: when it breaks
 
 ## Setting up Git
 
-Instructions for mac: <br />
-https://www.atlassian.com/git/tutorials/install-git
-
-Scroll down to the section `Install Git with Homebrew`
+Instructions for mac: $ brew install git
 
 Instructions for windows: <br />
 https://git-scm.com/download/win
 
 ## Git Workflow
 
-### How to start a project in github
-<b>Follow these steps if you have NO existing code and want to start a new project</b>
-<ol>
-    <li>Sign into github and click on + sign (upper right hand corner)</li>
-    <li>Click on “New Repository” and name your repository</li>
-    <li>Click on “initialize a README”</li>
-    <li>Click “Create repository”</li>
-    <li>Click green button “clone or download”</li>
-    <li>Go to your terminal and cd onto the desktop</li>
-    <li>Type `git clone` and paste the link that you copied from github</li>
-    <li>Now you will have a folder on your desktop.  <b>cd into that folder</b></li>
-    <li>Type `atom .`  You are now in an atom file that is connected to your terminal and your github repo!</li>
-    <li>Create a new file in atom and save as filename.js</li>
-    <li>Begin your project!</li>
-</ol>
+### How to start a project in GitHub
+**Follow these steps if you have NO existing code and want to start a new project**
+- Sign into GitHub and click on + sign (upper right hand corner)
+- Click on “New Repository” and name your repository
+- Click on “initialize a README”
+- Click “Create repository”
+- Click green button `code`
+- Go to your terminal and cd onto the desktop
+- Type `git clone` and paste the link that you copied from GitHub
+- Now you will have a folder on your desktop.  **cd into that folder**
+- Type `atom .`  You are now in an atom file that is connected to your terminal and your GitHub repo!
+- Create a new file in atom
+- Begin your project!
 
-### How to save your existing code in github
 
-<b>Follow these steps if you have code saved to your local drive and want to add that project to your github</b>
-<ol>
-    <li>Sign into github and click on `+` sign (upper right hand corner)</li>
-    <li>Click on `New Repository` and name your repository. TIP: name your github repo the same name as your project folder, DO NOT click on “initialize a README”</li>
-    <li>Click `Create Repository`</li>
-    <li>Go to your terminal and cd into your project</li>
-    <li>In terminal, type: <br /> `git init`<br />`git add .`<br />`git commit -m “initial commit”`<br /></li>
-    <li>Follow second set of instruction on github repo page (it will looking something like this)...<br />
-    `git remote add origin https://github.com/username/example.git` <br />
-    `git push -u origin master`
-</ol>
+### How to save your existing code in GitHub
+
+**Follow these steps if you have code saved to your local drive and want to add that project to your GitHub**
+
+- Sign into GitHub and click on `+` sign (upper right hand corner)
+- Click on `New Repository` and name your repository. TIP: name your GitHub repo the same name as your project folder, DO NOT click on “initialize a README”
+- Click `Create Repository`
+- Go to your terminal and cd into your project
+- In terminal, type:
+  - `$ git init`
+  - `$ git add .`
+  - `$ git commit -m “initial commit”`
+- Follow second set of instruction on GitHub repo page (it will looking something like this)...
+```
+$ git remote add origin https://github.com/username/example.git
+$ git push -u origin master
+```
+
 
 ## As you work on your project
-<b>Repeat these steps often!</b><br />
-    In terminal:<br />
-    `git add .`<br />
-    `git commit -m "message about current work"`<br />
-    `git push`
+**Repeat these steps often!**
+In terminal:
+- `$ git add .`
+- `$ git commit -m "message about current work"`
+- `$ git push origin master`
+
+
+[ Back to Syllabus ](../README.md#programming-tools)
