@@ -6,13 +6,11 @@
 Additional Video: [ Rails Forms ](https://player.vimeo.com/video/155715320)
 
 ## Overview
-- Adding CRUD operations for the user to see, add, edit, and delete information from the database
-- Building a `get` request for a method called `new` and a `post` request for method called `create`
+- We will create a full-stack rails application that allows the user to retrieve information from the database as well as add content to the database.
 
 ## Learning Objectives
-- Creating a form that will accept information from the user
-- Creating a submit process that will add information to the server
-- Performing CRUD actions in a Rails application
+- Mapping CRUD actions to HTTP verbs to RESTful routes
+- Following a developer flow to implement routes, controller methods, and views for RESTful routes
 
 ## Vocabulary
 - CRUD
@@ -22,95 +20,190 @@ Additional Video: [ Rails Forms ](https://player.vimeo.com/video/155715320)
 
 #### Creating a new Rails app:
 ```
-$ rails new blog -d postgresql -T
-$ cd blog
+$ rails new exercise_app -d postgresql -T
+$ cd exercise_app
 $ rails db:create
 $ rails server
 ```
 In a browser navigate to:
 `http://localhost:3000`
 
-Prior to creating a form, there are a few things we want to have completed:
-- Models generated with appropriate attributes
-- Relationships between models defined
-- [Controller generated](./routes_controllers_views.md)
-- Routes and views created for the `index` and `show` routes/methods to display information on the page
+### Initial Setup
+In this example, we are creating a MVP for an app that will keep track of a user's exercise. Prior to creating the functionality of our app, we need to create a model and a controller using Rails generate commands.
+```
+$ rails generate model Exercise activity:string description:string
+$ rails db:migrate
+$ rails generate controller exercise
+```
 
-### Creating a Form
-As developers, we want our users to be able add information to our web application that is then stored in the database. So far, the only way we have adding new information to the database is through the terminal. Obviously, we want our user to have an easier way to add, update, and delete information.
+As a scaffolding step, we can add a few instances of our Exercise model to the database in Rails console. Then we can add our RESTful routes to the application. For every step, we will be adding a controller method, a route, and some code in the view.
 
-### Route
-We need to add a route that will show our user a page where they can enter information in a form and a route that will post the information to the database.
+### Index
+The first step is to create a controller method that will access all the items from the database. In the index method, we are making an Active Record call that will save all the content from the database as an instance variable.
 
-**config/routes.rb**
+**app/controllers/exercise_controller.rb**
 ```ruby
-Rails.application.routes.draw do
-
-  # the get route called 'new' will allow our user to create a new entry
-  get "blog_posts/new" => "blog_posts#new"
-
-  # the post route that will 'create' a new item in the database
-  post "blog_posts" => "blog_posts#create"
-
+def index
+  @exercises = Exercise.all
 end
 ```
 
-### Controller
+Next, we will make a route that will call the index method. Since we are returning content, the request type will be a `get` request.
 
-**app/controllers/blog_posts_controller.rb**
+**config/routes.rb**  
+```
+get 'exercises' => 'exercise#index'
+```
 
+To create the view, we will add a new file to the exercise directory called `index.html.erb`. The file matches the name of the controller method `index`. In the view we will use a combination of HTML tags and embedded Ruby to map through the Active Record array and record each value into a list.
+
+**app/views/exercise/index.html.erb**
+```
+<h1>Exercise App</h1>
+
+<ul>
+  <% @exercises.each do |exercise| %>
+    <li>
+      <%= exercise.activity %>
+    </li>
+  <% end %>
+</ul>
+```
+
+### Show
+`Show` is a RESTful route that looks for one item in the database. This is done by accessing the id of the item. Inside the show method we will make an Active Record call that will find one item by id. This id will come from the url params.
+
+**app/controllers/exercise_controller.rb**
 ```ruby
-class BlogPostsController < ApplicationController
-  # the new method just needs to exist to route to the correct view
-  def new
-    # creating an instance variable that is getting passed to the form
-    @herb = Herb.new
-    # because of Rails naming conventions, we don't need to have a render here, but really this is happening:
-    # render "new.html.erb"
-  end
-
-  # the create method defines an instance variable that will create a new instance of the model with a title and content provided by the user
-  def create
-    @blog_post = BlogPost.create(
-      title: params[:title],
-      content: params[:content]
-    )
-    # if the user successfully creates a new post Rails will route to a view of that post, otherwise it will stay on the form
-    if @blog_post.valid?
-      redirect_to @blog_post
-      # this does the same thing as passing a route to the show page of the object: redirect_to '/model_names/#{instance_variable_name.id}'
-    else
-      render action: :new
-    end
-  end
+def show
+  @exercise = Exercise.find(params[:id])
 end
 ```
 
-### View
+Next, we will make a route that will call the show method. Because we need to extract just one item, we need the show route to expect a param. Since we are returning content, the request type will be a `get` request.
 
-**views/blog_posts/new.html.erb**
+**config/routes.rb**  
+```
+get 'exercises/:id => 'exercise#show'
+```
+
+To create the view for `show`, we will add a new file to the exercise directory called `show.html.erb`. In the view we will use a combination of HTML tags and embedded Ruby to list the attributes of the exercise.
+
+**app/views/exercise/show.html.erb**
+```
+<h3><%= @exercise.activity %></h3>
+<p><% @exercise.description %></p>
+```
+
+### New
+As developers, we want our users to be able add information to our web application that is then stored in the database.
+
+`New` is a RESTful route that displays a form for the user.
+
+**app/controllers/exercise_controller.rb**
+```ruby
+def new
+end
+```
+
+Next, we will make a route that will take the user to a page with a form. Since we are returning content, the request type will be a `get` request.
+
+**config/routes.rb**  
+```
+get 'exercises/new => 'exercise#new'
+```
+
+To create the view for `new`, we will add a new file to the exercise directory called `new.html.erb`. In the view we will use a Ruby helper method to create form inputs. Each input will have a label and a text field for the user to enter content.
 
 With the release of Rails 6, we get a very convenient method called `form_with` that allows us to use a series of helper methods to create form elements. Form elements are items such as text inputs, radio button, and labels. By using the `form_with` method we can create forms in true Ruby-like fashion. When the code renders, Rails translates it into the corresponding HTML form tags.
 
-`form_with` takes a code block and passes a local variable. In this example, the variable is `|form|` but it can be called whatever you want as long as it clearly communicates your intent. Form helper methods are then applied to the variable `form` and passed a symbol of the model attribute.
+`form_with` takes a code block and passes a local variable. In this example, the variable is `|form|` but it can be called whatever you want as long as it clearly communicates your intent. Form helper methods are then applied to the variable `form` and passed a symbol of each attribute.
 
+**app/views/exercise/new.html.erb**
 ```
-<h1>Add a New Post</h1>
+<h3>Add a New Exercise Session</h3>
+<%= form_with url: '/exercises', local: true do |form| %>
 
-<%= form_with model: @blog_post, local: true do |form| %>
+  <%= form.label :activity %>
+  <%= form.text_field :activity %>
 
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+  <br>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
 
-  <%= form.label :content %>
-  <%= form.check_box :content %>
-
-  <%= form.submit :create %>
+  <br>
+  <%= form.submit 'Add Exercise' %>
 <% end %>
 ```
 
+### Create
+`Create` is a RESTful route that submits user data to the database.
+
+**app/controllers/exercise_controller.rb**
+```ruby
+def create
+  @exercise = Exercise.create(
+    activity: params[:activity],
+    description: params[:description]
+  )
+end
+```
+
+Next, we will make a route that will call the create method. Since we are submitting content to the database, the request type will be a `post` request.
+
+**config/routes.rb**  
+```
+post 'exercises => 'exercise#create'
+```
+
+There is no view associated with the create method. We should think about what kind of user experience we want to create when our user creates a new item. One option is to trigger a redirect after the successful creation of a new item.
+
+### Route Aliases
+Rails routes offers us a convenient way to reference routes by creating an alias using the keyword `as`. The index, show, and new routes can all have aliases. There is no need to create an alias for the create route.
+
+**config/routes.rb**  
+```
+get 'exercises' => 'exercise#index', as: 'exercises'
+post 'exercises => 'exercise#create'
+get 'exercises/new => 'exercise#new', as: 'new_exercise'
+get 'exercises/:id => 'exercise#show', as: 'exercise'
+```
+
+These route aliases can be used in links for the view as well as in the controller methods. When referencing the route alias, `_path` is appended to the end of the alias.
+
+**NOTE** If a route requires a param, the alias will also require a param gets passed.
+
+**app/controllers/exercise_controller.rb**
+```ruby
+def create
+  @exercise = Exercise.create(
+    activity: params[:activity],
+    description: params[:description]
+  )
+  if @exercise.valid?
+    redirect_to exercises_path
+  else
+    redirect_to new_exercise_path
+  end
+end
+```
+
+### link_to
+`link_to` is a method that can help our user navigate through the application. `link_to` takes two arguments. One that creates the hyperlink and the other that routes the user to the appropriate place. This is a prime place to our route aliases.
+
+This link can take our user to the form to create a new exercise session.
+
+**app/views/exercise/index.html.erb**
+```
+<p><%= link_to 'New Herb', new_herb_path %></p>
+```
+
+### Review
+By following the pattern of RESTful routes, we can start to implement CRUD functionality into a Rails application.
+
 
 ## Challenge: Blog Post
+As a developer, I have been commissioned to create an application where a user can see and create blog posts.
 - As a developer, I can create a blog application.
 - As a developer, my blog post can have a title and content.
 - As a developer, I can add new blog posts to my database.
