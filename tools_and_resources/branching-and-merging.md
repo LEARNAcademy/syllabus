@@ -3,8 +3,6 @@
 ## What is a branch?
 A branch serves as an abstraction for the edit/stage/commit process. New commits are recorded in the history for the current branch rather than main.
 
-<img src="assets/branches.png" width="300px">
-
 <img src="assets/branches.png" width="600px">
 In the example above, we can visualize our main branch on the left. It is our "production" code that has been through testing and quality assurance. When we create a branch, we are duplicating the existing main branch. From this new branch, we can mess with features, add code, and generally run free without worrying about messing up the production code. We can commit different versions of our new branch as many times as we want until it is ready to be merged with main. Once you merge, the main branch has now been replaced with a version of itself that includes your updated code.
 
