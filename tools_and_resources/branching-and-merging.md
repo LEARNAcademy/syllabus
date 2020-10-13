@@ -8,7 +8,7 @@ In the example above, we can visualize our main branch on the left. It is our "p
 
 ## Creating a new branch
 
-Let's look at the process of creating a new version of the project (a branch) to play around with and make changes in locally on our computer — while the original version of the project, the main branch, remains safely on GitHub. We give the new branch a descriptive name to remind us what we intend to do while working in it. You should use the following naming convention for your branch while you are in the classroom: `topic-partner1-partner2`
+Let's look at the process of creating a new version of the project (a branch). Then we are free to make changes locally on our computer — while the original version of the project, the main branch, remains safely on GitHub. We give the new branch a descriptive name to remind us what we intend to do while working in it. You should use the following naming convention for your branch while you are in the classroom: `topic-partner1-partner2`
 
 - To create this new branch, type `git checkout -b topic-partner1-partner2`. You'll see a line in your terminal that says `Switched to a new branch`.
 <img src="assets/git-1.png" width="650px">
