@@ -59,7 +59,9 @@ Click `Compare & pull request`
 - You will then be redirected to a page where you can create a pull request. Don't worry about adding to the form for the code challenges we do in class.
 <img src="assets/gh-2.png">
 Click `Create pull request`
+
 - Now click `Merge pull request`
 <img src="assets/gh-3.png">
+
 - Now main has been updated to include your code! Your branch did it's job and can be deleted
 <img src="assets/gh-4.png">
