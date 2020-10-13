@@ -61,7 +61,7 @@ Click `Compare & pull request`
 Click `Create pull request`
 
 - Now click `Merge pull request`
-<img src="assets/gh-3.png" width="650px">
+<img src="assets/gh-3.png" width="400px">
 
 - Now main has been updated to include your code! Your branch did it's job and can be deleted
 <img src="assets/gh-4.png" width="650px">
