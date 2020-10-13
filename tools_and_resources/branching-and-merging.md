@@ -4,7 +4,7 @@
 Branches serve as an abstraction for the edit/stage/commit process. New commits are recorded in the history for the current branch rather than main.
 
 <img src="assets/branches.png">
-In the example above, we can visualize our `main` branch on the left. It is our "production" code that has been through testing and quality assurance. When we create a branch, we are duplicating the existing `main` branch. From this new branch, we can mess with features, add code, and generally run free without worrying about messing up the production code. We can commit different versions of our new branch as many times as we want until it is ready to be merged with `main`. Once you merge, the main branch has now been replaced with a version of itself that includes your updated code.
+In the example above, we can visualize our main branch on the left. It is our "production" code that has been through testing and quality assurance. When we create a branch, we are duplicating the existing main branch. From this new branch, we can mess with features, add code, and generally run free without worrying about messing up the production code. We can commit different versions of our new branch as many times as we want until it is ready to be merged with main. Once you merge, the main branch has now been replaced with a version of itself that includes your updated code.
 
 ## Creating a new branch
 
@@ -12,18 +12,24 @@ Let's look at the process of creating a new version of the project (a branch) to
 
 - To create this new branch, type `git checkout -b topic-partner1-partner2`. You'll see a line in your terminal that says `Switched to a new branch`
 <img src="assets/git-1.png">
+
 - Now that you are successfully inside of a new branch, you will create a new file to work in. Use `touch` to make a new file that follows the same naming convention as your branch name. Then you can open your code in your text editor
 <img src="assets/git-2.png">
+
 - The first driver is not free to write code!
 <img src="assets/driver-1.png">
+
 - After the first driver is done with their portion, follow the git flow to push your code up to GitHub
 - Run a quick `git status` to make sure your changes are being registered
 <img src="assets/git-3.png">
+
 As you can see above, a change has been made to our new file and is ready to be pushed up!
 - Next you will `git add .` and `git commit`. Your commit message should be descriptive of the portion you are completing. It would also follow the current-tense, almost as if you are telling the computer a command. In this example, our commit message is `"start challenge one"`
 <img src="assets/git-4.png">
+
 - Finally, you're going to `git push origin branch-name`
 <img src="assets/git-5.png">
+
 - Voila! Now the code you wrote locally is hosted on GitHub and your partner will be able to access it!
 
 ## Switching drivers
