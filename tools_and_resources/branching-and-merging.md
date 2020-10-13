@@ -5,6 +5,7 @@ A branch serves as an abstraction for the edit/stage/commit process. New commits
 
 <img src="assets/branches.png" width="300px">
 
+<img src="assets/branches.png" width="600px">
 In the example above, we can visualize our main branch on the left. It is our "production" code that has been through testing and quality assurance. When we create a branch, we are duplicating the existing main branch. From this new branch, we can mess with features, add code, and generally run free without worrying about messing up the production code. We can commit different versions of our new branch as many times as we want until it is ready to be merged with main. Once you merge, the main branch has now been replaced with a version of itself that includes your updated code.
 
 ## Creating a new branch
@@ -18,7 +19,7 @@ Let's look at the process of creating a new version of the project (a branch) to
 <img src="assets/git-2.png">
 
 - The first driver is not free to write code!
-<img src="assets/driver-1.png">
+<img src="assets/driver-1.png" width="650px">
 
 - After the first driver is done with their portion, follow the git flow to push your code up to GitHub.
 - Run a quick `git status` to make sure your changes are being registered.
@@ -43,7 +44,7 @@ This branch name should be the exact same one that was created by the first driv
 - `git pull origin branch-name`
 
 At this point, driver 2 should have the updated file/s that driver 1 contributed! Driver 2 is ready to code!
-<img src="assets/driver-2.png">
+<img src="assets/driver-2.png" width="650px">
 
 When it comes time to switch again, follow the git flow that was used above:
 - `git add .`
@@ -55,14 +56,14 @@ When it comes time to switch again, follow the git flow that was used above:
 A pull request is a method of submitting contributions to a development project. We will use pull requests to update `main` with the new files you'll be creating in your branches.
 
 - Inside of the repository on GitHub, you'll see this message:
-<img src="assets/gh-1.png">
+<img src="assets/gh-1.png" width="650px">
 Click `Compare & pull request`
 - You will then be redirected to a page where you can create a pull request. Don't worry about adding to the form for the code challenges we do in class.
-<img src="assets/gh-2.png">
+<img src="assets/gh-2.png" width="650px">
 Click `Create pull request`
 
 - Now click `Merge pull request`
-<img src="assets/gh-3.png">
+<img src="assets/gh-3.png" width="400px">
 
 - Now main has been updated to include your code! Your branch did its job and can be deleted.
 <img src="assets/gh-4.png">
