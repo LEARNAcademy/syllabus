@@ -4,8 +4,7 @@
 - Ruby inheritance describes relationships between classes
 
 ## Learning Objectives
-- Correctly implementing inheritance syntax
-- Passing data and behavior from parent to child class
+- Pass data and behavior from parent to child class
 
 ## Vocabulary
 - Ruby classes
@@ -27,7 +26,7 @@ We just utilized the "DNA" of an apple (Class Apple), to make three brand new, i
 This style of programming is called object-oriented, even if the programming focuses on classes to some extent.
 
 ## Ruby Inheritance
-Since inheritance is a relation between two classes, to create the relation we use `<`. This allows the new class to get the features of the higher up class, but now you can add specific features. For example:
+To create an inheritance relationship, we use `<` between the child class name and the parent class name. This allows the new class to inherit the features of the superclass, but now you can add specific features. For example:
 
 ```ruby
 class Dog  
@@ -42,7 +41,7 @@ Now we will create a new class called Pointer and have it inherit from Dog.
 
 When you invoke a superclass with arguments, Ruby sends a message to the *parent* (`Dog`) of the *current object* (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`.
 
-For example: below, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essitially borrowing `Dog`'s initialize method to assign an instance variable of `@breed `to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
+For example: below, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essentially borrowing `Dog`'s initialize method to assign an instance variable of `@breed `to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
 
 ```ruby
 class Pointer < Dog  
@@ -52,103 +51,28 @@ class Pointer < Dog
     @name = name  
   end  
 
-  def to_s  
+  def get_info  
     "(#@breed, #@name)"  
   end  
 
 end
 
-my_dog = Pointer.new("Pointer", "Jax").to_s
+my_dog = Pointer.new("Pointer", "Jax").get_info
 ```
 
-The to_s method in class Pointer references `@breed` variable from the superclass Dog. This code works as you probably expect it to:
+The get_info method in class Pointer references `@breed` from the superclass Dog. This code uses string interpolation to return a string of the dog's info:
 
 ```ruby
-my_dog = Pointer.new("Pointer", "Jax").to_s #(Pointer, Jax)
+my_dog = Pointer.new("Pointer", "Jax").get_info #(Pointer, Jax)
 ```
 
-Because this code behaves as expected, you may be tempted to say that these variables are inherited. But remember, that is not how Ruby works. In the above code, Pointer defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable `@breed`, which makes those variables come into existence for a particular instance of Pointer.
+Because of the way this code behaves, you may be tempted to say that the instance variables are also inherited. But remember, that is not how Ruby works. In the above code, Pointer defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable `@breed`, which makes those variables come into existence for a particular instance of Pointer.
 
-## Class Relationships
-Think about our example above. Pointer `"is_a"` Dog. Pointer and Dog have an inheritance relationship based on their shared features.
+## Summary
+- Use `<` to create an inheritance relationship between a parent and child class.
+- The `super()` method is used in the child class. It calls the method of the _same name_ in the parent class. After invoking `super()`, the child class will have access to the instance variables within that method.
+- Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super()`, you are allowed to _borrow_ instance variables from the parent.
 
-`Dog` is the superclass ("super"/bigger) because it encompasses `Pointer` and `Shepherd`. The superclass should contain methods and variables that would be useful for the classes that inherit from it. In this example, `Pointer` is further down the inheritance hierarchy.
-
-Classes further down from the superclass have more features specific to what they are -- `Pointer` can have more specific features and characteristics than the broad umbrella `Dog` -- making them more specialized.
-
-Inheritance means that classes inherit the external interface of the superclasses. Therefore, classes can access and use their superclass' methods. Remember, instance variables are specific to each new instance of a class. That means that instance variables are not inherited.
-
-<img src="https://i.ibb.co/mNjcxpy/download.jpg" alt="download" border="0">
-
-
-## has_many, belongs_to
-There's specific terminology that exists when referring to the different relationships between objects. These terms will come into play more when we get into databases, etc. but it's valuable to make a habit of being aware of these relationships.
-
-For example, take this class called `Artist`.
-
-```ruby
-class Artist
-  # initialize method ensures that every instance of "Artist" will have a name and an empty array for songs
-  def initialize(name)
-    @name = name
-    @songs = []
-  end
-
-  def name
-    # get method to expose @name to other objects
-    @name
-  end
-
-  def add_songs(song)
-    # method to add songs to @song array using shovel operator
-    @songs << song
-  end
-
-  def songs
-    #get method to expose @song array to other objects
-    @songs
-  end
-end
-```
-
-The as you can see, `Artist` has the ability to hold some songs. Let's create a class called `Songs` as a blueprint for all other song objects.
-
-```ruby
-class Song
-  # initialize method to ensure all new instances of "Song" will have a title
-  def initialize(title)
-    @title = title
-  end
-
-  def title
-    #get method to expose @title to other objects
-    @title
-  end
-end
-```
-
-Now we can bring it all together:
-
-```ruby
-# Create a new instance of Artist
-britney = Artist.new("Britney Spears")
-
-# Create some new instances of Song
-song1 = Song.new("Baby One More Time")
-song2 = Song.new("Sometimes")
-song3 = Song.new("Toxic")
-
-# Call the function "add_songs" from the "britney" instance of Artist. Pass in the new instances of Song we created above.
-britney.add_songs(song1.title)
-britney.add_songs(song2.title)
-britney.add_songs(song3.title)
-
-# display all of britney's songs
-p britney.songs
-#["Baby One More Time", "Sometimes", "Toxic"]
-```
-
-Congrats we've made some relationships between objects! In this example, `britney` **has_many** `songs`, and each song belongs_to `britney`. Objects don't always have_many, though. Think about Britney Spears' body guard in the early 2000's. Let's assume that person had to guard Britney full-time. That relationship would be `body_guard` **has_one** client.
 
 ## Challenge: Car Challenge
 **Story**: As a programmer, I can make a car.  
