@@ -195,7 +195,7 @@ This link can take our user to the form to create a new exercise session.
 
 **app/views/exercise/index.html.erb**
 ```
-<p><%= link_to 'New Herb', new_herb_path %></p>
+<p><%= link_to 'New Exercise', new_exercise_path %></p>
 ```
 
 ### Review
@@ -206,14 +206,15 @@ By following the pattern of RESTful routes, we can start to implement CRUD funct
 As a developer, I have been commissioned to create an application where a user can see and create blog posts.
 - As a developer, I can create a blog application.
 - As a developer, my blog post can have a title and content.
-- As a developer, I can add new blog posts to my database.
+- As a developer, I can add new blog posts directly to my database.
 - As a user, I can see all the blog titles listed on the home page of the application.
 - As a user, I can click on the title of a blog and be routed to a page where I see the title and content of the blog post I selected.
-- As a user, I can navigate back to the home page.
-- As a user, I can click a button that will take me to a page where I can create a blog post.
-- As a user, I see a form I can fill out to create a new blog post.
-- As a user, I can click a button that will submit my blog post to the application.
-- As a user, I can see my blog title listed on the home page.
+- As a user, I can navigate from the show page back to the home page.
+- As a user, I see a form where I can create a new blog post.
+- As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
+- As a user, I can navigate from the form back to the home page.
+- As a user, I can click a button that will submit my blog post to the database.
+- As a user, I when I submit my post, I am redirected to the home page.
 
 ### Stretch Challenges
 - As a user, I can delete my blog post.
