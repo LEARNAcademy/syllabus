@@ -196,8 +196,8 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can create a directory in *src* called *pages*
 - As a developer, I can create a directory in *src* called *components*
 - As a developer, I can create a directory in *src* called *assets*
-- As a developer, I can create a file called *Header.j* in the *components* directory
-- As a developer, I can create a file called *Footer.j* in the *components* directory
+- As a developer, I can create a file called *Header.js* in the *components* directory
+- As a developer, I can create a file called *Footer.js* in the *components* directory
 - As a developer, I can create a file called *Home.js* in the *pages* directory
 - As a developer, I can create a file called *CatIndex.js* in the *pages* directory
 - As a developer, I can create a file called *CatShow.js* in the *pages* directory
