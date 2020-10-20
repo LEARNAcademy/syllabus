@@ -27,7 +27,7 @@ The frontend is going to ask the Rails API for information, then Rails will use 
 
 We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because everyone will be using this app!).
 
-There will be a series of fetch requests to match the functionality required in our application. To start, we are going to load up all the cats from the database and save them into state. This will take the place of our mockCats. Since we want make this fetch call right away, we can wrap this fetch call in the React lifecycle method `componentDidMount()` which will run as soon as the app loads.
+There will be a series of fetch requests to match the functionality required in our application. To start, we are going to load up all the cats from the database and save them into state. This will take the place of our mockCats. Since we want make this fetch call right away, we can create a method that will handle fetching all the cats. This method will be called in the React lifecycle method `componentDidMount()` which will run as soon as the app loads.
 
 The fetch request will be made to the URL that is running the Rails API. In this case, our Rails app is running on `localhost:3000`. We are making a request to the index route of our Rails app. Remembering our RESTful routes, we know that we need to make a request to a route called "/cats" to get all the cats.
 
@@ -44,14 +44,13 @@ constructor(props){
 }
 
 componentDidMount(){
+  this.catIndex()
+}
+
+catIndex = () => {
   fetch("http://localhost:3000/cats")
   .then(response => {
-    // checking for a successful response
-    if(response.status === 200){
-       // convert the response to json
-       // returns a Promise
-      return(response.json())
-    }
+    return response.json()
   })
   .then(catsArray => {
     // set the state with the data from the backend into the empty array

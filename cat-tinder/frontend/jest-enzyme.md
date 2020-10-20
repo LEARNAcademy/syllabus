@@ -1,6 +1,7 @@
 # Cat Tinder Testing with Jest and Enzyme
 
-## Video: [Jest and Enzyme Video](https://player.vimeo.com/video/227512341)
+## Video: Jest and Enzyme
+[![YouTube](http://img.youtube.com/vi/cvuAaJAFQ2o/0.jpg)](https://www.youtube.com/watch?v=cvuAaJAFQ2o)
 
 ## Overview
 - There are two main tools you'll use to test your React applications: Jest and Enzyme.

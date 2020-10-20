@@ -22,7 +22,7 @@ In a browser navigate to:
 ## API Technologies
 Creating our own API opens up a new world of possibilities for building engaging, interactive applications.  We can begin to accept user input, store and manipulate that input in the backend, and then provide a personalized experience for our user, perfectly suited to the task he/she is trying to achieve.
 
-The primary tool to collect input from users is an HTML form.  The user fills in form fields with information that allows them to interact with the application. As a general rule, we always want to process, validate, and store user data on the server where we have more control and processing power to handle it. To accomplish this, we need to build an API.
+The primary tool to collect input from users is an HTML form. The user fills in form fields with information that allows them to interact with the application. As a general rule, we always want to process, validate, and store user data on the server where we have more control and processing power to handle it. To accomplish this, we need to build an API.
 
 Once we have a functioning API, our React app can send the form data to the API and receive data back when requested. While there are many options for building back end APIs, Ruby on Rails is a fantastic platform.
 
@@ -89,12 +89,12 @@ As a developer, I have been commissioned to create an application where a user c
 
 - As a developer, I can create a new Rails application with a Postgresql database
 - As a developer, I can add a resource for Cat that has a name, and age, and what the cat enjoys
-- As a developer, I can create a testing suite in my Rails application
+- As a developer, I can create a RSpec testing suite in my Rails application
 - As a developer, I can run my test suite and see pending tests
 
 
 [ Go to next lesson: Cat Tinder API Seeds ](./seeds.md)
 
-[ Back to Cat Tinder Edit Functionality ](../frontend/cat-edit.md)
+[ Back to Cat Tinder Update Functionality ](../frontend/cat-update.md)
 
 [ Back to Syllabus ](../../README.md#cat-tinder-backend)

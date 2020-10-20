@@ -2,7 +2,7 @@
 
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
-- We are creating a full-stack, decoupled application. This means we are actually creating two separate applications: a React application for the frontend and a Rails API that handles our data.
+- We are creating a full-stack, decoupled application. This means we are actually creating two separate applications. A React application for the frontend and a Rails API that handles our data.
 
 ## Learning Objectives
 - Establishing a base file structure for Cat Tinder frontend
@@ -15,7 +15,7 @@
 - Reactstrap
 - React router
 - SPAs
-- assets folder
+- Assets directory
 
 ## Additional Resources
 - [ Reactstrap ](https://reactstrap.github.io/)
@@ -67,7 +67,7 @@ As a frontend developer we will need to create a React app that will accept the 
 
 
 ## Getting Starting
-So far, we have only created single page applications (or SPAs) in React. Now we want to be able to navigate to different pages as we explore CRUD functionality in a decoupled application.
+So far, we have only created single page applications (or **SPA**s) in React. Now we want to be able to navigate to different pages as we explore CRUD functionality in a decoupled application.
 
 To keep the files organized, it is a good practice to create three directories in your React application: assets, components, and pages.
 

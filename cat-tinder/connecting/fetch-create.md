@@ -25,7 +25,7 @@ The fetch request will be made to the URL that is running the Rails API. In this
 
 Since our fetch needs to send data from the frontend to the backend we need to format our request. We need to send the information in the body of the request, and specify the header to accept JSON, and specify our HTTP method.
 
-Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `componentDidMount()` method to reload the cats array that will include the new cat.
+Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `catIndex` method to reload the cats array that will include the new cat.
 
 **/src/App.js**
 ```javascript
@@ -41,11 +41,13 @@ createNewCat = (newcat) => {
     method: "POST"
   })
   .then(response => {
-    // if the response is good  - reload the cats
-    if(response.status === 200){
-      this.componentDidMount()
+    if(response.status === 422){
+      alert("Please check your submission.")
     }
-    return response
+    return response.json()
+  })
+  .then(payload => {
+    this.catIndex()
   })
   .catch(errors => {
     console.log("create errors:", errors)
@@ -63,7 +65,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can create a new cat
 - As a user, I can see my new cat in the cat list
 
-[ Go to next lesson: Cat Tinder Fetch for Edit Functionality ](./fetch-edit.md)
+[ Go to next lesson: Cat Tinder Fetch for Update Functionality ](./fetch-update.md)
 
 [ Back to Cat Tinder Fetch for Read Functionality ](./fetch-read.md)
 
