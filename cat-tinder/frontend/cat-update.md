@@ -67,7 +67,7 @@ handleChange = (e) => {
 ## Passing Cats to App.js
 Now that we have all the content from the edit form updated into state, we need to get the information back to `App.js`. This means we need to pass information "up the river" from child component to parent. To accomplish this we need to create a method in `App.js` that gets called when we submit the edit form.
 
-During our scaffolding phase, the goal here is to see the new cat logged in `App.js`. Eventually this method will be refactored to include an interaction with the database.
+During our scaffolding phase, the goal here is to see the updated cat logged in `App.js`. Eventually this method will be refactored to include an interaction with the database.
 
 Here is where we see the first big difference between the action that creates a new cat and the action that updates a cat. The update route requires a params of an id. To ensure we are updating the correct cat, we need to pass the id of the current cat to the method in `App.js`.
 
@@ -114,7 +114,7 @@ handleSubmit = (e) => {
 
 We need to call the method `onSubmit`. To accomplish this, we can add a button from Reactstrap. (Don't forget to add the Reactstrap import!)
 
-**src/pages/CatNew.js**
+**src/pages/CatEdit.js**
 ```javascript
 <Button
   name="submit"
@@ -125,7 +125,7 @@ We need to call the method `onSubmit`. To accomplish this, we can add a button f
 </Button>
 ```
 
-Now, if we naviagate to `localhost:3000/catedit/1` we should see a form. When the form is submitted we should see the logs for our cat object and id in the console.
+Now, if we navigate to `localhost:3000/catedit/1` we should see a form. When the form is submitted we should see the logs for our cat object and id in the console.
 
 ## Navigating to Cat Edit
 How we arrive at the edit page is important, since we need to have the id of our cat as a param. A logical approach is to allow our user to move from the show page (where we already have an id param) to the edit page. We can use the [ React-router NavLink ](https://reactrouter.com/web/api/NavLink) to call our "/catedit/:id" route and pass the param of the cat we are currently viewing. To keep our styling consistent throughout the app, we can wrap the `NavLink` around a Reactstrap button.
@@ -144,7 +144,7 @@ How we arrive at the edit page is important, since we need to have the id of our
 ## Finishing Touches
 Here is a good opportunity to think about user flow. Once a cat is updated, it would be nice to be redirect to see the updated information. We can use the same approach we used when submitting the new cat form.
 
-**src/pages/CatNew.js**
+**src/pages/CatEdit.js**
 ```javascript
 this.state = {
   form:{
@@ -165,7 +165,7 @@ handleSubmit = (e) => {
 
 When the form is submitted, success will be updated to true and we can use conditional rendering and [ React-router redirect ](https://reactrouter.com/web/api/Redirect) to go back to the show page.
 
-**src/pages/CatNew.js**
+**src/pages/CatEdit.js**
 ```javascript
 { this.state.success && <Redirect to={ `/catshow/${this.props.cat.id}` }/> }
 ```
