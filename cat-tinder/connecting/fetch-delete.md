@@ -19,7 +19,7 @@ Start your React server: `$ rails s -b 0.0.0.0` for 8081 on AWS
 ## Deleting Cats
 Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` method to an onClick event somewhere else in the application.
 
-Just like edit, delete requires the id of the cat that will be deleted. Since we are using the cat show page to host the edit functionality we can use the same approach to handle the delete functionality.
+Just like update, delete requires the id of the cat that will be deleted. Since we are using the cat show page to host the update functionality we can use the same approach to handle the delete functionality.
 
 The button to delete a cat can look a lot like the button that will navigate to the edit form. It will have a `NavLink` that will take the user back to the index page so we can see that the cat has been removed from the database. The Reactstrap `Button` has a color attribute for styling and will eventually execute the delete functionality.
 
@@ -46,9 +46,7 @@ deleteCat = (id) => {
     method: "DELETE"
   })
   .then(response => {
-    if(response.status === 200){
-      return response
-    }
+    return response.json()
   })
   .catch(errors => {
     console.log("delete errors:", errors)
@@ -83,6 +81,6 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can navigate to the page of one specific cat and see a delete button
 - As a user, I can click the button see all the cats with the specific cat removed
 
-[ Back to Cats Tinder Edit Functionality ](./cat-edit.md)
+[ Back to Cats Tinder Update Functionality ](./cat-update.md)
 
 [ Back to Syllabus ](../../README.md#bringing-it-together)

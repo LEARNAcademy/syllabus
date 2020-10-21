@@ -25,14 +25,14 @@ The fetch request will be made to the URL that is running the Rails API. In this
 
 Since our fetch needs to send data from the frontend to the backend we need to format our request. We need to send the information in the body of the request, and specify the header to accept JSON, and specify our HTTP method.
 
-Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `componentDidMount()` method to reload the cats array that will include the updated cat.
+Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `catIndex` method to reload the cats array that will include the updated cat.
 
 **/src/App.js**
 ```javascript
-editCat = (editcat, id) => {
+updateCat = (cat, id) => {
   return fetch(`http://localhost:3000/cats/${id}`, {
     // converting an object to a string
-    body: JSON.stringify(editcat),
+    body: JSON.stringify(cat),
     // specify the info being sent in JSON and the info returning should be JSON
     headers: {
       "Content-Type": "application/json"
@@ -41,25 +41,27 @@ editCat = (editcat, id) => {
     method: "PATCH"
   })
   .then(response => {
-    // if the response is good  - reload the cats
-    if(response.status === 200){
-      this.componentDidMount()
+    if(response.status === 422){
+      alert("Please check your submission.")
     }
-    return response
+    return response.json()
+  })
+  .then(payload => {
+    this.catIndex()
   })
   .catch(errors => {
-    console.log("edit errors", errors)
+    console.log("update errors:", errors)
   })
 }
 ```
 
-As long as we have set up the frontend scaffolding correctly, the cat edit method should be working. But now we will see the information for the updated cat.
+As long as we have set up the frontend scaffolding correctly, the cat update method should be working. But now we will see the information for the updated cat.
 
 
-## Challenge: Cat Tinder Fetch Edit Functionality
+## Challenge: Cat Tinder Fetch Update Functionality
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can update the `editCat` method to update information in the database
+- As a developer, I can update the `updateCat` method to update information in the database
 - As a user, I can edit an existing cat
 - As a user, I can see the information for my edited cat
 

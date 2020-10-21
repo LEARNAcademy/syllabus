@@ -182,13 +182,13 @@ As a developer, I have been commissioned to create an application where a user c
 
 - As a user, I can fill out a form to add a new cat
 - As a developer, I can add onChange and value attributes to each input
-- As a developer, I can pass the form data to App.js on submit
+- As a developer, I can pass the form data to `App.js` on submit
 - As a developer, I can see my new cat logged in the console on submit
 - As a user, I can be routed to the index page after I submit the new cat form
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 
-[ Go to next lesson: Cat Tinder Edit Functionality ](./cat-edit.md)
+[ Go to next lesson: Cat Tinder Update Functionality ](./cat-update.md)
 
 [ Back to Cat Tinder Read Functionality ](./cat-read.md)
 
