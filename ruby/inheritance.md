@@ -30,11 +30,9 @@ To create an inheritance relationship, we use `<` between the child class name a
 
 ```ruby
 class Dog  
-
   def initialize(breed)  
     @breed = breed  
   end  
-
 end
 ```
 Now we will create a new class called Pointer and have it inherit from Dog.
@@ -45,7 +43,6 @@ For example: below, our `initialize` method invokes `super` with an argument cal
 
 ```ruby
 class Pointer < Dog  
-
   def initialize(breed, name)  
     super(breed)  
     @name = name  
@@ -54,7 +51,6 @@ class Pointer < Dog
   def get_info  
     "(#@breed, #@name)"  
   end  
-
 end
 
 my_dog = Pointer.new("Pointer", "Jax").get_info
