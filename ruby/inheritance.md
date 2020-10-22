@@ -36,10 +36,6 @@ end
 ```
 Now we will create a new class called Pointer and have it inherit from Dog.
 
-When you invoke a superclass with arguments, Ruby sends a message to the *parent* (`Dog`) of the *current object* (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`.
-
-For example: below, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essentially borrowing `Dog`'s initialize method to assign an instance variable of `@breed `to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
-
 ```ruby
 class Pointer < Dog  
   def initialize(breed, name)  
@@ -54,6 +50,10 @@ end
 
 my_dog = Pointer.new("Pointer", "Jax").get_info
 ```
+
+When you invoke a superclass with arguments, Ruby sends a message to the *parent* (`Dog`) of the *current object* (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`.
+
+For example: above, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essentially borrowing `Dog`'s initialize method to assign an instance variable of `@breed `to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
 
 The get_info method in class Pointer references `@breed` from the superclass Dog. This code uses string interpolation to return a string of the dog's info:
 
