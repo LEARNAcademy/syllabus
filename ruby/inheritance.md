@@ -9,8 +9,7 @@
 ## Vocabulary
 - Ruby classes
 - Ruby inheritance
-- has_many, belongs_to
-- super
+- super()
 
 ## Set Up
 - Create a file with the extension `.rb`
