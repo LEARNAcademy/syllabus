@@ -41,7 +41,6 @@ In a Ruby classes, we may want to expose the instance variables (the variables t
 
 ```ruby
 class Person
-
   def set_name(name)
     @name = name
   end
@@ -49,7 +48,6 @@ class Person
   def get_name
     @name
   end
-
 end
 # Notice that the Person class is very re-usable and can be used for any name we want to pass it (no names are hard-coded in).
 
@@ -87,7 +85,6 @@ A class with an initialize method:
 
 ```ruby
 class Jedi
-
   # Create in initialize method that gives all new instances of Jedi the title "Knight"
   def initialize
     @title = "Knight"
@@ -97,7 +94,6 @@ class Jedi
   def title
     @title
   end
-
 end
 
 # Create a new instance of the class Jedi. Call it chosen_one
@@ -112,7 +108,6 @@ Here's another example. By creating a new instance of the Fruit class, we immedi
 
 ```ruby
 class Fruit
-
   def initialize
     @vitamins = []
   end
@@ -120,7 +115,6 @@ class Fruit
   def vitamins
     @vitamins
   end
-
 end
 
 # New instance (object) of the class:
@@ -141,12 +135,10 @@ Now let's create a class that requires an argument:
 
 ```ruby
 class SquareFoot
-
   def initialize(height, width)
     @height = height
     @width = width
   end
-
 end
 
 # Create a new instance of the class SquareFoot. Call it bedroom_wall
@@ -167,7 +159,6 @@ One more example. Again, there will be an error if the `.new` method does not ha
 
 ```ruby
 class Animal
-
   def initialize tude
     @attitude = tude
   end
@@ -175,7 +166,6 @@ class Animal
   def attitude
     @attitude
   end
-
 end
 
 # New instance of the class without an argument, which gives error:
@@ -188,12 +178,66 @@ kitten = Animal.new
 # "sweet"
 ```
 
+## attr_accessor
+So far, we have used **setter methods** to _set_ or _assign_ values in a class, as well as **getter methods** to then _get_ or _retrieve_ those values. But there's a shortcut we can use!
+
+In Ruby, `attr_accessor` automatically sets up getters and setters for instance variables. Using `attr_accessor` allows us to _set_ and _get_ values from outside of the class.
+
+```ruby
+class FoodOrder
+  # At the top of this class, we utilize attr_accessor to identify which instance variable we will want to access. We refer to the instance variable's name using a symbol :order.
+  attr_accessor :order
+
+  def initialize(order)
+    @order = order
+  end
+end
+
+# We can now refer to the order instance variable directly from outside of the class (get).
+lunch = FoodOrder.new("Sandwich")
+> puts lunch.order
+# #<Sandwich>
+
+# We can also reassign this instance variable from outside of the class (set).
+lunch.order = "Salad"
+> puts lunch.order
+# #<Salad>
+```
+
+To access multiple instance variable values, add commas between each proceeding symbol.
+
+```ruby
+class FoodOrder
+  attr_accessor :item1, :item2, :item3
+
+  def initialize(item1, item2, item3)
+    @item1 = item1
+    @item2 = item2
+    @item3 = item3
+  end
+end
+
+lunch = FoodOrder.new("Sandwich", "Fruit", "La Croix")
+puts lunch.item3
+# #<La Croix>
+
+lunch.item3 = "Coke"
+puts lunch.item3
+# #<Coke>
+```
+
+There are other options as well including `attr_reader` and `attr_writer`.
+
+- `attr_reader` will only allow you to _get_ a value.
+- `attr_writer` will only allow you to _set_ a value.
+- `attr_accessor` allows you to do both.
+
 ## Object Oriented Programming in Ruby
 We've been talking throughout this class about how everything in Ruby is an object, but it can be difficult to visualize what that means when it comes to building a program. Let's take a moment with your Car challenge to take apart how Ruby's object-oriented behavior actually impacts you as a programmer.
 
 **Given Classes**
 
-Again, every object in Ruby belongs to a class. Another way of saying: each object is an instance of class. Once you know what class the object belongs to (by using the `.class` method), it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
+Again, every object in Ruby belongs to a class, meaning each object is an _instance_ of class. Once you know what class the object belongs to (by using the `.class` method), it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
 
 ```ruby
 hello.class
@@ -207,7 +251,6 @@ Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicl
 
 ```ruby
 class Vehicle
-
   def initialize(year, make, model)
     @year = year
     @make = make
@@ -224,18 +267,26 @@ class Vehicle
     # When using string interpolation with an instance variable, you can simply put a # followed by the name of the variable
     puts "This is a #@year #@make #@model."
   end
-
 end
 ```
 
-
 ## Challenge: Tasklist
+Use both **setter** and **getter** methods for this challenge.
+
 **Story:**	As a developer, I can create a Task.  
 **Story:**	As a developer, I can give a Task a title and retrieve it.  
 **Story:**	As a developer, I can give a Task a description and retrieve it.  
 **Story:**	As a developer, I can mark a Task done.  
 **Story:**	As a developer, when I print a Task that is done, its status is shown.
 
+## Challenge: Color Palette
+Use **attr_accessor** for this challenge.
+
+**Story:**	As a developer, I can create a ColorPalette.  
+**Story:**	As a developer, I can initialize my color palette to contain 3 colors.  
+**Story:**	As a developer, I can print the values of each individual color.  
+**Story:**	As a developer, I can print a sentence that tells me all of the colors in my palette.  
+**Story:**	As a developer, I can change one or more of the colors in my palette.
 
 [ Go to next lesson: Ruby Inheritance ](./inheritance.md)
 
