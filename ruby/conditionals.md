@@ -68,7 +68,13 @@ end
 
 ## Challenge: Rock, Paper, Scissors
 
-Write the code that allows two users to input their moves in terminal for "Rock, Paper, Scissors" and determines the winner (or if a tie occurred).
+**Story**: As _user 1_, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+
+**Story**: As _user 2_, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+
+**Story**: As a user, I can see a message in the terminal saying if _user 1_ or _user 2_ won the round.
+
+**Story**: As a user, I can see a message in the terminal saying if there was a tie.
 
 [ Go to next lesson: Ruby Methods ](./methods.md)
 
