@@ -81,7 +81,8 @@ import Adapter from 'enzyme-adapter-react-16'
  // Imports in the component we are going to be testing. 
 import CatIndex from '../CatIndex'
 
-Enzyme.configure({ adapter: new Adapter() }) //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component. 
+//Allows us to utilize the adapter we import in earlier, allowing us to call and render a component. 
+Enzyme.configure({ adapter: new Adapter() }) 
 ```
 
 Let's write a test to check for the text rendering in our components. We will write a test, then we'll update the code to make it pass. (That's TDD!)
