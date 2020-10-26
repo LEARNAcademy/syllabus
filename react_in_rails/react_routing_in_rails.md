@@ -17,22 +17,13 @@
 
 ## Set Up
 The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
-- $ rails new my_single_page_app -d postgresql -T
-- $ cd my_single_page_app
-- $ rails db:create
-- $ bundle add react-rails
-- $ rails webpacker:install
-- $ rails webpacker:install:react
-- $ rails generate react:install
-
-## Troubleshooting
-Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page. If this happens, try one of the following options:
-
-- Stop the server and start it again.
-- Did all the setup commands run properly? The commands can be rerun if something isn't working.
-- Seeing a blank page? Look at the terminal for errors.
-- Did you follow all the Rails naming conventions?
-- Did something unexpected happen? Don't be afraid to start over. If you are going to start over make sure to delete the current project completely including **dropping your database** ($ rails db:drop).
+- `$ rails new my_single_page_app -d postgresql -T`
+- `$ cd my_single_page_app`
+- `$ rails db:create`
+- `$ bundle add react-rails`
+- `$ rails webpacker:install`
+- `$ rails webpacker:install:react`
+- `$ rails generate react:install`
 
 ## React Component
 We are going to create React components inside of a Rails application. This gives us the convenience of JavaScript in our Rails app, but the setup will look a little different that a plain React application. We are going to run Rails commands to set up the React components.
@@ -233,6 +224,15 @@ class App extends React.Component{
 
 export default App
 ```
+
+## Troubleshooting
+Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page. If this happens, try one of the following options:
+
+- Stop the server and start it again.
+- Did all the setup commands run properly? The commands can be rerun if something isn't working.
+- Seeing a blank page? Look at the terminal for errors.
+- Did you follow all the Rails naming conventions?
+- Did something unexpected happen? Don't be afraid to start over. If you are going to start over make sure to delete the current project completely including **dropping your database** ($ rails db:drop).
 
 ## Challenge: Single Page Application
 Follow these instructions to create your own React in Rails application with Reactstrap and React-router.
