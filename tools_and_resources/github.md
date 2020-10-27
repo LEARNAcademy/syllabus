@@ -40,7 +40,7 @@ The `git status` command displays the state of the working directory and the sta
 
 <img src="./assets/status.png">
 
-Above, we can see from running `git status` that there has been a change made to the `inheritance.md` file inside the `ruby` folder. It also tells us that those changes have not been added to be committed.
+Above, we can see from running `git status` that there has been a change made to the `github.md` file inside the `tools_and_resources` folder. It also tells us that those changes have not been added to be committed.
 
 Git status is helpful for us to understand where our code is at in the git process.
 
