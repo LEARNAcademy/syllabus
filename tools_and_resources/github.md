@@ -32,6 +32,16 @@ https://git-scm.com/download/win
 - Create a new file in atom
 - Begin your project!
 
+### Git Commands
+
+#### Status
+
+The `git status` command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git. Status output does not show you any information regarding the committed project history.
+
+<img src="./assets/status.png">
+
+Above, we can see from running `git status` that there has been a change made to the `inheritance.md` file inside the `ruby` folder. It also tells us that those changes have not been added to be committed. 
+
 
 ### How to save your existing code in GitHub
 
