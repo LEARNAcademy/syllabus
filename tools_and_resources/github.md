@@ -40,7 +40,14 @@ The `git status` command displays the state of the working directory and the sta
 
 <img src="./assets/status.png">
 
-Above, we can see from running `git status` that there has been a change made to the `inheritance.md` file inside the `ruby` folder. It also tells us that those changes have not been added to be committed. 
+Above, we can see from running `git status` that there has been a change made to the `inheritance.md` file inside the `ruby` folder. It also tells us that those changes have not been added to be committed.
+
+Git status is helpful for us to understand where our code is at in the git process.
+
+#### Add
+
+The `git add` command adds a change in the working directory to the _staging area_. It tells Git that you want to include updates to a particular file in the next commit. However, `git add` doesn't really affect the repository in any significant way. Changes are not actually recorded until you run `git commit`.
+
 
 
 ### How to save your existing code in GitHub
