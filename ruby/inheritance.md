@@ -121,6 +121,12 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 **Story**: As a developer, I can sort my collection of Animals based on age.
 **Hint**: Find out how the spaceship operator can help you with an array.
 
+
+### Super Stretch Challenge
+
+**Story**: As a developer, I can utilize a Ruby `module` to help DRY up my code. I can create a `swim` method inside of my `module` that will apply to Animals who can _swim_.  
+**Hint**: Look into module `mix ins`. Since not all animals can swim, only certain Animals will have access to this module.
+
 [ Go to next lesson: Ruby Testing with RSpec ](./rspec.md)
 
 [ Back to Ruby Classes and Objects ](./classes_objects.md)
