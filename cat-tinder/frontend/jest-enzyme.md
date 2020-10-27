@@ -31,7 +31,7 @@
 - $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 
 ## Jest
-When you create a new React application, we get Jest automatically, which is great because Enzyme must be used in conjunction with a testing suite. Ontop of Jest being bundled in with our application, it also creates a test file for App.js. It has one test that looks at React's boilerplate code.
+When you create a new React application, we get Jest automatically, which is great because Enzyme must be used in conjunction with a testing suite. On top of Jest being bundled in with our application, it also creates a test file for App.js. It has one test that looks at React's boilerplate code.
 
 **/src/App.test.js**
 ```javascript
