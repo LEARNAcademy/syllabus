@@ -72,13 +72,13 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 ## Challenge: Animal Kingdom
 **Story**: As a developer, I can make an Animal.
 
-**Story**: As a developer, I can give my Animal a value of `alive`, which will be set to true.
+**Story**: As a developer, upon initialization, I can give my Animal a status of `alive`, which will be set to true.
 
 **Story**: As a developer, I can give my Animal an `age` of 0 upon creation.
 
 **Story**: As a developer, I can age my Animal up 1 year at a time.
 
-**Story**: As a developer, I can tell that my Animal's default status is `alive`.
+**Story**: As a developer, I can return my Animal's `age`, as well as if they're `alive`.
 **Hint**: Use `attr_accessor` as well as an `initialize` method.
 
 **Story**: As a developer, I can create a Fish that inherits from Animal.
@@ -106,12 +106,16 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 
 **Story**: As a developer, I can age my Bear up.
 
+**Story**: As a developer, I can see a message that tells me all of my Bear's information.
+
 **Story**: As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
 **Hint**: You will need a method that changes the status of `alive` in the initialize method of Animal.
 
-**Story**: As a developer, I can see a message that tells me all of my Bear's information.
-
 **Story**: As a developer, I can create a Mammal of my choice.
+
+**Story**: As a developer, I can interact with the new Mammal via various methods.
+
+**Story**: As a developer, I can see a message that tells me all of my new Mammal's information.
 
 ### Stretch Challenges
 
@@ -124,7 +128,7 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 
 ### Super Stretch Challenge
 
-**Story**: As a developer, I can utilize a Ruby `module` to help DRY up my code. I can create a `swim` method inside of my `module` that will apply to Animals who can _swim_.  
+**Story**: As a developer, I can utilize a Ruby `module` to help DRY up my code. I can create a `swim` method inside of my `module` that will apply to Animals who can _swim_. This method should return "I can swim!"  
 **Hint**: Look into module `mix ins`. Since not all animals can swim, only certain Animals will have access to this module.
 
 [ Go to next lesson: Ruby Testing with RSpec ](./rspec.md)
