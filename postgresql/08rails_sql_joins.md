@@ -6,7 +6,7 @@ MySQL and SQLite do not support joins. But Postgresql does!
 
 # Martian Colony
 
-Welcome to Mars! There are two tables: `martians` and `bases` that make up the database of a Martian colony.
+Welcome to Mars! Here are two tables: `martians` and `bases` that make up the database of a Martian colony.
 
 Let's assume that `martians` is the `left` table:
 
@@ -68,6 +68,25 @@ FROM martians AS m
 INNER JOIN bases AS b
 ON m.base_id = b.id
 ```
+
+## Martian Colony Tables
+
+Here is all if the data available to us in the Martian Colony.
+
+### Martians:
+<img src="./assets/martian-colony/martians.png">
+
+### Bases:
+<img src="./assets/martian-colony/bases.png">
+
+### Visitors:
+<img src="./assets/martian-colony/visitor.png">
+
+### Inventory:
+<img src="./assets/martian-colony/inventory.png">
+
+### Supplies:
+<img src="./assets/martian-colony/supply.png">
 
 ## Visitor Report
 #### Display the name of each visitor and their host to ensure there are no unaccompanied visitors.
