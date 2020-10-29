@@ -1,181 +1,146 @@
 # Joins
 
-https://player.vimeo.com/video/137862869
+A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them.
 
-Putting the 'Relational' in 'Relational Databases'
+MySQL and SQLite do not support joins. But Postgresql does!
 
-## Table aliases
-**From W3Schools**
-> SQL aliases are used to give a table, or a column in a table, a temporary name.
+# Martian Colony
 
-> Aliases are often used to make column names more readable.
+Welcome to Mars! There are two tables: `martians` and `bases` that make up the database of a Martian colony.
 
->An alias only exists for the duration of the query.
+Let's assume that `martians` is the `left` table:
 
-> Aliases can be useful when:
-> - There are more than one table involved in a query
-> - Functions are used in the query
-> - Column names are big or not very readable
-> - Two or more columns are combined together
+<img src="./assets/martian-colony/martians.png" height="300px">
 
-[SQL Aliases - https://www.w3schools.com/sql/sql_alias.asp](https://www.w3schools.com/sql/sql_alias.asp)
+While `bases` is the `right` table:
 
+<img src="./assets/martian-colony/bases.png" height="150px">
 
-![Table Aliases](./assets/joins/table-aliases.png)
+We can see that martians belong to certain bases. By _joining_ the tables, we will be returning one output that combines data from both tables.
 
-## Aliases in SELECT clauses
-![Alias in SELECT](./assets/joins/alias-in-select.png)
+The different types of Joins are:
+- INNER JOIN
+  - Only returns connected rows that satisfy the `ON` criteria (there will be no `null` values in the output relating to the connection you are trying to make).
+- LEFT JOIN
+  - Returns every row in the left table, even if it doesn't have a match in the right table (there will be `null` values in the right side in the return)
+- RIGHT JOIN
+  - Returns every row in the right table, even if it doesn't have a match in the left table (there will be `null` values in the left side in the return)
+- FULL JOIN
+  - Returns all rows from both tables. Any unconnected pieces will have a `null` value. This is sometimes referred to as a "full outer join."
 
-## Aliases in ON clauses
-![Alias in ON Clause](./assets/joins/alias-on-clause.png)
+SQL Joins will follow this syntax:
+- SELECT: This outlines the columns you wish to return in the output
+- FROM: The left table
+- ____ JOIN: The right table. Fill the blank with the type of join you'd like to use.
+- ON: Where you would like the tables to connect. Tables are typically joined by an ID.
 
-## JOINs in FROM
-* specifies a table or set
-* Join gives us all the fields from all the sets that match the ON clause
-
-![Using ON in FROM](./assets/joins/using-on-in-from.png)
-
-![ON In FROM](./assets/joins/on-in-from-2.png)
-
-#### Using JOINS in the rest of our query
-* The result of a JOIN is a set
-* We can use fields from both sides of a join in SELECT, ORDER BY, and many other ways
-
-Join gives us all the fields from all the combinations of rows that match the ON clause
-
-![result of joins](./assets/joins/result-of-join.png)
-
-## Three-way JOINs
-
-A join of three tables can be accomplished with:
-
-```sql
-SELECT
-  *
-FROM
-  country c_1 JOIN city ct ON c_1.code = ct.countrycode,
-  country c_2 JOIN countrylanguage cl ON c_2.code = cl.countrycode
 ```
-
-## JOINing on WITH
-To join with a temporary table created from a WITH clause, use the name assigned to the temporary table. For example:
-
-```sql
-WITH populated_countries AS (
-	SELECT *
-	FROM
-		country
-	WHERE
-		population > 0
-)
+<!-- the columns you'd like to see in the output -->
 SELECT *
-FROM
-  country c_1 JOIN populated_countries c ON c_1.code = c.code
+<!-- first table -->
+FROM martians
+<!-- table you're joining with -->
+INNER JOIN bases
+<!-- how the two tables will connect. Tables are typically joined by an ID -->
+ON martians.base_id = bases.id
+<!-- since this is a SELECT clause, you could add WHERE and ORDER afterwards if you wish -->
 ```
-The difference between `ON` and `USING` with `JOIN`s
 
-`ON` is the more general of the two. You can join tables `ON` a column, a set of columns and even a condition. For example:
-<div class="text-center">
-<img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/58/original_JOIN_ON.png?1477430076" style="height: 300px;"/>
-</div>
+<img src="./assets/martian-colony/inner-join.png">
 
-```sql
+There may be times where two tables have the same column name/s (ex: "name", or "id"). In order to avoid confusion in our query, it's important to specify which table you are referring to in the return. In your SELECT statement, put the name of the table ahead of the name of the column using dot notation.
+
+```
+<!-- add the table to the column using dot notation -->
+SELECT martians.first_name, martians.last_name, bases.id, bases.base_name, bases.mayor
+FROM martians
+INNER JOIN bases
+ON martians.base_id = bases.id
+```
+
+Our SELECT clause is looking a little cluttered. Let's refactor it to utilize _aliases_ to clean it up.
+
+```
+<!-- add the table alias to the column using dot notation -->
+SELECT m.first_name, m.last_name, b.id, b.base_name, b.mayor
+<!-- define aliases using AS -->
+FROM martians AS m
+INNER JOIN bases AS b
+ON m.base_id = b.id
+```
+
+## Visitor Report
+#### Display the name of each visitor and their host to ensure there are no unaccompanied visitors.
+
+We need to link the host_id inside of the Visitor table to the id inside of the Martian table.
+
+If we use an `INNER JOIN`, we will only see visitors who have a host. But we want to see all of the visitors to ensure they are being hosted appropriately. Instead, we will want to use a `LEFT JOIN`, so that every visitor will be included in the output. Remember, the left table is the table you use in the `FROM` clause.
+
+In order to clean up our select, and ensure our output is clear, we will also assign aliases to the `SELECT` columns.
+
+```
 SELECT
-	*
-FROM
-	country c JOIN
-	city cy ON ( cy.countrycode = c.code) JOIN
-	countrylanguages cl ON (cl.countrycode = c.code)
-WHERE ...
+	v.first_name AS visitor_fn, v.last_name AS visitor_ln,
+	m.first_name AS martian_fn, m.last_name AS martian_ln
+FROM visitors AS v
+LEFT JOIN martians AS m
+ON v.host_id = m.id
 ```
-`USING` is useful when both tables share a column of the exact same name on which they join. In this case, you can:
 
-<div style="hieght: 100px;">
-<img src="http://s3.amazonaws.com/learn-site/app/public/redactor_rails/pictures/59/original_JOIN_USING.png?1477430091" />
-</div>
+<img src="./assets/martian-colony/visitor-report.png">
 
-```sql
+## Inventory Report
+#### Generate an inventory report for Base #1
+
+We will need data from the Inventory and Supply tables.
+
+Let's look at a query of the data from Inventory that matches `base_id` of 1.
+
+```
+SELECT base_id, supply_id, quantity FROM inventories WHERE base_id = 1
+```
+
+<img src="./assets/martian-colony/helper-query.png">
+
+This output isn't horrible. But it's missing some key info!
+- Name of the supplies listed.
+- Items that are not in stock.
+
+To remedy this, we will create another `SELECT` that will return `FROM` the result of our first query above. This is called a "subquery."
+
+In this example, we will use a `RIGHT JOIN` because we want to see all available supplies.
+
+```
+SELECT s.id, i.quantity, s.name, s.description
+<!-- Give this an alias to refer to -->
+FROM (SELECT base_id, supply_id, quantity FROM inventories WHERE base_id = 1) AS i
+RIGHT JOIN supplies AS s
+ON i.supply_id = s.supply_id
+ORDER BY supply_id
+```
+To avoid duplicate, confusing columns in the output, we are careful with what we put in the `SELECT` clause. Above, we want to return the id of the supply, the quantity of that supply at the base, and the name and description of the supply.
+
+<img src="./assets/martian-colony/base-1-supplies.png">
+
+## No Host Report
+#### List visitors who do not have a host as well as Martians who are available to do the job.
+
+We will use a `FULL JOIN` so that we can see null values on either table.
+
+```
 SELECT
-	*
-FROM
-  customer cust JOIN
-	rentals ren USING (customer_id) JOIN
-	inventory inv USING (inventory_id) JOIN
-	films fil USING (film_id) JOIN
-	film_categories fil_cat USING (film_id) JOIN
-	category cat USING (category_id)
-WHERE ...
+	v.first_name AS visitor_fn, v.last_name AS visitor_ln,
+	m.first_name AS martian_fn, m.last_name AS martian_ln
+FROM visitors AS v
+FULL JOIN martians AS m
+ON v.host_id = m.id
+WHERE m.id IS NULL OR v.id IS NULL
 ```
+<img src="./assets/martian-colony/no-host-report.png">
 
+## Challenges:
 
-
-
-
-
-# More with Joins
-
-https://player.vimeo.com/video/137863295
-
-## Outer Joins
-
-In our countries database, how would we list all countries along with their capital cities?
-What happens if some countries don't have a capital city record?
-
-![left outer joins](./assets/joins-2/left-outer-join.png)
-
-We can look for sets that specifically are missing the right side of a join
-
-![left outer join with null](./assets/joins-2/left-outer-join-null.png)
-# Challenges
-
-### Country Database Join Challenge
-
-Start by making a picture showing the tables of the database and how they relate (which columns represent the same information).
-
-### Relatively Simple JOINS
-
-NOTE: You don't actually need a join to get this information - try writing a query for this information once without a join, and once with.
-
-* What languages are spoken in the United States? (12) Brazil? (not Spanish...) Switzerland? (4)
-* What are the cities of the US? (274) India? (341)
-
-### Languages
-
-* What are the official languages of Switzerland? (4 languages)
-* Which country or countries speak the most languages? (12 languages)
-   * Hint: Use `GROUP BY` and `COUNT(...)`
-* Which country or countries have the most official languages? (4 languages)
-   * Hint: Use `GROUP BY` and `ORDER BY`
-* Are there any countries without an official language?
-   * Hint: Use `NOT IN` with a `SELECT`
-
-### Cities
-
-* What is the population of the United States? What is the city population of the United States?
-* What is the population of the India? What is the city population of the India?
-* Which countries have no cities? (7 not really contries...)
-
-### Languages and Cities
-
-* What is the total population of cities where English is the official language? Spanish?
-   * Hint: The official language of a city is based on country.
-* Which countries have the 100 biggest cities in the world?
-* What languages are spoken in the countries with the 100 biggest cities in the world?
-
-## DVD Rental Database Challenges
-Hint: use `INTERSECT` or `OUTER JOIN` or `INNER JOIN`
-
-* Which customer placed the rentals on the earliest date? What did they rent?
-* Which product do we have the most of? Find the rental ids and customer names for all rentals for that item.
-* What rentals have there been from Texas? In June 2005?
-* How many rentals have we had for sci-fi films? From Texas?
-* Which actors have not appeared in a Sci-Fi film?
-* Find all customers who have not rented a Sci-Fi film.
-
-## DVD Rental Outer Join Challenges
-* What are the categories of the movies that were never rented?
-* Which customers did not rent a movie in the second half of 2005?
-* What was the total revenue in April 2007? In California?
+<!-- IM NOT SURE -->
 
 [Go to Ruby on Rails Introduction](../rails_model/intro.md)
 
