@@ -69,69 +69,67 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 - Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super()`, you are allowed to _borrow_ instance variables from the parent.
 
 
-## Challenge: Car Challenge
-**Story**: As a programmer, I can make a car.  
-**Hint**:	Create a class called `Car`, and create a variable called `my_car` which contains an object of class `Car`.
+## Challenge: Animal Kingdom
+**Story**: As a developer, I can make an Animal.
 
-**Story**: As a programmer, I can give my car a model on initialization.  
-**Hint**: The model for the car class can be "generic car"
+**Story**: As a developer, upon initialization, I can give my Animal a status of `alive`, which will be set to true.
 
-**Story**: As a programmer, I can give my car a year on initialization.  
-**Hint**: The year for the car class can be "my_car year"
+**Story**: As a developer, I can give my Animal an `age` of 0 upon creation.
 
-**Story**: As a programmer, I can tell how many wheels a car has. The default is four.  
-**Hint**:	`initialize` the car to have four wheels, then create a method to return the number of wheels.
+**Story**: As a developer, I can age my Animal up 1 year at a time.
 
-**Story**: As a programmer, I can make a Tesla car.  
-**Hint**:	Create an variable called `my_tesla` which is an instance of class `Tesla` which inherits from class `Car`.
+**Story**: As a developer, I can return my Animal's `age`, as well as if they're `alive`.
+**Hint**: Use `attr_accessor` as well as an `initialize` method.
 
-**Story**: As a programmer, I can give my Tesla a model on initialization.
+**Story**: As a developer, I can create a Fish that inherits from Animal.
 
-**Story**: As a programmer, I can give my Tesla a year on initialization.
+**Story**: As a developer, I can initialize all of my fish to be `cold_blooded` (yes, there is _one_ fish who is technically fully warm-blooded but we aren't going to talk about that).
 
-**Story**:As a programmer, I can make a Toyota car.
+**Story**: As a developer, I can create a Salmon that inherits from Fish.
 
-**Story**: As a programmer, I can give my Toyota a model on initialization.
+**Story**: As a developer, I can initialize my Salmon to be a specific species (Atlantic, Sockeye, etc.).
 
-**Story**: As a programmer, I can give my Toyota a year on initialization.
+**Story**: As a developer, I can see that my Salmon is cold-blooded.
 
-**Story**: As a programmer, I can make a Honda car.
+**Story**: As a developer, I can age my Salmon up.
 
-**Story**: As a programmer, I can give my Honda a model on initialization.
+**Story**: As a developer, I can see a message that tells me all of my Salmon's information.
 
-**Story**: As a programmer, I can give my Honda a year on initialization.
+**Story**: As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
+**Hint**: You will need a method that changes the status of `alive` in the initialize method of Animal.
 
-**Story**:	As a programmer, I can turn on and off the lights in my cars. Lights start in the off position.
+**Story**: As a developer,I can create a Mammal that inherits from Animal.
 
-**Story**:  As a programmer, I can signal left and right. Turn signals starts off.
+**Story**: As a developer, I can initialize all of my Mammals to be `warm_blooded`.
 
-**Story**:	As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
+**Story**: As a developer, I can create a Bear that inherits from Mammal.
 
-**Story**:	As a programmer, I can speed my Teslas up by 10 per acceleration.
+**Story**: As a developer, I can age my Bear up.
 
-**Story**:	As a programmer, I can slow my Teslas down by 7 per braking.
+**Story**: As a developer, I can see a message that tells me all of my Bear's information.
 
-**Story**:	As a programmer, I can speed my Toyotas up by 7 per acceleration.
+**Story**: As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
+**Hint**: You will need a method that changes the status of `alive` in the initialize method of Animal.
 
-**Story**:	As a programmer, I can slow my Toyotas down by 5 per braking.
+**Story**: As a developer, I can create a Mammal of my choice.
 
-**Story**:	As a programmer, I can speed my Hondas up by 5 per acceleration.
+**Story**: As a developer, I can interact with the new Mammal via various methods.
 
-**Story**:	As a programmer, I can slow my Hondas down by 2 per braking.
-
-**Story**:  As a programmer, I can call upon a car to tell me all its information.  
-**Hint**: Implement `to_s` on one or more classes. You can call a super class's `to_s` with super.
-
+**Story**: As a developer, I can see a message that tells me all of my new Mammal's information.
 
 ### Stretch Challenges
 
-**Story**: As a programmer, I can keep a collection of two of each kind of car model, all from different years.  
-**Hint**:	Create two of each vehicles, all from different model years, and put them into an array.
+**Story**: As a developer, I can keep a collection of two of each Animal.
+**Hint**:	You'll want to add your Animals into an array.
 
-**Story**: As a programmer, I can sort my collection of cars based on model.
-
-**Story**: As a programmer, I can sort my collection of cars based on year.  
+**Story**: As a developer, I can sort my collection of Animals based on age.
 **Hint**: Find out how the spaceship operator can help you with an array.
+
+
+### Super Stretch Challenge
+
+**Story**: As a developer, I can utilize a Ruby `module` to help DRY up my code. I can create a `swim` method inside of my `module` that will apply to Animals who can _swim_. This method should return "I can swim!"  
+**Hint**: Look into module `mix ins`. Since not all animals can swim, only certain Animals will have access to this module.
 
 [ Go to next lesson: Ruby Testing with RSpec ](./rspec.md)
 
