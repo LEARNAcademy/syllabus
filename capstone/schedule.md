@@ -32,11 +32,6 @@ Each team should define a schedule and hold each other accountable to stick with
 
 9:30 - Pair up and start coding, remember to take breaks regularly and take breaks at the same time
 
-11:00 - Stand up
-- What did you do yesterday?
-- What are you doing today?
-- What are your blockers?
-
 12:00 - Lunch
 
 1:00 - Coding

@@ -25,17 +25,17 @@
 
 ### Additional Technologies
 - Gmail account / Google docs
-- New GitHub organization (for everyone to share)
+- New GitHub organization for your team
 - Slack channel - invite all instructors and admin staff
 - Heroku Account
-- Trello or GitHub Projects board for project management
+- Trello or similar project management board
 
 ### Things to Think About
 - Step out of your comfort zone
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
 - Organization and clear communication - make sure everyone is on the same page
-- Setting Clear Goals - Trello
+- Setting Clear Goals
 - Make sure everyone feels included
 
 
