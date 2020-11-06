@@ -184,7 +184,6 @@ Excellent! Our test passes and we can now move on to creating more tests.
 
 ```javascript
 // Write a test for a function that logs "eat food" if you are hungry and "keep working" if you are not hungry
-// Notice this test contains two expect methods - one for each possible outcome
 
 describe("areYouHungry", () => {
   test ("returns eat food or keep working based on input", () => {
@@ -193,6 +192,8 @@ describe("areYouHungry", () => {
   })
 })
 ```
+
+> **Notice:** this test contains two expect methods - one for each possible outcome
 
 Run the test file again:
 ```sh
