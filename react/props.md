@@ -125,7 +125,7 @@ Notice very little has changed but the potential of our application shifts drama
 With a little refactoring and DRYing up our code using a programmatic approach, this can become even more dynamic.
 
 **src/App.js**
-```
+```javascript
 import React, { Component } from 'react'
 import GreetPerson from './components/GreetPerson'
 
