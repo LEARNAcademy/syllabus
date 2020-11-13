@@ -34,7 +34,7 @@ What the arguments are named is arbitrary, but the order will always be the same
 
 1. The **value** at each index of an array
 
-2. The **index** of the array that we are iterating through   
+2. The **index** of the array that we are iterating through (Optional)  
 
 3. The **array** that higher-order function was called on. (Optional)
 
@@ -168,8 +168,8 @@ console.log(getOnlyOddIndex(numbers))
 
 When deciding which higher-order function to use, remember these two differences:
 
-- **.map()** will do something to each item in an array and *`return the same number of items`*.
-- **.filter()** will return a new, smaller array *`filtered`* based on your specified criteria.
+- **.map()** will do something to each item in an array and _return the same number of items_.
+- **.filter()** will return a new, smaller array _filtered_ based on your specified criteria.
 
 ---
 ## Challenges
