@@ -36,12 +36,12 @@ What the arguments are named is arbitrary, but the order will always be the same
 
 2. The **index** of the array that we are iterating through   
 
-3. The **array** that higher-order function was called on
+3. The **array** that higher-order function was called on. (Optional)
 
 
 ## .map()
 
-The .map() function iterates through an array and returns a new array of the same length.
+The **.map()** function iterates through an array and returns a new array of the same length.
 
 Here is an example of iterating using a for loop:
 
@@ -53,7 +53,7 @@ for(let i=0; i<arr.length; i++){
 }
 ```
 
-Now let's look at this same objective with .map()
+Now let's look at this same objective with **.map()**
 
 ```javascript
 var myArray = [5, 3, 2, 9, 8]
@@ -65,7 +65,7 @@ const multiplier = myArray.map(value => {
 console.log(multiplier)
 ```
 
-Because we are using an arrow functions we can reduce the code even further. If there is only one line of code to be executed we can remove the return keyword as the return is implied.
+Because we are using an arrow function we can reduce the code even further. If there is only one line of code to be executed, we can remove the return keyword as the return is implied.
 
 ```javascript
 var myArray = [5, 3, 2, 9, 8]
@@ -86,9 +86,9 @@ const multiplier = (array) => {
 console.log(multiplier(myArray))
 ```
 
-Notice that .map() iterates through the specified array AND returns a new array with the updated values.
+Notice that .map() *iterates* through the specified array **AND** returns a new array with the updated values.
 
-Here is another example with pseudocoding:
+Here is another example with proper pseudocoding:
 ```javascript
 // create a function that takes in an array and returns each word capitalized
 var fruitArray = ["banana", "mango", "apple", "grape"]
@@ -106,13 +106,15 @@ const capitalizer = (array) => {
 // logging the function and pass in the array
 console.log(capitalizer(fruitArray))
 ```
-**Note:** - This function has a return for the outer function AND a return for the higher-order function.
+**Note:** - This function has a return for the outer function **AND** a return for the higher-order function.
+
+---
 
 ## .filter()
 
-The .filter() function loops through an array and returns a new array with only the values that are **truthy** or the values that satisfy your stated condition. Filter will return a subset of the given array.
+The **.filter()** function loops through an array and returns a new array with only the values that are **truthy** or the values that satisfy your stated condition. Filter will return a subset of the given array.
 
-Here is an example of iterating and returning a subset using a for loop:
+Here is an example of *iterating* and returning a subset using a for loop:
 
 ```javascript
 var numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
@@ -132,7 +134,7 @@ console.log(onlyEven(numbersArray1))
 
 So, in the above example, we have created a function that takes an array as an argument, loops through the array, and returns a new array containing only the even numbers.
 
-#### Using .filter()
+#### **Using .filter()**
 
 ```javascript
 var numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
@@ -144,7 +146,7 @@ const onlyEven = (array) => {
 console.log(onlyEven(numbersArray1))
 ```
 
-Here is another example with pseudocoding:
+Here is another example with proper pseudocoding:
 ```javascript
 // create a function that returns only the values at the odd indexes
 var numbers = [4, 24, 5, 9, 0, 78]
@@ -164,46 +166,85 @@ console.log(getOnlyOddIndex(numbers))
 
 ## .map() vs .filter()
 
-When deciding which higher-order function to use, remember that .map() will do something to each item in an array and return the same number of items.  Whereas .filter() will return a new, smaller array `filtered` based on your specified criteria.
+When deciding which higher-order function to use, remember these two differences:
 
+- **.map()** will do something to each item in an array and *`return the same number of items`*.
+- **.filter()** will return a new, smaller array *`filtered`* based on your specified criteria.
+
+---
 ## Challenges
 
-**DON'T FORGET TO PSEUDO CODE**
+> **DON'T FORGET TO PSEUDO CODE!**
 
-Use .map() or .filter() to complete the following exercises:
+> ***Use .map() or .filter() to complete all of the following exercises:***
 
-1. Write a function that takes in an array and returns a new array with all numbers multiplied by 10.
+- 1. **Write a function that takes in an array and returns a new array with all numbers multiplied by 10.**
 
+  ```javascript 
   var arr1 = [3, 9, 15, 4, 10]
+  ```
 
-  Expected output --> [30, 90, 150, 40, 100]
+  Expected output: 
+  ```javascript 
+  [30, 90, 150, 40, 100]
+  ```
+  ---
 
-2. Write a function that takes in an array and returns a new array with only odd numbers.
+- 2. **Write a function that takes in an array and returns a new array with only odd numbers**
 
+  ```javascript 
   var arr2 = [2, 7, 3, 5, 8, 10, 13]
+  ```
 
-  Expected output --> [7, 3, 5, 13]
+  Expected output: 
+  ```javascript 
+  [7, 3, 5, 13]
+  ```
 
-3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use typeof method
+  ---
 
+- 3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use *[typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)* method
+
+  ```javascript 
   var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
-  Expected output --> "nicework"
+  ```
+
+  Expected output: 
+  ```javascript 
+  "nicework"
+  ```
+
+  ---
 
 ### STRETCH Challenges
 
-1. Create a function that takes in a string and returns a new string with all the vowels removed.
+- 1. Create a function that takes in a string and returns a new string with all the vowels removed.
 
-  var str = "javascript is awesome"
+  ```javascript
+   var str = "javascript is awesome" 
+   ```
 
-  Expected output --> "jvscrpt s wsm"
+  Expected output:
+  ```javascript
+  "jvscrpt s wsm"
+  ```
 
-2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+---
+- 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
+  ```javascript
   var arr1 = [3, 7, 10, 5, 4, 3]
 
   var arr2 = [7, 8, 2, 1, 5, 4]
+  ```
 
-  Expected output -> [3, 7, 10, 5, 4, 8, 2, 1]
+  Expected output:
+  
+  ```javascript 
+  [3, 7, 10, 5, 4, 8, 2, 1]
+  ```
+
+  ---
 
 [ Go to next lesson: JavaScript Testing with Jest ](./jest.md)
 
