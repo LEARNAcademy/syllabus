@@ -116,7 +116,7 @@ First we invoke the describe method, providing the argument of "hello" which is 
 
 Second we invoke the test method, providing it an argument that in plain words explains what the function does, followed by a comma, a set of parentheses, fat arrow and its own opening curly brace allowing us to nest more code within its block scope.
 
-Third we then invoke the expect method, providing it an argument of the function call, and then chain a matcher to the end of it, in this case we use .toEqual, which will check that the return of the function to be a string that says hi.
+Third we then invoke the expect method, providing it an argument of the function call, and then chain a matcher to the end of it, in this case we use `.toEqual()`, which will check that the return of the function to be a string that says hi.
 
 
 Run `yarn jest` in the terminal to run the test. We can expect that the test will fail since we haven't created the function yet (the **red** part of **red-green refactor**).
@@ -314,7 +314,7 @@ Time:        1.491s
 Ran all test suites.
 ```
 
-Once again, we can see that the test failed, our error message `ReferenceError: addGranola is not defined` tells us the **addGranola()** function has not been created yet.
+Once again, we can see that the test failed, our error message `ReferenceError: addGranola is not defined` tells us the `addGranola()` function has not been created yet.
 
 Here's the function that would make this test pass.
 
