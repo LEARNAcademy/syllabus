@@ -76,7 +76,7 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 
 **Story**: As a developer, I can give my Animal an `age` of 0 upon creation.
 
-**Story**: As a developer, I can age my Animal up 1 year at a time.
+**Story**: As a developer, I can age my Animal up one year at a time.
 
 **Story**: As a developer, I can return my Animal's `age`, as well as if they're `alive`.
 **Hint**: Use `attr_accessor` as well as an `initialize` method.
@@ -87,7 +87,7 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 
 **Story**: As a developer, I can create a Salmon that inherits from Fish.
 
-**Story**: As a developer, I can initialize my Salmon to be a specific species (Atlantic, Sockeye, etc.).
+**Story**: As a developer, I can initialize my Salmon to be a specific species (Atlantic, Sockeye, etc).
 
 **Story**: As a developer, I can see that my Salmon is cold-blooded.
 
@@ -98,7 +98,7 @@ Because of the way this code behaves, you may be tempted to say that the instanc
 **Story**: As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
 **Hint**: You will need a method that changes the status of `alive` in the initialize method of Animal.
 
-**Story**: As a developer,I can create a Mammal that inherits from Animal.
+**Story**: As a developer, I can create a Mammal that inherits from Animal.
 
 **Story**: As a developer, I can initialize all of my Mammals to be `warm_blooded`.
 
