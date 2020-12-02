@@ -259,8 +259,10 @@ Save your queries in a file if you want to keep them for posterity.
 - Which fifteen countries have the highest life expectancy? (HINT: starts with Andorra, ends with Spain)
 - Which five countries have the lowest population density (density = population / surfacearea)? (HINT: starts with Greenland)
 - Which countries have the highest population density?(HINT: starts with Macao)
-- Which is the smallest country, by area and population (first by area - .4, then by population - 50)?
-- Which is the biggest country, by area and population (first by area - 1.70754e+07, then by population - 1277558000)?
+- Which is the smallest country by area? (HINT: .4)
+- Which is the smallest country by population? (HINT: 50)?
+- Which is the biggest country by area? (HINT: 1.70754e+07)
+- Which is the biggest country by population? (HINT: 1277558000)
 
 #### Subqueries: WITH
 - What are the forms of government for the top ten countries by surface area? (HINT: Number 10 is Kazakstan)
