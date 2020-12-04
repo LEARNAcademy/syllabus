@@ -1,8 +1,5 @@
 # Active Record Migrations
 
-## Video: Adding Columns to a Database
-[![YouTube](http://img.youtube.com/vi/M6Zr-q_2c80/0.jpg)](https://www.youtube.com/watch?v=M6Zr-q_2c80)
-
 ## Overview
 - Migrations are used to modify the shape of an existing database.
 - Changing the shape of the database can include adding or deleting columns, changing the name of the column, or changing the data type of a column.
