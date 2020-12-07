@@ -256,12 +256,12 @@ As a developer, I have been tasked with creating and testing a database model th
 
 **Set Up**
 - Create a new Rails app named 'rolodex'.
-- Create the database, the outcome should look like this:
+- Create the database. The output in the terminal should look like this:
 ```
 Created database 'rolodex_development'
 Created database 'rolodex_test'
 ```
-- Generate a Person model with a first_name, last_name, and phone. All fields should be strings.
+- Generate a Person model with a first_name, last_name, and phone. **All fields should be strings.**
 - Run a migration to set up the database.
 - Open up Rails console.
 

@@ -93,6 +93,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [ Active Record Migrations ](./rails_model/migrations.md)
 1. [ Active Record Associations ](./rails_model/associations.md)
 1. [ Active Record Validations ](./rails_model/validations.md)
+1. [ Rails Models Specs ](./rails_model/model_specs.md)
 1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
 1. [ Rails Parameters ](./rails_fullstack/params.md)
 
