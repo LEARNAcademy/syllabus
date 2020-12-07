@@ -1,10 +1,6 @@
 # Active Record Migrations
 
-<<<<<<< HEAD
 ### Overview
-=======
-## Overview
->>>>>>> 12ef6de92c19d3fd71d96859fb0cac43463b75f4
 - Migrations are used to modify the shape of an existing database.
 - Changing the shape of the database can include adding or deleting columns, changing the name of the column, or changing the data type of a column.
 
