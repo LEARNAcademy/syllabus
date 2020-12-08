@@ -1,10 +1,6 @@
 # Active Record Migrations
 
-<<<<<<< HEAD
 ### Overview
-=======
-## Overview
->>>>>>> 12ef6de92c19d3fd71d96859fb0cac43463b75f4
 - Migrations are used to modify the shape of an existing database.
 - Changing the shape of the database can include adding or deleting columns, changing the name of the column, or changing the data type of a column.
 
@@ -17,6 +13,11 @@
 ### Useful Commands
 - $ rails generate migration action_name_here
 - $ rails db:migrate
+- `add_column :table_name, :column_name, :datatype`
+- `change_column :table_name, :column_name, :datatype`
+- `rename_column :table, :old_column, :new_column
+`
+- `remove_column :table_name, :column_name`
 
 ### Additional Resources
 - <a href="https://edgeguides.rubyonrails.org/active_record_migrations.html" target="blank">Official Rails documentation on Migrations</a>

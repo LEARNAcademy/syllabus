@@ -147,14 +147,10 @@ You have been tasked to set up an Account model for a your company. The applicat
 Implementing [ Custom Validations ](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations):
 
 - As a developer, I need each Account password to have at least one number.
-- As a developer, I need each Account password to have at least one special character.
-- As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account.
-	- **Hint:** Read about :scope in the Rails validation docs.
-- As a developer, I want to validate that the Address street_number and zip are numbers.
-- As a developer, I want to see a custom error message that says "Please, input numbers only." if street_number or zip code are not numbers.
-  - **Hint:** Read about :message in the Rails validation docs.
-- As a developer, I want to validate associated addresses on accounts.
-	- **Hint:** Read about validates_associated in the Rails validation docs.
+- As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account. **Hint**: Read about :scope in the Rails validation docs.
+- As a developer, I want to validate that the Address street_number and zip are numbers. **Hint**: Read about [ Numericality ](https://edgeguides.rubyonrails.org/active_record_validations.html#numericality) in the Rails validation docs.
+- As a developer, I want to see a custom error message that says "Please, input numbers only" if street_number or zip code are not numbers. **Hint**: Read about [ message ](https://edgeguides.rubyonrails.org/active_record_validations.html#message) in the Rails validation docs.
+- As a developer, I want to validate associated addresses on accounts. **Hint**: Read about [ validates_associated ](https://apidock.com/rails/ActiveRecord/Validations/ClassMethods/validates_associated) in the Rails validation docs.
 
 [ Go to next lesson: Rails Routes, Controllers and Views ](../rails_fullstack/routes_controllers_views.md)
 
