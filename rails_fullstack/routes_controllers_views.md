@@ -1,18 +1,18 @@
 # Rails Routes, Controllers and Views
 
-## Overview
+### Overview
 - Understanding the basics of creating a request response cycle in Rails
 - Generating a view for the user
 - Navigating between views
 
-## Learning Objectives
+### Learning Objectives
 - Understanding the anatomy of a Rails route
 - Using generate to create a controller
 - Creating a method in the controller
 - Creating a view with` html.erb`
 - Linking between views
 
-## Vocabulary
+### Vocabulary
 - controller
 - view
 - routes
@@ -21,10 +21,10 @@
 
 #### Creating a new Rails app:
 ```
-rails new myapp -d postgresql -T
-cd myapp
-rails db:create
-rails server
+$ rails new myapp -d postgresql -T
+$ cd myapp
+$ rails db:create
+$ rails server
 ```
 
 In a browser navigate to:
@@ -36,7 +36,7 @@ or
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter.
 
-## The Controller
+### The Controller
 
 What the heck is a controller?? The Rails controller is the logical center of your application. It coordinates the interaction between the user, the views, and the model.
 
@@ -85,7 +85,7 @@ end
 
 We access the method in the controller through our url request. This is done by appending **/ + the name of your method** to localhost:3000. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches "/answer"
 
-## The Route
+### The Route
 
 In order for our Rails server to respond to a request to this url, it needs a particular path and an http verb. A `routes.rb` file in the `config` folder is created when you run `rails new`. This file is intended to house all valid urls in your application.
 
@@ -151,7 +151,7 @@ For each section below: generate a new controller, methods to reach, and routes.
 - As a user, I can go to the url 'localhost:3000/answer' and see the punchline to the joke.
 
 
-## The View
+### The View
 
 So far our routes and controllers are only returning a basic string from the controller method. But, we probably want to make more complex views.
 
@@ -219,24 +219,12 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 - Each route will point to a method on a controller file
 - The controller method will ultimately do the work you require and send the appropriate view response
 
-## Challenges
-For each section below, generate a new controller to handle the methods, routes, and views.
+## Recommendations Challenge
 
-#### Joke... again but with views ;)
-- As a user, I can go to the url 'localhost:3000/question' and be asked a joke.
-- As a user, I can go to the url 'localhost:3000/answer' and see the response to the joke.
-
-#### Recommendations
-- As a user, I can see a page called 'localhost:3000/places' that lists you and your partner's top 10 places to see in San Diego.
-- As a user, I can see a page called 'localhost:3000/television' that lists you and your partner's top 10 TV Shows.
-- As a user, I can see a page called 'localhost:3000/team' and see a list of the team members who built this application.
-- As a user, I can see your team page when I visit 'localhost:3000'.
-
-#### Links
-
-- As a user, I can visit a landing page that has a link to my joke.
-- As a user, when I am on my joke page, I can click a link that will take me to the page with the answer.
-- As a user, I can visit the landing page and see links to all recommendation lists.
+- As a user, I can see a landing page at 'localhost:3000' that has a title of the application and the names of the development team.
+- As a user on the landing page, I can see a list of the team's top 10. (Could be top 10 restaurants, activities, beaches, doughnut shoppes, movies, etc.)
+- As a user, I can see that each of the items in the top 10 list are links.
+- As a user, I can click on a link and be take to a page where I can see more information about that particular list item.
 - As a user, I can return to the landing page from within any of the other pages.
 
 [ Go to next lesson: Rails Parameters ](./params.md)
