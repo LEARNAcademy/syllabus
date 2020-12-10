@@ -1,0 +1,295 @@
+# Ruby Classes and Objects
+
+## Overview
+- In Ruby, everything belongs to a class. We can also create custom classes that hold data and behavior.
+
+## Learning Objectives
+- Using the correct syntax to create a class and an instance of the class (object)
+- Identifying the purpose of the initialize method
+- Identifying the difference between the *getter* and *setter* methods
+- Creating instance variables with correct syntax and referencing the variable's value correctly
+
+## Vocabulary
+- Instance variables
+- Getter and setter methods
+- `initialize` method
+
+## Set Up
+- Create a file with the extension `.rb`
+- In terminal run `ruby` followed by the file name
+
+## Ruby Classes
+In Ruby, all values are objects and all objects belong to a class. The class defines what data and behavior exist in the object.
+
+Note that this class concept is not (directly) related to JavaScript's class. A Ruby class is most similar in JavaScript to a prototype, but Ruby classes are a bit different.
+
+You can find out the class of something by calling the .class method.
+
+```ruby
+> 1.class
+# Fixnum
+> 1.0.class
+# Float
+'hello'.class
+# String
+```
+
+## Making Your Own Class
+Let's say you want to keep track of people. You would create a Person class (capitalized, and usually singular).
+
+In a Ruby classes, we may want to expose the instance variables (the variables that are defined prefixed by @ symbol) to other classes. Don't worry too much about instance variables yet, we will cover them later in this lesson. Just think about an instance variable being locally scoped to the class it belongs to. Because of this, you will now want to write accessor methods (the `set` and `get` methods) in the class. The purpose of a `set` method is to *set* the value of an instance variable. The purpose of a `get` method is to *get* or *access* the value of an instance variable.
+
+```ruby
+class Person
+  def set_name(name)
+    @name = name
+  end
+
+  def get_name
+    @name
+  end
+end
+# Notice that the Person class is very re-usable and can be used for any name we want to pass it (no names are hard-coded in).
+
+# Now you can create a new instance of the Person class with the .new method.
+# This new instance will be called person_one
+person_one = Person.new
+# Now you can set the name of the person by calling set_name and passing in an argument of 'Jon Snow'
+person_one.set_name('Jon Snow')
+```
+
+Then you can call the method that contains the variable `@name`:
+
+```ruby
+person_one.get_name
+# 'Jon Snow'
+```
+
+## Instance Variables
+The variable starting with @ is an instance variable, meaning it belongs to the "instance" of a class (an object). The instance variable `@name` belongs to class Person. Each "instance" of the class `Person` has its own set of instance variables independent of other `Person` objects.
+
+You can't just access an instance variable from outside of an object, as you can with variables in JavaScript. Think local scope.
+
+```
+irb(main):> person_one.name
+# returns an error
+NoMethodError (undefined method 'name' for #<Person:0x00007f812a1408b8 @name="Jon Snow">)
+```
+
+## Initialization
+Finally, you will often want something to happen at the time an object is created. Perhaps it has a property that is an array, and you want to ensure that it always starts as an empty array.
+
+The whole point of initialize is to allow you to create objects with arguments. If you give your class an initialize method, it will get executed immediately when an instance of the class is created. And *if* it takes any arguments, you'll be required to give those when creating an instance.
+
+A class with an initialize method:
+
+```ruby
+class Jedi
+  # Create in initialize method that gives all new instances of Jedi the title "Knight"
+  def initialize
+    @title = "Knight"
+  end
+
+  # Create a get method to be able to access the title of this instance of Jedi
+  def title
+    @title
+  end
+end
+
+# Create a new instance of the class Jedi. Call it chosen_one
+> chosen_one = Jedi.new
+# #<Jedi:0x007fb532a24d30 @title="Knight">
+# chosen_one is already initialized with the title of "Knight"
+> chosen_one.title
+# "Knight"
+```
+
+Here's another example. By creating a new instance of the Fruit class, we immediately initialize an instance variable with an empty array called `@vitamins`, which can have elements pushed to it:
+
+```ruby
+class Fruit
+  def initialize
+    @vitamins = []
+  end
+
+  def vitamins
+    @vitamins
+  end
+end
+
+# New instance (object) of the class:
+apple = Fruit.new
+#<Fruit:0x007fb532acc120 @vitamins=[]>
+
+apple.vitamins        
+# Returns an empty array
+
+# Use the shovel operator to push values into the vitamin array
+apple.vitamins << "C"
+apple.vitamins << "D"
+apple.vitamins  
+# returns an array with two items: ["C", "D"]
+```
+
+Now let's create a class that requires an argument:
+
+```ruby
+class SquareFoot
+  def initialize(height, width)
+    @height = height
+    @width = width
+  end
+end
+
+# Create a new instance of the class SquareFoot. Call it bedroom_wall
+> bedroom_wall = SquareFoot.new
+
+# bedroom_wall has an initialize method that requires some information, so you will get an error:
+# ArgumentError (wrong number of arguments (given 0, expected 2))
+
+# Let's properly create a new instance of SquareFoot by passing in some arguments
+> bedroom_wall = SquareFoot.new(9, 12)
+> bedroom_wall.height
+# '9'
+```
+
+Arguments passed to a class are not automatically held anywhere. In order to save the values of the arguments, you will need to put those values into instance varibles like we did above using `@height` and `@width`.
+
+One more example. Again, there will be an error if the `.new` method does not have an argument.
+
+```ruby
+class Animal
+  def initialize tude
+    @attitude = tude
+  end
+
+  def attitude
+    @attitude
+  end
+end
+
+# New instance of the class without an argument, which gives error:
+kitten = Animal.new
+# ArgumentError (wrong number of arguments (given 0, expected 1))
+
+> kitten = Animal.new 'sweet'
+# #<Baz:0x007fb5331de210 @attitude="sweet">
+> kitten.attitude
+# "sweet"
+```
+
+## attr_accessor
+So far, we have used **setter methods** to _set_ or _assign_ values in a class, as well as **getter methods** to then _get_ or _retrieve_ those values. But there's a shortcut we can use!
+
+In Ruby, `attr_accessor` automatically sets up getters and setters for instance variables. Using `attr_accessor` allows us to _set_ and _get_ values from outside of the class.
+
+```ruby
+class FoodOrder
+  # At the top of this class, we utilize attr_accessor to identify which instance variable we will want to access. We refer to the instance variable's name using a symbol :order.
+  attr_accessor :order
+
+  def initialize(order)
+    @order = order
+  end
+end
+
+# We can now refer to the order instance variable directly from outside of the class (get).
+lunch = FoodOrder.new("Sandwich")
+> puts lunch.order
+# #<Sandwich>
+
+# We can also reassign this instance variable from outside of the class (set).
+lunch.order = "Salad"
+> puts lunch.order
+# #<Salad>
+```
+
+To access multiple instance variable values, add commas between each proceeding symbol.
+
+```ruby
+class FoodOrder
+  attr_accessor :item1, :item2, :item3
+
+  def initialize(item1, item2, item3)
+    @item1 = item1
+    @item2 = item2
+    @item3 = item3
+  end
+end
+
+lunch = FoodOrder.new("Sandwich", "Fruit", "La Croix")
+puts lunch.item3
+# #<La Croix>
+
+lunch.item3 = "Coke"
+puts lunch.item3
+# #<Coke>
+```
+
+There are other options as well including `attr_reader` and `attr_writer`.
+
+- `attr_reader` will only allow you to _get_ a value.
+- `attr_writer` will only allow you to _set_ a value.
+- `attr_accessor` allows you to do both.
+
+## Object Oriented Programming in Ruby
+We've been talking throughout this class about how everything in Ruby is an object, but it can be difficult to visualize what that means when it comes to building a program. Let's take a moment with your Car challenge to take apart how Ruby's object-oriented behavior actually impacts you as a programmer.
+
+**Given Classes**
+
+Again, every object in Ruby belongs to a class, meaning each object is an _instance_ of class. Once you know what class the object belongs to (by using the `.class` method), it is easy to Google that Ruby class and see all the methods of the class. **OR** use the Ruby method `.methods` in irb to generate a list of all the methods available to that class.
+
+```ruby
+hello.class
+1.class
+1.0.class
+true.class
+Class.class
+```
+
+Classes are made up of Nouns (data) and Verbs (methods). Take a look at a Vehicle class. It probably looks like a list of class attributes, followed by a list of methods. The class attributes -- things like `@year`, `@make`, and `@model` -- are what your object is composed of. The methods you've written are things you can do with Vehicle and its attributes: for example, print the Vehicle information or create a new vehicle. All Ruby classes have this structure.
+
+```ruby
+class Vehicle
+  def initialize(year, make, model)
+    @year = year
+    @make = make
+    @model = model
+  end
+
+  def get_vehicle_info
+    @year
+    @make
+    @model
+  end
+
+  def show_vehicle_info
+    # When using string interpolation with an instance variable, you can simply put a # followed by the name of the variable
+    puts "This is a #@year #@make #@model."
+  end
+end
+```
+
+## Challenge: Tasklist
+Use both **setter** and **getter** methods for this challenge.
+
+**Story:**	As a developer, I can create a Task.  
+**Story:**	As a developer, I can give a Task a title and retrieve it.  
+**Story:**	As a developer, I can give a Task a description and retrieve it.  
+**Story:**	As a developer, I can mark a Task done.  
+**Story:**	As a developer, when I print a Task that is done, its status is shown.
+
+## Challenge: Color Palette
+Use **attr_accessor** for this challenge.
+
+**Story:**	As a developer, I can create a ColorPalette.  
+**Story:**	As a developer, I can initialize my color palette to contain 3 colors.  
+**Story:**	As a developer, I can print the values of each individual color.  
+**Story:**	As a developer, I can print a sentence that tells me all of the colors in my palette.  
+**Story:**	As a developer, I can change one or more of the colors in my palette.
+
+[ Go to next lesson: Ruby Inheritance ](./inheritance.md)
+
+[ Back to Ruby Hashes ](./hashes.md)
+
+[ Back to Syllabus ](../README.md#unit-four-ruby)
