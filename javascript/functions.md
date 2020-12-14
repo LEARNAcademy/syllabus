@@ -32,6 +32,8 @@
 - <a href="https://www.w3schools.com/js/js_functions.asp" target="blank">W3Schools JavaScript Functions</a>
 - <a href="https://edabit.com/challenges/javascript" target ="blank">Edabit Code Challenges</a>
 
+![scope](./assets/scope.jpg)
+
 ## Functions
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 

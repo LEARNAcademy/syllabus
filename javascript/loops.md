@@ -120,7 +120,7 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 - **const** - this means that the variable will not be reassigned.
 
-
+![scope](./assets/scope.jpg)
 
 ## Challenges
 
