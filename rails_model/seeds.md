@@ -24,6 +24,11 @@ $ rails db:create
 $ rails server
 ```
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### Seeds in Rails
 During development, databases are created on local machines. All the code added to the database is only available in that database. This means we cannot share database content via GitHub. Luckily, rails offers us a cool tool to help with this problem.
 

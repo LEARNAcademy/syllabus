@@ -1,15 +1,20 @@
 # Cat Tinder API Validations
 
-## Overview
+### Overview
 - As developers we have to think about what happens when things don't go as we expect. What if data is submitted to our API that isn't complete, or has something else that causes it to be invalid? This could cause harm to our database or affect the user experience.
 
-## Learning Objectives
+### Learning Objectives
 - Implementing model validations
 - Implementing model specs in a Rails application
 - Implementing request specs in a Rails application
 
-## Additional Resources
+### Additional Resources
 - [ Response Codes ](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
 
 ## Validations
 As developers, it is our job to ensure no matter what, that our app responds in predictable ways to every request, and over many requests.

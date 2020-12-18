@@ -16,6 +16,24 @@
 - params
 - instance variable
 
+#### Creating a new Rails app:
+```
+$ rails new myapp -d postgresql -T
+$ cd myapp
+$ rails db:create
+$ rails server
+```
+
+In a browser navigate to:
+`http://localhost:3000`
+or
+`127.0.0.1:3000`
+
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list
+
 ### Controller with Params
 
 Let's start with creating a controller called `main` and method called greeting.

@@ -1,24 +1,24 @@
 # Cat Tinder API CORS
 
-## Overview
+### Overview
 - CORS stands for Cross-Origin Resource Sharing.
 - CORS manages requests that occur between decoupled applications, or from another "origin".
 - Browsers have security built in to protect users from submitting their data to servers that they are not intending to, so we have to tell the frontend that the backend is indeed the correct place for it to be communicating with.
 
-## Learning Objectives
+### Learning Objectives
 - Following the process of adding CORS to a Rails application
 
-## Useful Commands
+### Useful Commands
 - $ bundle install
 
-## Additional Resources
+### Additional Resources
 - [ MDN on CORS ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 - [ CORS Wikipedia ](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
-## Allowing External Requests
+### Allowing External Requests
 The last bit of housekeeping we need to do on the backend is enable our Rails application to accept requests from the React application.
 
-## Skip Authenticity Token
+### Skip Authenticity Token
 We need to update the application controller to allow requests from applications outside the Rails application.
 
 To do this, we add a line to the ApplicationController:
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-## Enable CORS
+### Enable CORS
 CORS which stands for Cross-Origin Resource Sharing. Our React frontend and Rails backend applications are running on two different servers. We have to tell the Rails app that (while in development) it is okay to accept requests from any outside domain.
 
 CORS can be added to our application by doing three things:
@@ -64,10 +64,10 @@ end
 
 That's it!  We can now accept POST, PUT, and DELETE requests in our server side application.
 
-## CORS in Production
+### CORS in Production
 When you take your app to production, you'll want to change the wildcard `*` to the URL that your frontend app is served from.
 
-## Challenge: Cat Tinder API CORS
+### Challenge: Cat Tinder API CORS
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
 - As a developer, I can enable my controller to accept requests from outside applications

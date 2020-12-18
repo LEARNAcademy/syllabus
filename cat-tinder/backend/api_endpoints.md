@@ -1,14 +1,19 @@
 # Cat Tinder API Endpoints
 
-## Overview
+### Overview
 - Endpoints are the location from which APIs can access the resources they need to perform CRUD actions.
 - Endpoints can be tested through request specs and model specs.
 
-## Learning Objectives
+### Learning Objectives
 - Implementing request specs in a Rails application
 - Implementing appropriate endpoints in the cats controller
 
-## Cats Routes
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
+### Cats Routes
 
 ![routes](../assets/rails-routes.png)
 

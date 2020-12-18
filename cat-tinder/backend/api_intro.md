@@ -1,23 +1,30 @@
 # Cat Tinder API Introduction
 
-## Overview
+### Overview
 - We've looked at connecting React apps to an external API, and seen how to use JSON data to build compelling front end applications. Now we're going to build our own API that will serve the data to our front end.
 
-## Learning Objectives
+### Learning Objectives
 - Creating a Rails application with API functionality
 
-## Set Up
+### Set Up
 
 #### Creating a new Rails app:
 ```
 $ rails new cat_tinder_backend -d postgresql -T
 $ cd cat_tinder_backend
 $ rails db:create
+$ bundle add rspec-rails
+$ rails generate rspec:install
 $ rails server
 ```
 
 In a browser navigate to:
 `http://localhost:3000`
+
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
 
 ## API Technologies
 Creating our own API opens up a new world of possibilities for building engaging, interactive applications.  We can begin to accept user input, store and manipulate that input in the backend, and then provide a personalized experience for our user, perfectly suited to the task he/she is trying to achieve.

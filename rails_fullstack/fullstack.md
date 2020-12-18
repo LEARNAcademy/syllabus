@@ -28,6 +28,11 @@ $ rails server
 In a browser navigate to:
 `http://localhost:3000`
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### Initial Setup
 In this example, we are creating a MVP for an app that will keep track of a user's exercise. Prior to creating the functionality of our app, we need to create a model and a controller using Rails generate commands.
 ```

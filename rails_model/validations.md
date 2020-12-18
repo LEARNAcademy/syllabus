@@ -30,6 +30,11 @@ $ rails server
 In a browser navigate to:
 `http://localhost:3000`
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### Validations
 Validations are used to ensure that only valid data is saved into your database. When content is added to the database, Rails runs the validations on the model. If these validations produce any errors, the content will not be saved.
 

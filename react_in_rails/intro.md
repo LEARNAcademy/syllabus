@@ -1,24 +1,24 @@
 # React IN Rails Introduction
 
-## Video: React in Rails
+### Video: React in Rails
 [![YouTube](http://img.youtube.com/vi/ZkYxPZcISGQ/0.jpg)](https://www.youtube.com/watch?v=ZkYxPZcISGQ)
 
-## Overview
+### Overview
 - Rails has a very powerful asset packaging system called the Asset Pipeline that can be used to serve React components
 - Adding React components inside a Rails project simplifies the flow of information from the database to the view
 
-## Learning Objectives
+### Learning Objectives
 - Conceptualizing how to set up an environment that will serve React components inside a Rails application
 - Rendering a single React component in a Rails `html.erb` view
 
-## Vocabulary
+### Vocabulary
 - Asset Pipeline
 - webpacker
 
-## Additional Resources
+### Additional Resources
 - [ React-Rails project docs ](https://github.com/reactjs/react-rails)
 
-## Set Up
+### Set Up
 The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
 - $ rails new hello_world -d postgresql -T
 - $ cd hello_world
@@ -28,8 +28,12 @@ The setup includes adding React to the Rails application and adding Webpacker to
 - $ rails webpacker:install:react
 - $ rails generate react:install
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
 
-## React Component
+### React Component
 Create a React component in the Rails application using a generate command.
 - $ rails g react:component App
 - The install commands created a directory in *app* called *javascript*
@@ -53,7 +57,7 @@ class App extends React.Component {
 export default App
 ```
 
-## Rails Controller and View
+### Rails Controller and View
 Next, we need to generate a controller so that we can route the React component can be rendered in a Rails view. This is the only Rails view we will make. Everything else will come from the React components.
 - $ rails g controller Home
 - Add a file in *app/views/home* called *index.html.erb*
@@ -65,7 +69,7 @@ Next, we need to generate a controller so that we can route the React component 
 ```
 Now we need to make sure we route to the appropriate file for our views.
 
-## Rails Routes
+### Rails Routes
 Create a route so the React component will be rendered in a Rails view.
 
 **config/routes.rb**
@@ -78,7 +82,7 @@ Create a route so the React component will be rendered in a Rails view.
 ## Start the Rails Server
 - $ rails s
 
-## Challenge: Hello World
+### Challenge: Hello World
 - Follow these instructions to create your own "Hello World" React in Rails application
 
 

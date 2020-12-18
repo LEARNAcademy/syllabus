@@ -23,6 +23,11 @@
 - <a href="https://edgeguides.rubyonrails.org/active_record_migrations.html" target="blank">Official Rails documentation on Migrations</a>
 - <a href="https://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-change-method" target="blank">A list of all the change definitions</a>
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### What is a migration file?
 A migration is a file that is generated through a rails command that will allow you to make changes to the database. This can include (but not limited to) editing a column's name or data type, adding a new column or removing a column.
 

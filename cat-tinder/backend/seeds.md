@@ -1,25 +1,30 @@
 # Cat Tinder API Seeds
 
-## Overview
+### Overview
 - Seeds are mock data that developers can load into the backend database and used during for scaffolding an application.
 - Seeds will live with the application file structure rather than on each developer's computer.
 
-## Learning Objectives
+### Learning Objectives
 - Recognize the similarity between Rails seeds and React mock data
 - Effectively add seeds to the database
 
-## Vocabulary
+### Vocabulary
 - seeds
 - idempotent
 
-## Useful Commands
+### Useful Commands
 - $ rails db:seed
 - $ rails db:drop
 
-## Additional Resources
+### Additional Resources
 - [ Idempotentcy ](http://whatis.techtarget.com/definition/idempotence)
 
-## Seeds
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
+### Seeds
 One of the files that gets created in a new rails application is the `seeds.rb` file. It is located in the db directory. Seeds is a place to store mock data during development. Adding seeds allows us to populate our database with one command rather than manually importing data through the Rails console.
 
 **db/seeds.rb**

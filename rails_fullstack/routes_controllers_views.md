@@ -32,6 +32,11 @@ In a browser navigate to:
 or
 `127.0.0.1:3000`
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### Rails Response
 
 To understand how to program a response, we need to have an idea of how a request is made to the Rails server. A typical request starts when a url is typed into the browser address bar and the user hits enter.
@@ -50,7 +55,7 @@ Let's see the controller in action!
 
 From the command line, we can add a new Rails controller with a rails command:
 ```
-$ rails generate controller main
+$ rails generate controller Main
 ```
 
 Rails creates all the files associated with this particular controller.

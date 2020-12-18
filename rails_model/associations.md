@@ -38,6 +38,10 @@ $ rails server
 In a browser navigate to:
 `http://localhost:3000`
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
 
 ### Types of Relationships
 Rails supports six types of associations:

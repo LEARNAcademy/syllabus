@@ -25,6 +25,11 @@ $ rails server
 In a browser navigate to:
 `http://localhost:3000`
 
+### Troubleshooting Tips
+- Did you create your database?
+- Did you migrate?
+- Errors? Always look at the first error in the list.
+
 ### Model Specs
 One of the most important things we can do to protect our database is to add Active Record validations. With validations, we are building a solid foundation for the core of the application: **data**. However, the implementation of validations are not complete without a strong suite of tests.
 
