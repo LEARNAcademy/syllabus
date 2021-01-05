@@ -51,6 +51,7 @@ User stories should be actionable. There should be a clear understanding of when
 - Wireframes
 - Color schemes, implementation of branding
 - Navigation and user experience
+- Styling libraries
 - Responsive design, accessibility features
 - Works closely with the Product Manager to ensure the app alines with the big picture vision
 
