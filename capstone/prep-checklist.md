@@ -31,6 +31,7 @@ User stories should be actionable. There should be a clear understanding of when
 - Manages the conversation around large changes to the app
 - Ensures requirements are met
 - Manages external resources
+- Ensures the README contains appropriate information
 
 **Trello/Communications** - Takes ownership on Trello and Slack 
 - Ensures developers are assigned to the card they are working on, decides when a card is done
@@ -42,12 +43,15 @@ User stories should be actionable. There should be a clear understanding of when
 **Tech Lead/Anchor** - Takes ownership on the code base
 - GitHub button clicker, merges code
 - Leads standup
+- Leads team retrospectives
 - Leads mentorship sessions for the team
 - Works closely with the Design Lead to make sure the code is meeting the design specs
 
 **Design Lead** - Takes ownership on the UI
 - Wireframes
 - Color schemes, implementation of branding
+- Navigation and user experience
+- Responsive design, accessibility features
 - Works closely with the Product Manager to ensure the app alines with the big picture vision
 
 
