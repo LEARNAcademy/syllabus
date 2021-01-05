@@ -49,12 +49,10 @@ If the response is successful, a JSON payload is delivered to the application.
 
 ```javascript
 fetch("https://api-url-here.com")
-.then((response) => {
-  if(response.status === 200){
-    return response.json()
-  }
+.then(response => {
+  return response.json()
 })
-.then((payload) => {
+.then(payload => {
   console.log(payload)
 })
 .catch(error => {
