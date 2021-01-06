@@ -49,7 +49,7 @@ test('renders learn react link', () => {
 This test, unfortunately, isn't terribly useful and we want to have tests for our specific components. So we can delete this file since we don't need it.
 
 ## Enzyme
-Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme makes working with React components even better, by allowing us to call up and render a component or page for us. 
+Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme makes working with React components even better, by allowing us to render a component or page for us and allow us to query the elements rendered. 
 
 Additionally, much like React's "hot-reload" when we run our React server, once we run `yarn test` it will continue to run and watch our file structure for any changes and re-run the test automatically for us.
 
@@ -61,16 +61,12 @@ As long as the directory is named `__tests__` Jest will find it and run any test
 In this case, we will create a test file called *CatIndex.js* in the directory in `src/pages/__tests__` .
 
 
-
 After we create our test file, we need to import in the following lines at the top of our file:
 
 **`src/pages/__tests__/CatIndex.js`**
 ```javascript
 // Imports React into our test file.
 import React from 'react' 
-
-// Imports react-dom into our test file.
-import ReactDOM from 'react-dom' 
 
 // Imports Enzyme testing and deconstructs Shallow into our test file. 
 import Enzyme, { shallow } from 'enzyme' 
@@ -88,11 +84,6 @@ Enzyme.configure({ adapter: new Adapter() })
 Let's write a test to check for the text rendering in our components. We will write a test, then we'll update the code to make it pass. (That's TDD!)
 
 ```javascript
-it('CatIndex renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<CatIndex />, div)
-})
-
 it('CatIndex renders content', () => {
   const catIndex = shallow(<CatIndex />)
   expect(catIndex.find('p').text()).toEqual('All the cats.')
@@ -102,7 +93,8 @@ Notice we import '__shallow__' from Enzyme. Here we create a variable that utili
 
 Also notice the syntax of the expectation:
 ```javascript
-  expect(<componentVariable>.<matcher>()).toEqual(<value>)
+    expect(<componentVariable>.<elementQueryMethod>()).<matcher>(<expectedValue>)
+    expect(<actualThing>).<matcher>(<expectedValue>)
 ```
 There are a lot of different matchers out there. We can expect our component to contain elements, or be greater/lesser than something, to be true or to be false.. etc etc. 
 
@@ -125,9 +117,7 @@ Refer to the [Jest Matchers](https://facebook.github.io/jest/docs/en/using-match
 - Components:
   - Create an additional test for the component `Header.js` to check for a tag by its class name to contain some text.
   - Create an additional test for component `Footer.js` to check for the div `footer` to contain an HTML anchor tag linking to `/catIndex`.
-
-
-
+  
 [ Go to next lesson: Cat Tinder Read Functionality ](./cat-read.md)
 
 
