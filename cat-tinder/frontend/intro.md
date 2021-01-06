@@ -1,4 +1,4 @@
-# Cat Tinder Introduction, Routing, and Wireframes
+# Cat Tinder Introduction and Routing
 
 ## Overview
 - Cat Tinder. It's like Tinder, but for cats.
@@ -50,20 +50,14 @@ In the package.json file modify the scripts code to set the default to port 8081
 **Remember**: Be sure to add :8081 to the end of your preview url: `<aws-preview-url>:8081`
 
 
-## Wireframes and Planning
-Before jumping into the code it helps to set up a wireframe that we can refer back to at any point during the development of our app.
-
-Here's what our app is going to look like:
-
-![wires](https://s3.amazonaws.com/learn-site/curriculum/cat-tinder/cat-tinder-wireframe.png)
-
-Right now we are focused on only the frontend of our application. But that doesn't mean we shouldn't be thinking ahead to what the API will look like. For our challenge we are going to create a model called Cat. Our Cat model will have three attributes: a name, an age, and what the cat enjoys doing.
+## Planning
+Right now we are focused on only the frontend of our application. But to create the View of our application it is important to be thinking ahead to what the API will look like. The backend of our Cat Tinder app will have a model called Cat. Our Cat model will have three attributes: a name, an age, and what the cat enjoys doing.
 
 In the Rails application that we will build during this project the schema will look like this:
 
 ![cat-schema](../assets/cat-schema.png)
 
-As a frontend developer we will need to create a React app that will accept the Rails API endpoints and offer our user a visually appealing application.
+As a frontend developer we will need to create a React app that will accept the Rails API endpoints and offer our user a functional and visually appealing application.
 
 
 ## Getting Starting
@@ -109,7 +103,7 @@ let cats = [
     id: 2,
     name: "Raisins",
     age: 4,
-    enjoys: "scaring the dogs"
+    enjoys: "being queen of the dogs"
   },
   {
     id: 3,
