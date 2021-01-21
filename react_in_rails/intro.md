@@ -13,29 +13,32 @@
 
 ### Vocabulary
 - Asset Pipeline
-- webpacker
+- Webpacker
 
 ### Additional Resources
 - [ React-Rails project docs ](https://github.com/reactjs/react-rails)
 
 ### Set Up
-The setup includes adding React to the Rails application and adding Webpacker to compile the JavaScript.
-- $ rails new hello_world -d postgresql -T
-- $ cd hello_world
-- $ rails db:create
-- $ bundle add react-rails
-- $ rails webpacker:install
-- $ rails webpacker:install:react
-- $ rails generate react:install
+The setup includes adding React to the Rails application and adding the Webpacker gem to compile JavaScript.
+```
+$ rails new hello_world -d postgresql -T
+$ cd hello_world
+$ rails db:create
+$ bundle add react-rails
+$ rails webpacker:install
+$ rails webpacker:install:react
+$ rails generate react:install
+```
 
 ### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
+- Seeing a blank page? Check the terminal or inspect your page.
 
 ### React Component
 Create a React component in the Rails application using a generate command.
-- $ rails g react:component App
+- $ rails generate react:component App
 - The install commands created a directory in *app* called *javascript*
 - In *app/javascript* there will be another directory called *components* that will contain our *App* React component with some basic code
 - Add an `h1` tag to the React component
@@ -79,7 +82,7 @@ Create a route so the React component will be rendered in a Rails view.
  end
 ```
 
-## Start the Rails Server
+### Start the Rails Server
 - $ rails s
 
 ### Challenge: Hello World

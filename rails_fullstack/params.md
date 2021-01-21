@@ -32,7 +32,7 @@ or
 ### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
-- Errors? Always look at the first error in the list
+- Errors? Always look at the first error in the list.
 
 ### Controller with Params
 
