@@ -186,7 +186,7 @@ Excellent! Our test passes and we can now move on to creating more tests.
 // Write a test for a function that logs "eat food" if you are hungry and "keep working" if you are not hungry
 
 describe("areYouHungry", () => {
-  test ("returns eat food or keep working based on input", () => {
+  it("returns eat food or keep working based on input", () => {
     expect(areYouHungry("yes")).toEqual("eat food")
     expect(areYouHungry("no")).toEqual("keep working")
   })
@@ -276,7 +276,7 @@ Sometimes it can be useful to create variables before our test method for use la
 describe("addGranola", () => {
   let groceryList = ["apples", "carrots", "oatmeal"]
   let result = ["apples", "carrots", "oatmeal", "granola"]
-  test ("adds granola to the end of an array", () => {
+  it("adds granola to the end of an array", () => {
     expect(addGranola(groceryList)).toEqual(result)
   })
 })
@@ -298,7 +298,7 @@ We can see here, utilizing variables for our arrays, that it keeps our code clea
     ReferenceError: addGranola is not defined
 
       30 |   let result = ["apples", "carrots", "oatmeal", "granola"]
-      31 |   test ("adds granola to the end of an array", () => {
+      31 |   it("adds granola to the end of an array", () => {
     > 32 |     expect(addGranola(groceryList1)).toEqual(result)
          |     ^
       33 |   })
@@ -348,8 +348,11 @@ Fantastic!
 ### Tips
 
 **Focus Your Tests** 
+
 Use `fdescribe()` to focus on a describe-block without having to comment out all other describe-blocks
+
 Use `fit()` to focus on an it-block without having to comment all other it-blocks
+
 
 ---
 
