@@ -84,11 +84,11 @@ Its *incredibly* liberating!
 
 Jest is a JavaScript testing framework. The framework is a collection of files that are managed by `yarn` a technology created by Facebook to manage dependency files.
 
-- `describe()` - Jest uses a method called **.describe()** that runs other nested methods.
+- `describe()` - Jest uses a method called **describe()** that runs other nested methods.
   - Here we provide an argument of a string, with the name of our function, or the name of this particular test.
-- `test()` - **.test()** is a method that is nested within the describe's code block. 
+- `test()` or `it()` - **test()** or **it()** are methods nested within the describe's code block. 
   - Here we provide an argument of string, which is a statement that explains in **regular words** what the test is doing.
-- `expect()` - **.expect()** is a method that is nested within the test's code block. It calls the function being tested, passes any test-case arguments.
+- `expect()` - **expect()** is a method that is nested within the test's code block. It calls the function being tested, passes any test-case arguments.
   - Here we follow it with a **matcher** ( Example: **.toEqual()** or **.toBe()** ) that compares the output.
     - Learn more about [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
@@ -343,6 +343,13 @@ Ran all test suites.
 ✨  Done in 2.46s.
 ```
 Fantastic!
+
+
+### Tips
+
+**Focus Your Tests** 
+Use `fdescribe()` to focus on a describe-block without having to comment out all other describe-blocks
+Use `fit()` to focus on an it-block without having to comment all other it-blocks
 
 ---
 
