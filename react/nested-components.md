@@ -49,7 +49,7 @@ Let's start with a new application:
       class App extends React.Component{
         render(){
           return(
-            <div></div>
+            <></>
           )
         }
       }
@@ -64,7 +64,7 @@ Here we have set up an App component to return an empty div. Firstly, let's talk
 
 Next, we have a `return()` which is similar to the built-in JS function `return`. It is returning the content inside of the parentheses. In React, when working with smart components, we need the JSX to live inside a single tag, which goes inside the `return()`, which lives inside the `render(){}`.
 
-In React, the component renders only one JSX element. Therefore, it is imperative to wrap all of your elements in a single containing tag. In the example above, we created an empty `div` to house the JSX code we will be writing. This is were we will nest our other components.
+In React, the component renders only one JSX element. Therefore, it is imperative to wrap all of your elements in a single containing tag. In the example above, we created an empty `React Fragment` to house the JSX code we will be writing. This is were we will nest our other components.
 
 Next, we will define another component class:
 
@@ -73,7 +73,7 @@ Next, we will define another component class:
   class App extends React.Component{
     render(){
       return(
-        <div></div>
+        <></>
       )
     }
   }
@@ -81,12 +81,12 @@ Next, we will define another component class:
   class Content extends React.Component{
     render(){
       return(
-        <div>
+        <>
           <h1>Title</h1>
           <p>
             This is app content.
           </p>
-        </div>
+        </>
       )
     }
   }
@@ -102,9 +102,9 @@ Next, we will define another component class:
   class App extends React.Component{
     render(){
       return(
-        <div>
+        <>
           <Content />
-        </div>
+        </>
       )
     }
   }
@@ -112,12 +112,12 @@ Next, we will define another component class:
   class Content extends React.Component{
     render(){
       return(
-        <div>
+        <>
           <h1>Title</h1>
           <p>
             This is app content.
           </p>
-        </div>
+        </>
       )
     }
   }
