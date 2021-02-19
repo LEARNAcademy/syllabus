@@ -1,7 +1,7 @@
 # React State
 
 ## Video: Using State in React
-[![YouTube](http://img.youtube.com/vi/5xFUQd3wuT4/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
+[![YouTube](React State Video 30min)](https://www.youtube.com/watch?v=fjM1mSmSJlM)
 
 ## Overview
 - React state is an object managed within a component
