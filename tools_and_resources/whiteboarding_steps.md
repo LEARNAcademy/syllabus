@@ -69,4 +69,4 @@ Your first go at a solution is not likely to be the most optimal. This is your o
 	- Can there be better function or variable naming for legibility? 
 	- Is there another data structure that can be used to help solve the problem?
 	- Are there other built-in methods that might be better suited for a specific task?
-#### Hidden Code: Technical interviewers generally know this is not the ideal situation for producing amazing code. They want to know what you look for in developing good code. Legibility of code (outside of formatting) is a very good place to start.
+#### Hidden Goal: Technical interviewers generally know this is not the ideal situation for producing amazing code. They want to know what you look for in developing good code. Legibility of code (outside of formatting) is a very good place to start.
