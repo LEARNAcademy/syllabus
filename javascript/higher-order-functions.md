@@ -10,7 +10,7 @@
 - Understanding the anatomy of a higher-order function
 - Understanding the use of .map()
 - Understanding the use of .filter()
-- Understanding the specific arguments available to higher order functions
+- Understanding the specific parameters available to higher order functions
 
 ## Vocabulary
 - higher-order function
@@ -18,15 +18,15 @@
 
 ## Set Up
 - Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+- In terminal, `cd` into the appropriate folder
+- $ `node filename.js`
 
 ## Higher-Order Functions
 A higher-order function is simply a function that either takes in another function as an argument or returns another function as an output.
 
-We will focus on two higher-order functions for this lesson - **.map()** and **.filter()** both have three built-in arguments - the value, index, and array.
+We will focus on two higher-order functions for this lesson - **.map()** and **.filter()** both have three built-in parameters - the value, index, and array.
 
-What the arguments are named is arbitrary, but the order will always be the same. The higher-order functions have to take at least one argument (value) but can take two or three if needed.
+What the parameters are named is arbitrary, but the order will always be the same. The higher-order functions have to take at least one argument (value) but can take two or three if needed.
 
 * .map(value, index, array)
 * .filter(value, index, array)
@@ -46,11 +46,16 @@ The **.map()** function iterates through an array and returns a new array of the
 Here is an example of iterating using a for loop:
 
 ```javascript
-var myArray = [5, 3, 2, 9, 8]
+var myArray = [5, 3, 2, 9, 8];
 
+let newArray = [];
 for(let i=0; i<arr.length; i++){
-  console.log(myArray[i] * 3)
+  let valueTimesThree = myArray[i] * 3;
+  console.log(valueTimesThree);
+  newArray.push(valueTimesThree);
 }
+
+console.log(newArray);
 ```
 
 Now let's look at this same objective with **.map()**
@@ -65,7 +70,7 @@ const multiplier = myArray.map(value => {
 console.log(multiplier)
 ```
 
-Because we are using an arrow function we can reduce the code even further. If there is only one line of code to be executed, we can remove the return keyword as the return is implied.
+Because we are using an arrow function we can reduce the code even further. If there is only one line of code to be executed, we can remove the `return` keyword as the return is implied.
 
 ```javascript
 var myArray = [5, 3, 2, 9, 8]
@@ -169,7 +174,7 @@ console.log(getOnlyOddIndex(numbers))
 When deciding which higher-order function to use, remember these two differences:
 
 - **.map()** will do something to each item in an array and _return the same number of items_.
-- **.filter()** will return a new, smaller array _filtered_ based on your specified criteria.
+- **.filter()** will return a new, likely smaller array _filtered_ based on your specified criteria.
 
 ---
 ## Challenges
