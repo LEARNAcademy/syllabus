@@ -58,8 +58,8 @@
 <br/>
 
 *Additional Resources:*
-
 * [Discover Your Transferable Skills Activity](https://drive.google.com/file/d/1I-wbShqqnpx722WdRvffJde1rPAy4Yli/view?usp=sharing)
+
 <br/> This activity can help you get started in identifying some of your transferable skills if you feel lost.
 
 * [Ultimate Transferable Skills List](https://drive.google.com/file/d/1Vw82mEpGRHC3jIy6RZa-oPE3ljt6jz4f/view?usp=sharing)
@@ -84,7 +84,6 @@
 <br/>
 
 *Additional Resources:*
-
 * [Action Verb List](https://drive.google.com/file/d/1uz57PphPnc11hQ1nkWyXBEUw1KoV0MCr/view?usp=sharing)
 <br/> This resource has a list of action verbs to help build strong contribution/accomplishment statements for your resume and make your past work experience active.
 
@@ -149,8 +148,8 @@
 <br/>
 
 *Additional Resources:*
-
 * [Ultimate LinkedIn Cheat Sheet](https://drive.google.com/file/d/1-XtAfpyRrGOuJw4tGw7ZGli6v2FTNLA-/view?usp=sharing)
+
 <br/> This resource covers **EVERY** aspect of LinkedIn. Go back to this resource when questions come up regarding your LinkedIn account or if you want to elevate it **10X** more!
 
 3) **[Networking Remotely - Strategies for a Global Pandemic](https://drive.google.com/file/d/1WvH56pc9ktryUqXn3SWEPU5kzD-ULGzG/view?usp=sharing)**
@@ -180,8 +179,8 @@
 <br/> This ebook is a great resource from the largest all-remote company in the world. Check it out for some great tips and tricks for being a top remote employee!
 
 ## *Week 12: Internship Prep, Tech Talks, & Career Services Beyond LEARN*
-
 1) **[Internship Prep Resources](https://drive.google.com/file/d/1sM4E9quv3EUVGR5zrji95a7a3YU9jwXG/view?usp=sharing)**
+
 <br/> This resource has several starter resources for internship preparation. In addition, please look for more detailed preparation materials from your internship partner prior to Week 12!
 
 2) **[Tech Talk Presentations]**
@@ -194,3 +193,6 @@
 
 3) **[Career Services Job Search Plans](https://drive.google.com/file/d/1LGqSh-estt3c1RnjXD8CGEEd3jEdo7p0/view?usp=sharing)**
 <br/> This resource is a template of the Job Search plan we will create for you following your internship when you begin your Job Search. This document focuses on staying proactive and accountable to get you hired quickly!
+
+
+[ Back to Syllabus ](../README.md#unit-seven-professional-development-week)

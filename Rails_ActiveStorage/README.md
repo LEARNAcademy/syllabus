@@ -1,9 +1,0 @@
-# Rails Active Storage
-
-[![YouTube](http://img.youtube.com/vi/GOZsrmfAbfI/0.jpg)](https://www.youtube.com/watch?v=GOZsrmfAbfI)
-]
-
-1) [AWS Bucket Setup](./01-aws-bucket-s3.md)
-2) [AWS IAM User Setup](./02-aws-iam.md)
-3) [Rails Settings for Active Storage](./03-rails.md)
-4) [react-activestorage-provider](./04-react.md)

@@ -1,159 +1,177 @@
 # Syllabus
 
+Welcome to the LEARN Syllabus! This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a Pull Request to fix any errors, expand definitions, or further explain concepts.
+
+## Resources
+- [ Accessing and Submitting Assessments ](./tools_and_resources/assessments.md)
+- [ Remote Pairing ](./tools_and_resources/remote-pairing.md)
+- [ Portfolio Resources ](./tools_and_resources/portfolio.md)
+- [ How to Ask a Tech Question ](./tools_and_resources/questions.md)
+- [ Intro to How the Internet Works ](./tools_and_resources/how-the-internet-works-intro.md)
+
+
+
+## Programming Tools
+- [ Tech Stack ](./tools_and_resources/techstack.md)
+- [ Introduction to git and GitHub ](./tools_and_resources/github.md)
+- [ Intro Terminal ](./tools_and_resources/terminal.md)
+- [ Intro to Atom ](./tools_and_resources/atom.md)
+
+
+
 ## Unit One: Javascript Foundations
-
 This is your introduction to programming through the Javascript programming language. Here you will learn foundational concepts and structures that will get you thinking in code.
-
-1) [Javascript Intro](./js_beginning/01js_intro.md)
-2) [Javascript Conditions](./js_beginning/02js_conditions.md)
-3) [Javascript Arrays](./js_beginning/04js_arrays.md)
-4) [Javascript Loops](./js_beginning/05js_loops.md)
-5) [Javascript Functions](./js_beginning/03js_functions.md)
-6) [Javascript Functions, Loops and Arrays](./js_beginning/06js_funcLoopsArrays.md)
-7) [Javascript ES6 Syntax](./js_intermediate/01js_es6_syntax.md)
-8) [Javascript Objects](./js_beginning/07js_objects.md)
+1. [ JavaScript Introduction ](./javascript/intro.md)
+2. [ JavaScript Conditionals ](./javascript/conditionals.md)
+3. [ JavaScript Arrays ](./javascript/arrays.md)
+4. [ JavaScript Loops ](./javascript/loops.md)
+5. [ JavaScript Functions ](./javascript/functions.md)
+6. [ JavaScript Functions, Loops, and Arrays ](./javascript/functions-loops-arrays.md)
+7. [ JavaScript Higher-Order Functions ](./javascript/higher-order-functions.md)
+1. [ JavaScript Testing with Jest ](./javascript/jest.md)
+2. [ JavaScript Objects ](./javascript/objects.md)
+3. [ JavaScript Classes ](./javascript/classes.md)
+3. [ JavaScript Class Inheritance ](./javascript/class-inheritance.md)
 
 #### Additional Topics:
-
-- [Introduction to git and Github](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
-
-
-
-
-## Unit Two: Intermediate Javascript
-
-This section is building on Javascript foundations and introducing more advanced programming concepts. Here you will have your first group project and be introduced to testing.
-
-1) [Javascript Testing with Jest](./js_intermediate/04js_testing_jest.md)
-2) [Javascript Higher-Order Functions](./js_intermediate/02js_higher_order_functions.md)
-3) [Javascript Class and Inheritance](./js_intermediate/05js_class_inheritance.md)
-4) [Javascript Pig Latin Challenge](./js_intermediate/03js_pig_latin_mob.md)
-5) [Cloud 9](https://github.com/LEARNAcademy/cloud9-config)
-6) [Intro to How the Internet Works](./tools_and_resources/how_the_internet_works_intro.md)
+- [ JavaScript Spread Operator ](./javascript/spread-operator.md)
+- [ JavaScript Template Literals ](./javascript/template-literals.md)
+- [ JavaScript Ternary Operator ](./javascript/ternary.md)
 
 
-## Unit Three: React
 
+## Unit Two: Introduction to React
 React is a powerful Javascript library used to build more complicated web applications.
+1. [ React Introduction ](./react/intro.md/)
+2. [ React Nested Components ](./react/nested-components.md)
+3. [ Creating a New React Application ](./react/create-react-app.md)
+4. [ React State ](./react/state.md/)
+4. [ React State with Images ](./react/state-with-images.md/)
 
-1) [React Intro](./react/01react_intro_to_react.md/)
-2) [React Components](./react/02react_nested_components.md)
-3) [Create React App](./react/03react_create_react_app.md)
-4) [React State](./react/04react_state.md/)
-5) [React Props](./react/05react_props.md/)
-6) [React State and Props](./react/06react_state_and_props.md/)
-7) [React Functional Props](./react/07react_functional_props.md/)
-8) [Challenge: React Dice Roller](./react/08dice_roller.md/)
-9) [Challenge: React Treasure Hunt](./react/09react_treasure_hunt.md/)
-10) [Challenge: React TicTacToe Mob](./react/10react_ticktactoe.md/)
-11) [Challenge: React Battleship](./react/11react_battleship.md)
+#### Additional Topics:
+- [ React Component Lifecycle ](./react/component-lifecycle.md)
 
-**Additional Topics**:
 
-- [Smart and Dumb Components](./react/smart_and_dumb_components.md)
-- [Testing Props with Jest](./react/testing_props_with_jest.md)
-- [React Component Lifecycle](./react/react_component_lifecycle.md)
+
+## Unit Three: Intermediate React
+Here we explore more of what React offers and do our first multi-day project.
+1. [ React Props ](./react/props.md)
+2. [ React Functional Props ](./react/functional-props.md)
+2. [ React Inputs and Events ](./react/inputs.md)
+2. [ React Forms and Functional Props ](./react/forms.md)
+
+#### Additional Topics:
+- [ Smart and Dumb Components ](./react/smart-and-dumb-components.md)
+- [ Testing Props with Jest ](./react/testing-props-with-jest.md)
+
+
 
 ## Unit Four: Ruby
-
 Ruby is a backend, object-oriented programming language. Here you will learn the fundamentals of Ruby and expand on testing.
+1. [ Ruby Introduction ](./ruby/intro.md)
+2. [ Ruby Conditionals ](./ruby/conditionals.md)
+3. [ Ruby Methods ](./ruby/methods.md)
+4. [ Ruby Blocks and Iterables ](./ruby/blocks.md)
+5. [ Ruby Hashes ](./ruby/hashes.md)
+6. [ Ruby Classes and Objects ](./ruby/classes_objects.md)
+7. [ Ruby Inheritance ](./ruby/inheritance.md)
+8. [ Ruby Testing with RSpec ](./ruby/rspec.md)
+9. [ Challenge: Text Based Story Game ](./ruby/textbased_story.md)
 
-1) [Ruby Intro](./ruby/01rb_intro.md)
-2) [Ruby Conditions](./ruby/02rb_cond_methods_loops_hashes.md)
-3) [Ruby Classes and Objects](./ruby/03rb_classes_objects.md)
-4) [Ruby Inheritance](./ruby/04rb_inheritance.md)
-5) [Ruby Testing with RSPEC](./ruby/06rb_rspec.md)
-6) [Ruby BDD and TDD](./ruby/08rb_testing.md)
-7) [Challenge: Ruby Task List](./ruby/07rb_tasklist_challenge.md)
-8) [Challenge: Text Based Story Game](./ruby/09rb_textbased_story.md)
 
 
-## Unit Five: Ruby on Rails and Postgres
-
+## Unit Five: Intro to Postgres and Ruby on Rails Models
 Rails is full stack framework built into the Ruby programming language. Here you will be introduced to Rails concepts and persistence storage with Postgres.
 
-1) [ Rails: RESTful Web Application Framework ](./Rails-C&V/00rails_http_intro.md)
-2) [Rails Intro to Routes, Controllers and View](./Rails-C&V/01rails_routes_controllers_views.md)
-3) [Rails Views](./Rails-C&V/02rails_views.md)
-4)  [Rails Params](./Rails-C&V/03rails_params.md)
-6) [Rails Forms, Layouts and Flash Messages](./Rails-C&V/05rails_forms_layouts_flash_messages.md)
-7) [Rails Generate](./Rails-C&V/06rails_generate.md)
-8) [Rails Mini Projects](./Rails-C&V/07rails_miniprojects.md)
-9) [CRUD with Postgresql](./sql/00postgres_crud_intro.md)
-10) [Intro to Postgres](./sql/07rails_intro_postgres.md)
-11) [Joins](./sql/08rails_sql_joins.md)
-12) [SQL CRUD (SQL in the terminal)](./sql/09rails_sql_terminal.md)
+### PostgreSQL
+1. [ Introduction to Databases ](./postgresql/intro.md)
+1. [ PostgreSQL Queries ](./postgresql/queries.md)
 
-Additional Topics:
+### Ruby on Rails
+1. [ Ruby on Rails Introduction ](./rails_model/intro.md)
+1. [ Active Record Introduction ](./rails_model/active_record_intro.md)
+1. [ Active Record Migrations ](./rails_model/migrations.md)
+1. [ Active Record Associations ](./rails_model/associations.md)
+1. [ Active Record Validations ](./rails_model/validations.md)
+1. [ Rails Models Specs ](./rails_model/model_specs.md)
+1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
+1. [ Rails Parameters ](./rails_fullstack/params.md)
 
-[Rails Cookies](./Rails-C&V/04rails_cookies.md)
-
-## Unit Six: Active Record and Full Stack Ruby on Rails
-
-1) [Rails Model: Intro to Active Record](./Rails-M/01intro_active_record.md)
-2) [Challenge: Active Record Tasks](./Rails-M/03rails_active_record_tasks.md)
-3) [Foreign Key and Relations](./sql/10rails_foreign_keys_and_relations.md)
-4) [Active Record Relationships](./Rails-M/02rails_activerecord_relationships.md)
-3) [Challenge: Active Record Task List](./Rails-M/04rails_active_record_tasklist.md)
-7) [Active Record Validations](./Rails-M/07rails_activerecord_validations.md)
-8) [Strong Params](./Rails-M/08rails_strong_parameters.md)
-9) [Challenge: Wildlife Tracker](./Rails-M/09rails_wildlife_tracker_challenge.md)
+#### Additional Topics:
+- [ Rails Database Seeds ](./rails_model/seeds.md)
 
 
-Additional Topics:
-- [Rails Naming Conventions](./Rails-M/additional-topics/04rails_naming_conventions.md)
-- [SQL vs. Active Record](./Rails-M/additional-topics/05rails_sql_vs_activerecord.md)
-- [Rails Troubleshooting](./Rails-M/additional-topics/06rails_troubleshooting.md)
-- [Migrations: Adding a Column](./Rails-M/additional-topics/migrations_adding_column.md)
-- [Foreign Keys and Relations (in SQL)](./sql/sql_foreign_keys_and_relations.md)
+
+## Unit Six: Ruby on Rails
+1. [ Rails RESTful Routes and CRUD Actions ](./rails_fullstack/restful_routes_crud.md)
+1. [ Full-stack Rails ](./rails_fullstack/fullstack.md)
+1. [ Rails Strong Parameters ](./rails_fullstack/strong_parameters.md)
+1. [ Rails Generate Resource ](./rails_fullstack/generate_resource.md)
+1. [ Wildlife Tracker Challenge ](./rails_fullstack/wildlife_tracker_challenge.md)
+1. [ Consuming External APIs with Fetch ](./external-api/fetch.md)
+
+#### Additional Topics:
+- [ Postman ](./rails_fullstack/postman.md)
+
+
 
 ## Unit Seven: Professional Development Week
-
 Professional development is dedicated to preparing for your  internship and the upcoming career transition. Here you will work closely with Learn's career services manager to curate your resume, create a portfolio, improve online professional presence, develop networking techniques, practice technical interview skills, and learn about salary negotiations.
+- [ Professional Development Week Curriculum ](./PD-Week/Curriculum.md)
 
-- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
-
 Using React and Rails to create an asynchronous full stack application with testing.
 
-### Front End Setup
-1) [Testing with Jest and Enzyme](./React_and_Rails_Cat_Tinder/Frontend/01react_testing_jest_enzyme.md)
-2) [Testing Structure in React](./React_and_Rails_Cat_Tinder/Frontend/02react_testing_app_structure.md)
-3) [React Testing Interactions](./React_and_Rails_Cat_Tinder/Frontend/03react_testing_interactions.md)
-4) [React Routing](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/01-react-router-intro.md)
-5) [Portfolio Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/02-portfolio-challenge.md)
-6) [Recipes Challenge](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/04-recipes-challenge.md)
-7) [Dynamic Routes](./React_and_Rails_Cat_Tinder/Frontend/04routing-in-react/03-dynamic-routes.md)
-8) [Cat Tinder frontend: Intro and Wireframes](./React_and_Rails_Cat_Tinder/Frontend/05cat_tinder_intro.md)
-9) [Cat Tinder frontend: Cats Component](./React_and_Rails_Cat_Tinder/Frontend/06cat_tinder_cats.md)
-10) [Cat Tinder frontend: NewCat Component](./React_and_Rails_Cat_Tinder/Frontend/07cat_tinder_new_cats.md)
+### Cat Tinder Frontend
+1. [ Cat Tinder Introduction, Routing, and Wireframes ](./cat-tinder/frontend/intro.md)
+2. [ Cat Tinder Testing with Jest and Enzyme ](./cat-tinder/frontend/jest-enzyme.md)
+3. [ Cat Tinder Read Functionality ](./cat-tinder/frontend/cat-read.md)
+4. [ Cat Tinder Create Functionality ](./cat-tinder/frontend/cat-create.md)
+5. [ Cat Tinder Update Functionality ](./cat-tinder/frontend/cat-update.md)
 
-### Back End Setup
-
-11) [Cat Tinder backend: API setup](./React_and_Rails_Cat_Tinder/Backend/01cat_tinder_setup.md)
-12) [Cat Tinder backend: Seeds](./React_and_Rails_Cat_Tinder/Backend/02cat_tinder_seeds.md)
-13) [Cat Tinder backend: API Endpoints ](./React_and_Rails_Cat_Tinder/Backend/03cat_tinder_API_Endpoints.md)
-14) [Cat Tinder backend: Validations](./React_and_Rails_Cat_Tinder/Backend/04cat_tinder_validations.md)
-12) [Cat Tinder backend: CORS](./React_and_Rails_Cat_Tinder/Backend/05cat_tinder_CORS.md)
+### Cat Tinder Backend
+6. [ Cat Tinder API Introduction ](./cat-tinder/backend/api_intro.md)
+7. [ Cat Tinder API Seeds ](./cat-tinder/backend/seeds.md)
+8. [ Cat Tinder API Endpoints ](./cat-tinder/backend/api_endpoints.md)
+9. [ Cat Tinder API Validations ](./cat-tinder/backend/validations.md)
+10. [ Cat Tinder API CORS ](./cat-tinder/backend/api_cors.md)
 
 ### Bringing it together!
-12) [Cat Tinder frontend: API Calls and Active Record](./React_and_Rails_Cat_Tinder/Frontend/08cat_tinder_api_index.md)
-13) [Cat Tinder frontend: NewCat](./React_and_Rails_Cat_Tinder/Frontend/09cat_tinder_new_cat_form.md)
-14) [Cat Tinder frontend: NewCat Functionality](./React_and_Rails_Cat_Tinder/Frontend/10cat_tinder_form_submit.md)
+11. [ Cat Tinder Fetch for Read Functionality ](./cat-tinder/connecting/fetch-read.md)
+12. [ Cat Tinder Fetch for Create Functionality ](./cat-tinder/connecting/fetch-create.md)
+13. [ Cat Tinder Fetch for Update Functionality ](./cat-tinder/connecting/fetch-update.md)
+14. [ Cat Tinder Fetch for Delete Functionality ](./cat-tinder/connecting/fetch-delete.md)
 
 
-## Unit Nine: Authentication
 
-1) [React In Rails](./React_in_Rails_Apartment_App/01-react-in-rails/README.md)
-2) [Devise](./React_in_Rails_Apartment_App/02-authorization-and-authentication/README.md)
+## Unit Nine: React in Rails and Authentication
+1. [ React IN Rails Introduction ](./react_in_rails/intro.md)
+2. [ React Routing IN Rails ](./react_in_rails/react_routing_in_rails.md)
+2. [ Apartment App Devise Introduction ](./react_in_rails/devise.md)
+2. [ Apartment App Devise with React ](./react_in_rails/devise_and_react_in_rails.md)
+4. [ Apartment App Challenge ](./react_in_rails/apartment_app.md)
 
-## Unit Ten: Capstone Project, Week 1
-1) [ActiveStorage](./Rails_ActiveStorage/README.md)
-2) [JBuilder](./Rails_JBuilder/README.md)
-3) [has_many_through](./Rails_has_many_through/README.md)
+#### Additional Topics:
+- [ Authorization and Authentication ](./react_in_rails/authentication-vs-authorization.md)
 
-## Unit Eleven: Capstone Project, Week 2
-1) [Heroku](./heroku/README.md)
+
+
+## Unit Ten: Capstone Project, MVP
+- [ Capstone Prep Checklist ](./capstone/prep-checklist.md)
+- [ Capstone Requirements ](./capstone/requirements.md)
+- [ Capstone Schedules ](./capstone/schedule.md)
+- [ Rails has_many_through ](./capstone/has_many_through/README.md)
+- [ Modifying Devise ](./capstone/modifying-devise.md)
+
+
+
+## Unit Eleven: Capstone Project, Icebox
+- [ Rails JBuilder ](./capstone/jbuilder.md)
+- [ Heroku ](./capstone/heroku.md)
+- [ ActiveStorage ](./capstone/active-storage/README.md)
+
+
 
 ## Unit Twelve: Internship Preparation
