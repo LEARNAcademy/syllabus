@@ -45,7 +45,7 @@ An animal has the following information: common name, latin name, kingdom (mamma
 ```ruby
 class SightingsController < ApplicationController
   def index
-    sightings = Sighting.where(start_date: params[:start_date]..params[:end_date])
+    sightings = Sighting.where(date: params[:start_date]..params[:end_date])
     render json: sightings
   end
 end
