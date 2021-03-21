@@ -5,7 +5,7 @@
 
 ## Overview
 - Functions are reusable pieces of code that only execute when "called" and always return an output
-- Functions can have information passed into the scope of the function through an "argument"
+- Functions can have information (arguments) passed into the scope of the function through parameters
 - Functions are designed to be used many times in a program and should be as generic as possible while still being descriptive as to their purpose
 
 ## Learning Objectives
@@ -37,9 +37,9 @@
 ## Functions
 A function is a set of instructions detailing how to do a task. We can use the instructions to build something over and over again, in the same way that one blueprint can be used many times to build many buildings.
 
-It is important to remember that there is a difference between a **function declaration** - creating the instructions, and a **function call** - following the instructions to perform a task.
+It is important to remember that there is a difference between a **function expression** - creating the instructions, and a **function call** - following the instructions to perform a task.
 
-For example, look at this **function declaration:**
+For example, look at this **function expression:**
 
 ```javascript
 const greeting = () => {
@@ -92,7 +92,7 @@ const greeting = (name) => {
 console.log(greeting("Sally"))
 --> Hello Sally
 ```
-Notice that in the function we created a **placeholder** called `name`. This allows us to pass any name we want through the function during the function call.
+Notice that in the function we created a **parameter** called `name`. This allows us to identify and leverage that value within our function logic.
 
 The function is an encapsulated machine that can be called many times and give a unique output.
 
@@ -113,7 +113,7 @@ const multiplier = (num1, num2) => {
   return num1 * num2
 }
 ```
-The number of arguments in the function must match the information being passed into the function call.
+The number of parameters defined for the function must match the information being passed into the function call.
 
 ```javascript
 console.log(multiplier(3, 5))
@@ -230,43 +230,57 @@ console.log(greeting("Tom"))
 
 However, we can only have 1 return in a function.  Note that code after the function returns something will not execute.
 
+## Function Signature
+
+As you define your functions, it is helpful to indicate the **signature** of the function in **psuedocode** which describes the expected inputs (arguments) and outputs (results). 
+
+```javascript
+// Input: name, a string
+// Output: a number
+// Example: nameLength("LEARNAcademy") --> 12
+
+const nameLength = (name) => {
+  return name.length
+}
+```
+
 
 ## Challenges
 
 **DON'T FORGET TO PSEUDOCODE**
 
-1. Write a function named marco that returns "polo".
+1. Write a function named `marco` that returns "polo".
 
-2. Write a function named greeting that takes a name as an argument and returns "Welcome, <person's name here>!"
+2. Write a function named `greeting` that takes a name as an argument and returns "Welcome, <person's name here>!"
 
-3. Write a function named oddOrEven that takes a number as an argument and returns whether the number is odd or even.
+3. Write a function named `oddOrEven` that takes a number as an argument and returns whether the number is odd or even.
 
-4. Write a function named triple that takes a number as an argument and returns the result of that number multiplied by 3.
+4. Write a function named `triple` that takes a number as an argument and returns the result of that number multiplied by 3.
 
-5. Write a function named multiply that takes two numbers as arguments and returns the result of one of the numbers multiplied by the other.
+5. Write a function named `multiply` that takes two numbers as arguments and returns the result of one of the numbers multiplied by the other.
 
-6. Write a function named divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+6. Write a function named `divisibleBy` that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 
-7. Write a function named assignGrade that takes a number score as an argument and returns the letter grade for the score.
+7. Write a function named `assignGrade` that takes a number score as an argument and returns the letter grade for the score.
 
 
 ### STRETCH Challenges
 
 **Test your functions with multiple calls**
 
-1. What number's bigger: Write a function named greaterNum that takes 2 arguments, both numbers and returns whichever number is the greater (higher) number
+1. What number's bigger: Write a function named `greaterNum` that takes 2 arguments, both numbers and returns whichever number is the greater (higher) number
 
-2. The World Translator: Write a function named helloWorld that takes 1 argument, a language code (e.g. "es", "de", "en") and returns "Hello, World" for the given language, for at least 3 languages (it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English)
+2. The World Translator: Write a function named `helloWorld` that takes 1 argument, a language code (e.g. "es", "de", "en") and returns "Hello, World" for the given language, for at least 3 languages (it should [default](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) to returning English)
 
-3. The Pluralizer: Write a function named pluralizer that takes 2 arguments, a number and a singular noun and returns the number and pluralized form of the noun, if necessary
+3. The Pluralizer: Write a function named `pluralizer` that takes 2 arguments (a number and a singular noun) and returns the number and pluralized form of the noun, if necessary
 
-  const pluralizer = (5, cat)
+```javascript
+  pluralizer(5, "cat") 
+  // expected output: "5 cats"
 
-  Expected outcome --> "5 cats"
-
-  const pluralizer = (1, dog)
-
-  Expected outcome --> "1 dog"
+  pluralizer(1, "dog") 
+  // expected output: "1 dog"
+```
 
 - Bonus: Make it handle a few collective nouns like "sheep", "goose", "child", "person" and "species"
 
