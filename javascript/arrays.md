@@ -37,16 +37,16 @@ Arrays are variables that store collections of data in an ordered list. Having a
 - `$ node javascript-arrays.js`
 
 ### Collections of Data
-Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an **array**, which is a collection of ordered data.
+Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an **array**, which is a collection of ordered data. Arrays can contain any type of information as long as it is a data type JavaScript recognizes.
 
 Here are a few examples of arrays assigned to variables:
 
 ```javascript
-var months = ["January", "February", "March", "April", "May"]
+var months = ["January", "February", "March", "April", "May", "June"]
 
 var numbers = [17, 15, 14, 3, 5, 10]
 
-var combined = [17, "January", 15, "February", 14, "March", 3, "April", 5, "May", 10]
+var comboDataArray = [17, "January", true, "March 14", 42, null, false, "LEARN", 10]
 ```
 
 ### Anatomy of an Array
