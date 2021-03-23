@@ -138,10 +138,10 @@ console.log(learnStudents.length)
 ### Built-in Methods
 JavaScript has many built-in methods. A **built-in method** is a small piece of functionality that has been added to the language to accomplish a common task. Since arrays are a great way to store data it makes sense that there are a lot of built-in methods that act on arrays to help us to access and modify the content. Some built-in methods will require additional information to perform the action intended. This additional information is passed into the parentheses that follow the built-in method which is called an **argument**.
 
-Built-in methods fall into one of two categories: mutators and accessors. **Mutators** are built-in methods that modify the original array, also know as "setter methods." **Accessors** are built-in methods that do not change the original array, also known as "getters methods."
+Built-in methods for arrays fall into one of two categories: mutators and accessors. **Mutators** are built-in methods that modify the original array, also know as "setter methods." **Accessors** are built-in methods that do not change the original array, also known as "getter methods."
 
 ### Mutators
-Mutator methods modify the array the method is called on. When working with mutators it is important to remember that the output of the method action will not always be the array. To see the affect that has taken place we need to call the variable that stores the array.
+Mutator methods modify the array the method is called on. When working with mutators it is important to remember the output of the method action will not always be the array. To see the affect of the mutator method we can call the variable containing the array.
 
 **.push(value)**
 - Adds a value onto the end of an array
@@ -153,7 +153,7 @@ Mutator methods modify the array the method is called on. When working with muta
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.push("Ryan"))
-// output --> 5
+// output --> 4
 
 console.log(learnStudents)
 // output --> ["Debra", "Jonas", "Joel", "Ryan"]
@@ -190,7 +190,7 @@ console.log(learnStudents)
 ```
 
 **.shift()**
-- Removes the first value in an array
+- Removes the value at the zeroth index of the array
 - The output of the method itself is the value that is removed
 
 ```javascript
@@ -267,11 +267,11 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Joel", "Jonas", "Joel"]
 
 console.log(learnStudents.lastIndexOf("Joel"))
-// output --> 4
+// output --> 3
 
 var lastJoelIndex = learnStudents.lastIndexOf("Joel")
 console.log(lastJoelIndex)
-// output --> 4
+// output --> 3
 
 console.log(learnStudents.lastIndexOf("Mary"))
 // output --> -1
@@ -283,7 +283,7 @@ console.log(learnStudents)
 **.slice(staringIndex, endingIndex)**
 - Returns a subset of the array
 - Slice requires an argument for the starting index of the subset
-- The ending index is an optional argument, if no ending index is specified, the ending index will default to the length of the array
+- The ending index is an optional argument, if no ending index is specified the default is the end of the array
 - The original array is unchanged
 
 ```javascript
@@ -355,7 +355,7 @@ console.log(learnStudents)
 
 **.split("")**
 - Converts a string into an array
-- Split takes an optional argument that describes what is in each value
+- Split takes an optional argument that describes where the string is split
 - The original string is unchanged
 
 ```javascript
@@ -382,7 +382,9 @@ console.log(learnStudents)
 ```
 
 ### Array Destructuring
-The destructuring assignment is a special way of assigning variables in JavaScript. **Destructuring** allows you to take an array and unpack each value into individual variables in a singe assignment. Destructuring assignments requires variables names in square brackets and an equal number of values. Each variable is assigned in order.
+The destructuring assignment is a special way of assigning variables in JavaScript. **Destructuring** allows you to take an array and unpack each value into individual variables in a singe assignment.
+
+Destructuring assignments requires variables names in square brackets and an equal number of values. Each variable is assigned in order.
 
 ```javascript
 var [firstName, secondName] = ["Mary", "Debra"]
