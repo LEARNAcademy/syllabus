@@ -84,11 +84,11 @@ Its *incredibly* liberating!
 
 Jest is a JavaScript testing framework. The framework is a collection of files that are managed by `yarn` a technology created by Facebook to manage dependency files.
 
-- `describe()` - Jest uses a method called **.describe()** that runs other nested methods.
+- `describe()` - Jest uses a method called **describe()** that runs other nested methods.
   - Here we provide an argument of a string, with the name of our function, or the name of this particular test.
-- `test()` - **.test()** is a method that is nested within the describe's code block. 
+- `test()` or `it()` - **test()** or **it()** are methods nested within the describe's code block. 
   - Here we provide an argument of string, which is a statement that explains in **regular words** what the test is doing.
-- `expect()` - **.expect()** is a method that is nested within the test's code block. It calls the function being tested, passes any test-case arguments.
+- `expect()` - **expect()** is a method that is nested within the test's code block. It calls the function being tested, passes any test-case arguments.
   - Here we follow it with a **matcher** ( Example: **.toEqual()** or **.toBe()** ) that compares the output.
     - Learn more about [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
@@ -186,7 +186,7 @@ Excellent! Our test passes and we can now move on to creating more tests.
 // Write a test for a function that logs "eat food" if you are hungry and "keep working" if you are not hungry
 
 describe("areYouHungry", () => {
-  test ("returns eat food or keep working based on input", () => {
+  it("returns eat food or keep working based on input", () => {
     expect(areYouHungry("yes")).toEqual("eat food")
     expect(areYouHungry("no")).toEqual("keep working")
   })
@@ -276,7 +276,7 @@ Sometimes it can be useful to create variables before our test method for use la
 describe("addGranola", () => {
   let groceryList = ["apples", "carrots", "oatmeal"]
   let result = ["apples", "carrots", "oatmeal", "granola"]
-  test ("adds granola to the end of an array", () => {
+  it("adds granola to the end of an array", () => {
     expect(addGranola(groceryList)).toEqual(result)
   })
 })
@@ -298,7 +298,7 @@ We can see here, utilizing variables for our arrays, that it keeps our code clea
     ReferenceError: addGranola is not defined
 
       30 |   let result = ["apples", "carrots", "oatmeal", "granola"]
-      31 |   test ("adds granola to the end of an array", () => {
+      31 |   it("adds granola to the end of an array", () => {
     > 32 |     expect(addGranola(groceryList1)).toEqual(result)
          |     ^
       33 |   })
@@ -343,6 +343,16 @@ Ran all test suites.
 ✨  Done in 2.46s.
 ```
 Fantastic!
+
+
+### Tips
+
+**Focus Your Tests** 
+
+Use `fdescribe()` to focus on a describe-block without having to comment out all other describe-blocks
+
+Use `fit()` to focus on an it-block without having to comment all other it-blocks
+
 
 ---
 
