@@ -1,19 +1,19 @@
 # JavaScript Arrays
 
-##### Overview
+#### Overview
 Arrays are variables that store collections of data in an ordered list. Having an organized data set gives developers the ability to access particular pieces of information, access every item in the set, or make a decision about every item in the data set. Arrays are indexed which means the data can be accessed by its location within the array. Arrays also have many built-in methods that can be used to manipulate and access the content.
 
-##### Previous Lecture (43 min)
+#### Previous Lecture (43 min)
 [![YouTube](http://img.youtube.com/vi/Bj3li2W6yks/0.jpg)](https://www.youtube.com/watch?v=Bj3li2W6yks)
 
-##### Learning Objectives
+#### Learning Objectives
 - can recall the syntax of an array
 - can define the value and index
 - can conceptualize the difference between mutator and accessor methods
 - can extract a single value from an array
 - can apply built in methods to mutate and access the array
 
-##### Vocabulary
+#### Vocabulary
 - array
 - element
 - value
@@ -25,18 +25,18 @@ Arrays are variables that store collections of data in an ordered list. Having a
 - accessor/getter methods
 - destructuring
 
-##### Additional Resources
+#### Additional Resources
 - [ W3Schools JavaScript Arrays ](https://www.w3schools.com/js/js_arrays.asp)
 - [ W3Schools JavaScript Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
 
-##### Process
+#### Process
 - `cd` into the appropriate folder or repository
 - `touch` a file with no spaces and `.js` extension, `javascript-arrays.js`
 - Open the folder in a text editor
 - Code!
 - `$ node javascript-arrays.js`
 
-### Collections of Data
+### Arrays: Collections of Data
 Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an **array**, which is a collection of ordered data. Arrays can contain any type of information as long as it is a data type JavaScript recognizes.
 
 Here are a few examples of arrays assigned to variables:
@@ -57,22 +57,22 @@ var learnStudents = ["Debra", "Jonas", "Joel"]
 
 Arrays consists of the following:
 1. Variable declaration
-  - Just like any other variable, we must inform JavaScript of our intention to create a variable
-  - `var`
+    - Just like any other variable, we must inform JavaScript of our intention to create a variable
+    - `var`
 2. Variable name
-  - Variables must be camelCase and descriptive
-  - `var learnStudents`
+    - Variables must be camelCase and descriptive
+    - `var learnStudents`
 3. Single equal sign
-  - Variables must be assigned with a single equal sign
-  - `var learnStudents =`
+    - Variables must be assigned with a single equal sign
+    - `var learnStudents =`
 4. Opening and closing square brackets `[]`
-  - The contents of an array are stored inside square brackets
-  - `var learnStudents = []`
+    - The contents of an array are stored inside square brackets
+    - `var learnStudents = []`
 5. Elements in the array
-  - Each item in the array is called an **element**
-  - Elements are separated from each other by a comma
-  - Elements in the array must be a data type recognized by JavaScript
-  - `var learnStudents = ["Debra", "Jonas", "Joel"]`
+    - Each item in the array is called an **element**
+    - Elements are separated from each other by a comma
+    - Elements in the array must be a data type recognized by JavaScript
+    - `var learnStudents = ["Debra", "Jonas", "Joel"]`
 
 ### Value
 Each element in the array must be a JavaScript data type. The content of each element is called the **value**.
@@ -141,7 +141,7 @@ JavaScript has many built-in methods. A **built-in method** is a small piece of 
 Built-in methods for arrays fall into one of two categories: mutators and accessors. **Mutators** are built-in methods that modify the original array, also know as "setter methods." **Accessors** are built-in methods that do not change the original array, also known as "getter methods."
 
 ### Mutators
-Mutator methods modify the array the method is called on. When working with mutators it is important to remember the output of the method action will not always be the array. To see the affect of the mutator method we can call the variable containing the array.
+Mutator methods modify the array the method is called on. When working with mutators it is important to remember the output of the method action will not always be the array. To see the effect of the mutator method we can call the variable containing the array.
 
 **.push(value)**
 - Adds a value onto the end of an array
