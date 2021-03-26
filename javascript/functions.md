@@ -35,7 +35,7 @@ Functions are a fundamental building block in JavaScript and in programming in g
 - [ How to Write Pseudocode ](https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/)
 - [ Many Ways to Create Functions ](https://javascript.info/function-expressions)
 
-<img src="./assets/scope.jpg" width="200px">
+<img src="./assets/scope.jpg" width="250px">
 
 #### Process
 - `cd` into the appropriate folder or repository
@@ -62,34 +62,34 @@ const greeting = () => {
 
 Functions consists of the following:
 1. Variable declaration
-  - Just like any other variable, we must inform JavaScript with a declaration
-  - Because function expressions should only be assigned one time it is best practice to use the variable declaration that won't allow reassigning
-  - `const`
+    - Just like any other variable, we must inform JavaScript with a declaration
+    - Because function expressions should only be assigned one time it is best practice to use the variable declaration that won't allow reassigning
+    - `const`
 2. Variable name
-  - Variables must be camelCase and descriptive as to the intent of the function
-  - `const greeting`
+    - Variables must be camelCase and descriptive as to the intent of the function
+    - `const greeting`
 3. Single equal sign
-  - Variables must be assigned with a single equal sign
-  - `const greeting =`
+    - Variables must be assigned with a single equal sign
+    - `const greeting =`
 4. Parentheses
-  - Parentheses describes an action in JavaScript
-  - Parentheses can take parameter to pass inputs to a function
-  - `const greeting = ()`
+    - Parentheses describes an action in JavaScript
+    - Parentheses can take parameter to pass inputs to a function
+    - `const greeting = ()`
 5. Arrow
-  - Function syntax
-  - `const greeting = () =>`
+    - Function syntax
+    - `const greeting = () =>`
 6. Curly braces
-  - Curly braces define a code block where the logic is encapsulated
-  - `const greeting = () => {}`
+    - Curly braces define a code block where the logic is encapsulated
+    - `const greeting = () => {}`
 7. Return
-  - Describes the output of a function
-  - Without a return, a function will log `undefined`
-  - There can only be one executable return per code block
-  ```
-    const greeting = () => {
-      return
-    }
-  ```
+    - Describes the output of a function
+    - Without a return, a function will log `undefined`
+    - There can only be one executable return per code block
+    ```
+      const greeting = () => {
+        return
+      }
+    ```
 
 ### Function Expression
 
