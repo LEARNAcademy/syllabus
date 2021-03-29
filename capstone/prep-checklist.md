@@ -28,32 +28,32 @@ User stories should be actionable. There should be a clear understanding of when
 
 ### Developer Roles
 **Product Manager** - Takes ownership on the vision of the overall product for the dev team
+- Must have strong management skills to provide support to the team and keep team unblocked
 - Manages the conversation around large changes to the app
 - Ensures requirements are met
-- Manages external resources
-- Ensures the README contains appropriate information
+- Gives progress updates at the end of the day
 
-**Trello/Communications** - Takes ownership on Trello and Slack 
-- Ensures developers are assigned to the card they are working on, decides when a card is done
+**Project Manager** - Takes ownership on team communication and project managment board
 - Must have strong communication with the team about who is working on what
-- Works closely with the Tech Lead to report blockers
+- Ensures developers are assigned to the card they are working on, decides when a card is done
 - Notifies the mentors of PRs
 - Keep Slack active with updates and pins appropriate content
+- Ensures the README contains appropriate information
+- Manages external resources
 
 **Tech Lead/Anchor** - Takes ownership on the code base
+- Must have a strong understanding of the technical needs of the project
 - GitHub button clicker, merges code
-- Leads standup
-- Leads team retrospectives
+- Leads morning standup reporting status and blockers
 - Leads mentorship sessions for the team
-- Works closely with the Design Lead to make sure the code is meeting the design specs
 
-**Design Lead** - Takes ownership on the UI
+**Design Lead** - Takes ownership on the look of the project
+- Must have a strong understanding of the UI/UX needs of the application
 - Wireframes
 - Color schemes, implementation of branding
 - Navigation and user experience
-- Styling libraries
+- Explore styling libraries
 - Responsive design, accessibility features
-- Works closely with the Product Manager to ensure the app alines with the big picture vision
 
 
 [ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
