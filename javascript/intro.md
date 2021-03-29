@@ -327,6 +327,7 @@ Copy the challenges into your JavaScript file. Comment out the instructions and 
 10. Write the code that will log the string in all uppercase letters.
 
 Write the code that will log true or false for the following:  
+
 11. Is 34 divided by 3 greater than 67 divided by 2?
 12. Does 5 evaluate to the same as "5"?
 13. Does 5 strictly equal "5"?
