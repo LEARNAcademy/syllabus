@@ -1,36 +1,64 @@
 # JavaScript Introduction
 
-## Overview
-- JavaScript is a versatile and powerful scripting language used to make a webpage dynamic
+#### Overview
+JavaScript is a versatile and powerful programming language. JavaScript is a scripting language, meaning it is used to create logic that will make a webpage react to the interactions from a user. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
 
-## Learning Objectives
-- Interacting with JavaScript's primitive data types
-- Exploring built-in methods
-- Exploring type coercion in JavaScript
+#### Previous Lecture (41 min)
+[![YouTube](http://img.youtube.com/vi/qG1M9_zwW-k/0.jpg)](https://www.youtube.com/watch?v=qG1M9_zwW-k)
 
-## Vocabulary
+#### Learning Objectives
+- can name the six primitive data types
+- can produce boolean, string, and number data types
+- can recall the syntax of creating a variable
+- can recognize and distinguish equality, relational, logical operators
+- can recall the definition of type coercion
+- can successfully run JavaScript code directly in the node terminal
+
+#### Vocabulary
+- JavaScript
 - data types
-- concatenation
-- type coercion
-- floats
+- primitive data type
+- composite data type
+- number
+- float
 - modulo operator
+- string
+- concatenation
+- Boolean
+- equality operator
+- relational operator
+- logical operator
 - bang operator
+- undefined
+- null
+- symbol
+- type coercion
+- variable
+- variable declaration
+- camelCase
+- assignment operator
+- index
+- build-in method
+- argument
 
-## Useful Commands
-- $ node
-- control c
+#### Additional Resources
+- [ JavaScript Data Types ](https://www.w3schools.com/js/js_datatypes.asp)
+- [ JavaScript Built-in Functions Organized By Data Type ](https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm)
 
-## Additional Resources
-- <a href="https://www.w3schools.com/js/js_datatypes.asp" target="blank">JavaScript Data Types</a>
-- <a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="blank">JavaScript Built-in Functions Organized By Data Type</a>
+#### Process
+- `cd` into the appropriate folder or repository
+- `touch` a file with no spaces and `.js` extension, `javascript-intro.js`
+- Open the folder in a text editor
+- Code!
+- `$ node javascript-intro.js`
 
-## Data Types
+#### Troubleshooting Tips
+- Is the file path is correct?
 
-JavaScript takes in information in a very specific way. JS is a loosely typed language, meaning the programmer does not have to declare the type of data contained in a variable.
+### JavaScript Fundamentals
+**JavaScript** is a dynamic, loosely-typed, scripting programming language. JavaScript allows us to perform logic to evaluate and manipulate data. To perform logic, JavaScript must know what type of data we are currently working with. **Data types** specify what kind of information can be stored and how it can be manipulated within a program. There are two basic categories of data types in JavaScript: primitive and composite. **Primitive data types** are the building blocks of the language that cannot be broken down into any simpler parts. **Composite data types** are collections of other data types.
 
-## Primitive Data Types
-
-The basic data types are:
+In JavaScript there are six primitive data types:
 - Number
 - String
 - Boolean
@@ -39,223 +67,290 @@ The basic data types are:
 - Symbol
 
 
-### Numbers
+### Number
+**Numbers** are a data type that is made up of whole number integers (positive, negative, or zero) as well as fractions of a whole number written as a decimal called a **float**.
 
-Numbers can be integers (positive, negative or zero) as well as fractions of a whole number written as a decimal called a float.
-
-##### Arithmetic
-
-We can perform mathematical calculations with numbers in JavaScript.
-
-```JavaScript
-1           -> 1
-1.0         -> 1
-
-addition
-2 + 2       -> 4
-0.1 + 0.2   -> 0.3
-3.7 + 5     -> 8.7
-
-subtraction
-2 - 2       -> 0
-
-multiplication
-2 * 2       -> 4
-
-division
-2 / 2       -> 1
-2 / 0       -> Infinity
--2 / 0      -> -Infinity
-
-modulo
-2 % 2       -> 0
-3 % 2       -> 1
-18 % 5      -> 3
-
-exponents
-7 ** 2      -> 49
+```javascript
+// whole number
+8
+// float
+8.7
 ```
+
+Numbers are used to perform mathematical calculations and make evaluations. The calculations are the usual addition, subtraction, multiplication, and division as well as exponents, and the **modulo operator** which returns the whole number remainder of a division problem.
+
+```javascript
+// addition
+2 + 2       // output --> 4
+0.1 + 0.2   // output --> 0.3
+3.7 + 5     // output --> 8.7
+
+// subtraction
+2 - 2       // output --> 0
+
+// multiplication
+2 * 2       // output --> 4
+
+// division
+2 / 2       // output --> 1
+2 / 0       // output --> Infinity
+-2 / 0      // output --> -Infinity
+
+// exponents
+7 ** 2      // output --> 49
+
+// modulo
+2 % 2       // output --> 0
+3 % 2       // output --> 1
+18 % 5      // output --> 3
+```
+
 ### Strings
+**Strings** are a collection of characters wrapped in quotation marks. Quotation marks can be single or double quotes as long as we are consistent. At LEARN we use double quotes for strings unless there is a specific reason to do otherwise. Strings can contain any type of characters and as many characters as needed.
 
-We can store words or other characters in JavaScript by surrounding characters with quotation marks.
-
-##### Concatenation
-
-When we use the + on strings it combines the strings in a process called concatenation.
-
-```
-"hell" + "o"        -> "hello"
-"hello " + "world"  -> "hello world"
-"3 + 4"             -> "3 + 4"
-"3 + 4" + "5"       -> "3 + 45"
+```javascript
+"Hello world!"
+"42"
 ```
 
-##### Built-in String Functions/Methods
+There are many properties and operations that can be applied to strings. One of the fundamental concepts is the idea of concatenation. **Concatenation** is the joining of multiple strings. We can do this by using the `+` between two strings.
 
-The JavaScript language has some pre-made functionality that can be used on the strings called built-in functions.
-
+```javascript
+"hell" + "o"        // output --> "hello"
+"hello " + "world"  // output --> "hello world"
+"3 + 4"             // output --> "3 + 4"
+"3 + 4" + "5"       // output --> "3 + 45"
 ```
-"hello".charAt(1)       -> "e"
-"hello".length          -> 5
-"hello".includes("he")  -> true
-```
-
-A function is a JavaScript procedure - a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it (unless it is built-in).
-
-
-JavaScript methods are actions that can be performed on objects. A JavaScript method is a property containing a function definition.
 
 ### Boolean
+**Boolean** expressions in JavaScript return `true` or `false`. Even though true and false are words they are not strings. They represent the value of true/false.
 
-Boolean expressions in JavaScript return `true` or `false`. Even though true and false are words, they are not strings. They represent the value of true/false.
-
+```javascript
+true                 // output --> true
+false                // output --> false
 ```
-true                 -> true
-false                -> false
+
+Boolean values are very useful when making evaluations about data. **Equality operators** compare one value to the other and judge if the values equate to the same thing. If they do equate to the same a Boolean value of true is returned if not we get a Boolean value of false. There are two types of equality operators, the loose equality operator and the strict equality operator. The loose equality operator converts the two items to the same data type before making a comparison and the strict equality operator requires the two items being compared must be the same data type to return true.
+
+```javascript
+// loose equality operator
+true == false       // output --> false
+3 == "3"            // output --> true
+
+// strict equality operator
+true === false      // output --> false
+3 === "3"           // output --> false
 ```
 
-##### Comparison Operators
-Comparison operators will return a Boolean value.
+**Relational operators** looks for a relationship between two values. A Boolean value is returned.
 
+```javascript
+// greater than
+2 > 0              // output --> true
+
+// less than
+4 < 8              // output --> true
+
+// greater than or equal to
+0 >= 2             // output --> false
+
+// less than or equal to
+-4 <= 0.8          // output --> true
 ```
-equality operator
-true == false       -> false
-3 == "3"            -> true
 
-strict comparison
-true === false      -> false
-3 === "3"           -> false
-```
-##### Relational operators
-Relational operators return a Boolean value.
+**Logical operators** are `and`, `or`, and `not`. The `and` and `or` operators take two complete statements and chain them together. The `logical and` is denoted by `&&` and states that both sides of the equation must be true. The `logical or` is denoted by `||` and states that at least one side of the equation must be true. The `logical not` is denoted by a **bang operator** that sets the logical opposite.
 
-```
-greater than
-2 > 0               -> true
+```javascript
+// and
+true && false       // output --> false
+true && true        // output --> true
+6 > 5 && 7 > 4      // output --> true
 
-less than
-4 < 8               -> true
+// or
+true || false       // output --> true
+true || true        // output --> true
+4 > 2 || 3 === "3"  // output --> true
 
-greater than or equal to
-0 >= 2              -> false
-
-less than or equal to
--4 <= 0.8           -> true
-```
-##### Logical Operators
-Logical operators can return any type of data but uses the principle of Boolean data type to determine the outcome.
-
-```
-and
-true && false       -> false
-true && true        -> true
-
-or
-true  || false      -> true
-false || false      -> false
-
-not
-!true               -> false
-!false              -> true
-true != false       -> true
-true != true        -> false
-!(true && false)    -> true
-!(true && false)    -> true
+// not
+!true               // output --> false
+!false              // output --> true
+true != false       // output --> true
+true != true        // output --> false
+5 != 5              // output --> false
+!(true && false)    // output --> true
+!(true && true)     // output --> false
 ```
 
 ### Undefined
-
-If a variable is created but not assigned a value, the variable is undefined.
+If a variable is created but not assigned a value, the variable is **undefined**.
 
 ### Null
-
-Null is equal to nothing else in your program. It is not zero, it is not false, it is nothing.
+**Null** is equal to nothing else in your program. It is not zero, it is not false, it is nothing.
 
 ### Symbol
+**Symbol** is a new data type created for the JavaScript update ECMAScript 2015. Symbols are unique and immutable, used for the key in a JavaScript object.
 
-Symbol is a new data type created for the JS update ECMAScript 2015. Symbols are unique and immutable, used for the key in a JS object.
 
+### Type Coercion
+JavaScript has an interesting behavior called **type coercion** that happens when  we ask our JavaScript program to make comparisons or evaluations about incompatible data types. Often, this can lead to strange and unpredictable behavior and is generally best to avoid.
 
-## Type Coercion
-
-Because JavaScript is a loosely typed language, it does a funky thing called type coercion. If we combine data from different types, JavaScript tries to be helpful and make sense of the operation. This can lead to strange and unpredictable behavior and is generally best to avoid.
-
-```
-"2" + 2             -> "22"
-!3                  -> false
-!0                  -> true
-true * 9            -> 9
-false * 9           -> 0
+```javascript
+"2" + 2              // output --> "22"
+!3                   // output --> false
+!0                   // output --> true
+true * 9             // output --> 9
+false * 9            // output --> 0
 ```
 
-## Variables
-
-Just like in algebra, variables are used to store information. Variables must be declared and assigned a value using a single equals sign.
-
+### Running JavaScript Code
+There are many ways we can run a JavaScript file and see the outcome of our logic. For our pair programming JavaScript challenges we will use the terminal. To run a JavaScript file in the terminal, we must ensure we are in the directory containing the file. By using `cd` we can navigate into the correct directory. Then we can use the command `$ node` that will execute a JavaScript run time followed by the file name. The notation of `$` indicates a terminal command and is not included in the command itself.
 
 ```
-variable declared
-var a               -> undefined
-var a + 5           -> NaN (not a number)
-
-variable declared and assigned
-var a = 2           -> 2
-a + 5               -> 7
-a * 7               -> 14
-a + a               -> 4
-var a = null        -> null
-
-
-variable reassigned
-var a = "hello "    -> "hello "
-a.length            -> 5
-a + a               -> "hello hello "
-a + 5               -> "hello 5"
-
-new variable
-var b = "world"     -> "world"
-a + b               -> "hello world"
-
-new variable using existing variables
-var c = a + b       -> "hello world"
-a                   -> "hello "
-b                   -> "world"
-c                   -> "hello world"
+$ node javascript-intro.js
 ```
 
-We have gone over most of the building blocks that compose a JavaScript program. No matter how complex a project you work on, the pieces you use to build it will still be composed of primitive data types and manipulated as variables.
+This will run the file, but there is one more thing to achieve an output. We need to wrap `console.log()` around to code we wish to view.
+
+```javascript
+console.log(4 > 2 || 3 === "3")
+```
+
+### Variables
+Making evaluations and comparisons about data is a key component of creating logic in programming. It is often necessary to store and label the information in a container called a **variable**. Just like in algebra, variables are placeholders for the values they are assigned. To create a variable in JavaScript we need four things:
+
+1. Variable declaration
+    - In JavaScript, when creating a variable we need to announce to the program our intent. This announcement is called a **variable declaration**. There are several ways to declare variables depending on the use and placement in the program. For now we will use the variable declaration `var`.
+2. Variable name
+    - Variables can be called (almost) whatever we, as developers, choose as long as we follow a couple of principles. Variable names in JavaScript should follow the naming convention of camel case. **Camel case** is a way to write multiple words without spaces and itLooksLikeThis. The first letter of the first word is lowercase and the first letter of each additional word is uppercase. Variable names should NOT start with a capital letter or have spaces. Variable names should *communicate intent*.
+    - `var myCamelCasedVariableName`
+2. Assignment operator
+    - Once we have declared and named a variable JavaScript will recognize its existence. At this point, the variable will have a value of `undefined`. To change that we can use a single equal sign `=` or **assignment operator** to give the variable a value.
+    - `var myCamelCasedVariableName =`
+3. Data
+    - The information that our variable holds can be anything as long as it is recognized by JavaScript, meaning it must be a JavaScript data type.
+
+```javascript
+// variable declaration
+var myNum
+console.log(myNum)
+// output --> undefined
 
 
-## Challenges
+// variable declared and assigned
+var myNum = 2
+console.log(myNum)
+// output --> 2
 
-**Arithmetic Challenges**
-- Add 34 and 71
-- Subtract 67 from 123
-- Multiply 56 and 23
-- Divide 45 by 5
-- Calculate 5 to the power of 7
-- Find the remainder of 33/6
+myNum + 5
+console.log(myNum)
+// output --> 7
 
-**String Challenges**
-- Find the length of a string containing your name
-- Does your string include the letter "e"?
+myNum * 7
+console.log(myNum)
+// output --> 14
 
-**Boolean Challenges (return true or false)**
-- Is 34 divided by 3 greater than 67 divided by 2?
-- Does 5 evaluate to the same as "5"?
-- Does 5 strictly equal "5"?
-- Does !3 strictly equal 3?
-- Does "LEARN".length strictly equal 5 AND "Student".length strictly equal 7?
-- Does "LEARN".length strictly equal 5 OR "Student".length strictly equal 10?
+myNum + myNum
+console.log(myNum)
+// output --> 4
 
-**Variables Challenges**
-- Set a variable called favNum equal to your favorite number
-- Log your favorite number divided by 2
-- Set another variable called otherNum equal to 13
-- What is favNum divided by otherNum?
-- Save a string as a variable
-- Find the length of the string
-- Use the method charAt() to find what letter is at the 3rd index
+
+// variable reassigned
+var myNum = null
+console.log(myNum)
+// output --> null
+
+var myNum = "hello"
+console.log(myNum)
+// output --> "hello"
+
+console.log(myNum + myNum)
+// output --> "hellohello"
+
+console.log(myNum + 5)
+// output --> "hello5"
+```
+
+### String Methods and Properties
+Strings are a collection of characters that have certain properties that are innate to the data type. For example, strings have a length property and each character in the string can be accounted for by its placement called an **index**. Strings are *zero indexed* meaning the counting of the characters starts at 0 and moves forward.
+
+```javascript
+// returning a length property of the string
+console.log("hello".length )       
+// output --> 5
+
+// referencing a single character from the string by its index
+console.log("hello"[0])
+// output --> "h"
+console.log("hello"[2])
+// output --> "l"
+```
+
+There are many common actions that developers want to preform. To keep us from reinventing the wheel, the JavaScript language has a bunch of pre-made functionality that can be used on the data type string. These are called **built-in methods**. The built-in methods often rely on properties that are innate to the data type of string. Often the methods require additional information called an **argument** that gets passed into a set of parentheses after the method name.
+
+```javascript
+var greeting = "hello"
+
+// upcase all the letters in a string
+console.log(greeting.toUpperCase())
+// output --> "HELLO"
+
+// returns the character that is at a particular index
+console.log(greeting.charAt(1))
+// output --> "e"
+
+// returns the index of a particular character
+console.log(greeting.indexOf("e"))
+// output --> 1
+
+// returns a Boolean value if a subset of characters exists within the string
+console.log(greeting.includes("he"))
+// output --> true
+
+// returns a subset of a string based on a starting and ending index
+console.log(greeting.slice(1, 3))
+// output --> "el"
+```
+
+
+### Challenges
+Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
+
+1. Write the code that will log the outcome of 34 added to 71.
+2. Write the code that will log the outcome of 67 subtracted from 123.
+3. Write the code that will log the outcome of 56 multiplied by 23.
+4. Write the code that will log the outcome of 45 divided by 5.
+5. Write the code that will log the outcome of 5 to the power of 7.
+6. Write the code that will log the whole number remainder of 33 divided by 6.
+7. Write the code that will log the length of a string containing your name.
+8. Write the code that will log whether your string includes the letter "e"?
+9. Write the code that will log the character at the first index of the string.
+10. Write the code that will log the string in all uppercase letters.
+
+Write the code that will log true or false for the following:
+11. Is 34 divided by 3 greater than 67 divided by 2?
+12. Does 5 evaluate to the same as "5"?
+13. Does 5 strictly equal "5"?
+14. Does !3 strictly equal 3?
+15. Does `"LEARN".length` strictly equal 5 AND `"Student".length` strictly equal 7?
+16. Does `"LEARN".length` strictly equal 5 OR `"Student".length` strictly equal 10?
+17. Does "LEARN" contain the subset "RN"?
+18. Does "LEARN" contain the subset "rn"?
+19. Does "LEARN"[0] strictly equal "l"?
+20. Modify the code from the previous question to return `true`.
+
+Consider the variables:
+```javascript
+var theQuestion = "life, the universe, and everything"
+var theAnswer = 42
+```
+21. Write the code that will log `theAnswer` divided by 2.
+22. Write the code that will log the length of `theQuestion`.
+23. Write the code that will log the index of the character "f" in the `theQuestion`.
+24. Write the code that will log the concatenation of the two variables.
+25. Write the code that will log "the universe".
+26. Write the code that will log the character "l" from `theQuestion`.
+27. Write the code that will log whether `theQuestion.length` is greater that `theAnswer`.
+
 
 [ Go to next lesson: JavaScript Conditionals ](./conditionals.md)
 
