@@ -54,7 +54,12 @@ Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme m
 Additionally, much like React's "hot-reload" when we run our React server, once we run `yarn test` it will continue to run and watch our file structure for any changes and re-run the test automatically for us.
 
 ## Organizing Your Tests
-Jest provides multiple ways to indicate which files are test files. We'll simply use the `.test.js` file naming convention for each component test file. Jest will detect any file that ends with `.test.js` as a test file and run that file when `yarn test` is executed.
+To keep our testing files organized, it is convention to make a directory called `__tests__` (two underscores on either side) in the same directory as the component you are going to be testing. The test file naming convention for each component is named the same as the component being tested. 
+
+As long as the directory is named `__tests__` Jest will find it and run any test files found within. 
+
+In this case, we will create a test file called *CatIndex.js* in the directory in `src/pages/__tests__` .
+
 
 After we create our test file, we need to import in the following lines at the top of our file:
 
@@ -99,9 +104,9 @@ Refer to the [Jest Matchers](https://facebook.github.io/jest/docs/en/using-match
 
 ## Challenge: Cat Tinder Tests
 - Add Enzyme to your application
-- Add a `__test__` directory to your component folder with test files for each existing component
+- Add a `__tests__` directory to your component folder with test files for each existing component
   - Create a test for each page, checking that the page is rendering by a single element/tag.
-- Add a `__test__` directory to your pages folder and test files for each existing page.
+- Add a `__tests__` directory to your pages folder and test files for each existing page.
   - Create a test for each page, checking that the page is rendering by a single element/tag.
 
 
