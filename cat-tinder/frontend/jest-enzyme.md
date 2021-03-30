@@ -58,7 +58,7 @@ Jest provides multiple ways to indicate which files are test files. We'll simply
 
 After we create our test file, we need to import in the following lines at the top of our file:
 
-**`src/pages/CatIndex.test.js`**
+**`src/pages/__tests__/CatIndex.test.js`**
 ```javascript
 // Imports React into our test file.
 import React from 'react' 
@@ -99,9 +99,9 @@ Refer to the [Jest Matchers](https://facebook.github.io/jest/docs/en/using-match
 
 ## Challenge: Cat Tinder Tests
 - Add Enzyme to your application
-- Add a test file (ending with `.test.js`) for each existing component within your component folder 
+- Add a `__test__` directory to your component folder with test files for each existing component
   - Create a test for each page, checking that the page is rendering by a single element/tag.
-- Add a test file (ending with `.test.js`) for each existing page within your pages folder
+- Add a `__test__` directory to your pages folder and test files for each existing page.
   - Create a test for each page, checking that the page is rendering by a single element/tag.
 
 
