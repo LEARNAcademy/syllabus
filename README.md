@@ -4,7 +4,7 @@ Welcome to the LEARN Syllabus! This repository is a reflection of the current st
 
 ## Resources
 - [ Accessing and Submitting Assessments ](./tools_and_resources/assessments.md)
-- [ Remote Pairing ](./tools_and_resources/remote-pairing.md)
+- [ Remote Pairing with GitHub ](./tools_and_resources/remote-pairing.md)
 - [ Portfolio Resources ](./tools_and_resources/portfolio.md)
 - [ How to Ask a Tech Question ](./tools_and_resources/questions.md)
 - [ Intro to How the Internet Works ](./tools_and_resources/how-the-internet-works-intro.md)
