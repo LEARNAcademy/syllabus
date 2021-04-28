@@ -87,20 +87,18 @@ The terminal provides a debugging prompt (`pry(main) >`) so that you can access 
 As with most interactive Ruby interfaces, typing `exit` and `enter` will allow you to exit the debugging terminal.
 
 ### byebug
-For Rails 6 apps, `byebug` is bundled with the app by default so there is no need to install.
+For Rails apps (versions 4.2 and newer), `byebug` is bundled with the app by default so there is no need to install it manually.
 
-Place `byebug` anywhere in your code to pause execution at that point. This functions a lot like `debugger` however the debugger interface is in your terminal because that's likely where your Ruby code is getting run. 
+Place `byebug` anywhere in your code to pause execution at that point. This functions a lot like `debugger` and `binding.pry`, however the debugger interface is in your terminal because that's likely where your Ruby code is getting run. 
 
-The terminal provides a debugging prompt (`pry(main) >`) so that you can access context. Notice that you will retrieve a value for variables above `binding.pry` but no values for variables declared after it. 
+The terminal provides a debugging prompt (`(byebug)`) so that you can access context. Notice that you will retrieve a value for variables above `byebug` but no values for variables declared after it. 
 
-![pry](./assets/debugging_pry.png)
+![byebug](./assets/debugging_byebug.png)
 
-Sources: For Pry documentation: [https://github.com/pry/pry](https://github.com/pry/pry)
-
-### byebug
+Sources: For byebug documentation: [https://github.com/deivid-rodriguez/byebug](https://github.com/deivid-rodriguez/byebug)
 
 ## General Techniques
 
-- Brute force logging: Log output at various points through your app to (general where you expect relevant data to flow) and verify expected behavior so that you can eliminate areas where the defect is not located.
+- Brute force logging: Log output at various points through your app (generally where you expect relevant data to flow) and verify expected behavior within the logs so that you can eliminate areas where the defect is not located
 - Backtracking: Start at the point where the program provides incorrect outcomes, then follow where the data came from to determine when the data first yielded an unexpected value.
-- Through testing: Try to reproduce the defect through testing by using mock data similar to that which is associated with the defect. Then write tests to assert on expected/favorable outcomes.
+- Testing: Tests are a great way to simulate or attempt to reproduce the defect. By writing test(s) and using mock data associated with the defect, you may be able to uncover the defect and document the fix/bug all-in-one!
