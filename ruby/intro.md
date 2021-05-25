@@ -385,11 +385,13 @@ Remember that floats are numbers with a decimal point whereas integers have no f
   - .capitalize
 
 ### Arrays Challenges
-- Create an array with five of your favorite TV shows
+- Create an array that contains the name of at least five TV shows
 - Find the length of the array
-- From the full TV show array, extract your top 3 TV shows in a new array
-- Reverse the array
-- Return one element from the array
+- Return the first item in the array
+- Return the fourth item in the array
+- Permanently reverse the order of the array
+- Create a new empty array for your top favorite TV shows
+- From the full TV show array, add your top two favorite shows to the empty array
 
 [ Go to next lesson: Ruby Conditionals ](./conditionals.md)
 
