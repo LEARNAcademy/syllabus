@@ -273,14 +273,14 @@ end
 
 ### Challenge
 
-###### For the following Tasklist challenge, use both **setter** and **getter** methods in your class.
+##### For the following Tasklist challenge, use both **setter** and **getter** methods in your class.
 - As a developer, I can create a class called Task.  
 - As a developer, I can give a Task a title and retrieve it.  
 - As a developer, I can give a Task a description and retrieve it.  
 - As a developer, I can mark a Task done.  
 - As a developer, when I print a Task that is done, its status is shown.
 
-###### For the following Color Palette challenge, use **attr_accessor** method.
+##### For the following Color Palette challenge, use **attr_accessor** method.
 - As a developer, I can create a class called ColorPalette.  
 - As a developer, I can initialize my color palette to contain 3 colors.  
 - As a developer, I can print the values of each individual color.  
