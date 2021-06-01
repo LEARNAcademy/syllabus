@@ -77,7 +77,7 @@ TDD stands for Test Driven Development
 ## Ruby Gems
 A gem is library or snippet of code functionality. Gems package up Ruby code so it is easy to share with others. For this example, we ask Rubygems to install the RSpec gem using the command `gem install rspec`.
 
-## Car Challenge Example
+## Car Example
 So far, we have a directory called `car_challenge` and two files in that directory. One for `car` and one for the tests or `specs`. Inside the spec file put the following:
 - `require 'rspec'` which searches the gem file and brings in the appropriate RSpec code
 - `require_relative 'car'` which connects the spec file to the `car.rb` file
