@@ -29,7 +29,7 @@
 ## Additional Resources
 - <a href="http://betterspecs.org" target="blank">Better Specs</a>, which shows tons of examples of what you should and shouldn't do with RSpec
 - <a href="http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/" target="blank">Ruby for Newbies</a>
-- <a href="http://www.anchor.com.au/wp-content/uploads/rspec_cheatsheet_attributed.pdf" target="blank">RSpec Cheat Sheet</a>
+- <a href="https://cheatography.com/dwapi/cheat-sheets/rspec-examples-with-factory-girl/" target="blank">RSpec Cheat Sheet</a>
 - <a href="https://www.youtube.com/embed/fsSMuqIpu_c?ecver=2" target="blank">YouTube Video about TDD vs BDD</a>
 - Here is a discussion about <a href="https://www.youtube.com/embed/GvAzrC6-spQ?ecver=2" target="blank">TDD</a> lead by Robert Martin, also known as "Uncle Bob". He's a legend in the programming world who writes extensively about software design and architecture
 
