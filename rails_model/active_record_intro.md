@@ -260,7 +260,7 @@ Naming conventions are a noteworthy aspect of the Rails principle convention ove
 As a developer, I have been tasked with creating and testing a database model that will be used in a rolodex application. I want to ensure that the database behaves as expected and the necessary actions can be performed on the database instances.
 
 **Set Up**
-- Create a new Rails app named 'rolodex'.
+- Create a new Rails app named 'active_reacord_challenges'.
 - Create the database. The output in the terminal should look like this:
 ```
 Created database 'rolodex_development'
