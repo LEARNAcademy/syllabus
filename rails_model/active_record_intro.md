@@ -257,16 +257,16 @@ Naming conventions are a noteworthy aspect of the Rails principle convention ove
 
 
 ## Challenge: Rolodex
-As a developer, I have been tasked with creating and testing a database model that will be used in a rolodex application. I want to ensure that the database behaves as expected and the necessary actions can be performed on the database instances.
+As a developer, I have been tasked with creating a database model that will be used in a rolodex application. I want to ensure that the database behaves as expected and the necessary actions can be performed on the database instances.
 
 **Set Up**
-- Create a new Rails app named 'active_reacord_challenges'.
+- Create a new Rails app named 'rolodex_challenge'.
 - Create the database. The output in the terminal should look like this:
 ```
 Created database 'rolodex_development'
 Created database 'rolodex_test'
 ```
-- Generate a Person model with a first_name, last_name, and phone. **All fields should be strings.**
+- Generate a model called Person with a first_name, last_name, and phone. **All fields should be strings.**
 - Run a migration to set up the database.
 - Open up Rails console.
 
