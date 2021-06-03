@@ -263,6 +263,7 @@ Save your queries in a file if you want to keep them for posterity.
 - Which is the smallest country by population? (HINT: 50)?
 - Which is the biggest country by area? (HINT: 1.70754e+07)
 - Which is the biggest country by population? (HINT: 1277558000)
+- Who is the most influential head of state measured by population? (HINT: Jiang Zemin)
 
 #### Subqueries: WITH
 - Of the countries with the top 10 gnp, which has the smallest population? (HINT: Canada)
@@ -270,7 +271,6 @@ Save your queries in a file if you want to keep them for posterity.
 
 #### Aggregate Functions: GROUP BY
 - Which region has the highest average gnp? (HINT: North America)
-- Who is the most influential head of state measured by population? (HINT: Jiang Zemin)
 - Who is the most influential head of state measured by surface area? (HINT: Elisabeth II)
 - What is the average life expectancy for all continents?
 - What are the most common forms of government? (HINT: use `count(*)`)
