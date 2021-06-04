@@ -224,7 +224,7 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 - Each route will point to a method on a controller file
 - The controller method will ultimately do the work you require and send the appropriate view response
 
-## Recommendations Challenge
+## Challenges
 
 - As a user, I can see a landing page at 'localhost:3000' that has a title of the application and the names of the development team.
 - As a user on the landing page, I can see a list of the team's top 10. (Could be top 10 restaurants, activities, beaches, doughnut shoppes, movies, etc.)
