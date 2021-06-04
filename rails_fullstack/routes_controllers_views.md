@@ -147,15 +147,6 @@ Rails.application.routes.draw do
 end
 ```
 
-### Controller Challenges
-For each section below: generate a new controller, methods to reach, and routes.
-
-### Joke
-- As a user, I can go to the url 'localhost:3000/' and see a welcome message as well as you and your partner's names.
-- As a user, I can go to the url 'localhost:3000/question' and see the set-up for a joke.
-- As a user, I can go to the url 'localhost:3000/answer' and see the punchline to the joke.
-
-
 ### The View
 
 So far our routes and controllers are only returning a basic string from the controller method. But, we probably want to make more complex views.
