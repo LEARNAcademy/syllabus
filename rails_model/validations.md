@@ -4,7 +4,7 @@
 The power of creating a full-stack application is that we can store and retrieve data from a database. But data needs to be useful and meaningful. Validations are used to ensure that only clean and valid data is saved into the database. While there are lots of ways to validate data, this section is looking at model validations. When creating model validations, we need to ensure they are working as designed. This can be done with models specs. Implementing a TDD workflow when validating a database will ensure only useful and meaningful data is stored. It also sets up a form of documentation in our app that will tell us a great deal about how the model is intended to function.
 
 #### Previous Lecture (1hr 19min)
-[![YouTube](http://img.youtube.com/vi/Aq0vSPxvDE4.jpg)](https://www.youtube.com/watch?v=Aq0vSPxvDE4)
+[![YouTube](http://img.youtube.com/vi/Aq0vSPxvDE4/0.jpg)](https://www.youtube.com/watch?v=Aq0vSPxvDE4)
 
 #### Learning Objectives
 - can explain the purpose of model validations
@@ -80,8 +80,6 @@ $ rails db:migrate
 Because we installed the RSpec dependencies prior to making the model, we got a directory called `spec` with a folder called `model` and files for our tests.
 
 <img src="./assets/model-spec.png" height="400px" alt="model spec file tree"  />
-
-Image: Rails file tree with spec folder
 
 Inside this file is some boilerplate code.
 
