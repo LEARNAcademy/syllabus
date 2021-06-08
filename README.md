@@ -100,7 +100,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 
 ## Unit Six: Ruby on Rails
-1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
+1. [ Rails Routes, Controllers, and Views ](./rails_fullstack/routes_controllers_views.md)
 1. [ Rails Parameters ](./rails_fullstack/params.md)
 1. [ Rails RESTful Routes and CRUD Actions ](./rails_fullstack/restful_routes_crud.md)
 1. [ Full-stack Rails ](./rails_fullstack/fullstack.md)
