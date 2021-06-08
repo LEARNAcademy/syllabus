@@ -92,10 +92,7 @@ Rails is full stack framework built into the Ruby programming language. Here you
 1. [ Active Record Introduction ](./rails_model/active_record_intro.md)
 1. [ Active Record Migrations ](./rails_model/migrations.md)
 1. [ Active Record Associations ](./rails_model/associations.md)
-1. [ Active Record Validations ](./rails_model/validations.md)
-1. [ Rails Models Specs ](./rails_model/model_specs.md)
-1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
-1. [ Rails Parameters ](./rails_fullstack/params.md)
+1. [ Active Record Validations and Models Specs ](./rails_model/validations.md)
 
 #### Additional Topics:
 - [ Rails Database Seeds ](./rails_model/seeds.md)
@@ -103,12 +100,13 @@ Rails is full stack framework built into the Ruby programming language. Here you
 
 
 ## Unit Six: Ruby on Rails
+1. [ Rails Routes, Controllers and Views ](./rails_fullstack/routes_controllers_views.md)
+1. [ Rails Parameters ](./rails_fullstack/params.md)
 1. [ Rails RESTful Routes and CRUD Actions ](./rails_fullstack/restful_routes_crud.md)
 1. [ Full-stack Rails ](./rails_fullstack/fullstack.md)
 1. [ Rails Strong Parameters ](./rails_fullstack/strong_parameters.md)
 1. [ Rails Generate Resource ](./rails_fullstack/generate_resource.md)
 1. [ Wildlife Tracker Challenge ](./rails_fullstack/wildlife_tracker_challenge.md)
-1. [ Consuming External APIs with Fetch ](./external-api/fetch.md)
 
 #### Additional Topics:
 - [ Postman ](./rails_fullstack/postman.md)
@@ -124,6 +122,9 @@ Professional development is dedicated to preparing for your  internship and the 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 Using React and Rails to create an asynchronous full stack application with testing.
 
+### This Is So Fetch
+1. [ Consuming External APIs with Fetch ](./external-api/fetch.md)
+
 ### Cat Tinder Frontend
 1. [ Cat Tinder Introduction, Routing, and Wireframes ](./cat-tinder/frontend/intro.md)
 2. [ Cat Tinder Testing with Jest and Enzyme ](./cat-tinder/frontend/jest-enzyme.md)
@@ -138,7 +139,7 @@ Using React and Rails to create an asynchronous full stack application with test
 9. [ Cat Tinder API Validations ](./cat-tinder/backend/validations.md)
 10. [ Cat Tinder API CORS ](./cat-tinder/backend/api_cors.md)
 
-### Bringing it together!
+### Bringing it Together!
 11. [ Cat Tinder Fetch for Read Functionality ](./cat-tinder/connecting/fetch-read.md)
 12. [ Cat Tinder Fetch for Create Functionality ](./cat-tinder/connecting/fetch-create.md)
 13. [ Cat Tinder Fetch for Update Functionality ](./cat-tinder/connecting/fetch-update.md)

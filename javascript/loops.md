@@ -1,45 +1,51 @@
 # JavaScript Loops
 
-## Video: JavaScript Loops
-[![YouTube](http://img.youtube.com/vi/4PcRcvgIXNk/0.jpg)](https://www.youtube.com/watch?v=4PcRcvgIXNk)
+#### Overview
+Iteration is a very important concept in computer programming. Iteration is the process of executing a block of code over and over again until a condition is met. There are particular data types that are conducive to iterations; particularly data types with length properties such as strings and arrays. For loops are an example of iteration. For loops must define a starting location, a condition to be met that will end the loop, and what executable action will take place during the iteration.
 
-## Overview
-- Looping is the process of executing a block of code over and over again
-- Looping can be performed on an iterable datatype such as a string, or most often an array
-- Loops must define a starting location, a condition to be met that will end the loop, and what executable action will take place on every loop
+#### Previous Lecture (27 min)
+[![YouTube](http://img.youtube.com/vi/VIZpFSwnO_s/0.jpg)](https://www.youtube.com/watch?v=VIZpFSwnO_s)
 
-## Learning Objectives
-- Understanding the anatomy of a for loop
-- Understanding the scope of a for loop
-- Using logic nested in the for loop to produce a unique output from an iterable variable
 
-## Vocabulary
+#### Learning Objectives
+- can define the conditions of a for loop
+- can define the difference between index and value
+- can explain the concept of iteration
+- can create a basic for loop that returns an expected output
+- demonstrates proper use of const, let, and var when creating variables based on an understanding of global and local scope
+- can create a for loop that iterates upon an array to return an expected outcome
+
+#### Vocabulary
+- iteration
 - for loop
 - let
 - i (index)
-- iteration
+- value
 - scope
 - local scope
 - global scope
 
-## Useful Commands
-- control-c will stop an infinite loop
+#### Additional Resources
+- [ W3Schools For Loop ](https://www.w3schools.com/js/js_loop_for.asp)
+- [ W3Schools While Loops ](https://www.w3schools.com/js/js_loop_while.asp)
 
-## Additional Resources
-- <a href="https://www.w3schools.com/js/js_loop_for.asp" target="blank">For</a>
-- <a href="https://www.w3schools.com/js/js_loop_for.asp" target="blank">For/In</a>
-- <a href="https://www.w3schools.com/js/js_loop_while.asp" target="blank">While</a>
-- <a href="https://www.w3schools.com/js/js_loop_while.asp" target="blank">Do/While</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="blank">ForEach()</a>
+#### Process
+- `cd` into the appropriate folder or repository
+- `touch` a file with no spaces and `.js` extension, `javascript-loops.js`
+- Create a new branch
+- Open the folder in a text editor
+- Code!
+- `$ node javascript-intro.js`
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Troubleshooting Tips
+- `control + c` will stop an infinite loop
 
-## For Loop
-The for statement creates a loop that is executed as long as a condition is true. The loop will continue to run as long as the condition is true. It will only stop when the condition becomes false.
+### Iteration
+In development, **iteration** is the process of performing a particular action a certain number of times or until a condition is met. A common form of iteration is called a for loop. A **for loop** defines a variable and increments or decrements the variable on each iteration.
 
+Many computer programs and programming languages use iterations to perform specific tasks, solve problems, and present solutions.  The for statement creates a loop that is executed as long as a condition is true. The loop will continue to run as long as the condition is true. It will only stop when the condition becomes false.
+
+### For Loop
 JavaScript has many types of loops. For now, we are going to focus on breaking down the `for loop`.
 
 This is the most common type of loop you will see used in JavaScript. It gives you the most control over how you are iterating over items by letting you define:

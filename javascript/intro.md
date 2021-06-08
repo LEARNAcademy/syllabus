@@ -48,6 +48,7 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 #### Process
 - `cd` into the appropriate folder or repository
 - `touch` a file with no spaces and `.js` extension, `javascript-intro.js`
+- Create a new branch
 - Open the folder in a text editor
 - Code!
 - `$ node javascript-intro.js`
@@ -334,9 +335,9 @@ Write the code that will log true or false for the following:
 14. Does !3 strictly equal 3?
 15. Does `"LEARN".length` strictly equal 5 AND `"Student".length` strictly equal 7?
 16. Does `"LEARN".length` strictly equal 5 OR `"Student".length` strictly equal 10?
-17. Does "LEARN" contain the subset "RN"?
-18. Does "LEARN" contain the subset "rn"?
-19. Does "LEARN"[0] strictly equal "l"?
+17. Does "LEARN" contain the subset `"RN"`?
+18. Does "LEARN" contain the subset `"rn"`?
+19. Does "LEARN"[0] strictly equal `"l"`?
 20. Modify the code from the previous question to return `true`.
 
 Consider the variables:
@@ -346,10 +347,10 @@ var theAnswer = 42
 ```
 21. Write the code that will log `theAnswer` divided by 2.
 22. Write the code that will log the length of `theQuestion`.
-23. Write the code that will log the index of the character "f" in the `theQuestion`.
+23. Write the code that will log the index of the character `"f"` in the `theQuestion`.
 24. Write the code that will log the concatenation of the two variables.
 25. Write the code that will log "the universe".
-26. Write the code that will log the character "l" from `theQuestion`.
+26. Write the code that will log the character `"l"` from `theQuestion`.
 27. Write the code that will log whether `theQuestion.length` is greater that `theAnswer`.
 
 

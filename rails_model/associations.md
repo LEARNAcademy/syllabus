@@ -211,7 +211,7 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 - Find the total credit extended to the owner with multiple credit cards
 
 
-[ Go to next lesson: Active Record Validations ](./validations.md)
+[ Go to next lesson: Active Record Validations and Models Specs ](./validations.md)
 
 [ Back to Active Record Migrations ](./migrations.md)
 

@@ -1,21 +1,29 @@
 # JavaScript Functions, Loops, and Arrays (Oh My!)
 
-## Video: Putting It All Together
-[![YouTube](http://img.youtube.com/vi/TlAI9_bXobg/0.jpg)](https://www.youtube.com/watch?v=TlAI9_bXobg)
+#### Overview
+Functions are powerful tools that can take any kind of data as an input. Often we need a function to interact with data sets and perform iterations. This section integrates functions, loops, and arrays to create reusable, iterative code machines.
 
-## Overview
-- Functions can utilize arrays, loops, and conditionals in combination to procure a particular outcome
+#### Previous Lecture (42 min)
+[![YouTube](http://img.youtube.com/vi/V6pmC4ylFjk/0.jpg)](https://www.youtube.com/watch?v=V6pmC4ylFjk)
 
-## Learning Objectives
-- Creating a function that takes in an argument and uses loops, array methods, and/or conditionals to return a particular output
-- Creating an empty array within the scope of the function to push particular values into
+#### Learning Objectives
+- can extrapolate that an array can be passed into a function via an argument
+- can create a function that acts on an array using a for loop
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Vocabulary
 
-## Putting It All Together
+#### Process
+- `cd` into the appropriate folder or repository
+- `touch` a file with no spaces and `.js` extension, `javascript-func-loops-arrays.js`
+- Create a new branch
+- Open the folder in a text editor
+- Code!
+- `$ node javascript-func-loops-arrays.js`
+
+#### Troubleshooting Tips
+- Is the file path is correct?
+
+### Putting It All Together
 - Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
 
 ```javascript
@@ -54,9 +62,8 @@ const onlyEven = (array) => {
 console.log(onlyEven(myArr2))
 ```
 
-## Challenges
-
-**DON'T FORGET TO PSEUDO CODE**
+### Challenges
+Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. **DON'T FORGET TO PSEUDO CODE.**
 
 1. Write a function that takes in an array and returns a new array with all numbers multiplied by 3.
 
@@ -123,7 +130,7 @@ console.log(onlyEven(myArr2))
   var testString2 = "boogeyman"
   Expected output --> "e"
 
-### STRETCH Challenges
+**STRETCH Challenges**
 
 1. Palindrome: Create a function that takes in a string and determines whether the string is a palindrome (the same word forward and backwards)
 

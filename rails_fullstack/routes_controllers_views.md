@@ -225,6 +225,6 @@ Earlier in our code we created our own landing page so our user won't see the Ra
 
 [ Go to next lesson: Rails Parameters ](./params.md)
 
-[ Back to Active Record Validations ](../rails_model/validations.md)
+[ Back to Active Record Validations and Models Specs ](../rails_model/validations.md)
 
 [ Back to Syllabus ](../README.md#ruby-on-rails)
