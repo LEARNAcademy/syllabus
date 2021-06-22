@@ -1,7 +1,7 @@
 # Active Record Validations and Model Specs
 
 #### Overview
-The power of creating a full-stack application is that we can store and retrieve data from a database. But data needs to be useful and meaningful. Validations are used to ensure that only clean and valid data is saved into the database. While there are lots of ways to validate data, this section is looking at model validations. When creating model validations, we need to ensure they are working as designed. This can be done with models specs. Implementing a TDD workflow when validating a database will ensure only useful and meaningful data is stored. It also sets up a form of documentation in our app that will tell us a great deal about how the model is intended to function.
+The power of creating a full-stack application is that we can store and retrieve data from a database. But data needs to be useful and meaningful. Validations are used to ensure that only clean and valid data is saved into the database. While there are lots of ways to validate data, this section is looking at model validations. When creating model validations, we need to ensure they are working as designed. This can be done with model specs. Implementing a TDD workflow when validating a database will ensure only useful and meaningful data is stored. It also sets up a form of documentation in our app that will tell us a great deal about how the model is intended to function.
 
 #### Previous Lecture (1hr 19min)
 [![YouTube](http://img.youtube.com/vi/Aq0vSPxvDE4/0.jpg)](https://www.youtube.com/watch?v=Aq0vSPxvDE4)
@@ -282,27 +282,32 @@ end
 > contact.errors[:name]  # => ["can't be blank"] array of error messages for name field
 ```
 
-### Challenges
-You have been tasked to set up an Account model for a your company. The application must be secure and tested.
+### Validations Challenges
 
-- As a developer, I need to generate a model called Account that has a username, a password, and an email.
+- Create a Rails application called company_contacts. The app will have a PostgreSQL database.
+- Generate a model called Account that has a username, a password, and an email.
+- All stories should have accompanying model specs.
+
+**Developer Stories**
 - As a developer, I need username, password, and email to be required.
 - As a developer, I need every username to be at least 5 characters long.
 - As a developer, I need each username to be unique.
 - As a developer, I need each password to be at least 6 characters long.
 - As a developer, I need each password to be unique.
 - As a developer, I want my Account model to have many associated Addresses.
-- As a developer, I want Address to have street_number, street_name, city, state, and zip attributes.
+- As a developer, I want Address to have street_number, street_name, city, state, and zip attributes. The street_number and zip should be integers.
 - As a developer, I want to validate the presence of all fields on Address.
 
-### Stretch Challenges
-Implementing [ Custom Validations ](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations):
+**Stretch Challenges**  
 
 - As a developer, I need each Account password to have at least one number.
-- As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account. **Hint**: Read about :scope in the Rails validation docs.
-- As a developer, I want to validate that the Address street_number and zip are numbers. **Hint**: Read about [ Numericality ](https://edgeguides.rubyonrails.org/active_record_validations.html#numericality) in the Rails validation docs.
-- As a developer, I want to see a custom error message that says "Please, input numbers only" if street_number or zip code are not numbers. **Hint**: Read about [ message ](https://edgeguides.rubyonrails.org/active_record_validations.html#message) in the Rails validation docs.
-- As a developer, I want to validate associated addresses on accounts. **Hint**: Read about [ validates_associated ](https://apidock.com/rails/ActiveRecord/Validations/ClassMethods/validates_associated) in the Rails validation docs.
+  - HINT: Read about [ custom validations ](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations) in the Active Record validation docs.
+- As a developer, I want to validate that Address street_number, street_name, zip are unique for within an account.
+  - HINT: Read about [ :scope ](https://guides.rubyonrails.org/active_record_validations.html#uniqueness) in the Active Record validation docs.
+- As a developer, I want to validate that the Address street_number and zip are numbers.
+  - HINT: Read about [ numericality ](https://edgeguides.rubyonrails.org/active_record_validations.html#numericality) in the Active Record validation docs.
+- As a developer, I want to see a custom error message that says "Please, input numbers only" if street_number or zip code are not numbers.
+  - HINT: Read about [ message ](https://edgeguides.rubyonrails.org/active_record_validations.html#message) in the  validation docs.
 
 [ Go to next lesson: Rails Routes, Controllers and Views ](../rails_fullstack/routes_controllers_views.md)
 

@@ -1,34 +1,42 @@
 # Full-stack Rails
 
-## Video: Rails Forms
-[![YouTube](http://img.youtube.com/vi/9UGcF6pnAag/0.jpg)](https://www.youtube.com/watch?v=9UGcF6pnAag)
-
-Additional Video: [ Rails Forms ](https://player.vimeo.com/video/155715320)
-
-## Overview
+#### Overview
 - We will create a full-stack rails application that allows the user to retrieve information from the database as well as add content to the database.
+- As part of managing parameters in Rails there is a feature known as "strong parameters"
+- Strong parameters (or "strong params") are a security feature of Rails
+- Strong params manage exactly what goes into creating new object instances and helps us keep unwanted information -- usually from malicious hackers -- out of the database
 
-## Learning Objectives
-- Mapping CRUD actions to HTTP verbs to RESTful routes
-- Following a developer flow to implement routes, controller methods, and views for RESTful routes
+#### Previous Lecture (2hr 3 min)
+[![YouTube](http://img.youtube.com/vi/OSYd4RGU878/0.jpg)](https://www.youtube.com/watch?v=OSYd4RGU878)
 
-## Vocabulary
+#### Learning Objectives
+- can apply database queries to controller methods
+- can follow RESTful naming conventions
+- can create a flow of information from view to database back to view
+- can implement CRUD in a Rails application
+- can create routes with correct parameters for RESTful conventions
+- can apply strong params method to controller
+- can permit appropriate params
+- can apply private keyword to project methods
+
+#### Vocabulary
 - CRUD
 - RESTful routes
 
-## Set Up
+#### Process
+- Create a new Rails app in the appropriate folder: $ `rails new blog_post_challenge -d postgresql -T`
+- $ `cd blog_post_challenge`
+- Create a database: $ `rails db:create`
+- Add the dependencies for RSpec:
+- $ `bundle add rspec-rails`
+- $ `rails generate rspec:install`
+- Generate the model with appropriate columns and data types
+- $ `rails db:migrate`
+- Generate the controller
+- Begin the rails server: `$ rails server`
+- In a browser navigate to: `http://localhost:3000`
 
-#### Creating a new Rails app:
-```
-$ rails new exercise_app -d postgresql -T
-$ cd exercise_app
-$ rails db:create
-$ rails server
-```
-In a browser navigate to:
-`http://localhost:3000`
-
-### Troubleshooting Tips
+#### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
@@ -181,15 +189,17 @@ These route aliases can be used in links for the view as well as in the controll
 **app/controllers/exercise_controller.rb**
 ```ruby
 def create
-  @exercise = Exercise.create(
-    activity: params[:activity],
-    description: params[:description]
-  )
+  @exercise = Exercise.create(exercise_params)
   if @exercise.valid?
     redirect_to exercises_path
   else
     redirect_to new_exercise_path
   end
+end
+
+private
+def exercise_params
+  params.require(:exercise).permit(:activity, :description)
 end
 ```
 
@@ -207,9 +217,9 @@ This link can take our user to the form to create a new exercise session.
 By following the pattern of RESTful routes, we can start to implement CRUD functionality into a Rails application.
 
 
-## Challenge: Blog Post
+### Challenges
 As a developer, I have been commissioned to create an application where a user can see and create blog posts.
-- As a developer, I can create a blog application.
+- As a developer, I can create a full-stack Rails application.
 - As a developer, my blog post can have a title and content.
 - As a developer, I can add new blog posts directly to my database.
 - As a user, I can see all the blog titles listed on the home page of the application.
@@ -224,6 +234,9 @@ As a developer, I have been commissioned to create an application where a user c
 ### Stretch Challenges
 - As a user, I can delete my blog post.
 - As a user, I can update my blog post.
+- As a developer, I can ensure that all blog posts have titles and content for each post.
+- As a developer, I can ensure that all blog post titles are unique.
+- As a developer, I can ensure that blog post titles are at least 10 characters.
 
 [ Go to next lesson: Rails Strong Parameters ](./strong_parameters.md)
 

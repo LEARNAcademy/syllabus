@@ -37,19 +37,6 @@ $ yarn start
 - create a directory in *src* called *components*
 - create a directory in *src* called *assets*
 
-#### Working in Cloud9
-In the package.json file modify the scripts code to set the default to port 8081
-```  
-"scripts": {
-    "start": "PORT=8081 react-scripts start", //Modified for Cloud 9 Users
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-```
-**Remember**: Be sure to add :8081 to the end of your preview url: `<aws-preview-url>:8081`
-
-
 ## Planning
 Right now we are focused on only the frontend of our application. But to create the View of our application it is important to be thinking ahead to what the API will look like. The backend of our Cat Tinder app will have a model called Cat. Our Cat model will have three attributes: a name, an age, and what the cat enjoys doing.
 

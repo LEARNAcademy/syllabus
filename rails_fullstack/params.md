@@ -1,42 +1,40 @@
 # Rails Parameters
 
-## Video: Rails Params
-[![YouTube](http://img.youtube.com/vi/FrQJX4UoX4k/0.jpg)](https://www.youtube.com/watch?v=FrQJX4UoX4k)
+#### Overview
+URL parameters, also known as params or query strings, are a way to pass in additional information into a controller method to query the database or dynamically modify the view.
 
+#### Previous Lecture (1hr 19min)
+[![YouTube](http://img.youtube.com/vi/Ag5FCQCiXz0/0.jpg)](https://www.youtube.com/watch?v=Ag5FCQCiXz0)
 
-## Overview
-- Parameters (params) are how your Rails server receives information from the user to dynamically modify the view
-- Params store information in the url
+#### Learning Objectives
+- can modify a route to expect one or more parameters
+- can identify the data type of parameters
+- can recognize parameters as a hash
+- can extract values from params in the controller
 
-## Learning Objectives
-- Modifying Rails routes to include parameters
-- Understanding the functionality of a parameter
-
-## Vocabulary
+#### Vocabulary
 - params
 - instance variable
 
-#### Creating a new Rails app:
-```
-$ rails new myapp -d postgresql -T
-$ cd myapp
-$ rails db:create
-$ rails server
-```
+#### Process
+- Create a new Rails app in the appropriate folder: $ `rails new params -d postgresql -T`
+- $ `cd params`
+- Create a database: $ `rails db:create`
+- Begin the rails server: `$ rails server`
+- In a browser navigate to: `http://localhost:3000`
 
-In a browser navigate to:
-`http://localhost:3000`
-or
-`127.0.0.1:3000`
-
-### Troubleshooting Tips
+#### Troubleshooting Tips
 - Did you create your database?
-- Did you migrate?
+- Are your view files in the correct folder?
 - Errors? Always look at the first error in the list.
 
 ### Controller with Params
 
 Let's start with creating a controller called `main` and method called greeting.
+
+```
+$ rails g controller Main
+```
 
 **main_controller.rb**:
 
@@ -66,7 +64,6 @@ class MainController < ApplicationController
   def greeting
     @name = params[:name]
     # the instance variable is storing the information that will be passed as a param
-    render 'greeting.html.erb'
   end
 
 end
@@ -144,13 +141,17 @@ Number is: <%= @result_string %>
 For more see <a href="http://api.rubyonrails.org/classes/ActionController/Parameters.html" target="blank">here</a>
 
 
-## Challenges
+### Params Challenges
 
-- As a user, I can visit a page that takes a number and displays that number cubed
-- As a user, I can visit a page that takes 2 numbers and displays whether or not the first number is evenly divisible by the second
-- As a user, I can visit a page that takes in a string and displays how many characters are in the string
-- As a user, I can visit a page that takes a string and displays whether it is a palindrome
-- As a user, I can visit a page that takes a noun, verb, adjective, adverb, and  uses them to display a short silly story
+- Create a Rails application called rails_params. The app will have a PostgreSQL database.
+- Generate a controller called Main.
+
+**User Stories**
+- As a user, I can visit a page called cubed that takes a number as a param and displays that number cubed.
+- As a user, I can visit a page called evenly that takes two numbers and displays whether or not the first number is evenly divisible by the second.
+- As a user, I can visit a page called length that takes in a string and displays how many characters are in the string.
+- As a user, I can visit a page called palindrome that takes a string and displays whether it is a palindrome (the same word read forward and backward).
+- As a user, I can visit a page called madlib that takes params of a noun, verb, adjective, adverb, and displays a short silly story.
 
 [ Go to next lesson: Rails RESTful Routes and CRUD Actions ](../rails_fullstack/restful_routes_crud.md)
 

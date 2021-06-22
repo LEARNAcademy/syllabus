@@ -7,7 +7,7 @@ A **wireframe** of a web application is a simplification of the view to illustra
 * How to navigate the page or the site
 
 Some wireframes look like they were drawn with a crayon by a three year old on the back of a napkin; these are called low-fidelity wireframes.
-The point is to only create a visual guide and not get into to many details. As long as the idea you are trying to get across is clear and understandable, its a successful wireframe.  You can use a whiteboard, paper, or whatever is convenient.
+The point is to only create a visual guide and not get into too many details. As long as the idea you are trying to get across is clear and understandable, it's a successful wireframe.  You can use a whiteboard, paper, or whatever is convenient.
 
 There are online tools to make wireframing as easy as possible, and shareable as well.
 

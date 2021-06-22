@@ -78,7 +78,7 @@ Create a route so the React component will be rendered in a Rails view.
 **config/routes.rb**
 ```ruby
  Rails.application.routes.draw do
-   root to: "home#index"
+   root "home#index"
  end
 ```
 

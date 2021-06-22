@@ -1,28 +1,9 @@
-# Rails Strong Parameters
 
-## Video: Validations and Strong Params
-[![YouTube](http://img.youtube.com/vi/yh8nVSihMyM/0.jpg)](https://www.youtube.com/watch?v=yh8nVSihMyM)
 
 ## Overview
-- As part of managing parameters in Rails there is a feature known as "strong parameters"
-- Strong parameters (or "strong params") are a security feature of Rails
-- Strong params manage exactly what goes into creating new object instances and helps us keep unwanted information -- usually from malicious hackers -- out of the database
 
-## Learning Objectives
-- Adding strong params to the `create` controller method
-- Implementing the keyword "private" in the controller
 
-## Set Up
 
-#### Creating a new Rails app:
-```
-$ rails new blog -d postgresql -T
-$ cd blog
-$ rails db:create
-$ rails server
-```
-In a browser navigate to:
-`http://localhost:3000`
 
 ## Strong Params
 Along with validation, strong params provide control over over what information is being allowed into a database. Strong params can dictate what attributes can be created and updated by setting restrictions on the controller methods.
@@ -100,30 +81,3 @@ Unpermitted parameter: comments
 ```
 
 We can see all of the parameters being sent in, but our controller recognized "comments" as an unpermitted parameter and won't save it to the database. If we update our method:
-
-**controllers/blog_posts_controller.rb**
-```ruby
-def blog_post_params
-  params.require(:blog_post).permit(:title, :content, :comments)
-end
-```
-
-Now the entire BlogPost, comments and all, will successfully be saved.
-
-## Blog Post Challenge, cont.
-Expand on the Blog Post challenge to add strong params and validations.
-
-- As a developer, I can ensure that my create method will only allow the attributes I expect.
-- As a developer, I can ensure that all blog posts have titles and content for each post.
-- As a developer, I can ensure that all blog post titles are unique.
-- As a developer, I can ensure that blog post titles are at least 10 characters.
-
-### Stretch Challenges
-- As a developer, I can ensure that my edit method will only allow the attributes I expect.
-
-
-[ Go to next lesson: Rails Generate Resource ](./generate_resource.md)
-
-[ Back to Full-stack Rails ](./fullstack.md)
-
-[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)

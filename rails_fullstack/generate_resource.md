@@ -23,8 +23,10 @@
 
 #### Creating a new Rails app:
 ```
-$ rails new guitar -d postgresql -T
-$ cd guitar
+$ rails new guitar_app -d postgresql -T
+$ cd guitar_app
+$ bundle add rspec-rails
+$ rails generate rspec:install
 $ rails db:create
 $ rails server
 ```
@@ -64,7 +66,7 @@ There's a lot that's output to the screen but lets focus on this section:
 What we see is that Rails generated all the routes required for us to build out the CRUD functionality for our guitars. All we really need to do is tell our controller what we want it do for each request.
 
 ## Disable Authenticity Token
-For static page Rails applications, a check is made to assure that forms submitted to the controller originate from the same website. In most single page applications that consume an API, we don't utilize this feature, and need to disable it.  Add the following to the `app/controllers/application_controller.rb`
+For static page Rails applications, a check is made to assure that forms submitted to the controller originate from the same website. In most single page applications that consume an API, we don't utilize this feature, and need to disable it. Add the following to the `app/controllers/application_controller.rb`
 
 ```ruby
 skip_before_action :verify_authenticity_token
@@ -80,8 +82,8 @@ From looking at my `rails routes` output I can see that I need to create an `ind
 class GuitarsController < ApplicationController
 
   def index
-      @guitars = Guitar.all
-      render json: @guitars
+    guitars = Guitar.all
+    render json: guitars
   end
 
 end
@@ -100,7 +102,17 @@ Since my guitar model is set up though, I can hop into the `rails console` and a
 Now when I visit I should see something like this:
 
 ```
-[]{"id":1,"strings":7,"manufacturer":"Ibanez","model":"RG Premium","color":"Twilight Black","created_at":"2019-08-26T23:41:14.362Z","updated_at":"2019-08-26T23:41:14.362Z"}]
+[
+  {
+    "id": 1,
+    "strings": 7,
+    "manufacturer": "Ibanez",
+    "model": "RG Premium",
+    "color": "Twilight Black",
+    "created_at": "2019-08-26T23:41:14.362Z",
+    "updated_at": "2019-08-26T23:41:14.362Z"
+  }
+]
 ```
 
 ## Show
@@ -121,8 +133,8 @@ class GuitarsController < ApplicationController
   #...index method...
 
   def show
-    @guitar = Guitar.find([params[:id]])
-    render json: @guitar
+    guitar = Guitar.find([params[:id]])
+    render json: guitar
   end
 
 end
@@ -139,7 +151,15 @@ Let's hop into the rails console and add another guitar:
 Now `localhost:3000/guitars/2` returns the guitar we just created:
 
 ```json
-{"id":2,"strings":6,"manufacturer":"Fender","model":"Stratocaster","color":"Sunburst","created_at":"2019-08-27T17:40:34.155Z","updated_at":"2019-08-27T17:40:34.155Z"}
+{
+  "id": 2,
+  "strings": 6,
+  "manufacturer": "Fender",
+  "model": "Stratocaster",
+  "color": "Sunburst",
+  "created_at": "2019-08-27T17:40:34.155Z",
+  "updated_at": "2019-08-27T17:40:34.155Z"
+}
 ```
 
 Additionally, '`/guitars`', will show all the guitars in the database.
@@ -158,11 +178,11 @@ class GuitarsController < ApplicationController
   #...index/show methods...
 
   def create
-    @guitar = Guitar.create(guitar_params)
-    if @guitar.valid?
-      render json: @guitar
+    guitar = Guitar.create(guitar_params)
+    if guitar.valid?
+      render json: guitar
     else
-      render json: @guitar.errors
+      render json: guitar.errors
     end
   end
 
@@ -194,11 +214,11 @@ We'll add a destroy method to our `guitars_controller.rb`:
 
 ```ruby
 def destroy
-  @guitar = Guitar.find(params[:id])
-  if @guitar.destroy
-    render json: @guitar
+  guitar = Guitar.find(params[:id])
+  if guitar.destroy
+    render json: guitar
   else
-    render json: @guitar.errors
+    render json: guitar.errors
   end
 end
 ```

@@ -40,7 +40,7 @@ Now we need to make sure we route to the appropriate file for our views.
 **config/routes.rb**
 ```ruby
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root 'home#index'
 end
 ```
 
@@ -147,7 +147,7 @@ The Rails Router has a convenient feature that we can use to achieve this separa
 ```ruby
 Rails.application.routes.draw do
   get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
-  root to: 'home#index'
+  root 'home#index'
 end
 ```
 Notice the "constraints" section. This states that all HTML traffic goes to "home#index" our React app.

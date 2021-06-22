@@ -4,14 +4,14 @@
 
 Git is a free, open-sourced version control system widely used in the programming world. It is a very powerful tool used for sharing and working on code and allows for many people to contribute to the same code base. Git was created in 2005 by Linus Torvalds, the creator of Linux, to track changes in source code. Git is accessed primarily through the command line.
 
-History of the name git according to Linus is quite funny. 'Git' is British slang for pig headed or argumentative. This will feel very appropriate at moments when interacting with git. Torvolds says, while 'git' was a random three-letter combination that is pronounceable, and not actually used by any common UNIX command, it can change meaning, depending on your mood: <br />
+History of the name git according to Linus is quite funny. 'Git' is British slang for pig headed or argumentative. This will feel very appropriate at moments when interacting with git. Torvolds says, while 'git' was a random three-letter combination that is pronounceable, and not actually used by any common UNIX command, it can change meaning, depending on your mood:  
 
-Global Information Tracker: if you're in a good mood, and it actually works for you. Angels sing and light suddenly fills the room <br />
+Global Information Tracker: if you're in a good mood, and it actually works for you. Angels sing and light suddenly fills the room  
 Goddamn Idiotic Truckload of sh*t: when it breaks
 
 ## Setting up Git
 
-Instructions for Mac OSX (initial configuration required for interacting with GitHub over HTTPS via command line): 
+Instructions for Mac OSX (initial configuration required for interacting with GitHub over HTTPS via command line):
 - Install Git: `$ brew install git`
 - Verify Git version using: `$ git --version`
   - Version 2.31.1 is required for using Personal Access Tokens for GitHub Authentication
@@ -27,9 +27,9 @@ Instructions for Mac OSX (initial configuration required for interacting with Gi
   - Configure the credential helper using: `$ git config --global credential.helper osxkeychain`
 - Verify all recent Git configurations are correct:
   - Using `$ git config -l`, you should see a list of items  similar the following:
-  ``` 
+  ```
   credential.helper=osxkeychain
-  user.name=Mona Lisa 
+  user.name=Mona Lisa
   user.email=email@example.com
   ```
 - Create a Personal Access Token (PAT)
@@ -37,7 +37,7 @@ Instructions for Mac OSX (initial configuration required for interacting with Gi
   - Please read through steps before performing the steps for creating a PAT here and reference the following suggestions: [Creating a GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
   - For Step 6: You can name this whatever you like, something generic like `LEARN GitHub` would suffice
   - For Step 7: Select the following scopes: `repo`, `admin:org`, `notifications`, `user`
-  - For Step 9: 
+  - For Step 9:
     - **DO NOT NAVIGATE AWAY FROM PAGE UNTIL YOU HAVE COPIED THE TOKEN AND PASTED IT SOMEWHERE IN A SAFE PLACE**
     - If you have a password manager, there may be a place to store your token there.
     - If you do not have a password or token manager, paste the token in a txt file and once it is stored in Keychain Access, the file may be deleted.
@@ -49,11 +49,11 @@ Instructions for Mac OSX (initial configuration required for interacting with Gi
   ```
     $ git clone https://github.com/username/repo.git
     Username: your_username
-    Password: your_token 
+    Password: your_token
   ```
  - Verify that the token was stored in Keychain so that you aren't constantly prompted with authentication
   - Follow only Steps 1 through 3 on this page: [Updating Credentials](https://docs.github.com/en/github/getting-started-with-github/updating-credentials-from-the-macos-keychain)
-  
+
 Instructions for windows: <br />
 https://git-scm.com/download/win
 

@@ -143,6 +143,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder API Validations ](./validations.md)
 
-[ Back to Cat Tinder API Seeds ](./seeds.md)
+[ Back to Cat Tinder API CORS ](.api_cors.md)
 
 [ Back to Syllabus ](../../README.md#cat-tinder-backend)

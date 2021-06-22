@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   resources :apartments
   devise_for :users
   get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
-  root to: 'home#index'
+  root 'home#index'
 end
 ```
 This route directs all HTML traffic to the 'home#index' route, but ignores non HTML traffic, like our API requests. That is perfect to interact with the React router.

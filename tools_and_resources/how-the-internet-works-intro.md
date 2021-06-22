@@ -49,12 +49,6 @@ The basic actions a website should be able to do:
 
 HTTP transfers info as strings
 
-### CURL
-"See" URL (Uniform Resource Locater)
-In terminal type `curl http://www.google.com`, the response is all the HTML and CSS needed to build the page
-
-### Ping
-In terminal type `ping 127.0.0.1`(home) or `ping 8.8.8.8` for google.
 
 ### API
 Application Programs Interface, the process of getting data from a website that is returned in JSON

@@ -74,6 +74,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Cat Tinder Fetch for Create Functionality ](./fetch-create.md)
 
-[ Back to Cat Tinder API CORS ](../backend/api_cors.md)
+[ Back to Cat Tinder API Validations ](../backend/validations.md)
 
 [ Back to Syllabus ](../../README.md#bringing-it-together)
