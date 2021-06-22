@@ -52,7 +52,6 @@ And now we can incorporate the Reactstrap components into our mapped array and s
 
 **src/pages/CatIndex.js**
 ```javascript
-<Header />
 <h2>Meet the Cats!</h2>
 <br />
   <Col sm="6">
@@ -66,7 +65,6 @@ And now we can incorporate the Reactstrap components into our mapped array and s
       )
     })}
   </Col>
-<Footer />
 ```
 
 ## Cat Show Component Routing
@@ -91,11 +89,7 @@ Wrapping this functionality into the show route will let us have access to the c
   render={ (props) => {
     let id = props.match.params.id
     let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-    return (
-      <CatShow
-        cat={ cat }
-      />
-    )
+    return <CatShow cat={ cat } />
   }}
 />
 ```
@@ -107,11 +101,9 @@ Now we can console.log the variable `cat` and see the single cat object.
 render(){
     console.log(this.props.cat)
     return(
-      <React.Fragment>
-        <Header />
+      <>
         <h2>One Cat</h2>
-        <Footer />
-      </React.Fragment>
+      </>
     )
   }
 ```
@@ -121,7 +113,7 @@ Next we can add Reactstrap and the proper imports to create a nice page for each
 
 **src/pages/CatShow.js**
 ```javascript
-<Col sm="6" id="show-body">
+<Col sm="6" className="show-body">
   <Card body >
     <CardTitle>Hi, my name is { this.props.cat.name }!</CardTitle>
     <CardText>I am { this.props.cat.age } years old. I enjoy { this.props.cat.enjoys }.</CardText>
@@ -135,9 +127,7 @@ Now that our pages are working we need to create the flow that will allow our us
 We already have a route for the show page, we just need to add the appropriate link. We can use [ NavLink from React-router ](https://reactrouter.com/web/api/NavLink) to turn the cat names into links connected to that particular cat id.
 
 ```javascript
-<NavLink
-  to={`/catshow/${cat.id}`}
->
+<NavLink to={`/catshow/${cat.id}`}>
   { cat.name }
 </NavLink>
 ```
