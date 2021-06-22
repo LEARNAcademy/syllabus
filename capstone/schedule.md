@@ -3,7 +3,7 @@
 ### Week 8: Ideation
 **Planning is critical to the success of your project.** Proper planning can help avoid wasting time and ensure your team is on the same page.
 
-This week you will get your group assignments for the Capstone project and come up with an **idea**. We recommend creating a shared gmail address that can be used for creating group accounts. Create a Google doc where everyone can offer ideas during the brainstorming process.
+This week you will get your group assignments for the Capstone project and start doing the prework for the application. We recommend creating a shared gmail address that can be used for creating group accounts. Create a Google doc where everyone can offer ideas during the brainstorming process.
 
 ### Week 9: Elevator Pitch, Wireframes, DB Schema
 This week you will get together with your group periodically for planning sessions. During these sessions, you will come up with an **elevator pitch** for your project. The pitch should succinctly explain your project's purpose and functionality.
@@ -25,7 +25,9 @@ Each team should define a schedule and hold each other accountable to stick with
 
 9:00 - Check in with the class
 
-9:15 - Check in with your group and discuss the plan for the day
+9:15 - Morning Standup
+
+9:30 - Check in with your group and discuss the plan for the day
 - What story is each person working on?
 - What is the goal for the day?
 - What story / branch are you currently working on?
@@ -36,17 +38,15 @@ Each team should define a schedule and hold each other accountable to stick with
 
 1:00 - Coding
 
-4:30 - Check out with your group
+4:15 - Wrap up with your group
 - Reflect on the progress you made throughout the day
 - Move any cards completed and discuss the next steps
 - Surface any blockers
 - Discuss actions items for tomorrow
 
+4:30 - Afternoon Standup
+
 4:45 - Check out with the class
-
-**Client Check-in**  
-A client check-in is an opportunity for the development team to share their progress with the client (or an instructor in our case). It is also a time to discuss any scoping issues or time constraints that may have surfaced.
-
 
 **MVP Complete and Retro**  
 By the end of the day, you should have your MVP complete. This is the end of your first sprint.
@@ -58,8 +58,6 @@ The end of your sprint is an opportunity to reflect on the experience with a **r
 **Sprint Planning**  
 Now that your group has completed your basic functionality, it is time to break into the icebox. The icebox is where all the extra challenges and specialized features live. Discuss with your group which features are most import to your application and to your learning. These features will define your goals for the second sprint.
 
-**Client Check-in**  
-A client check-in is an opportunity for the development team to share their progress with the client (or an instructor in our case). It is also a time to discuss any scoping issues or time constraints that may have surfaced.
 
 **Friday**  
 Your group will make the final push to Heroku and celebrate a project well done!

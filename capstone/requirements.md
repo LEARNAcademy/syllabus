@@ -1,16 +1,17 @@
 # Capstone Requirements
 
 ### Project Requirements
-- React inside of Rails
+- React in Rails application
+- User authentication (register, login, logout)
+- Minimum of two database tables (one will be User)
 - Minimum of one external API
-  - Google Maps - https://github.com/LEARNAcademy/google-map-react
-  - Yelp Fusion API - https://www.yelp.com/fusion
-  - Eventbrite - https://www.eventbrite.com/platform/api
-  - Leaflet - https://leafletjs.com/
+  - [ Spotify ](https://developer.spotify.com/documentation/web-api/)
+  - [ Yelp Fusion ](https://www.yelp.com/fusion)
+  - [ Eventbrite ](https://www.eventbrite.com/platform/api)
+  - [ Weather Information ](https://weatherstack.com/documentation)
+  - [ Fun Translations ](https://funtranslations.com/api/)
   - OR your choice
-- Authentication (register, login, logout)
-- Minimum of 2 database tables
-- Testing - at least 60% code coverage
+- Testing - 60% code coverage
 - Deployed to Heroku
 - A well written README (with link to live application)
 - Team name
@@ -19,23 +20,13 @@
 ### Project Stretch Goals
 - Responsive Design (include a phone view for example)
 - Accessible design features
-- Higher test coverage
-- Adding Google analytics
 - Continuous Integration
-
-### Additional Technologies
-- Gmail account / Google docs
-- New GitHub organization for your team
-- Slack channel - invite all instructors and admin staff
-- Heroku Account
-- Trello or similar project management board
 
 ### Things to Think About
 - Step out of your comfort zone
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
 - Organization and clear communication - make sure everyone is on the same page
-- Setting Clear Goals
 - Make sure everyone feels included
 
 
