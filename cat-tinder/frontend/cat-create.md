@@ -110,7 +110,7 @@ This method needs to be passed to our CatNew component. This will require a refa
 ```javascript
 <Route
   path="/catnew"
-  render={ (props) => <CatNew createNewCat={ this.createNewCat }/> }
+  render={ (props) => <CatNew createNewCat={ this.createNewCat } /> }
 />
 ```
 
@@ -118,9 +118,7 @@ Once the method is passed down to the CatNew component, we can wrap it in a meth
 
 **src/pages/CatNew.js**
 ```javascript
-handleSubmit = (e) => {
-  // keeps react from refreshing the page unnecessarily
-  e.preventDefault()
+handleSubmit = () => {
   this.props.createNewCat(this.state.form)
 }
 ```
