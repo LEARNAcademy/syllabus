@@ -73,8 +73,8 @@ Here is where we see the first big difference between the action that creates a 
 
 **src/App.js**
 ```javascript
-updateCat = (cat, id) => {
-  console.log("cat:", cat)
+updateCat = (editcat, id) => {
+  console.log("cat:", editcat)
   console.log("id:", id)
 }
 ```
@@ -85,28 +85,18 @@ The route for CatEdit will look a little bit like CatShow and CatNew all mixed i
 
 **src/App.js**
 ```javascript
-<Route
-  exact path={"/catedit/:id"}
-  render={ (props) => {
+<Route path={"/catedit/:id"} render={ (props) => {
     let id = props.match.params.id
-    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-    return(
-      <CatEdit
-        updateCat={ this.updateCat }
-        cat={ cat }
-      />
-    )
-  }}
-/>
+    let cat = this.state.cats.find(cat => cat.id === +id)
+    return <CatEdit updateCat={ this.updateCat } cat={ cat } />
+}} />
 ```
 
 Once the `updateCat` method is passed down to the CatEdit component, we can wrap it in a method that will pass our form object and the cat id.
 
 **src/pages/CatEdit.js**
 ```javascript
-handleSubmit = (e) => {
-  // keeps react from refreshing the page unnecessarily
-  e.preventDefault()
+handleSubmit = () => {
   // a function call being passed from App.js
   this.props.updateCat(this.state.form, this.props.cat.id)
 }
@@ -118,7 +108,6 @@ We need to call the method `onSubmit`. To accomplish this, we can add a button f
 ```javascript
 <Button
   name="submit"
-  color="secondary"
   onClick={ this.handleSubmit }
 >
   Edit Cat Profile
@@ -132,12 +121,8 @@ How we arrive at the edit page is important, since we need to have the id of our
 
 **src/pages/CatShow.js**
 ```javascript
-<NavLink
-  to={`/catedit/${this.props.cat.id}`}
->
-  <Button color="secondary">
-    Edit Cat Profile
-  </Button>
+<NavLink to={`/catedit/${this.props.cat.id}`>
+  <Button>Edit Cat Profile</Button>
 </NavLink>
 ```
 
@@ -152,14 +137,13 @@ this.state = {
     age: "",
     enjoys: ""
   },
-  success: false
+  submitted: false
 }
 
-handleSubmit = (e) => {
-  e.preventDefault()
+handleSubmit = () => {
   this.props.updateCat(this.state.form, this.props.cat.id)
   // update success to true
-  this.setState({ success: true })
+  this.setState({ submitted: true })
 }
 ```
 
@@ -167,7 +151,7 @@ When the form is submitted, success will be updated to true and we can use condi
 
 **src/pages/CatEdit.js**
 ```javascript
-{ this.state.success && <Redirect to={ `/catshow/${this.props.cat.id}` }/> }
+{ this.state.submitted && <Redirect to={ `/catshow/${this.props.cat.id}` } /> }
 ```
 
 **Remember**, we won't see updates made to the cat just yet. But we can see the form and routing functionality working and see our cat object logged by `App.js` which puts us in a great place for now.
