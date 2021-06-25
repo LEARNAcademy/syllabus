@@ -68,7 +68,7 @@ Next, we need to generate a controller so that we can route the React component 
 
 **app/views/home/index.html.erb**
 ```javascript
- <%= react_component "App" %>
+ <%= react_component 'App' %>
 ```
 Now we need to make sure we route to the appropriate file for our views.
 
@@ -78,7 +78,7 @@ Create a route so the React component will be rendered in a Rails view.
 **config/routes.rb**
 ```ruby
  Rails.application.routes.draw do
-   root "home#index"
+   root 'home#index'
  end
 ```
 
