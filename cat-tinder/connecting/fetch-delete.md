@@ -20,9 +20,7 @@ The button to delete a cat can look a lot like the button that will navigate to 
 
 **src/pages/CatShow.js**
 ```javascript
-<NavLink
-  to="/catindex"
->
+<NavLink to="/catindex">
   <Button>
     Delete Cat Profile
   </Button>
