@@ -25,7 +25,7 @@ Our fetch call will return a Promise. If the Promise is resolved successfully we
 **/src/App.js**
 ```javascript
 updateCat = (cat, id) => {
-  return fetch(`http://localhost:3000/cats/${id}`, {
+  fetch(`http://localhost:3000/cats/${id}`, {
     // converting an object to a string
     body: JSON.stringify(cat),
     // specify the info being sent in JSON and the info returning should be JSON
