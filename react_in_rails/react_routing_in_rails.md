@@ -32,7 +32,7 @@ Add a file in *app/views/home* called *index.html.erb* to render the React compo
 
 **app/views/home/index.html.erb**
 ```javascript
-<%= react_component "App" %>
+<%= react_component 'App' %>
 ```
 
 Now we need to make sure we route to the appropriate file for our views.
@@ -118,11 +118,11 @@ import {
   BrowserRouter as  Router,
   Route,
   Switch
-} from 'react-router-dom'
+} from "react-router-dom"
 
-import AboutUs from './pages/AboutUs'
-import LearnMore from './pages/LearnMore'
-import Home from './pages/Home'
+import AboutUs from "./pages/AboutUs"
+import LearnMore from "./pages/LearnMore"
+import Home from "./pages/Home"
 ```
 
 Add the basic routes to allow for navigation.
@@ -164,11 +164,11 @@ import {
   NavLink,
   Route,
   Switch
-} from 'react-router-dom'
-import { Nav, NavItem } from 'reactstrap'
-import AboutUs from './pages/AboutUs'
-import LearnMore from './pages/LearnMore'
-import Home from './pages/Home'
+} from "react-router-dom"
+import { Nav, NavItem } from 'reactstrap"
+import AboutUs from "./pages/AboutUs"
+import LearnMore from "./pages/LearnMore"
+import Home from "./pages/Home"
 
 class App extends React.Component{
   render(){
