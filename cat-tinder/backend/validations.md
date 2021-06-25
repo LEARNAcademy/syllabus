@@ -131,7 +131,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error
 - As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, and what the cat enjoys
 - As a developer, I can add the appropriate request spec that will look for a 422 error if the validations are not met
-- As a developer, I can add the appropriate request validations to ensure the API is sending useful information to the frontend developer
+- As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer
 - As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
 
 [ Go to next lesson: Cat Tinder Fetch for Read Functionality ](../connecting/fetch-read.md)
