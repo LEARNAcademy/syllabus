@@ -32,7 +32,7 @@ The next step is to create a method in `App.js` that will send a request to the 
 **/src/App.js**
 ```javascript
 deleteCat = (id) => {
-  return fetch(`http://localhost:3000/cats/${id}`, {
+  fetch(`http://localhost:3000/cats/${id}`, {
     headers: {
       "Content-Type": "application/json"
     },
