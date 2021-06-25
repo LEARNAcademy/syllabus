@@ -55,9 +55,9 @@ And now we can incorporate the Reactstrap components into our mapped array and s
 <h2>Meet the Cats!</h2>
 <br />
   <Col sm="6">
-    { this.props.cats.map((cat, index) => {
+    { this.props.cats.map(cat => {
       return (
-        <Card body key={ index }>
+        <Card body key={ cat.id }>
           <CardTitle>
             <h4>{ cat.name }</h4>
           </CardTitle>
@@ -79,19 +79,16 @@ let id = props.match.params.id
 Now that we have the id saved as a variable, we can use [ JavaScript's .find() ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method to return the cat object.
 ```javascript
 let id = props.match.params.id
-let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+let cat = this.state.cats.find(cat => cat.id === +id)
 ```
 
 Wrapping this functionality into the show route will let us have access to the cat object by id and pass only the one cat to the CatShow component.
 ```javascript
-<Route
-  exact path={"/catshow/:id"}
-  render={ (props) => {
-    let id = props.match.params.id
-    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+<Route path="/catshow/:id" render={ (props) => {
+  let id = props.match.params.id
+  let cat = this.state.cats.find(cat => cat.id === +id)
     return <CatShow cat={ cat } />
-  }}
-/>
+}} />
 ```
 
 Now we can console.log the variable `cat` and see the single cat object.
@@ -113,8 +110,8 @@ Next we can add Reactstrap and the proper imports to create a nice page for each
 
 **src/pages/CatShow.js**
 ```javascript
-<Col sm="6" className="show-body">
-  <Card body >
+<Col sm="6">
+  <Card body>
     <CardTitle>Hi, my name is { this.props.cat.name }!</CardTitle>
     <CardText>I am { this.props.cat.age } years old. I enjoy { this.props.cat.enjoys }.</CardText>
   </Card>
