@@ -155,8 +155,7 @@ constructor(props){
   }
 }
 
-handleSubmit = (e) => {
-  e.preventDefault()
+handleSubmit = () => {
   this.props.createNewCat(this.state.form)
   this.setState({ success: true })
 }
@@ -172,7 +171,7 @@ import { Redirect } from 'react-router-dom'
 <Footer />
 // JavaScript code at the bottom of the JSX that will redirect when success is true
 { this.state.success && <Redirect to="/catindex" />}
-</React.Fragment>
+</>
 ```
 
 ## Challenge: Cat Create
