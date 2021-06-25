@@ -11,11 +11,6 @@
 - The Rails app will run on `localhost:3000`
 - The React app will run on `localhost:3001`
 
-#### Cloud 9 Users
-Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a Cloud 9 app to the world like we did for Wildlife Tracker with Postman.  
-Start your Rails server: port `8080` for AWS  
-Start your React server: `$ rails s -b 0.0.0.0` for 8081 on AWS
-
 ## Deleting Cats
 Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` method to an onClick event somewhere else in the application.
 
@@ -26,9 +21,9 @@ The button to delete a cat can look a lot like the button that will navigate to 
 **src/pages/CatShow.js**
 ```javascript
 <NavLink
-  to={"/catindex"}
+  to="/catindex"
 >
-  <Button color="secondary">
+  <Button>
     Delete Cat Profile
   </Button>
 </NavLink>
@@ -58,16 +53,11 @@ Now we need to pass the `deleteCat` method through the show route.
 
 **src/pages/CatShow.js**
 ```javascript
-<Route
-  path={"/catshow/:id"}
-  render={ (props) => {
-    let id = props.match.params.id
-    let cat = this.state.cats.find(cat => cat.id === parseInt(id))
-    return (
-      <CatShow cat={ cat } deleteCat={ this.deleteCat }/>
-    )
-  }}
-/>
+<Route path="/catshow/:id" render={ (props) => {
+  let id = props.match.params.id
+  let cat = this.state.cats.find(cat => cat.id === +id)
+  return <CatShow cat={ cat } deleteCat={ this.deleteCat } />
+}} />
 ```
 
 Now that the CatShow component has access to the `deleteCat` method, we can call the method when the button runs and pass in the id of the cat to be deleted.
