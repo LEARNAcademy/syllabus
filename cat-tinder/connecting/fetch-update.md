@@ -11,11 +11,6 @@
 - The Rails app will run on `localhost:3000`
 - The React app will run on `localhost:3001`
 
-#### Cloud 9 Users
-Be sure and review the [instructions](../../Rails-C&V/postman.md) on exposing a Cloud 9 app to the world like we did for Wildlife Tracker with Postman.  
-Start your Rails server: port `8080` for AWS  
-Start your React server: `$ rails s -b 0.0.0.0` for 8081 on AWS
-
 ## Editing Cats
 The frontend is going to send the Rails API information, then Rails will use Active Record to patch information in the database.
 
