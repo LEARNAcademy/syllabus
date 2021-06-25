@@ -87,7 +87,7 @@ Wrapping this functionality into the show route will let us have access to the c
 <Route path="/catshow/:id" render={ (props) => {
   let id = props.match.params.id
   let cat = this.state.cats.find(cat => cat.id === +id)
-    return <CatShow cat={ cat } />
+  return <CatShow cat={ cat } />
 }} />
 ```
 
