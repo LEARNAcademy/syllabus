@@ -48,22 +48,18 @@ We're going to practice Test Driven Development, so let's start with a test. We'
 ```ruby
 require 'rails_helper'
 
-describe "Cats", type: :request do
-  it "gets a list of Cats" do
-    # Create a new cat in the Test Database (this is not the same one as development)
-    Cat.create(name: 'Felix', age: 2, enjoys: 'Walks in the park')
+RSpec.describe "Cats", type: :request do
+  describe "GET /index" do
+    it "gets a list of cats" do
+      Cat.create name: 'Felix', age: 2, enjoys: 'Walks in the park'
 
-    # Make a request to the API
-    get '/cats'
+      # Make a request
+      get '/cats'
 
-    # Convert the response into a Ruby Hash
-    json = JSON.parse(response.body)
-
-    # Assure that we got a successful response
-    expect(response).to have_http_status(:ok)
-
-    # Assure that we got one result back as expected
-    expect(json.length).to eq 1
+      cat = JSON.parse(response.body)
+      expect(response).to have_http_status(200)
+      expect(cat.length).to eq 1
+    end
   end
 end
 ```
@@ -83,6 +79,7 @@ end
 Next we'll tackle the 'create' route.  Let's start with adding a new test:
 
 ```ruby
+describe "POST /create" do
   it "creates a cat" do
     # The params we are going to send with the request
     cat_params = {
@@ -97,14 +94,15 @@ Next we'll tackle the 'create' route.  Let's start with adding a new test:
     post '/cats', params: cat_params
 
     # Assure that we get a success back
-    expect(response).to have_http_status(:ok)
+    expect(response).to have_http_status(200)
 
-    # Look up the cat we expect to be created in the Database
+    # Look up the cat we expect to be created in the db
     cat = Cat.first
 
     # Assure that the created cat has the correct attributes
     expect(cat.name).to eq 'Buster'
   end
+end
 ```
 
 And once again, this fails because we have no code in the controller to make it pass. Good! Adding the controller code for this spec is as follows:
@@ -113,8 +111,6 @@ And once again, this fails because we have no code in the controller to make it 
   def create
     # Create a new cat
     cat = Cat.create(cat_params)
-
-    # respond with our new cat
     render json: cat
   end
 
