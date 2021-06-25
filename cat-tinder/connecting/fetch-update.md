@@ -38,8 +38,9 @@ updateCat = (cat, id) => {
   .then(response => {
     if(response.status === 422){
       alert("Please check your submission.")
+    } else {
+      return response.json()
     }
-    return response.json()
   })
   .then(payload => {
     this.catIndex()
