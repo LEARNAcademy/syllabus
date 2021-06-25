@@ -113,7 +113,7 @@ def create
   if cat.valid?
     render json: cat
    else
-     render json: cat.errors, status: :unprocessable_entity
+     render json: cat.errors, status: 422
    end
 end
 ```
