@@ -1,4 +1,4 @@
-# Cat Tinder Fetch for Edit Functionality
+# Cat Tinder Fetch for Update Functionality
 
 ## Overview
 - It is time to update a cat in our database!
