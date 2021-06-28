@@ -56,6 +56,8 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 #### Troubleshooting Tips
 - Is the file path is correct?
 
+<hr>
+
 ### JavaScript Fundamentals
 **JavaScript** is a dynamic, loosely-typed, scripting programming language. JavaScript allows us to perform logic to evaluate and manipulate data. To perform logic, JavaScript must know what type of data we are currently working with. **Data types** specify what kind of information can be stored and how it can be manipulated within a program. There are two basic categories of data types in JavaScript: primitive and composite. **Primitive data types** are the building blocks of the language that cannot be broken down into any simpler parts. **Composite data types** are collections of other data types.
 
@@ -312,6 +314,7 @@ console.log(greeting.slice(1, 3))
 // output --> "el"
 ```
 
+<hr>
 
 ### Challenges
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.

@@ -25,7 +25,8 @@ Each team should define a schedule and hold each other accountable to stick with
 
 9:00 - Check in with the class
 
-9:15 - Morning Standup
+9:15 - Morning standup with the class
+- Tech lead tells us what the team worked on yesterday, what the team is working on today, and shares any blockers.
 
 9:30 - Check in with your group and discuss the plan for the day
 - What story is each person working on?
@@ -44,7 +45,8 @@ Each team should define a schedule and hold each other accountable to stick with
 - Surface any blockers
 - Discuss actions items for tomorrow
 
-4:30 - Afternoon Standup
+4:30 - Afternoon standup with the class
+- Product manager shares what the team accomplished today and gives a current status report for the state of the application.
 
 4:45 - Check out with the class
 

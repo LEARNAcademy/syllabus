@@ -93,6 +93,6 @@ As a developer, I have been commissioned to create an application where a user c
 
 [ Go to next lesson: Apartment App with React Components ](./devise_and_react_in_rails.md)
 
-[ Back to React Routing IN Rails ](./react_routing_in_rails.md)
+[ Back to React IN Rails ](./into.md)
 
 [ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)

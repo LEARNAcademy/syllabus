@@ -49,6 +49,8 @@ Functions are a fundamental building block in JavaScript and in programming in g
 - Is there a `console.log` on the function invocation?
 - Does the number of arguments match the number of parameters?
 
+<hr>
+
 ### Functions: Little Code Machines
 A **function** is a set of instructions detailing how to do a task. We can use the instructions to execute an action over and over again. Function logic should be contained so that the internal workings of the function should not interact with the rest of the program. This is the idea of **encapsulation**.
 
@@ -250,6 +252,7 @@ console.log(tallEnough(45))
 console.log(tallEnough("yolo"))
 // output --> "error"
 ```
+<hr>
 
 ### Challenges
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. Each solution requires pseudocode. Test your functions with multiple function calls.

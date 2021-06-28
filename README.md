@@ -151,7 +151,6 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 ## Unit Nine: React in Rails and Authentication
 There are many ways to create a full-stack application. In this section we use Ruby on Rails to host React components in a monolithic application. We also introduce Devise, a Ruby gem that gives us the ability to create user login.
 1. [ React IN Rails Introduction ](./react_in_rails/intro.md)
-2. [ React Routing IN Rails ](./react_in_rails/react_routing_in_rails.md)
 2. [ Apartment App Devise Introduction ](./react_in_rails/devise.md)
 2. [ Apartment App Devise with React ](./react_in_rails/devise_and_react_in_rails.md)
 4. [ Apartment App Challenge ](./react_in_rails/apartment_app.md)

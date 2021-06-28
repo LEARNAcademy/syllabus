@@ -36,6 +36,8 @@ Arrays are variables that store collections of data in an ordered list. Having a
 - Code!
 - `$ node javascript-arrays.js`
 
+<hr>
+
 ### Arrays: Collections of Data
 Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an **array**, which is a collection of ordered data. Arrays can contain any type of information as long as it is a data type JavaScript recognizes.
 
@@ -395,6 +397,7 @@ console.log(firstName)
 console.log(secondName)
 // output --> "Debra"
 ```
+<hr>
 
 ### Challenges
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
