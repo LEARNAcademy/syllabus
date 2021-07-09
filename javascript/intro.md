@@ -354,7 +354,7 @@ var theAnswer = 42
 24. Write the code that will log the concatenation of the two variables.
 25. Write the code that will log "the universe".
 26. Write the code that will log the character `"l"` from `theQuestion`.
-27. Write the code that will log whether `theQuestion.length` is greater that `theAnswer`.
+27. Write the code that will log whether `theQuestion.length` is greater than `theAnswer`.
 
 
 [ Go to next lesson: JavaScript Conditionals ](./conditionals.md)
