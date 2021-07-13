@@ -223,6 +223,7 @@ console.log(learnStudents)
 - Alphabetizes the values in an array
 - Can take an optional argument for more advanced sorting actions
 - The output of the method itself is the modified array
+- Can take arguments for numbers 
 
 ```javascript
 var learnStudents = ["Debra", "Jonas", "Joel"]
@@ -232,6 +233,12 @@ console.log(learnStudents.sort())
 
 console.log(learnStudents)
 // output --> ["Debra", "Joel", "Jonas"]
+
+let numbers = [4, 2, 5, 1, 3];
+numbers.sort((a, b) => a - b);
+console.log(numbers);
+
+// [1, 2, 3, 4, 5]
 ```
 
 ### Accessors  
