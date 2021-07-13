@@ -39,10 +39,11 @@ Functions are a fundamental building block in JavaScript and in programming in g
 
 #### Process
 - `cd` into the appropriate folder or repository
+- Create a new branch
 - `touch` a file with no spaces and `.js` extension, `javascript-functions.js`
 - Open the folder in a text editor
 - Code!
-- `$ node javascript-functions.js`
+- $ `node javascript-functions.js`
 
 #### Troubleshooting Tips
 - Does the function have a return?

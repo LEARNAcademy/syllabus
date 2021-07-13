@@ -1,12 +1,12 @@
 # JavaScript Conditionals
 
-## Video: If / Else Statements
-[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=Ee_Phg9Ip-k)
-
-## Overview
-- Decision structures, also called decision trees, conditional statements, or if/else statements, are fundamental to computer programming
+#### Overview
+Decision structures, also called decision trees, conditional statements, or if/else statements, are fundamental to computer programming
 - Conditional statements are a sequence of well-defined instructions that produce a unique output based on the value of the input
 - Conditionals follow a flowchart-like structure
+
+## Video: If / Else Statements
+[![YouTube](http://img.youtube.com/vi/Ee_Phg9Ip-k/0.jpg)](https://www.youtube.com/watch?v=Ee_Phg9Ip-k)
 
 ## Learning Objectives
 - Understanding the syntax of `if/else` statements

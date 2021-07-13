@@ -5,9 +5,12 @@
 - Create a slack channel within the LEARN workspace (add the instructors and mentors)
 - Create a team email address
 - Create a team GitHub Organization (add the instructors and mentors)
+  - Everyone in the organization should have the role of "owner"
 - Create a team Trello Board (add the instructors and mentors)
 - Create a team Heroku account
 - Decide on Developer Roles
+- Add Slack integrations for your repository
+  - `/github subscribe <repo-url>`
 
 ### Week 9
 - Decide on an idea
