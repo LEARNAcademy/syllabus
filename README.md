@@ -1,6 +1,10 @@
 # Syllabus
 
-Welcome to the LEARN Syllabus! This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a Pull Request to fix any errors, expand definitions, or further explain concepts.
+Welcome to the LEARN Syllabus!  
+
+LEARN is a four month, full-time program. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is an internship in a development role. The instructors and the career services manager support the students during internship.
+
+This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a `Pull Request` to fix any errors, expand definitions, or further explain concepts.
 
 ## Resources
 - [ Accessing and Submitting Assessments ](./tools_and_resources/assessments.md)

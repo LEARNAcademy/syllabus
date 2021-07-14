@@ -23,7 +23,7 @@ Functions are powerful tools that can take any kind of data as an input. Often w
 - Is there a `console.log` on the function invocation?
 - Does the number of arguments match the number of parameters?
 
-<hr>
+---
 
 ### Putting It All Together
 As we work to solve more complicated problems with code, we need to add more logic into our functions. In this section, we will explore how arrays and loops can be integrated into functions.
@@ -66,7 +66,7 @@ const onlyEven = (array) => {
 console.log(onlyEven(myArr2))
 ```
 
-<hr>
+---
 
 ### Challenges
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.  
@@ -111,17 +111,7 @@ var indexHighestNumber = [1, 4, 2, 3]
 ```
 
 **STRETCH Challenges**
-1. Create a function that takes in a string and returns a sentence expressing whether the string is a palindrome. A palindrome is the same word spelled forward and backwards.
-
-```javascript
-var isPalindrome1 = "racecar"
-// --> "Yes, racecar is a palindrome."
-
-var isPalindrome2 = "albatross"
-// --> "No, albatross is not a palindrome."
-```
-
-2. Create a function that takes in two arrays and returns one array with no duplicate values.
+1. Create a function that takes in two arrays and returns one array with no duplicate values.
 
 ```javascript
 var arr1 = [3, 7, 10, 5, 4, 3, 3]
@@ -129,14 +119,7 @@ var arr2 = [7, 8, 2, 3, 1, 5, 4]
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
 ```
 
-3. Create a function that takes in an array and returns an array without any false, null, 0 or blank values.
-
-```javascript
-var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
-// --> [58, "abcd", true]
-```
-
-4. Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+2. Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 
 ```javascript
 var arrayLength = 6
@@ -148,7 +131,7 @@ var arrayValue = 11
 // --> [11, 11, 11, 11]
 ```
 
-5. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
+3. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
 
 ```javascript
 var addUp1 = 4

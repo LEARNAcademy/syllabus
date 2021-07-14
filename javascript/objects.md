@@ -29,6 +29,8 @@
 - In terminal, cd into the appropriate folder
 - $ node filename.js
 
+---
+
 ## Object with Data: JSON
 - JSON stands for JavaScript Object Notation
 - Objects are collections of `key:value` pairs
@@ -154,8 +156,9 @@ This may seem like a trivial feature, but object destructuring can save you load
 
 Being comfortable with object destructuring allows you to make quick work of extracting and manipulating object properties.
 
+---
 
-## Challenges
+### Challenges
 
 1. **Consider this variable:**
 

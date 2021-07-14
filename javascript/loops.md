@@ -6,7 +6,6 @@ Iteration is a very important concept in computer programming. Iteration is the 
 #### Previous Lecture (27 min)
 [![YouTube](http://img.youtube.com/vi/VIZpFSwnO_s/0.jpg)](https://www.youtube.com/watch?v=VIZpFSwnO_s)
 
-
 #### Learning Objectives
 - can define the conditions of a for loop
 - can define the difference between index and value
@@ -39,6 +38,8 @@ Iteration is a very important concept in computer programming. Iteration is the 
 
 #### Troubleshooting Tips
 - `control + c` will stop an infinite loop
+
+---
 
 ### Iteration
 In development, **iteration** is the process of performing a particular action a certain number of times or until a condition is met. A common form of iteration is called a for loop. A **for loop** defines a variable and increments or decrements the variable on each iteration.
@@ -128,8 +129,9 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 
 ![scope](./assets/scope.jpg)
 
-## Challenges
+---
 
+### Challenges
 1. Logging values with for loops
 - Write a for loop that logs each number from 1 - 20.
 - Write a for loop that logs the result of each number from 1 - 20 tripled.
