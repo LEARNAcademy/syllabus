@@ -259,12 +259,6 @@ class Vehicle
     @model = model
   end
 
-  def get_vehicle_info
-    @year
-    @make
-    @model
-  end
-
   def show_vehicle_info
     "This is a #{@year} #{@make} #{@model}."
   end
