@@ -78,7 +78,7 @@ A `WHERE` clause is a comparison operator and accepts the following:
 ````sql
 SELECT code, name, population, gnp
 FROM country
- gnp > 1e+6
+WHERE gnp > 1e+6
 ````
 ![Set Result](./assets/querying/set-result.png)
 
