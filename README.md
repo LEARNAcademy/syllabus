@@ -26,8 +26,8 @@ Welcome to LEARN Academy! Here is the information covered during orientations.
 4. [Introduction to Terminal](./tools_and_resources/terminal.md)
 5. [Requirements and Expectations](./orientation/requirements-and-expectations.pdf)
 6. [Career Services Overview](./orientation/career-services-overview.pdf)
-7. [Tech Stack](./orientation/tech-stack.md)
-7. [Slack Overview](./orientation/slack-overview.md)
+7. [Tech Stack](./orientation/tech-stack.pdf)
+7. [Slack Overview](./orientation/slack-overview.pdf)
 8. [Pair Programming](./orientation/pair-programming.pdf)
 9. [HTML and CSS Fundamentals](./orientation/html-css-fundamentals.pdf)
 
@@ -128,10 +128,37 @@ In this section we explore all the Ruby on Rails MVC architecture has to offer. 
 
 
 ## Unit Seven: Professional Development Week
-Professional development is dedicated to preparation for internship and the upcoming career transition. Here we leverage LEARN's career services manager to curate tech resumes, share each student's portfolio, improve online professional presence, develop networking techniques for every personality, practice technical interview skills, and learn about salary negotiations.
-- [Professional Development Week Curriculum](./PD-Week/Curriculum.md)
+Professional development is dedicated to preparation for internship and the upcoming career transition. Here we leverage LEARN's career services manager to curate tech resumes, share each student's portfolio, improve online professional presence, develop networking techniques for every personality, practice technical interview skills, and learn about salary negotiations. All resources are available in the cohort Google drive.
 
+### Journey to Becoming a Developer
+- Life Map Activity
+- Elevator Pitch
+- Transferable Skills
+- Tech Industry Job Outlook
+- Remote Worker Panel
 
+### The Job Search
+- Building a Tech Resume
+- Crafting a Cover Letter
+- Best Practices: Applying to Jobs
+
+### The Interview
+- Salary Negotiations
+- Coding Interviews 101
+- Mock Interviews with ZEAL
+- Portfolio Demos
+- How to Prepare for Interviews
+
+### Building Relationships
+- LinkedIn Building: An Interactive Session
+- Networking for the Introvert
+- Informational Interviews
+- Job Search & Mental Health
+
+### Wrap-up the Week
+- Tech Recruiter Panel
+- One on ones with Career Services Manager
+- Internship Process Overview
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 Here we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concept we've covered so far.
