@@ -4,8 +4,10 @@
 - Create a team name
 - Create a slack channel within the LEARN workspace (add the instructors and mentors)
 - Create a team email address
-- Create a team GitHub Organization (add the instructors and mentors)
+- Create a team GitHub Organization
+  - Add all team members, instructors, and mentors
   - Everyone in the organization should have the role of "owner"
+  - Add an image to your organization
 - Create a team Trello Board (add the instructors and mentors)
 - Create a team Heroku account
 - Decide on Developer Roles
