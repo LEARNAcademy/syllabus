@@ -1,44 +1,55 @@
 # Ruby Introduction
 
-## Overview
-- Ruby is an open source, object-oriented programming language created by Yukihiro "Matz" Matsumoto in the early 1990s
-- Ruby has a reputation for simplicity and a style that is both easy to read and write
-- Ruby is a general-purpose, interpreted, dynamically typed, server-side scripting language
-- Ruby can be embedded into Hypertext Markup Language (HTML)
-- Ruby has many helpful built in methods and great documentation
+#### Overview
+Ruby is an open source, object-oriented programming language created by Yukihiro "Matz" Matsumoto in the early 1990s. Ruby has a reputation for simplicity and a style that is both easy to read and write. Ruby is a general-purpose, interpreted, dynamically-typed, server-side scripting language. Ruby has many helpful built in methods and great documentation.
 
-## Learning Objectives
-- Interacting with data types in Ruby
-- Exploring Ruby syntax
-- Running Ruby in the terminal / irb
-- Exploring Ruby methods
+#### Previous Lecture (52 min)
+[![YouTube](http://img.youtube.com/vi/UinI_s6wwgA/0.jpg)](https://www.youtube.com/watch?v=UinI_s6wwgA)
 
-## Vocabulary
+#### Learning Objectives
+- can access the Interactive Ruby Shell in terminal
+- can define Ruby data types
+- can reproduce the proper syntax of dot notation to execute methods on data
+- can reproduce the syntax required to define a variable
+- can reproduce the syntax required to define an array
+- can determine the proper use of either p, puts, or print depending on a desired outcome
+- can explain the fundamentals of object-oriented programming
+
+#### Vocabulary
+- Interactive Ruby Shell (irb)
 - Object oriented programming
 - snake_case
-- Interactive Ruby Shell
 - method
 - puts/print/p
 - gets.chomp
 
-## Useful Commands
+#### Useful Commands
 - $ irb
 - $ exit
 - $ ruby file_name.rb
-- #{}
+- `"#{}"`
 
-## Additional Resources
-- <a href="https://rubystyle.guide/" target="blank">Ruby Styling Guide</a>
-- <a href="https://launchschool.com/books/oo_ruby/read/the_object_model" target="blank">The Object Model</a>
-- <a href="https://github.com/matz" target="blank">Yukihiro "Matz" Matsumoto's GitHub</a>
+#### Additional Resources
+- [ Ruby Styling Guide ](https://rubystyle.guide)
+- [ The Object Model ](https://launchschool.com/books/oo_ruby/read/the_object_model)
+- [ Yukihiro "Matz" Matsumoto's GitHub ](https://github.com/matz)
 
-## Set Up
-- Ruby can be run directly in the Mac terminal through the **Interactive Ruby Shell**  
-  - Type `irb` in terminal to enter the Ruby console
-  - Type `exit` to return to the regular terminal
-- To code with Ruby in a text editor create a file with the extension `file_name.rb` and run `ruby file_name.rb` in terminal
+#### IRB
+- Ruby can be run directly in the Mac terminal through the **Interactive Ruby Shell**, a REPL environment for interacting with Ruby code
+- `irb` - enter irb console
+- `exit` - return to the regular terminal
 
-## Object Orientation
+#### Process
+- `cd` into the appropriate folder or repository
+- Create a new branch
+- `touch` a file with no spaces and `.rb` extension, `intro.rb`
+- Open the folder in a text editor
+- Code!
+- $ `ruby intro.rb`
+
+---
+
+### Object Orientated Programming
 
 From The Object Model, a great read about Object Oriented Programming:
 
@@ -52,49 +63,50 @@ Objects are the intersection of data and behavior. The data is information store
 
 To send a particular message to an object is to call that method on the object.
 
-## Running Ruby: IRB
+### Running Ruby: IRB
 
 If you are using a Mac, Ruby comes preinstalled on your machine. To use it, open the terminal and type `irb` (Interactive Ruby Shell) into terminal. And that's it! You're all set to start coding in Ruby.
 
-The IRB prompts with >
+The IRB prompts with `>`
 
 **Troubleshooting:** IRB is much like console in Google Chrome. You can program in Ruby but entering code line by line can be difficult. If you find yourself with a prompt that says 1 or ? or " or ' IRB is expecting you to finish close your string or method.
 
 If you are stuck in the middle of an incorrect statement and want to start over, type `control-c` and you will get a clean > prompt.
 
 
-## Ruby Data Types
+### Ruby Data Types
+In Ruby, all data types are defined by classes.
 
-### Numbers (Integers)
+### Integers
 Integer operators and arithmetic in Ruby are very similar to what you've seen so far in JavaScript:
 
 ```ruby
-# Addition
+# addition
 > 1 + 3   
 => 4
 
-# Subtraction
+# subtraction
 > 6 - 2   
 => 4
 
-# Multiplication
+# multiplication
 > 2 * 2   
 => 4
 
-# Division
+# division
 > 3 / 2   
 => 1 # Note the lack of decimals
 
-# Modulo
-> 5 % 3   
-=> 2
-
-# Exponents
+# exponents
 > 5 ** 2  
 => 25
+
+# modulo
+> 5 % 3   
+=> 2
 ```
 
-### Numbers (Floats)
+### Floats
 If you want to return a non-whole number in Ruby you must pass a float into the equation.
 
 ```ruby
@@ -358,8 +370,9 @@ The string output from `gets` includes the return you type to enter the user inp
 => "Hello, Learn Student. How are you today?"
 ```
 
+---
 
-## Challenges
+### Challenges
 
 ### Arithmetic Challenges
 Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, 1 and 1.0 are different types of things with slightly different behaviors.

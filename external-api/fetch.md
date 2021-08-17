@@ -49,21 +49,15 @@ If the response is successful, a JSON payload is delivered to the application.
 
 ```javascript
 fetch("https://api-url-here.com")
-.then(response => {
-  return response.json()
-})
-.then(payload => {
-  console.log(payload)
-})
-.catch(error => {
-  console.log(error)
-})
+.then(response => response.json())
+.then(payload => this.setState(payload))
+.catch(error => console.log(error))
 ```
 
 
 ## Challenge
 - Create a React application that shows the user their current location and IP address
-- Use [this](https://ipapi.co/api/?shell#location-of-clients-ip) API and documentation
+- Use [ this ](https://ipapi.co/api/?shell#location-of-clients-ip) API and documentation
 
 ## Stretch Challenge
 - Use an external API and docs to create an application of your choice

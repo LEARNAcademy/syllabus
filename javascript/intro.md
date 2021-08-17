@@ -47,11 +47,11 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 
 #### Process
 - `cd` into the appropriate folder or repository
-- `touch` a file with no spaces and `.js` extension, `javascript-intro.js`
 - Create a new branch
+- `touch` a file with no spaces and `.js` extension, `intro.js`
 - Open the folder in a text editor
 - Code!
-- `$ node javascript-intro.js`
+- $ `node intro.js`
 
 #### Troubleshooting Tips
 - Is the file path is correct?

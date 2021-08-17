@@ -1,4 +1,4 @@
-# Terminal Info and Shortcuts
+# Introduction to Terminal
 
 ## Basics
 **What is terminal?**  
@@ -22,7 +22,7 @@ open .      Opens the directory as if you double clicked on a folder
 atom .      Opens all the files in the current directory using Atom editor
 atom        Follow this command with the full file name to open Atom to directly edit the file ( Example: atom index.html )
 code .      Opens all the files in the current directory using Visual Studio Code editor
-code        Follow this command with the full file name to open VSCode to directly edit the file.( Example: code index.html ) 
+code        Follow this command with the full file name to open VSCode to directly edit the file.( Example: code index.html )
 ;           Allows multiple commands in sequence ( Example: mkdir test_folder; touch index.html )
 history     See all commands used
 clear       Clear the Terminal screen
