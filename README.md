@@ -7,6 +7,18 @@ LEARN is a 16-week, full-time program consisting of 640 practical learning hours
 This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. Help us make our syllabus better by submitting a `Pull Request` to fix any errors, expand definitions, or further explain concepts.
 
 ---
+## Table of Contents
+- [Unit One: Javascript Foundations](#unit-one-javascript-foundations)
+- [Unit Two: Introduction to React](#)
+- [Unit Three: Intermediate React](#)
+- [Unit Four: Ruby](#)
+- [Unit Five: Intro to Postgres and Ruby on Rails Models](#)
+- [Unit Seven: Professional Development Week](#)
+- [Unit Eight: Cat Tinder! Combining React and Rails](#)
+- [Unit Nine: React in Rails and Authentication](#)
+- [Unit Ten: Capstone Project, MVP](#)
+- [Unit Eleven: Capstone Project, Icebox](#)
+
 
 ## Resources
 - [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
