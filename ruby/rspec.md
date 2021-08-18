@@ -434,7 +434,5 @@ Now that we have a Garage class we can change the test to use the class name `de
 
 **Story:** As a developer with a TaskList with and without due dates, I can list all the not completed items in order of due date, and then the items without due dates.
 
-
-[ Back to Ruby Inheritance ](./inheritance.md)
-
-[ Back to Syllabus ](../README.md#unit-four-ruby)
+---
+[Back to Syllabus](../README.md#unit-four-ruby)

@@ -356,7 +356,5 @@ var theAnswer = 42
 26. Write the code that will log the character `"l"` from `theQuestion`.
 27. Write the code that will log whether `theQuestion.length` is greater than `theAnswer`.
 
-
-[ Go to next lesson: JavaScript Conditionals ](./conditionals.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

@@ -34,8 +34,5 @@ $ yarn start
 - As a user, when I see multiple Light Switch/Light Bulb combinations, they all operate independently of each other.
 - As a user, when I click the Remove button I can delete a Light Switch with its accompanying Light Bulb.
 
-[ Go to next lesson: React Props](./props.md )
-
-[ Back to React State ](./state.md)
-
-[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

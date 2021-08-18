@@ -144,8 +144,5 @@ export default App
   - As a developer, I can create modification to the user input text by creating a method in my child component.
 - As a user, I see a third robot that is the developer's choice.
 
-[ Go to next lesson: React Forms ](./forms.md)
-
-[ Back to React Functional Props ](./functional-props.md)
-
-[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

@@ -286,8 +286,5 @@ Save your queries in a file if you want to keep them for posterity.
 - What is the sum of surface area of the 10 biggest countries in the world? The 10 smallest?
 - What year is this country database from? Cross reference various pieces of information to determine the age of this database.
 
-[ Go to next lesson: Ruby on Rails Introduction ](../rails_model/intro.md)
-
-[ Back to Introduction to Databases ](./intro.md)
-
-[ Back to Syllabus ](../README.md#postgresql)
+---
+[Back to Syllabus](../README.md#unit-five-intro-to-postgres-and-ruby-on-rails-models)

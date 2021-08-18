@@ -63,5 +63,5 @@ fetch("https://api-url-here.com")
 - Use an external API and docs to create an application of your choice
 - Here is the [ Nasa API ](https://api.nasa.gov/)
 
-
-[ Back to Syllabus ](../README.md#unit-six-ruby-on-rails)
+---
+[Back to Syllabus](../README.md#unit-six-ruby-on-rails)

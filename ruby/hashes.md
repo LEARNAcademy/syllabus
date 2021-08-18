@@ -178,8 +178,5 @@ Output:
 ### Stretch Challenges
 - As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
 
-[ Go to next lesson: Ruby Classes and Objects ](./classes_objects.md)
-
-[ Back to Ruby Blocks and Iterables ](./blocks.md)
-
-[ Back to Syllabus ](../README.md#unit-four-ruby)
+---
+[Back to Syllabus](../README.md#unit-four-ruby)

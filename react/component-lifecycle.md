@@ -154,4 +154,5 @@ Before the app loads on a page, nothing exists of course, then something happens
 
 These actions, initializing, receiving props, unloading, etc. are what we refer to as component lifecycle. [React's docs](https://reactjs.org/docs/react-component.html) are mandatory reading for understanding this stuff, so take a few minutes and head over there to read them.  Pay special attention to the lifecycle sections to better understand this topic.
 
-[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

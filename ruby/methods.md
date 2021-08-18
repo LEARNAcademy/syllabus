@@ -129,9 +129,5 @@ On the registration page, the user has to enter a user ID and a password, which 
 
 - As a developer, my method ensures that the user's password _must_ contain at least one number.
 
-
-[ Go to next lesson: Ruby Blocks and Iterables ](./blocks.md)
-
-[ Back to Ruby Conditionals ](./conditionals.md)
-
-[ Back to Syllabus ](../README.md#unit-four-ruby)
+---
+[Back to Syllabus](../README.md#unit-four-ruby)

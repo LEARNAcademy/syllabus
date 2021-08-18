@@ -4,4 +4,5 @@
 
 [How we test prop methods with Jest](https://github.com/LEARNAcademy/props-review-with-jest)
 
-[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

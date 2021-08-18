@@ -134,8 +134,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer
 - As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
 
-[ Go to next lesson: Cat Tinder Fetch for Read Functionality ](../connecting/fetch-read.md)
-
-[ Back to Cat Tinder API Endpoints ](./api_endpoints.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-backend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-backend)

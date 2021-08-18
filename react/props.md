@@ -142,7 +142,7 @@ class App extends Component{
   render(){
     return(
       <div>
-        { this.state.people.map(person => <GreetPerson name={ person } /> }
+        { this.state.people.map(person => <GreetPerson name={ person } /> )}
       </div>
     )
   }
@@ -235,9 +235,5 @@ Using a well thought out state tree and nested component structure, construct an
 - As a user, I can see the image of a dice face when I "roll" the dice
 - As a user, I can click a restart button that clears my roll log
 
-
-[ Go to next lesson: React Functional Props ](./functional-props.md)
-
-[ Back to React State with Images ](./state-with-images.md)
-
-[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

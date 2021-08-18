@@ -185,8 +185,5 @@ As a developer, I have been commissioned to create an application where a user c
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 
-[ Go to next lesson: Cat Tinder Update Functionality ](./cat-update.md)
-
-[ Back to Cat Tinder Read Functionality ](./cat-read.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-frontend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-frontend)

@@ -84,8 +84,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add cat seeds to the `seeds.rb` file
 - As a developer, I can run the rails command to add cats to database
 
-[ Go to next lesson: Cat Tinder API CORS ](./api_cors.md)
-
-[ Back to Cat Tinder API Introduction ](./api_intro.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-backend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-backend)

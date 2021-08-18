@@ -298,9 +298,5 @@ Copy the challenges into your JavaScript file. Comment out the instructions and 
 
   (b) Enhance your function so it can handle a few collective nouns like "sheep", "goose", "child", "person" and "species".
 
-
-[ Go to next lesson: JavaScript Functions, Loops, and Arrays ](./functions-loops-arrays.md)
-
-[ Back to JavaScript Loops ](./loops.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

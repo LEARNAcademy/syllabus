@@ -60,8 +60,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can create a new cat
 - As a user, I can see my new cat in the cat list
 
-[ Go to next lesson: Cat Tinder Fetch for Update Functionality ](./fetch-update.md)
-
-[ Back to Cat Tinder Fetch for Read Functionality ](./fetch-read.md)
-
-[ Back to Syllabus ](../../README.md#bringing-it-together)
+---
+[Back to Syllabus] (../../README.md#bringing-it-together)

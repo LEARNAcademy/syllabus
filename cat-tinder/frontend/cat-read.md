@@ -145,9 +145,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can see a page featuring all the information for one cat
 - As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat
 
-
-[ Go to next lesson: Cat Tinder Create Functionality ](./cat-create.md)
-
-[ Back to Cat Tinder Testing with Jest and Enzyme ](./jest-enzyme.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-frontend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-frontend)

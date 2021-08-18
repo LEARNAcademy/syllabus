@@ -136,9 +136,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add a update endpoint to my application
 - As a developer, I can add a destroy endpoint to my application
 
-
-[ Go to next lesson: Cat Tinder API Validations ](./validations.md)
-
-[ Back to Cat Tinder API CORS ](.api_cors.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-backend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-backend)

@@ -396,8 +396,5 @@ Use `fit()` to focus on an it-block without having to comment all other it-block
 13. Write the test for a function called `fizzbuzz`. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
   - Write the function that will make the test pass.
 
-[ Go to next lesson: JavaScript Objects ](./objects.md)
-
-[ Back to JavaScript Higher-Order Functions ](./higher-order-functions.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

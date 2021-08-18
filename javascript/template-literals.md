@@ -178,4 +178,5 @@ describeBurger(turkeyBurger)
 --> "turkey burger with swiss and onions"
 ```
 
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

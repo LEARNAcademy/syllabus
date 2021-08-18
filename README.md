@@ -13,6 +13,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Three: Intermediate React](#unit-three-intermediate-react)
 - [Unit Four: Ruby](#unit-four-ruby)
 - [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
+- [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
 - [Unit Seven: Professional Development Week](#unit-seven-professional-development-week)
 - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
 - [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
@@ -98,8 +99,8 @@ Ruby is a backend, object-oriented programming language. Here we will cover the 
 3. [Ruby Methods](./ruby/methods.md)
 4. [Ruby Blocks and Iterables](./ruby/blocks.md)
 5. [Ruby Hashes](./ruby/hashes.md)
-6. [Text Based Game Challenge](./ruby/textbased_story.md)
-7. [Ruby Classes and Objects](./ruby/classes_objects.md)
+6. [Text Based Game Challenge](./ruby/textbased-game.md)
+7. [Ruby Classes and Objects](./ruby/classes-objects.md)
 8. [Ruby Inheritance](./ruby/inheritance.md)
 9. [Ruby Testing with RSpec](./ruby/rspec.md)
 
@@ -113,29 +114,31 @@ Rails is full-stack framework built into the Ruby programming language. Here we 
 1. [PostgreSQL Queries](./postgresql/queries.md)
 
 ### Ruby on Rails
-1. [Ruby on Rails Introduction](./rails_model/intro.md)
-1. [Active Record Introduction](./rails_model/active_record_intro.md)
-1. [Active Record Migrations](./rails_model/migrations.md)
-1. [Active Record Associations](./rails_model/associations.md)
-1. [Active Record Validations and Models Specs](./rails_model/validations.md)
+1. [Ruby on Rails Introduction](./rails/intro.md)
+1. [Active Record Introduction](./rails/active-record-intro.md)
+1. [Active Record Migrations](./rails/migrations.md)
+1. [Active Record Associations](./rails/associations.md)
+1. [Active Record Validations and Models Specs](./rails/validations.md)
 
 #### Additional Topics:
-- [Rails Database Seeds](./rails_model/seeds.md)
+- [Rails Database Seeds](./rails/seeds.md)
 
 
 
 ## Unit Six: Ruby on Rails
 In this section we explore all the Ruby on Rails MVC architecture has to offer. We built our first full-stack application as well as look at how to create a backend-only Rails application.
-1. [Rails Routes, Controllers, and Views](./rails_fullstack/routes_controllers_views.md)
-1. [Rails Parameters](./rails_fullstack/params.md)
-1. [Rails RESTful Routes and CRUD Actions](./rails_fullstack/restful_routes_crud.md)
-1. [Full-stack Rails](./rails_fullstack/fullstack.md)
-1. [Rails Strong Parameters](./rails_fullstack/strong_parameters.md)
-1. [Rails Generate Resource](./rails_fullstack/generate_resource.md)
-1. [Wildlife Tracker Challenge](./rails_fullstack/wildlife_tracker_challenge.md)
+1. [Rails Controllers, Routes, and Views](./rails/controllers-routes-views.md)
+1. [Rails Parameters](./rails/params.md)
+1. [Rails RESTful Routes and CRUD Actions](./rails/restful-routes-crud.md)
+1. [Full-stack Rails](./rails/fullstack.md)
+1. [Rails Generate Resource](./rails/generate-resource.md)
+1. [Wildlife Tracker Challenge](./rails/wildlife-tracker-challenge.md)
+
+### This Is So Fetch
+1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
 #### Additional Topics:
-- [Postman](./rails_fullstack/postman.md)
+- [Postman](./rails/postman.md)
 
 
 
@@ -174,9 +177,6 @@ Professional development is dedicated to preparation for internship and the upco
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 Here we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concept we've covered so far.
-
-### This Is So Fetch
-1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
 ### Cat Tinder Frontend
 1. [Cat Tinder Introduction, Routing, and Wireframes](./cat-tinder/frontend/intro.md)

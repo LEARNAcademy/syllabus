@@ -21,7 +21,7 @@
 ## Useful Commands
 - $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 - $ yarn test
-- Control + C to stop the testing suite. 
+- Control + C to stop the testing suite.
 
 ## Additional Resources
 - [Jest Matchers](https://facebook.github.io/jest/docs/en/using-matchers.html#content)
@@ -49,14 +49,14 @@ test('renders learn react link', () => {
 This test, unfortunately, isn't terribly useful and we want to have tests for our specific components. So we can delete this file since we don't need it.
 
 ## Enzyme
-Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme makes working with React components even better, by allowing us to render a component or page for us and allow us to query the elements rendered. 
+Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme makes working with React components even better, by allowing us to render a component or page for us and allow us to query the elements rendered.
 
 Additionally, much like React's "hot-reload" when we run our React server, once we run `yarn test` it will continue to run and watch our file structure for any changes and re-run the test automatically for us.
 
 ## Organizing Your Tests
-To keep our testing files organized, it is convention to make a directory called `__tests__` (two underscores on either side) in the same directory as the component you are going to be testing. The test file naming convention for each component is named the same as the component being tested. 
+To keep our testing files organized, it is convention to make a directory called `__tests__` (two underscores on either side) in the same directory as the component you are going to be testing. The test file naming convention for each component is named the same as the component being tested.
 
-As long as the directory is named `__tests__` Jest will find it and run any test files found within. 
+As long as the directory is named `__tests__` Jest will find it and run any test files found within.
 
 In this case, we will create a test file called *CatIndex.js* in the directory in `src/pages/__tests__` .
 
@@ -66,19 +66,19 @@ After we create our test file, we need to import in the following lines at the t
 **`src/pages/__tests__/CatIndex.test.js`**
 ```javascript
 // Imports React into our test file.
-import React from 'react' 
+import React from 'react'
 
-// Imports Enzyme testing and deconstructs Shallow into our test file. 
-import Enzyme, { shallow } from 'enzyme' 
+// Imports Enzyme testing and deconstructs Shallow into our test file.
+import Enzyme, { shallow } from 'enzyme'
 
 // Imports Adapter utilizing the latest react version into our test file so we can run a testing render on any component we may need.
-import Adapter from 'enzyme-adapter-react-16' 
+import Adapter from 'enzyme-adapter-react-16'
 
- // Imports in the component we are going to be testing. 
+ // Imports in the component we are going to be testing.
 import CatIndex from '../CatIndex'
 
-//Allows us to utilize the adapter we import in earlier, allowing us to call and render a component. 
-Enzyme.configure({ adapter: new Adapter() }) 
+//Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
+Enzyme.configure({ adapter: new Adapter() })
 ```
 
 Let's write a test to check for the text rendering in our components. We will write a test, then we'll update the code to make it pass. (That's TDD!)
@@ -96,7 +96,7 @@ Also notice the syntax of the expectation:
     expect(<componentVariable>.<elementQueryMethod>()).<matcher>(<expectedValue>)
     expect(<actualThing>).<matcher>(<expectedValue>)
 ```
-There are a lot of different matchers out there. We can expect our component to contain elements, or be greater/lesser than something, to be true or to be false.. etc etc. 
+There are a lot of different matchers out there. We can expect our component to contain elements, or be greater/lesser than something, to be true or to be false.. etc etc.
 
 Refer to the [Jest Matchers](https://facebook.github.io/jest/docs/en/using-matchers.html#content) docs for more information on what matchers to use and how to utilize them in your expects.
 
@@ -117,10 +117,6 @@ Refer to the [Jest Matchers](https://facebook.github.io/jest/docs/en/using-match
 - Components:
   - Create an additional test for the component `Header.js` to check for a tag by its class name to contain some text.
   - Create an additional test for component `Footer.js` to check for the div `footer` to contain an HTML anchor tag linking to `/catIndex`.
-  
-[ Go to next lesson: Cat Tinder Read Functionality ](./cat-read.md)
 
-
-[ Back to Cat Tinder Introduction, Routing, and Wireframes ](./intro.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-frontend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-frontend)

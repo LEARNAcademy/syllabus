@@ -87,6 +87,5 @@ The final lines in `<script>` define a container and tell React to render our co
 
 This is the barest React application. It is composed of a single component. Recall though that a page in a typical React application is composed of many components. As our application grows in complexity, we will begin to require nested components.
 
-[ Go to next lesson: React Nested Components ](./nested-components.md)
-
-[ Back to Syllabus ](../README.md#unit-two-introduction-to-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

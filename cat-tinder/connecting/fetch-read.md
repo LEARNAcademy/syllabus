@@ -67,8 +67,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can see all the cats
 - As a user, I can see the information for just one cat
 
-[ Go to next lesson: Cat Tinder Fetch for Create Functionality ](./fetch-create.md)
-
-[ Back to Cat Tinder API Validations ](../backend/validations.md)
-
-[ Back to Syllabus ](../../README.md#bringing-it-together)
+---
+[Back to Syllabus] (../../README.md#bringing-it-together)

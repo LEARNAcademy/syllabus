@@ -61,8 +61,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can edit an existing cat
 - As a user, I can see the information for my edited cat
 
-[ Go to next lesson: Cat Tinder Fetch for Delete Functionality ](./fetch-delete.md)
-
-[ Back to Cat Tinder Fetch for Create Functionality ](./fetch-create.md)
-
-[ Back to Syllabus ](../../README.md#bringing-it-together)
+---
+[Back to Syllabus] (../../README.md#bringing-it-together)

@@ -69,6 +69,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can navigate to the page of one specific cat and see a delete button
 - As a user, I can click the button see all the cats with the specific cat removed
 
-[ Back to Cat Tinder Fetch for Update Functionality ](./fetch-update.md)
-
-[ Back to Syllabus ](../../README.md#bringing-it-together)
+---
+[Back to Syllabus] (../../README.md#bringing-it-together)

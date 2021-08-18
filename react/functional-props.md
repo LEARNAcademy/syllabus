@@ -186,9 +186,5 @@ As a developer, I am tasked with creating a food ordering application in React. 
 - As a user, I can see the total that includes sales tax rounded to two decimals
 - As a user, I can see an image of my food selection on the menu
 
-
-[ Go to next lesson: React Inputs and Events ](./inputs.md)
-
-[ Back to React Props ](./props.md)
-
-[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

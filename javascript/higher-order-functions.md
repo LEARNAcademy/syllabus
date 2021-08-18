@@ -238,10 +238,5 @@ var arr2 = [7, 8, 2, 1, 5, 4]
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
 ```
 
-
-
-[ Go to next lesson: JavaScript Testing with Jest ](./jest.md)
-
-[ Back to JavaScript Functions, Loops, and Arrays ](./functions-loops-arrays.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

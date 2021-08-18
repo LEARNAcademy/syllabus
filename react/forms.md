@@ -251,7 +251,5 @@ As a developer, I have been tasked with recreating the children's game [ Mad Lib
 - As a user, after I have filled out the text inputs I can click a 'Submit' button.
 - As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms to create a funny story.
 
-
-[ Back to React Inputs and Events ](./inputs.md)
-
-[ Back to Syllabus ](../README.md#unit-three-intermediate-react)
+---
+[Back to Syllabus](../README.md#unit-two-introduction-to-react)

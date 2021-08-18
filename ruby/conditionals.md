@@ -76,8 +76,5 @@ end
 
 **Story**: As a user, I can see a message in the terminal saying if there was a tie.
 
-[ Go to next lesson: Ruby Methods ](./methods.md)
-
-[ Back to Ruby Introduction ](./intro.md)
-
-[ Back to Syllabus ](../README.md#unit-four-ruby)
+---
+[Back to Syllabus](../README.md#unit-four-ruby)

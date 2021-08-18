@@ -475,8 +475,5 @@ var oddIndexes = []
 
 20. Write the code that adds the values from odd indexes into the oddIndexes array.
 
-[ Go to next lesson: JavaScript Loops ](./loops.md)
-
-[ Back to JavaScript Conditionals ](./conditionals.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

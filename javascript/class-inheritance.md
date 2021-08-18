@@ -253,7 +253,5 @@ The class StockEngine has access to the information from the parent class of Eng
 23. **Story**:  As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
 - The method can be created in the parent class and accessed by all child classes
 
-
-[ Back to JavaScript Classes ](./classes.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

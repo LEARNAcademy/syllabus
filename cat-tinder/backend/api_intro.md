@@ -98,9 +98,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can create a RSpec testing suite in my Rails application
 - As a developer, I can add a resource for Cat that has a name, and age, and what the cat enjoys
 
-
-[ Go to next lesson: Cat Tinder API Seeds ](./seeds.md)
-
-[ Back to Cat Tinder Update Functionality ](../frontend/cat-update.md)
-
-[ Back to Syllabus ](../../README.md#cat-tinder-backend)
+---
+[Back to Syllabus](../../README.md#cat-tinder-backend)

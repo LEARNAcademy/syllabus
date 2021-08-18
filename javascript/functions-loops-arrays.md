@@ -156,8 +156,5 @@ var addUp3 = 600
 - As a user, I can continue to guess the "answer" until I am correct.
 - STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
 
-[ Go to next lesson: JavaScript Higher-Order Functions ](./higher-order-functions.md)
-
-[ Back to JavaScript Functions ](./functions.md)
-
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)

@@ -406,8 +406,5 @@ Remember that floats are numbers with a decimal point whereas integers have no f
 - Create a new empty array for your top favorite TV shows
 - From the full TV show array, add your top two favorite shows to the empty array
 
-[ Go to next lesson: Ruby Conditionals ](./conditionals.md)
-
-[Back to React Forms and Functional Props](../react/forms.md)
-
-[ Back to Syllabus ](../README.md#unit-four-ruby)
+---
+[Back to Syllabus](../README.md#unit-four-ruby)

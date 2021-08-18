@@ -148,4 +148,5 @@ Refactor this function to use the spread operator to combine the array arguments
 
 Recall the **combineAndFilterOdd()** function from the previous exercise. Refactor the function to take any number of arguments.
 
-[ Back to Syllabus ](../README.md#unit-one-javascript-foundations)
+---
+[Back to Syllabus](../README.md#unit-one-javascript-foundations)
