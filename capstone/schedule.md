@@ -67,4 +67,5 @@ Your group will make the final push to Heroku and celebrate a project well done!
 ### Week 12: Demo
 It's time to show off your hard work!
 
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

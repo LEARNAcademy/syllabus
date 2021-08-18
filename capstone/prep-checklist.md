@@ -97,5 +97,5 @@ User stories should be actionable. There should be a clear understanding of when
 - Explore styling libraries
 - Responsive design, accessibility features
 
-
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

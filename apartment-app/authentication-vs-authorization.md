@@ -34,5 +34,5 @@ There are many strategies for building a secure single page web application.  In
 ### Cookie Based Authentication with Devise and Rails
 When a user logs into our website, the response will contain a cookie containing a special session ID encrypted by the server.  Then, every time the client requests a new resource, it sends that session ID back to the server in the header of the request.  If that session ID sent to the server is decryptable, then we know that the user is who they claim to be, and the server can process the request.
 
-
-[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)
+---
+[Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)

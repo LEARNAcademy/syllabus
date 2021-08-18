@@ -32,6 +32,7 @@ $ rails g resource Appointment doctor_id:integer patient_id:integer
 ## Has Many Through
 The last part is to create a relationship between Doctors and Patients *through* Appointments. Now a patient can have many doctors and a doctor can have many patients.
 
-![ has_many_through2 ](./assets/has_many_through2.png)
+![has_many_through2](./assets/has_many_through2.png)
 
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

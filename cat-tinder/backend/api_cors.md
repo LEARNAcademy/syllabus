@@ -74,9 +74,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the CORS gem to my Rails application
 - As a developer, I can add the `cors.rb` file to my application
 
-[ Go to next lesson: Cat Tinder API Endpoints ](./api_endpoints.md)
-
-[ Back to Cat Tinder API Seeds ](./seeds.md)
-
-
+---
 [Back to Syllabus](../../README.md#cat-tinder-backend)

@@ -245,7 +245,5 @@ export default App
 ### Challenge
 Follow these instructions to create your own React in Rails application with Reactstrap and react-router.
 
-
-[ Go to next lesson: Apartment App Devise Introduction ](./devise.md)
-
-[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)
+---
+[Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)

@@ -51,5 +51,5 @@ As a developer, I have been commissioned to create an application where a user c
 - Finish off your application by hooking up the Database via API endpoints
 - Is everything secure?
 
-
-[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)
+---
+[Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)

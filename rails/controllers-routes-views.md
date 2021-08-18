@@ -1,4 +1,4 @@
-# Rails Routes, Controllers and Views
+# Rails Controllers, Routes, and Views
 
 #### Overview
 Rails uses the MVC architectural pattern. MVC defines how an application handles different kinds of information. MVC separates an application into models for handling data and business logic, controllers to handle requests and retrieve the data from the model, and views for handling graphical user interface objects and presentation. This section will take a deep dive into the controller and view aspects of MVC.

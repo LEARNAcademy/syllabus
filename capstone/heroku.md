@@ -82,6 +82,5 @@ Afterwards, you can follow your logs, and navigate to your application:
 ```
 $ heroku logs --tail
 ```
-
-
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

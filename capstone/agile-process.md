@@ -29,3 +29,6 @@ Git flow and branches relating to Stories
 Main(master) branch has working code only
 Each feature has a branch
 Don't branch features off of features, just branch from the main branch
+
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

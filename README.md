@@ -22,12 +22,14 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 
 ## Resources
-- [Accessing and Submitting Assessments](./tools_and_resources/assessments.md)
-- [Remote Pairing with GitHub](./tools_and_resources/remote-pairing.md)
-- [Portfolio Resources](./tools_and_resources/portfolio.md)
-- [How to Ask a Tech Question](./tools_and_resources/questions.md)
-- [Introduction to git and GitHub](./tools_and_resources/github.md)
-- [Intro to Atom](./tools_and_resources/atom.md)
+- [Accessing and Submitting Assessments](./tools-and-resources/assessments.md)
+- [Remote Pairing with GitHub](./tools-and-resources/remote-pairing.md)
+- [Portfolio Resources](./tools-and-resources/portfolio.md)
+- [How to Ask a Tech Question](./tools-and-resources/questions.md)
+- [Introduction to git and GitHub](./tools-and-resources/github.md)
+- [Intro to Atom](./tools-and-resources/atom.md)
+- [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
+- [Debugging Tools](./tools-and-resources/debugging-tools.md)
 
 
 ## First Day: Presentations
@@ -36,7 +38,7 @@ Welcome to LEARN Academy! Here is the information covered during orientations.
 1. [Zoom Etiquette](./orientation/zoom-etiquette.pdf)
 2. [How We Work](./orientation/how-we-work.pdf)
 3. [Code of Conduct](./orientation/code-of-conduct.pdf)
-4. [Introduction to Terminal](./tools_and_resources/terminal.md)
+4. [Introduction to Terminal](./tools-and-resources/terminal.md)
 5. [Requirements and Expectations](./orientation/requirements-and-expectations.pdf)
 6. [Career Services Overview](./orientation/career-services-overview.pdf)
 7. [Tech Stack](./orientation/tech-stack.pdf)
@@ -99,7 +101,7 @@ Ruby is a backend, object-oriented programming language. Here we will cover the 
 3. [Ruby Methods](./ruby/methods.md)
 4. [Ruby Blocks and Iterables](./ruby/blocks.md)
 5. [Ruby Hashes](./ruby/hashes.md)
-6. [Text Based Game Challenge](./ruby/textbased-game.md)
+6. [Text Based Game Challenge](./ruby/textbased-challenge.md)
 7. [Ruby Classes and Objects](./ruby/classes-objects.md)
 8. [Ruby Inheritance](./ruby/inheritance.md)
 9. [Ruby Testing with RSpec](./ruby/rspec.md)
@@ -202,13 +204,13 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 
 ## Unit Nine: React in Rails and Authentication
 There are many ways to create a full-stack application. In this section we use Ruby on Rails to host React components in a monolithic application. We also introduce Devise, a Ruby gem that gives us the ability to create user login.
-1. [React IN Rails Introduction](./react_in_rails/intro.md)
-2. [Apartment App Devise Introduction](./react_in_rails/devise.md)
-2. [Apartment App Devise with React](./react_in_rails/devise_and_react_in_rails.md)
-4. [Apartment App Challenge](./react_in_rails/apartment_app.md)
+1. [React IN Rails Introduction](./apartment-app/react-in-rails.md)
+2. [Apartment App Devise Introduction](./apartment-app/devise.md)
+2. [Apartment App Devise with React](./apartment-app/devise-react-in-rails.md)
+4. [Apartment App Challenge](./apartment-app/apartment-app-challenge.md)
 
 #### Additional Topics:
-- [Authorization and Authentication](./react_in_rails/authentication-vs-authorization.md)
+- [Authorization and Authentication](./apartment-app/authentication-vs-authorization.md)
 
 
 

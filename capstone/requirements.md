@@ -29,5 +29,5 @@
 - Organization and clear communication - make sure everyone is on the same page
 - Make sure everyone feels included
 
-
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

@@ -91,8 +91,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can create an Apartment resource with the appropriate attributes
 - As a developer, I can create an association between User and Apartments
 
-[ Go to next lesson: Apartment App with React Components ](./devise_and_react_in_rails.md)
-
-[ Back to React IN Rails ](./into.md)
-
-[ Back to Syllabus ](../README.md#unit-nine-react-in-rails-and-authentication)
+---
+[Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)

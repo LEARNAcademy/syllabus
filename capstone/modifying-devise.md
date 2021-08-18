@@ -147,4 +147,5 @@ If you are adding custom stylings to your Bootstrap classes, use the `!important
 }
 ```
 
-[ Back to Syllabus ](../README.md#unit-ten-capstone-project-mvp)
+---
+[Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)
