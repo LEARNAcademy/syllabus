@@ -49,7 +49,9 @@ deleteCat = (id) => {
 
 Now we need to pass the `deleteCat` method through the show route.
 
+<!-- shouldnt this be the path to App.js file and not the CatShow.js? -->
 **src/pages/CatShow.js**
+**src/App.js**
 ```javascript
 <Route path="/catshow/:id" render={ (props) => {
   let id = props.match.params.id
