@@ -12,6 +12,8 @@
 - [ Reactstrap Form Components ](https://reactstrap.github.io/components/form/)
 - [ React-router Redirect ](https://reactrouter.com/web/api/Redirect)
 
+---
+
 ## Cat Edit Form
 The initial setup for the CatEdit component will look a lot like the form we created in the [ CatNew ](./cat-create) component. **Remember**, we are just using mock data so we won't actually see an update taking place.  
 
@@ -19,21 +21,21 @@ The initial setup for the CatEdit component will look a lot like the form we cre
 ```javascript
 <Form>
   <FormGroup>
-    <Label>Name</Label>
+    <Label for="name">Name</Label>
     <Input
       type="text"
       name="name"
     />
   </FormGroup>
   <FormGroup>
-    <Label>Age</Label>
+    <Label for="age">Age</Label>
     <Input
       type="number"
       name="age"
     />
   </FormGroup>
   <FormGroup>
-    <Label>Enjoys</Label>
+    <Label for="enjoys">Enjoys</Label>
     <Input
       type="text"
       name="enjoys"
@@ -60,7 +62,7 @@ handleChange = (e) => {
   let { form } = this.state
   form[e.target.name] = e.target.value
   // setting state to the updated form
-  this.setState({ form: form })
+  this.setState({form: form})
 }
 ```
 
@@ -73,8 +75,8 @@ Here is where we see the first big difference between the action that creates a 
 
 **src/App.js**
 ```javascript
-updateCat = (editcat, id) => {
-  console.log("cat:", editcat)
+updateCat = (editCat, id) => {
+  console.log("cat:", editCat)
   console.log("id:", id)
 }
 ```
@@ -85,10 +87,10 @@ The route for CatEdit will look a little bit like CatShow and CatNew all mixed i
 
 **src/App.js**
 ```javascript
-<Route path={"/catedit/:id"} render={ (props) => {
-    let id = props.match.params.id
-    let cat = this.state.cats.find(cat => cat.id === +id)
-    return <CatEdit updateCat={ this.updateCat } cat={ cat } />
+<Route path="/catedit/:id" render={(props) => {
+  let id = props.match.params.id
+  let cat = this.state.cats.find(cat => cat.id === +id)
+  return <CatEdit updateCat={this.updateCat} cat={cat} />
 }} />
 ```
 
@@ -108,7 +110,7 @@ We need to call the method `onSubmit`. To accomplish this, we can add a button f
 ```javascript
 <Button
   name="submit"
-  onClick={ this.handleSubmit }
+  onClick={this.handleSubmit}
 >
   Edit Cat Profile
 </Button>
@@ -142,8 +144,7 @@ this.state = {
 
 handleSubmit = () => {
   this.props.updateCat(this.state.form, this.props.cat.id)
-  // update success to true
-  this.setState({ submitted: true })
+  this.setState({submitted: true})
 }
 ```
 
@@ -151,20 +152,23 @@ When the form is submitted, success will be updated to true and we can use condi
 
 **src/pages/CatEdit.js**
 ```javascript
-{ this.state.submitted && <Redirect to={ `/catshow/${this.props.cat.id}` } /> }
+{this.state.submitted && <Redirect to={`/catshow/${this.props.cat.id}`} />}
 ```
 
 **Remember**, we won't see updates made to the cat just yet. But we can see the form and routing functionality working and see our cat object logged by `App.js` which puts us in a great place for now.
+
+---
 
 ## Challenge: Cat Update
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
 - As a user, I can fill out a form to edit an existing cat
-- As a developer, I can add onChange and value attributes to each input
-- As a developer, I can pass the form data to `App.js` on submit
-- As a developer, I can see my updated cat logged in the console on submit
+- As a developer, I can store the cat object in state
+- As a developer, I can pass the cat object and id to App.js on submit and see the cat object logged in the console
 - As a user, I can see a button on my show page that will take me to the edit page for that particular cat
 - As a user, I can be routed to the show page after I submit the edited cat form
+- As a developer, I have test coverage on my edit page
+
 
 **NOTE:** We are still only interacting with mock data so we will not see updated cat information in the collection of cats.
 

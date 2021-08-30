@@ -24,7 +24,7 @@ Each cat attribute will have its own `<FormGroup>` inside of a single `<Form>` t
 ```javascript
 <Form>
   <FormGroup>
-    <Label>Name</Label>
+    <Label for="name">Name</Label>
     <Input
       type="text"
       name="name"
@@ -73,7 +73,7 @@ handleChange = (e) => {
   let { form } = this.state
   form[e.target.name] = e.target.value
   // setting state to the updated form
-  this.setState({ form: form })
+  this.setState({form: form})
 }
 ```
 
@@ -86,8 +86,8 @@ Now we can update each input with an `onChange` attribute that calls the `handle
   <Input
     type="text"
     name="name"
-    onChange={ this.handleChange }
-    value={ this.state.form.name }
+    onChange={this.handleChange}
+    value={this.state.form.name}
   />
 </FormGroup>
 ```
@@ -110,7 +110,7 @@ This method needs to be passed to our CatNew component. This will require a refa
 ```javascript
 <Route
   path="/catnew"
-  render={ (props) => <CatNew createNewCat={ this.createNewCat } /> }
+  render={(props) => <CatNew createNewCat={this.createNewCat} />}
 />
 ```
 
@@ -129,8 +129,7 @@ We need to call the method `onSubmit`. To accomplish this, we can add a button f
 ```javascript
 <Button
   name="submit"
-  color="secondary"
-  onClick={ this.handleSubmit }
+  onClick={this.handleSubmit}
 >
   Create a New Profile
 </Button>
@@ -151,37 +150,38 @@ constructor(props){
       age: "",
       enjoys: ""
     },
-    success: false
+    submitted: false
   }
 }
 
 handleSubmit = () => {
   this.props.createNewCat(this.state.form)
-  this.setState({ success: true })
+  this.setState({submitted: true})
 }
 ```
 
 By adding a success attribute to state we can control when the redirect happens. When state is updated we can use conditional rendering to pass a [ React-router redirect component ](https://reactrouter.com/web/api/Redirect) that renders a new page.
 
+**src/pages/CatNew.js**
 ```javascript
 // react-router import
 import { Redirect } from 'react-router-dom'
 
-
-<Footer />
 // JavaScript code at the bottom of the JSX that will redirect when success is true
-{ this.state.success && <Redirect to="/catindex" />}
+{this.state.submitted && <Redirect to="/catindex" />}
 </>
 ```
+
+---
 
 ## Challenge: Cat Create
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
 - As a user, I can fill out a form to add a new cat
-- As a developer, I can add onChange and value attributes to each input
-- As a developer, I can pass the form data to `App.js` on submit
-- As a developer, I can see my new cat logged in the console on submit
+- As a developer, I can store the cat object in state
+- As a developer, I can pass the cat object to App.js on submit and see the cat object logged in the console
 - As a user, I can be routed to the index page after I submit the new cat form
+- As a developer, I have test coverage on my new page
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 

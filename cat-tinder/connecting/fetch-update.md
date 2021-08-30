@@ -42,12 +42,8 @@ updateCat = (cat, id) => {
       return response.json()
     }
   })
-  .then(payload => {
-    this.catIndex()
-  })
-  .catch(errors => {
-    console.log("update errors:", errors)
-  })
+  .then(payload => this.catRead())
+  .catch(errors => console.log("Cat update errors:", errors))
 }
 ```
 

@@ -3,7 +3,7 @@ Variations of this riddle appear on the net from time to time. It is sometimes a
 
 Let us assume that there are five houses of different colors next to each other on the same road. In each house lives a person of a different nationality. Every person has a favorite drink, a favorite brand of cigarettes, and keeps pets of a particular kind.
 
-* The Englishperson lives in the red house.
+* The English person lives in the red house.
 * The Swede keeps dogs.
 * The Dane drinks tea.
 * The green house is just to the left of the white one.

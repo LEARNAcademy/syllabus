@@ -13,6 +13,7 @@
 ## Vocabulary
 - has_many_through
 
+---
 
 ## Has Many Relationships
 Think about the relationship between a model called Doctor and a model called Patient. The simplest relationship may be that a doctor has a patient and a patient belongs to a doctor. It is more likely that a doctor will have many patients. We are familiar with that style of relationship, but what if a patient also has many doctors? Then the relationship between our models is a patient has many doctors and a doctor has many patients.

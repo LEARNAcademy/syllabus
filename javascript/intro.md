@@ -46,8 +46,8 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 - [ JavaScript Built-in Functions Organized By Data Type ](https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm)
 
 #### Process
-- `cd` into the appropriate folder or repository
-- Create a new branch
+- `cd` into the javascript-challenges repository
+- Create a new branch 
 - `touch` a file with no spaces and `.js` extension, `intro.js`
 - Open the folder in a text editor
 - Code!

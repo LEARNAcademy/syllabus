@@ -1,4 +1,4 @@
-# CONNECTING HTML TO JAVASCRIPT 
+# Connecting HTML and JavaScript
 
 ### Create an HTML page that takes a user's name and returns "Welcome, <user's name>!"
 

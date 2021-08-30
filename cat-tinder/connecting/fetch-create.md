@@ -24,10 +24,10 @@ Our fetch call will return a Promise. If the Promise is resolved successfully we
 
 **/src/App.js**
 ```javascript
-createNewCat = (newcat) => {
-  return fetch("http://localhost:3000/cats", {
+createCat = (newCat) => {
+  fetch("http://localhost:3000/cats", {
     // converting an object to a string
-    body: JSON.stringify(newcat),
+    body: JSON.stringify(newCat),
     // specify the info being sent in JSON and the info returning should be JSON
     headers: {
       "Content-Type": "application/json"
@@ -41,12 +41,8 @@ createNewCat = (newcat) => {
     }
     return response.json()
   })
-  .then(payload => {
-    this.catIndex()
-  })
-  .catch(errors => {
-    console.log("create errors:", errors)
-  })
+  .then(payload => this.catRead())
+  .catch(errors => console.log("Cat create errors:", errors))
 }
 ```
 
@@ -56,7 +52,7 @@ As long as we have set up the frontend scaffolding correctly, the cat create met
 ## Challenge: Cat Tinder Fetch Create Functionality
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can update the `createNewCat` method to post information to the database
+- As a developer, I can update the `createCat` method to post information to the database
 - As a user, I can create a new cat
 - As a user, I can see my new cat in the cat list
 
