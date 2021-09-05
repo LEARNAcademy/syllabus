@@ -153,12 +153,12 @@ The Route component gets passed two props:
 ```javascript
 <Router>
   <Switch>
-    <Route exact path="/" component={ Home } />
-    <Route path="/catindex" component={ CatIndex } />
-    <Route path="/catshow/:id" component={ CatShow } />
-    <Route path="/catnew" component={ CatNew } />
-    <Route path="/catedit/:id" component={ CatEdit } />
-    <Route component={ NotFound }/>
+    <Route exact path="/" component={Home} />
+    <Route path="/catindex" component={CatIndex} />
+    <Route path="/catshow" component={CatShow} />
+    <Route path="/catnew" component={CatNew} />
+    <Route path="/catedit" component={CatEdit} />
+    <Route component={NotFound}/>
   </Switch>
 </Router>
 ```
@@ -168,8 +168,7 @@ The Home route has an extra `exact` being passed to the path. The `exact` param 
 
 The last Route in the list doesn't have a path. We can think of this as the `else` statement in our routes. If something happens in our application where a route is passed in that doesn't match any of the paths specified above, we can direct our user to a custom error page.
 
-
-
+---
 
 ## Challenge: Cat Tinder Setup
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.

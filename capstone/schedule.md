@@ -1,12 +1,11 @@
 # Capstone Project Timeline and Workflow
 
-### Week 8: Ideation
+### Week 9: Elevator Pitch, Wireframes, DB Schema
 **Planning is critical to the success of your project.** Proper planning can help avoid wasting time and ensure your team is on the same page.
 
 This week you will get your group assignments for the Capstone project and start doing the prework for the application. We recommend creating a shared gmail address that can be used for creating group accounts. Create a Google doc where everyone can offer ideas during the brainstorming process.
 
-### Week 9: Elevator Pitch, Wireframes, DB Schema
-This week you will get together with your group periodically for planning sessions. During these sessions, you will come up with an **elevator pitch** for your project. The pitch should succinctly explain your project's purpose and functionality.
+You will get together with your group periodically for planning sessions. During these sessions, you will come up with an **elevator pitch** for your project. The pitch should succinctly explain your project's purpose and functionality.
 
 **Wireframes** are drawings or basic outlines of what each page of your application will look to the user. Wireframes should be vague enough that style choices are not limited, but provide enough information to create an MVP. During development, if there are any questions or disagreements on the look or basic functionality of your app, wireframes can help sort out those issues. A good wireframe will allow the development team to "walk through" the application page by page.
 
@@ -59,10 +58,6 @@ The end of your sprint is an opportunity to reflect on the experience with a **r
 
 **Sprint Planning**  
 Now that your group has completed your basic functionality, it is time to break into the icebox. The icebox is where all the extra challenges and specialized features live. Discuss with your group which features are most import to your application and to your learning. These features will define your goals for the second sprint.
-
-
-**Friday**  
-Your group will make the final push to Heroku and celebrate a project well done!
 
 ### Week 12: Demo
 It's time to show off your hard work!

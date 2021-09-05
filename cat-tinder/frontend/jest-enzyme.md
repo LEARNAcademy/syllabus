@@ -46,24 +46,19 @@ test('renders learn react link', () => {
 });
 ```
 
-This test, unfortunately, isn't terribly useful and we want to have tests for our specific components. So we can delete this file since we don't need it.
-
 ## Enzyme
-Enzyme uses Jest and layers on __React__ specific functionality. Adding Enzyme makes working with React components even better, by allowing us to render a component or page for us and allow us to query the elements rendered.
+Enzyme uses Jest and layers on React specific functionality. Adding Enzyme makes working with React components even better, by allowing us to render a component or page for us and allow us to query the elements rendered.
 
 Additionally, much like React's "hot-reload" when we run our React server, once we run `yarn test` it will continue to run and watch our file structure for any changes and re-run the test automatically for us.
 
 ## Organizing Your Tests
-To keep our testing files organized, it is convention to make a directory called `__tests__` (two underscores on either side) in the same directory as the component you are going to be testing. The test file naming convention for each component is named the same as the component being tested.
+Each component in the Cat Tinder application needs a corresponding test file. The files can be named the same as the component file with a `.test.js` file extension.
 
-As long as the directory is named `__tests__` Jest will find it and run any test files found within.
-
-In this case, we will create a test file called *CatIndex.js* in the directory in `src/pages/__tests__` .
-
+In this case, we will create a test file called *CatIndex.test.js* in the directory in `src/pages`.
 
 After we create our test file, we need to import in the following lines at the top of our file:
 
-**`src/pages/__tests__/CatIndex.test.js`**
+**`src/pages/CatIndex.test.js`**
 ```javascript
 // Imports React into our test file.
 import React from 'react'
@@ -74,11 +69,11 @@ import Enzyme, { shallow } from 'enzyme'
 // Imports Adapter utilizing the latest react version into our test file so we can run a testing render on any component we may need.
 import Adapter from 'enzyme-adapter-react-16'
 
- // Imports in the component we are going to be testing.
+// Imports in the component we are going to be testing.
 import CatIndex from '../CatIndex'
 
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({adapter: new Adapter()})
 ```
 
 Let's write a test to check for the text rendering in our components. We will write a test, then we'll update the code to make it pass. (That's TDD!)

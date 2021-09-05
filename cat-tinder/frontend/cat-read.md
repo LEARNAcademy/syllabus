@@ -25,15 +25,16 @@ Currently this is our index route:
 
 **src/App.js**
 ```javascript
-<Route path="/catindex" component={ CatIndex } />
+<Route path="/catindex" component={CatIndex} />
 ```
 
 We know this route works since we can manually change the url in the browser and see our index page. But there are no cats. We need to pass our cat state object to the CatIndex component as props. But how?
 
 We can refactor our static route into a dynamic route that will allow us to pass props to the CatIndex component while still allowing Router to determine when CatIndex should be visible to the user.
 
+**src/App.js**
 ```javascript
-<Route path="/catindex" render={ (props) => <CatIndex cats={ this.state.cats } /> } />
+<Route path="/catindex" render={(props) => <CatIndex cats={this.state.cats} />} />
 ```
 
 ## Cat Index Component
@@ -52,14 +53,14 @@ And now we can incorporate the Reactstrap components into our mapped array and s
 
 **src/pages/CatIndex.js**
 ```javascript
-<h2>Meet the Cats!</h2>
+<h3>Meet the Cats!</h3>
 <br />
   <Col sm="6">
-    { this.props.cats.map(cat => {
+    {this.props.cats.map(cat => {
       return (
-        <Card body key={ cat.id }>
+        <Card body key={cat.id}>
           <CardTitle>
-            <h4>{ cat.name }</h4>
+            <h4>{cat.name}</h4>
           </CardTitle>
         </Card>
       )
@@ -83,11 +84,12 @@ let cat = this.state.cats.find(cat => cat.id === +id)
 ```
 
 Wrapping this functionality into the show route will let us have access to the cat object by id and pass only the one cat to the CatShow component.
+
 ```javascript
-<Route path="/catshow/:id" render={ (props) => {
+<Route path="/catshow/:id" render={(props) => {
   let id = props.match.params.id
   let cat = this.state.cats.find(cat => cat.id === +id)
-  return <CatShow cat={ cat } />
+  return <CatShow cat={cat} />
 }} />
 ```
 
@@ -96,13 +98,13 @@ Now we can console.log the variable `cat` and see the single cat object.
 **src/pages/CatShow.js**
 ```javascript
 render(){
-    console.log(this.props.cat)
-    return(
-      <>
-        <h2>One Cat</h2>
-      </>
-    )
-  }
+  console.log(this.props.cat)
+  return(
+    <>
+      <h3>One Cat</h3>
+    </>
+  )
+}
 ```
 
 ## Cat Show Component
@@ -112,8 +114,8 @@ Next we can add Reactstrap and the proper imports to create a nice page for each
 ```javascript
 <Col sm="6">
   <Card body>
-    <CardTitle>Hi, my name is { this.props.cat.name }!</CardTitle>
-    <CardText>I am { this.props.cat.age } years old. I enjoy { this.props.cat.enjoys }.</CardText>
+    <CardTitle>Hi, my name is {this.props.cat.name}!</CardTitle>
+    <CardText>I am {this.props.cat.age} years old. I enjoy  {this.props.cat.enjoys}.</CardText>
   </Card>
 </Col>
 ```
@@ -125,7 +127,7 @@ We already have a route for the show page, we just need to add the appropriate l
 
 ```javascript
 <NavLink to={`/catshow/${cat.id}`}>
-  { cat.name }
+  {cat.name}
 </NavLink>
 ```
 
@@ -135,7 +137,7 @@ The last part is importing the NavLink to the CatIndex component.
 import { NavLink } from 'react-router-dom'
 ```
 
-
+---
 ## Challenge: Cat Index and Show
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 

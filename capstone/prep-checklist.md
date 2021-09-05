@@ -1,22 +1,22 @@
 # Capstone Project Prep Checklist
 
-### Week 8
+### Week 9
 - Create a team name
-- Create a slack channel within the LEARN workspace (add the instructors and mentors)
+- Create a slack channel within the LEARN workspace
+  - Add the instructors
 - Create a team email address
 - Create a team GitHub Organization
   - Add all team members, instructors, and mentors
   - Everyone in the organization should have the role of "owner"
   - Add an image to your organization
-- Create a team Trello Board (add the instructors and mentors)
+- Create a team Trello Board
+  - Add the instructors
 - Create a team Heroku account
 - Decide on Developer Roles
 - Add Slack integrations for your repository
   - `/github subscribe <repo-url>`
-
-### Week 9
 - Decide on an idea
-- Research possible APIs (have a main API and a backup)
+- Research possible APIs
 - Discuss your target audience (creating a persona can help you envision your user)
 - Elevator pitch (30 sec summary of the app)
 - Wireframes - visual representations of all the pages your user will see
@@ -32,7 +32,7 @@
   - Done
 - If a card is in doing, a developer's name should be a name assigned to it
 
-### User stories
+### User Stories
 A user story describes how a user interacts with an app. It is told from the user’s perspective. Keep user stories simple and concise and use an active voice.
 
 User stories should be actionable. There should be a clear understanding of when a story is "done".

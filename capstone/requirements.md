@@ -4,23 +4,21 @@
 - React in Rails application
 - User authentication (register, login, logout)
 - Minimum of two database tables (one will be User)
-- Minimum of one external API
-  - [ Spotify ](https://developer.spotify.com/documentation/web-api/)
-  - [ Yelp Fusion ](https://www.yelp.com/fusion)
-  - [ Eventbrite ](https://www.eventbrite.com/platform/api)
-  - [ Weather Information ](https://weatherstack.com/documentation)
-  - [ Fun Translations ](https://funtranslations.com/api/)
-  - OR your choice
 - Testing - 60% code coverage
 - Deployed to Heroku
 - A well written README (with link to live application)
-- Team name
 - "About Us" page
 
 ### Project Stretch Goals
 - Responsive Design (include a phone view for example)
 - Accessible design features
 - Continuous Integration
+- External API
+  - [ Spotify ](https://developer.spotify.com/documentation/web-api/)
+  - [ Yelp Fusion ](https://www.yelp.com/fusion)
+  - [ Eventbrite ](https://www.eventbrite.com/platform/api)
+  - [ Weather Information ](https://weatherstack.com/documentation)
+  - [ Fun Translations ](https://funtranslations.com/api/)
 
 ### Things to Think About
 - Step out of your comfort zone

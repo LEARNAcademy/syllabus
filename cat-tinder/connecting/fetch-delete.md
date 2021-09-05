@@ -38,12 +38,9 @@ deleteCat = (id) => {
     },
     method: "DELETE"
   })
-  .then(response => {
-    return response.json()
-  })
-  .catch(errors => {
-    console.log("delete errors:", errors)
-  })
+  .then(response => response.json())
+  .then(payload => this.catRead())
+  .catch(errors => console.log("delete errors:", errors))
 }
 ```
 
@@ -53,10 +50,10 @@ Now we need to pass the `deleteCat` method through the show route.
 **src/pages/CatShow.js**
 **src/App.js**
 ```javascript
-<Route path="/catshow/:id" render={ (props) => {
+<Route path="/catshow/:id" render={(props) => {
   let id = props.match.params.id
   let cat = this.state.cats.find(cat => cat.id === +id)
-  return <CatShow cat={ cat } deleteCat={ this.deleteCat } />
+  return <CatShow cat={cat} deleteCat={this.deleteCat} />
 }} />
 ```
 

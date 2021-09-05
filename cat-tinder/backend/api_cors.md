@@ -15,6 +15,7 @@
 - [ MDN on CORS ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 - [ CORS Wikipedia ](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
+---
 ### Allowing External Requests
 The last bit of housekeeping we need to do on the backend is enable our Rails application to accept requests from the React application.
 
@@ -60,7 +61,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-3. Run the command `$ bundle install` from the command line to update the dependencies.
+3. Run the command `$ bundle` from the command line to update the dependencies.
 
 That's it!  We can now accept POST, PUT, and DELETE requests in our server side application.
 

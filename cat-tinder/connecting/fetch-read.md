@@ -17,6 +17,8 @@
 - The Rails app will run on `localhost:3000`
 - The React app will run on `localhost:3001`
 
+---
+
 ## Fetching Our Data
 The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON.
 
@@ -39,21 +41,15 @@ constructor(props){
 }
 
 componentDidMount(){
-  this.catIndex()
+  this.catRead()
 }
 
-catIndex = () => {
+catRead = () => {
   fetch("http://localhost:3000/cats")
-  .then(response => {
-    return response.json()
-  })
-  .then(catsArray => {
-    // set the state with the data from the backend into the empty array
-    this.setState({ cats: catsArray })
-  })
-  .catch(errors => {
-    console.log("index errors:", errors)
-  })
+  .then(response => response.json())
+  // set the state with the data from the backend into the empty array
+  .then(catsArray => this.setState({cats: catsArray}))
+  .catch(errors => console.log("Cat read errors:", errors))
 }
 ```
 

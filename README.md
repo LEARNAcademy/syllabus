@@ -33,8 +33,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 
 ## First Day: Presentations
-Welcome to LEARN Academy! Here is the information covered during orientations.
-
+Welcome to LEARN Academy! Here is the information covered during orientation.
 1. [Zoom Etiquette](./orientation/zoom-etiquette.pdf)
 2. [How We Work](./orientation/how-we-work.pdf)
 3. [Code of Conduct](./orientation/code-of-conduct.pdf)
