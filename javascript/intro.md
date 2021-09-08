@@ -46,12 +46,11 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 - [ JavaScript Built-in Functions Organized By Data Type ](https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm)
 
 #### Process
-- `cd` into the javascript-challenges repository
-- Create a new branch 
-- `touch` a file with no spaces and `.js` extension, `intro.js`
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `intro-student1-student2.js` (ex. intro-austin-sarah.js)
 - Open the folder in a text editor
 - Code!
-- $ `node intro.js`
 
 #### Troubleshooting Tips
 - Is the file path is correct?

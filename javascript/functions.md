@@ -38,12 +38,11 @@ Functions are a fundamental building block in JavaScript and in programming in g
 <img src="./assets/scope.jpg" width="250px">
 
 #### Process
-- `cd` into the appropriate folder or repository
-- Create a new branch
-- `touch` a file with no spaces and `.js` extension, `javascript-functions.js`
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `functions-initials1-initials2` (ex. functions-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `functions-student1-student2.js` (ex. functions-austin-sarah.js)
 - Open the folder in a text editor
 - Code!
-- $ `node javascript-functions.js`
 
 #### Troubleshooting Tips
 - Does the function have a return?

@@ -30,13 +30,17 @@ Arrays are variables that store collections of data in an ordered list. Having a
 - [ W3Schools JavaScript Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
 
 #### Process
-- `cd` into the appropriate folder or repository
-- `touch` a file with no spaces and `.js` extension, `javascript-arrays.js`
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `arrays-initials1-initials2` (ex. arrays-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `arrays-student1-student2.js` (ex. arrays-austin-sarah.js)
 - Open the folder in a text editor
 - Code!
-- `$ node javascript-arrays.js`
+
+#### Troubleshooting Tips
+- Is the file path is correct?
 
 ---
+
 
 ### Arrays: Collections of Data
 Until now, we've only dealt with one piece of information at a time: one number, one string, one element on a page. But, often we need to group things together. For example, what if we wanted to have a list of the months of the year? We'd use an **array**, which is a collection of ordered data. Arrays can contain any type of information as long as it is a data type JavaScript recognizes.

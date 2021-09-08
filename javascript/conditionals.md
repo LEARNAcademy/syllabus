@@ -24,10 +24,17 @@ Decision structures, also called decision trees, conditional statements, or if/e
 ## Additional Resources
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="blank">Conditionals from MDN</a>
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Process
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `conditionals-initials1-initials2` (ex. conditionals-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `conditionals-student1-student2.js` (ex. conditionals-austin-sarah.js)
+- Open the folder in a text editor
+- Code!
+
+#### Troubleshooting Tips
+- Is the file path is correct?
+
+---
 
 ## Javascript Decisions
 
