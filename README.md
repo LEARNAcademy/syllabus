@@ -28,7 +28,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 
 ## Resources
-- [Attendance Policy](./tools_and_resources/attendance.md)
+- [Attendance Policy](./tools-and-resources/attendance.md)
 - [Portfolio Resources](./tools-and-resources/portfolio.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
 - [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
