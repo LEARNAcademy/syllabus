@@ -3,7 +3,7 @@
 ## TL;DR
 - Accept assignment via Slack
 - Clone repository
-- Create branch
+- Create branch with the week and your name, e.g `week-1-sarah-proctor`
 - Code and pseudo code
 - Git add, commit, push
 - Create pull request
@@ -16,18 +16,9 @@
 - Assessment is submitted as a **pull request**
 - Assessments will be valuable to you as reference and interview question prep
 
-#### Learning Objectives
-- can access a git repository locally and make changes to the code
-- can create a branch
-- can submit a pull request for review
-- can merge approved code at the appropriate time
-- can utilize git command line tools
-
-#### Vocabulary
-- git
-- branch
-- master branch
-- pull request (PR)
+#### Requirements and Expectations
+Completing all assessments on time is required to be eligible for internship. A student must make reasonable effort on every question in the assessment. If any questions are left blank, the assessment will not be reviewed.  
+An assessment is not complete until the assessment is reviewed by an instructor, and the working branch is merged into the main branch.
 
 #### Useful Commands
 - `git clone <url>`
@@ -58,9 +49,9 @@
 - Type `git clone` and paste the link you copied from your git repository
 - cd into the assessment directory
 - You should see the full name of the assessment followed by your GitHub handle
-- Checkout a branch: `git checkout -b <branch name>` 
+- Checkout a branch: `git checkout -b <branch name>`
   - No quotes or spaces in your branch name
-  - Use the naming convention `<week-number-your-name>` e.g. week-1-sarah
+  - Use the naming convention `<week-number-your-name>` e.g. week-1-sarah-proctor
 - Terminal will say `Switched to a new branch <branch-name>`
 
 #### Code!
@@ -79,11 +70,12 @@
 
 **You have successfully submitted your assessment!**
 
-#### After your code has been approved
+#### Next Steps
 - An instructor will review your code and leave you comments
 - Open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
 
 
-[ Back to Syllabus ](../README.md#resources)
+---
+[Back to Syllabus](../README.md#github)

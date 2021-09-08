@@ -21,15 +21,21 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
 
 
+## GitHub
+- [Accessing and Submitting Assessments](./github/assessments.md)
+- [Git and GitHub Intro and Configurations](./github/github.md)
+- [Collaborative Coding with GitHub](./github/pairing-with-github.md)
+
+
 ## Resources
-- [Accessing and Submitting Assessments](./tools-and-resources/assessments.md)
-- [Remote Pairing with GitHub](./tools-and-resources/remote-pairing.md)
+- [Attendance Policy](./tools_and_resources/attendance.md)
 - [Portfolio Resources](./tools-and-resources/portfolio.md)
-- [How to Ask a Tech Question](./tools-and-resources/questions.md)
-- [Introduction to git and GitHub](./tools-and-resources/github.md)
-- [Intro to Atom](./tools-and-resources/atom.md)
-- [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
+- [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
+- [How to Ask a Tech Question](./tools-and-resources/questions.md)
+- [Intro to Atom](./tools-and-resources/atom.md)
+- [Wireframes](./tools-and-resources/wireframes.md)
+- [Pair Programming](./tools-and-resources/pair-programming.md)
 
 
 ## First Day: Presentations
