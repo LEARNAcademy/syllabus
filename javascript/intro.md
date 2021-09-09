@@ -42,8 +42,8 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 - argument
 
 #### Additional Resources
-- a href="https://www.w3schools.com/js/js_datatypes.asp" target="_blank">JavaScript Data Types</a>
-- <a href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm" target="_blank">JavaScript Built-in Functions Organized By Data Type</a>
+- [JavaScript Data Types](https://www.w3schools.com/js/js_datatypes.asp)
+- [JavaScript Built-in Functions Organized By Data Type](https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm)
 
 #### Process
 - `cd` into the `javascript-challenges` repository

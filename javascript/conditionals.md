@@ -19,8 +19,8 @@ Decision structures, also called decision trees, conditional statements, or if/e
 - string interpolation
 
 #### Additional Resources
-- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">Conditionals from MDN</a>
-- <a href="./template-literals.md" target="_blank">String Interpolation</a>
+- [Conditionals from MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [String Interpolation](./template-literals.md)
 
 #### Process
 - `cd` into the `javascript-challenges` repository
@@ -164,7 +164,7 @@ Make sure you try different options and change the variables to ensure properly 
 
 6. Write a statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available."
 
-7. Write a statement that takes a variable of a boolean, number, or string  data type and logs the data type of the variable. **HINT**: Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank">JavaScript operator `typeof`</a>.
+7. Write a statement that takes a variable of a boolean, number, or string  data type and logs the data type of the variable. **HINT**: Check out the [JavaScript typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
 8. Create a password checker using a single conditional statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password!" If the user’s password is 8 or more characters OR includes `!`, then log "That password is strong enough." Log "That is not a valid password." for every other input.
 
