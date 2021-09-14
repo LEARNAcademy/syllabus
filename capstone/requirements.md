@@ -2,15 +2,16 @@
 
 ### Project Requirements
 - React in Rails application
+- Full CRUD functionality
 - User authentication (register, login, logout)
 - Minimum of two database tables (one will be User)
 - Testing - 60% code coverage
 - Deployed to Heroku
-- A well written README (with link to live application)
+- A [well written README](https://medium.com/chingu/keys-to-a-well-written-readme-55c53d34fe6d) with link to live application
 - "About Us" page
 
 ### Project Stretch Goals
-- Responsive Design (include a phone view for example)
+- Responsive design (include a phone view for example)
 - Accessible design features
 - Continuous Integration
 - External API
