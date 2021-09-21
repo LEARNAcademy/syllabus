@@ -30,10 +30,10 @@ Functions are a fundamental building block in JavaScript and in programming in g
 - pseudocoding
 
 #### Additional Resources
-- [ W3Schools JavaScript Functions ](https://www.w3schools.com/js/js_functions.asp)
-- [ Edabit Code Challenges ](https://edabit.com/challenges/javascript)
-- [ How to Write Pseudocode ](https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/)
-- [ Many Ways to Create Functions ](https://javascript.info/function-expressions)
+- [W3Schools JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
+- [Edabit Code Challenges](https://edabit.com/challenges/javascript)
+- [How to Write Pseudocode](https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/)
+- [Many Ways to Create Functions](https://javascript.info/function-expressions)
 
 <img src="./assets/scope.jpg" width="250px">
 

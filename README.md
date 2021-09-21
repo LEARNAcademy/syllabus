@@ -76,7 +76,6 @@ This is our introduction to coding through the Javascript programming language. 
 ## Unit Two: Introduction to React
 React is a powerful Javascript library used to build more complicated user interfaces.
 1. [React Introduction](./react/intro.md/)
-2. [React Nested Components](./react/nested-components.md)
 3. [Creating a New React Application](./react/create-react-app.md)
 4. [React State](./react/state.md/)
 
