@@ -24,10 +24,12 @@
 ## Additional Resources
 -  For a fantastic list of all the things you can do with destructuring, go to the MDN page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="blank">Destructuring Assignmment Operators</a>
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Process
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `objects-initials1-initials2` (ex. objects-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `objects-student1-student2.js` (ex. objects-austin-sarah.js)
+- Open the folder in a text editor
+- Code!
 
 ---
 

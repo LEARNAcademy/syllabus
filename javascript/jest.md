@@ -98,8 +98,8 @@ This is a test for a function called `hello()` that returns a string that says `
 // a describe method that lists the name of the function OR naming of the particular test.
 describe("hello", () => {
 
-  // a test method, nested within the describe block, that in plain words, describes that the function does.
-  test("returns a string that says hi", () => {
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it("returns a string that says hi", () => {
 
     //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
     expect(hello()).toEqual("hi")
@@ -128,7 +128,7 @@ Run `yarn jest` in the terminal to run the test. We can expect that the test wil
     ReferenceError: hello is not defined
 
       1 | describe("hello", () => {
-      2 |   test ("returns a string that says hi", () => {
+      2 |   it("returns a string that says hi", () => {
     > 3 |     expect(hello()).toEqual("hi")
         |     ^
       4 |   })
@@ -205,7 +205,7 @@ Run the test file again:
     ReferenceError: areYouHungry is not defined
 
       12 | describe("areYouHungry", () => {
-      13 |   test ("returns eat food or keep working based on input", () => {
+      13 |   it("returns eat food or keep working based on input", () => {
     > 14 |     expect(areYouHungry("yes")).toEqual("eat food")
          |     ^
       15 |     expect(areYouHungry("no")).toEqual("keep working")

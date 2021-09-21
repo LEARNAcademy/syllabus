@@ -16,10 +16,14 @@
 - extends
 - super()
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Process
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `inheritance-initials1-initials2` (ex. inheritance-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `inheritance-student1-student2.js` (ex. inheritance-austin-sarah.js)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Classes Review
 When we think of our application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with those objects.

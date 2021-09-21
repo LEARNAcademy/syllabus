@@ -79,9 +79,10 @@ React is a powerful Javascript library used to build more complicated user inter
 2. [React Nested Components](./react/nested-components.md)
 3. [Creating a New React Application](./react/create-react-app.md)
 4. [React State](./react/state.md/)
-4. [React State with Images](./react/state-with-images.md/)
+
 
 #### Additional Topics:
+- [React State with Images](./react/state-with-images.md/)
 - [React Component Lifecycle](./react/component-lifecycle.md)
 
 
@@ -89,11 +90,11 @@ React is a powerful Javascript library used to build more complicated user inter
 ## Unit Three: Intermediate React
 In this section we dive into what React has to offer several full-day projects.
 1. [React Props](./react/props.md)
-2. [React Functional Props](./react/functional-props.md)
-2. [React Inputs and Events](./react/inputs.md)
-2. [React Forms and Functional Props](./react/forms.md)
+1. [React Functional Props](./react/functional-props.md)
+1. [React Inputs and Events](./react/inputs.md)
 
 #### Additional Topics:
+- [React Forms and Functional Props](./react/forms.md)
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
 
@@ -102,14 +103,14 @@ In this section we dive into what React has to offer several full-day projects.
 ## Unit Four: Ruby
 Ruby is a backend, object-oriented programming language. Here we will cover the fundamentals of the Ruby language and revisit the fundamental concepts shared by many programming languages.
 1. [Ruby Introduction](./ruby/intro.md)
-2. [Ruby Conditionals](./ruby/conditionals.md)
-3. [Ruby Methods](./ruby/methods.md)
-4. [Ruby Blocks and Iterables](./ruby/blocks.md)
-5. [Ruby Hashes](./ruby/hashes.md)
-6. [Text Based Game Challenge](./ruby/textbased-challenge.md)
-7. [Ruby Classes and Objects](./ruby/classes-objects.md)
-8. [Ruby Inheritance](./ruby/inheritance.md)
-9. [Ruby Testing with RSpec](./ruby/rspec.md)
+1. [Ruby Conditionals](./ruby/conditionals.md)
+1. [Ruby Methods](./ruby/methods.md)
+1. [Ruby Blocks and Iterables](./ruby/blocks.md)
+1. [Ruby Hashes](./ruby/hashes.md)
+1. [Ruby Classes and Objects](./ruby/classes-objects.md)
+1. [Ruby Inheritance](./ruby/inheritance.md)
+1. [Ruby Testing with RSpec](./ruby/rspec.md)
+1. [Text Based Game Challenge](./ruby/textbased-challenge.md)
 
 
 
@@ -140,9 +141,6 @@ In this section we explore all the Ruby on Rails MVC architecture has to offer. 
 1. [Full-stack Rails](./rails/fullstack.md)
 1. [Rails Generate Resource](./rails/generate-resource.md)
 1. [Wildlife Tracker Challenge](./rails/wildlife-tracker-challenge.md)
-
-### This Is So Fetch
-1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
 #### Additional Topics:
 - [Postman](./rails/postman.md)
@@ -184,6 +182,9 @@ Professional development is dedicated to preparation for internship and the upco
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 Here we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concept we've covered so far.
+
+### This Is So Fetch
+1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
 ### Cat Tinder Frontend
 1. [Cat Tinder Introduction, Routing, and Wireframes](./cat-tinder/frontend/intro.md)

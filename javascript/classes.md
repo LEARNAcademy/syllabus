@@ -30,10 +30,14 @@
 (Caution: not for the faint of heart)
 - <a href="https://github.com/airbnb/javascript" target="blank">Airbnb JavaScript Style Guidelines</a>
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
+#### Process
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `classes-initials1-initials2` (ex. classes-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `classes-student1-student2.js` (ex. classes-austin-sarah.js)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Classes
 Classes are a particular type of function that contain data and behavior. Classes are the blueprints of objects. Just like functions, classes have their own scope.
@@ -240,11 +244,11 @@ class Coffee {
   }
 
   coffeeProfile(){
-    return(`${this.type}: ${this.creams()}, ${this.sugars()}`)
+    return `A ${this.type} coffee with ${this.creams()}, ${this.sugars()}`
   }
 
   creams(){
-    if (this.cream > 1){
+    if(this.cream > 1){
       return `${this.cream} creams`
     } else {
       return `${this.cream} cream`
@@ -252,7 +256,7 @@ class Coffee {
   }
 
   sugars(){
-    if (this.sugar > 1){
+    if(this.sugar > 1){
       return `${this.sugar} sugars`
     } else {
       return `${this.sugar} sugar`
@@ -261,15 +265,13 @@ class Coffee {
 }
 ```
 
-- Write the code that makes a black coffee.
+- Write the code that makes a black coffee. Then write the code that outputs the coffee's profile.
 
-- Write the code that makes a coffee with 1 cream and 2 sugars.
-
-- Write the code that makes a coffee with 2 sugars. Then write the code that outputs the coffee's profile.
+- Write the code that makes a coffee with 1 cream and 2 sugars. Then write the code that outputs the coffee's profile.
 
 2. Latte Maker
 
-- Write a Latte class that receives a flavor, a milk type and a number of shots.
+- Write a Latte class that takes a flavor, a milk type and a number of shots.
 
 - Write a method for your Latte class that outputs the latte's profile.
 

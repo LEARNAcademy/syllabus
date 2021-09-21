@@ -11,12 +11,11 @@ Functions are powerful tools that can take any kind of data as an input. Often w
 - can create a function that acts on an array using a for loop
 
 #### Process
-- `cd` into the appropriate folder or repository
-- Create a new branch
-- `touch` a file with no spaces and `.js` extension, `javascript-func-loops-arrays.js`
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `func-loops-arrays-initials1-initials2` (ex. func-loops-arrays-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `func-loops-arrays-student1-student2.js` (ex. func-loops-arrays-austin-sarah.js)
 - Open the folder in a text editor
 - Code!
-- $ `node javascript-func-loops-arrays.js`
 
 #### Troubleshooting Tips
 - Does the function have a return?

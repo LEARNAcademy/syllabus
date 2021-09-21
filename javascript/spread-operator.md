@@ -19,14 +19,12 @@
 - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="blank">MDN Spread Syntax</a>
 - <a href="https://github.com/bravo-2018/daily_challenges/blob/master/March-28/dedupe/dedupe.js" target="blank">Deduping function challenge</a> refactored to make use of spread syntax
 
-## Set Up
-- Create a file in a text editor with the extension `.js`
-- In terminal, cd into the appropriate folder
-- $ node filename.js
 
 Offical MDN Definition: Spread syntax allows an iterable (such as an array or string) to be expanded in places where zero or more
 arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded
 in places where zero or more key-value pairs (for object literals) are expected.
+
+---
 
 ## Array concatenation
 

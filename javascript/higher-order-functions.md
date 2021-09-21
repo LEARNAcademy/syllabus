@@ -19,12 +19,11 @@ Higher-order functions are built in methods in JavaScript that act on arrays. Th
 - index
 
 #### Process
-- `cd` into the appropriate folder or repository
-- Create a new branch
-- `touch` a file with no spaces and `.js` extension, `higher-order-functions.js`
+- `cd` into the `javascript-challenges` repository
+- Create a new branch: `higher-order-initials1-initials2` (ex. higher-order-aw-sp)
+- `touch` a file with no spaces and `.js` extension: `higher-order-student1-student2.js` (ex. higher-order-austin-sarah.js)
 - Open the folder in a text editor
 - Code!
-- $ `node higher-order-functions.js`
 
 #### Troubleshooting Tips
 - Does the function have a return?
