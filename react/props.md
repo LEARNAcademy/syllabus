@@ -17,13 +17,27 @@
 - props
 - component call
 
-## Set Up
-```
-$ yarn create react-app sample-app
-$ cd sample-app
-$ yarn start
-```
-- create a directory in *src* called *components*
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `props-initials1-initials2` (ex. props-aw-sp)
+- Create a new React application with no spaces: `create react-app props-student1-student2` (ex. create react-app props-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Code!
+
+#### Useful Commands
+- $ yarn create react-app app-name
+- $ yarn start
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
+
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
 
 ## Communication Between Components
 

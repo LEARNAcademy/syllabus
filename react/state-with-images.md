@@ -10,14 +10,28 @@ Images can be saved within a React component and imported to a component.
 ## Vocabulary
 - assets file
 
-## Set Up
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `images-initials1-initials2` (ex. images-aw-sp)
+- Create a new React application with no spaces: `create react-app images-student1-student2` (ex. create react-app images-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Create a directory in *src* called *assets*
+- Code!
 
-#### Creating a new React app:
-```
-$ yarn create react-app lightbulb-challenge
-$ cd lightbulb-challenge
-$ yarn start
-```
+#### Useful Commands
+- $ yarn create react-app app-name
+- $ yarn start
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
+
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
 
 ## Light Bulb Challenge
 - As a user, I can see a square on the screen with the word off in the middle.

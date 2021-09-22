@@ -23,12 +23,27 @@
 - Conditional rendering
 - Event, often shortened to `e`
 
-#### Creating a new React app:
-```
-$ yarn create react-app madlibs
-$ cd madlibs
-$ yarn start
-```
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `forms-initials1-initials2` (ex. forms-aw-sp)
+- Create a new React application with no spaces: `create react-app forms-student1-student2` (ex. create react-app forms-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Code!
+
+#### Useful Commands
+- $ yarn create react-app app-name
+- $ yarn start
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
+
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
 
 ### Forms
 `<form>` is an HTML/JSX tag that wraps a collection of user inputs. Forms are a very common tool that allows developers to interact with a user. Managing form data appropriately is an important part of development.

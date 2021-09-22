@@ -20,15 +20,30 @@
 - Handler methods
 
 ## Additional Resources
-- [ GeeksforGeeks ](https://www.geeksforgeeks.org/javascript-events/)
-- [ W3Schools HTML Input ](https://www.w3schools.com/tags/tag_input.asp)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/javascript-events/)
+- [W3Schools HTML Input](https://www.w3schools.com/tags/tag_input.asp)
 
-#### Creating a new React app:
-```
-$ yarn create react-app listening-robot
-$ cd listening-robot
-$ yarn start
-```
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `inputs-initials1-initials2` (ex. inputs-aw-sp)
+- Create a new React application with no spaces: `create react-app inputs-student1-student2` (ex. create react-app inputs-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Code!
+
+#### Useful Commands
+- $ yarn create react-app app-name
+- $ yarn start
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
+
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
 
 ## Inputs and DOM Events
 Web applications are built to handle interaction with a user. These interactions can happen in a variety of ways. The user can click with their mouse, hover over elements, or use their keyboard to type. All of these interactions are considered **DOM events**. The DOM (Document Object Model) is always listening for changes. As a user moves their mouse across the screen, the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly depending on the type of event.
@@ -57,7 +72,7 @@ Value can be used differently for different types of input types. For buttons, a
 ```javascript
 <input
   type="text"
-  value={ this.state.userInput }
+  value={this.state.userInput}
 />
 ```
 
@@ -67,8 +82,8 @@ All inputs are listening for events. Developers can use the `onChange` method to
 ```javascript
 <input
   type="text"
-  value={ this.state.userInput }
-  onChange={ this.handleChange }
+  value={this.state.userInput}
+  onChange={this.handleChange}
 />
 ```
 
@@ -103,19 +118,19 @@ class App extends Component{
 
   handleChange = (e) => {
     console.log(e.target.value)
-    this.setState({ userInput: e.target.value })
+    this.setState({userInput: e.target.value})
   }
 
   render(){
     return(
-      <React.Fragment>
+      <>
         <input
           type="text"
-          value={ this.state.userInput }
-          onChange={ this.handleChange }
+          value={this.state.userInput}
+          onChange={this.handleChange}
         />
-        <p>{ this.state.userInput }</p>
-      </React.Fragment>
+        <p>{this.state.userInput}</p>
+      </>
     )
   }
 }

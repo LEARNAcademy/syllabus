@@ -14,12 +14,27 @@
 - dumb/display component
 - smart/logic component
 
-#### Creating a new React app:
-```
-$ yarn create react-app app-name
-$ cd app-name
-$ yarn start
-```
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `func-props-initials1-initials2` (ex. func-props-aw-sp)
+- Create a new React application with no spaces: `create react-app func-props-student1-student2` (ex. create react-app func-props-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Code!
+
+#### Useful Commands
+- $ yarn create react-app app-name
+- $ yarn start
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
+
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
 
 ## Passing Information "Up the River"
 

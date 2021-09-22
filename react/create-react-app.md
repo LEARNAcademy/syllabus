@@ -1,46 +1,61 @@
 # Creating a New React Application
 
-## Video: React
-[![YouTube](http://img.youtube.com/vi/bZejAT1hZuY/0.jpg)](https://www.youtube.com/watch?v=bZejAT1hZuY)
+#### Overview
+Until late 2016, the hardest part about working with React was just getting a new app set up with the appropriate dependencies. Facebook, the creators of React, recognized this problem and released some tools to help developers get started more easily. Yarn is a JavaScript package manager that creates the file structure of a React app and manages the dependencies.
 
-## Overview
-- Until late 2016, the hardest part about working with React was just getting a new app set up with the appropriate dependencies. Facebook recognized this problem, and released some tools to help developers get started more easily.
+#### Previous Lecture (57 min)
+[![YouTube](http://img.youtube.com/vi/YThNhP4i5NE/0.jpg)](https://www.youtube.com/watch?v=YThNhP4i5NE)
 
-## Learning Objectives
-- Successfully create a new React application
-- Removing unnecessary React boilerplate code
-- Understanding the anatomy of a class component
-- Understanding how to import, export, and display nested components
-- Following naming conventions for creating new files for nested components
+#### Learning Objectives
+- can demonstrate the process of setting up a basic class-based React component
+- can demonstrate the creation of multiple components
+- can display multiple components inside a container component
 
-## Vocabulary
+#### Vocabulary
+- kabob-case
+- localhost:3000
 - import
 - export
 
-## Useful Commands
+#### Process
+- `cd` into the `react-challenges` repository
+- Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
+- Create a new React application with no spaces: `create react-app intro-student1-student2` (ex. create react-app intro-austin-sarah)
+- `cd` into the project
+- Open the project in a text editor
+- Create a directory in *src* called *components*
+- Code!
+
+#### Useful Commands
 - $ yarn create react-app app-name
 - $ yarn start
-- control-c
+- control + c (stops the server)
+- control + t (opens a new terminal tab)
 
-## Creating a New React Application
-Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This-is-called-kabob-case.
+#### Troubleshooting Tips
+- Is your server running?
+- Are your components imported and exported?
+- What is your error message telling you?
+
+---
+### Creating a New React Application
+Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This is called **kabob-case**.
 ```
 $ yarn create react-app sample-app
 ```
 
 This creates a directory called 'sample-app' and
-installs all the files and dependencies needed to get started. Navigate into the new
-directory, and fire up your new app.
+installs all the files and dependencies needed to get started. Navigate into the new directory, and fire up the server for your new app.
 
 ```
 $ cd sample-app
 $ yarn start
 ```
-The command `yarn start` will automatically open a browser to the address `localhost:3000` and render the starter React application.
+The command `yarn start` will automatically open a browser to the address **localhost:3000** which is the url address of your home server. The command `yarn start` will render the starter React application.
 
 After you type `yarn start` you will notice your terminal is busy running React. If you want to interact with your terminal you can open a new tab (command-t). To stop the React app from running use the command `control c`
 
-## Modifying The App Component
+### Modifying The App Component
 
 Navigate to `App.js` within the `src` directory. We're going to use a class based component instead of the functional one that comes pre-built for us by React.
 
@@ -49,8 +64,8 @@ A very basic functional component looks something like this:
 ```javascript
 import React from 'react'
 
-function App() {
-  return (
+function App(){
+  return(
     <h1>A Basic Functional Component</h1>
   )
 }
@@ -64,8 +79,10 @@ import React, { Component } from 'react'
 
 class App extends Component{
   render(){
-    return (
-      <h1>A Basic Class Component</h1>
+    return(
+      <>
+        <h1>A Basic Class Component</h1>
+      </>
     )
   }
 }
@@ -73,30 +90,28 @@ class App extends Component{
 export default App
 ```
 
-#### So What Is Going On In App.js?
+### App.js
 
 Here is the basic class component with comments describing what each line is doing:
 
 ```javascript
-// We're using React and Component from the react library
+// We're using React and destructuring Component from the React library
 import React, { Component } from 'react'
 
-// The main css file is called App.css, it is imported to App.js here
-import './App.css'
-
 // We create a new component that extends the Component class, which React provides
-class App extends Component {
+class App extends Component{
 
-  // When the component is first put on the page, and every time something changes in our component, the render function is called
-  // This function builds the JSX that will be put on the page by React
-  render() {
+  // Render is a React lifecycle method
+  // When the component is first put on the page, and every time something changes in our component, the render function runs automatically
+  render(){
 
-    // Most of the React apps use something called JSX to preprocess HTML (XML actually) back into plain old JavaScript before the file is sent to the browser
-    return (
-      <div className="App">
-        // Why 'className' instead of 'class'?  It was a design decision on the part of the React development team
-          <h2>Welcome to React</h2>
-      </div>
+    // The render method returns JSX
+    // React apps use a hybrid markup language called JSX to preprocess HTML (XML actually) back into plain old JavaScript before the file is sent to the browser
+    return(
+      // React fragments are used to wrap all the markup tags
+      <>
+        <h2>Welcome to React</h2>
+      </>
     )
   }
 }
@@ -105,13 +120,15 @@ class App extends Component {
 export default App
 ```
 
-## Nesting Components
+### Nesting Components
 
 For this example, we will create an application that has a Header component, a Recipes component, and a Footer component.
 
-We will create a new file inside the `src` folder called `Header.js`. It is convention to name the file the same name as the class component in that file.
+We will create a new folder inside the `src` folder called `components`. React apps will have many components and keeping our components organized is important.
 
-**src/Header.js**
+Inside the components folder, create a new file called `Header.js`. It is convention to name the file the same name as the class component in that file.
+
+**src/components/Header.js**
 
 ```javascript
 import React, { Component } from 'react'
@@ -119,9 +136,9 @@ import React, { Component } from 'react'
 class Header extends Component{
   render(){
     return(
-      <div>
-        <h1>This is a Header</h1>
-      </div>
+      <>
+        <h1>This is the header</h1>
+      </>
     )
   }
 }
@@ -142,14 +159,14 @@ With the component defined, we can then call it in the App component. This requi
 
 ```javascript
 import React, { Component } from 'react'
-import Header from './Header'
+import Header from './component/Header'
 
 class App extends Component {
-  render() {
-    return (
-      <div>
+  render(){
+    return(
+      <>
         <Header />
-      </div>
+      </>
     )
   }
 }
@@ -160,9 +177,9 @@ export default App
 
 Next we will add a recipe component.
 
-We create the Recipes component in the `src` folder.
+We create the Recipes component in the `components` folder.
 
-**src/Recipes.js**
+**src/components/Recipes.js**
 
 ```javascript
 import React, { Component } from 'react'
@@ -170,10 +187,13 @@ import React, { Component } from 'react'
 class Recipes extends Component{
   render(){
     return(
-      <ul>
-        <li>Recipe 1</li>
-        <li>Recipe 2</li>
-      </ul>
+      <>
+        <ul>
+          <li>Recipe 1</li>
+          <li>Recipe 2</li>
+          <li>Recipe 3</li>
+        </ul>
+      </>
     )
   }
 }
@@ -187,16 +207,16 @@ Now we will import Recipes in App.js.
 
 ```javascript
 import React, { Component } from 'react'
-import Header from './Header'
-import Recipes from './Recipes'
+import Header from './components/Header'
+import Recipes from './components/Recipes'
 
 class App extends Component {
-  render() {
-    return (
-      <div>
+  render(){
+    return(
+      <>
         <Header />
         <Recipes />
-      </div>
+      </>
     )
   }
 }
@@ -206,21 +226,21 @@ export default App
 
 Next we will add a footer component.
 
-We create the Footer component in the `src` folder.
+We create the Footer component in the `components` folder.
 
-**src/Footer.js**
+**src/components/Footer.js**
 
 ```javascript
 import React, { Component } from 'react'
 
 class Footer extends Component{
-  render() {
-    return (
-      <footer>
+  render(){
+    return(
+      <>
         LEARN Academy
         <br />
-        Alpha 2020
-      </footer>
+        Delta 2021
+      </>
     )
   }
 }
@@ -233,18 +253,18 @@ Import Footer in App.js.
 
 ```javascript
 import React, { Component } from 'react'
-import Header from './Header'
-import Recipes from './Recipes'
-import Footer from './Footer'
+import Header from './components/Header'
+import Recipes from './components/Recipes'
+import Footer from './components/Footer'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
+class App extends Component{
+  render(){
+    return(
+      <>
         <Header />
         <Recipes />
         <Footer />
-      </div>
+      </>
     )
   }
 }
@@ -252,28 +272,14 @@ class App extends Component {
 export default App
 ```
 
+---
 
-## Challenge 1: About Us
-- Create a new React application
-- Delete the unnecessary boilerplate code
-- Create a class in App.js
-
-#### User Stories
-- As a user, I can see a Header component with the text 'About Us'
-- As a user, I can see a Content component with information about you and your partner
-- As a user, I can see a Footer component with your team name
+### Challenges
+- As a user, I can see a Header component with the title of your app
+- As a user, I can see a Profile component with information about you and your partner
+- As a user, I can see a Footer component with your cohort name
+- As a user, I can see a Favorites component with a list of top five favorites (ie. Top 5 Favorite TV Shows, Top 5 Favorite Songs, Top 5 Favorite Taco Shops)
 - As a user, I can see a customized browser tab
-
-## Challenge 2: Our Top 5
-- Create a new React application
-- Delete the unnecessary boilerplate code
-- Create a class in App.js
-
-#### User Stories
-- As a user, I can see a Header component with the title of your application (ie. Top 5 Favorite TV Shows, Top 5 Favorite Songs, Top 5 Favorite Taco Shops)
-- As a user, I can see a customized browser tab
-- As a user, I can see a component with a list of your favorites
-- As a user, I can see a component containing a little blurb about the items on the list (one descriptive component per item)
 
 ---
 [Back to Syllabus](../README.md#unit-two-introduction-to-react)

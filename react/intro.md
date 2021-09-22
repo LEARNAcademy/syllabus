@@ -29,13 +29,6 @@ React is JavaScript library for creating user interfaces. Everything in React is
 #### Additional Resources
 - [React Documentation](https://reactjs.org/)
 
-#### Process
-- `cd` into the `react-challenges` repository
-- Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
-- `touch` a file with no spaces and `.js` extension: `functions-student1-student2.html` (ex. intro-austin-sarah.html)
-- Open the folder in a text editor
-- Code!
-
 #### Troubleshooting Tips
 - Seeing a blank page? Inspect and look for errors!
 
