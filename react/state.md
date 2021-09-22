@@ -23,7 +23,7 @@ JavaScript classes manage both data and behavior. In a React class component, th
 #### Process
 - `cd` into the `react-challenges` repository
 - Create a new branch: `state-initials1-initials2` (ex. state-aw-sp)
-- Create a new React application with no spaces: `create react-app state-student1-student2` (ex. create react-app state-austin-sarah)
+- Create a new React application with no spaces: `yarn create react-app state-student1-student2` (ex. create react-app state-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
 - Create a directory in *src* called *components*
