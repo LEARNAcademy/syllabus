@@ -121,7 +121,7 @@ Rails is full-stack framework built into the Ruby programming language. Here we 
 1. [PostgreSQL Queries](./postgresql/queries.md)
 
 ### Ruby on Rails
-1. [Ruby on Rails Introduction](./rails/intro.md)
+1. [Ruby on Rails Introduction](./rails/rails-intro.md)
 1. [Active Record Introduction](./rails/active-record-intro.md)
 1. [Active Record Migrations](./rails/migrations.md)
 1. [Active Record Associations](./rails/associations.md)
