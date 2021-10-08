@@ -101,7 +101,7 @@ In this section we dive into what React has to offer several full-day projects.
 
 ## Unit Four: Ruby
 Ruby is a backend, object-oriented programming language. Here we will cover the fundamentals of the Ruby language and revisit the fundamental concepts shared by many programming languages.
-1. [Ruby Introduction](./ruby/rails-intro.md)
+1. [Ruby Introduction](./ruby/intro.md)
 1. [Ruby Conditionals](./ruby/conditionals.md)
 1. [Ruby Methods](./ruby/methods.md)
 1. [Ruby Blocks and Iterables](./ruby/blocks.md)
