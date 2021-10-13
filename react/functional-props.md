@@ -17,7 +17,7 @@
 #### Process
 - `cd` into the `react-challenges` repository
 - Create a new branch: `func-props-initials1-initials2` (ex. func-props-aw-sp)
-- Create a new React application with no spaces: `create react-app func-props-student1-student2` (ex. create react-app func-props-austin-sarah)
+- Create a new React application with no spaces: `yarn create react-app func-props-student1-student2` (ex. yarn create react-app func-props-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
 - Create a directory in *src* called *components*
