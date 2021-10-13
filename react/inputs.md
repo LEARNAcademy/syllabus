@@ -26,7 +26,7 @@
 #### Process
 - `cd` into the `react-challenges` repository
 - Create a new branch: `inputs-initials1-initials2` (ex. inputs-aw-sp)
-- Create a new React application with no spaces: `create react-app inputs-student1-student2` (ex. create react-app inputs-austin-sarah)
+- Create a new React application with no spaces: `yarn create react-app inputs-student1-student2` (ex. yarn create react-app inputs-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
 - Create a directory in *src* called *components*

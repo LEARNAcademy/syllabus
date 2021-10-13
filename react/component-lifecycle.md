@@ -1,8 +1,8 @@
 # React Component Lifecycle
 
-When we started with React components, we spent a lot of time working with the `render()` method. We now know that it is a built-in method in React class components that *1) determines what is drawn or rendered onto the screen* and *2) run automatically at certain times by React*.
+When we started with React components, we spent a lot of time working with the `render()` method. Render is a React class component lifecycle method. It determines the markdown that is drawn or rendered in the browser. Because render is a React class component lifecycle method, it run automatically anytime the view updates.
 
-That leaves us with some questions right? One for example might be: How and when does React know to run the `render()` method?
+How and when does React know it needs to to run the `render()` method?
 
 What we haven't talked about yet - and what will help answer these types of questions - is how `render()` is one of several built-in methods called **lifecycle methods** and how these lifecycle methods organize React functionality so that, as dynamic as our components are, they still behave in a predictable manner.
 
@@ -14,9 +14,9 @@ First, let's look at the big picture. For that, we'll go straight to a great dia
 
 The lifecycles break down into 3 main phases:
 
-1) Mounting - When a component is put into the DOM
-2) Updating - When something in the component is updated (ie state)
-3) Unmounting - When a component is removed from the DOM
+1. Mounting - When a component is put into the DOM
+2. Updating - When something in the component is updated (i.e. the state object)
+3. Unmounting - When a component is removed from the DOM
 
 Notice that inside of each group are keywords. Some are familiar to you, some not so much. These, you might have guessed, refer to methods that are available to us in class components.
 
@@ -27,7 +27,7 @@ Additionally, each is subdivided into:
 - Render phase
 - Commit phase
 
-Of the three main phases, you will spend most of your time working with the first 2. Let's use some code to take a deeper look at these two phases.
+Of the three main phases, you will spend most of your time working with the first two. Let's use some code to take a deeper look at these two phases.
 
 ## The phases in action
 
@@ -36,7 +36,7 @@ I have a very simple React application with one `Button` component that currentl
 *src/Button.js*:
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Button extends Component {
   render(){
@@ -46,14 +46,14 @@ class Button extends Component {
   }
 }
 
-export default Button;
+export default Button
 ```
 
 Right now only utilizing the render method. Let's add a `console.log` to the indicating when it runs:
 
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Button extends Component {
   render(){
@@ -64,7 +64,7 @@ class Button extends Component {
   }
 }
 
-export default Button;
+export default Button
 ```
 
 If we inspect the browser now, we now see the `log` statement indicating that the `render()` ran. It doesn't tell us much so let's add to our application.

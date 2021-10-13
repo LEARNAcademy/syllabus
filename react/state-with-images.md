@@ -13,7 +13,7 @@ Images can be saved within a React component and imported to a component.
 #### Process
 - `cd` into the `react-challenges` repository
 - Create a new branch: `images-initials1-initials2` (ex. images-aw-sp)
-- Create a new React application with no spaces: `create react-app images-student1-student2` (ex. create react-app images-austin-sarah)
+- Create a new React application with no spaces: `yarn create react-app images-student1-student2` (ex. yarn create react-app images-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
 - Create a directory in *src* called *components*
