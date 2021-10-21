@@ -15,11 +15,11 @@
 - Accessible design features
 - Continuous Integration
 - External API
-  - [ Spotify ](https://developer.spotify.com/documentation/web-api/)
-  - [ Yelp Fusion ](https://www.yelp.com/fusion)
-  - [ Eventbrite ](https://www.eventbrite.com/platform/api)
-  - [ Weather Information ](https://weatherstack.com/documentation)
-  - [ Fun Translations ](https://funtranslations.com/api/)
+  - [Spotify](https://developer.spotify.com/documentation/web-api/)
+  - [Yelp Fusion](https://www.yelp.com/fusion)
+  - [Eventbrite](https://www.eventbrite.com/platform/api)
+  - [Weather Information](https://weatherstack.com/documentation)
+  - [Fun Translations](https://funtranslations.com/api/)
 
 ### Things to Think About
 - Step out of your comfort zone

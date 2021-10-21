@@ -25,7 +25,9 @@ Each team should define a schedule and hold each other accountable to stick with
 9:00 - Check in with the class
 
 9:15 - Morning standup with the class
-- Tech lead tells us what the team worked on yesterday, what the team is working on today, and shares any blockers.
+- Project manager shares what tasks did the team completes yesterday and what task is the team planning to work on today.
+- Tech manager share any blockers you team has and the team's plan for the mentorship session.
+
 
 9:30 - Check in with your group and discuss the plan for the day
 - What story is each person working on?
@@ -45,7 +47,9 @@ Each team should define a schedule and hold each other accountable to stick with
 - Discuss actions items for tomorrow
 
 4:30 - Afternoon standup with the class
-- Product manager shares what the team accomplished today and gives a current status report for the state of the application.
+- Product manager shares the overall status of your app.
+- Design manager shares the current status of the user experience.
+
 
 4:45 - Check out with the class
 
