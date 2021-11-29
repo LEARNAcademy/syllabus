@@ -1,25 +1,23 @@
 # Active Record Introduction
 
-### Video: Active Record Details
-[![YouTube](http://img.youtube.com/vi/R5vpRwpWctY/0.jpg)](https://www.youtube.com/watch?v=R5vpRwpWctY)
+#### Overview
+Active Record is the interface between a Rails application and the database. Rails has specific commands to create new tables in the database and to edit existing tables. Active Record has its own syntax to query a database. The syntax is similar to SQL queries with a Ruby-flavor.
 
-### Video: Rails Model (Older Video)
-[![YouTube](http://img.youtube.com/vi/3D_JwWoJKm4/0.jpg)](https://www.youtube.com/watch?v=3D_JwWoJKm4)
+#### Previous Lecture (47 min)
+[![YouTube](http://img.youtube.com/vi/2NzIDFx2Q3c/0.jpg)](https://www.youtube.com/watch?v=2NzIDFx2Q3c)
 
-### Overview
-- Active Record is the interface between a Rails application and the database.
-- Rails has specific commands to create new tables in the database and to edit existing tables.
-- Active Record has its own syntax to query a database. The syntax is similar to SQL queries with a Ruby-flavor.
-- Seeds allow developers to share mock database content during the scaffolding phase of development.
+#### Learning Objectives
+- can define ORM
+- can differentiate between a database and an ORM
+- can visualize a database as a collection of rows and columns
+- can recall the command to generate a model
+- can differentiate between terminal and Rails console
+- can recall basic Active Record data types
+- can equate models with classes
+- can recognize that the schema cannot be updated directed
+- can use appropriate Active Record syntax to perform CRUD actions on a model
 
-### Learning Objectives
-- Exploring the model layer of the MVC paradigm in a Rails application
-- Understanding the difference between SQL and Active Record
-- Using a Rails generate command to create a database table
-- Following the Rails naming conventions for creating models
-- Conceptualizing the difference between seeded mock data and database content
-
-### Vocabulary
+#### Vocabulary
 - ORM
 - Active Record
 - Generate commands
@@ -28,15 +26,14 @@
 - Database schema
 - Rails console
 - Primary key
-- Seeds
+
+#### Additional Resources
+- [ Rails Naming Conventions ](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
 ### Useful Commands
 - $ rails c
 - $ rails generate model ModelName
 - $ rails db:migrate
-
-### Additional Resources
-- [ Rails Naming Conventions ](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
 ### Set Up
 
@@ -53,11 +50,12 @@ In a browser navigate to:
 or
 `127.0.0.1:3000`
 
-### Troubleshooting Tips
+#### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
 
+---
 ### Object-Relational Mapping
 **ORM** (Object-relational mapping) is a programming technique for converting data between incompatible systems using object-oriented programming languages. ORM is a tool that allows developers to write SQL queries using Rails.
 

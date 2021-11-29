@@ -1,29 +1,39 @@
 # Ruby on Rails Introduction
 
-## Overview
-- "Learning to build a modern web application is daunting. Ruby on Rails makes it much easier and more fun. It includes everything you need to build fantastic applications, and you can learn it with the support of our large, friendly community." -- Rails Docs
-- Ruby on Rails is a server-side web application framework written in Ruby. Rails was created by Danish programmer David Heinemeier Hansson (known as DHH). Rails was released in July 2004 as open source code.
-- Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
+#### Overview
+"Learning to build a modern web application is daunting. Ruby on Rails makes it much easier and more fun. It includes everything you need to build fantastic applications, and you can learn it with the support of our large, friendly community." -- Rails Docs
 
-## Learning Objectives
-- Exploring the fundamentals of Ruby on Rails
-- Generating a new Rails project
-- Running the Rails server
+Ruby on Rails is a server-side web application framework written in Ruby. Rails was created by Danish programmer David Heinemeier Hansson (known as DHH). Rails was released in July 2004 as open source code. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
 
-## Vocabulary
+#### Previous Lecture (50 min)
+[![YouTube](http://img.youtube.com/vi/32GuNd2rFEk/0.jpg)](https://www.youtube.com/watch?v=32GuNd2rFEk)
+
+#### Learning Objectives
+- can recall the command to create a new Rails application
+- can recall the command to start the application server
+- can view the Rails boilerplate page in the browser
+- can navigate a Rails application to find the model, controller, views, db, gemfiles
+- can recall the parts of MVC architecture
+- can give examples of the technologies making up the MVC architecture
+
+#### Vocabulary
 - Ruby on Rails
 - MVC
 
-## Additional Resources
-- <a href="https://rubyonrails.org/" target="blank">Rails Docs</a>
-- <a href="https://medium.com/@instaacarma/the-history-of-ruby-on-rails-986ead4e0e0a" target="blank">History of Ruby on Rails</a>
+#### Additional Resources
+- [Rails Docs](https://rubyonrails.org/)
+- [History of Ruby on Rails](https://medium.com/@instaacarma/the-history-of-ruby-on-rails-986ead4e0e0a)
 
+---
 ## Ruby on Rails Principles
 - Convention over Configuration: "One of the early productivity mottos of Rails went: “You’re not a beautiful and unique snowflake”. It postulated that by giving up vain individuality, you can leapfrog the toils of mundane decisions, and make faster progress in areas that really matter."
 - Programmer Happiness: "There would be no Rails without Ruby, so it's only fitting that the first doctrinal pillar is lifted straight from the core motivation for creating Ruby. Ruby’s original heresy was indeed to place the happiness of the programmer on a pedestal."
 
 ## Create a Rails App
-Now that we've explored HTML, CSS, JavaScript, and Ruby, we have the complete set of tools needed to start learning Rails, the framework for writing web applications in Ruby.
+Now that we've explored HTML, CSS, JavaScript, and Ruby, we have the complete set of tools needed to start learning **Ruby on Rails**, the framework for writing full-stack web applications in the Ruby programming language.
+
+### MVC
+Ruby on Rails follows an MVC architectural pattern. Architectural patterns are a way of dividing up responsibility within the application. **MVC** stands for model, view, and controller. Model is the database layer. The view is the part the user sees. The controller is like the switch board that collects appropriate data from the model and sends it to construct the view.
 
 ```
 $ rails new app_name -d postgresql -T
