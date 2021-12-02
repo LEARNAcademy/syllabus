@@ -9,7 +9,7 @@ If you would like to contribute to our syllabus, please review the following:
 - Clone the [main LEARN syllabus](https://github.com/LEARNAcademy/Syllabus) to your local machine.
 - Create a new branch for your fix using `git checkout -b descriptive-branch-name-here`.
 - Make the appropriate changes that correspond with your branch name.
-- Commit your changes with a short, but descriptive message
+- Commit your changes with a short, but descriptive message.
 - Push the changes to the repository using `git push origin descriptive-branch-name-here`.
 - Submit a pull request.
 - Title the pull request with a short description of the changes made.
@@ -28,11 +28,11 @@ If you would like to contribute to our syllabus, please review the following:
 - Terminal commands in text instructions are wrapped in single back ticks.
 - File paths in text instructions are in italics.
 - All variables have descriptive names.
-- No spaces around HTML/JSX attributes `ex) <div className="main">`.
-- One space around JavaScript and Ruby operators `ex) 8 + 5`.
+- No spaces around HTML/JSX attributes ex) `<div className="main">`.
+- One space around JavaScript and Ruby operators ex) `8 + 5`.
 - All JavaScript strings are in double quotes unless necessary for punctuation.
 - All Ruby strings are in single quotes unless necessary for punctuation.
-- Semi colons are not used in JavaScript code unless necessary.
+- Semicolons are not used in JavaScript code unless necessary.
 - Code is formatted into its own distinct block with triple back ticks and styled with the name of the language in all lowercase.
 - File paths appear above code blocks in italics.
 
