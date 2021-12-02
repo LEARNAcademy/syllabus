@@ -6,7 +6,7 @@
 - Create branch with the week and your name, e.g `week-1-sarah-proctor`
 - Code and pseudo code
 - Git add, commit, push
-- Create pull request
+- Create pull request and leave open for review!
 - Merge code after review
 
 #### Overview
@@ -21,12 +21,12 @@ Completing all assessments on time is required to be eligible for internship. A 
 An assessment is not complete until the assessment is reviewed by an instructor, and the working branch is merged into the main branch.
 
 #### Useful Commands
-- `git clone <url>`
-- `git checkout -b <branch-name>`
-- `git status`
-- `git add .`
-- `git commit -m "useful information here"`
-- `git push origin <branch-name>`
+- $ `git clone <url>`
+- $ `git checkout -b <branch-name>`
+- $ `git status`
+- $ `git add .`
+- $ `git commit -m "useful information here"`
+- $ `git push origin <branch-name>`
 
 #### Troubleshooting
 - Did you save?
@@ -46,10 +46,10 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 
 #### In Terminal
 - cd into an appropriate location
-- Type `git clone` and paste the link you copied from your git repository
+- Type $ `git clone` and paste the link you copied from your git repository
 - cd into the assessment directory
 - You should see the full name of the assessment followed by your GitHub handle
-- Checkout a branch: `git checkout -b <branch name>`
+- Checkout a branch: $ `git checkout -b <branch name>`
   - No quotes or spaces in your branch name
   - Use the naming convention `<week-number-your-name>` e.g. week-1-sarah-proctor
 - Terminal will say `Switched to a new branch <branch-name>`
@@ -62,9 +62,9 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 
 #### Ready to Submit
 - cd into the correct folder
-- `git add .`
-- `git commit -m "completed assessment"`
-- `git push origin <branch-name>`
+- $ `git add .`
+- $ `git commit -m "completed assessment"`
+- $ `git push origin <branch-name>`
 - On GitHub refresh the page and find the green `Compare & pull request` button
 - Leave any note you feel will be prudent for the instructors and click the green `Create pull request` button
 

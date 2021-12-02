@@ -13,13 +13,8 @@
 ### Project Stretch Goals
 - Responsive design (include a phone view for example)
 - Accessible design features
-- Continuous Integration
-- External API
-  - [Spotify](https://developer.spotify.com/documentation/web-api/)
-  - [Yelp Fusion](https://www.yelp.com/fusion)
-  - [Eventbrite](https://www.eventbrite.com/platform/api)
-  - [Weather Information](https://weatherstack.com/documentation)
-  - [Fun Translations](https://funtranslations.com/api/)
+- Continuous integration
+- Incorporate an external API
 
 ### Things to Think About
 - Step out of your comfort zone
@@ -27,6 +22,36 @@
 - Work on a feature or part of the app you’re not completely comfortable with
 - Organization and clear communication - make sure everyone is on the same page
 - Make sure everyone feels included
+
+### Project Demos - 10 min total
+General reminders
+- No one will notice your bugs if you don't point them out
+- Use "we" rather than "I" statements
+- Please practice your demo and **stay within the time total limit**
+- The audience doesn't know the demo format
+
+Product (2 min)
+- Introduce yourself and your role on the team
+- Introduce your team name and your app name
+- Share the elevator pitch for your application (you may need to revise your pitch if your application changed during development)
+
+Design (2 min)
+- Introduce yourself and your role on the team
+- Show off the UX/UI of your application
+- Highlight 2-3 things for which your team is proud
+
+Tech (2 min)
+- Introduce yourself and your role on the team
+- Share the code functionality for the 2-3 things for which your team is proud (corresponding to the topics covered in UX/UI)
+
+Project (2 min)
+- Introduce yourself and your role on the team
+- Share one notable blocker your team overcame
+- Share what a typical day looked like for your team during the project
+
+Wrap-up (2 min)
+- Each person share something you learned
+- Each person share some advice for the next cohort
 
 ---
 [Back to Syllabus](../README.md#unit-ten-capstone-project-mvp)

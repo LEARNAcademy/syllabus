@@ -221,9 +221,8 @@ There are many ways to create a full-stack application. In this section we use R
 
 ## Unit Ten: Capstone Project, MVP
 The capstone project is the peak experience at LEARN Academy. Students work in a small group to create a full-stack web application. Acting as a development team, the students use agile and scrum project management techniques to plan, wireframe, code, and deploy an application.
-- [Capstone Prep Checklist](./capstone/prep-checklist.md)
+- [Capstone Project Details](./capstone/project-details.md)
 - [Capstone Requirements](./capstone/requirements.md)
-- [Capstone Schedules](./capstone/schedule.md)
 - [Rails has_many_through](./capstone/has_many_through.md)
 - [Modifying Devise](./capstone/modifying-devise.md)
 
