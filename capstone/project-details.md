@@ -10,6 +10,7 @@
 - [ ] Create a team GitHub Organization
   - [ ] Add all team members, instructors, and mentors in the role of "owner"
   - [ ] Add an image to your organization
+  - [ ] Add Slack integrations for your repository `/github subscribe <repo-url>`
 - [ ] Create a team Trello Board
   - [ ] Add the instructors
 - [ ] Create a team Heroku account
@@ -56,8 +57,8 @@ A typical day:
 9:00 - Check in with the class
 
 9:15 - Morning standup with the class
-- Project manager shares what tasks did the team completes yesterday and what task is the team planning to work on today.
-- Tech manager share any blockers you team has and the team's plan for the mentorship session.
+- Project: What tasks did you complete yesterday? What task are you working on today?
+- Tech: What are your blockers? What is your plan for your mentorship session today?
 
 9:30 - Check in with your group and discuss the plan for the day
 - What story is each person working on?
@@ -77,8 +78,8 @@ A typical day:
 - Discuss actions items for tomorrow
 
 4:30 - Afternoon standup with the class
-- Product manager shares the overall status of your app.
-- Design manager shares the current status of the user experience.
+- Product: What did your team do today that got your application closer to the requirements of the project?
+- Design: What did your team do today that increased your user's experience?
 
 4:45 - Check out with the class
 ```

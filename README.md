@@ -8,9 +8,9 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ---
 ## Table of Contents
-- [Unit One: Javascript Foundations](#unit-one-javascript-foundations)
-- [Unit Two: Introduction to React](#unit-two-introduction-to-react)
-- [Unit Three: Intermediate React](#unit-three-intermediate-react)
+- [Unit One: Javascript Introduction](#unit-one-javascript-introduction)
+- [Unit Two: Javascript Foundations](#unit-two-javascript-foundations)
+- [Unit Three: React](#unit-three-react)
 - [Unit Four: Ruby](#unit-four-ruby)
 - [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
 - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
@@ -40,60 +40,60 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ## First Day: Presentations
 Welcome to LEARN Academy! Here is the information covered during orientation.
-1. [Zoom Etiquette](./orientation/zoom-etiquette.pdf)
-2. [How We Work](./orientation/how-we-work.pdf)
-3. [Code of Conduct](./orientation/code-of-conduct.pdf)
-4. [Introduction to Terminal](./tools-and-resources/terminal.md)
-5. [Requirements and Expectations](./orientation/requirements-and-expectations.pdf)
-6. [Career Services Overview](./orientation/career-services-overview.pdf)
-7. [Tech Stack](./orientation/tech-stack.pdf)
-7. [Slack Overview](./orientation/slack-overview.pdf)
-8. [Pair Programming](./orientation/pair-programming.pdf)
-9. [HTML and CSS Fundamentals](./orientation/html-css-fundamentals.pdf)
+- [Zoom Etiquette](./orientation/zoom-etiquette.pdf)
+- [How We Work](./orientation/how-we-work.pdf)
+- [Code of Conduct](./orientation/code-of-conduct.pdf)
+- [Introduction to Terminal](./tools-and-resources/terminal.md)
+- [Requirements and Expectations](./orientation/requirements-and-expectations.pdf)
+- [Career Services Overview](./orientation/career-services-overview.pdf)
+- [Tech Stack](./orientation/tech-stack.pdf)
+- [Slack Overview](./orientation/slack-overview.pdf)
+- [Pair Programming](./orientation/pair-programming.pdf)
+- [HTML and CSS Fundamentals](./orientation/html-css-fundamentals.pdf)
 
 
-## Unit One: Javascript Foundations
+
+## Unit One: Javascript Introduction
 This is our introduction to coding through the Javascript programming language. Here we will cover foundational concepts and data structures that will get us thinking in code.
 1. [JavaScript Introduction](./javascript/intro.md)
 2. [JavaScript Conditionals](./javascript/conditionals.md)
 3. [JavaScript Arrays](./javascript/arrays.md)
 4. [JavaScript Loops](./javascript/loops.md)
 5. [JavaScript Functions](./javascript/functions.md)
-6. [JavaScript Functions, Loops, and Arrays](./javascript/functions-loops-arrays.md)
-7. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
-8. [JavaScript Testing with Jest](./javascript/jest.md)
-2. [JavaScript Objects](./javascript/objects.md)
-3. [JavaScript Classes](./javascript/classes.md)
-3. [JavaScript Class Inheritance](./javascript/class-inheritance.md)
 
 #### Additional Topics:
-- [JavaScript Spread Operator](./javascript/spread-operator.md)
 - [JavaScript Template Literals](./javascript/template-literals.md)
 - [JavaScript Ternary Operator](./javascript/ternary.md)
 
 
 
-## Unit Two: Introduction to React
+## Unit Two: Javascript Foundations
+This is our opportunity to dig a bit deeper into the Javascript programming language. Here we will use the introductory topics in combination for more advanced logic performance and data manipulation.
+1. [JavaScript Functions, Loops, and Arrays](./javascript/functions-loops-arrays.md)
+1. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
+1. [JavaScript Testing with Jest](./javascript/jest.md)
+1. [JavaScript Objects](./javascript/objects.md)
+1. [JavaScript Classes](./javascript/classes.md)
+1. [JavaScript Class Inheritance](./javascript/class-inheritance.md)
+
+#### Additional Topics:
+- [JavaScript Spread Operator](./javascript/spread-operator.md)
+
+
+
+## Unit Three: React
 React is a powerful Javascript library used to build more complicated user interfaces.
 1. [React Introduction](./react/intro.md/)
 3. [Creating a New React Application](./react/create-react-app.md)
 4. [React State](./react/state.md/)
-
+5. [React Props](./react/props.md)
+6. [React Functional Props](./react/functional-props.md)
+7. [React Inputs and Events](./react/inputs.md)
+8. [React Forms and Functional Props](./react/forms.md)
 
 #### Additional Topics:
 - [React State with Images](./react/state-with-images.md/)
 - [React Component Lifecycle](./react/component-lifecycle.md)
-
-
-
-## Unit Three: Intermediate React
-In this section we dive into what React has to offer several full-day projects.
-1. [React Props](./react/props.md)
-1. [React Functional Props](./react/functional-props.md)
-1. [React Inputs and Events](./react/inputs.md)
-
-#### Additional Topics:
-- [React Forms and Functional Props](./react/forms.md)
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
 
