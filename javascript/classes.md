@@ -31,7 +31,7 @@
 - <a href="https://github.com/airbnb/javascript" target="blank">Airbnb JavaScript Style Guidelines</a>
 
 #### Process
-- `cd` into the `javascript-challenges` repository
+- `cd` into the `javascript-foundations-challenges` repository
 - Create a new branch: `classes-initials1-initials2` (ex. classes-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `classes-student1-student2.js` (ex. classes-austin-sarah.js)
 - Open the folder in a text editor

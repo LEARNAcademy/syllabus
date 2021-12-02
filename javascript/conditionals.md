@@ -23,7 +23,7 @@ Decision structures, also called decision trees, conditional statements, or if/e
 - [String Interpolation](./template-literals.md)
 
 #### Process
-- `cd` into the `javascript-challenges` repository
+- `cd` into the `javascript-intro-challenges` repository
 - Create a new branch: `conditionals-initials1-initials2` (ex. conditionals-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `conditionals-student1-student2.js` (ex. conditionals-austin-sarah.js)
 - Open the folder in a text editor

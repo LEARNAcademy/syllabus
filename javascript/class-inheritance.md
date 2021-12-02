@@ -17,7 +17,7 @@
 - super()
 
 #### Process
-- `cd` into the `javascript-challenges` repository
+- `cd` into the `javascript-foundations-challenges` repository
 - Create a new branch: `inheritance-initials1-initials2` (ex. inheritance-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `inheritance-student1-student2.js` (ex. inheritance-austin-sarah.js)
 - Open the folder in a text editor

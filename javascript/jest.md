@@ -28,13 +28,15 @@
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet#test-structure)
 - [Jest Matchers](https://jestjs.io/docs/en/using-matchers)
 
-## Set Up
-- Create a new directory
-- Add a file with the extension .test.js
-  - Example: `myapplication.test.js`
-- $ yarn add jest
-- Write the tests and the code in the same file
-- $ yarn jest
+#### Process
+- `cd` into the `javascript-foundations-challenges` repository
+- Create a new branch: `jest-initials1-initials2` (ex. jest-aw-sp)
+- Create a new directory `mkdir` jest-student1-student2 (ex. jest-austin-sarah)
+- `cd` into the directory you just created
+- `touch` a file called: `jest.test.js`
+- Add the dependencies by running $ `yarn add jest` in the terminal
+- Open the Jest folder in a text editor
+- Code!
 
 ---
 

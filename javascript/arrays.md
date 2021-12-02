@@ -30,7 +30,7 @@ Arrays are variables that store collections of data in an ordered list. Having a
 - [ W3Schools JavaScript Array Methods](https://www.w3schools.com/js/js_array_methods.asp)
 
 #### Process
-- `cd` into the `javascript-challenges` repository
+- `cd` into the `javascript-intro-challenges` repository
 - Create a new branch: `arrays-initials1-initials2` (ex. arrays-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `arrays-student1-student2.js` (ex. arrays-austin-sarah.js)
 - Open the folder in a text editor

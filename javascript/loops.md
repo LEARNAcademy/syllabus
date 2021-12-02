@@ -29,7 +29,7 @@ Iteration is a very important concept in computer programming. Iteration is the 
 - [ W3Schools While Loops ](https://www.w3schools.com/js/js_loop_while.asp)
 
 #### Process
-- `cd` into the `javascript-challenges` repository
+- `cd` into the `javascript-intro-challenges` repository
 - Create a new branch: `loops-initials1-initials2` (ex. loops-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `loops-student1-student2.js` (ex. loops-austin-sarah.js)
 - Open the folder in a text editor
