@@ -21,9 +21,14 @@
 - [ Ruby Hashes for Beginners ](http://ruby-for-beginners.rubymonstas.org/built_in_classes/hashes.html)
 - [ Ruby's Magical Enumerable Module ](https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html)
 
-## Set Up
-- Create a file with the extension `.rb`
-- In terminal run `ruby` followed by the file name
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `hashes-initials1-initials2` (ex. hashes-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `hashes-student1-student2.rb` (ex. hashes-austin-sarah.rb)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Ruby Hashes
 A hash is a container for data. The data in a hash are stored in key:value pairs.

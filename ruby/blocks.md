@@ -16,9 +16,14 @@
 - while
 - map
 
-## Set Up
-- Create a file with the extension `.rb`
-- In terminal run `ruby` followed by the file name
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `blocks-initials1-initials2` (ex. blocks-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `blocks-student1-student2.rb` (ex. blocks-austin-sarah.rb)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Ruby Blocks
 

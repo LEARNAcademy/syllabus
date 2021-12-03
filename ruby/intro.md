@@ -40,12 +40,11 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 - `exit` - return to the regular terminal
 
 #### Process
-- `cd` into the appropriate folder or repository
-- Create a new branch
-- `touch` a file with no spaces and `.rb` extension, `intro.rb`
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `intro-student1-student2.rb` (ex. intro-austin-sarah.rb)
 - Open the folder in a text editor
 - Code!
-- $ `ruby intro.rb`
 
 ---
 

@@ -16,9 +16,14 @@
 ## Additional Resources
 - <a href="https://www.w3resource.com/ruby/ruby-methods.php" target="blank">Ruby Methods</a>
 
-## Set Up
-- Create a file with the extension `.rb`
-- In terminal run `ruby` followed by the file name
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `methods-initials1-initials2` (ex. methods-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `methods-student1-student2.rb` (ex. methods-austin-sarah.rb)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Method Syntax
 

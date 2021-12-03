@@ -11,9 +11,14 @@
 - Ruby inheritance
 - super()
 
-## Set Up
-- Create a file with the extension `.rb`
-- In terminal run `ruby` followed by the file name
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `inheritance-initials1-initials2` (ex. inheritance-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `inheritance-student1-student2.rb` (ex. inheritance-austin-sarah.rb)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## Ruby Classes
 Class can be an abstract concept when you first come across it. To start, **class definition** describes the structure and behavior of a set of objects. Objects, meaning instances of a class, are realizations of a class that can be interacted with and store data. Objects are independent of each other. For example, with a class definition, we have the blueprint for an Apple. Objects allow us to interact with those classes directly in our code. Below we will use the "blueprint" of an apple to create some apples.

@@ -19,9 +19,14 @@
 ## Additional Resources
 - <a href="http://ruby-for-beginners.rubymonstas.org/conditionals.html" target="blank">Ruby Conditionals</a>
 
-## Set Up
-- Create a file with the extension `.rb`
-- In terminal run `ruby` followed by the file name
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `conditionals-initials1-initials2` (ex. conditionals-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `conditionals-student1-student2.rb` (ex. conditionals-austin-sarah.rb)
+- Open the folder in a text editor
+- Code!
+
+---
 
 ## If/Else/End
 

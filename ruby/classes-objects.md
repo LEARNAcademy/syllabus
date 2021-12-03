@@ -19,11 +19,13 @@ In Ruby, everything belongs to a class. We can also create custom classes that h
 - initialize method
 
 #### Process
-- `cd` into the appropriate folder or repository
-- `touch` a file with no spaces and `.rb` extension, `ruby-classes.rb`
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `classes-initials1-initials2` (ex. classes-aw-sp)
+- `touch` a file with no spaces and `.rb` extension: `classes-student1-student2.rb` (ex. classes-austin-sarah.rb)
 - Open the folder in a text editor
 - Code!
-- `$ ruby ruby-classes.rb`
+
+---
 
 #### Troubleshooting Tips
 - In `irb` run the name of a Ruby class with `.methods` to see all the methods available to that class, e.g.) `String.methods`

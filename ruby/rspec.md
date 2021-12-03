@@ -33,27 +33,27 @@
 - <a href="https://www.youtube.com/embed/fsSMuqIpu_c?ecver=2" target="blank">YouTube Video about TDD vs BDD</a>
 - Here is a discussion about <a href="https://www.youtube.com/embed/GvAzrC6-spQ?ecver=2" target="blank">TDD</a> lead by Robert Martin, also known as "Uncle Bob". He's a legend in the programming world who writes extensively about software design and architecture
 
-## Set Up
-- For this example, create a directory called `car_challenge`
-- cd into the directory
-- $ touch car.rb
-- $ touch car_spec.rb
+#### Process
+- `cd` into the `ruby-challenges` repository
+- Create a new branch: `rspec-initials1-initials2` (ex. rspec-aw-sp)
+- Create a new directory `mkdir` rspec-student1-student2 (ex. rspec-austin-sarah)
+- `cd` into the directory you just created
+- `touch` a file called: `rspec.rb`
+- `touch` a file called: `rspec_spec.rb`
+- Add the dependencies by running $ `gem install rspec` in the terminal
+- Open the RSpec folder in a text editor
+- Code!
 
-## AWS Set Up
-- For this example, create a directory called `car_challenge`
-- cd into the directory
-- $ touch car.rb
-- $ touch car_spec.rb
-- $ gem install rspec
-
-## Fun Extra: Formatting RSpec in Terminal
+#### Fun Extra: Formatting RSpec in Terminal
 To produce a more readable RSpec printout in terminal follow these steps:
-- cd into your root directory (shortcut: $ cd ~)
-- Create a new file called .rspec ($ touch .rspec)
-- $ open .rspecc
+- cd into your root directory (shortcut: $ `cd ~`)
+- Create a new file called .rspec ($ `touch .rspec`)
+- $ `open .rspec`
 - Put `--color --format documentation` in the file
 - Save
 - Voila! Beautiful RSpec code!
+
+---
 
 ## Test Driven Development
 As you begin to write more complicated applications, you'll quickly come to realize that bugs in your code can find their way into your code in very unexpected places.  You make a small change in one place, and something seemingly unrelated breaks because of it.  Without a good set of tests for your code, you may never know it, but users always find those bugs, and that causes stress, and a rush to fix the problem, which is never a good way to develop.
