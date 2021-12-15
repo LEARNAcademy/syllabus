@@ -1,45 +1,55 @@
 # Creating a New React Application
 
 #### Overview
+
 Until late 2016, the hardest part about working with React was just getting a new app set up with the appropriate dependencies. Facebook, the creators of React, recognized this problem and released some tools to help developers get started more easily. Yarn is a JavaScript package manager that creates the file structure of a React app and manages the dependencies.
 
 #### Previous Lecture (57 min)
+
 [![YouTube](http://img.youtube.com/vi/YThNhP4i5NE/0.jpg)](https://www.youtube.com/watch?v=YThNhP4i5NE)
 
 #### Learning Objectives
+
 - can demonstrate the process of setting up a basic class-based React component
 - can demonstrate the creation of multiple components
 - can display multiple components inside a container component
 
 #### Vocabulary
-- kabob-case
+
+- kebob-case
 - localhost:3000
 - import
 - export
 
 #### Process
+
 - `cd` into the `react-challenges` repository
 - Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
 - Create a new React application with no spaces: `yarn create react-app intro-student1-student2` (ex. yarn create react-app intro-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in *src* called *components*
+- Create a directory in _src_ called _components_
 - Code!
 
 #### Useful Commands
+
 - $ yarn create react-app app-name
 - $ yarn start
 - control + c (stops the server)
 - control + t (opens a new terminal tab)
 
 #### Troubleshooting Tips
+
 - Is your server running?
 - Are your components imported and exported?
 - What is your error message telling you?
 
 ---
+
 ### Creating a New React Application
-Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This is called **kabob-case**.
+
+Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This is called **kebob-case**.
+
 ```
 $ yarn create react-app sample-app
 ```
@@ -51,6 +61,7 @@ installs all the files and dependencies needed to get started. Navigate into the
 $ cd sample-app
 $ yarn start
 ```
+
 The command `yarn start` will automatically open a browser to the address **localhost:3000** which is the url address of your home server. The command `yarn start` will render the starter React application.
 
 After you type `yarn start` you will notice your terminal is busy running React. If you want to interact with your terminal you can open a new tab (command-t). To stop the React app from running use the command `control c`
@@ -62,32 +73,31 @@ Navigate to `App.js` within the `src` directory. We're going to use a class base
 A very basic functional component looks something like this:
 
 ```javascript
-import React from 'react'
+import React from "react";
 
-function App(){
-  return(
-    <h1>A Basic Functional Component</h1>
-  )
+function App() {
+  return <h1>A Basic Functional Component</h1>;
 }
 
-export default App
+export default App;
 ```
 
 The equivalent basic class component looks like this:
-```javascript
-import React, { Component } from 'react'
 
-class App extends Component{
-  render(){
-    return(
+```javascript
+import React, { Component } from "react";
+
+class App extends Component {
+  render() {
+    return (
       <>
         <h1>A Basic Class Component</h1>
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;
 ```
 
 ### App.js
@@ -96,28 +106,26 @@ Here is the basic class component with comments describing what each line is doi
 
 ```javascript
 // We're using React and destructuring Component from the React library
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 // We create a new component that extends the Component class, which React provides
-class App extends Component{
-
+class App extends Component {
   // Render is a React lifecycle method
   // When the component is first put on the page, and every time something changes in our component, the render function runs automatically
-  render(){
-
+  render() {
     // The render method returns JSX
     // React apps use a hybrid markup language called JSX to preprocess HTML (XML actually) back into plain old JavaScript before the file is sent to the browser
-    return(
+    return (
       // React fragments are used to wrap all the markup tags
       <>
         <h2>Welcome to React</h2>
       </>
-    )
+    );
   }
 }
 
 // Every component must be exported
-export default App
+export default App;
 ```
 
 ### Nesting Components
@@ -131,49 +139,50 @@ Inside the components folder, create a new file called `Header.js`. It is conven
 **src/components/Header.js**
 
 ```javascript
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-class Header extends Component{
-  render(){
-    return(
+class Header extends Component {
+  render() {
+    return (
       <>
         <h1>This is the header</h1>
       </>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
 ```
 
 For each new component there are three necessary steps:
+
 1. Import React and the component module
 2. Create the component definition
 3. Export the component
 
 With the component defined, we can then call it in the App component. This requires two steps:
+
 1. Importing the component
 2. Calling the component in the return
 
 **src/App.js**
 
 ```javascript
-import React, { Component } from 'react'
-import Header from './component/Header'
+import React, { Component } from "react";
+import Header from "./component/Header";
 
 class App extends Component {
-  render(){
-    return(
+  render() {
+    return (
       <>
         <Header />
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;
 ```
-
 
 Next we will add a recipe component.
 
@@ -182,11 +191,11 @@ We create the Recipes component in the `components` folder.
 **src/components/Recipes.js**
 
 ```javascript
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-class Recipes extends Component{
-  render(){
-    return(
+class Recipes extends Component {
+  render() {
+    return (
       <>
         <ul>
           <li>Recipe 1</li>
@@ -194,11 +203,11 @@ class Recipes extends Component{
           <li>Recipe 3</li>
         </ul>
       </>
-    )
+    );
   }
 }
 
-export default Recipes
+export default Recipes;
 ```
 
 Now we will import Recipes in App.js.
@@ -206,22 +215,22 @@ Now we will import Recipes in App.js.
 **src/App.js**
 
 ```javascript
-import React, { Component } from 'react'
-import Header from './components/Header'
-import Recipes from './components/Recipes'
+import React, { Component } from "react";
+import Header from "./components/Header";
+import Recipes from "./components/Recipes";
 
 class App extends Component {
-  render(){
-    return(
+  render() {
+    return (
       <>
         <Header />
         <Recipes />
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;
 ```
 
 Next we will add a footer component.
@@ -231,50 +240,52 @@ We create the Footer component in the `components` folder.
 **src/components/Footer.js**
 
 ```javascript
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-class Footer extends Component{
-  render(){
-    return(
+class Footer extends Component {
+  render() {
+    return (
       <>
         LEARN Academy
         <br />
-        Delta 2021
+        Echo 2021
       </>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;
 ```
+
 Import Footer in App.js.
 
 **src/App.js**
 
 ```javascript
-import React, { Component } from 'react'
-import Header from './components/Header'
-import Recipes from './components/Recipes'
-import Footer from './components/Footer'
+import React, { Component } from "react";
+import Header from "./components/Header";
+import Recipes from "./components/Recipes";
+import Footer from "./components/Footer";
 
-class App extends Component{
-  render(){
-    return(
+class App extends Component {
+  render() {
+    return (
       <>
         <Header />
         <Recipes />
         <Footer />
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;
 ```
 
 ---
 
 ### Challenges
+
 - As a user, I can see a Header component with the title of your app
 - As a user, I can see a Profile component with information about you and your partner
 - As a user, I can see a Footer component with your cohort name
@@ -282,4 +293,5 @@ export default App
 - As a user, I can see a customized browser tab
 
 ---
+
 [Back to Syllabus](../README.md#unit-two-introduction-to-react)
