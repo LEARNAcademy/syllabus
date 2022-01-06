@@ -12,7 +12,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 - can display multiple components inside a container component
 
 #### Vocabulary
-- kabob-case
+- kebob-case
 - localhost:3000
 - import
 - export
@@ -39,7 +39,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 ---
 ### Creating a New React Application
-Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This is called **kabob-case**.
+Use the command `yarn create-react app` followed by the name of your application to create a new React application. This command will only accept application names that are lower case. If a multiple word application name is desired, separate the words with a dash. This is called **kebob-case**.
 ```
 $ yarn create react-app sample-app
 ```
@@ -239,7 +239,7 @@ class Footer extends Component{
       <>
         LEARN Academy
         <br />
-        Delta 2021
+        Echo 2021
       </>
     )
   }
