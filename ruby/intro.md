@@ -12,7 +12,7 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 - can reproduce the proper syntax of dot notation to execute methods on data
 - can reproduce the syntax required to define a variable
 - can reproduce the syntax required to define an array
-- can determine the proper use of either p, puts, or print depending on a desired outcome
+- can determine the proper use of either p or puts depending on a desired outcome
 - can explain the fundamentals of object-oriented programming
 
 #### Vocabulary
@@ -20,19 +20,12 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 - Object oriented programming
 - snake_case
 - method
-- puts/print/p
-- gets.chomp
-
-#### Useful Commands
-- $ irb
-- $ exit
-- $ ruby file_name.rb
-- `"#{}"`
+- puts/p
 
 #### Additional Resources
-- [ Ruby Styling Guide ](https://rubystyle.guide)
-- [ The Object Model ](https://launchschool.com/books/oo_ruby/read/the_object_model)
-- [ Yukihiro "Matz" Matsumoto's GitHub ](https://github.com/matz)
+- [Ruby Styling Guide](https://rubystyle.guide)
+- [The Object Model](https://launchschool.com/books/oo_ruby/read/the_object_model)
+- [Yukihiro "Matz" Matsumoto's GitHub](https://github.com/matz)
 
 #### IRB
 - Ruby can be run directly in the Mac terminal through the **Interactive Ruby Shell**, a REPL environment for interacting with Ruby code
@@ -64,17 +57,17 @@ To send a particular message to an object is to call that method on the object.
 
 ### Running Ruby: IRB
 
-If you are using a Mac, Ruby comes preinstalled on your machine. To use it, open the terminal and type `irb` (Interactive Ruby Shell) into terminal. And that's it! You're all set to start coding in Ruby.
+Ruby comes preinstalled on Mac computers. To use it, open the terminal and type `irb` (Interactive Ruby Shell) into terminal. And that's it! You're all set to start coding in Ruby.
 
 The IRB prompts with `>`
 
 **Troubleshooting:** IRB is much like console in Google Chrome. You can program in Ruby but entering code line by line can be difficult. If you find yourself with a prompt that says 1 or ? or " or ' IRB is expecting you to finish close your string or method.
 
-If you are stuck in the middle of an incorrect statement and want to start over, type `control-c` and you will get a clean > prompt.
+If you are stuck in the middle of an incorrect statement and want to start over, type `control-c` and you will get a clean prompt.
 
 
 ### Ruby Data Types
-In Ruby, all data types are defined by classes.
+In Ruby all data types are defined by classes.
 
 ### Integers
 Integer operators and arithmetic in Ruby are very similar to what you've seen so far in JavaScript:
@@ -229,7 +222,7 @@ String interpolation is replacing variables within a string with the values they
 ```ruby
 > num1 = 1
 > num2 = 4
-> puts "The number #{num1} is less than #{num1 + num2}"
+> "The number #{num1} is less than #{num1 + num2}"
 => "The number 1 is less than 5"
 ```
 
@@ -320,53 +313,19 @@ For the most part, Ruby methods are all accessors, meaning they do not mutate th
 ## Running Ruby: Terminal
 To do this, create a file. Ruby can be run from a file with any sort of name, but it is common to give a ruby file a `.rb` extension.
 
-To run a file with Ruby code in it, you give the command `ruby` and then a path to the file. So to execute a ruby file called `run_it.rb` in your current directory, you would run: `ruby run_it.rb`
+To run a file with Ruby code in it, you give the command `ruby` and then a path to the file. So to execute a ruby file called `run_it.rb` in your current directory, you would run: $ `ruby run_it.rb`
 
-**Output:**
-The `puts` (short for "put string") and `print` commands are both used to display the results of evaluating Ruby code. The primary difference between them is that puts adds a newline after executing, and print does not.
+The `puts` (short for "put string") and `p` commands are both used to display the results of evaluating Ruby code. The primary difference between them is that puts is short for "puts string" so the output is stringified. `p` is an alternative to puts that is useful in seeing the raw data output.
 
-Example in IRB:
+In the example you can see differences between the output of puts and the raw output of p.
 ```ruby
-print "Hello World"
+puts 'Hello World'
 Hello World
 => nil
 
-puts "Hello World"
-Hello World
-=> nil
-```
-In the example you can see differences and the newline the puts method adds.
-
-
-**Input:**
-Ruby also has a command for user input in the terminal called `gets`. It is a bit like `prompt()` in JavaScript. And just like `prompt()`, the input value from gets needs to be stored in a variable to access later.
-
-```ruby
-> puts 'Enter your name'
-=> "Enter your name"
-
-> name = gets
-# gets provides a blank line that accepts user input as a string
-LEARN Student
-=> "LEARN Student\n"
-
-> puts "Hello, #{name}. How are you today?"
-"Hello, LEARN Student
-. How are you today?"
-```
-
-The string output from `gets` includes the return you type to enter the user input. Ruby has a command called `chomp` that removes any additional line breaks and white space from the end of a string.
-
-```ruby
-> puts 'Enter your name'
-=> "Enter your name"
-
-> name = gets.chomp
-# gets provides a blank line that accepts user input as a string
-=> "Learn Student"
-
-> puts "Hello, #{name}. How are you today?"
-=> "Hello, Learn Student. How are you today?"
+p 'Hello World'
+"Hello World"
+=> "Hello World"
 ```
 
 ---
