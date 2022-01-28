@@ -191,10 +191,10 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 5. [Cat Tinder Update Functionality](./cat-tinder/frontend/cat-update.md)
 
 ### Cat Tinder Backend
-6. [Cat Tinder API Introduction](./cat-tinder/backend/api_intro.md)
+6. [Cat Tinder API Introduction](./cat-tinder/backend/api-intro.md)
 7. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
-8. [Cat Tinder API CORS](./cat-tinder/backend/api_cors.md)
-9. [Cat Tinder API Endpoints](./cat-tinder/backend/api_endpoints.md)
+8. [Cat Tinder API CORS](./cat-tinder/backend/api-cors.md)
+9. [Cat Tinder API Endpoints](./cat-tinder/backend/api-endpoints.md)
 10. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
 
 ### Bringing it Together!
@@ -233,4 +233,4 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 
 
-## Unit Twelve: Internship Preparation
+## Unit Twelve: Internship Preparation-
