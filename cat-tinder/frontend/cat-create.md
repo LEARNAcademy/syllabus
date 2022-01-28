@@ -181,11 +181,11 @@ import { Redirect } from 'react-router-dom'
 ## Challenge: Cat Create
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a user, I can fill out a form to add a new cat
-- As a developer, I can store the cat object in state
-- As a developer, I can pass the cat object to App.js on submit and see the cat object logged in the console
-- As a user, I can be routed to the index page after I submit the new cat form
-- As a developer, I have test coverage on my new page
+- As a user, I can fill out a form to add a new cat.
+- As a developer, I can store the cat object in state.
+- As a developer, I can pass the cat object to App.js on submit and see the cat object logged in the console.
+- As a user, I can be routed to the index page after I submit the new cat form.
+- As a developer, I have test coverage on my new page.
 
 **NOTE:** We are still only interacting with mock data so we will not see a new cat added to the collection of cats.
 

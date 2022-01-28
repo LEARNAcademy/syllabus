@@ -48,9 +48,9 @@ As long as we have set up the frontend scaffolding correctly, the cat update met
 ## Challenge: Cat Tinder Fetch Update Functionality
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can update the `updateCat` method to update information in the database
-- As a user, I can edit an existing cat
-- As a user, I can see the information for my edited cat
+- As a developer, I can update the `updateCat` method to update information in the database.
+- As a user, I can edit an existing cat.
+- As a user, I can see the information for my edited cat.
 
 ---
 [Back to Syllabus] (../../README.md#bringing-it-together)

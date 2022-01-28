@@ -134,11 +134,11 @@ And now we're green!
 ## Challenge: Cat Tinder API Validations
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error
-- As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, what the cat enjoys, and an image
-- As a developer, I can add the appropriate request spec that will look for a 422 error if the validations are not met
-- As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer
-- As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
+- As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error.
+- As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, what the cat enjoys, and an image.
+- As a developer, I can add the appropriate request spec that will look for a 422 error if the validations are not met.
+- As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer.
+- As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long.
 
 ---
 [Back to Syllabus](../../README.md#cat-tinder-backend)

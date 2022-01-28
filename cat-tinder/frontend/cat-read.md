@@ -144,11 +144,11 @@ import { NavLink } from 'react-router-dom'
 ## Challenge: Cat Index and Show
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can pass the cat mock data in state to my index component
-- As a user, I can see a page that lists of all the cat names
-- As a developer, I can refactor the show route to pass the param of id for one cat
-- As a user, I can see a page featuring all the information for one cat
-- As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat
+- As a developer, I can pass the cat mock data in state to my index component.
+- As a user, I can see a page that lists of all the cat names.
+- As a developer, I can refactor the show route to pass the param of id for one cat.
+- As a user, I can see a page featuring all the information for one cat.
+- As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat.
 
 ---
 [Back to Syllabus](../../README.md#cat-tinder-frontend)

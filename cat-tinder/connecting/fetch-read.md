@@ -61,9 +61,9 @@ As long as we have set up the frontend scaffolding correctly, the cat index and 
 ## Challenge: Cat Tinder Fetch Read Functionality
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can get the cats from the database and set the array in state
-- As a user, I can see all the cats
-- As a user, I can see the information for just one cat
+- As a developer, I can get the cats from the database and set the array in state.
+- As a user, I can see all the cats.
+- As a user, I can see the information for just one cat.
 
 ---
 [Back to Syllabus] (../../README.md#bringing-it-together)
