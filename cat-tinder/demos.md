@@ -21,4 +21,4 @@ Each demo should be a total of 5 minutes. This is not a long time and will requi
 
 
 ---
-[Back to Syllabus](../../README.md#cat-tinder-demos)
+[Back to Syllabus](../README.md#cat-tinder-demos)
