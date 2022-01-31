@@ -171,9 +171,9 @@ When the form is submitted, success will be updated to true and we can use condi
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
 - As a user, I can fill out a form to edit an existing cat.
-- As a developer, I can store the cat object in state.
-- As a developer, I can pass the cat object and id to `App.js` on submit and see the cat object logged in the console.
-- As a user, I can see a button on my show page that will take me to the edit page for that particular cat.
+- As a developer, I can add onChange and value attributes to each input.
+- As a developer, I can pass the updated cat object to App.js on submit and see the cat object logged in the console.
+As a user, I can see a button on my show page that will take me to the edit page for that particular cat.
 - As a user, I can be routed to the show page after I submit the edited cat form.
 - As a developer, I have test coverage on my edit page.
 

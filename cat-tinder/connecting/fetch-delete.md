@@ -67,7 +67,9 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can create a `deleteCat` method that will remove a cat from the database.
 - As a developer, I can pass the method to the CatShow component.
 - As a user, I can navigate to the page of one specific cat and see a delete button.
-- As a user, I can click the button see all the cats with the specific cat removed.
+- As a user, I can click the button remove the cat.
+- As a user, I can be rerouted to the CatIndex page after the cat is removed.
+
 
 ---
 [Back to Syllabus](../../README.md#bringing-it-together)
