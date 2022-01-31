@@ -233,4 +233,4 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 
 
-## Unit Twelve: Internship Preparation-
+## Unit Twelve: Internship Preparation
