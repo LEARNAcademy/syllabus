@@ -1,32 +1,35 @@
 # Cat Tinder API Validations
 
-### Overview
-- As developers we have to think about what happens when things don't go as we expect. What if data is submitted to our API that isn't complete, or has something else that causes it to be invalid? This could cause harm to our database or affect the user experience.
+#### Overview
+As developers we have to think about what happens when things don't go as we expect. What if data is submitted to our API that isn't complete, or has something else that causes it to be invalid? This could cause harm to our database or affect the user experience.
 
-### Learning Objectives
-- Implementing model validations
-- Implementing model specs in a Rails application
-- Implementing request specs in a Rails application
+#### Previous Lecture (20 min)
+[![YouTube](http://img.youtube.com/vi/1iZzGLm9LmE/0.jpg)](https://www.youtube.com/watch?v=1iZzGLm9LmE)
 
-### Additional Resources
-- [ Response Codes ](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+#### Learning Objectives
+- can validate model attributes
+- can create specs for corresponding model validations
+
+#### Additional Resources
+- [Response Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
 
-## Validations
+---
+### Validations
 As developers, it is our job to ensure no matter what, that our app responds in predictable ways to every request, and over many requests.
 
 The primary tool we have to assure predictable results is to assure that the data we commit to our database is in a form that we expect it to be, and for this we use validations in a Rails application. When the incoming data looks to be correct, we commit it, when it isn't correct, we reject it, and respond with a reason why it was not accepted.
 
-## Why Validations?
+### Why Validations?
 We've started all of our backend coding with a failing test, and we now have good test coverage of what we expect the API to do when it is passed good data. What we need now is a test of what we expect it to do when passed bad data. What happens when a user submits a cat without a name? Do we accept it, or do we reject. Same question goes for the cat's age and what our cat enjoys. It may be acceptable to create a record without the enjoys data, but we should require an age.
 
 Let's write a test for each of these cases.
 
-## Model Specs
+### Model Specs
 We can create a test that will look for an error if a cat is created without any attributes.
 
 **spec/models/cat_spec.rb**
@@ -75,7 +78,8 @@ Here's a test to assure that we get the correct response status when we submit a
    cat_params = {
      cat: {
        age: 2,
-       enjoys: 'Walks in the park'
+       enjoys: 'Walks in the park',
+       image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80'
      }
    }
    # Send the request to the  server
@@ -123,16 +127,18 @@ $ rspec spec/requests
 1 example, 0 failures
 ```
 
-And now, we're Green!
+And now we're green!
+
+---
 
 ## Challenge: Cat Tinder API Validations
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error
-- As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, and what the cat enjoys
-- As a developer, I can add the appropriate request spec that will look for a 422 error if the validations are not met
-- As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer
-- As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long
+- As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error.
+- As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, what the cat enjoys, and an image.
+- As a developer, I can add the appropriate request spec that will look for a 422 error if the validations are not met.
+- As a developer, I can add the appropriate controller responses to ensure the API is sending useful information to the frontend developer.
+- As a developer, I can add a validation to assure that the enjoys value is at least 10 characters long.
 
 ---
 [Back to Syllabus](../../README.md#cat-tinder-backend)

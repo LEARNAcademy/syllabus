@@ -1,18 +1,22 @@
 # Cat Tinder API Endpoints
 
-### Overview
-- Endpoints are the location from which APIs can access the resources they need to perform CRUD actions.
-- Endpoints can be tested through request specs and model specs.
+#### Overview
+Endpoints are the location from which APIs can access the resources they need to perform CRUD actions. Endpoints can be tested through request specs and model specs.
 
-### Learning Objectives
-- Implementing request specs in a Rails application
-- Implementing appropriate endpoints in the cats controller
+#### Previous Lecture (1 hour 7 min)
+[![YouTube](http://img.youtube.com/vi/7nHJ2G-FHl0/0.jpg)](https://www.youtube.com/watch?v=7nHJ2G-FHl0)
 
-### Troubleshooting Tips
+#### Learning Objectives
+- can define API endpoints
+- can validate API endpoints
+- can create endpoints for appropriate RESTful actions
+
+#### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
 
+---
 ### Cats Routes
 
 ![routes](../assets/rails-routes.png)
@@ -38,7 +42,7 @@ class CatsController < ApplicationController
 end
 ```
 
-## Index Route
+### Index Route
 We start with the index route. In this endpoint, we want to return all of the cats that the application knows about.
 
 **Create a Spec**  
@@ -51,7 +55,12 @@ require 'rails_helper'
 RSpec.describe "Cats", type: :request do
   describe "GET /index" do
     it "gets a list of cats" do
-      Cat.create name: 'Felix', age: 2, enjoys: 'Walks in the park'
+      Cat.create(
+        name: 'Felix',
+        age: 2,
+        enjoys: 'Walks in the park',
+        image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80'
+      )
 
       # Make a request
       get '/cats'
@@ -75,8 +84,8 @@ def index
 end
 ```
 
-## Create
-Next we'll tackle the 'create' route.  Let's start with adding a new test:
+### Create
+Next we'll tackle the create route.  Let's start with adding a new test:
 
 ```ruby
 describe "POST /create" do
@@ -86,7 +95,8 @@ describe "POST /create" do
       cat: {
         name: 'Buster',
         age: 4,
-        enjoys: 'Meow Mix, and plenty of sunshine.'
+        enjoys: 'Meow Mix, and plenty of sunshine.',
+        image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80'
       }
     }
 
@@ -117,24 +127,26 @@ And once again, this fails because we have no code in the controller to make it 
   # Handle strong parameters, so we are secure
   private
   def cat_params
-    params.require(:cat).permit(:name, :age, :enjoys)
+    params.require(:cat).permit(:name, :age, :enjoys, :image)
   end
 ```
 
 And we're Green! This isn't quite production ready code, but its enough to get our first test of the endpoint to pass, which is what we're after, so we're happy.  
 
-
+---
 ## Challenge: Cat Tinder API Endpoints
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can add an index request spec to my application
-- As a developer, I can add an index endpoint to my application
-- As a developer, I can add a create request spec to my application
-- As a developer, I can add a create endpoint to my application
+- As a developer, I can add an index request spec to my application.
+- As a developer, I can add an index endpoint to my application.
+- As a developer, I can add a create request spec to my application.
+- As a developer, I can add a create endpoint to my application.
 
 ### Stretch Goals
-- As a developer, I can add a update endpoint to my application
-- As a developer, I can add a destroy endpoint to my application
+- As a developer, I can add an update request spec to my application.
+- As a developer, I can add an update endpoint to my application.
+- As a developer, I can add a destroy request spec to my application.
+- As a developer, I can add a destroy endpoint to my application.
 
 ---
 [Back to Syllabus](../../README.md#cat-tinder-backend)
