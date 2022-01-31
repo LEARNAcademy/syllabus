@@ -203,6 +203,8 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 13. [Cat Tinder Fetch for Update Functionality](./cat-tinder/connecting/fetch-update.md)
 14. [Cat Tinder Fetch for Delete Functionality](./cat-tinder/connecting/fetch-delete.md)
 
+### Cat Tinder Demos
+15. [Cat Tinder Demos](./cat-tinder/demos.md)
 
 
 ## Unit Nine: React in Rails and Authentication
