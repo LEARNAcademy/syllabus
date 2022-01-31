@@ -53,4 +53,4 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can see the information for my edited cat.
 
 ---
-[Back to Syllabus] (../../README.md#bringing-it-together)
+[Back to Syllabus](../../README.md#bringing-it-together)
