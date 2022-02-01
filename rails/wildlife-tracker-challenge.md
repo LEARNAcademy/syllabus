@@ -36,7 +36,7 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 - **Story**:  As the consumer of the API I can create a new animal in the database.
 - **Story**:  As the consumer of the API I can create a sighting of an animal with date (use the *datetime* datatype), a latitude, and a longitude.
   - *Hint*:  An animal has_many sightings.  (rails g resource Sighting animal_id:integer ...)
-  - *Hint*:  Datetime is written in rails as “year-month-day hr:min:sec" (“2022-01-28 05:40:30")
+  - *Hint*:  Datetime is written in Rails as “year-month-day hr:min:sec" (“2022-01-28 05:40:30")
 - **Story**:  As the consumer of the API I can update an animal sighting in the database.
 - **Story**:  As the consumer of the API I can destroy an animal sighting in the database.
 - **Story**:  As the consumer of the API, when I view a specific animal, I can also see a list sightings of that animal.
@@ -53,7 +53,7 @@ end
 ```
 
 Remember to add the start_date and end_date to what is permitted in your strong parameters method.
-In postman, you will want to utilize the params section to get the correct data. Also see [ Routes with Params ](https://github.com/learn-academy-2021-echo/Syllabus/blob/main/rails/controllers-routes-views.md).
+In Postman, you will want to utilize the params section to get the correct data. Also see [ Routes with Params ](https://github.com/learn-academy-2021-echo/Syllabus/blob/main/rails/controllers-routes-views.md).
 
 ## Stretch Challenges
 **Note**:  All of these stories should include the proper RSpec tests. Validations will require specs in `spec/models`, and the controller method will require specs in `spec/requests`.
