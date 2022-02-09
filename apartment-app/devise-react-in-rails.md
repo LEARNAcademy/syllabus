@@ -20,24 +20,24 @@ A key component of web applications is the ability for a user to log in. This re
 - [Devise Github Repo](https://github.com/plataformatec/devise#getting-started)
 
 #### Process
-- $ rails new apartment-app -d postgresql -T
-- $ cd apartment-app
-- $ rails db:create
+- $ `rails new apartment-app -d postgresql -T`
+- $ `cd apartment-app`
+- $ `rails db:create`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
-- $ bundle add rspec-rails
-- $ rails generate rspec:install
-- $ bundle add devise
-- $ rails generate devise:install
-- $ rails generate devise User
-- $ bundle add react-rails
-- $ rails webpacker:install:react
-- $ rails generate react:install
-- $ rails generate react:component App
-- $ rails generate controller Home
-- $ rails db:migrate
-- $ rails s
+- $ `bundle add rspec-rails`
+- $ `rails generate rspec:install`
+- $ `bundle add devise`
+- $ `rails generate devise:install`
+- $ `rails generate devise User`
+- $ `bundle add react-rails`
+- $ `rails webpacker:install:react`
+- $ `rails generate react:install`
+- $ `rails generate react:component App`
+- $ `rails generate controller Home`
+- $ `rails db:migrate`
+- $ `rails s`
 
 #### Troubleshooting Tips
 Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page.
