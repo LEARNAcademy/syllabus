@@ -21,8 +21,8 @@ With this particular stack we need to look for errors in the console and in the 
 ### Apartment Resource
 The Devise User model is going to have an association with the Apartment model. In this situation, the User will have many apartments and the Apartments will belong to a User.
 
-- $ rails g resource Apartment street:string city:string state:string manager:string email:string price:string bedrooms:integer bathrooms:integer pets:string user_id:integer
-- $ rails db:migrate
+- $ `rails g resource Apartment street:string city:string state:string manager:string email:string price:string bedrooms:integer bathrooms:integer pets:string user_id:integer`
+- $ `rails db:migrate`
 
 
 ### User and Apartment Associations

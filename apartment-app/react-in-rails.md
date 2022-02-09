@@ -21,10 +21,10 @@ There are many, may ways to create a full-stack application. In this section we 
 - [ Reactstrap ](https://reactstrap.github.io)
 
 #### Process
-- $ rails new hello-world -d postgresql -T
-- $ cd hello_world
-- $ rails db:create
-- $ rails s
+- $ `rails new hello-world -d postgresql -T`
+- $ `cd hello_world`
+- $ `rails db:create`
+- $ `rails s`
 
 #### Troubleshooting Tips
 Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page.

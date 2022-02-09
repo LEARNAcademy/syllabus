@@ -32,7 +32,7 @@ The last instance shows an authorization scheme that is not dependent on au**the
 There are many strategies for building a secure single page web application. In class, we're going to use the excellent Devise gem, and the power of Rails to build a Cookie based system. In your career, you'll also run across systems built on OAuth, JWT, and others. All have their strengths and vulnerabilities. Cookie based systems have been around for a long time, are battle tested, and have the additional benefit of being simpler to stand up. In security and authentication systems, simpler is often better because there are fewer complexities in the code for bugs and thus vulnerabilities to hide.
 
 ### Cookie Based Authentication with Devise and Rails
-When a user logs into our website, the response will contain a cookie containing a special session ID encrypted by the server. Then, every time the client requests a new resource, it sends that session ID back to the server in the header of the request. If that session ID sent to the server is decryptable, then we know that the user is who they claim to be, and the server can process the request.
+When a user logs into our website, the response will contain a cookie containing a special session id encrypted by the server. Then, every time the client requests a new resource, it sends that session id back to the server in the header of the request. If that session id sent to the server is decryptable, then we know that the user is who they claim to be, and the server can process the request.
 
 ---
 [Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)
