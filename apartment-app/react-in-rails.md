@@ -21,16 +21,10 @@ There are many, may ways to create a full-stack application. In this section we 
 - [ Reactstrap ](https://reactstrap.github.io)
 
 #### Process
-The setup includes adding React to the Rails application and adding Webpacker to compile JavaScript.
-```
-$ rails new hello_world -d postgresql -T
-$ cd hello_world
-$ rails db:create
-$ bundle add react-rails
-$ rails webpacker:install
-$ rails webpacker:install:react
-$ rails generate react:install
-```
+- $ rails new hello-world -d postgresql -T
+- $ cd hello_world
+- $ rails db:create
+- $ rails s
 
 #### Troubleshooting Tips
 Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page.
@@ -40,26 +34,28 @@ Now that we are working in a new stack, the way we find error messages is going 
 - Seeing a blank page? Look for errors in the terminal or inspect your page.
 - Errors? Always look at the first error in the list.
 
-<hr>
+---
 
 ### React Components in a Rails Application
-There are many ways to create a full-stack application.  Once we have a Rails application we can add a React component using a generate command.
+There are many ways to create a full-stack application. One option is creating two separate applications to handle the frontend and backend like we did in Cat Tinder. Anther option is configuring a Rails app to serve React components. We'll need a couple commands to add the appropriate gems, folders, and JavaScript compilers.
+- $ `bundle add react-rails`
+- $ `rails webpacker:install:react`
+- $ `rails generate react:install`
 - $ `rails generate react:component App`
-- The install commands created a directory in `app` called `javascript`
-- In `app/javascript` there will be another directory called `components` that will contain our `App.js` React component with some basic code
-- Add an `h1` tag to the React component
 
-**app/javascript/components/HelloWorld.js**
+These install commands created a directory in `app/javascript` called `components` that will contain our `App.js` React component with some boilerplate class component code. We can add an `<h1>` tag to our Hello World app.
+
+**app/javascript/components/App.js**
 ```javascript
-import React from "react"
-import PropTypes from "prop-types"
-class App extends React.Component {
-  render () {
-    return (
-      <React.Fragment>
+import React, { Component } from 'react'
+
+class App extends Component {
+  render() {
+    return(
+      <>
         <h1>Hello World!</h1>
-      </React.Fragment>
-    );
+      <>
+    )
   }
 }
 
@@ -70,16 +66,16 @@ export default App
 Next, we need to generate a controller so that we can route the React component can be rendered in a Rails view. This is the only Rails view we will make. Everything else will come from the React components.
 - $ `rails g controller Home`
 - Add a file in *app/views/home* called *index.html.erb*
-- By calling the React Component in `erb` tags the component will be rendered in the browser through the Rails view
+- By calling the React component in `erb` tags the component will be rendered in the browser through the Rails view
 
 **app/views/home/index.html.erb**
-```javascript
+```html
  <%= react_component 'App' %>
 ```
 Now we need to make sure we route to the appropriate file for our views.
 
 ### Rails Routes
-Create a route so the React component will be rendered in a Rails view.
+Direct the Rails app to serve the React `App.js` component as the landing page.
 
 **config/routes.rb**
 ```ruby
@@ -89,9 +85,9 @@ end
 ```
 
 ### Reactstrap
-Adding Reactstrap to the application allows for the use of a library of pre-built components. Reactstrap works in conjunction with Bootstap's core CSS. To add these libraries requires a little bit of setup to make the React styles compatible with Rails. There are many ways to add bootstrap to a Rails app, all of which will work equally well.
+Adding Reactstrap to the application allows for the use of a library of pre-built components. Reactstrap works in conjunction with Bootstap's core CSS. To add these libraries requires a little bit of setup to make the React styles compatible with Rails. There are many ways to add bootstrap to a Rails app all of which will work equally well.
 
-We are going to modify the Rails stylesheet to be a stylesheet with an `.scss` extension. This will allow us to write regular `css` code as well as import necessary dependencies. **scss** stands for Syntactially Awesome Styles Sheet and is a superset of css. It contains all of the functionality available in css with the addition of features such as imports and mixins.
+We are going to modify the Rails stylesheet to be a stylesheet with an `.scss` extension. This will allow us to write regular `css` code as well as import necessary dependencies. **scss** stands for Syntactically Awesome Styles Sheet and is a superset of CSS. It contains all of the functionality available in CSSå with the addition of features such as imports and mixins.
 
 ```
 $ bundle add bootstrap
@@ -130,9 +126,9 @@ Add an `<h3>` to each describing their intent
 
 **app/javascript/components/pages/Home.js**
 ```javascript
-import React from "react"
+import React, { Component } from 'react'
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
     return(
       <h3>This is the Home Page</h3>
@@ -148,7 +144,7 @@ The other two are mostly the same.
 ### React Router
 In order to have multiple pages we need to add the React Router.
 ```
-$ yarn add react-router-dom
+$ yarn add react-router-dom@5.3.0
 ```
 
 Import the React-router and appropriate pages.
@@ -159,11 +155,11 @@ import {
   BrowserRouter as  Router,
   Route,
   Switch
-} from "react-router-dom"
+} from 'react-router-dom'
 
-import AboutUs from "./pages/AboutUs"
-import LearnMore from "./pages/LearnMore"
-import Home from "./pages/Home"
+import AboutUs from './pages/AboutUs'
+import LearnMore from './pages/LearnMore'
+import Home from './pages/Home'
 ```
 
 Add the basic routes to allow for navigation.
@@ -172,47 +168,32 @@ Add the basic routes to allow for navigation.
 ```javascript
 <Router>
   <Switch>
-    <Route exact path="/" component={ Home } />
-    <Route path="/about" component={ AboutUs } />
-    <Route path="/learn" component={ LearnMore } />
+    <Route exact path="/" component={Home} />
+    <Route path="/about" component={AboutUs} />
+    <Route path="/learn" component={LearnMore} />
   </Switch>
 </Router>
 ```
-
-### Routing Constraints
-You'll recall that Rails has a router, and now that we've added React Router, so does React. You might imagine that these two routers could come into conflict, and that would be correct. We need to clearly separate the Rails routing responsibilities, and the React routing responsibilities. We're building a single page app. This, by definition, means that all HTML traffic goes to just one page. All other types of requests though, will need to be routed by the Rails app. Most important of these, is the JSON and JavaScript traffic that the Rails app must handle, we've been thinking of these requests as API requests from the frontend app to the backend one.
-
-The Rails Router has a convenient feature that we can use to achieve this separation of traffic, all HTML requests go to our React app, and everything else be handled normally.
-
-**config/routes.rb**
-```ruby
-Rails.application.routes.draw do
-  get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
-  root 'home#index'
-end
-```
-Notice the "constraints" section. This states that all HTML traffic goes to `home#index` our React app.
 
 ### Add Navigation Components
 Using Reactstrap to add the navigation code.
 
 **app/javascript/components/App.js**
 ```javascript
-import React from "react"
-import PropTypes from "prop-types"
+import React, { Component } from 'react'
 import {
   BrowserRouter as  Router,
   NavLink,
   Route,
   Switch
-} from "react-router-dom"
-import { Nav, NavItem } from "reactstrap"
-import AboutUs from "./pages/AboutUs"
-import LearnMore from "./pages/LearnMore"
-import Home from "./pages/Home"
+} from 'react-router-dom'
+import { Nav, NavItem } from 'reactstrap'
+import AboutUs from './pages/AboutUs'
+import LearnMore from './pages/LearnMore'
+import Home from './pages/Home'
 
-class App extends React.Component{
-  render(){
+class App extends Component {
+  render() {
     return(
       <Router>
         <h1>This is a React Component</h1>
@@ -228,9 +209,9 @@ class App extends React.Component{
           </NavItem>
         </Nav>
         <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route path="/about" component={ AboutUs } />
-          <Route path="/learn" component={ LearnMore } />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={AboutUs} />
+          <Route path="/learn" component={LearnMore} />
         </Switch>
       </Router>
     )
@@ -240,7 +221,7 @@ class App extends React.Component{
 export default App
 ```
 
-<hr>
+---
 
 ### Challenge
 Follow these instructions to create your own React in Rails application with Reactstrap and react-router.
