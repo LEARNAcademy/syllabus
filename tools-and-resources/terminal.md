@@ -35,9 +35,9 @@ clear       Clear the Terminal screen
 `tab`                           Will autocomplete the directory or file name  
 `command` and `+` or `-`        Will increase or decrease the font size  
 `up arrow` or `down arrow`      Prints the last command entered, use the up/down arrows to scroll through commands history  
-`control` and `u`               Clears the current command line
-`option` and `left arrow`       Scroll left by each full string of text on the command line       
 `option` and `right arrow`      Scroll right by each full string of text on the command line       
+`option` and `left arrow`       Scroll left by each full string of text on the command line       
+`control` and `u`               Clears the current command line
 
 
 ## Extras
