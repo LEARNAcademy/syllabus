@@ -29,13 +29,17 @@ clear       Clear the Terminal screen
 ```
 
 ## Tips and Shortcuts
-`command` and `t`             Opens a new tab in terminal  
-`command` and `k`             Clears the terminal  
-`command` and `d`             Split pane  
-`tab`                         Will autocomplete the directory or file name  
-`command` and `+` or `-`      Will increase or decrease the font size  
-`up arrow`                    Prints the last command entered, use the up/down arrows to scroll through commands history  
-
+```
+`command` and `t`               Opens a new tab in terminal  
+`command` and `k`               Clears the terminal
+`command` and `d`               Split pane  
+`tab`                           Will autocomplete the directory or file name  
+`command` and `+` or `-`        Will increase or decrease the font size  
+`up arrow` or `down arrow`      Prints the last command entered, use the up/down arrows to scroll through commands history  
+`control` and `u`               Clears the current command line
+`option` and `left arrow`       Scroll left by each full string of text on the command line       
+`option` and `right arrow`      Scroll right by each full string of text on the command line       
+```
 
 ## Extras
 There are programs that help add a bit of flare and functionality to your terminal. One we like at LEARN is a shell called ZSH (Z shell). Find out more <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank">here.</a>
