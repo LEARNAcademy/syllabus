@@ -91,7 +91,7 @@ var learnStudents = ["Debra", "Jonas", "Joel"]
 - `"Joel"` is a value in the array
 
 ### Index
-Every value in an array has a particular location know as the **index**. Indexes are sequential numbers that are a bit like an address for every element in the array. Arrays are **zero indexed** which means the elements are numbered starting with the number 0 and increase by one whole number for each new element.
+Every value in an array has a particular location known as the **index**. Indexes are sequential numbers that are a bit like an address for every element in the array. Arrays are **zero indexed** which means the elements are numbered starting with the number 0 and increase by one whole number for each new element.
 
 ```javascript
 var learnStudents = ["Debra", "Jonas", "Joel"]
@@ -107,13 +107,13 @@ One of the many benefits to storing data in arrays is that we can access the ind
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents[0])
-// output --> "Debra"
+// Output: "Debra"
 
 console.log(learnStudents[2])
-// output --> "Joel"
+// Output: "Joel"
 
 console.log(learnStudents[6])
-// output --> undefined
+// Output: undefined
 ```
 
 ### Changing Elements
@@ -124,11 +124,11 @@ var learnStudents = ["Debra", "Jonas", "Joel"]
 
 learnStudents[0] = "Summer"
 console.log(learnStudents)
-// output --> ["Summer", "Jonas", "Joel"]
+// Output: ["Summer", "Jonas", "Joel"]
 
 learnStudents[1] = "Brian"
 console.log(learnStudents)
-// output --> ["Summer", "Brian", "Joel"]
+// Output: ["Summer", "Brian", "Joel"]
 ```
 
 ### Length Property
@@ -138,7 +138,7 @@ Because arrays are an ordered collection of data, they have a length property. T
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.length)
-// output --> 3
+// Output: 3
 ```
 
 ### Built-in Methods
@@ -159,10 +159,10 @@ Mutator methods modify the array the method is called on. When working with muta
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.push("Ryan"))
-// output --> 4
+// Output: 4
 
 console.log(learnStudents)
-// output --> ["Debra", "Jonas", "Joel", "Ryan"]
+// Output: ["Debra", "Jonas", "Joel", "Ryan"]
 ```
 
 **.pop()**
@@ -173,10 +173,10 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.pop())
-// output --> "Joel"
+// Output: "Joel"
 
 console.log(learnStudents)
-// output --> ["Debra", "Jonas"]
+// Output: ["Debra", "Jonas"]
 ```
 
 **.unshift(value)**
@@ -189,10 +189,10 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.unshift("Rachael"))
-// output --> 4
+// Output: 4
 
 console.log(learnStudents)
-// output --> ["Rachael", "Debra", "Jonas", "Joel"]
+// Output: ["Rachael", "Debra", "Jonas", "Joel"]
 ```
 
 **.shift()**
@@ -203,10 +203,10 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.shift())
-// output --> "Debra"
+// Output: "Debra"
 
 console.log(learnStudents)
-// output --> ["Jonas", "Joel"]
+// Output: ["Jonas", "Joel"]
 ```
 
 **.reverse()**
@@ -217,10 +217,10 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.reverse())
-// output --> ["Joel", "Jonas", "Debra"]
+// Output: ["Joel", "Jonas", "Debra"]
 
 console.log(learnStudents)
-// output --> ["Joel", "Jonas", "Debra"]
+// Output: ["Joel", "Jonas", "Debra"]
 ```
 
 **.sort()**
@@ -233,10 +233,10 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.sort())
-// output --> ["Debra", "Joel", "Jonas"]
+// Output: ["Debra", "Joel", "Jonas"]
 
 console.log(learnStudents)
-// output --> ["Debra", "Joel", "Jonas"]
+// Output: ["Debra", "Joel", "Jonas"]
 
 let numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) => a - b);
@@ -257,17 +257,17 @@ Accessor methods do not modify the original array. Accessors return a specific o
 var learnStudents = ["Debra", "Jonas", "Joel"]
 
 console.log(learnStudents.indexOf("Joel"))
-// output --> 2
+// Output: 2
 
 var joelIndex = learnStudents.indexOf("Joel")
 console.log(joelIndex)
-// output --> 2
+// Output: 2
 
 console.log(learnStudents.indexOf("Mary"))
-// output --> -1
+// Output: -1
 
 console.log(learnStudents)
-// output --> ["Debra", "Jonas", "Joel"]
+// Output: ["Debra", "Jonas", "Joel"]
 ```
 
 **.lastIndexOf(value)**
@@ -280,17 +280,17 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Joel", "Jonas", "Joel"]
 
 console.log(learnStudents.lastIndexOf("Joel"))
-// output --> 3
+// Output: 3
 
 var lastJoelIndex = learnStudents.lastIndexOf("Joel")
 console.log(lastJoelIndex)
-// output --> 3
+// Output: 3
 
 console.log(learnStudents.lastIndexOf("Mary"))
-// output --> -1
+// Output: -1
 
 console.log(learnStudents)
-// output --> ["Debra", "Jonas", "Joel"]
+// Output: ["Debra", "Jonas", "Joel"]
 ```
 
 **.slice(staringIndex, endingIndex)**
@@ -303,36 +303,37 @@ console.log(learnStudents)
 var learnStudents = ["Debra", "Mary", "Jonas", "Joel"]
 
 console.log(learnStudents.slice(0, 2))
-// output --> ["Debra", "Mary"]
+// Output: ["Debra", "Mary"]
 
 console.log(learnStudents.slice(2))
-// output --> ["Jonas", "Joel"]
+// Output: ["Jonas", "Joel"]
 
 var slicedArray = learnStudents.slice(2)
 console.log(slicedArray)
-// output --> ["Jonas", "Joel"]
+// Output: ["Jonas", "Joel"]
 
 console.log(learnStudents)
-// output --> ["Debra", "Mary", "Jonas", "Joel"]
+// Output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 **.concat()**
 - Merges two or more arrays to form one combined array
 - The original array is unchanged
+- Strings can also be added to an array
 
 ```javascript
 var learnStudents1 = ["Debra", "Jonas", "Joel"]
 var learnStudents2 = ["Mary", "Juan", "Matt"]
 
 console.log(learnStudents1.concat(learnStudents2))
-// output --> ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
+// Output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
 
 var comboArrays = learnStudents1.concat(learnStudents2)
 console.log(comboArrays)
-// output --> ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
+// Output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
 
 console.log(learnStudents1)
-// output --> ["Debra", "Jonas", "Joel"]
+// Output: ["Debra", "Jonas", "Joel"]
 ```
 
 ### Strings to Arrays and Back Again
@@ -347,23 +348,23 @@ In JavaScript, arrays and strings have a lot of similar properties. They both ar
 var learnStudents = ["Debra", "Mary", "Jonas", "Joel"]
 
 console.log(learnStudents.join())
-// output --> "Debra,Mary,Jonas,Joel"
+// Output: "Debra,Mary,Jonas,Joel"
 
 console.log(learnStudents.join(""))
-// output --> "DebraMaryJonasJoel"
+// Output: "DebraMaryJonasJoel"
 
 console.log(learnStudents.join(" "))
-// output --> "Debra Mary Jonas Joel"
+// Output: "Debra Mary Jonas Joel"
 
 console.log(learnStudents.join("-"))
-// output --> "Debra-Mary-Jonas-Joel"
+// Output: "Debra-Mary-Jonas-Joel"
 
 var joinedNames = learnStudents.join(" ")
 console.log(joinedNames)
-// output --> "Debra Mary Jonas Joel"
+// Output: "Debra Mary Jonas Joel"
 
 console.log(learnStudents)
-// output --> ["Debra", "Mary", "Jonas", "Joel"]
+// Output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 **.split("")**
@@ -375,23 +376,23 @@ console.log(learnStudents)
 var learnStudents = "Debra Mary Jonas Joel"
 
 console.log(learnStudents.split())
-// output --> ["Debra Jonas Joel"]
+// Output: ["Debra Jonas Joel"]
 
 console.log(learnStudents.split(""))
-// output --> ["D", "e", "b", "r", "a", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
+// Output: ["D", "e", "b", "r", "a", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
 
 console.log(learnStudents.split(" "))
-// output --> ["Debra", "Mary", "Jonas", "Joel"]
+// Output: ["Debra", "Mary", "Jonas", "Joel"]
 
 console.log(learnStudents.split("a"))
-// output --> ["Debr", " M", "ry Jon", "s Joel"]
+// Output: ["Debr", " M", "ry Jon", "s Joel"]
 
 var splitNames = learnStudents.split(" ")
 console.log(splitNames)
-// output --> ["Debra", "Mary", "Jonas", "Joel"]
+// Output: ["Debra", "Mary", "Jonas", "Joel"]
 
 console.log(learnStudents)
-// output --> ["Debra", "Mary", "Jonas", "Joel"]
+// Output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 ### Array Destructuring
@@ -403,10 +404,10 @@ Destructuring assignments requires variables names in square brackets and an equ
 var [firstName, secondName] = ["Mary", "Debra"]
 
 console.log(firstName)
-// output --> "Mary"
+// Output: "Mary"
 
 console.log(secondName)
-// output --> "Debra"
+// Output: "Debra"
 ```
 ---
 
