@@ -112,7 +112,7 @@ In order for our Rails server to respond to a request to this url, it needs a pa
 **config/routes.rb**
 <img src="https://i.ibb.co/L8tf1xt/routes-explained.png" alt="routes-explained" border="0" />
 
-The route here is essentially adding an address to the application. Now when we navigate to `localhost:3000/answer`, Rails will determine that we have requested the `/answer` route. The route will find the `main` controller and call the `answer` method.
+The route here is essentially adding an address to the application. Now when we navigate to `localhost:3000/answer` Rails will determine that we have requested the `/answer` route. The route will find the `main` controller and call the `answer` method.
 
 This completes the Rails response to the `/answer` request. When we visit `localhost:3000/answer` we should see a white page with the text 'This is the answer'.
 
@@ -305,22 +305,21 @@ Number is: <%= @result_string %>
 ```
 
 ### Review
-
 - The `routes.rb` file defines all the possible urls to which your application is prepared to respond. It's like the address book of your Rails app.
 - Each route will point to a method on in the controller file.
 - The controller method will ultimately do the work you require and send the appropriate view response.
 - `params` is a method returning a `ActionController::Parameters` which is a hash of parameters submitted in the request.
 
 ### Challenges
+Routes, Views, Controllers
+- As a user, I can visit a custom landing page at `localhost:3000`.
+- As a user, I can see the names of my team members as hyperlinks on the landing page.
+- As a user, I can click on each team member's name and be taken to a page that displays a list of that team member's top three things. (Could be top three restaurants, activities, books, video games, hiking locations, beaches, doughnut shoppes, movies, etc.)
 
-- As a user, I can visit a landing page at `localhost:3000` that has links to other pages named:
-  - cubed
-  - evenly
-  - palindrome
-  - madlib
+Params
 - As a user, I can visit a page called cubed that takes a number as a param and displays that number cubed.
-- As a user, I can visit a page called evenly that takes two numbers and displays whether or not the first number is evenly divisible by the second.
-- As a user, I can visit a page called palindrome that takes a string and displays whether it is a palindrome (the same word read forward and backward).
+- As a user, I can visit a page called evenly that takes two numbers as params and displays whether or not the first number is evenly divisible by the second.
+- As a user, I can visit a page called palindrome that takes a string as a param and displays whether it is a palindrome (the same word forward and backward).
 - As a user, I can visit a page called madlib that takes params of a noun, verb, adjective, adverb, and displays a short silly story.
 
 ---
