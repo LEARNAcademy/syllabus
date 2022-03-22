@@ -131,29 +131,34 @@ Notice that in our loops we use `let` to assign `i` or `index` to a starting val
 ---
 
 ### Challenges
-1. Logging values with for loops
-- Write a for loop that logs each number from 1 - 20.
-- Write a for loop that logs the result of each number from 1 - 20 tripled.
-- Create a for loop that logs each even number from 1-20, and in the place of every odd number, returns the word "ODD" **Expected output** --> ODD, 2, ODD, 4, ODD, 6 ...etc
+- Create a for loop that logs each number from 1 - 20.
+- Create a for loop that logs every other number from 1 - 20.
+- Create a for loop that logs the result of each number from 1 - 20 tripled.
+- Create a for loop that logs each even number from 1-20, and in the place of every odd number, returns the word "ODD".  
+Expected output: ODD, 2, ODD, 4, ODD, 6 ...etc
 
-2. Looping over an array. Consider this variable:
+Consider this variable:
 ```javascript
-var nums = [3, 57, -9, 20, 67]
+const nums = [3, 57, -9, 20, 67]
 ```
-- Create a loop that will log the highest number from the array. **Expected output** --> 67
-- Create a loop that will log the lowest number from the array **Expected output** --> -9
-- Create a loop that will log the remainder of each number when divided by 2. **Expected output** --> 1, 1, -1, 0, 1
+- Create the code that will log the largest number from the array.
+- Create the code that will log the smallest number from the array.
+- Create the code that will log the remainder of each number when divided by 2.  
+Expected output: 1, 1, -1, 0, 1
 
-3. Looping over a string. Consider this variable:
+Consider this variable:
 ```javascript
-var myString = "learn student"
+const myString = "learn student"
 ```
-- Write the code that will log the number of times the letter "e" occurs in the string. **Expected output** --> 2
+- Create the code that will log the number of times the letter "e" occurs in the string.
+- Create the code that will log every other character in the string.
 
 ### STRETCH Challenges
 
-1. Even or Odd: Write a for loop that iterates from 0 to 15. For each iteration, it will check if the current number is odd or even, and display the appropriate outcome. **Expected output** --> "0 is even" "1 is odd" "2 is even" ...etc
-2. Fizz Buzz: Use a for loop to log all numbers from 1-100.  If a number is a multiple of 3, replace it with the word `fizz`. If a number is a multiple of five, replace it with the word `buzz`. If a number is a multiple of both 3 and 5, replace it with `fizzbuzz`. **Expected output** --> 1, 2, "fizz", 4, "buzz", "fizz", 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz" ...etc
+- Create the code that iterates from 5 to 15. For each iteration log if the current number is odd or even.  
+Expected output: "5 is odd" "6 is even" "7 is odd" ...etc
+- Fizz Buzz: Create the code that will iterate from 1-100. If a number is a multiple of 3, replace it with the word `fizz`. If a number is a multiple of five, replace it with the word `buzz`. If a number is a multiple of both 3 and 5, replace it with `fizzbuzz`.  
+Expected output: 1, 2, "fizz", 4, "buzz", "fizz", 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz" ...etc
 
 ---
 [Back to Syllabus](../README.md#unit-one-javascript-foundations)
