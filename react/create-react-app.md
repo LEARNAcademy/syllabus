@@ -239,7 +239,7 @@ class Footer extends Component{
       <>
         LEARN Academy
         <br />
-        Echo 2021
+        Alpha 2022
       </>
     )
   }
