@@ -44,7 +44,12 @@ A key component of web applications is the ability for a user to log in. This re
 **app/views/home/index.html.erb**
 ```html
 <%= react_component 'App' %>
-<%= javascript_pack_tag 'application' %>
+```
+- Add the following:
+
+**app/views/layouts/application.html.erb**
+```javascript
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 ```
 - Add the following:
 
@@ -139,8 +144,6 @@ class App extends Component {
 
 export default App
 ```
-
-destroying the session
 
 ### Additional Configurations
 There are a couple more configurations we will need to make our app work properly with Devise. The first one is to set up the default url options for the Devise mailer in our development environment. Add the following code near the other mailer options:

@@ -83,17 +83,22 @@ Next, we need to generate a controller so that we can route the React component 
 - $ `rails generate controller Home`
 - Add a file in *app/views/home* called *index.html.erb*
 
-By calling the React component in `erb` tags the component will be rendered in the browser through the Rails view. The `javascript_pack_tag` will direct our app to let webpacker handle the compiling of JavaScript.
+By calling the React component in `erb` tags the component will be rendered in the browser through the Rails view.
 
 **app/views/home/index.html.erb**
 ```html
 <%= react_component 'App' %>
-<%= javascript_pack_tag 'application' %>
 ```
-Now we need to make sure we route to the appropriate file for our views.
+
+We need to direct our Rails app to let webpacker handle the compiling of JavaScript. This is done with a `javascript_pack_tag` in the base Rails view. Add the line of code below to the head tag.
+
+**app/views/layouts/application.html.erb**
+```javascript
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+```
 
 ### Rails Routes
-Direct the Rails app to serve the React `App.js` component as the landing page.
+Now we need to make sure we route to the appropriate file for our views. We can direct the Rails app to serve the React `App.js` component as the landing page.
 
 **config/routes.rb**
 ```ruby
