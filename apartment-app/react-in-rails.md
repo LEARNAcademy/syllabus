@@ -94,6 +94,10 @@ We need to direct our Rails app to let webpacker handle the compiling of JavaScr
 
 **app/views/layouts/application.html.erb**
 ```javascript
+// Find this line:
+<%= javascript_importmap_tags %>
+
+// And replace it with this:
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 ```
 
