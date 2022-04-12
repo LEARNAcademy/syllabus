@@ -46,7 +46,7 @@ In this example, we are creating a MVP for an app that will keep track of a user
 ```
 $ rails generate model Exercise activity:string description:string
 $ rails db:migrate
-$ rails generate controller exercise
+$ rails generate controller Exercise
 ```
 
 As a scaffolding step, we can add a few instances of our Exercise model to the database in Rails console. Then we can add our RESTful routes to the application. For every step, we will be adding a controller method, a route, and some code in the view.
