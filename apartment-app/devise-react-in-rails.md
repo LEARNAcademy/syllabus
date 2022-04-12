@@ -1,7 +1,7 @@
 # React IN Rails with Devise
 
 #### Overview
-A key component of web applications is the ability for a user to log in. This requires using the Devise gem to create authentication and authorization for a Rails application. Before we move forward with the React portion, we will look at how Devise interacts with a Rails application in combination with a React application that offloads authentication responsibilities to Devise.
+A key component of web applications is the ability for a user to log in. This requires a developer to consider both authentication and authorization. When working in a Rails application we have access to the Devise gem that will handle the necessary user views as well as the security. Since Devise is designed to work with Rails, we need to consider the division of responsibilities between the React portion of the application and responsibilities allocated to Devise.
 
 #### Previous Lecture (27 min)
 [![YouTube](http://img.youtube.com/vi/EONxG_ttNCA/0.jpg)](https://www.youtube.com/watch?v=EONxG_ttNCA)
@@ -14,30 +14,56 @@ A key component of web applications is the ability for a user to log in. This re
 - can render views for log in and sign up
 - can define authentication token
 
+#### Vocabulary
+- Devise
+- user session
+- protected pages
+
 #### Additional Resources
 - [Authentication vs Authorization](./authentication-vs-authorization.md)
-- [Devise](https://github.com/plataformatec/devise)
+- [Devise Cheatsheet](https://devhints.io/devise)
 - [Devise Github Repo](https://github.com/plataformatec/devise#getting-started)
 
 #### Process
-- $ `rails new apartment-app -d postgresql -T`
-- $ `cd apartment-app`
+- $ `rails new react-in-rails-with-devise -d postgresql -T`
+- $ `cd react-in-rails-with-devise`
 - $ `rails db:create`
-- Add the remote from your GitHub classroom repository
-- Create a default branch (main)
-- Make an initial commit to the repository
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
-- $ `bundle add devise`
-- $ `rails generate devise:install`
-- $ `rails generate devise User`
+- $ `bundle add webpacker`
 - $ `bundle add react-rails`
+- $ `rails webpacker:install`
 - $ `rails webpacker:install:react`
+- $ `yarn add @babel/preset-react`
+- $ `yarn add @rails/activestorage`
+- $ `yarn add @rails/ujs`
 - $ `rails generate react:install`
 - $ `rails generate react:component App`
 - $ `rails generate controller Home`
-- $ `rails db:migrate`
-- $ `rails s`
+- Add a file in *app/views/home* called *index.html.erb*
+- Add the following:
+
+**app/views/home/index.html.erb**
+```html
+<%= react_component 'App' %>
+```
+- Add the following:
+
+**app/views/layouts/application.html.erb**
+```javascript
+// Find this line:
+<%= javascript_importmap_tags %>
+
+// And replace it with this:
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+```
+- Add the following:
+
+**config/routes.rb**
+```ruby
+Rails.application.routes.draw do
+  get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
+  root 'home#index'
+end
+```
 
 #### Troubleshooting Tips
 Now that we are working in a new stack, the way we find error messages is going to look a little bit different. We are used to getting a browser display when something goes wrong. With this particular stack, we need to look for errors in the console and in the terminal. Any syntax errors or incorrect code anywhere in the React components will prevent `App.js` from compiling. So a mistake is likely to lead to a blank page.
@@ -49,25 +75,35 @@ Now that we are working in a new stack, the way we find error messages is going 
 
 ---
 
-### Adding mailer settings
-You’ll need to set up the default URL options for the Devise mailer in each environment. In the *config/environments/development.rb* file, add the following code at the end of the previous code inside the file:
-```ruby
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-```
+### Adding Devise
+**Devise** is a Rails gem that gives developers a collection of methods that create authorization and authentication. Using Devise, we can create a special model called User that gets Devise code injected into each new model instance. Just by running the setup commands we get Devise sign in and sign up forms as well as a lot of additional functionality.
 
-Devise is a Rails gem that gives developers a collection of methods that create authorization and authentication. Using Devise, we can create a special model called User that gets Devise code injected into each new model instance. Just by running the setup commands we get Devise sign in and sign up forms as well as a lot of additional functionality that we will explore with the Apartment App challenge.
+- $ `bundle add devise`
+- $ `rails generate devise:install`
+- $ `rails generate devise User`
+- $ `rails db:migrate`
 
-Navigate to `http://localhost:3000/users/sign_in` and see a log in page.
+And with those simple commands, we now have the ability to create users in the database and allow those users to log in.
 
-Navigate to `http://localhost:3000/users/sign_up` and see a sign up page.
+### Sign In and Sign Up
+Devise creates a set of Ruby `html.erb` views that allow the user to see various forms. As we know, form pages are triggered by a `get` request that displays a page for users to enter information that can be posted to the database. In order to create a User instance in the database, we need to collect a username, password, and password confirmation. The `users/sign_up` route will give us the appropriate form and when submitted successfully will post to the database and create a new instance of User.
+
+- Navigate to `http://localhost:3000/users/sign_up` and see a sign up page.
+
+Once a user exists in the database, we want allow the user to sign in. This action is also considered a post request and therefore requires a corresponding form. When the user is logged in, we have created a user session. A **user session** means that a user has been authorized by submitting the correct credentials. During a user session, a token is added to every new request the user makes. This token can be used to authenticate which pages are available to this particular user.
+
+- Navigate to `http://localhost:3000/users/sign_in` and see a log in page.
+
+### Protected Pages
+**Protected pages** are views that are only available to a user that is logged in. An app will typically have a mix of pages that a non-logged in user can see and ones that are only available to users who are logged in. Often protected pages will display information specific to that user.
 
 ### React Component View
-Next, we'll add a view and add our React component. In addition to rendering the `App` component in the view, we can pass information from Rails into React. Here we want to pass information down from Devise into our React App:
+While Devise will handle the forms for the user sign up and sign in, the rest of the views will come from React. Some of these views will be protected pages. To create a protected page we are going to need some information about the user. To make this information available to the React side of our app, we can pass information from Rails and Devise into the React App.js component. Specifically we want to have access to:
 1. If user is logged in or not
 2. The id of the current user
-3. Relative URL of signup screen (from Devise)
-2. Relative URL of login screen for users who already have an account (from Devise)
-3. Relative URL of logout endpoint (also from Devise)
+3. Relative url of signup form (from Devise)
+2. Relative url of login form for users who already have an account (from Devise)
+3. Relative url of logout endpoint (also from Devise)
 
 **app/views/home/index.html.erb**
 ```
@@ -80,49 +116,9 @@ Next, we'll add a view and add our React component. In addition to rendering the
 } %>
 ```
 
+This object is a set of keys defined by the developer and corresponding values that come from Devise. This object is being passed into App.js. We then have access to the object through props.
 
-### Routing Constraints
-You'll recall that Rails has a router, and now that we've added React Router, so does React. You might imagine that these two routers could come into conflict, and that would be correct. We need to clearly separate the Rails routing responsibilities, and the React routing responsibilities. We're building a single page app. This, by definition, means that all HTML traffic goes to just one page. All other types of requests though, will need to be routed by the Rails app. Most important of these, is the JSON and JavaScript traffic that the Rails app must handle, we've been thinking of these requests as API requests from the frontend app to the backend one.
-
-The Rails Router has a convenient feature that we can use to achieve this separation of traffic, all HTML requests go to our React app, and everything else be handled normally.
-
-**config/routes.rb**
-```ruby
-Rails.application.routes.draw do
-  get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
-  root 'home#index'
-end
-```
-Notice the "constraints" section. This states that all HTML traffic goes to `home#index` our React app.
-
-### Additional React Components
-At this point, there is only one React component in the application. Just like in a regular React App, our project will have many, many components. To keep the files organized, it is a good practice to create three directories in your React application: assets, components, and pages.
-
-**Assets**  
-The assets directory is used to store image files used in your application.
-
-**Components**  
-The components directory is for helper components such as headers, footers, and buttons.
-
-**Pages**  
-The pages directory is for full views. The full view can consist of items from the assets and components directory as well the code unique to a page.
-
-### Login/Logout Button
-With login status and routes in our React component, we can now add a button to log the user out or in.
-
-First we need to instruct Devise to listen for logout requests via GET instead of the default DELETE. We do that in Devise's config file:
-
-**config/initializers/devise.rb**
-```ruby
-# Find this line:
-config.sign_out_via = :delete
-# and replace it with this:
-config.sign_out_via = :get
-```
-
-To start, let's look at creating the buttons directly in `App.js` then break them out into another component. The first thing is bringing in the three pieces of information that get passed from devise to "App" in *index.html.erb*.
-
-That is followed with some conditional rendering to display the appropriate link depending on if the user is logged in or logged out.
+We can make the access to these values a little easier by destructing the values out of props. We can then use some logs to see the data we have are able to access.
 
 **app/javascript/components/App.js**
 ```javascript
@@ -137,19 +133,15 @@ class App extends Component {
       sign_in_route,
       sign_out_route
     } = this.props
+    console.log("logged_in:", logged_in)
+    console.log("current_user:", current_user)
+    console.log("new_user_route:", new_user_route)
+    console.log("sign_in_route:", sign_in_route)
+    console.log("sign_out_route:", sign_out_route)
     return(
       <>
-        {logged_in &&
-          <div>
-            <a href={sign_out_route}>Sign Out</a>
-          </div>
-        }
-        {!logged_in &&
-          <div>
-            <a href={sign_in_route}>Sign In</a>
-          </div>
-        }
-      <>
+        <h1>React in Rails with Devise</h1>
+      </>
     )
   }
 }
@@ -157,16 +149,119 @@ class App extends Component {
 export default App
 ```
 
-This is good foundational code, but ultimately `App.js` is going to be in charge of "big picture" functionality like routing and fetch calls so it would make more sense to move the `sign_in` and `sign_out` routes to another component like a Header.
+### Additional Configurations
+There are a couple more configurations we will need to make our app work properly with Devise. The first one is to set up the default url options for the Devise mailer in our development environment. Add the following code near the other mailer options:
 
+**config/environments/development.rb**
+```ruby
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+```
+
+Secondly, we need to instruct Devise to listen for logout requests via a `get` request instead of the default `delete`. We do that in Devise's config file:
+
+**config/initializers/devise.rb**
+```ruby
+# Find this line:
+config.sign_out_via = :delete
+# And replace it with this:
+config.sign_out_via = :get
+```
+
+### Additional React Components
+At this point, there is only one React component in the application. Just like in a regular React App, our project will have many, many components. To keep the files organized, it is a good practice to create three directories in your React application: assets, components, and pages.
+
+**Assets**  
+The assets directory is used to store image files used in your application.
+
+**Components**  
+The components directory is for helper components such as headers, footers, and buttons.
+
+**Pages**  
+The pages directory is for full views. The full view can consist of items from the assets and components directory as well the code unique to a page.
+
+### Login/Logout Button
+Now that Devise is configured and our Rails app is supporting the React App.js component, we can look at how the user flow will be handled in the application. The forms for Devise are coming from the Rails side of the application, but everything else including the navigation links will come from React. To see this exchange, let's build out some basic navigation in a Header component.
+
+App.js will only be in change of "big picture" logic. All the UI will be handled by other components. The Header component will need access to all the data being passed from Devise. We can use the spread operator to pass all the data coming into App.js on to Header.
+
+**app/javascript/components/App.js**
+```javascript
+import React, { Component } from 'react'
+import Header from './components/Header'
+
+class App extends Component {
+  render() {
+    return(
+      <>
+        <Header {...this.props} />
+      </>
+    )
+  }
+}
+
+export default App
+```
+
+The Header component will be displaying navigation information as well as any text or image headings desired by the developer. The navigation can include internal links to other React components as well as the routes to the Devise forms. We can use Reactstrap to add some stylings.
+
+- $ `bundle add bootstrap`
+- $ `mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss`
+- $ `yarn add reactstrap`
+
+**app/assets/stylesheets/application.scss**
+```css
+@import 'bootstrap';
+```
+
+The Header component will receive the data passed into the component call. We can make referencing these values easier by destructing them out of props. Since `logged_in` is a Boolean value, we can create some conditional rendering to show the appropriate navigation links to Devise depending on whether the user is logged in or not.
+
+**app/javascript/components/components/Header.js**
+
+```javascript
+import React, { Component } from 'react'
+import { Nav, NavItem } from 'reactstrap'
+
+class Header extends Component {
+  render() {
+    const {
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
+    } = this.props
+    console.log("logged_in:", logged_in)
+    console.log("current_user:", current_user)
+    return(
+      <>
+        <h1>React in Rails with Devise</h1>
+        <Nav>
+          {logged_in &&
+            <NavItem>
+              <a href={sign_out_route} className="nav-link">Sign Out</a>
+            </NavItem>
+          }
+          {!logged_in &&
+            <NavItem>
+              <a href={sign_in_route} className="nav-link">Sign In</a>
+            </NavItem>
+          }
+          {!logged_in &&
+            <NavItem>
+              <a href={new_user_route} className="nav-link">Sign Up</a>
+            </NavItem>
+          }
+        </Nav>
+      </>
+    )
+  }
+}
+export default Header
+```
 ---
 
-### Challenge: Apartment App Devise with React
-As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
-- As a developer, I can add React components to my apartment app
-- As a developer, I ensure my app distinguishes the difference between JSON and HTML payloads in my routes
-- As a user, I can navigate to a log in page
-- As a user, I can log out
+### Challenge
+Follow these instructions to create your own React in Rails application with Devise.
 
 ---
 [Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)
