@@ -49,6 +49,10 @@ A key component of web applications is the ability for a user to log in. This re
 
 **app/views/layouts/application.html.erb**
 ```javascript
+// Find this line:
+<%= javascript_importmap_tags %>
+
+// And replace it with this:
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 ```
 - Add the following:
@@ -159,7 +163,7 @@ Secondly, we need to instruct Devise to listen for logout requests via a `get` r
 ```ruby
 # Find this line:
 config.sign_out_via = :delete
-# and replace it with this:
+# And replace it with this:
 config.sign_out_via = :get
 ```
 
