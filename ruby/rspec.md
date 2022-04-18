@@ -1,13 +1,12 @@
 # Ruby Testing with RSpec
 
-## Video: RSpec
-[![YouTube](http://img.youtube.com/vi/NhhzRtJC8bg/0.jpg)](https://www.youtube.com/watch?v=NhhzRtJC8bg)
-## Video: <a href="https://player.vimeo.com/video/168104193" target="blank">TDD and BDD with RSpec</a>
-
 ## Overview
 - RSpec is the Ruby testing framework used for Test Driven Development which is best implemented using `red-green-refactor`
 - RSpec is a Domain Specific Language (a language specialized for a particular task) written in Ruby
 - RSpec is installed using Ruby's package manager called Rubygems
+
+#### Previous Lecture (1 hour 31 min)
+[![YouTube](http://img.youtube.com/vi/aYvliAENtA0/0.jpg)](https://youtu.be/aYvliAENtA0)
 
 ## Learning Objectives
 - Exploring the syntax of RSpec

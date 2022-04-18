@@ -3,6 +3,9 @@
 #### Overview
 Decision structures, also called decision trees, conditional statements, or if/else statements, are fundamental to computer programming. Conditional statements are a sequence of well-defined instructions that produce a unique output based on the value of the input. Conditionals follow a flowchart-like structure.
 
+#### Previous Lecture (40 min)
+[![YouTube](http://img.youtube.com/vi/dfw_pJsu6aI/0.jpg)](https://youtu.be/dfw_pJsu6aI)
+
 #### Learning Objectives
 - can define the syntax of a conditional statement in Ruby
 - can reproduce the syntax of string interpolation in Ruby

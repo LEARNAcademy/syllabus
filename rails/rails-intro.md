@@ -6,7 +6,7 @@
 Ruby on Rails is a server-side web application framework written in Ruby. Rails was created by Danish programmer David Heinemeier Hansson (known as DHH). Rails was released in July 2004 as open source code. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
 
 #### Previous Lecture (50 min)
-[![YouTube](http://img.youtube.com/vi/32GuNd2rFEk/0.jpg)](https://www.youtube.com/watch?v=32GuNd2rFEk)
+[![YouTube](http://img.youtube.com/vi/XRI4uJexh0w/0.jpg)](https://youtu.be/XRI4uJexh0w)
 
 #### Learning Objectives
 - can recall the command to create a new Rails application

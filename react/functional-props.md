@@ -1,8 +1,11 @@
 # React Functional Props
 
-## Overview
+#### Overview
 - Managing the internal state of a component and communicating between components with props
 - Exploring how to pass data and behavior between components with props and functions
+
+#### Previous Lecture (58 min)
+[![YouTube](http://img.youtube.com/vi/cYKXvyJq1zw/0.jpg)](https://youtu.be/cYKXvyJq1zw)
 
 ## Learning Objectives
 - Understanding how a component passes data and behavior to another component as props

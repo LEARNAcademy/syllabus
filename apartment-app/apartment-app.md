@@ -3,6 +3,9 @@
 #### Overview
 As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
 
+#### Previous Lecture (29 min)
+[![YouTube](http://img.youtube.com/vi/MBlfvLlYGYk/0.jpg)](https://youtu.be/MBlfvLlYGYk)
+
 #### Learning Objectives
 - can pass authentication routes to a view
 - can distinguish between protected and unprotected pages

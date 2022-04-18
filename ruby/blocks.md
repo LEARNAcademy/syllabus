@@ -4,6 +4,9 @@
 - Ruby has lots of iteration methods
 - Ruby uses the keywords `do/end` or {} to create a block of code to be executed
 
+#### Previous Lecture (49 min)
+[![YouTube](http://img.youtube.com/vi/wE8LaI6_0Dg/0.jpg)](https://youtu.be/wE8LaI6_0Dg)
+
 ## Learning Objectives
 - Passing a block to a Ruby iteration method
 - Exploring the do/end vs {} syntax

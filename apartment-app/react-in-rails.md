@@ -4,7 +4,7 @@
 There are many, may ways to create a full-stack application. In this section we will look at how to host React components inside of a Rails application. Adding React components inside a Rails project simplifies the flow of information from the database to the view while still harnessing the power of JavaScript. With this particular configuration of technologies we have two routers in the same application. The Rails router will route to API endpoints and the React router will display different UI pages for the user.
 
 #### Previous Lecture (59 min)
-[![YouTube](http://img.youtube.com/vi/mKJXxwEIs7o/0.jpg)](https://www.youtube.com/watch?v=mKJXxwEIs7o)
+[![YouTube](http://img.youtube.com/vi/V83A4L2xhLo/0.jpg)](https://youtu.be/V83A4L2xhLo)
 
 #### Learning Objectives
 - can create React views hosted in a Rails application
