@@ -3,6 +3,12 @@
 #### Overview
 In Ruby, everything belongs to a class. We can also create custom classes that hold data and behavior. Inheritance describes relationships between classes.
 
+#### Previous Lecture - Classes (1 hour 23 min)
+[![YouTube](http://img.youtube.com/vi/GbjwKLHCZ9M/0.jpg)](https://youtu.be/GbjwKLHCZ9M)
+
+#### Previous Lecture - Inheritance (51 min)
+[![YouTube](http://img.youtube.com/vi/PDjsZ_Od494/0.jpg)](https://youtu.be/PDjsZ_Od494)
+
 #### Learning Objectives
 - can define instance variables
 - can define getter methods and setter methods

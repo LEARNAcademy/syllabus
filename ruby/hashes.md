@@ -5,6 +5,9 @@
 - A hash is a bit like an array but instead of the values being referenced by an index, the values are reference by their unique key
 - The class `Hash` falls under the category of enumerable, which means you can use iterable methods on a hash
 
+#### Previous Lecture (29 min)
+[![YouTube](http://img.youtube.com/vi/D3Rxtv0CI9E/0.jpg)](https://youtu.be/D3Rxtv0CI9E)
+
 ## Learning Objectives
 - Exploring the different ways hashes can be constructed
 - Applying iterable methods to a hash

@@ -4,6 +4,9 @@
 - Methods are used to create customized bits of functionality that can be called as many times as we need
 - Ruby methods can take any number of arguments
 
+#### Previous Lecture (21 min)
+[![YouTube](http://img.youtube.com/vi/MJic4poiJPE/0.jpg)](https://youtu.be/MJic4poiJPE)
+
 ## Learning Objectives
 - Using Ruby syntax to create a simple method
 - Passing arguments to a Ruby method

@@ -5,6 +5,9 @@
 - Implementing listening events in React
 - Updating state with every change to the DOM
 
+#### Previous Lecture (48 min)
+[![YouTube](http://img.youtube.com/vi/hdjjEmRIW7A/0.jpg)](https://youtu.be/hdjjEmRIW7A)
+
 ## Learning Objectives
 - Creating text input fields
 - Exploring event listeners in JavaScript

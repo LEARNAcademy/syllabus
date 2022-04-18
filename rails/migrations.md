@@ -4,6 +4,9 @@
 - Migrations are used to modify the shape of an existing database.
 - Changing the shape of the database can include adding or deleting columns, changing the name of the column, or changing the data type of a column.
 
+#### Previous Lecture (50 min)
+[![YouTube](http://img.youtube.com/vi/RE59jlqT4i4/0.jpg)](https://youtu.be/RE59jlqT4i4)
+
 ### Learning Objectives
 - Using a Rails generate command to modify the database
 

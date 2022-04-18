@@ -1,14 +1,12 @@
 # Active Record Associations
 
-### Video: Active Record Associations
-[![YouTube](http://img.youtube.com/vi/CM520EfUI7k/0.jpg)](https://www.youtube.com/watch?v=CM520EfUI7k)
-### Video: Foreign Keys
-[![YouTube](http://img.youtube.com/vi/QpFPd4tlGoA/0.jpg)](https://www.youtube.com/watch?v=QpFPd4tlGoA)
-
 ### Overview
 - In Rails, an association (or relationship) is a connection between two Active Record models.
 - Creating associations is a useful way to keep our code DRY and our databases clean and organized.
 - A foreign key is a column in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
+
+#### Previous Lecture (55 min)
+[![YouTube](http://img.youtube.com/vi/XAxPg-8dn1g/0.jpg)](https://youtu.be/XAxPg-8dn1g)
 
 ### Learning Objectives
 - Exploring associations between models
