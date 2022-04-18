@@ -3,7 +3,7 @@
 #### Overview
 A key component of web applications is the ability for a user to log in. This requires a developer to consider both authentication and authorization. When working in a Rails application we have access to the Devise gem that will handle the necessary user views as well as the security. Since Devise is designed to work with Rails, we need to consider the division of responsibilities between the React portion of the application and responsibilities allocated to Devise.
 
-#### Previous Lecture (1 hour, 9 min)
+#### Previous Lecture (1 hour 9 min)
 [![YouTube](http://img.youtube.com/vi/PPrJ_UrbjFg/0.jpg)](https://youtu.be/PPrJ_UrbjFg)
 
 #### Learning Objectives
