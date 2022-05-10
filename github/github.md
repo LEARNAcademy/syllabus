@@ -14,16 +14,16 @@ Goddamn Idiotic Truckload of sh*t: when it breaks.
 ### Git Configurations
 
 Instructions for Mac OSX
-- **Step 1**: Verify git version using: `$ git --version`
+- **Step 1**: Verify git version using: $ `git --version`
   - Version 2.31.1 is required for using Personal Access Tokens for GitHub Authentication
   - For more information about GitHub's Authentication migration from password credentials to tokens, visit: [Token Authentication Requirements](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
 - **Step 2**: Configure git username in terminal
   - Configure global username which is used to display your name on **all** repos
-  - $ `git config --global user.name "Mona Lisa"`
+  - $ `git config --global user.name "Your Name Here"`
   - For more info, visit: [Setting your Username in GitHub](https://docs.github.com/en/github/getting-started-with-github/setting-your-username-in-git)
 - **Step 3**: Configure git email in terminal
   - Configure global commit email address
-  - $ `git config --global user.email "email@example.com"`
+  - $ `git config --global user.email "youremail@example.com"`
   - For more info, visit: [Setting Your Commit Email Address](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
 - **Step 4**: Configure the credential helper
   - $ `git config --global credential.helper osxkeychain`
@@ -44,6 +44,7 @@ Instructions for Mac OSX
   - In the left sidebar, click **Personal access tokens**
   - Click the button at the top labeled **Generate new token**
   - In the **Note** text box, give your token a name, something generic, yet descriptive such as `LEARN GitHub`
+  - Change the expiration date to at least six months in the future
   - Select the following scopes:
     - `repo`
     - `admin:org`
