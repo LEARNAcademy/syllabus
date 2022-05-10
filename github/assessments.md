@@ -24,7 +24,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 - $ `git clone <url>`
 - $ `git checkout -b <branch-name>`
 - $ `git status`
-- $ `git add .`
+- $ `git add <file-name>`
 - $ `git commit -m "useful information here"`
 - $ `git push origin <branch-name>`
 
@@ -62,7 +62,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 
 #### Ready to Submit
 - cd into the correct folder
-- $ `git add .`
+- $ `git add <file-name>`
 - $ `git commit -m "completed assessment"`
 - $ `git push origin <branch-name>`
 - On GitHub refresh the page and find the green `Compare & pull request` button

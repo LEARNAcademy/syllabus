@@ -56,7 +56,7 @@ Instructions for Mac OSX
   - Clone an existing repo using HTTPS
   - Make a change in the repository and push a change
     - $ `git status`
-    - $ `git add .`
+    - $ `git add <file-name>`
     - $ `git commit -m "meaningful message here"`
     - $ `git push origin <branch-name>`
   - When prompted for your username, enter your GitHub handle
