@@ -24,7 +24,7 @@ Let's look at the process of creating a new version of the project (a branch). T
 <img src="assets/git-3.png" width="650px">
 
 As you can see above, a change has been made to our new file and is ready to be pushed up!
-- Next you will `git add .` and `git commit`. Your commit message should be descriptive of the portion you are completing. It would also follow the current-tense, almost as if you are telling the computer a command. In this example, our commit message is `"start challenge one"`.
+- Next you will `git add <file-name>` and `git commit`. Your commit message should be descriptive of the portion you are completing. It would also follow the current-tense, almost as if you are telling the computer a command. In this example, our commit message is `"start challenge one"`.
 <img src="assets/git-4.png" width="650px">
 
 - Finally, you're going to `git push origin <branch-name>`.
@@ -45,7 +45,7 @@ At this point, the second driver should have the updated file/s that the first d
 <img src="assets/driver-2.png" width="650px">
 
 When it comes time to switch again, follow the git flow that was used above:
-- `git add .`
+- `git add <file-name>`
 - `git commit -m "detailed description here"`
 - `git push origin <branch-name>`
 
