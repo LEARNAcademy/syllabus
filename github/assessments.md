@@ -73,7 +73,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 #### Next Steps
 - An instructor will review your code and leave you comments. 
   - Possible Instructor responses are:
-    - Approval: Well done, You are clear to merge.
+    - Approval: You are clear to merge.
     - Comment: There is something that should be changed before approval. 
     - Request for Changes: The is something large that is needs to be addressed before the Assessment can continue being reviewed. 
 - Once Your PR has been approved, open your pull request and click the green `Merge pull request button`
