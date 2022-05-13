@@ -75,7 +75,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
   - Possible Instructor responses are:
     - Approval: You are clear to merge.
     - Comment: There is something that should be changed before approval. 
-    - Request for Changes: The is something large that is needs to be addressed before the Assessment can continue being reviewed. 
+    - Request for Changes: The is something that needs to be addressed before the assessment can continue being reviewed. 
 - Once Your PR has been approved, open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
