@@ -71,8 +71,12 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 **You have successfully submitted your assessment!**
 
 #### Next Steps
-- An instructor will review your code and leave you comments
-- Open your pull request and click the green `Merge pull request button`
+- An instructor will review your code and leave you comments. 
+  - Possible Instructor responses are:
+    - Approval: Well done, You are clear to merge.
+    - Comment: There is something that should be changed before approval. 
+    - Request for Changes: The is something large that is needs to be addressed before the Assessment can continue being reviewed. 
+- Once Your PR has been approved, open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
 
