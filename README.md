@@ -83,16 +83,16 @@ This is our opportunity to dig a bit deeper into the Javascript programming lang
 
 ## Unit Three: React
 React is a powerful Javascript library used to build more complicated user interfaces.
-1. [React Introduction](./react/intro.md/)
+1. [React Introduction](./react/intro.md)
 3. [Creating a New React Application](./react/create-react-app.md)
-4. [React State](./react/state.md/)
+4. [React State](./react/state.md)
 5. [React Props](./react/props.md)
 6. [React Functional Props](./react/functional-props.md)
 7. [React Inputs and Events](./react/inputs.md)
 8. [React Forms and Functional Props](./react/forms.md)
 
 #### Additional Topics:
-- [React State with Images](./react/state-with-images.md/)
+- [React State with Images](./react/state-with-images.md)
 - [React Component Lifecycle](./react/component-lifecycle.md)
 - [Smart and Dumb Components](./react/smart-and-dumb-components.md)
 - [Testing Props with Jest](./react/testing-props-with-jest.md)
