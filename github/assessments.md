@@ -49,7 +49,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 - Type $ `git clone` and paste the link you copied from your git repository
 - cd into the assessment directory
 - You should see the full name of the assessment followed by your GitHub handle
-- Checkout a branch: $ `git checkout -b <branch name>`
+- Checkout a branch: $ `git checkout -b <branch-name>`
   - No quotes or spaces in your branch name
   - Use the naming convention `<week-number-your-name>` e.g. week-1-sarah-proctor
 - Terminal will say `Switched to a new branch <branch-name>`
@@ -75,7 +75,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
   - Possible Instructor responses are:
     - Approval: You are clear to merge.
     - Comment: There is something that should be changed before approval. 
-    - Request for Changes: The is something that needs to be addressed before the assessment can continue being reviewed. 
+    - Request for Changes: There is something that needs to be addressed before the assessment can continue being reviewed. 
 - Once Your PR has been approved, open your pull request and click the green `Merge pull request button`
 - After the merge is successful there will be an option to delete your branch
 - When your code is merged and your branch is deleted your assessment is **DONE**!!
