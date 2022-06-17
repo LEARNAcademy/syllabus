@@ -17,11 +17,12 @@ Rails is full-stack framework that handles the business logic (model) as well as
 #### Vocabulary
 - API
 - JSON
-- resource
+- endpoint
 - Postman
+- resource
 
 #### Additional Resources
-- [What is an API?](mulesoft.com/resources/api/what-is-an-api)
+- [What is an API?](https://www.mulesoft.com/resources/api/what-is-an-api)
 - [Postman Docs](https://www.postman.com/)
 - [Controller Specs](https://relishapp.com/rspec/rspec-rails/docs/controller-specs)
 - [Model Specs](https://relishapp.com/rspec/rspec-rails/docs/model-specs)
@@ -54,7 +55,7 @@ Rails is full-stack framework that handles the business logic (model) as well as
 ---
 
 ### API
-**API** (Application Programming Interface) is an application that transmits data in the form of JSON. **JSON** (JavaScript Object Notation) is a data structure modeled after JavaScript but supported by most programming languages. Data stored in a database is retrieved by a controller method. The combination of the model and the controller is and API and can serve as the backend of an application.
+**API** (Application Programming Interface) is an application that transmits data in the form of JSON. **JSON** (JavaScript Object Notation) is a data structure modeled after JavaScript but supported by most programming languages. Data stored in a database is retrieved, created, updated, or deleted by controller methods. The controller methods can be accessed with the correct route. Coding this communication flow to an API via route to controller method is called creating an **endpoint**. The combination of the model and the controller is and API and can serve as the backend of an application. 
 
 ### Postman
 One of the challenges faced by backend developers is how to check that the work you are doing is correct without the UI. Luckily there are many tools that help create data visualization for APIs. We use a popular platform called **Postman** that allows us to design and test our API. After each step of the process, we will use Postman to ensure our code is working correctly.
@@ -84,7 +85,7 @@ I can use this handy command to see what that `resources :guitars` line does:
 $ rails routes
 ```
 
-There's a lot that's output to the screen but lets focus on this section:
+There's a lot that's output to the screen but lets focus on this section at the top of the output:
 
 ![Resource Routes](./assets/resource-routes.png)
 
@@ -121,7 +122,7 @@ class GuitarsController < ApplicationController
 end
 ```
 
-Now we need to test that we created this controller action correctly. Since we are creating an API, we need a different way to visualize the data output. This is where Postman comes into play. 
+Now we need to test that this controller endpoint is behaving correctly. Since we are creating an API, we need a different way to visualize the data output. This is where Postman comes into play. 
 
 ![Postman Request](./assets/postman-interface-layout.png)
 
