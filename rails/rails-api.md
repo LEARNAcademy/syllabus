@@ -305,8 +305,7 @@ We now have full CRUD on the guitar data!
 ### Wildlife Tracker Challenge
 The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland, Oregon. Before they give the go ahead, they need to do an environmental impact study. They've asked you to build an API the rangers can use to report wildlife sightings.
 
-#### Story 1
-**In order to track wildlife sightings, as a user of the API, I need to manage animals.**    
+**Story 1: In order to track wildlife sightings, as a user of the API, I need to manage animals.**    
 
 **Branch:** animal-crud-actions  
 
@@ -317,8 +316,7 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 - Can update an existing animal in the database
 - Can remove an animal entry in the database
 
-#### Story 2
-**In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.**    
+**Story 2: In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.**    
 
 **Branch:** sighting-crud-actions  
 
@@ -330,8 +328,7 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 - Can update an existing animal sighting in the database
 - Can remove an animal sighting in the database
 
-#### Story 3
-**In order to see the wildlife sightings, as a user of the API, I need to run reports on animal sightings.**    
+**Story 3: In order to see the wildlife sightings, as a user of the API, I need to run reports on animal sightings.**    
 
 **Branch:** animal-sightings-reports  
 
@@ -355,8 +352,7 @@ end
 
 ### Stretch Challenges
 
-#### Story 4
-**In order to see the wildlife sightings contain valid data, as a user of the API, I need to include prope**  r specs.  
+**Story 4: In order to see the wildlife sightings contain valid data, as a user of the API, I need to include prope**  r specs.  
 
 **Branch:** animal-sightings-specs  
 
@@ -369,8 +365,7 @@ Validations will require specs in `spec/models` and the controller methods will 
 - Can see a status code of 422 when a post request can not be completed because of validation errors
   - Hint: [Handling Errors in an API Application the Rails Way](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
 
-#### Story 5
-**In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the sam**  e time.  
+**Story 5: In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the sam**  e time.  
 
 **Branch:** submit-animal-with-sightings  
 
