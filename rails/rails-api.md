@@ -50,7 +50,7 @@ Rails is full-stack framework that handles the business logic (model) as well as
 - Did you migrate?
 - Is your server running?
 - Are you requesting the correct route?
-- Are you seeing an HTML output rather an JSON? Click the preview tab and look at the error message.
+- Are you seeing an HTML output rather a JSON? Click the preview tab and look at the error message.
 
 ---
 
@@ -109,7 +109,7 @@ skip_before_action :verify_authenticity_token
 ### Index
 Now that the app is ready to go, we can start working through CRUD actions for the guitar data. The first step is to make a request that retrieves all the guitars. That will be a `get` request to the `/guitars` url. 
 
-From looking at my $ `rails routes` output I can see that I need to create an `index` method on my guitars controller. Since this is an API, the controller method will not render a view. Instead it will render the JSON data. 
+From looking at my $ `rails routes` output I can see that I need to create an `index` method on my guitars controller. Since this is an API, the controller method will not render a view. Instead it will render JSON data. 
 
 ```ruby
 class GuitarsController < ApplicationController
@@ -122,7 +122,7 @@ class GuitarsController < ApplicationController
 end
 ```
 
-Now we need to test that this controller endpoint is behaving correctly. Since we are creating an API, we need a different way to visualize the data output. This is where Postman comes into play. 
+Now we need to test that the index endpoint is behaving correctly. Since we are creating an API, we need some way to visualize the data output. This is where Postman comes into play. 
 
 ![Postman Request](./assets/postman-interface-layout.png)
 
@@ -178,7 +178,7 @@ Now `localhost:3000/guitars/1` returns the first guitar and `localhost:3000/guit
 Our second route is done. This completes the `R` in CRUD. 
 
 ### Create
-Next we'll tackle building the method to create a guitar. In the create method we can ensure the newly created guitar is rendered and if something goes wrong we can render the appropriate errors. We need to set up strong params for our controller to protect the data coming into the app from an external request.
+Next we'll tackle building the method to create a guitar. In the create method we can ensure the newly created guitar is rendered and if something goes wrong we can render the appropriate errors. We need to set up a strong params method for our controller to protect the data coming into the app from an external request.
 
 **app/controllers/guitars_controller.rb**
 ```ruby
@@ -220,6 +220,8 @@ When we click send, given that we've formatted our request correctly, we should 
 
 Notice that we get the newly created guitar in the body of our response as well as a 200 response code.
 
+Our third route is done. This completes the `CR` in CRUD. 
+
 ### Destroy
 The destroy action is the conventional Rails action for removing content from the database.
 
@@ -258,8 +260,10 @@ When we hit send, we should get back the item we just deleted:
 
 If we try the show on the guitar we just deleted we should receive an error.
 
+Our fourth route is done. This completes the `CRD` in CRUD. 
+
 ### Update
-The update action will modify an existing item in the database. In order to update an item, we have to have the id of the item we intend to update.
+The update action will modify an existing item in the database. In order to update an item, we have to have the id of the item we intend to update. We also need to call the strong params method on update since this request will modify database content.
 
 **app/controllers/guitars_controller.rb**
 ```ruby
@@ -293,6 +297,8 @@ The update action is mapped to `/guitars/:id`. We will select a patch request an
 ![Update request in Postman](./assets/postman-update.png)
 
 When we hit send, we should get back the item we just updated.
+
+We now have full CRUD on the guitar data!
 
 ---
 
