@@ -50,7 +50,7 @@ Rails is full-stack framework that handles the business logic (model) as well as
 - Did you migrate?
 - Is your server running?
 - Are you requesting the correct route?
-- Errors? Always look at the first error in the list.
+- Are you seeing an HTML output rather an JSON? Click the preview tab and look at the error message.
 
 ---
 
