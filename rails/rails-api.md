@@ -1,9 +1,7 @@
-# Rails Generate Resource
-
-# JavaScript Arrays
+# Rails API
 
 #### Overview
-We have covered some of the Rails generator commands. As we've seen, generators can save us a lot of time by setting up the files we need in order to say start coding up a response to a server request or to create and connect a model to a table in a database.
+Rails is full-stack framework that handles the business logic (model) as well as the UI (views) and the controllers that get all the information to the correct place. But often full-stack applications are built with different languages, frameworks, and technologies working together. It is all about finding the right tool for the job. At LEARN, our stack is using React in the frontend handling the views and Rails handling the model and controller. When an application is only controllers and models it is called an API. In this section, we will create just the backend of an application and explore what it looks like to be a backend developer.
 
 #### Previous Lecture (43 min)
 [![YouTube](http://img.youtube.com/vi/pzD_tTktq8Y/0.jpg)](https://www.youtube.com/watch?v=pzD_tTktq8Y)
@@ -12,18 +10,19 @@ We have covered some of the Rails generator commands. As we've seen, generators 
 - can discern RESTful routes associated with views
 - can discern RESTful routes associated with database actions
 - can discern JSON from HTML
-- can match controller methods to the appropriate HTTP action
+- can match RESTful controller methods to the appropriate HTTP action
 - can utilize Postman to visualize API data flow
 - can implement appropriate model validations and corresponding specs
 
 #### Vocabulary
-- resource
+- API
 - JSON
+- resource
 - Postman
 
 #### Additional Resources
-- [Postman Docs](https://www.postman.com/)
 - [What is an API?](mulesoft.com/resources/api/what-is-an-api)
+- [Postman Docs](https://www.postman.com/)
 - [Controller Specs](https://relishapp.com/rspec/rspec-rails/docs/controller-specs)
 - [Model Specs](https://relishapp.com/rspec/rspec-rails/docs/model-specs)
 - [Handling Errors in an API Application the Rails Way](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
@@ -34,9 +33,9 @@ We have covered some of the Rails generator commands. As we've seen, generators 
 #### Process
 - `cd` to your Desktop
 - $ `rails new rails-api -d postgresql -T`
-- $ `cd rails new rails-api -d postgresql -T`
+- $ `cd rails-api`
 - $ `rails db:create`
-- Add the remote from GitHuh
+- Add the remote from GitHub
 - Create the main branch
 - Make an initial commit
 - $ `bundle add rspec-rails`
@@ -54,8 +53,16 @@ We have covered some of the Rails generator commands. As we've seen, generators 
 
 ---
 
+### API
+**API** (Application Programming Interface) is an application that transmits data in the form of JSON. **JSON** (JavaScript Object Notation) is a data structure modeled after JavaScript but supported by most programming languages. Data stored in a database is retrieved by a controller method. The combination of the model and the controller is and API and can serve as the backend of an application.
+
+### Postman
+One of the challenges faced by backend developers is how to check that the work you are doing is correct without the UI. Luckily there are many tools that help create data visualization for APIs. We use a popular platform called **Postman** that allows us to design and test our API. After each step of the process, we will use Postman to ensure our code is working correctly.
+
 ### Rails Generate Resource
-To get the application set up, we can generate a guitar resource.
+We have covered several Rails generator commands such as model, controller, and RSpec. Generators set up the files and folders needed to create custom functionality with correct naming conventions in a Rails application. The generate **resource** command will do the heavy lifting of creating a model with given columns and data types, a controller, view folder, and the necessary RESTful routes.
+
+For this example, we are going to generate a resource for a Guitar model.
 
 ```
 $ rails generate resource Guitar strings:integer manufacturer:string model:string color:string
@@ -63,11 +70,9 @@ $ rails generate resource Guitar strings:integer manufacturer:string model:strin
 
 ![Generate Resource Output](./assets/generate-resource.png)
 
-With that one command, Rails creates just about everything I need to start working with guitars as a data resource.
+With that one command, Rails creates just about everything needed to start working with guitars as a data resource. It set up both the migration and model needed to start using guitars as an ActiveRecord class. It created a controller (and a guitar views folder). And finally, it plugged in resourced routes for my guitars. Since we are making an API, the view folder will not be needed and can be removed.
 
-It set up both the migration and model that I need to start using guitars as an ActiveRecord class. It created a controller (and a guitar views folder) so that I can start coding up some controller actions. And finally, it plugged in resourced routes for my guitars.
-
-At this point we ought to run our migrations to make our model official:
+At this point we ought to run our migrations to build the schema.
 
 ```
 $ rails db:migrate
@@ -85,18 +90,25 @@ There's a lot that's output to the screen but lets focus on this section:
 
 What we see is that Rails generated all the routes required for us to build out the CRUD functionality for our guitars. All we really need to do is tell our controller what we want it do for each request.
 
-### Disable Authenticity Token
-For static page Rails applications, a check is made to assure that forms submitted to the controller originate from the same website. In most single page applications that consume an API, we don't utilize this feature, and need to disable it. Add the following to the `app/controllers/application_controller.rb`
+Since the guitar model is set up we can hop into the `rails console` and add a couple guitars.
 
+```
+> Guitar.create(strings: 7, manufacturer: 'Ibanez', model: 'RG Premium', color: 'Twilight Black')
+> Guitar.create(strings: 6, manufacturer: 'Fender', model: 'Stratocaster', color: 'Sunburst')
+```
+
+### Disable Authenticity Token
+For static page Rails applications, a check is made to assure that the data submitted to the controller originates from the same website. In most single page applications that consume an API we don't utilize this feature and need to disable it. Add the following code:
+
+**app/controllers/application_controller.rb**
 ```ruby
 skip_before_action :verify_authenticity_token
 ```
 
 ### Index
+Now that the app is ready to go, we can start working through CRUD actions for the guitar data. The first step is to make a request that retrieves all the guitars. That will be a `get` request to the `/guitars` url. 
 
-Let's tell it what we want it to do for a `get` to the `/guitars` url.
-
-From looking at my `rails routes` output I can see that I need to create an `index` method on my guitars controller.
+From looking at my $ `rails routes` output I can see that I need to create an `index` method on my guitars controller. Since this is an API, the controller method will not render a view. Instead it will render the JSON data. 
 
 ```ruby
 class GuitarsController < ApplicationController
@@ -109,17 +121,15 @@ class GuitarsController < ApplicationController
 end
 ```
 
-Notice I ask it to `render json`. All this does is tell the controller to send json objects as the response.
+Now we need to test that we created this controller action correctly. Since we are creating an API, we need a different way to visualize the data output. This is where Postman comes into play. 
 
-At this point I can run the server and visit `/guitars`. But it's not very interesting because I don't have any data in my tables yet.
+![Postman Request](./assets/postman-interface-layout.png)
 
-Since my guitar model is set up though, I can hop into the `rails console` and add one:
+We can ask Postman to make a request to our API and return the JSON. In Postman we can make a `get` request to `localhost:3000/guitars`.
 
-```
-> Guitar.create(strings: 7, manufacturer: 'Ibanez', model: 'RG Premium', color: 'Twilight Black')
-```
+![Postman Request](./assets/postman-request.png)
 
-Now when I visit I should see something like this:
+In the body we will see the result of our request. It should contain an array with the guitar database instances.
 
 ```
 [
@@ -129,24 +139,26 @@ Now when I visit I should see something like this:
     "manufacturer": "Ibanez",
     "model": "RG Premium",
     "color": "Twilight Black",
-    "created_at": "2019-08-26T23:41:14.362Z",
-    "updated_at": "2019-08-26T23:41:14.362Z"
+    "created_at": "2022-08-26T23:41:14.362Z",
+    "updated_at": "2022-08-26T23:41:14.362Z"
+  },
+  {
+    "id": 2,
+    "strings": 6,
+    "manufacturer": "Fender",
+    "model": "Stratocaster",
+    "color": "Sunburst",
+    "created_at": "2022-08-26T23:41:15.155Z",
+    "updated_at": "2022-08-26T23:41:15.155Z"
   }
 ]
 ```
 
+Our first route is done!
 ### Show
+Next up is the route for retrieving a single guitar object from the database. Since Rails is following the RESTful routes naming conventions, the route `/guitars/:id` will point to the show method in the guitars controller. The show method will find a guitar based on the id param passed to the controller.
 
-Let's focus on the route for retrieving selecting a single guitar object from the database.
-
-Recalling our routes:
-
-![Resource Routes](./assets/resource-routes.png)
-
-We see that Rails set up a route for '`/guitars/:id`' that points to a show method in the guitars controller. We'll build that out to find a guitar based on the id param passed to the controller.
-
-We'll update our `guitars_controller.rb` to have a show method:
-
+**app/controllers/guitars_controller.rb**
 ```ruby
 class GuitarsController < ApplicationController
 
@@ -160,42 +172,19 @@ class GuitarsController < ApplicationController
 end
 ```
 
-Now `localhost:3000/guitars/1` returns the first guitar.
+Now `localhost:3000/guitars/1` returns the first guitar and `localhost:3000/guitars/2` returns the second.
 
-Let's hop into the rails console and add another guitar:
-
-```
-> Guitar.create(strings: 6, manufacturer: 'Fender', model: 'Stratocaster', color: 'Sunburst')
-```
-
-Now `localhost:3000/guitars/2` returns the guitar we just created:
-
-```json
-{
-  "id": 2,
-  "strings": 6,
-  "manufacturer": "Fender",
-  "model": "Stratocaster",
-  "color": "Sunburst",
-  "created_at": "2019-08-27T17:40:34.155Z",
-  "updated_at": "2019-08-27T17:40:34.155Z"
-}
-```
-
-Additionally, '`/guitars`', will show all the guitars in the database.
-
-The key here is that after generating the resource, we really only needed to define the method that a particular route requires to work.
+Our second route is done. This completes the `R` in CRUD. 
 
 ### Create
+Next we'll tackle building the method to create a guitar. In the create method we can ensure the newly created guitar is rendered and if something goes wrong we can render the appropriate errors. We need to set up strong params for our controller to protect the data coming into the app from an external request.
 
-First we'll tackle building the method to create a guitar.
-
-We'll update `guitars_controller.rb` like so:
-
+**app/controllers/guitars_controller.rb**
 ```ruby
 class GuitarsController < ApplicationController
 
-  #...index/show methods...
+  #...index method...
+  #...show method...
 
   def create
     guitar = Guitar.create(guitar_params)
@@ -214,9 +203,13 @@ class GuitarsController < ApplicationController
 end
 ```
 
-Now we've set up strong params for our controller and we have added a method to create a guitar or render errors.
+Let's try out our new endpoint through Postman. We need to provide our request with correctly formatted JSON to send to the database. To do this, there are a couple configurations.
 
-Let's try out our new endpoint through Postman.
+1. The type of request is `post`.
+2. Selecting the `body` tab will create a space to write out the JSON.
+3. Selecting the `raw` radio button will create a text editor-like workspace.
+4. Selecting `JSON` from the dropdown will instruct the workspace to expect JSON formatting.
+5. The JSON must be written with correct syntax.
 
 ![Post Request in Postman](./assets/postman-post-send.png)
 
@@ -224,49 +217,85 @@ When we click send, given that we've formatted our request correctly, we should 
 
 ![Post Response in Postman](./assets/postman-create-json.png)
 
-Notice that we get the newly created guitar in the body of our response.
+Notice that we get the newly created guitar in the body of our response as well as a 200 response code.
 
 ### Destroy
+The destroy action is the conventional Rails action for removing content from the database.
 
-The destroy action is the conventional Rails action for implementing the Delete operation. Let's build out that action.
-
-We'll add a destroy method to our `guitars_controller.rb`:
-
+**app/controllers/guitars_controller.rb**
 ```ruby
-def destroy
-  guitar = Guitar.find(params[:id])
-  if guitar.destroy
-    render json: guitar
-  else
-    render json: guitar.errors
+class GuitarsController < ApplicationController
+
+  #...index method...
+  #...show method...
+  #...create method...
+
+  def destroy
+    guitar = Guitar.find(params[:id])
+    if guitar.destroy
+      render json: guitar
+    else
+      render json: guitar.errors
+    end
   end
+
+  private
+  def guitar_params
+    params.require(:guitar).permit(:strings, :manufacturer, :model, :color)
+  end
+
 end
 ```
 
-Once that's set up, we'll recall our routes or run `rails routes` in my terminal:
-
-![Rails routes](./assets/resource-routes.png)
-
-We see that our delete action is mapped to `/guitars/:id` so that's what we'll attempt to reach in Postman. Let's try to delete the guitar we just created.
-
-We'll build our request like so:
+The delete action is mapped to `/guitars/:id`. In order to delete something we have to know what we are deleting. To delete the guitar we just created, we need to select the appropriate type of request.
 
 ![Delete request in Postman](./assets/postman-delete-send.png)
-
-Notice that we've selected the `DELETE` verb and set up the url with the `id` of the guitar we want delete.
 
 When we hit send, we should get back the item we just deleted:
 
 ![Deleted Guitar](./assets/postman-create-json.png)
 
-Now if we try to show the guitar we just deleted, we should receive an error:
+If we try the show on the guitar we just deleted we should receive an error.
 
-![Postman 404](./assets/postman-404.png)
+### Update
+The update action will modify an existing item in the database. In order to update an item, we have to have the id of the item we intend to update.
+
+**app/controllers/guitars_controller.rb**
+```ruby
+class GuitarsController < ApplicationController
+
+  #...index method...
+  #...show method...
+  #...create method...
+  #...destroy method...
+
+  def update
+    guitar = Guitar.find(params[:id])
+    guitar.update(guitar_params)
+    if guitar.valid?
+      render json: guitar
+    else
+      render json: guitar.errors
+    end
+  end
+
+  private
+  def guitar_params
+    params.require(:guitar).permit(:strings, :manufacturer, :model, :color)
+  end
+
+end
+```
+
+The update action is mapped to `/guitars/:id`. We will select a patch request and create a JSON object with updated values the body of the request.
+
+![Update request in Postman](./assets/postman-update.png)
+
+When we hit send, we should get back the item we just updated.
 
 ---
 
 ### Wildlife Tracker Challenge
-
 The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland, Oregon. Before they give the go ahead, they need to do an environmental impact study. They've asked you to build an API the rangers can use to report wildlife sightings.
 
 **Story**  
@@ -314,18 +343,19 @@ end
   - Hint: Utilize the params section in Postman to ease the developer experience
   - Hint: [Routes with params](./controllers-routes-views.md)
 
+### Stretch Challenges
+
 **Story**  
 In order to see the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.
 **Branch**  
 animal-sightings-specs
 **Acceptance Criteria**  
-## Stretch Challenges
 Validations will require specs in `spec/models` and the controller methods will require specs in `spec/requests`.
-- can see validation errors if an animal doesn't include a common name and scientific binomial
-- can see validation errors if a sighting doesn't include latitude, longitude, or a date
-- can see a validation error if an animal's common name exactly matches the scientific binomial
-- can see a validation error if the animal's common name and scientific binomial are not unique
-- can see a status code of 422 when a post request can not be completed because of validation errors
+- Can see validation errors if an animal doesn't include a common name and scientific binomial
+- Can see validation errors if a sighting doesn't include latitude, longitude, or a date
+- Can see a validation error if an animal's common name exactly matches the scientific binomial
+- Can see a validation error if the animal's common name and scientific binomial are not unique
+- Can see a status code of 422 when a post request can not be completed because of validation errors
   - Hint: [Handling Errors in an API Application the Rails Way](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
 
 **Story**  
@@ -333,7 +363,7 @@ In order to increase efficiency, as a user of the API, I need to add an animal a
 **Branch**  
 submit-animal-with-sightings
 **Acceptance Criteria**  
-- can create new animal along with sighting data in a single API request
+- Can create new animal along with sighting data in a single API request
 	- Hint: Look into `accepts_nested_attributes_for`
 
 ---
