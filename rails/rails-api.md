@@ -306,9 +306,9 @@ We now have full CRUD on the guitar data!
 The Forest Service is considering a proposal to place in conservancy a forest of virgin Douglas fir just outside of Portland, Oregon. Before they give the go ahead, they need to do an environmental impact study. They've asked you to build an API the rangers can use to report wildlife sightings.
 
 **Story**  
-In order to track wildlife sightings, as a user of the API, I need to manage animals.
+In order to track wildlife sightings, as a user of the API, I need to manage animals.  
 **Branch**  
-animal-crud-actions
+animal-crud-actions  
 **Acceptance Criteria**  
 - Create a resource for animal with the following information: common name and scientific binomial
 - Can see the data response of all the animals
@@ -317,9 +317,9 @@ animal-crud-actions
 - Can remove an animal entry in the database
 
 **Story**  
-In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.
+In order to track wildlife sightings, as a user of the API, I need to manage animal sightings.  
 **Branch**  
-sighting-crud-actions
+sighting-crud-actions  
 **Acceptance Criteria**  
 - Create a resource for animal sightings with the following information: latitude, longitude, date
   - Hint: An animal has_many sightings (rails g resource Sighting animal_id:integer ...)
@@ -329,9 +329,9 @@ sighting-crud-actions
 - Can remove an animal sighting in the database
 
 **Story**  
-In order to see the wildlife sightings, as a user of the API, I need to run reports on animal sightings.
+In order to see the wildlife sightings, as a user of the API, I need to run reports on animal sightings.  
 **Branch**  
-animal-sightings-reports
+animal-sightings-reports  
 **Acceptance Criteria**  
 - Can see one animal with all its associated sightings
   - Hint: Checkout [this example](https://github.com/learn-co-students/js-rails-as-api-rendering-related-object-data-in-json-v-000#using-include) on how to include associated records
@@ -353,9 +353,9 @@ end
 ### Stretch Challenges
 
 **Story**  
-In order to see the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.
+In order to see the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.  
 **Branch**  
-animal-sightings-specs
+animal-sightings-specs  
 **Acceptance Criteria**  
 Validations will require specs in `spec/models` and the controller methods will require specs in `spec/requests`.
 - Can see validation errors if an animal doesn't include a common name and scientific binomial
@@ -366,9 +366,9 @@ Validations will require specs in `spec/models` and the controller methods will 
   - Hint: [Handling Errors in an API Application the Rails Way](https://blog.rebased.pl/2016/11/07/api-error-handling.html)
 
 **Story**  
-In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the same time.
+In order to increase efficiency, as a user of the API, I need to add an animal and a sighting at the same time.  
 **Branch**  
-submit-animal-with-sightings
+submit-animal-with-sightings  
 **Acceptance Criteria**  
 - Can create new animal along with sighting data in a single API request
 	- Hint: Look into `accepts_nested_attributes_for`
