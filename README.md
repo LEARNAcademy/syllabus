@@ -134,13 +134,11 @@ Rails is full-stack framework built into the Ruby programming language. Here we 
 ## Unit Six: Ruby on Rails
 In this section we explore all the Ruby on Rails MVC architecture has to offer. We built our first full-stack application as well as look at how to create a backend-only Rails application.
 1. [Rails Controllers, Routes, Views, and Params](./rails/controllers-routes-views.md)
-1. [Rails RESTful Routes and CRUD Actions](./rails/restful-routes-crud.md)
 1. [Full-stack Rails](./rails/fullstack.md)
-1. [Rails Generate Resource](./rails/generate-resource.md)
-1. [Wildlife Tracker Challenge](./rails/wildlife-tracker-challenge.md)
+1. [Rails API with Postman](./rails/rails-api.md)
 
 #### Additional Topics:
-- [Postman](./rails/postman.md)
+- [Rails RESTful Routes and CRUD Actions](./rails/restful-routes-crud.md)
 
 
 
