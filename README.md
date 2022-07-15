@@ -31,11 +31,15 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Attendance Policy](./tools-and-resources/attendance.md)
 - [Portfolio Resources](./tools-and-resources/portfolio.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
-- [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [How to Ask a Tech Question](./tools-and-resources/questions.md)
 - [Intro to Atom](./tools-and-resources/atom.md)
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [Pair Programming](./tools-and-resources/pair-programming.md)
+
+
+## Interviews
+- [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
+- [Interview Questions](./tools-and-resources/interview-questions.md)
 
 
 ## First Day: Presentations
