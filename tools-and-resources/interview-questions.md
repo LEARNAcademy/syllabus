@@ -2,8 +2,7 @@
 
 ### Experience
 
-- How did you get into software development, and what about the field was most interesting to
-you?
+- How did you get into software development, and what about the field was most interesting to you?
 - What is your experience with the role of Software Engineer?
 - What project is your most significant career accomplishment?
 - Name a professional experience you would never want to go through again.
@@ -21,19 +20,17 @@ you?
 - Talk to me about a period in your life when you had to conquer a significant limitation that stood in the way of you accomplishing a goal.
 - How are you going to continue to develop your professional skills and knowledge?
 - Is it better to have a job done perfectly, albeit late, or merely good but on time?
-- What's something you'd be ecstatic about doing every day for the rest of your professional
-career?
+- What's something you'd be ecstatic about doing every day for the rest of your professional career?
 - If I gave you $100,000 to build your own business, what would you do?
 
 ### Work Process & Approach
 
 - What are your favorite tools/processes to ensure the success of a project?
 - What are the 3 most important skills of a Software Engineer?
-- There will always be unexpected changes that need to happen in a project. How do you handle
-these surprises?
+- There will always be unexpected changes that need to happen in a project. How do you handle these surprises?
 - How do you handle change within the workplace? Can you give an example?
 
-### About the candidate
+### About the Candidate
 
 - Tell me about yourself.
 - What’s your area of strength?
@@ -46,7 +43,7 @@ these surprises?
 - Tell me about a time you felt like a miserable failure.
 - What are some apps or websites that you love?
 
-### Team Work
+### Teamwork
 
 - Do you consider yourself a team player?
 - How will you add value to our team? Give us an example of a time in the past that you added value to a work project.
@@ -54,10 +51,8 @@ these surprises?
 - How would you motivate your disengaged co-worker?
 - What would you do if your co-worker was visibly upset?
 - If you caught a co-worker stealing from work, would you say anything?
-- What is your definition of great culture in a work environment? Give us an example of a company
-that has great culture.
-- We don’t always see eye-to-eye with our managers. How do you handle disagreements with
-them?
+- What is your definition of great culture in a work environment? Give us an example of a company that has great culture.
+- We don’t always see eye-to-eye with our managers. How do you handle disagreements with them?
 - What kind of management style do you prefer in your managers?
 - What do you expect from your team to do your job to the best of your ability?
 - Name the most important lesson you’ve learned from working with an office team.
@@ -79,8 +74,7 @@ them?
 ### Leadership
 
 - Provide an example of a time you stepped up as the leader of your team.
-- Provide an example of a time your perspective changed the outcome of a project in a positive
-way.
+- Provide an example of a time your perspective changed the outcome of a project in a positive way.
 - What kind of oversight would your ideal boss provide?
 
 ### Ideation and Quick Thinking
@@ -88,8 +82,7 @@ way.
 - What do you wish I’d had asked you about today?
 - If you could choose one superhuman ability, what would it be?
 - What TV or movie character would you most like to have lunch with?
-- If you were stuck forever on a deserted island and had all the food, water, and shelter you
-needed, what three personal items would you bring?
+- If you were stuck forever on a deserted island and had all the food, water, and shelter you needed, what three personal items would you bring?
 - Which literary character did you always dream of being?
 - If you could visit any country on the planet, where would you go and why?
 - Name ten uses for a stapler (other than its intended use).
