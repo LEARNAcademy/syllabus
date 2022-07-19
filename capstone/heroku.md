@@ -36,7 +36,14 @@
 
      ```bash
      $ EDITOR="code --wait" rails credentials:edit
+         
+         alternative editors
+      EDITOR=vim
+      EDITOR=code
+      EDITOR=sublime
+      EDITOR=atom
      ```
+      
 
    - To connect your `master.key` to heroku input the following:
 
