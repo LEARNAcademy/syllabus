@@ -67,7 +67,7 @@ JavaScript is what you all have been learning up to this point. And now we will 
 
 To get started, we will focus on just the anatomy of one component. To make this as simple as possible we will look at the component inside an HTML file. Here's a complete React application, containing just one component, with one line of markup.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -103,7 +103,7 @@ To get started, we will focus on just the anatomy of one component. To make this
 
 There's a lot there. But let's focus on the React portion. It's the section in `<script>` within the body of the HTML.
 
-```
+```html
 <script type="text/babel">
   const App = () => {
     return (
@@ -129,7 +129,7 @@ Nesting components allows us to call a component within the return of another co
 
 First we will wrap the `h1` in React fragments. Then we will define another component.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -173,7 +173,7 @@ First we will wrap the `h1` in React fragments. Then we will define another comp
 
 Just like any other function, components must be called or invoked. A **component call (component invocation)** looks like a self closing HTML tag. This will render the component.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
