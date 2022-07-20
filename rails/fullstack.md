@@ -135,7 +135,7 @@ With the release of Rails 6, we get a very convenient method called `form_with` 
 **app/views/exercise/new.html.erb**
 ```
 <h3>Add a New Exercise Session</h3>
-<%= form_with url: '/exercises', local: true do |form| %>
+<%= form_with model: @exercise do |form| %>
 
   <%= form.label :activity %>
   <%= form.text_field :activity %>
