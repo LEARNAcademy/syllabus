@@ -86,7 +86,7 @@ Inside the directory called `recipe-application` is two additional directories. 
 
 When initially opening the file we will see the boilerplate code that creates the view in the browser. As of React version 18 this is the code that appears in the file.
 
-**src/App.j**
+**src/App.js**
 
 ```javascript
 import logo from "./logo.svg";
@@ -281,4 +281,4 @@ As a developer, you are tasked with creating an application to share your favori
 
 ---
 
-[Back to Syllabus](../README.md#unit-two-introduction-to-react)
+[Back to Syllabus](../README.md#unit-three-react)

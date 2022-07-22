@@ -70,7 +70,6 @@ This is our introduction to coding through the Javascript programming language. 
 
 #### Additional Topics:
 
-- [JavaScript Template Literals](./javascript/template-literals.md)
 - [JavaScript Ternary Operator](./javascript/ternary.md)
 
 ## Unit Two: Javascript Foundations
@@ -82,7 +81,6 @@ This is our opportunity to dig a bit deeper into the Javascript programming lang
 1. [JavaScript Testing with Jest](./javascript/jest.md)
 1. [JavaScript Objects](./javascript/objects.md)
 1. [JavaScript Classes](./javascript/classes.md)
-1. [JavaScript Class Inheritance](./javascript/class-inheritance.md)
 
 #### Additional Topics:
 
@@ -98,14 +96,11 @@ React is a powerful Javascript library used to build more complicated user inter
 4. [React Props](./react/props.md)
 5. [React Functional Props](./react/functional-props.md)
 6. [React Inputs and Events](./react/inputs.md)
-7. [React Forms and Functional Props](./react/forms.md)
 
 #### Additional Topics:
 
+- [React Forms and Functional Props](./react/forms.md)
 - [React State with Images](./react/state-with-images.md)
-- [React Component Lifecycle](./react/component-lifecycle.md)
-- [Smart and Dumb Components](./react/smart-and-dumb-components.md)
-- [Testing Props with Jest](./react/testing-props-with-jest.md)
 
 ## Unit Four: Ruby
 
