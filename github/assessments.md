@@ -71,8 +71,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 **You have successfully submitted your assessment!**
 
 #### Next Steps
-- An instructor will review your code and leave you comments. 
-  - Possible Instructor responses are:
+An instructor will review your code and leave you comments. Possible instructor responses are:
     - Approval: You are clear to merge.
     - Comment: There is something that should be changed before approval. 
     - Request for Changes: There is something that needs to be addressed before the assessment can continue being reviewed. 
