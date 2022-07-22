@@ -166,7 +166,7 @@ export default App;
 
 ---
 
-### Challenge: Lightbulb
+### Challenge: Light Bulb
 
 - As a user, I can see a square box on the screen with a black border and a white background.
 - As a user, I can see the word "off" inside the box.
