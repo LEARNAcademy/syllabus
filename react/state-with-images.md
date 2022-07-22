@@ -17,8 +17,8 @@ To create more engaging user experiences developers can add images their React a
 #### Process
 
 - `cd` into the `react-challenges` repository
-- Create a new branch: `intro-initials1-initials2` (ex. intro-aw-sp)
-- Create a new React application with no spaces: `yarn create react-app intro-student1-student2` (ex. yarn create react-app intro-austin-sarah)
+- Create a new branch: `images-initials1-initials2` (ex. images-aw-sp)
+- Create a new React application with no spaces: `yarn create react-app images-student1-student2` (ex. yarn create react-app images-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
 - Create a directory in _src_ called _components_
