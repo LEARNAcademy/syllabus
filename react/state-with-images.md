@@ -189,10 +189,10 @@ export default App;
 
 #### Assets
 
-[Switch On](./assets/switchOn.png)
-[Switch Off](./assets/switchOff.png)
-[Light On](./assets/lightOn.png)
-[Light Off](./assets/lightOff.png)
+- [Switch On](./assets/switchOn.png)
+- [Switch Off](./assets/switchOff.png)
+- [Light On](./assets/lightOn.png)
+- [Light Off](./assets/lightOff.png)
 
 ---
 
