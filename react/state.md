@@ -69,10 +69,10 @@ const App = () => {
       <h1>Counter Application</h1>
       <p>Counter: </p>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Adding State Values
@@ -82,20 +82,20 @@ Next we will add a state variable. The `useState` method is going to set an init
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
+import { useState } from "react"
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Counter Application</h1>
       <p>Counter: </p>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Referencing Values in State
@@ -105,20 +105,20 @@ We can reference the `count` variable by dropping it into the JSX tags to see th
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
+import { useState } from "react"
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Counter Application</h1>
       <p>Counter: {count}</p>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Updating State Values
@@ -130,14 +130,13 @@ Now we have a working counter application!
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
+import { useState } from "react"
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
+  const [count, setCount] = useState(0)
   const handleClick = () => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   return (
     <>
@@ -145,10 +144,10 @@ const App = () => {
       <p>Counter: {count}</p>
       <button onClick={handleClick}>Increment</button>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Refactor to Advance Functionality
@@ -164,14 +163,14 @@ In this refactor we will add a directory inside the `src` directory named `compo
 **src/components/Counter.js**
 
 ```javascript
-import { useState } from "react";
+import { useState } from "react"
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   const handleClick = () => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   return (
     <>
@@ -179,10 +178,10 @@ const Counter = () => {
       <p>Counter: {count}</p>
       <button onClick={handleClick}>Increment</button>
     </>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter
 ```
 
 ### Multiple Counters
@@ -192,7 +191,7 @@ export default Counter;
 **src/App.js**
 
 ```javascript
-import Counter from "./components/Counter";
+import Counter from "./components/Counter"
 const App = () => {
   return (
     <>
@@ -201,31 +200,30 @@ const App = () => {
       <Counter />
       <Counter />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
-
 ---
 
-### Challenge: Color Box
+### 🟧 Challenge: Color Box
 
-- As a user, I can see a square box on the screen with a black border and a white background.
-- As a user, I can see the default color name "white" inside the box.
-- As a user, every time I click on the box the name of a different color appears.
+- As a user, I can see a square box on the screen with a black border and a white background
+- As a user, I can see the default color name "white" inside the box
+- As a user, every time I click on the box the name of a different color appears
   - Possible color names: red, orange, yellow, green, blue, purple, pink
 - As a user, every time I click the box instead of the color name, I see the background color in the box change to represent the color.
 - As a user, I can see many boxes on the page all acting independently of one another.
 
-#### Stretch
+### 🏔 Stretch
 
-- As a user, I can start with no boxes on the screen.
-- As a user, I can see a button to add a box.
-- As a user, I can see a button to remove a box.
-- As a user, every time I click the add button, I can add an additional box that acts independently of the other boxes.
-- As a user, every time I click the remove button, I can remove the last box in the series.
+- As a user, I can start with no boxes on the screen
+- As a user, I can see a button to add a box
+- As a user, I can see a button to remove a box
+- As a user, every time I click the add button, I can add an additional box that acts independently of the other boxes
+- As a user, every time I click the remove button, I can remove the last box in the series
 
 ---
 
-[Back to Syllabus](../README.md#unit-two-introduction-to-react)
+[Back to Syllabus](../README.md#unit-three-react)
