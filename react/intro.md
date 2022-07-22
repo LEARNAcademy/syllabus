@@ -226,7 +226,7 @@ The goal of the following challenge is for you to practice nesting components an
 
 Create a new HTML file. Copy the following code into your file:
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
