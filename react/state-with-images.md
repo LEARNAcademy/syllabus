@@ -166,7 +166,7 @@ export default App;
 
 ---
 
-### Challenge: Light Bulb
+### 💡 Challenge: Light Bulb
 
 - As a user, I can see a square box on the screen with a black border and a white background.
 - As a user, I can see the word "off" inside the box.
@@ -179,7 +179,7 @@ export default App;
 - As a user, when the light switch is "off" I see a white light bulb.
 - As a user, when I turn the switch "on" I see a yellow light bulb.
 
-#### Stretch
+### 🏔 Stretch
 
 - As a user, I can start with no light bulbs or switches on the screen.
 - As a user, I can see a button to add a light bulb and corresponding switch.
@@ -187,7 +187,7 @@ export default App;
 - As a user, every time I click the add button, I can add an additional light bulb and corresponding switch that acts independently of the other light bulbs and corresponding switches.
 - As a user, every time I click the remove button, I can remove the last light bulb and corresponding switch in the series.
 
-#### Assets
+### 🗂 Assets
 
 - [Switch On](./assets/switchOn.png)
 - [Switch Off](./assets/switchOff.png)
