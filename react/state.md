@@ -2,7 +2,7 @@
 
 #### Overview
 
-JavaScript classes manage both data and behavior. In a React class component, the data is managed in a special object called state. State can be updated via class methods and therefore change what appears in the browser.
+JavaScript components often need to store data and perform logic to create interactive user experiences. Data needs to be stored in a way that it can be accessed throughout the component and updated when necessary. In a React component the data is managed by a special function called a React hook. The React hook allows developers to create a variable with an initial value and a method to update the value as needed.
 
 #### Previous Lecture (1 hour, 3 min)
 
@@ -12,17 +12,18 @@ JavaScript classes manage both data and behavior. In a React class component, th
 
 - can define React state
 - can demonstrate JavaScript syntax in the JSX return
-- can demonstrate the setState syntax to update the state object
-- can create a React component with a constructor method and state object
-- can make decisions on the flow of information in a component by identifying the points in which stateful components re-render
+- can demonstrate the useState syntax to update the state values
+- can create a React component with a useState hook
+- can identify a component as a logic component or a display component
+- can parse out code to other components when necessary for streamlined logic
 
 #### Vocabulary
 
 - state
-- setState()
-- constructor method
-- dumb/pure/display component
-- smart/impure/logic component
+- logic component
+- display component
+- useState
+- React hooks
 
 #### Process
 
@@ -36,7 +37,6 @@ JavaScript classes manage both data and behavior. In a React class component, th
 
 #### Useful Commands
 
-- $ yarn create react-app app-name
 - $ yarn start
 - control + c (stops the server)
 - control + t (opens a new terminal tab)
@@ -44,199 +44,167 @@ JavaScript classes manage both data and behavior. In a React class component, th
 #### Troubleshooting Tips
 
 - Is your server running?
-- Are your components imported and exported?
-- What is your error message telling you?
+- Are your components exported?
+- Inspect the page and look for errors in the console tab.
+- Always look at the first error message in the list.
 
 ---
 
 ### React State
 
-Everything in React is a component. Components can be broken down into two basic categories: components that hold state and components that do not hold state.
+Everything in React is a component. **State** is a special variable that stores data that determines how the component renders and behaves. Components can be broken down into two basic categories: components that hold state and components that do not hold state. If a component is holding data in a state variable it is referred to as a **logic component**. If a component does not hold state it is considered a **display component**. It is important to make the distinction as we want to streamline the data flow in our apps, ensure a clear separation of concerns, and be able to fix any issues quickly.
 
-But what is state?
-
-**State** is an object that stores a component's data that determines how the component renders and behaves.
-
-To make a component dynamic, the value of state must often be changed by the application. To change the value of state we use a JavaScript method called **setState()**. You should never manipulate state directly. The React DOM will re-render every time you call `this.setState` and update the component.
-
-The state object lives inside the **constructor method**. Just like in regular JavaScript classes, the constructor method runs automatically when we instantiate a class. Because this class is a React component, this makes the constructor a React lifecycle method used for creating data that belongs to the class.
-
-If a component is holding data in a state object it is referred to as a **logic component**. Other, interchangeable names for a logic component are a smart component or an impure component. If a component does not hold state it is considered a **display component**. Other terms for display components are dumb components or pure components. It is important to make the distinction as we want to streamline the data flow in our apps and be able to fix any issues quickly.
+To make a component dynamic, the value of state must often change as the user interacts with the application. To change the value of a state variable we use a method called useState. **useState()** is special method that allows us to define state variables with initial values and provides a method to update that value. Special methods such as `useState` are called React hooks. **React hooks** are a set of built-in method for functional components allowing developers to "hook" into reusable features in React.
 
 ### Counter Example
 
-Here is an example that creates a simple counter in React.
+Here is an example that creates a simple counter application in React. We start with `App.js` displaying a heading tag and a tag for our where the counter will live.
 
 **src/App.js**
 
 ```javascript
-import React, { Component } from "react";
-import Counter from "./components/Counter";
-
-class App extends Component {
-  render() {
-    return <Counter />;
-  }
+const App = () => {
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <p>Counter: </p>
+    </>
+  )
 }
 
-export default App;
+export default App
 ```
 
-We imported counter and called a Counter component in the return section. Now we will create the Counter component. Our Counter component will hold state, making it a logic component.
+### Adding State Values
 
-**src/components/Counter.js**
-
-```javascript
-import React, { Component } from "react";
-
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>Counter: {this.state.count}</h2>
-      </div>
-    );
-  }
-}
-
-export default Counter;
-```
-
-Notice that we created a constructor, passed in props and also called super and passed in props. We will learn more about props soon, but for now let's focus on the state object which is called with `this.state` and set equal to an object with one key:value pair. The key in the object is a symbol called `count` and the value is initially set as 0.
-
-We then see a render method and a return. In the return section we are displaying the value of our state object by calling `this.state.count` which references the value of the `count` key in the state object.
-
-We can simplify this slightly with object destructuring.
-
-**src/components/Counter.js**
-
-```javascript
-import React, { Component } from "react";
-
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
-  render() {
-    let { count } = this.state;
-
-    return (
-      <>
-        <h2>Counter: {count}</h2>
-      </>
-    );
-  }
-}
-
-export default Counter;
-```
-
-In the render section we destructure the count out of the state object by setting the count equal to `this.state` and then use the new variable count in the return.
-
-Next, we will create a button to increase the value of the counter by one per click. The button will have an `onClick` attribute that calls a method named `handleChange`.
-
-**src/components/Counter.js**
-
-```javascript
-import React, { Component } from "react";
-
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
-  render() {
-    let { count } = this.state;
-
-    return (
-      <>
-        <h2>Counter: {count}</h2>
-        <button onClick={this.handleChange}>Press Me!</button>
-      </>
-    );
-  }
-}
-
-export default Counter;
-```
-
-Now let's create our `handleChange` function so our application knows what to do when the button is pressed.
-
-**src/components/Counter.js**
-
-```javascript
-import React, { Component } from "react";
-
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
-  handleChange = () => {
-    let newCount = this.state.count + 1;
-    this.setState({ count: newCount });
-  };
-
-  render() {
-    let { count } = this.state;
-
-    return (
-      <>
-        <h2>Counter: {count}</h2>
-        <button onClick={this.handleChange}>Press Me!</button>
-      </>
-    );
-  }
-}
-
-export default Counter;
-```
-
-The handleChange function takes `this.state.count` and adds one to the value then saves the new value in a variable called `newCount`. By calling `this.setState()` and setting the state object key `count` to our `newCount` variable.
-
-Now we have a fully functioning button that increments by one every time the button is pressed and displays the current count.
-
-Now the power of React begins to emerge because back on our App component, we can add multiple Counter component calls and see all of them on the page operating independently of one another! App is a display component, as its only job is to render information in the browser.
+Next we will add a state variable. The `useState` method is going to set an initial value and provide a method that can be used to update the value. To have access to the `useState` method we will need to import it to the component from the React dependencies. We can name the state variable whatever we want as long as it communicates intent. In this case it makes sense to name the variable `count`. Following the `count` variable is the name of the method that will be used to update `count`. It is convention to use the same name but add the prefix `set`. Inside the parentheses of the `useState` method we can set the initial value of `count`. Our counter will have an initial value of 0. Our component now has data that is available to be referenced and modified as needed.
 
 **src/App.js**
 
 ```javascript
-import React, { Component } from "react";
-import Counter from "./components/Counter";
+import { useState } from "react"
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Counter />
-        <Counter />
-        <Counter />
-        <Counter />
-      </>
-    );
-  }
+const App = () => {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <p>Counter: </p>
+    </>
+  )
 }
 
-export default App;
+export default App
 ```
 
+### Referencing Values in State
+
+We can reference the `count` variable by dropping it into the JSX tags to see the value of `count` render in the browser.
+
+**src/App.js**
+
+```javascript
+import { useState } from "react"
+
+const App = () => {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <p>Counter: {count}</p>
+    </>
+  )
+}
+
+export default App
+```
+
+### Updating State Values
+
+Next we need a way to allow the user to increment the counter's value. So we will add a method to our component. The method will be called `handleClick` to reflect the user's interaction with our application. Inside `handleClick` the `setCount` method will be called and passed the current value of count plus one. The `handleClick` method is now ready to be called. We can add a button to the JSX with an `onClick` attribute that will trigger the `handleClick` method.
+
+Now we have a working counter application!
+
+**src/App.js**
+
+```javascript
+import { useState } from "react"
+
+const App = () => {
+  const [count, setCount] = useState(0)
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <p>Counter: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </>
+  )
+}
+
+export default App
+```
+
+### Refactor to Advance Functionality
+
+Our counter application is working beautifully. But one of the great things about React is that components are designed to be reusable. Right now if we wanted more than one counter in our application we would be stuck duplicating code. And that is a red flag! A quick refactor will allow our counter functionality to be used as many times as needed.
+
+`App.js` is the only component that is predefined when using the command `create react-app`. It is the boss component in a React application and typically is in charge of data flow, managing other component, and other tasks we will discover later in the syllabus. Often this means `App.js` will be a logic component. But that is only true as long as it makes sense in the structure of the application. In this case moving the state values and logic to another component will allow more functionality without code duplication.
+
+### Counter Component
+
+In this refactor we will add a directory inside the `src` directory named `components`. Inside `components` we will add a new file called `Counter.js` that will be a React component. We can move the logic from `App.js` over to the new `Counter.js` file by copying and pasting and updating the name and export of the component.
+
+**src/components/Counter.js**
+
+```javascript
+import { useState } from "react"
+
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <p>Counter: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </>
+  )
+}
+
+export default Counter
+```
+
+### Multiple Counters
+
+`App.js` no longer has counter logic. Instead it will be in charge of rendering the component that does have the counter logic. We will import the counter component and invoke the component inside the return. And this is where the power of React shines. We can invoke the counter component as many times as we please without duplicating any logic. And each counter component is a unique instance so will act independently of all other counters. Very cool!
+
+**src/App.js**
+
+```javascript
+import Counter from "./components/Counter"
+const App = () => {
+  return (
+    <>
+      <h1>Counter Application</h1>
+      <Counter />
+      <Counter />
+      <Counter />
+    </>
+  )
+}
+
+export default App
+```
 ---
 
 ### 🟧 Challenge: Color Box
@@ -245,8 +213,8 @@ export default App;
 - As a user, I can see the default color name "white" inside the box
 - As a user, every time I click on the box the name of a different color appears
   - Possible color names: red, orange, yellow, green, blue, purple, pink
-- As a user, every time I click the box instead of the color name, I see the background color in the box change to represent the color
-- As a user, I can see many boxes on the page all acting independently of one another
+- As a user, every time I click the box instead of the color name, I see the background color in the box change to represent the color.
+- As a user, I can see many boxes on the page all acting independently of one another.
 
 ### 🏔 Stretch
 
