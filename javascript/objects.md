@@ -1,12 +1,15 @@
 # JavaScript Objects
 
 #### Overview
+
 Objects are a JavaScript data type that has collections of `key: value` pairs. Objects can contain static information as well as actions in the form of methods. This makes objects the intersection of data and behavior.
 
 #### Previous Lecture (1 hour, 6 min)
+
 [![YouTube](http://img.youtube.com/vi/aornqjP1Jo0/0.jpg)](https://www.youtube.com/watch?v=aornqjP1Jo0)
 
 #### Learning Objectives
+
 - can create an object
 - can distinguish between the key and value of an object
 - can access object properties with dot notation
@@ -16,8 +19,8 @@ Objects are a JavaScript data type that has collections of `key: value` pairs. O
 - can access an object's value by its destructured key
 - can iterate through an array of objects using a higher-order function
 
-
 #### Vocabulary
+
 - JSON
 - key: value pairs
 - methods
@@ -26,10 +29,12 @@ Objects are a JavaScript data type that has collections of `key: value` pairs. O
 - destructuring
 
 #### Additional Resources
+
 - [Objects Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
 - [Destructuring Assignment Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 #### Process
+
 - `cd` into the `javascript-foundations-challenges` repository
 - Create a new branch: `objects-initials1-initials2` (ex. objects-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `objects-student1-student2.js` (ex. objects-austin-sarah.js)
@@ -39,6 +44,7 @@ Objects are a JavaScript data type that has collections of `key: value` pairs. O
 ---
 
 ### Object with Data: JSON
+
 **JSON** stands for JavaScript Object Notation and is a text-based data format that follows the JavaScript object syntax. JSON is used in the JavaScript language to hold collections of data as well as being used independently to transmit data across a network.
 
 Objects consist of collections of **key:value pairs** stored in curly braces. The key is a data type of symbol and the value is any valid data type in JavaScript.
@@ -46,14 +52,14 @@ Objects consist of collections of **key:value pairs** stored in curly braces. Th
 Creating an object in JSON:
 
 ```javascript
-const person = {name: "Alex Keaton", phone: 123456789}
+const person = { name: "Alex Keaton", phone: 123456789 };
 
 // OR written like:
 
 const person = {
   name: "Alex Keaton",
-  phone: "(123)456-7890"
-}
+  phone: "(123)456-7890",
+};
 ```
 
 In this example the keys are name and phone and the values are "Alex Keaton" and "(123)456-7890".
@@ -61,10 +67,10 @@ In this example the keys are name and phone and the values are "Alex Keaton" and
 Then we can access the value from the object with **dot notation** by calling the name of the object variable and referencing the key.
 
 ```javascript
-console.log(person.name)
+console.log(person.name);
 // Output: "Alex Keaton"
 
-console.log(person.phone)
+console.log(person.phone);
 // Output: "(123)456-7890"
 ```
 
@@ -76,32 +82,32 @@ Objects can also contain functions. When a function belongs to an object it is c
 const person = {
   name: "Alex Keaton",
   phone: "(123)456-7890",
-  getData: function() {
-    return `${this.name}'s phone number is ${this.phone}`
-  }
-}
+  getData: function () {
+    return `${this.name}'s phone number is ${this.phone}`;
+  },
+};
 
-console.log(person.getData())
+console.log(person.getData());
 // Output: "Alex Keaton's phone number is (123)456-7890"
 ```
 
 ### Iterating Over Arrays With Objects
 
-Objects can be single indexes of an array. You can use `.map()` or `.filter()` on arrays of objects.  
+Objects can be single indexes of an array. You can use `.map()` or `.filter()` on arrays of objects.
 
 Example: Consider this toons variable. Use `.map()` or `.filter()` to return a new array with only the dogs.
 
 ```javascript
 const toons = [
-  {name: "Brian", animal: "dog"},
-  {name: "Donald", animal: "duck"},
-  {name: "Goofy", animal: "dog"},
-  {name: "Daffy", animal: "duck"},
-  {name: "Pluto", animal: "dog"},
-  {name: "Tabby", animal: "cat"}
-]
-const animal = toons.filter(value => value.animal === "dog")
-console.log(animal)
+  { name: "Brian", animal: "dog" },
+  { name: "Donald", animal: "duck" },
+  { name: "Goofy", animal: "dog" },
+  { name: "Daffy", animal: "duck" },
+  { name: "Pluto", animal: "dog" },
+  { name: "Tabby", animal: "cat" },
+];
+const animal = toons.filter((value) => value.animal === "dog");
+console.log(animal);
 // Output: [ { name: "Brian", animal: "dog" }, { name: "Goofy", animal: "dog" }, { name: "Pluto", animal: "dog" } ]
 ```
 
@@ -115,17 +121,17 @@ This is probably the most immediately useful type of destructuring. When destruc
 // A person object
 const person = {
   firstName: "Bruce",
-  lastName: "Wayne"
-}
+  lastName: "Wayne",
+};
 
 // Printing property values
-console.log(person.firstName)
+console.log(person.firstName);
 // Output: "Bruce"
-console.log(person.lastName)
+console.log(person.lastName);
 // Output: "Wayne"
 
 // Printing a full name
-console.log(`${person.firstName} ${person.lastName}`)
+console.log(`${person.firstName} ${person.lastName}`);
 // Output: "Bruce Wayne"
 ```
 
@@ -135,24 +141,25 @@ Here's what that code could like with object destructuring:
 // A person object
 const person = {
   firstName: "Bruce",
-  lastName: "Wayne"
-}
+  lastName: "Wayne",
+};
 
 // Making variables for firstName and lastName using destructuring
-const { firstName, lastName } = person
+const { firstName, lastName } = person;
 
 // Printing property values
-console.log(firstName)
+console.log(firstName);
 // Output: "Bruce"
-console.log(lastName)
+console.log(lastName);
 // Output: "Wayne"
 
 // Printing a full name
-console.log(`${firstName} ${lastName}`)
+console.log(`${firstName} ${lastName}`);
 // Output: "Bruce Wayne"
 ```
 
 Notice that an object destructuring assignment:
+
 - Starts with a variable keyword
 - List the variable names with curly braces
   - **Note:** Variable names must correspond to property names of the object
@@ -171,9 +178,10 @@ Being comfortable with object destructuring allows you to make quick work of ext
 ```javascript
 const person = {
   firstName: "Arthur",
-  lastName: "Dent"
-}
+  lastName: "Dent",
+};
 ```
+
 - Write the code that accesses the first name of the person object.
 - Write the code that accesses the last name of the person object.
 - Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
@@ -184,9 +192,10 @@ const person = {
 ```javascript
 const product = {
   name: "chair",
-  price: 24.99
-}
+  price: 24.99,
+};
 ```
+
 - Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
 - Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
@@ -196,9 +205,10 @@ const product = {
 const lunch = {
   name: "PB and Banana",
   type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"]
-}
+  ingredients: ["bread", "peanut butter", "banana"],
+};
 ```
+
 - Write the code that accesses the ingredients property.
 - Write the code that access the third ingredient of the lunch object.
 - Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
@@ -211,9 +221,10 @@ const animals = [
   { name: "Waffles", type: "dog", age: 7 },
   { name: "Fluffy", type: "cat", age: 14 },
   { name: "Spelunky", type: "dog", age: 4 },
-  { name: "Hank", type: "cat", age: 11 }
-]
+  { name: "Hank", type: "cat", age: 11 },
+];
 ```
+
 - Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
 - Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
 - Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
@@ -224,13 +235,14 @@ const animals = [
 ```javascript
 const author = {
   name: "H. G. Wells",
-  genre: "science fiction"
-}
+  genre: "science fiction",
+};
 ```
+
 - Write the code that destructures the author object so that the following code snippet will run successfully:
 
 ```javascript
-console.log(`${name} is a ${genre} author`)
+console.log(`${name} is a ${genre} author`);
 // Output: "H. G. Wells is a science fiction author"
 ```
 
@@ -239,21 +251,21 @@ console.log(`${name} is a ${genre} author`)
 ```javascript
 const pokeOne = {
   species: "Charmandar",
-  pokemon_type: "Fire"
-}
+  pokemon_type: "Fire",
+};
 
 const pokeTwo = {
   species: "Magikarp",
-  pokemon_type: "Water"
-}
+  pokemon_type: "Water",
+};
 ```
 
 - Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
 
 ```javascript
-console.log(describePokemon(pokeOne))
+console.log(describePokemon(pokeOne));
 // Output: "Charmandar is a Fire pokemon"
-console.log(describePokemon(pokeTwo))
+console.log(describePokemon(pokeTwo));
 // Output: "Magikarp is a Water pokemon"
 ```
 
@@ -262,8 +274,8 @@ console.log(describePokemon(pokeTwo))
 ```javascript
 const triangleDimensions = {
   base: 2,
-  height: 5
-}
+  height: 5,
+};
 ```
 
 - Modify the triangleDimensions object to have a method that returns the area of the triangle.
@@ -274,19 +286,20 @@ const triangleDimensions = {
 ```javascript
 const learn = {
   cohorts: {
-    "2021": ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
-    "2022": ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]
-  }
-}
+    2021: ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
+    2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"],
+  },
+};
 ```
 
 - Write the code that logs the name of your cohort.
 - Write the code that uses destructuring to log the name of your cohort.
 - Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
+
 ```javascript
 // Output: ["2021 Alpha", "2021 Bravo", "2021 Charlie", "2021 Delta", "2021 Echo", "2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 Foxtrot"]
 ```
 
-
 ---
-[Back to Syllabus](../README.md#unit-one-javascript-foundations)
+
+[Back to Syllabus](../README.md#unit-two-javascript-foundations)

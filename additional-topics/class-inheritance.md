@@ -1,22 +1,27 @@
 # JavaScript Class Inheritance
 
 ## Video: Video Name
+
 [![YouTube](http://img.youtube.com/vi/Rx5_-Y_bG5E/0.jpg)](https://www.youtube.com/watch?v=Rx5_-Y_bG5E)
 
 ## Overview
+
 - Classes can inherit information from other classes creating a parent-child relationship
 - Class inheritance keeps code from being repetitive
 
 ## Learning Objectives
+
 - Understanding the flow of information from the parent class to the child class
 
 ## Vocabulary
+
 - inheritance
 - Object Oriented Programming (OOP)
 - extends
 - super()
 
 #### Process
+
 - `cd` into the `javascript-foundations-challenges` repository
 - Create a new branch: `inheritance-initials1-initials2` (ex. inheritance-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `inheritance-student1-student2.js` (ex. inheritance-austin-sarah.js)
@@ -26,6 +31,7 @@
 ---
 
 ## Classes Review
+
 When we think of our application from an Object Oriented perspective, we think of it as a collection of objects, and actors who interact with those objects.
 
 A car, for example is an object that is made up of many smaller objects. It has wheels, a horn, and an engine, all of which can be interacted with by a driver. Wheels, horns, engines, and drivers are all objects, and thus, all modeled using classes in our application.
@@ -92,6 +98,7 @@ console.log("rpm:", engine.rpm)
 ```
 
 # Inheritance
+
 Now we have an Engine class that has attributes and behavior. Just like in the real world, we are not limited to only having one type of engine. There can be many variations of engines, all of which share attributes and behaviors, but have additional attributes and behavior that are unique. JavaScript classes allow us to model this situation by using inheritance.
 
 We start with an Engine class that has properties common to all engines. Then we can create another class that can inherit from the Engine class but also have its own specialized data and methods. This is a `parent - child` inheritance relationship.
@@ -99,18 +106,18 @@ We start with an Engine class that has properties common to all engines. Then we
 Here is our Engine class again:
 
 ```javascript
-class Engine{
-  constructor(){
-    this.oilLevel = 100
-    this.rpm = 0
+class Engine {
+  constructor() {
+    this.oilLevel = 100;
+    this.rpm = 0;
   }
 
-  start(){
-    this.rpm = 500
+  start() {
+    this.rpm = 500;
   }
 
-  stop(){
-    this.rpm = 0
+  stop() {
+    this.rpm = 0;
   }
 }
 ```
@@ -118,6 +125,7 @@ class Engine{
 We can define a new type of engine called `TurboEngine` that inherits attributes and behavior from the base Engine class.
 
 To create inheritance we need two new JavaScript keywords:
+
 - `extends`- used in the declaration of the class, extending the data and behavior of the parent class (or the class we are inheriting from)
 - `super` - within in the constructor method we call super() which passes the attributes from the constructor in the parent class
 
@@ -187,75 +195,90 @@ stock.decelerate()
 console.log("rpm:", stock.rpm)
 --> "rpm:" 0
 ```
-The class StockEngine has access to the information from the parent class of Engine as well as its own unique data and methods.
 
+The class StockEngine has access to the information from the parent class of Engine as well as its own unique data and methods.
 
 ## Challenges
 
 1. **Story**: As a programmer, I can make a car.
+
 - Write a variable called myCar which is an instance of the class Car
 
 2. **Story**: As a programmer, I can give my car a model on initialization.
+
 - The model for the car class can be "generic car"
 
 3. **Story**: As a programmer, I can give my car a year on initialization.
+
 - The year for the car class can be "myCar year"
 
-4. **Story**:	As a programmer, I can tell how many wheels myCar has.
+4. **Story**: As a programmer, I can tell how many wheels myCar has.
+
 - Calling the method wheels will return 4
 
-4. **Story**:	As a programmer, I can make a Tesla car.
+4. **Story**: As a programmer, I can make a Tesla car.
+
 - class Tesla inherits from class Car
 - Create an object called myTesla which is a instance of class Tesla
 
 5. **Story**: As a programmer, I can give my Tesla a model on initialization.
+
 - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
 6. **Story**: As a programmer, I can give my Tesla a year on initialization.
+
 - The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-7. **Story**:	As a programmer, I can make a Toyota car.
+7. **Story**: As a programmer, I can make a Toyota car.
+
 - class Toyota inherits from class Car
 - create an object called myToyota which is a instance of class Toyota
 
 8. **Story**: As a programmer, I can give my Toyota a model on initialization.
+
 - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
 9. **Story**: As a programmer, I can give my Toyota a year on initialization.
+
 - The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
-10. **Story**:	As a programmer, I can make a Volkswagen car.
+10. **Story**: As a programmer, I can make a Volkswagen car.
+
 - class Volkswagen inherits from class Car
 - create an object called myVolkswagen which is a instance of class Volkswagen
 
 11. **Story**: As a programmer, I can give my Volkswagen a model on initialization.
+
 - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
 
 12. **Story**: As a programmer, I can give my Volkswagen a year on initialization.
+
 - The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
 
 13. **Story**: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 
 14. **Story**: As a programmer, I can turn the lights in all my cars on and off.
 
-15. **Story**:  As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
+15. **Story**: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
 
-16. **Story**:	As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
+16. **Story**: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
 
-17. **Story**:	As a programmer, I can speed my Tesla up by 10 per acceleration.
+17. **Story**: As a programmer, I can speed my Tesla up by 10 per acceleration.
 
-18. **Story**:	As a programmer, I can slow my Tesla down by 7 per braking.
+18. **Story**: As a programmer, I can slow my Tesla down by 7 per braking.
 
-19. **Story**:	As a programmer, I can speed my Toyota up by 5 per acceleration.
+19. **Story**: As a programmer, I can speed my Toyota up by 5 per acceleration.
 
-20. **Story**:	As a programmer, I can slow my Toyota down by 2 per braking.
+20. **Story**: As a programmer, I can slow my Toyota down by 2 per braking.
 
-21. **Story**:	As a programmer, I can speed my Volkswagen up by 7 per acceleration.
+21. **Story**: As a programmer, I can speed my Volkswagen up by 7 per acceleration.
 
-22. **Story**:	As a programmer, I can slow my Volkswagen down by 5 per braking.
+22. **Story**: As a programmer, I can slow my Volkswagen down by 5 per braking.
 
-23. **Story**:  As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
+23. **Story**: As a programmer, I can call upon a carInfo method that will tell me all the information about a car.
+
 - The method can be created in the parent class and accessed by all child classes
 
 ---
-[Back to Syllabus](../README.md#unit-one-javascript-foundations)
+
+[Back to Syllabus](../README.md#unit-one-javascript-introduction)

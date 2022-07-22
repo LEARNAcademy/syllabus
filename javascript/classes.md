@@ -1,19 +1,23 @@
 # JavaScript Classes
 
 ## Video: Video Name
+
 [![YouTube](http://img.youtube.com/vi/LudiZKHYvMo/0.jpg)](https://www.youtube.com/watch?v=LudiZKHYvMo)
 
 ## Overview
+
 - Classes are the blueprint for objects
 - Classes are reusable and customizable, much like functions
 
 ## Learning Objectives
+
 - Understanding the anatomy of a class
 - Creating a object with unique data from a class
 - Understanding the purpose of a constructor
 - Understanding the difference between an object and a class
 
 ## Vocabulary
+
 - class
 - object
 - constructor
@@ -22,15 +26,17 @@
 - PascalCase
 
 ## Additional Resources
+
 - <a href="http://www.javascriptenlightenment.com/" target="blank">Javascript Enlightenment</a>
 - <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects" target="blank">You Don't Know JS: Up & Going - Chapter 2: Into JavaScript</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects" target="blank">MDN: Objects</a>
 - <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md#chapter-3-function-vs-block-scope" target="blank">You Don't Know JS: Function vs. Block Scope</a>
 - <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch5.md#chapter-5-scope-closure" target="blank">You Don't Know JS: Scope Closure</a>
-(Caution: not for the faint of heart)
+  (Caution: not for the faint of heart)
 - <a href="https://github.com/airbnb/javascript" target="blank">Airbnb JavaScript Style Guidelines</a>
 
 #### Process
+
 - `cd` into the `javascript-foundations-challenges` repository
 - Create a new branch: `classes-initials1-initials2` (ex. classes-aw-sp)
 - `touch` a file with no spaces and `.js` extension: `classes-student1-student2.js` (ex. classes-austin-sarah.js)
@@ -40,9 +46,11 @@
 ---
 
 ## Classes
+
 Classes are a particular type of function that contain data and behavior. Classes are the blueprints of objects. Just like functions, classes have their own scope.
 
 There are particular JavaScript keywords that are used to create and access information within a class:
+
 - **constructor:** a special method for creating and initializing objects
 - **this:** a JavaScript keyword that refers to the object it belongs to
 - **new:** used when creating a new instance of a class (an object)
@@ -120,33 +128,33 @@ console.log("Alvin has ", alvin.nutCount )
 Class instances can be used like any other 'thing' in JavaScript. We can rewrite the above like this:
 
 ```javascript
-class Squirrel{
-  constructor(){
-    this.nutCount = 0
+class Squirrel {
+  constructor() {
+    this.nutCount = 0;
   }
 
-  storeNut(){
-    this.nutCount += 1
+  storeNut() {
+    this.nutCount += 1;
   }
 
-  eatNut(){
-    this.nutCount -= 1
+  eatNut() {
+    this.nutCount -= 1;
   }
 }
 // create a new array
-var squirrels = []
+var squirrels = [];
 // pushes new squirrel objects into the array
-squirrels.push(new Squirrel())
-squirrels.push(new Squirrel())
+squirrels.push(new Squirrel());
+squirrels.push(new Squirrel());
 
 // accessing the object at array index 0
-squirrels[0].storeNut()
-squirrels[0].storeNut()
+squirrels[0].storeNut();
+squirrels[0].storeNut();
 
 // mapping over array to access the information from the squirrels array
 squirrels.map((value, index) => {
-  console.log(`The squirrel at index ${index} has ${value.nutCount} nuts.`)
-})
+  console.log(`The squirrel at index ${index} has ${value.nutCount} nuts.`);
+});
 ```
 
 Class instances can store any kind of data.
@@ -183,6 +191,7 @@ console.log("Roll:", roller.lastRoll())
 console.log("All Rolls:", roller.rolls)
 --> All Rolls: [ 6, 4 ]
 ```
+
 The constructor method can take arguments. This creates objects with unique data.
 
 ```javascript
@@ -201,6 +210,7 @@ var rover = new Dog('Rover', 4)
 console.log(rover.description())
 --> "Rover is a 4 year old dog."
 ```
+
 We can use the Dog class to create many different dog objects with different properties.
 
 ```javascript
@@ -237,29 +247,29 @@ console.log(bella.description())
 
 ```javascript
 class Coffee {
-  constructor(type, cream, sugar){
-    this.type = type.toLowerCase()
-    this.cream = cream
-    this.sugar = sugar
+  constructor(type, cream, sugar) {
+    this.type = type.toLowerCase();
+    this.cream = cream;
+    this.sugar = sugar;
   }
 
-  coffeeProfile(){
-    return `A ${this.type} coffee with ${this.creams()}, ${this.sugars()}`
+  coffeeProfile() {
+    return `A ${this.type} coffee with ${this.creams()}, ${this.sugars()}`;
   }
 
-  creams(){
-    if(this.cream > 1){
-      return `${this.cream} creams`
+  creams() {
+    if (this.cream > 1) {
+      return `${this.cream} creams`;
     } else {
-      return `${this.cream} cream`
+      return `${this.cream} cream`;
     }
   }
 
-  sugars(){
-    if(this.sugar > 1){
-      return `${this.sugar} sugars`
+  sugars() {
+    if (this.sugar > 1) {
+      return `${this.sugar} sugars`;
     } else {
-      return `${this.sugar} sugar`
+      return `${this.sugar} sugar`;
     }
   }
 }
@@ -286,4 +296,5 @@ class Coffee {
 - Write the code that creates three unique cylinder objects
 
 ---
-[Back to Syllabus](../README.md#unit-one-javascript-foundations)
+
+[Back to Syllabus](../README.md#unit-two-javascript-foundations)
