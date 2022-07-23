@@ -10,6 +10,10 @@ In the example above, we can visualize our main branch on the left. It is our "p
 
 Let's look at the process of creating a new version of the project (a branch). Then we are free to make changes locally on our computer — while the original version of the project, the main branch, remains safely on GitHub. We give the new branch a descriptive name to remind us what we intend to do while working in it. You should use the following naming convention for your branch while you are in the classroom: `topic-initials1-initials2` (ex. arrays-aw-sp)
 
+- Before we get started we will want to double check that we are currently on the 'main' branch. Type `git status` to see a readout of the current branch and other git info. If the branch is not 'main', type and run `git checkout main` to switch over to the main branch. From here you will be safe to create a new branch. 
+
+- To get the latest changes from main it may be a good idea to run the command `git pull origin main`.
+
 - To create this new branch, type `git checkout -b <topic-initials1-initials2>` e.g. (ex. arrays-aw-sp). You'll see a line in your terminal that says `Switched to a new branch`.
 <img src="assets/git-1.png" width="650px">
 
