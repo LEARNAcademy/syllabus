@@ -58,7 +58,7 @@ Here is an example that creates a greeter application in React. We start with `A
 **src/App.js**
 
 ```javascript
-import Greeter from "./components/Greeter";
+import Greeter from "./components/Greeter"
 
 const App = () => {
   return (
@@ -66,10 +66,10 @@ const App = () => {
       <h1>Greeter Application</h1>
       <Greeter />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 **src/components/Greeter.js**
@@ -80,10 +80,10 @@ const Greeter = () => {
     <>
       <h3>Hello World!</h3>
     </>
-  );
-};
+  )
+}
 
-export default Greeter;
+export default Greeter
 ```
 
 ### Passing Data as Props
@@ -93,7 +93,7 @@ Now we will pass data from `App.js` down to the greeter component. Within the `G
 **src/App.js**
 
 ```javascript
-import Greeter from "./components/Greeter";
+import Greeter from "./components/Greeter"
 
 const App = () => {
   return (
@@ -101,10 +101,10 @@ const App = () => {
       <h1>Greeter Application</h1>
       <Greeter name="Hamilton" />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 **src/components/Greeter.js**
@@ -115,10 +115,10 @@ const Greeter = (props) => {
     <>
       <h3>Hello {props.name}!</h3>
     </>
-  );
-};
+  )
+}
 
-export default Greeter;
+export default Greeter
 ```
 
 ### Passing Values From State as Props
@@ -128,21 +128,21 @@ Rather than hard coding the string "Hamilton" directly in the component call we 
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
-import Greeter from "./components/Greeter";
+import { useState } from "react"
+import Greeter from "./components/Greeter"
 
 const App = () => {
-  const [people, setPeople] = useState("Hamilton");
+  const [people, setPeople] = useState("Hamilton")
 
   return (
     <>
       <h1>Greeter Application</h1>
       <Greeter name={people} />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 The variable `name` is assigned information from the value in state. This makes `name` available to `Greeter` as props. Since `Greeter` is a display component there are no updates that need to happen in order to handle our refactor in `App.js`.
@@ -158,23 +158,23 @@ As long as the `name` variable stays the same there are no changes that need to 
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
-import Greeter from "./components/Greeter";
+import { useState } from "react"
+import Greeter from "./components/Greeter"
 
 const App = () => {
-  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"]);
+  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"])
 
   return (
     <>
       <h1>Greeter Application</h1>
       {people.map((person, index) => {
-        return <Greeter name={person} key={index} />;
+        return <Greeter name={person} key={index} />
       })}
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Passing Methods as Props
@@ -186,30 +186,30 @@ We can add a method in `App.js` that will use the state setter method named `set
 **src/App.js**
 
 ```javascript
-import { useState } from "react";
-import Greeter from "./components/Greeter";
-import AddPerson from "./components/AddPerson";
+import { useState } from "react"
+import Greeter from "./components/Greeter"
+import AddPerson from "./components/AddPerson"
 
 const App = () => {
-  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"]);
+  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"])
 
   const addPerson = () => {
-    const newPerson = prompt();
-    setPeople([...people, newPerson]);
-  };
+    const newPerson = prompt()
+    setPeople([...people, newPerson])
+  }
 
   return (
     <>
       <h1>Greeter Application</h1>
       {people.map((person, index) => {
-        return <Greeter name={person} key={index} />;
+        return <Greeter name={person} key={index} />
       })}
       <AddPerson addPerson={addPerson} />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 The method we wrote will update the array in state. There are no updates that need to happen to `Greeter` as the code we wrote is dynamic. But the method is not yet being called. We need to create a button with an `onClick` event.
@@ -224,10 +224,10 @@ const AddPerson = (props) => {
     <>
       <button onClick={props.addPerson}>Add Person</button>
     </>
-  );
-};
+  )
+}
 
-export default AddPerson;
+export default AddPerson
 ```
 
 Now we have created a beautifully dynamic application that has great organization and proper separation of concerns.
