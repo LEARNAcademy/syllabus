@@ -2,7 +2,7 @@
 
 #### Overview
 
-Props (properties) are specialized React objects used to pass information from one component to another. Props create a unidirectional flow of data and behavior from a parent component down to a child component via the component invocation. While state values are constantly updated through user interactions, props cannot be changed. They are a "read only" value.
+Props (properties) are specialized React objects used to pass information from one component to another. Props create a unidirectional flow of data and behavior from a parent component down to a nested component via the component invocation. While state values are constantly updated through user interactions, props cannot be changed. They are a "read only" value.
 
 #### Previous Lecture (50 min)
 
@@ -11,9 +11,9 @@ Props (properties) are specialized React objects used to pass information from o
 #### Learning Objectives
 
 - can define props
-- can recall the syntax for sending props to a child component
-- can demonstrate how to access data and behavior in the child component that have been sent from the parent component
-- can describe the flow of information from a parent component to a child component
+- can recall the syntax for passing data and behavior to a nested component
+- can demonstrate how to access data and behavior in the nested component
+- can describe the flow of information from a component to a nested component
 
 #### Vocabulary
 
@@ -47,18 +47,19 @@ Props (properties) are specialized React objects used to pass information from o
 
 ### Communication Between Components
 
-Since React is component based communication between components is very important. Components give us the ability to build modular interfaces and state values give us a means of tracking and updating data within components. **Props**, short for properties, give us the ability to communicate between components by passing data and behavior from a parent component down to a child component.
+Since React is component based communication between components is very important. Components give us the ability to build modular interfaces and state values give us a means of tracking and updating data within components. **Props**, short for properties, give us the ability to communicate between components by passing data and behavior from one component down to a nested component.
 
-Props can be either static data or methods. The data typically comes from a value in state. In a very practical sense, prop data is a snapshot of the state values that get passed down to components tasked with displaying and/or letting the user interact with that information. Props are passed from the parent component to the child component through the component invocation. It is very similar to how a function get passed information through an argument.
+Props can be either static data or methods. The data typically comes from a value in state. In a very practical sense, prop data is a snapshot of the state values that get passed down to components tasked with displaying and/or letting the user interact with that information. Props are passed from a component to a nested component through the component invocation. It is very similar to how a function get passed information through an argument.
 
 ### Greeter Example
 
-Here is an example that creates a greeter application in React. We start with `App.js` displaying a heading tag and a nested component with a header tag.
+Here is an example that creates a greeter application in React. We start with `App.js` displaying a heading tag and a nested component with a smaller heading tag.
 
 **src/App.js**
 
 ```javascript
 import Greeter from "./components/Greeter";
+
 const App = () => {
   return (
     <>
@@ -93,6 +94,7 @@ Now we will pass data from `App.js` down to the greeter component. Within the `G
 
 ```javascript
 import Greeter from "./components/Greeter";
+
 const App = () => {
   return (
     <>
@@ -121,13 +123,14 @@ export default Greeter;
 
 ### Passing Values From State as Props
 
-Rather than hard coding the string "Hamilton" directly in the component call we can use a state value to pass props to the child component. This will make our application more dynamic as state values can be updated.
+Rather than hard coding the string "Hamilton" directly in the component call we can use a state value to pass props to the nested component. This will make our application more dynamic as state values can be updated.
 
 **src/App.js**
 
 ```javascript
 import { useState } from "react";
 import Greeter from "./components/Greeter";
+
 const App = () => {
   const [people, setPeople] = useState("Hamilton");
 
@@ -142,21 +145,22 @@ const App = () => {
 export default App;
 ```
 
-The variable `name` is assigned information from the value in state. this makes `name` available to `Greeter` as props. Since `Greeter` is a display component there are no updates that need to happen in order to handle our refactor in `App.js`.
+The variable `name` is assigned information from the value in state. This makes `name` available to `Greeter` as props. Since `Greeter` is a display component there are no updates that need to happen in order to handle our refactor in `App.js`.
 
 ### Mapping a Component Call
 
 Our greeter application is working just great. But what if we have multiple people to greet? To expand the functionality of the application we can set an array in state. Then rather than a single `Greeter` component invocation we want to have one component per person. To manage this dynamically we can map over the array in state and return a component invocation. Now, no matter how many people we need to greet our code can manage the job effectively.
 
-React is iterating over the array and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. In this example we can use the index of the array since we have access to the index as the second parameter in the map method and we know each item in the array will always have a unique index.
+React is iterating over the array in state and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. In this example we can use the index of the array since we have access to the index as the second parameter in the map method and we know each item in the array will always have a unique index.
 
-As long as `name` stays the same there are no changes that need to be made to `Greeter`.
+As long as the `name` variable stays the same there are no changes that need to be made to `Greeter`.
 
 **src/App.js**
 
 ```javascript
 import { useState } from "react";
 import Greeter from "./components/Greeter";
+
 const App = () => {
   const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"]);
 
@@ -208,9 +212,9 @@ const App = () => {
 export default App;
 ```
 
-The method we wrote will update the state value that is being passed to the `Greeter` component. There are no updates that need to happen to `Greeter` as the code we wrote is dynamic. But the method is not being called yet. We need to create a button with an `onClick` event.
+The method we wrote will update the array in state. There are no updates that need to happen to `Greeter` as the code we wrote is dynamic. But the method is not yet being called. We need to create a button with an `onClick` event.
 
-The button `onClick` will call the method `addPerson` that is being passed as props down into the component.
+The button's `onClick` will call the method `addPerson` that is being passed as props down into the component.
 
 **src/components/AddPerson.js**
 
@@ -238,14 +242,14 @@ When creating a project it is important to think about organization of your code
 
 ### 📚 User Stories
 
-- As a user, I can see a square box on the screen with a black border and a white background
-- As a user, I can click on the box to roll the dice and see the result of my roll in the box
-- As a user, I can see my roll logged and see the roll log continue to grow as I roll the dice
+- As a user, I can see a square box on the screen with a black border and a white background.
+- As a user, I can click on the box to roll the dice and see the result of my roll in the box.
+- As a user, I can see my roll logged and see the roll log continue to grow as I roll the dice.
 
 ### 🏔 Stretch
 
-- As a user, I can see the image of a dice face when I roll the dice
-- As a user, I can click a restart button that clears my roll log
+- As a user, I can see the image of a dice face when I roll the dice.
+- As a user, I can click a restart button that clears my roll log.
 
 ### 🗂 Assets
 
