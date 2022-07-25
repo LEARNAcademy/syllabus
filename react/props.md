@@ -220,11 +220,7 @@ The button's `onClick` will call the method `addPerson` that is being passed as 
 
 ```javascript
 const AddPerson = (props) => {
-  return (
-    <>
-      <button onClick={props.addPerson}>Add Person</button>
-    </>
-  )
+  return <button onClick={props.addPerson}>Add Person</button>
 }
 
 export default AddPerson
