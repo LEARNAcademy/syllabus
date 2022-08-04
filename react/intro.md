@@ -88,12 +88,12 @@ To get started, we will focus on just the anatomy of one component. To make this
 
     <script type="text/babel">
       const App = () => {
-        return <h1>Hello World!</h1>;
-      };
+        return <h1>Hello World!</h1>
+      }
 
-      const domContainer = document.querySelector("#react-container");
-      const root = ReactDOM.createRoot(domContainer);
-      root.render(<App />);
+      const domContainer = document.querySelector('#react-container')
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
     </script>
   </body>
 </html>
@@ -104,12 +104,12 @@ There's a lot there. But let's focus on the React portion. It's the section in `
 ```html
 <script type="text/babel">
   const App = () => {
-    return <h1>Hello World!</h1>;
-  };
+    return <h1>Hello World!</h1>
+  }
 
-  const domContainer = document.querySelector("#react-container");
-  const root = ReactDOM.createRoot(domContainer);
-  root.render(<App />);
+  const domContainer = document.querySelector('#react-container')
+  const root = ReactDOM.createRoot(domContainer)
+  root.render(<App />)
 </script>
 ```
 
@@ -150,16 +150,16 @@ First we will wrap the `h1` in React fragments. Then we will define another comp
           <>
             <h1>Hello World!</h1>
           </>
-        );
-      };
+        )
+      }
 
       const Content = () => {
-        return <h3>Welcome to LEARN Academy!</h3>;
-      };
+        return <h3>Welcome to LEARN Academy!</h3>
+      }
 
-      const domContainer = document.querySelector("#react-container");
-      const root = ReactDOM.createRoot(domContainer);
-      root.render(<App />);
+      const domContainer = document.querySelector('#react-container')
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
     </script>
   </body>
 </html>
@@ -193,16 +193,16 @@ Just like any other function, components must be called or invoked. A **componen
             <h1>Hello World!</h1>
             <Content />
           </>
-        );
-      };
+        )
+      }
 
       const Content = () => {
-        return <h3>Welcome to LEARN Academy!</h3>;
-      };
+        return <h3>Welcome to LEARN Academy!</h3>
+      }
 
-      const domContainer = document.querySelector("#react-container");
-      const root = ReactDOM.createRoot(domContainer);
-      root.render(<App />);
+      const domContainer = document.querySelector('#react-container')
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
     </script>
   </body>
 </html>
@@ -212,7 +212,7 @@ This patterns will allow us to create as many components as needed.
 
 ---
 
-### Challenges
+### 💻 Challenge: React Components
 
 The goal of the following challenge is for you to practice nesting components and getting familiar with the component syntax.
 
@@ -239,16 +239,18 @@ Create a new HTML file. Copy the following code into your file:
 
     <script type="text/babel">
       const App = () => {
-        return <></>;
-      };
+        return <></>
+      }
 
-      const domContainer = document.querySelector("#react-container");
-      const root = ReactDOM.createRoot(domContainer);
-      root.render(<App />);
+      const domContainer = document.querySelector('#react-container')
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
     </script>
   </body>
 </html>
 ```
+
+### 📚 User Stories
 
 - As a user, I see a Header component with the name of your cohort.
 - As a user, I can see a Content component that contains an unordered list of all your classmates.
