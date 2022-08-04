@@ -55,7 +55,7 @@ Instructions for Mac OSX
     - Paste the token in a note file for temporary storage
 - **Step 7**: Prompt GitHub authentication in the terminal
 
-  - Make a new repo in GitHub
+  - Make a new repo in your personal GitHub
     - Go to `Your repositories` located on the dropdown menu under your GitHub icon
     - Select the `New` button
     - Create a unique-repository-name
@@ -69,9 +69,9 @@ Instructions for Mac OSX
     - $ `cd <repo-name>`
 
   - NOTE: While working in the terminal, it is important to know where you are storing/modifying information. Here are some informational terminal commands
-    - To see the branch you are currently using: $ git branch
-    - To see the directory you are currently using: $ pwd
-    - To see what files are located in the current directory/repo: $ ls
+    - To see the branch you are currently using: $ `git branch`
+    - To see the directory you are currently using: $ `pwd`
+    - To see what files are located in the current directory/repo: $ `ls`
     
   - Make a change in the repository and push a change
     - Create files
