@@ -89,8 +89,8 @@ When initially opening the file we will see the boilerplate code that creates th
 **src/App.js**
 
 ```javascript
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg'
+import './App.css'
 
 function App() {
   return (
@@ -110,10 +110,10 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ### Working in App.js
@@ -122,20 +122,22 @@ The boilerplate code is great for a quick check to make sure the app is working 
 
 The component has a function declaration and a return. Within the return we have some JSX. Since we will be returning more than one line of JSX we can wrap the tag in a React fragment.
 
-All components need to have an **export** to expose the component to the rest of the application.
+Using React fragments requires an input from React dependencies at the top of the file. All components need to have an **export** to expose the component to the rest of the application.
 
 **src/App.js**
 
 ```javascript
+import React from 'react'
+
 const App = () => {
   return (
     <>
       <h1>Hello World!</h1>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Nesting Components
@@ -149,15 +151,17 @@ Inside the components folder, create a new file called `Header.js`. It is conven
 **src/components/Header.js**
 
 ```javascript
+import React from 'react'
+
 const Header = () => {
   return (
     <>
       <h1>Recipe Application</h1>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 ```
 
 For each new component there are three necessary steps:
@@ -171,17 +175,18 @@ Back in _App.js_ we will need to call the Header component. Now that all the com
 **src/App.js**
 
 ```javascript
-import Header from "./component/Header";
+import React from 'react'
+import Header from './component/Header'
 
 const App = () => {
   return (
     <>
       <Header />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Adding the Recipe Component
@@ -191,6 +196,8 @@ Next we will add the Recipe component. We create the Recipe component in the `co
 **src/components/Recipes.js**
 
 ```javascript
+import React from 'react'
+
 const Recipe = () => {
   return (
     <>
@@ -201,10 +208,10 @@ const Recipe = () => {
         <li>Whole wheat bread</li>
       </ul>
     </>
-  );
-};
+  )
+}
 
-export default Recipe;
+export default Recipe
 ```
 
 Now we will import Recipe in App.js.
@@ -212,8 +219,9 @@ Now we will import Recipe in App.js.
 **src/App.js**
 
 ```javascript
-import Header from "./components/Header";
-import Recipe from "./components/Recipe";
+import React from 'react'
+import Header from './components/Header'
+import Recipe from './components/Recipe'
 
 const App = () => {
   return (
@@ -221,10 +229,10 @@ const App = () => {
       <Header />
       <Recipe />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Adding the Footer Component
@@ -234,15 +242,17 @@ Next we will add a footer component. We create the Footer component in the `comp
 **src/components/Footer.js**
 
 ```javascript
+import React from 'react'
+
 const Footer = () => {
   return (
     <>
       <footer>LEARN Academy | Instruction Team &copy; 2022</footer>
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 ```
 
 Import Footer in App.js.
@@ -250,9 +260,10 @@ Import Footer in App.js.
 **src/App.js**
 
 ```javascript
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Recipes from "./components/Recipes";
+import React from 'react'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Recipes from './components/Recipes'
 
 const App = () => {
   return (
@@ -261,23 +272,28 @@ const App = () => {
       <Recipe />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ---
 
-### Challenges
+### ⭐️ Challenge: Favorites
 
-As a developer, you are tasked with creating an application to share your favorite things. Decide which favorite things you would like to showcase.
+As a developer, you are tasked with creating an application to share your favorite things. Decide which favorite things you would like to showcase. When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code into individual components.
+
+### 📚 User Stories
 
 - As a user, I can see a Header component with the title of your app.
 - As a user, I can see a Profile component with information about you and your partner.
 - As a user, I can see a Footer component with the name of your cohort.
 - As a user, I can see a Favorites component with a list of top five favorites (i.e. top five favorite TV shows, top five favorite songs, top five favorite taco shops).
-- As a user, I can see a customized browser tab.
+
+### 🏔 Stretch
+
+- As a user, I can see a browser tab with a customized name and favicon.
 
 ---
 

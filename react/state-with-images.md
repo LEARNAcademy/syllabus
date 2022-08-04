@@ -48,14 +48,16 @@ Storing images in a React application gives us more control over the functionali
 Here is an example that uses images to display randomized flashcards. We will start in `App.js` with a heading tag.
 
 ```javascript
+import React from 'react'
+
 const App = () => {
   return (
     <>
       <h1>Multiplication Flash Cards</h1>
     </>
-  );
-};
-export default App;
+  )
+}
+export default App
 ```
 
 ### Adding Images
@@ -63,11 +65,12 @@ export default App;
 Next we will add the images to the application. To keep our application organized it is convention to create a new directory in the `src` directory called `assets`. The assets directory will hold all the images for our flashcards. Then we will import the images to `App.js`. Once the images are imported they can be stored in an array.
 
 ```javascript
-import flashcard1 from "./assets/flashcard1.png";
-import flashcard2 from "./assets/flashcard2.png";
-import flashcard3 from "./assets/flashcard3.png";
-import flashcard4 from "./assets/flashcard4.png";
-import flashcard5 from "./assets/flashcard5.png";
+import React from 'react'
+import flashcard1 from './assets/flashcard1.png'
+import flashcard2 from './assets/flashcard2.png'
+import flashcard3 from './assets/flashcard3.png'
+import flashcard4 from './assets/flashcard4.png'
+import flashcard5 from './assets/flashcard5.png'
 
 const App = () => {
   const flashcards = [
@@ -75,17 +78,17 @@ const App = () => {
     flashcard2,
     flashcard3,
     flashcard4,
-    flashcard5,
-  ];
+    flashcard5
+  ]
 
   return (
     <>
       <h1>Multiplication Flash Cards</h1>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Adding State Values
@@ -93,13 +96,12 @@ export default App;
 Now that the images are imported to `App.js` we can create the logic of the application. First we will add a state variable that will hold the flashcard actively being displayed to the user as well as the method that will update the flashcard as the user selects the next option. This will be achieved with the `useState` React hook. The state variable can be named `currentCard`. It is convention to use the same name but add the prefix `set` to the updater method. We can set the first flashcard image as the initial value of `currentCard`. To see the card displayed in the browser the `currentCard` value is passed to the `src` attribute of an `img` tag in JSX.
 
 ```javascript
-import { useState } from "react";
-
-import flashcard1 from "./assets/flashcard1.png";
-import flashcard2 from "./assets/flashcard2.png";
-import flashcard3 from "./assets/flashcard3.png";
-import flashcard4 from "./assets/flashcard4.png";
-import flashcard5 from "./assets/flashcard5.png";
+import React, { useState } from 'react'
+import flashcard1 from './assets/flashcard1.png'
+import flashcard2 from './assets/flashcard2.png'
+import flashcard3 from './assets/flashcard3.png'
+import flashcard4 from './assets/flashcard4.png'
+import flashcard5 from './assets/flashcard5.png'
 
 const App = () => {
   const flashcards = [
@@ -107,20 +109,20 @@ const App = () => {
     flashcard2,
     flashcard3,
     flashcard4,
-    flashcard5,
-  ];
+    flashcard5
+  ]
 
-  const [currentCard, setCurrentCard] = useState(flashcard1);
+  const [currentCard, setCurrentCard] = useState(flashcard1)
 
   return (
     <>
       <h1>Multiplication Flash Cards</h1>
       <img src={currentCard} alt="flashcard" />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ### Updating State Values
@@ -128,13 +130,12 @@ export default App;
 The next step is creating the logic that will allow the user to click through different flashcards. We will create a method that will pull a random image from the array. This method can be name `handleCardSelection` to communicate its intent. The method will hold the code that creates a random number and uses that random number to select a flashcard from the array of images. The `handleCardSelection` method is now ready to be called. We can add a button in JSX with an `onClick` attribute that will trigger the `handleCardSelection` method.
 
 ```javascript
-import { useState } from "react";
-
-import flashcard1 from "./assets/flashcard1.png";
-import flashcard2 from "./assets/flashcard2.png";
-import flashcard3 from "./assets/flashcard3.png";
-import flashcard4 from "./assets/flashcard4.png";
-import flashcard5 from "./assets/flashcard5.png";
+import React, { useState } from 'react'
+import flashcard1 from './assets/flashcard1.png'
+import flashcard2 from './assets/flashcard2.png'
+import flashcard3 from './assets/flashcard3.png'
+import flashcard4 from './assets/flashcard4.png'
+import flashcard5 from './assets/flashcard5.png'
 
 const App = () => {
   const flashcards = [
@@ -142,15 +143,15 @@ const App = () => {
     flashcard2,
     flashcard3,
     flashcard4,
-    flashcard5,
-  ];
+    flashcard5
+  ]
 
-  const [currentCard, setCurrentCard] = useState(flashcard1);
+  const [currentCard, setCurrentCard] = useState(flashcard1)
 
   const handleCardSelection = () => {
-    const randomCard = Math.floor(Math.random() * flashcards.length);
-    setCurrentCard(flashcards[randomCard]);
-  };
+    const randomCard = Math.floor(Math.random() * flashcards.length)
+    setCurrentCard(flashcards[randomCard])
+  }
   return (
     <>
       <h1>Multiplication Flash Cards</h1>
@@ -158,15 +159,19 @@ const App = () => {
       <br />
       <button onClick={handleCardSelection}>New Card</button>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
 ```
 
 ---
 
 ### 💡 Challenge: Light Bulb
+
+As a developer, you are tasked with creating a light switch application. The application will display an image of a lightbulb and corresponding switch. When the user clicks the switch the images will toggle between a light switch and bulb that are "off" and a light switch and bulb that are "on".
+
+### 📚 User Stories
 
 - As a user, I can see a square box on the screen with a black border and a white background.
 - As a user, I can see the word "off" inside the box.

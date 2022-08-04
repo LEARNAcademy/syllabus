@@ -63,6 +63,8 @@ Here is an example that creates a simple counter application in React. We start 
 **src/App.js**
 
 ```javascript
+import React from 'react'
+
 const App = () => {
   return (
     <>
@@ -82,7 +84,7 @@ Next we will add a state variable. The `useState` method is going to set an init
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
+import React, { useState } from 'react'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -105,7 +107,7 @@ We can reference the `count` variable by dropping it into the JSX tags to see th
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
+import React, { useState } from 'react'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -130,7 +132,7 @@ Now we have a working counter application!
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
+import React, { useState } from 'react'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -163,7 +165,7 @@ In this refactor we will add a directory inside the `src` directory named `compo
 **src/components/Counter.js**
 
 ```javascript
-import { useState } from "react"
+import React, { useState } from 'react'
 
 const Counter = () => {
   const [count, setCount] = useState(0)
@@ -191,7 +193,9 @@ export default Counter
 **src/App.js**
 
 ```javascript
-import Counter from "./components/Counter"
+import React from 'react'
+import Counter from './components/Counter'
+
 const App = () => {
   return (
     <>
@@ -205,9 +209,14 @@ const App = () => {
 
 export default App
 ```
+
 ---
 
 ### 🟧 Challenge: Color Box
+
+As a developer, you are tasked with creating a color box application. The application will allow the user to click a box and see a different color with every click.
+
+### 📚 User Stories
 
 - As a user, I can see a square box on the screen with a black border and a white background
 - As a user, I can see the default color name "white" inside the box

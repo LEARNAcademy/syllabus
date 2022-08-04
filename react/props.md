@@ -58,7 +58,8 @@ Here is an example that creates a greeter application in React. We start with `A
 **src/App.js**
 
 ```javascript
-import Greeter from "./components/Greeter"
+import React from 'react'
+import Greeter from './components/Greeter'
 
 const App = () => {
   return (
@@ -75,6 +76,8 @@ export default App
 **src/components/Greeter.js**
 
 ```javascript
+import React from 'react'
+
 const Greeter = () => {
   return (
     <>
@@ -93,7 +96,8 @@ Now we will pass data from `App.js` down to the greeter component. Within the `G
 **src/App.js**
 
 ```javascript
-import Greeter from "./components/Greeter"
+import React from 'react'
+import Greeter from './components/Greeter'
 
 const App = () => {
   return (
@@ -110,6 +114,8 @@ export default App
 **src/components/Greeter.js**
 
 ```javascript
+import React from 'react'
+
 const Greeter = (props) => {
   return (
     <>
@@ -128,11 +134,11 @@ Rather than hard coding the string "Hamilton" directly in the component call we 
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
-import Greeter from "./components/Greeter"
+import React, { useState } from 'react'
+import Greeter from './components/Greeter'
 
 const App = () => {
-  const [people, setPeople] = useState("Hamilton")
+  const [people, setPeople] = useState('Hamilton')
 
   return (
     <>
@@ -158,11 +164,11 @@ As long as the `name` variable stays the same there are no changes that need to 
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
-import Greeter from "./components/Greeter"
+import React, { useState } from 'react'
+import Greeter from './components/Greeter'
 
 const App = () => {
-  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"])
+  const [people, setPeople] = useState(['Hamilton', 'Washington', 'Jefferson'])
 
   return (
     <>
@@ -186,12 +192,12 @@ We can add a method in `App.js` that will use the state setter method named `set
 **src/App.js**
 
 ```javascript
-import { useState } from "react"
-import Greeter from "./components/Greeter"
-import AddPerson from "./components/AddPerson"
+import React, { useState } from 'react'
+import Greeter from './components/Greeter'
+import AddPerson from './components/AddPerson'
 
 const App = () => {
-  const [people, setPeople] = useState(["Hamilton", "Washington", "Jefferson"])
+  const [people, setPeople] = useState(['Hamilton', 'Washington', 'Jefferson'])
 
   const addPerson = () => {
     const newPerson = prompt()
