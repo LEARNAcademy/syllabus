@@ -54,12 +54,36 @@ Instructions for Mac OSX
     - **DO NOT NAVIGATE AWAY FROM PAGE UNTIL YOU HAVE COPIED THE TOKEN AND PASTED IT SOMEWHERE IN A SAFE PLACE**
     - Paste the token in a note file for temporary storage
 - **Step 7**: Prompt GitHub authentication in the terminal
-  - Clone an existing repo using HTTPS
+
+  - Make a new repo in your personal GitHub
+    - Go to `Your repositories` located on the dropdown menu under your GitHub icon
+    - Select the `New` button
+    - Create a unique-repository-name
+    - Since we are not importing an existing repo, check the box by `Add a README file`
+    - Select the `Create repository` button
+    - Select the dropdown menu on the `Code` button
+    - Copy the https url
+
+  - Clone existing repo using HTTPS
+    - $ `git clone <https for repo>`
+    - $ `cd <repo-name>`
+
+  - NOTE: While working in the terminal, it is important to know where you are storing/modifying information. Here are some informational terminal commands
+    - To see the branch you are currently using: $ `git branch`
+    - To see the directory you are currently using: $ `pwd`
+    - To see what files are located in the current directory/repo: $ `ls`
+    
   - Make a change in the repository and push a change
+    - Create files
+      - $ `touch <file-name.extension>`
+    - Open text editor (the following is an example of vs code)
+      - $ `code .`
+      - Make changes on the appropriate files
     - $ `git status`
     - $ `git add <file-name>`
     - $ `git commit -m "meaningful message here"`
     - $ `git push origin <branch-name>`
+
   - When prompted for your username, enter your GitHub handle
   - When prompted for your password, enter your **token**
   - For more info, visit: [Updating Credentials](https://docs.github.com/en/github/getting-started-with-github/updating-credentials-from-the-macos-keychain)
