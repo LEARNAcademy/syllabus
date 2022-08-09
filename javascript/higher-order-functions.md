@@ -2,7 +2,7 @@
 
 #### Overview
 
-Higher-order functions are built in methods in JavaScript that act on arrays. They are a specific subset of built in methods that take a function as an argument.
+Higher-order functions are built in methods in JavaScript. They are a specific subset of built in methods that take a function as an argument.
 
 #### Previous Lecture (1 hour 35 min)
 
@@ -10,17 +10,21 @@ Higher-order functions are built in methods in JavaScript that act on arrays. Th
 
 #### Learning Objectives
 
-- can define `.forEach()` and `.map()` and `.filter()` as array methods
-- can distinguish between a function and a higher-order function
-- can utilize the required parameter for `.forEach()` and `.map()` and `.filter()`
-- can recall the optional parameters for `.forEach()` and `.map()` and `.filter()`
+- can define `.map()` and `.filter()` as array methods
+- can distinguish between a regular function and a higher-order function
+- can distinguish between a regular built in method and a higher-order function
+- can utilize the required parameter for `.map()` and `.filter()`
+- can recall the optional parameters for `.map()` and `.filter()`
 - can demonstrate the proper use of both `.map()` and `.filter()` to produce expected outcomes
 
 #### Vocabulary
 
 - higher-order function
-- value
-- index
+- .map()
+- .filter()
+- type coercion
+- falsy
+- truthy
 
 #### Process
 
@@ -38,13 +42,13 @@ Higher-order functions are built in methods in JavaScript that act on arrays. Th
 
 ---
 
-## Higher-Order Functions
+### Higher-Order Functions
 
-A higher-order function is a function that either takes in another function as an argument or returns another function as an output.
+A **higher-order function** is a built in method in JavaScript that takes in a function as an argument. Often higher-order functions are designed to operate on arrays. The function passed as an argument will execute once for every item in the array. This makes higher-order functions incredible useful for iteration.
 
-We will focus on two higher-order functions for this lesson - **.map()** and **.filter()** both have three built-in parameters - the value, index, and array.
+We will focus on two higher-order functions for this lesson `.map()` and `.filter()`. Both of these have three built-in parameters: the current value, the index, and the array the higher-order function is called on.
 
-What the parameters are named is arbitrary, but the order will always be the same. The higher-order functions have to take at least one argument (value) but can take two or three if needed.
+What the parameters are named is technically arbitrary, but the order will always be the same. The higher-order functions have to take at least one argument (value) but can take two or three if needed.
 
 `.map(value, index, array)`  
 `.filter(value, index, array)`
@@ -55,137 +59,153 @@ What the parameters are named is arbitrary, but the order will always be the sam
 
 3. The **array** the higher-order function was called on (optional).
 
-## Map
+### Map
 
-The **.map()** function iterates through an array and returns a new array of the same length.
+The **.map()** method iterates through an array and returns a new array of the same length.
 
 Here is an example of iterating using a for loop:
 
 ```javascript
-var myArray = [5, 3, 2, 9, 8];
+const myArray = [5, 3, 2, 9, 8]
 
-let newArray = [];
+let newArray = []
 for (let i = 0; i < arr.length; i++) {
-  let valueTimesThree = myArray[i] * 3;
-  console.log(valueTimesThree);
-  newArray.push(valueTimesThree);
+  newArray.push(myArray[i] * 3)
 }
 
-console.log(newArray);
+console.log(newArray)
 ```
 
-Now let's look at this same objective with **.map()**
+Now let's look at this same objective with `.map()` method.
 
 ```javascript
-var myArray = [5, 3, 2, 9, 8];
+const myArray = [5, 3, 2, 9, 8]
 
 const multiplier = myArray.map((value) => {
-  return value * 3;
-});
+  return value * 3
+})
 
-console.log(multiplier);
+console.log(multiplier)
 ```
 
 Because we are using an arrow function we can reduce the code even further. If there is only one line of code to be executed, we can remove the `return` keyword as the return is implied.
 
 ```javascript
-var myArray = [5, 3, 2, 9, 8];
+const myArray = [5, 3, 2, 9, 8]
 
-const multiplier = myArray.map((value) => value * 3);
+const multiplier = myArray.map((value) => value * 3)
 
-console.log(multiplier);
+console.log(multiplier)
 ```
 
-And finally let's wrap the `.map()` logic in a function that can take in any array to make the function reusable.
+And finally let's wrap the `.map()` logic in a function that can take in any array to make the function reusable. This allows us to call the `multiplier` function as many times as we deem useful.
 
 ```javascript
-var myArray = [5, 3, 2, 9, 8];
+const myArray = [5, 3, 2, 9, 8]
 
 const multiplier = (array) => {
-  return array.map((value) => value * 3);
-};
-console.log(multiplier(myArray));
+  return array.map((value) => value * 3)
+}
+console.log(multiplier(myArray))
+console.log(multiplier([3, 4, 5, 6, 7]))
 ```
 
-Notice that `.map()` _iterates_ through the specified array **AND** returns a new array with the updated values.
+Notice that `.map()` iterates through the specified array **AND** returns a new array with the updated values.
 
-Here is another example with proper pseudocoding:
+Here is another example with proper pseudo coding:
 
 ```javascript
 // create a function that takes in an array and returns each word capitalized
-var fruitArray = ["banana", "mango", "apple", "grape"];
+const fruitArray = ["banana", "mango", "apple", "grape"]
 
 // declare a function that takes in an array
 const capitalizer = (array) => {
   // create a local variable that maps through the array
   let eachItem = array.map((value) => {
     // with each value access the first index and capitalize the letter then concatenate the remainder of the word
-    return value[0].toUpperCase() + value.substring(1);
-  });
+    return value[0].toUpperCase() + value.substring(1)
+  })
   // return the local variable joined into a string
-  return eachItem.join(" ");
-};
+  return eachItem.join(" ")
+}
 // logging the function and pass in the array
-console.log(capitalizer(fruitArray));
+console.log(capitalizer(fruitArray))
 ```
 
 **Note:** - This function has a return for the outer function **AND** a return for the higher-order function.
 
-## Filter
+### Truthy and Falsy
 
-The `.filter()` function loops through an array and returns a new array with only the values that are **truthy** or the values that satisfy your stated condition. Filter will return a subset of the given array.
-
-Here is an example of _iterating_ and returning a subset using a for loop:
+The JavaScript language supports type coercion. **Type coercion** is the evaluation of data that are not the same type by the conversion of one data type to another. Part of type coercion, and a quirk of JavaScript, is that all data types evaluate to either a true value or a false one. A **falsy value** is one that JavaScript deems to equate to the Boolean value false through the use of type coercion such as 0, null, and strings with no characters. A **truthy value** is one that JavaScript deems to equate to the Boolean value true through the use of type coercion such as non-zero numbers and strings with characters. This produces interesting outputs such as the following:
 
 ```javascript
-var numbersArray1 = [1, 2, 7, 4, 10, 8, 9];
+1 + "1"
+// --> "11"
+
+true + 1
+// --> 2
+
+null + 4
+// --> 4
+```
+
+Truthy and falsy values are important to understand and can be used to the advantage of the JavaScript developer. However, this quirk of JavaScript should not be exploited at the cost of code quality.
+
+### Filter
+
+The `.filter()` method iterates through an array and returns a new array with only the values that satisfy the stated condition. Filter needs an evaluation. The evaluation can be anything that will return a Boolean value of true or false or a truthy or falsy value. Values that are true or truthy are included in the subset while values that are false or falsy are excluded. This evaluation process allows filter to return a subset of the original array.
+
+Here is an example of iterating and returning a subset of an array using a for loop:
+
+```javascript
+const numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
-  let newArr = [];
+  let newArr = []
   for (let i = 0; i < array.length; i++) {
     if (array[i] % 2 === 0) {
-      newArr.push(array[i]);
+      newArr.push(array[i])
     }
   }
-  return newArr;
-};
+  return newArr
+}
 
-console.log(onlyEven(numbersArray1));
+console.log(onlyEven(numbersArray1))
 ```
 
-So, in the above example, we have created a function that takes an array as an argument, loops through the array, and returns a new array containing only the even numbers.
+In the above example, we have created a function that takes an array, loops through the array, and returns a new array containing only the even numbers.
 
-#### Using Filter
+Here is the same example using the filter method.
 
 ```javascript
-var numbersArray1 = [1, 2, 7, 4, 10, 8, 9];
+const numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
-  return array.filter((value) => value % 2 === 0);
-};
+  return array.filter((value) => value % 2 === 0)
+}
 
-console.log(onlyEven(numbersArray1));
+console.log(onlyEven(numbersArray1))
 ```
 
-Here is another example with proper pseudocoding:
+Here is another example with proper pseudo coding:
 
 ```javascript
 // create a function that returns only the values at the odd indexes
-var numbers = [4, 24, 5, 9, 0, 78];
+const numbers = [4, 24, 5, 9, 0, 78]
 
 // declare a function that takes in an array
 const getOnlyOddIndex = (array) => {
   // return a higher-order function that takes in the value and the index
   return array.filter((value, index) => {
     // return only the values that have an odd index
-    return index % 2 !== 0;
-  });
-};
+    return index % 2 !== 0
+  })
+}
 // log the function and pass in the array
-console.log(getOnlyOddIndex(numbers));
+console.log(getOnlyOddIndex(numbers))
 ```
 
-## Map vs Filter
+### Map vs Filter
 
 When deciding which higher-order function to use, remember these two differences:
 
@@ -194,7 +214,7 @@ When deciding which higher-order function to use, remember these two differences
 
 ---
 
-### Challenges
+### 💻 Challenges
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. Use `.map()` or `.filter()` to complete all of the following exercises.  
 **Don't forget to pseudo code.**
@@ -202,28 +222,28 @@ Copy the challenges into your JavaScript file. Comment out the instructions and 
 1. Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
 
 ```javascript
-var arr1 = [3, 9, 15, 4, 10];
+const arr1 = [3, 9, 15, 4, 10]
 // --> [30, 90, 150, 40, 100]
 ```
 
 2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 
 ```javascript
-var arr2 = [2, 7, 3, 5, 8, 10, 13];
+const arr2 = [2, 7, 3, 5, 8, 10, 13]
 // --> [7, 3, 5, 13]
 ```
 
-3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) method
+3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use the [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
 
 ```javascript
-var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"];
+const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 // --> "nicework"
 ```
 
 4. Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 
 ```javascript
-var filterArrayValues = [58, " ", "abcd", true, null, false, 0];
+const filterArrayValues = [58, "", "abcd", true, null, false, 0]
 // --> [58, "abcd", true]
 ```
 
@@ -232,15 +252,15 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0];
 1. Create a function that takes in a string and returns a new string with all the vowels removed.
 
 ```javascript
-var str = "javascript is awesome";
+const str = "javascript is awesome"
 // --> "jvscrpt s wsm"
 ```
 
 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
 ```javascript
-var arr1 = [3, 7, 10, 5, 4, 3];
-var arr2 = [7, 8, 2, 1, 5, 4];
+const arr1 = [3, 7, 10, 5, 4, 3]
+const arr2 = [7, 8, 2, 1, 5, 4]
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
 ```
 
