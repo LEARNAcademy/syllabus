@@ -1,34 +1,32 @@
 # React Inputs and Events
 
-## Overview
+#### Overview
 
-- Adding a input fields to a React application
-- Implementing listening events in React
-- Updating state with every change to the DOM
+React applications are designed to handle user interactions quickly and efficiently. Button click are one example of user interactions. Buttons can trigger code logic execution that changes what the user sees in the application. Another common way users interact with an application is through text input fields. Inputs allow a user to add unique content to an application. Developers can track each keystroke made my the user and save the information for use in the code logic.
 
 #### Previous Lecture (48 min)
 
 [![YouTube](http://img.youtube.com/vi/hdjjEmRIW7A/0.jpg)](https://youtu.be/hdjjEmRIW7A)
 
-## Learning Objectives
+#### Learning Objectives
 
-- Creating text input fields
-- Exploring event listeners in JavaScript
-- Creating a method to handle DOM event changes (what the user types)
-- Creating a method to set state with the user input
+- can define DOM events
+- can define event listeners
+- can distinguish between an event handler method and a state method
+- can recall the JSX attributes needed to collect user inputs
 
-## Vocabulary
+#### Vocabulary
 
-- DOM event, often shortened to `e`
-- Event listeners
+- DOM events
+- event listeners
 - onChange
-- HTML input tags
-- Input attributes
-- Handler methods
+- type attributes
+- value attribute
+- handler method
 
-## Additional Resources
+#### Additional Resources
 
-- [GeeksforGeeks](https://www.geeksforgeeks.org/javascript-events/)
+- [JavaScript Events](https://www.geeksforgeeks.org/javascript-events/)
 - [W3Schools HTML Input](https://www.w3schools.com/tags/tag_input.asp)
 
 #### Process
@@ -43,7 +41,6 @@
 
 #### Useful Commands
 
-- $ yarn create react-app app-name
 - $ yarn start
 - control + c (stops the server)
 - control + t (opens a new terminal tab)
@@ -51,124 +48,167 @@
 #### Troubleshooting Tips
 
 - Is your server running?
-- Are your components imported and exported?
-- What is your error message telling you?
+- Are your components exported?
+- Inspect the page and look for errors in the console tab.
+- Always look at the first error message in the list.
 
 ---
 
-## Inputs and DOM Events
+### DOM Events and Listeners
 
-Web applications are built to handle interaction with a user. These interactions can happen in a variety of ways. The user can click with their mouse, hover over elements, or use their keyboard to type. All of these interactions are considered **DOM events**. The DOM (Document Object Model) is always listening for changes. As a user moves their mouse across the screen, the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly depending on the type of event.
+Web applications like React are built to handle interaction with a user. These interactions can happen in a variety of ways. The user can click with their mouse, hover over elements, or use their keyboard to type. All of these interactions are considered **DOM events**. The DOM (Document Object Model) is always listening for changes. As a user moves their mouse across the screen the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly.
 
-As developers, we can add event listeners to HTML (and JSX) tags that will wait for specific events to occur. One example is adding an `onClick` attribute to a button. The DOM is listening for a click event on that particular node and will execute the action described by the developer.
+To create recognition of various events we can add event listeners to HTML (and JSX) tags. **Event listeners** are methods that will wait for specific DOM events to occur and trigger appropriate actions. One example is adding an `onClick` attribute to a button. The DOM is listening for a click event on that particular node and will execute the action described by the developer.
 
 Another event listener is **onChange** which listens for any changes made to a particular node and executes a corresponding action. This type of listener is very handy when the user is typing in a text field. We can listen for the changes and capture the value of what the user is typing.
 
-## Input Attributes
+### Inputs and Input Attributes
 
-Inputs are HTML (and JSX) tags. Inputs are self closing, as they don't require inner HTML.
+Inputs are HTML (and JSX) tags. Inputs are self closing as they don't require inner HTML.
 
 ```javascript
 <input />
 ```
 
-**Type**  
-Input tags provide lots of options for developers. Inputs can accept text, numbers, dates, passwords, and more. They can also look like text fields, radio buttons, or check boxes. This is determined by the "type" attribute.
+Input tags provide lots of options for developers. Inputs can accept text, numbers, dates, passwords, and more. They can also look like text fields, radio buttons, or check boxes. The **type attribute** determines what kind of information the input tag will accept.
 
 ```javascript
 <input type="text" />
+<input type="password" />
 ```
 
-**Value**  
-Value can be used differently for different types of input types. For buttons, a value attribute can represent the text that appears on the button. For text inputs, the value attribute can establish a default value. In React, the value attribute can directly represent the state object. Value works in conjunction with `onChange` to update state and store the user's input.
+The **value attribute** establishes a default value in a text input. In React, the value attribute can directly represent the state value. Value works in conjunction with `onChange` to update state and store the user's input.
 
 ```javascript
-<input type="text" value={this.state.userInput} />
+<input type="text" value={userInput} />
 ```
 
-**onChange**  
-All inputs are listening for events. Developers can use the `onChange` method to execute logic every time there is a change on an element. In React, the onChange attribute can call a function that will update the state object and reflect back in the current value. It is customary to have an onChange listener associate with a **handler method**. Handler methods are named to associate their action with a particular event. By convention, a developer would know that a method called `handleChange` would be associated with an `onChange` event and a method called `handleClick` would be associated with an `onClick` event.
-
-```javascript
-<input type="text" value={this.state.userInput} onChange={this.handleChange} />
-```
-
-## Handle Change
-
-In JavaScript, event listeners create a new instance of the class Event. Event has built in properties and methods that can be passed to a `handleChange` method. The convention is to shorten the name `event` to `e`.
-
-```javascript
-handleChange = (e) => {
-  console.log(e);
-};
-```
-
-By logging `e` we can look at the many properties and methods that are available to the class Event. To capture the characters the user is typing, we can use the property `target` which, as the name suggests, targets the input field.
-
-```javascript
-handleChange = (e) => {
-  console.log(e.target);
-};
-```
-
-Now that we have targeted the input, we can extract the value from the input field and set it to state.
+All inputs are automatically listening for events. In React, the `onChange` attribute can call a corresponding method that will update the state value and reflect back in the current value. It is customary to have an `onChange` listener associate with a handler method. **Handler methods** are a conventional naming technique that describes the method associated with the action of a particular event. By convention, a developer would know that a method called `handleChange` would be associated with an `onChange` event and a method called `handleClick` would be associated with an `onClick` event.
 
 **src/App.js**
 
 ```javascript
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userInput: "",
-    };
+import React, { useState } from "react"
+
+const App = () => {
+  const [userInput, setUserInput] = useState("")
+
+  const handleChange = () => {
+    // handle logic here
   }
 
-  handleChange = (e) => {
-    console.log(e.target.value);
-    this.setState({ userInput: e.target.value });
-  };
-
-  render() {
-    return (
-      <>
-        <input
-          type="text"
-          value={this.state.userInput}
-          onChange={this.handleChange}
-        />
-        <p>{this.state.userInput}</p>
-      </>
-    );
-  }
+  return (
+    <>
+      <input type="text" value={userInput} onChange={handleChange} />
+    </>
+  )
 }
-export default App;
+export default App
 ```
 
-## Summary
+### Handle Change Methods
 
-- Inputs are HTML (or JSX) tags that accept many attributes.
-- Input attributes can modify the type of input, define the value, and listen for onChange events.
-- onChange events call handler methods that execute JavaScript code.
-- Event listeners create a new instance of the JavaScript class Event which has built in properties and methods.
+In JavaScript, event listeners create a new instance of the JavaScript class Event. The Event class is a blueprint for all instances of an event object. As many classes do, the Event class has both data (properties) and behavior (methods). The event object can be accessed in the `handleChange` method by passing the argument of `event` which is often shortened to `e` by convention. Once we can access the event object we can use dot notation to extract the user's input.
 
-## Challenge: Listening Robot
+**src/App.js**
+
+```javascript
+import React, { useState } from "react"
+
+const App = () => {
+  const [userInput, setUserInput] = useState("")
+
+  const handleChange = (e) => {
+    console.log(e)
+  }
+
+  return (
+    <>
+      <input type="text" value={userInput} onChange={handleChange} />
+    </>
+  )
+}
+export default App
+```
+
+By logging `e` we can look at the many properties and methods that are available on this particular event object. To capture the characters the user is typing we can use the property `target` which, as the name suggests, targets the input field.
+
+**src/App.js**
+
+```javascript
+import React, { useState } from "react"
+
+const App = () => {
+  const [userInput, setUserInput] = useState("")
+
+  const handleChange = (e) => {
+    console.log(e.target)
+  }
+
+  return (
+    <>
+      <input type="text" value={userInput} onChange={handleChange} />
+    </>
+  )
+}
+export default App
+```
+
+Now that we have targeted the input we can extract the value from the input field and set it to state.
+
+**src/App.js**
+
+```javascript
+import React, { useState } from "react"
+
+const App = () => {
+  const [userInput, setUserInput] = useState("")
+
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    setUserInput(e.target.value)
+  }
+
+  return (
+    <>
+      <input type="text" value={userInput} onChange={handleChange} />
+      <p>{userInput}</p>
+    </>
+  )
+}
+export default App
+```
+
+Once we have the data from the input stored into the state value, the world is our oyster. We can pass the data to wherever it is needed. Often it will be useful to pass the state data to one or more nested components.
+
+### 🤖 Challenge: Listening Robot
+
+As a developer, you are tasked with creating an application where three "robots" are listening to the text that a user types. As the user types, each robot responds in real time with a different modification to the input.
+
+When creating a project it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, `App.js` will handle the state values, inputs, and event listener method. Each robot will be in its own display component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
 
 ![Active Listening Robot Challenge](./assets/robot_active_listening.png)
 
-- As a user, I can see a page with a text input.
-  - As a developer, I have one parent component that holds state (logic or smart component).
-  - As a developer, I have an input in my parent component.
+### 📚 User Stories
+
+- As a user, I can see a landing page with heading and a text input.
 - As a user, I see titles of three robots waiting for my text.
-  - As a developer, I have three child components that do not hold state (display or dumb component).
-- As a user, when I enter text I see the three robots responses update in real time.
-  - As a developer, I can call an onChange method on the input tag.
-  - As a developer, I can pass the updated state as props to the child components.
-  - As a developer, I can see the child components display the user input.
-- As a user, I see my "Good Robot" repeating exactly what I type.
-- As a user, I see my "Bad Robot" saying _BLABLA..._. One character for every character I type.
-  - As a developer, I can create modification to the user input text by creating a method in my child component.
-- As a user, I see a third robot that is the developer's choice.
+- As a user, I see my "Good Robot" repeating exactly what I type in real time.
+- As a user, I see my "Bad Robot" saying "BLABLA....." One character for every character I type in real time.
+- As a user, I see a third robot that modifies the input as per the developer's choice in real time.
+
+### 🏔 Stretch Goals
+
+- As a user, I see a fourth robot that modifies the input as per the developer's choice in real time.
+- As a user, I can see pleasant stylings on the application.
+
+### 👩‍💻 Developer Stretch Goals
+
+- As a developer, I have a well commented application.
+- As a developer, I have well written README file with instructions on how to access my repository.
+- As a developer, my variables are all named semantically.
+- As a developer, I have refactored and efficient code.
+- As a developer, I have my application [deployed as a live website](https://render.com/docs/deploy-create-react-app).
 
 ---
 

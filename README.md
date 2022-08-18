@@ -99,7 +99,6 @@ React is a powerful Javascript library used to build more complicated user inter
 
 #### Additional Topics:
 
-- [React Forms and Functional Props](./react/forms.md)
 - [React State with Images](./react/state-with-images.md)
 
 ## Unit Four: Ruby
