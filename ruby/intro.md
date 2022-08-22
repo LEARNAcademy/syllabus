@@ -10,13 +10,14 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 
 #### Learning Objectives
 
-- can access the interactive Ruby shell in terminal
-- can define Ruby data types
-- can reproduce the proper syntax to execute methods
-- can reproduce the syntax required to define a variable
-- can reproduce the syntax required to define an array
-- can determine the proper use of either p or puts depending on a desired outcome
 - can explain the fundamentals of object-oriented programming
+- can define basic Ruby data types
+- can reproduce the syntax of string interpolation in Ruby
+- can reproduce the syntax required to define a variable
+- can reproduce the proper syntax to execute built in methods
+- can reproduce the syntax required to define an array
+- can access the interactive Ruby shell in the Mac terminal
+- can determine the proper use of either p or puts depending on a desired outcome
 
 #### Vocabulary
 
