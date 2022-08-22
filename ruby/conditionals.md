@@ -2,13 +2,13 @@
 
 #### Overview
 
-Functions are customized snippets of code functionality that allow developers to create to reusable logic. Because Ruby is so very object oriented, functions are referred to as methods. Methods often need to make decisions about the data that is passed in. The decisions, or conditional statements, are a sequence of well-defined instructions that produce a unique output based on the value of the input. The combination of methods and conditional statements create powerful coding logic.
+Functions are customized snippets of code functionality that allow developers to create to reusable logic. Because Ruby is so very object oriented, all functions are referred to as methods. Methods often need to make decisions about the data that is passed in. The decisions, or conditional statements, are a sequence of well-defined instructions that produce a unique output based on the value of the input. The combination of methods and conditional statements create powerful coding logic.
 
 #### Previous Lecture: Conditionals (40 min)
 
 [![YouTube](http://img.youtube.com/vi/dfw_pJsu6aI/0.jpg)](https://youtu.be/dfw_pJsu6aI)
 
-#### Previous Lecture:Methods (21 min)
+#### Previous Lecture: Methods (21 min)
 
 [![YouTube](http://img.youtube.com/vi/MJic4poiJPE/0.jpg)](https://youtu.be/MJic4poiJPE)
 
@@ -50,9 +50,10 @@ Functions are customized snippets of code functionality that allow developers to
 
 A Ruby **method** is a block of custom code logic that can be called as many times as needed. Methods in Ruby are defined using the keywords **def/end**. The keyword `def` is followed by the name of the method. The name of the method is written in snake_case. Ruby doesn't use curly braces so the block of code logic in the method is defined by the keyboard `end`. In between the `def` and `end` is the code to be executed.
 
-Ruby has the keyword `return` but it is not necessary to use in every method. Ruby has an **implicit return** which means the value of the last line of a method is automatically returned without using the keyword `return`.
+Ruby has the keyword `return` but it is not necessary to use in every method. Ruby has an **implicit return** which means if there is no `return` specified the value of the last line of a method is automatically returned.
 
 ```ruby
+# using the keyword return
 def greeter
   return 'Hello World!'
 end
@@ -115,7 +116,7 @@ add_up(3, 4)
 
 ### Conditional Statements
 
-Conditionals in Ruby use the keywords **if/else/end** to create a decision tree. The first `if` statement starts the chain of evaluations. The `else` keyword is the catchall that doesn't take an evaluation and will only execute if none of the other conditions are met. Simple evaluations in Ruby don't need to be wrapped in () and code blocks don't user curly braces. Instead Ruby uses the keyword `end` to define the scope of the conditional evaluation.
+Conditionals in Ruby use the keywords **if/else/end** to create a decision tree. The first `if` statement starts the chain of evaluations. The `else` keyword is the catchall that doesn't take an evaluation and will only execute if none of the other conditions are met. Simple evaluations in Ruby don't need to be wrapped in parentheses and code blocks don't user curly braces. Instead Ruby uses the keyword `end` to define the scope of the conditional evaluation. Since Ruby doesn't use curly braces, consistent indentation is very important in producing clean and organized code.
 
 ```ruby
 my_num = 10
@@ -128,7 +129,7 @@ end
 => 'Your number is 10!'
 ```
 
-Conditional statements are often used inside a method to produce a decision in the code logic. This allows for different outcomes based on the input. Every `def` has a corresponding `end` and every conditional statement needs an `end`. Nesting a conditional statement inside a method requires two ends each defining their own executable block of code.
+Conditional statements are often used inside methods to produce a decision in the code logic. This allows for different outcomes based on the input. Every `def` has a corresponding `end` and every conditional statement needs an `end`. Nesting a conditional statement inside a method requires two ends each defining their own executable block of code.
 
 ```ruby
 my_num = 10
@@ -150,7 +151,7 @@ is_ten 12
 
 ### Additional Branches on the Decision Tree
 
-If more than the binary `if/else` decision is necessary, Ruby offers the keyword **elsif** which allows for additional evaluations in the conditional statement. After the `if` statement, as many `elsif` statements may be used as necessary. Ending with an `else` will capture any leftover possibilities.
+If more than the binary `if/else` decision is necessary, Ruby offers the keyword **elsif** which allows for additional evaluations in the conditional statement. After the initial `if` statement, as many `elsif` statements may be used as necessary. Ending with an `else` will capture any leftover possibilities.
 
 ```ruby
 def number_checker num
@@ -167,6 +168,7 @@ end
 
 number_checker 10
 => 'Your number is 10!'
+
 number_checker 42
 => '42 is greater than 10.'
 ```
@@ -195,18 +197,18 @@ greeter 'Rachael'
 
 ### Input
 
-Ruby has the unique ability to not only produce an outcome in the terminal but to take user input in the terminal as well. The command for user input in the terminal is an action called called **gets**. It is a bit like `prompt()` in JavaScript. And just like `prompt()` the input value from gets needs to be stored in a variable to access later.
+Ruby has the unique ability to not only produce an outcome in the terminal but to take user input in the terminal as well. The command for user input in the terminal is an action called **gets**. The `gets` action will pause code execution and wait for the user to input the appropriate data. Once the user hits the return key, the code will continue to execute. It is a bit like `prompt()` in JavaScript. And just like `prompt()` the input value from gets needs to be stored in a variable to access later.
 
 ```ruby
 puts 'Enter your name'
 name = gets
 
-# gets provides a blank line that accepts user input as a string
+# gets provides a blank line that accepts user input as a string:
 > LEARN Student
 => 'LEARN Student\n'
 ```
 
-The string output from `gets` includes the return character you type to enter the user input. Ruby has a command called **chomp** that removes any additional line breaks and white space from the end of a string.
+The string output from `gets` also includes the return character `\n` logged by the computer when you hit the return key. Typically this character is not useful in the code logic and should be removed. Ruby has a command called **chomp** that removes any additional line breaks and white space from the end of a string.
 
 ```ruby
 puts 'Enter your name'
@@ -216,6 +218,21 @@ name = gets.chomp
 
 puts "Hello, #{name}. How are you today?"
 => 'Hello, LEARN Student. How are you today?'
+```
+
+The data type of the user input from a `gets` action will ALWAYS be a string. If anther data type is required to execute the code logic, it is up to the developer to make that conversion.
+
+```ruby
+def dog_years age
+  age * 7
+end
+
+puts 'Enter you age to see how old you are in dog years.'
+user_age = gets.chomp.to_i
+=> 7
+
+p dog_years user_age
+=> 49
 ```
 
 ### ❤️ Challenges
