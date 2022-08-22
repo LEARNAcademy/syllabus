@@ -48,13 +48,20 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 - Open the folder in a text editor
 - Code!
 
+#### Troubleshooting Tips
+
+- Are you in IRB or your regular terminal?
+- If you see an IRB prompt that says 1 or ? or " or ' you left syntax finished
+- `control + c` will clear your IRB
+- Are you printing your desired outcome?
+
 ---
 
-### Object Orientated Programming
+### Object-orientated Programming
 
-From The Object Model, a great read about Object Oriented Programming:
+From The Object Model, a great read about object-oriented programming:
 
-"**Object Oriented Programming**, often referred to as OOP, is a programming paradigm that was created to deal with the complexity of large software systems. Programmers found out very early on that as applications grew in complexity and size, they became very difficult to maintain. One small change at any point in the program would trigger a ripple effect of errors due to dependencies throughout the entire program.
+"**Object-oriented programming**, often referred to as OOP, is a programming paradigm that was created to deal with the complexity of large software systems. Programmers found out very early on that as applications grew in complexity and size, they became very difficult to maintain. One small change at any point in the program would trigger a ripple effect of errors due to dependencies throughout the entire program.
 
 Programmers needed a way to create containers for data that could be changed and manipulated without affecting the entire program. They needed a way to section off areas of code that performed certain procedures so that their programs could become the interaction of many small parts, as opposed to one massive blob of dependency."
 
@@ -67,8 +74,6 @@ Objects are the intersection of data and behavior. The data is information store
 Ruby comes preinstalled on Mac computers. To use it, open the terminal and type `irb`. The **interactive Ruby shell** is a REPL environment for interacting with Ruby code in terminal. **REPL** (Read, Evaluate, Print, Loop) is a computer environment where user inputs are processed and produce an output. IRB is much like the Ruby version of the JavaScript console in Google Chrome.
 
 When in the Ruby shell, the file structure will be replaced with a `>` prompt. To return to the regular terminal, type `exit`.
-
-Coding in IRB
 
 ### Troubleshooting IRB
 
@@ -142,10 +147,9 @@ Ruby has NaN and Infinity, but only for floating point numbers. Integers generat
 
 Ruby will return a Boolean value for comparison operators. The comparison operators are equality, relational, logical, and negation.
 
-The equality operator is two equal signs. In Ruby there is no such thing as loose and strict equality. Data types that are not of the same class can not be compared.
+The equality operator is two equal signs. In Ruby there is no such thing as loose and strict equality. Data types that are not of the same class cannot be compared.
 
 ```ruby
-# Equality operator
 > 7 == 7
 => true
 
@@ -232,7 +236,7 @@ Examples:
 ### Other Datatypes
 
 - Nil - the datatype that is equal to nothing else
-- Symbol - the unique key in a key:value pair
+- Symbol - the unique identifier in a key:value pair
 
 ### Variables
 
@@ -256,21 +260,48 @@ String interpolation is replacing variables within a string with the values they
 ```ruby
 > num1 = 1
 > num2 = 4
-> "The number #{num1} is less than #{num1 + num2}"
-=> "The number 1 is less than 5"
+
+> "The number #{num1} is less than #{num2}."
+=> "The number 1 is less than 4."
+
+> "The number #{num1} plus the number #{num2} equals #{num1 + num2}."
+=> "The number 1 plus the number 4 equals 5."
 ```
 
 ### Arrays
 
-Arrays are ordered collections of objects. Arrays can hold objects of any data type and each element can be reference by an index. Arrays are zero based, so the index of the first element is zero.
+Arrays are ordered collections of objects. Arrays can hold objects of any data type and each element can be reference by an index. Arrays are zero based, so the index of the first element is zero. Specific values in the array can be accessed by passing the index inside bracket notation.
 
 ```ruby
 nums = [8, 9, 10, 11, 12, 13]
+
+# Return the value from a specific index in an array
+> nums[2]
+=> 10
+
+# If the index doesn't exist in the array Ruby will return nil
+> nums[20]
+=> nil
+
+# Reassign the value at a particular index in an array
+> nums[2] = 100
+=> 100
+
+> nums
+=> [8, 9, 100, 11, 12, 13]
+
+# If the index doesn't exist, Ruby will assign the value and fill the in between indexes with nil
+> nums[20] = 23
+=> 23
+
+> nums
+=> [8, 9, 100, 11, 12, 13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 23]
+
 ```
 
 ### Array Methods
 
-Just like strings you can call methods on arrays.
+Just like strings you can call methods on arrays. By default, most Ruby methods are accessors that will not permanently modify the object they are being called on.
 
 ```ruby
 > nums = [8, 9, 10, 11, 12, 13]
@@ -290,37 +321,7 @@ Just like strings you can call methods on arrays.
 # Return the array in reversed order
 > nums.reverse
 => [13, 12, 11, 10, 9, 8]
-
-# Return the value from a specific index in an array
-> nums[2]
-=> 10
-
-# If the index doesn't exist in the array, Ruby will return nil
-> nums[20]
-=> nil
-
-# Reassign the value at a particular index in an array
-> nums[2] = 100
-=> 100
-> nums
-=> [8, 9, 100, 11, 12, 13]
-
-# If the index doesn't exist, Ruby will assign the value and fill the in between indexes with nil
-> nums[20] = 23
-=> 23
-
-> nums.length
-=> 21
-
-> nums
-=> [8, 9, 100, 11, 12, 13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 23]
-
-# Append operator
-> [1, 2, 3] << 99
-=> [1, 2, 3, 99]
 ```
-
-The append operator a.k.a. **shovel operator** is an array mutator that will add an new item at the end of the array using the syntax `<<`.
 
 ### Accessors vs Mutators
 
@@ -348,11 +349,20 @@ For the most part, Ruby methods are all accessors, meaning they do not mutate th
 => [13, 12, 11, 10, 9, 8]
 ```
 
+### Append Operator
+
+The append operator a.k.a. **shovel operator** is an array mutator that will add an new item at the end of the array using the syntax `<<`.
+
+```ruby
+> nums << 99
+=> [8, 9, 10, 11, 12, 13, 99]
+```
+
 ## Running Ruby: Terminal
 
 To do this, create a file. Ruby can be run from a file with any sort of name, but it is common to give a ruby file a `.rb` extension.
 
-To run a file with Ruby code in it, you give the command `ruby` and then a path to the file. So to execute a ruby file called `run_it.rb` in your current directory, you would run: $ `ruby run_it.rb`
+To run a file with Ruby code call the command `ruby` and then a path to the file. So to execute a ruby file called `run_it.rb` in your current directory, you would run: $ `ruby run_it.rb`
 
 There are two ways of noting the code that should be logged as an output in the terminal. The **puts** command is short for "put string" which will "stringify" the output when logging data to the terminal. Another way to log data is using the **p** command which will display a more raw version of the results of evaluating Ruby code.
 
