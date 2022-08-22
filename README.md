@@ -106,8 +106,7 @@ React is a powerful Javascript library used to build more complicated user inter
 Ruby is a backend, object-oriented programming language. Here we will cover the fundamentals of the Ruby language and revisit the fundamental concepts shared by many programming languages.
 
 1. [Ruby Introduction](./ruby/intro.md)
-1. [Ruby Conditionals](./ruby/conditionals.md)
-1. [Ruby Methods](./ruby/methods.md)
+1. [Ruby Conditionals and Methods](./ruby/conditionals.md)
 1. [Ruby Blocks and Iterables](./ruby/blocks.md)
 1. [Ruby Hashes](./ruby/hashes.md)
 1. [Ruby Objects, Classes, and Inheritance](./ruby/classes-objects.md)
