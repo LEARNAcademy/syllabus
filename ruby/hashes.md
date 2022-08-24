@@ -1,30 +1,38 @@
 # Ruby Hashes
 
-## Overview
-- A hash is a collection of unique keys and their values
-- A hash is a bit like an array but instead of the values being referenced by an index, the values are reference by their unique key
-- The class `Hash` falls under the category of enumerable, which means you can use iterable methods on a hash
+#### Overview
+
+A hash is a collection of unique keys and their values. A hash is a bit like an array but instead of the values being referenced by an index, the values are reference by their unique key. The class `Hash` falls under the category of enumerable, which means you can use iterable methods on a hash.
 
 #### Previous Lecture (29 min)
+
 [![YouTube](http://img.youtube.com/vi/D3Rxtv0CI9E/0.jpg)](https://youtu.be/D3Rxtv0CI9E)
 
-## Learning Objectives
-- Exploring the different ways hashes can be constructed
-- Applying iterable methods to a hash
+#### Learning Objectives
 
-## Vocabulary
-- Hash
-- Symbol
-- Hash rocket
-- Enumerable
-- Duck Typing
+- can define the accepted syntax of a Ruby hash
+- can define a symbol
+- can identify a hash rocket in the output of a hash
+- can define duck typing
+- can explain the similarities between hashes and JavaScript objects
 
-## Additional Resources
-- [ Ruby Hash Docs ](https://ruby-doc.org/core-2.7.0/Hash.html)
-- [ Ruby Hashes for Beginners ](http://ruby-for-beginners.rubymonstas.org/built_in_classes/hashes.html)
-- [ Ruby's Magical Enumerable Module ](https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html)
+#### Vocabulary
+
+- Ruby hash
+- symbol
+- hash rocket
+- CRUD
+- duck typing
+- enumerable module
+
+#### Additional Resources
+
+- [Ruby Hash Docs](https://ruby-doc.org/core-2.7.0/Hash.html)
+- [Ruby Hashes for Beginners](http://ruby-for-beginners.rubymonstas.org/built_in_classes/hashes.html)
+- [Ruby's Magical Enumerable Module](https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html)
 
 #### Process
+
 - `cd` into the `ruby-challenges` repository
 - Create a new branch: `hashes-initials1-initials2` (ex. hashes-aw-sp)
 - `touch` a file with no spaces and `.rb` extension: `hashes-student1-student2.rb` (ex. hashes-austin-sarah.rb)
@@ -33,148 +41,159 @@
 
 ---
 
-## Ruby Hashes
-A hash is a container for data. The data in a hash are stored in key:value pairs.
+### Ruby Hashes
 
-As is common in programming, are many ways to define the keys and values in a hash. As of Ruby 2.7, the accepted syntax of creating a hash looks like this:
+A **Ruby hash** is a dictionary-like container for unique keys and their corresponding values. As is common in programming, there are many ways to define the keys and values in a hash.
 
 ```ruby
 recipe = { flour: "2 1/4 cups", sugar: "1 cup", eggs: 2 }
 ```
 
-Looking at the output in the terminal we get this:
-```
+This structure looks very similar to an object in JavaScript. The JavaScript object pattern is widely popular in programming in general and Ruby 2.7 implemented this syntax for hashes. However, if we look at the output of the hash in the terminal we see a different syntax.
+
+```ruby
 => {:flour=>"2 1/4 cups", :sugar=>"1 cup", :eggs=>2}
 ```
 
-This output illustrates an older syntax of hashes. There are two things to note with the syntax of this output:
+This output illustrates an older syntax of hashes. While you won't necessarily see this version of hashes used in code there are some important things to note with this particular output.
 
-1. The first is the data type of the key which is a Ruby **symbol**. A symbol is expressed with the colon on the left side of the variable such as `:flour`.
+The first is the data type of the key which is a Ruby symbol. A **symbol** is a unique identifier in a key:value pair that is expressed with the colon on the left side of the variable such as `:flour`.
 
-2. The second is the **hash rocket** that separates the key and the value. A hash rocket is this syntax `=>`. Hash rockets used to be the only way to define a value in a hash. The later versions of Ruby adopted a more JavaScript-like syntax to make the code more readable. Hash rockets are still valid Ruby code and are seen in terminal outputs so it is important to recognize the many hash syntaxes.
+The second is the hash rocket. A **hash rocket** separates the key and the value using the syntax `=>`. Hash rockets were once the only way to define a value in a hash. With the adoption of the JavaScript-like syntax, that is no longer the case but hash rockets are still valid Ruby code and are used in many situations so it is important to recognize the syntax.
 
-## Operations on a Hash
+### Operations on a Hash
+
+In programming, there are four general actions that can be performed on data. We can create new data, see data that currently exists, update existing data, and delete or remove data. These four actions have a delightful acronym: CRUD. **CRUD** (create, read, update, delete) is a programmer's checklist describing the complete list of data manipulation. With this in mind, let's look at how we can perform these four actions on hashes.
 
 **Create**  
-As we know, everything in Ruby is a class. So we can call the `.new` method on the class `Hash` to instantiate a new hash.
+There are two basic ways to create a new hash. The first way is to create a variable and list out the desired key:value pairs. Another way is to use some fundamental Ruby principles. As we know, everything in Ruby is a class. So we can call the `.new` method on the class `Hash` to instantiate a new instance of class Hash.
 
 ```ruby
-> recipe = Hash.new
-```
+recipe = Hash.new
 
-**Read**  
-When we call `recipe` we can see it is an empty hash.
-```ruby
-> recipe
- => {}
+p recipe
+=> {}
 ```
 
 **Update**  
-We can add values to the hash by providing a key in square braces and assigning that key a value.
+We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be names whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
 
 ```ruby
-> recipe[:flour] = "2 1/4 cups"
-> recipe[:sugar] = "1 cup"
-> recipe[:eggs] = 1
-```
+recipe[:flour] = "2 1/4 cups"
+recipe[:sugar] = "1 cup"
+recipe[:eggs] = 1
 
-Now we can see the output of the hash with the keys and values.
-```ruby
-> recipe
-=> {:flour=>"2 1/4 cups", :sugar=>"2cups", :eggs=> 1}
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 1 }
 ```
 
 This same syntax can be used to update the value in a hash.
 
 ```ruby
-> recipe[:eggs] = 2
-=> {:flour=>"2 1/4 cups", :sugar=>"2 cups", :eggs=>2}
+recipe[:eggs] = 2
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2 }
 ```
 
 Now, what if we needed to update the name of a key? That requires a little bit more Ruby code.
 
 ```ruby
-> recipe
-> recipe[:buter] = "1 cup"
+recipe[:buter] = '1 cup'
 ```
 
-Oops, we misspelled butter. Let's update that key to be the correct spelling using this format: `hash[:new_key] = hash.delete :old_key`
+Oops, we misspelled butter. Let's update that key to be the correct spelling using this format: `hash[:new_key] = hash.delete(:old_key)`
 
 ```ruby
-> recipe[:butter] = recipe.delete :buter
+recipe[:butter] = recipe.delete(:buter)
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2, :butter => '1 cup' }
 ```
 
-**Show**  
-We can look at just a single value from the hash by calling its key.
+**Read**  
+Reading data can be done in a variety of ways. The read action returns existing data. We can return the hash as a whole or just individual values. When we log `recipe` we can see the entire hash.
 
 ```ruby
-> recipe[:sugar]
-=> "2 cups"
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2, :butter => '1 cup' }
+```
+
+Or we can look at just a single value from the hash by logging the name of hash and the corresponding key.
+
+```ruby
+p recipe[:sugar]
+=> '2 cups'
+```
+
+We can also look at just the keys or just the values in a given hash. Calling `.keys` will return an array with just the keys and calling `.values` will return an array with only the values
+
+```ruby
+p recipe.keys
+=> [:flour, :sugar, :eggs, :butter]
+
+p recipe.values
+ => ['2 1/4 cups', '1 cup', 2, '1 cup']
 ```
 
 **Delete**  
-If we want to remove a key:value pair from the hash all together we can use the Ruby method `.delete` and pass in the key as an argument. Ruby will return the value from the deleted key as an output of that method. And when we call the variable `recipe` we see the key:value pair has been removed.
+To remove a key:value pair from the hash all together we can use the Ruby method `.delete` and pass in the key as an argument. Ruby will return the value from the deleted key as an output of that method. And when calling the variable `recipe` we see the key:value pair has been removed.
 
 ```ruby
-> recipe.delete(:butter)
-=> "1 cup"
-> recipe
-=> {:flour=>"2 1/4 cups", :sugar=>"2 cups", :eggs=>2}
+p recipe.delete(:butter)
+=> '1 cup'
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar => '2 cups', :eggs => 2 }
 ```
 
 ## Enumerables and Duck Typing
-Everything in Ruby is an instance of a class. And each class has certain abilities. For example, class Integer has the ability to have mathematical operations performed on its instances while that is not true of NilClass.
 
-We know that methods are functions that belong to a class. And Ruby decides which methods belong to which class based on the ability of the class (what it can do) rather than what each class is. This concept is called **Duck Typing**. "If it looks like a duck and quacks like a duck just go ahead and treat it like a duck."
+Everything in Ruby is an instance of a class. And each class has certain abilities. For example, instances of class Integer have the ability to perform mathematical operations while that is not true of NilClass.
 
-The power of Duck Typing is that because Hashes share abilities with classes like Arrays and Ranges, we can use the same methods available to those classes on class Hash.
+We know that methods are functions that belong to a class. And Ruby decides which methods belong to which class based on the ability of the class (what it can do) rather than what each class is. This concept of allowing like-data types to share methods is called **duck typing**. "If it looks like a duck and quacks like a duck just go ahead and treat it like a duck."
 
-Hashes, like Arrays and Ranges, have the ability to iterate. So we can use methods such as `.each` and `.map` on Hashes.
+Duck typing is useful because hashes share abilities with Ruby classes like arrays and ranges. This means the same methods available to those classes can be applied to class Hash.
 
-`.each` calls a block once for each key in the hash, passing the key-value pair as a parameter.
+Methods such as `.each` and `.map` can be applied to instance of class Hash. Since these methods work on all things that are iterable they are grouped together. The group of iterable methods that include `.each` and `.map` is called the **enumerable module.**
 
-If no block is given, an enumerator is returned instead.
+When applied to a hash, `.each` can take two possible arguments: the key and the value, in that order. These arguments are simply placeholders used inside the block.
 
 ```ruby
-> recipe = {flour: "2 1/4 cups", sugar: "2 cups", eggs: 2, butter: "1 cup"}
+recipe = {flour: "2 1/4 cups", sugar: "2 cups", eggs: 2, butter: "1 cup"}
 
-> recipe.each do |key, value|
+recipe.each do |key, value|
   puts "Add #{value} #{key} to the bowl."
 end
 ```
-When applied to a hash, `.each` can take two possible arguments - the key and the value. These arguments are simply placeholders used inside the do/end block.
-
-`.each` executes once time for each key:value pair in the hash.
 
 Output:
+
 ```
 Add 2 1/4 cups flour to the bowl.
 Add 2 cups sugar to the bowl.
 Add 2 eggs to the bowl.
 Add 1 cup butter to the bowl.
-=> {:flour=>"2 1/4 cups", :sugar=>"2 cups", :eggs=>2, :butter=>"1 cup"}
 ```
 
 `.map` also executes once for each key:value pair and returns an array of the same length.
 
 ```ruby
-> recipe.map do |key, value|
->   "Add #{value} #{key} to the bowl."
-> end
+recipe.map do |key, value|
+  "Add #{value} #{key} to the bowl."
+end
 ```
 
 Output:
-```
+
+```ruby
 => ["Add 2 1/4 cups flour to the bowl.", "Add 2 cups sugar to the bowl.", "Add 2 eggs to the bowl.", "Add 1 cup butter to the bowl."]
 ```
 
-## Summary
-- Hashes are collections of key:value pairs.
-- The class Hash can be created by assigning a variable or by using the `.new` method.
-- Hashes can have new key value pairs added, updated or deleted.
-- Hashes have enumerable abilities allowing developer the ability to use methods such as `.each` and `.map` to iterate over the key:value pairs.
+---
 
-## Challenges: Practice with Hashes
+### ❤️ Challenges
+
 - As a developer, I can create a hash called my_phone using the Ruby method `.new`.
 - As a developer, I can add five key:value pairs of app names and their descriptions to my hash.
 - As a developer, I can return a value from my_phone by passing in the name of a key.
@@ -183,8 +202,11 @@ Output:
 - As a developer, I can delete two key:value pairs from my_phone.
 - As a developer, I can use an enumerable method to return information about all of my_phone's applications.
 
-### Stretch Challenges
+### 🏔 Stretch Goals
+
 - As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
+- As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each app.
 
 ---
+
 [Back to Syllabus](../README.md#unit-four-ruby)
