@@ -111,14 +111,14 @@ end
 
 ### Ranges
 
-Arrays are a commonly way to store data. Arrays are also a very convenient want to store data as they are well organized, predictable, and allow for iterative actions. Arrays are not the only iterable data types in Ruby. Another way to store iterable data is in a range. A **range** is a Ruby class that represents an interval of consecutive data defined with a start value and run throw an ending value.
+Arrays are a commonly way to store data. Arrays are also a very convenient way to store data as they are well organized, predictable, and allow for iterative actions. Arrays are not the only iterable data types in Ruby. Another way to store iterable data is in a range. A **range** is a Ruby class that represents an interval of consecutive data defined with a starting value and runs through an ending value.
 
 ```ruby
 1..10
 'a'..'z'
 ```
 
-The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the range we need to wrap the data in parentheses.
+The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the range full range and not just the ending character we need to wrap the range in parentheses.
 
 ```ruby
 (1..10).each do |value|
@@ -136,7 +136,7 @@ end
 10
 ```
 
-Ruby ranges can also be converted to arrays. Ruby has a set of methods that will covert data types as long as the conversion is possible.
+Ruby ranges can also be converted to arrays. Ruby has a set of methods that will covert data types as long as the conversion is possible. The method `.to_a` will convert data into an array.
 
 ```ruby
 (1..10).to_a
@@ -173,7 +173,7 @@ my_array
 
 ### Mutators Methods
 
-Ruby methods are accessors by default. To modify the original array use the bang operator on the method.
+Ruby methods are accessors by default. To modify the original array apply the bang operator to the end of the method.
 
 ```ruby
 my_array = [1, 2, 3, 4]
@@ -195,17 +195,17 @@ my_array
 - Create a method that takes in an array of numbers and returns a new array with all the numbers multiplied by 5.
 - Create a method that takes in an array of lowercase words and capitalizes all of the words, permanently modifying the original array.
 - Create a method that takes in an array of numbers and returns the largest number in the array.
-- Create a method that takes in an array of numbers and returns the smallest number in the array.
+- Create a method that takes in an array of words and returns the word with the least number of characters.
 - Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
 - Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercase letters should be returned lowercased and all lowercased letters should be returned in uppercase letters.
-- Create a method that will log the remainder of each number in an array when divided by 2.
-- Create a method that will take in a range of letters and return all the letters capitalized.
+- Create a method that will take in an array of numbers and return an array with the remainder of each number when divided by 2.
+- Create a method that will take in a range of letters and return an array with all the letters capitalized.
 
 ### 🏔 Stretch Goals
 
-- FizzBuzz: Write a method that prints the numbers from 1 to 100. For multiples of three print `Fizz` instead of the number, for multiples of five print `Buzz` instead of the number, for numbers that are multiples of both three and five print `FizzBuzz`, for all other numbers print the number.
+- FizzBuzz: Create a method that prints the numbers from 1 to 100. For multiples of three print `Fizz` instead of the number, for multiples of five print `Buzz` instead of the number, for numbers that are multiples of both three and five print `FizzBuzz`, for all other numbers print the number.
 - Create a method that takes in an array of words and returns all the words that start with a particular letter. Example: Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
-- Create the code that takes in an array of mixed data types and returns an array without any false, null, 0, or blank values.
+- Create a method that takes in an array of mixed data types and returns an array without any false, null, 0, or blank values.
 
 ---
 
