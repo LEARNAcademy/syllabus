@@ -70,33 +70,45 @@ There are two basic ways to create a new hash. The first way is to create a vari
 
 ```ruby
 recipe = Hash.new
+
+p recipe
+=> {}
 ```
 
 **Update**  
-We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be names whatever best describes the data it holds. The data must be a value Ruby data type. This action modifies the existing hash by adding new content.
+We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be names whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
 
 ```ruby
 recipe[:flour] = "2 1/4 cups"
 recipe[:sugar] = "1 cup"
 recipe[:eggs] = 1
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 1 }
 ```
 
 This same syntax can be used to update the value in a hash.
 
 ```ruby
 recipe[:eggs] = 2
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2 }
 ```
 
 Now, what if we needed to update the name of a key? That requires a little bit more Ruby code.
 
 ```ruby
-recipe[:buter] = "1 cup"
+recipe[:buter] = '1 cup'
 ```
 
 Oops, we misspelled butter. Let's update that key to be the correct spelling using this format: `hash[:new_key] = hash.delete(:old_key)`
 
 ```ruby
 recipe[:butter] = recipe.delete(:buter)
+
+p recipe
+=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2, :butter => '1 cup' }
 ```
 
 **Read**  
@@ -114,7 +126,7 @@ p recipe[:sugar]
 => '2 cups'
 ```
 
-We can also look at all the just the keys or just the values in a given hash. Calling `.keys` will return an array with just the keys and calling `.values` will return an array with only the values
+We can also look at just the keys or just the values in a given hash. Calling `.keys` will return an array with just the keys and calling `.values` will return an array with only the values
 
 ```ruby
 p recipe.keys
@@ -130,6 +142,7 @@ To remove a key:value pair from the hash all together we can use the Ruby method
 ```ruby
 p recipe.delete(:butter)
 => '1 cup'
+
 p recipe
 => { :flour => '2 1/4 cups', :sugar => '2 cups', :eggs => 2 }
 ```
@@ -140,7 +153,7 @@ Everything in Ruby is an instance of a class. And each class has certain abiliti
 
 We know that methods are functions that belong to a class. And Ruby decides which methods belong to which class based on the ability of the class (what it can do) rather than what each class is. This concept of allowing like-data types to share methods is called **duck typing**. "If it looks like a duck and quacks like a duck just go ahead and treat it like a duck."
 
-Duck typing is useful because hashes share abilities with classes like arrays and ranges. This means the same methods available to those classes can be applied to class Hash.
+Duck typing is useful because hashes share abilities with Ruby classes like arrays and ranges. This means the same methods available to those classes can be applied to class Hash.
 
 Methods such as `.each` and `.map` can be applied to instance of class Hash. Since these methods work on all things that are iterable they are grouped together. The group of iterable methods that include `.each` and `.map` is called the **enumerable module.**
 
