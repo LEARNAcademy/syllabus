@@ -1,34 +1,55 @@
-# Challenge: Text-Based Game
+# Text-Based Game Challenge
+
+#### Overview
 
 ## What is a Text-Based Game?
 
-The whole point of a text-based game is to create a story with multiple paths and endings. The player must interact with the story to move through the game, the fun is in what decisions they make and how that changes the game. But how do we interact with text? There are many ways you can do so, and the more ways you include, the more interesting the game becomes.
+Text-based games, or interactive fiction games, are one of the earliest styles of computer games. Text-based games create a narrative where the user is presented with a series of choices. Each decision the user makes moves the game forward in a unique way. Creating a text-based game requires a developer to create organized code that will trigger further code actions in response to the user's decision.
 
-In the start there is a very simple interaction. The player simply responds to questions posed by the game, like, “I remember your face! What is your name?” or maybe something like “Open your eyes!” and then the player replies with "opening eyes", etc.
+#### Learning Objectives
 
+- can demonstrate effectively collecting user interactions from the IRB console
+- can determine appropriate built-in Ruby methods needed to accomplish a task
 
-## Ideas for Text-Based Games
+#### Additional Resources
 
-Before you start writing your program or using an online tool, you need to think of an idea. You need to think of an idea that will make your game enjoyable and somewhat unique. This part you need to do on your own. You can think of any scenario, ranging from a dragon that has been dormant in an ancient swamp or a schoolboy who is scared of his new teacher and needs to get out of his class with the help of nearby objects and classmates. Since you won't need to animate it, the sky's the limit.
+- Checkout [Playfic](http://playfic.com/explore/popular) for inspiration
+- [ASCII Art](https://www.asciiart.eu/) can add some flair to your text
+- [Output one character at a time](https://stackoverflow.com/questions/4515157/read-a-ruby-string-one-character-at-a-time-for-word-wrapping) for a
 
-Once you have an idea, we can proceed to the next step.
+#### Process
 
-
-## Creating and Unfolding the Story of your Game
-
-Your idea will be the foundation for your main plot. However amazing your idea and story might be, though, you still have to develop it in an organized way. Players should feel that you know what you are doing and not just throwing our random sentences and scenes.
-
-There are two ways of going about your ‘creating and revealing’ process.
-
-1. Unfold all at once:
-Write down your entire story (including sub-plots, battles, monsters, traps, etc) and then reveal that story in a linear or parallel fashion in your game.
-
-2. Unfold while you create:
-In this method you let your imagination and creative juices flow at blazing speeds while you write down your story bit by bit, as it flows through your mind.
-Whichever method you choose is completely up to you. You need to find out for yourself what suits your design style. Are you a more organized person who likes to plan everything out or someone who just likes to go with the flow and follow wherever your fancy takes you.
-
-## Need some inspiration?
-Check out [ Playfic ](http://playfic.com/explore/popular) to see what other people have thought up for text-based game adventures.
+- clone the appropriate repository from GitHub classroom
+- `cd` into the repository
+- `touch` a new file with the extension `.rb`
+- Create a new branch for each feature you implement
+- Open the folder in a text editor
+- Code!
 
 ---
+
+### Planning
+
+The most important part of this project is the planning phase. Work with your team to construct a story line. Think of an idea that will make your game enjoyable. Common choices are treasure hunts, day-in-the-life stories, zombie apocalypse adventures, and murder mysteries.
+
+You need to decide how your user will interact with the code that you write. Every option you present will need to be followed with an action. If you choose to create multiple storylines your code base will need to reflect all the possible actions. Each storyline can be a unique adventure where some are successful and some are not.
+
+### Game Play
+
+The game will take place entirely in the terminal. All interactions between the user and the game are text-based. The user will see a story printed to the terminal and then be presented with options that the will determine the next phase of the story. The user will type their selection into the terminal.
+
+### Tips and Tricks
+
+Think about how the user will contribute to the game. Whatever the user does will need to trigger the next step. This means as the game creator you must present your options in a easily accessible way. Options include presenting the user with yes or no choices, giving the user a numbered list of options, or prompting the user to type specific words. Keep in mind that the casing and spacing of your user's response will affect the functionality of your code.
+
+The Ruby `gets` operator is your best friend in this game. Calling the method `.chomp` on the `gets` operator will remove the `return` keystroke syntax. The `gets` operator will always return a string. It is the developer's responsibility to change the data type if necessary.
+
+Think about the difference between `p` and `puts`. Using `p` in development is helpful for seeing raw data outputs in the terminal. But you may not want code syntax such as quotation marks in your text-based stories.
+
+Keep your code simple. You have all the tools you need to effectively construct the game. This is an exercise in organization, planning, and creativity.
+
+Have fun! This medium is prime for easter eggs and inside jokes.
+
+---
+
 [Back to Syllabus](../README.md#unit-four-ruby)
