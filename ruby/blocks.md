@@ -153,7 +153,7 @@ Ruby's `map` method also lets you do something with every element of an array. T
 The `map` method is an accessor and will not modify the array it is called on.
 
 ```ruby
- my_array = [1, 2, 3, 4]
+my_array = [1, 2, 3, 4]
 
 my_array.map do |value|
   value * value
