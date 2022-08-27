@@ -1,19 +1,35 @@
-# Wireframing
+# Wireframes
 
-A **wireframe** of a web application is a simplification of the view to illustrate three things:
+#### Overview
 
-* What and where information is shown
-* What UI elements or widgets will be used (for instance, buttons vs. links)
-* How to navigate the page or the site
+A wireframe is visual guide to the look and functionality of a webpage or application. Wireframes take into account how the user will navigate through the application and ensures the user is able to access all the necessary pieces of the application.
 
-Some wireframes look like they were drawn with a crayon by a three year old on the back of a napkin; these are called low-fidelity wireframes.
-The point is to only create a visual guide and not get into too many details. As long as the idea you are trying to get across is clear and understandable, it's a successful wireframe.  You can use a whiteboard, paper, or whatever is convenient.
+#### Previous Lecture
 
-There are online tools to make wireframing as easy as possible, and shareable as well.
+[![YouTube](http://img.youtube.com/vi/xq_9K5pPamc/0.jpg)](https://youtu.be/xq_9K5pPamc)
 
-Wireframes can be higher-fidelity and attempt to create a truthful experience of how an application will work "in the wild". An Example: [ Balsamiq Mockups 3 Intro ](https://www.youtube.com/watch?v=MxWTGBQE7zE)
+#### Additional Resources
 
-See also:
-- [ Wikipedia: Website Wireframe ](https://en.wikipedia.org/wiki/Website_wireframe)
-- [ How to wireframe a website | CharliMarieTV ](https://www.youtube.com/watch?v=PmmQjLqJQlY)
-- [ A Beginner’s Guide to Wireframing ](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
+- [What is a Wireframe?](https://www.orbitmedia.com/blog/7-reasons-to-wireframe/)
+- [How to wireframe a website](https://www.youtube.com/watch?v=PmmQjLqJQlY)
+- [A Beginner’s Guide to Wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
+- [Figma](https://www.figma.com/)
+- [Balsamiq](https://balsamiq.com/)
+
+---
+
+### Wireframes
+
+Wireframes are often used early in the development process to establish the basic structure of a page. They create an agreed upon visual design for everyone on the team. A successful wireframe should give context to the developer without restricting design decisions that may evolve as the application grows.
+
+The wireframe of a web application is a simplification of the view to illustrate the following:
+
+- What information is needs to be displayed on a page.
+- Where the information should be on the page.
+- How the user will navigate through the page or the application.
+
+As long as the idea you are trying to get across is clear and understandable, it's a successful wireframe.
+
+---
+
+[Back to Syllabus](../README.md#resources)
