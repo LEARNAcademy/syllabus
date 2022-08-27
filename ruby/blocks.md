@@ -98,7 +98,7 @@ The while method is a little bit different in that it doesn't take a block as an
 ```ruby
 number = 0
 while number < 5
-  puts number
+  p number
   number += 1
 end
 
