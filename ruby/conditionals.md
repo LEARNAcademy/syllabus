@@ -4,13 +4,9 @@
 
 Functions are customized snippets of code functionality that allow developers to create to reusable logic. Because Ruby is so very object oriented, all functions are referred to as methods. Methods often need to make decisions about the data that is passed in. The decisions, or conditional statements, are a sequence of well-defined instructions that produce a unique output based on the value of the input. The combination of methods and conditional statements create powerful coding logic.
 
-#### Previous Lecture: Conditionals (40 min)
+#### Previous Lecture (1 hour 11 min)
 
-[![YouTube](http://img.youtube.com/vi/dfw_pJsu6aI/0.jpg)](https://youtu.be/dfw_pJsu6aI)
-
-#### Previous Lecture: Methods (21 min)
-
-[![YouTube](http://img.youtube.com/vi/MJic4poiJPE/0.jpg)](https://youtu.be/MJic4poiJPE)
+[![YouTube](http://img.youtube.com/vi/VAOz2R8do38/0.jpg)](https://youtu.be/VAOz2R8do38)
 
 #### Learning Objectives
 
@@ -96,8 +92,11 @@ def greeter name
   "Hello, #{name}!"
 end
 
-> greeter 'LEARN Student'
+p greeter 'LEARN Student'
 => 'Hello, LEARN Student!'
+
+p greeter 'Coding Wizard'
+=> 'Hello, Coding Wizard!'
 ```
 
 While Ruby doesn't require parentheses around the arguments for a method, it is best practice to use parentheses if there is more than one argument.
@@ -107,10 +106,10 @@ def add_up(num1, num2)
   num1 + num2
 end
 
-add_up(1, 3)
+p add_up(1, 3)
 => 4
 
-add_up(3, 4)
+p add_up(3, 4)
 => 7
 ```
 
@@ -142,10 +141,10 @@ def is_ten num
   end
 end
 
-is_ten my_num
+p is_ten my_num
 => 'Your number is 10!'
 
-is_ten 12
+p is_ten 12
 => 'Your number is not 10.'
 ```
 
@@ -166,10 +165,10 @@ def number_checker num
   end
 end
 
-number_checker 10
+p number_checker 10
 => 'Your number is 10!'
 
-number_checker 42
+p number_checker 42
 => '42 is greater than 10.'
 ```
 
@@ -188,10 +187,10 @@ def greeter name
   end
 end
 
-greeter my_name
+p greeter my_name
 => 'Hello, LEARN!'
 
-greeter 'Rachael'
+p greeter 'Rachael'
 => 'Hello there!'
 ```
 
@@ -213,10 +212,9 @@ The string output from `gets` also includes the return character `\n` logged by 
 ```ruby
 puts 'Enter your name'
 name = gets.chomp
-
-=> 'LEARN Student'
-
 puts "Hello, #{name}. How are you today?"
+
+> LEARN Student
 => 'Hello, LEARN Student. How are you today?'
 ```
 
@@ -229,9 +227,9 @@ end
 
 puts 'Enter you age to see how old you are in dog years.'
 user_age = gets.chomp.to_i
-=> 7
-
 p dog_years user_age
+
+> 7
 => 49
 ```
 
