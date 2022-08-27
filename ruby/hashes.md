@@ -147,7 +147,7 @@ p recipe
 => { :flour => '2 1/4 cups', :sugar => '2 cups', :eggs => 2 }
 ```
 
-## Enumerables and Duck Typing
+### Enumerables and Duck Typing
 
 Everything in Ruby is an instance of a class. And each class has certain abilities. For example, instances of class Integer have the ability to perform mathematical operations while that is not true of NilClass.
 
