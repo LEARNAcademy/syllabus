@@ -61,9 +61,9 @@ Ruby is an open source, object-oriented programming language created by Yukihiro
 
 From The Object Model, a great read about object-oriented programming:
 
-"**Object-oriented programming**, often referred to as OOP, is a programming paradigm that was created to deal with the complexity of large software systems. Programmers found out very early on that as applications grew in complexity and size, they became very difficult to maintain. One small change at any point in the program would trigger a ripple effect of errors due to dependencies throughout the entire program.
+> "**Object-oriented programming**, often referred to as OOP, is a programming paradigm that was created to deal with the complexity of large software systems. Programmers found out very early on that as applications grew in complexity and size, they became very difficult to maintain. One small change at any point in the program would trigger a ripple effect of errors due to dependencies throughout the entire program.
 
-Programmers needed a way to create containers for data that could be changed and manipulated without affecting the entire program. They needed a way to section off areas of code that performed certain procedures so that their programs could become the interaction of many small parts, as opposed to one massive blob of dependency."
+> Programmers needed a way to create containers for data that could be changed and manipulated without affecting the entire program. They needed a way to section off areas of code that performed certain procedures so that their programs could become the interaction of many small parts, as opposed to one massive blob of dependency."
 
 Ruby is an object-oriented language. Ruby is so object-oriented that a common Ruby mantra is: "Everything is an object."
 
@@ -368,40 +368,41 @@ There are two ways of noting the code that should be logged as an output in the 
 
 In the example you can see differences between the output of puts and the raw output of p.
 
-```ruby
+```
 puts 'Hello World'
 => Hello World
 
 p 'Hello World'
-=> "Hello World"
+=> 'Hello World'
 ```
 
 ---
 
 ### ❤️ Challenges
 
-### ➕ Arithmetic Challenges
+Remember that floats are fractional numbers whereas integers are whole numbers. In Ruby, 1 and 1.0 are defined by different data types with slightly different behaviors.
 
-Remember that floats are numbers with a decimal point whereas integers have no fractional part so in Ruby, 1 and 1.0 are different types of things with slightly different behaviors.
+**Complete the following challenges in the IRB console.**
 
-- Add, subtract, multiply and divide some numbers and floats.
+- Open the IRB terminal. Exit the terminal and reopen the terminal.
+- Add, subtract, multiply, and divide integers.
+- Add, subtract, multiply, and divide floats.
 - Find the remainder of dividing two numbers using the modulo operator (%).
-- Divide a number by 0.
+- Divide an integer by 0.
+- Divide a float by 0.
 - Divide 0 by 0.
+- Create a variable and assign an integer.
+- Calculate the variable divided by 2.
+- Find the remainder of the variable when divided by 3. 
+- Create another variable and assign it the integer 13.
+- Use the relational operators on the two variables.
+- Reassign the value of one variable to be 7.
+- Reassign the value of one variable to be 26 times its current value.
 
-### = Variables Challenges
+**Complete the following challenges in a Ruby file.**
 
-- Set a variable called my_favorite_number equal to your favorite number
-- Calculate your favorite number divided by 2
-- Set another variable called someones_favorite equal to 13
-- Change the value of someones_favorite to 7
-- Subtract my_favorite_number from someones_favorite
-- Change the value of my favorite number to be 26 times its current value
-
-### 🧵 Strings Challenges
-
-- Create a variable and return it in a sentence string interpolation
-- Create a variable that contains a string and test some of the Ruby string methods
+- Create a variable and return it in a sentence using string interpolation.
+- Create a variable that contains a string and test some of the Ruby string methods:
   - .upcase
   - .reverse
   - .include?
@@ -409,16 +410,13 @@ Remember that floats are numbers with a decimal point whereas integers have no f
   - .delete
   - .index
   - .swapcase
-
-### [] Arrays Challenges
-
-- Create an array that contains the name of at least five TV shows
-- Find the length of the array
-- Return the first item in the array
-- Return the fourth item in the array
-- Permanently reverse the order of the array
-- Create a new empty array for your top favorite TV shows
-- From the full TV show array, add your top two favorite shows to the empty array
+- Create an array that contains the name of at least five TV shows you enjoy.
+- Find the length of the array.
+- Return the first item in the array.
+- Return the fourth item in the array.
+- Permanently reverse the order of the array.
+- Create a new empty array for your top favorite TV shows.
+- Using the full TV show array, add your top two favorite shows to the empty array.
 
 ---
 
