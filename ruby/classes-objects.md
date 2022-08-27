@@ -54,17 +54,17 @@ In Ruby, all values are objects and all objects belong to a class. **Ruby classe
 
 Note that this class concept is not (directly) related to JavaScript's class. Ruby classes are a bit different.
 
-You can find out the class of anything in Ruby by calling the .class method.
+You can find out the class of anything in Ruby by calling the `.class` method.
 
 ```ruby
-> 1.class
-# => Integer
+1.class
+=> Integer
 
-> 1.0.class
-# => Float
+1.0.class
+=> Float
 
 'hello'.class
-# => String
+=> String
 ```
 
 ### Custom Classes
@@ -87,13 +87,13 @@ p mickey
 
 ### Instance Variables
 
-Once a class has been instantiated, it's time to create data. Class data is stored in special variables that belong to the class called **instance variables** denoted with an `@` symbol. Each instance of the class will have the same instance variable but the value can be unique to the object.
+Once a class has been instantiated, it's time to create data. Class data is stored in special variables that belong to the class called **instance variables** denoted with an `@` symbol. Each instance of the class will have the same instance variables but the values can be unique to the object.
 
-Instance variable are locally scoped which means they are only available inside the scope of the object.
+Instance variables are locally scoped which means they are only available inside the scope of the object.
 
 ### Getters and Setters
 
-Data in a class should be accessible and updatable. These actions are known as getter and setter methods. The **getter method** returns the value of the data. The **setter method** allows the data to updated.
+Data in a class should be accessible and updatable. These actions are known as getter and setter methods. The **getter method** returns the value of the data. The **setter method** allows the data to be updated.
 
 The `name` value can only be accessed through the getter method called `get_name` and can only be modified through the setter method called `set_name`. Attempting to call the `name` value directly will result in an error.
 
@@ -129,7 +129,7 @@ p mickey.name
 
 The `Person` class is set to create as many objects as we need in our program. Each object can be set with a unique name and the name can be returned with the get method. This works well, but there is a point when a new person object exists but doesn't yet have a name value. If we want every person have a name immediately on instantiation, we can refactor the code to be more efficient.
 
-The refactor of our code will be adding an initialize method. An **initialize method** is a special Ruby class method that will run every time the `.new` method is called. That means every time we instantiate a class the initialize method will execute. It is very useful for setting data in your newly created objects.
+The refactor of our code will be adding an initialize method. An **initialize method** is a special Ruby class method that will run every time the `.new` method is called. That means every time we instantiate a class the initialize method will execute. It is very useful for setting data in our newly created objects.
 
 Putting a parameter in the initialize method will allow us to create unique names for each of our people. Since the initialize method runs when `.new` is called, we can pass an argument to `.new`.
 
@@ -197,7 +197,7 @@ minnie = Person.new
 
 ### Adding Additional Data
 
-Now that our `Person` class is working effectively, it is time to add more data. We will add an age attribute to the `Person` class. The age variable will start at 0 and we will need our setter method to increment that value. Since we have decided to start age at 0 for every instance of class `Person` we don't need to pass the value on initialization. It can be hard coded. Then we will add the appropriate corresponding getter and setter methods.
+Now that our `Person` class is working effectively, it is time to add more data. We will add an age attribute to the `Person` class. The age variable will start at 0 and we will need our setter method to increment that value. Since we have decided to start age at 0 for every instance of class `Person` we don't need to pass the value as an argument. It can be hard coded. Then we will add the appropriate corresponding getter and setter methods.
 
 ```ruby
 class Person
@@ -283,6 +283,11 @@ p mickey.get_age
 minnie = Person.new('Minnie')
 p minnie
 => #<Person:0x000000015998a030 @name="Minnie", @age=0>
+
+minnie.happy_birthday
+
+p minnie.get_age
+=> 1
 ```
 
 We can get all the information about the object through individual getter methods. However this isn't great user experience. By adding one more method, we can use string interpolation to get a nice clean output.
@@ -333,7 +338,7 @@ p mickey.get_info
 
 Our class is working well. We can set data on initialization, update data, and retrieve data. However, as we add more data to the class we will have to add more getter and setter methods. This can make our class very lengthy. Luckily, Ruby offers us some convenient shortcuts.
 
-The Ruby programming language always has developer happiness at its core. To make programming more pleasant, Ruby has many methods and operators making routine tasks more manageable. The method `attr_accessor` is a Ruby helper method. Ruby **helper methods** are utility methods that make routine actions more efficient. The `attr_accessor` method takes one or more symbols as arguments and returns a getter and setter method for that symbol. Symbols are unique identifiers that represent an instance variable. While we still need our unique `happy_birthday` setter method and our `get_info` getter method, all others can be removed as the actions have been replaced my the `attr_accessor`.
+The Ruby programming language always has developer happiness at its core. To make programming more pleasant to code, Ruby has many methods and operators making common tasks more manageable. The method `attr_accessor` is a Ruby helper method. Ruby **helper methods** are utility methods that make routine actions more efficient. The `attr_accessor` method takes one or more symbols as arguments and returns a getter and setter method for that symbol. Symbols are unique identifiers that represent an instance variable. While we still need our unique `happy_birthday` setter method and our `get_info` getter method, all others can be removed as the actions have been replaced my the `attr_accessor`.
 
 ```ruby
 class Person
