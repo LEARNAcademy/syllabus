@@ -6,7 +6,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 #### Previous Lecture (57 min)
 
-[![YouTube](http://img.youtube.com/vi/YThNhP4i5NE/0.jpg)](https://www.youtube.com/watch?v=YThNhP4i5NE)
+[![YouTube](http://img.youtube.com/vi/7QCs7nA6s7Y0.jpg)](https://www.youtube.com/watch?v=7QCs7nA6s7Y)
 
 #### Learning Objectives
 
@@ -89,8 +89,8 @@ When initially opening the file we will see the boilerplate code that creates th
 **src/App.js**
 
 ```javascript
-import logo from './logo.svg'
-import './App.css'
+import logo from "./logo.svg"
+import "./App.css"
 
 function App() {
   return (
@@ -127,7 +127,7 @@ Using React fragments requires an input from React dependencies at the top of th
 **src/App.js**
 
 ```javascript
-import React from 'react'
+import React from "react"
 
 const App = () => {
   return (
@@ -151,7 +151,7 @@ Inside the components folder, create a new file called `Header.js`. It is conven
 **src/components/Header.js**
 
 ```javascript
-import React from 'react'
+import React from "react"
 
 const Header = () => {
   return (
@@ -175,8 +175,8 @@ Back in _App.js_ we will need to call the Header component. Now that all the com
 **src/App.js**
 
 ```javascript
-import React from 'react'
-import Header from './component/Header'
+import React from "react"
+import Header from "./component/Header"
 
 const App = () => {
   return (
@@ -196,7 +196,7 @@ Next we will add the Recipe component. We create the Recipe component in the `co
 **src/components/Recipes.js**
 
 ```javascript
-import React from 'react'
+import React from "react"
 
 const Recipe = () => {
   return (
@@ -219,9 +219,9 @@ Now we will import Recipe in App.js.
 **src/App.js**
 
 ```javascript
-import React from 'react'
-import Header from './components/Header'
-import Recipe from './components/Recipe'
+import React from "react"
+import Header from "./components/Header"
+import Recipe from "./components/Recipe"
 
 const App = () => {
   return (
@@ -242,7 +242,7 @@ Next we will add a footer component. We create the Footer component in the `comp
 **src/components/Footer.js**
 
 ```javascript
-import React from 'react'
+import React from "react"
 
 const Footer = () => {
   return (
@@ -260,10 +260,10 @@ Import Footer in App.js.
 **src/App.js**
 
 ```javascript
-import React from 'react'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Recipes from './components/Recipes'
+import React from "react"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Recipes from "./components/Recipes"
 
 const App = () => {
   return (
@@ -291,7 +291,7 @@ As a developer, you are tasked with creating an application to share your favori
 - As a user, I can see a Footer component with the name of your cohort.
 - As a user, I can see a Favorites component with a list of top five favorites (i.e. top five favorite TV shows, top five favorite songs, top five favorite taco shops).
 
-### 🏔 Stretch
+### 🏔 Stretch Goals
 
 - As a user, I can see a browser tab with a customized name and favicon.
 

@@ -55,9 +55,9 @@ Until now, we've only dealt with one piece of information at a time: one number,
 Here are a few examples of arrays assigned to variables:
 
 ```javascript
-var months = ["January", "February", "March", "April", "May", "June"];
+var months = ["January", "February", "March", "April", "May", "June"]
 
-var numbers = [17, 15, 14, 3, 5, 10];
+var numbers = [17, 15, 14, 3, 5, 10]
 
 var comboDataArray = [
   17,
@@ -68,14 +68,14 @@ var comboDataArray = [
   null,
   false,
   "LEARN",
-  10,
-];
+  10
+]
 ```
 
 ### Anatomy of an Array
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 ```
 
 Arrays consists of the following:
@@ -103,7 +103,7 @@ Arrays consists of the following:
 Each element in the array must be a JavaScript data type. The content of each element is called the **value**.
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 ```
 
 - `"Debra"` is a value in the array
@@ -115,7 +115,7 @@ var learnStudents = ["Debra", "Jonas", "Joel"];
 Every value in an array has a particular location known as the **index**. Indexes are sequential numbers that are a bit like an address for every element in the array. Arrays are **zero indexed** which means the elements are numbered starting with the number 0 and increase by one whole number for each new element.
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 ```
 
 - The value `"Debra"` is at the index of `0`
@@ -127,16 +127,16 @@ var learnStudents = ["Debra", "Jonas", "Joel"];
 One of the many benefits to storing data in arrays is that we can access the individual values. Since the indexes are like an address, we can reference the variable that holds the entire array and the specific index in square brackets in order to retrieve the value. If the index does not exist the output will be undefined.
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents[0]);
-// Output: "Debra"
+console.log(learnStudents[0])
+// output: "Debra"
 
-console.log(learnStudents[2]);
-// Output: "Joel"
+console.log(learnStudents[2])
+// output: "Joel"
 
-console.log(learnStudents[6]);
-// Output: undefined
+console.log(learnStudents[6])
+// output: undefined
 ```
 
 ### Changing Elements
@@ -144,15 +144,15 @@ console.log(learnStudents[6]);
 By referencing the array and the index we are essentially creating a variable for that particular value. Just like any other variable we can reassign its value using a single equal sign and a new item. This will permanently modify the array.
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-learnStudents[0] = "Summer";
-console.log(learnStudents);
-// Output: ["Summer", "Jonas", "Joel"]
+learnStudents[0] = "Summer"
+console.log(learnStudents)
+// output: ["Summer", "Jonas", "Joel"]
 
-learnStudents[1] = "Brian";
-console.log(learnStudents);
-// Output: ["Summer", "Brian", "Joel"]
+learnStudents[1] = "Brian"
+console.log(learnStudents)
+// output: ["Summer", "Brian", "Joel"]
 ```
 
 ### Length Property
@@ -160,10 +160,10 @@ console.log(learnStudents);
 Because arrays are an ordered collection of data, they have a length property. The length of an array is dynamic, which means it can change depending on the needs of a developer. `.length` is an informational command that returns the number of elements in the array. The length is the always the last index of the array plus one.
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.length);
-// Output: 3
+console.log(learnStudents.length)
+// output: 3
 ```
 
 ### Built-in Methods
@@ -184,13 +184,13 @@ Mutator methods modify the array the method is called on. When working with muta
 - The output of the method itself is the length of the new array
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.push("Ryan"));
-// Output: 4
+console.log(learnStudents.push("Ryan"))
+// output: 4
 
-console.log(learnStudents);
-// Output: ["Debra", "Jonas", "Joel", "Ryan"]
+console.log(learnStudents)
+// output: ["Debra", "Jonas", "Joel", "Ryan"]
 ```
 
 **.pop()**
@@ -199,13 +199,13 @@ console.log(learnStudents);
 - The output of the method itself is the value that is removed
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.pop());
-// Output: "Joel"
+console.log(learnStudents.pop())
+// output: "Joel"
 
-console.log(learnStudents);
-// Output: ["Debra", "Jonas"]
+console.log(learnStudents)
+// output: ["Debra", "Jonas"]
 ```
 
 **.unshift(value)**
@@ -216,13 +216,13 @@ console.log(learnStudents);
 - The output of the method itself is the length of the new array
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.unshift("Rachael"));
-// Output: 4
+console.log(learnStudents.unshift("Rachael"))
+// output: 4
 
-console.log(learnStudents);
-// Output: ["Rachael", "Debra", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Rachael", "Debra", "Jonas", "Joel"]
 ```
 
 **.shift()**
@@ -231,13 +231,13 @@ console.log(learnStudents);
 - The output of the method itself is the value that is removed
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.shift());
-// Output: "Debra"
+console.log(learnStudents.shift())
+// output: "Debra"
 
-console.log(learnStudents);
-// Output: ["Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Jonas", "Joel"]
 ```
 
 **.reverse()**
@@ -246,13 +246,13 @@ console.log(learnStudents);
 - The output of the method itself is the modified array
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.reverse());
-// Output: ["Joel", "Jonas", "Debra"]
+console.log(learnStudents.reverse())
+// output: ["Joel", "Jonas", "Debra"]
 
-console.log(learnStudents);
-// Output: ["Joel", "Jonas", "Debra"]
+console.log(learnStudents)
+// output: ["Joel", "Jonas", "Debra"]
 ```
 
 **.sort()**
@@ -263,17 +263,17 @@ console.log(learnStudents);
 - Can take arguments for numbers
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.sort());
-// Output: ["Debra", "Joel", "Jonas"]
+console.log(learnStudents.sort())
+// output: ["Debra", "Joel", "Jonas"]
 
-console.log(learnStudents);
-// Output: ["Debra", "Joel", "Jonas"]
+console.log(learnStudents)
+// output: ["Debra", "Joel", "Jonas"]
 
-let numbers = [4, 2, 5, 1, 3];
-numbers.sort((a, b) => a - b);
-console.log(numbers);
+let numbers = [4, 2, 5, 1, 3]
+numbers.sort((a, b) => a - b)
+console.log(numbers)
 
 // [1, 2, 3, 4, 5]
 ```
@@ -289,20 +289,20 @@ Accessor methods do not modify the original array. Accessors return a specific o
 - The original array is unchanged
 
 ```javascript
-var learnStudents = ["Debra", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Jonas", "Joel"]
 
-console.log(learnStudents.indexOf("Joel"));
-// Output: 2
+console.log(learnStudents.indexOf("Joel"))
+// output: 2
 
-var joelIndex = learnStudents.indexOf("Joel");
-console.log(joelIndex);
-// Output: 2
+var joelIndex = learnStudents.indexOf("Joel")
+console.log(joelIndex)
+// output: 2
 
-console.log(learnStudents.indexOf("Mary"));
-// Output: -1
+console.log(learnStudents.indexOf("Mary"))
+// output: -1
 
-console.log(learnStudents);
-// Output: ["Debra", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Debra", "Jonas", "Joel"]
 ```
 
 **.lastIndexOf(value)**
@@ -313,20 +313,20 @@ console.log(learnStudents);
 - The original array is unchanged
 
 ```javascript
-var learnStudents = ["Debra", "Joel", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Joel", "Jonas", "Joel"]
 
-console.log(learnStudents.lastIndexOf("Joel"));
-// Output: 3
+console.log(learnStudents.lastIndexOf("Joel"))
+// output: 3
 
-var lastJoelIndex = learnStudents.lastIndexOf("Joel");
-console.log(lastJoelIndex);
-// Output: 3
+var lastJoelIndex = learnStudents.lastIndexOf("Joel")
+console.log(lastJoelIndex)
+// output: 3
 
-console.log(learnStudents.lastIndexOf("Mary"));
-// Output: -1
+console.log(learnStudents.lastIndexOf("Mary"))
+// output: -1
 
-console.log(learnStudents);
-// Output: ["Debra", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Debra", "Jonas", "Joel"]
 ```
 
 **.slice(staringIndex, endingIndex)**
@@ -337,20 +337,20 @@ console.log(learnStudents);
 - The original array is unchanged
 
 ```javascript
-var learnStudents = ["Debra", "Mary", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Mary", "Jonas", "Joel"]
 
-console.log(learnStudents.slice(0, 2));
-// Output: ["Debra", "Mary"]
+console.log(learnStudents.slice(0, 2))
+// output: ["Debra", "Mary"]
 
-console.log(learnStudents.slice(2));
-// Output: ["Jonas", "Joel"]
+console.log(learnStudents.slice(2))
+// output: ["Jonas", "Joel"]
 
-var slicedArray = learnStudents.slice(2);
-console.log(slicedArray);
-// Output: ["Jonas", "Joel"]
+var slicedArray = learnStudents.slice(2)
+console.log(slicedArray)
+// output: ["Jonas", "Joel"]
 
-console.log(learnStudents);
-// Output: ["Debra", "Mary", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 **.concat()**
@@ -360,18 +360,18 @@ console.log(learnStudents);
 - Strings can also be added to an array
 
 ```javascript
-var learnStudents1 = ["Debra", "Jonas", "Joel"];
-var learnStudents2 = ["Mary", "Juan", "Matt"];
+var learnStudents1 = ["Debra", "Jonas", "Joel"]
+var learnStudents2 = ["Mary", "Juan", "Matt"]
 
-console.log(learnStudents1.concat(learnStudents2));
-// Output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
+console.log(learnStudents1.concat(learnStudents2))
+// output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
 
-var comboArrays = learnStudents1.concat(learnStudents2);
-console.log(comboArrays);
-// Output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
+var comboArrays = learnStudents1.concat(learnStudents2)
+console.log(comboArrays)
+// output: ["Debra", "Jonas", "Joel", "Mary", "Juan", "Matt"]
 
-console.log(learnStudents1);
-// Output: ["Debra", "Jonas", "Joel"]
+console.log(learnStudents1)
+// output: ["Debra", "Jonas", "Joel"]
 ```
 
 ### Strings to Arrays and Back Again
@@ -385,26 +385,26 @@ In JavaScript, arrays and strings have a lot of similar properties. They both ar
 - The original array is unchanged
 
 ```javascript
-var learnStudents = ["Debra", "Mary", "Jonas", "Joel"];
+var learnStudents = ["Debra", "Mary", "Jonas", "Joel"]
 
-console.log(learnStudents.join());
-// Output: "Debra,Mary,Jonas,Joel"
+console.log(learnStudents.join())
+// output: "Debra,Mary,Jonas,Joel"
 
-console.log(learnStudents.join(""));
-// Output: "DebraMaryJonasJoel"
+console.log(learnStudents.join(""))
+// output: "DebraMaryJonasJoel"
 
-console.log(learnStudents.join(" "));
-// Output: "Debra Mary Jonas Joel"
+console.log(learnStudents.join(" "))
+// output: "Debra Mary Jonas Joel"
 
-console.log(learnStudents.join("-"));
-// Output: "Debra-Mary-Jonas-Joel"
+console.log(learnStudents.join("-"))
+// output: "Debra-Mary-Jonas-Joel"
 
-var joinedNames = learnStudents.join(" ");
-console.log(joinedNames);
-// Output: "Debra Mary Jonas Joel"
+var joinedNames = learnStudents.join(" ")
+console.log(joinedNames)
+// output: "Debra Mary Jonas Joel"
 
-console.log(learnStudents);
-// Output: ["Debra", "Mary", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 **.split("")**
@@ -414,122 +414,122 @@ console.log(learnStudents);
 - The original string is unchanged
 
 ```javascript
-var learnStudents = "Debra Mary Jonas Joel";
+var learnStudents = "Debra Mary Jonas Joel"
 
-console.log(learnStudents.split());
-// Output: ["Debra Jonas Joel"]
+console.log(learnStudents.split())
+// output: ["Debra Jonas Joel"]
 
-console.log(learnStudents.split(""));
-// Output: ["D", "e", "b", "r", "a", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
+console.log(learnStudents.split(""))
+// output: ["D", "e", "b", "r", "a", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
 
-console.log(learnStudents.split(" "));
-// Output: ["Debra", "Mary", "Jonas", "Joel"]
+console.log(learnStudents.split(" "))
+// output: ["Debra", "Mary", "Jonas", "Joel"]
 
-console.log(learnStudents.split("a"));
-// Output: ["Debr", " M", "ry Jon", "s Joel"]
+console.log(learnStudents.split("a"))
+// output: ["Debr", " M", "ry Jon", "s Joel"]
 
-var splitNames = learnStudents.split(" ");
-console.log(splitNames);
-// Output: ["Debra", "Mary", "Jonas", "Joel"]
+var splitNames = learnStudents.split(" ")
+console.log(splitNames)
+// output: ["Debra", "Mary", "Jonas", "Joel"]
 
-console.log(learnStudents);
-// Output: ["Debra", "Mary", "Jonas", "Joel"]
+console.log(learnStudents)
+// output: ["Debra", "Mary", "Jonas", "Joel"]
 ```
 
 ### Array Destructuring
 
-The destructuring assignment is a special way of assigning variables in JavaScript. **Destructuring** allows you to take an array and unpack each value into individual variables in a singe assignment.
+The destructuring assignment is a special way of assigning variables in JavaScript. **Destructuring** allows you to take an array and unpack each value into individual variables in a single assignment.
 
 Destructuring assignments requires variables names in square brackets and an equal number of values. Each variable is assigned in order.
 
 ```javascript
-var [firstName, secondName] = ["Mary", "Debra"];
+var [firstName, secondName] = ["Mary", "Debra"]
 
-console.log(firstName);
-// Output: "Mary"
+console.log(firstName)
+// output: "Mary"
 
-console.log(secondName);
-// Output: "Debra"
+console.log(secondName)
+// output: "Debra"
 ```
 
 ---
 
-### Challenges
+### 💻 Challenges
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 
 Consider the variable:
 
 ```javascript
-var groceryList = ["chips", "dip", "cookies"];
+var groceryList = ["chips", "dip", "cookies"]
 ```
 
-1. Write the code that will add "soda" to the end of the original array.
+- Write the code that will add "soda" to the end of the original array.
 
-2. Write the code that will add "granola" to the end of array without altering the original array.
+- Write the code that will add "granola" to the end of array without altering the original array.
 
-3. Write the code that will return a subset of the array containing only "chips" and "dip".
+- Write the code that will return a subset of the array containing only "chips" and "dip".
 
-4. Write the code that will add "beans" to the "chips" and "dip" array.
+- Write the code that will add "beans" to the "chips" and "dip" array.
 
 Consider the variable:
 
 ```javascript
-var numbers = [2, 4, 6, 8, 10];
+var numbers = [2, 4, 6, 8, 10]
 ```
 
-5. Write the code that will add the number 0 to the beginning of the array.
+- Write the code that will add the number 0 to the beginning of the array.
 
-6. Write the code that will add the number 12 to the end of the array.
+- Write the code that will add the number 12 to the end of the array.
 
-7. Write the code that will remove the first number from the array.
+- Write the code that will remove the first number from the array.
 
-8. Write the code that will add the number 0 to the beginning of the array without altering the original array. **HINT**: it's not `.unshift` You'll have to get creative! ;)
+- Write the code that will add the number 0 to the beginning of the array without altering the original array. **HINT**: it's not `.unshift` You'll have to get creative! ;)
 
 Consider the variable:
 
 ```javascript
-var numSet = [2, 13, 6, 8, 4, 2];
+var numSet = [2, 13, 6, 8, 4, 2]
 ```
 
-9. Write the code that finds the index of the first appearance of the number 2.
+- Write the code that finds the index of the first appearance of the number 2.
 
-10. Write the code that finds the index of the last appearance of the number 2.
+- Write the code that finds the index of the last appearance of the number 2.
 
-11. Write the code that returns the number at the third index.
+- Write the code that returns the number at the third index.
 
 Consider the variable:
 
 ```javascript
-var characters = ["y", "a", "r", "r", "a"];
+var characters = ["y", "a", "r", "r", "a"]
 ```
 
-12. Write the code that brings all the letters in the characters array together into a string.
+- Write the code that brings all the letters in the characters array together into a string.
 
-13. Write the code that reverses the order of the letters in the characters array and saves it into a variable called charsReversed.
+- Write the code that reverses the order of the letters in the characters array and saves it into a variable called charsReversed.
 
 14. Write the code that brings all the letters in the charsReversed array together into a string with an asterisk between each letter.
 
-15. Write the code that brings all the letters in the charsReversed array together into a string without separators.
+- Write the code that brings all the letters in the charsReversed array together into a string without separators.
 
 Create two arrays consisting of three first names of your cohort members in each.
 
-16. Write the code that sorts the names in alphabetical order.
+- Write the code that sorts the names in alphabetical order.
 
-17. Write the code that sorts the names in reverse alphabetical order.
+- Write the code that sorts the names in reverse alphabetical order.
 
-18. Write the code that sorts all the names in alphabetical order in a single array.
+- Write the code that sorts all the names in alphabetical order in a single array.
 
 Consider the variables:
 
 ```javascript
-var numbers = [42, 221, 71, 7, 18, 87];
-var oddIndexes = [];
+var numbers = [42, 221, 71, 7, 18, 87]
+var oddIndexes = []
 ```
 
-19. Write the code that logs the values from the numbers array that are at odd indexes.
+- Write the code that logs the values from the numbers array that are at odd indexes.
 
-20. Write the code that adds the values from odd indexes into the oddIndexes array.
+- Write the code that adds the values from odd indexes into the oddIndexes array.
 
 ---
 

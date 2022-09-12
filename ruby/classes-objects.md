@@ -58,13 +58,13 @@ You can find out the class of anything in Ruby by calling the `.class` method.
 
 ```ruby
 1.class
-=> Integer
+# output: Integer
 
 1.0.class
-=> Float
+# output: Float
 
 'hello'.class
-=> String
+# output: String
 ```
 
 ### Custom Classes
@@ -78,11 +78,11 @@ class Person
 end
 
 p Person.new
-=> #<Person:0x000000013400d8d8>
+# output: #<Person:0x000000013400d8d8>
 
 mickey = Person.new
 p mickey
-=> #<Person:0x000000015498b188>
+# output: #<Person:0x000000015498b188>
 ```
 
 ### Instance Variables
@@ -119,10 +119,10 @@ mickey.set_name('Mickey')
 
 # getting the value
 p mickey.get_name
-=> 'Mickey'
+# output: 'Mickey'
 
 p mickey.name
-=> returns an error: undefined method name for #<Person:0x0000000122092950 @name="Mickey"> (NoMethodError)
+# output: returns an error: undefined method name for #<Person:0x0000000122092950 @name="Mickey"> (NoMethodError)
 ```
 
 ### Class Initialization
@@ -156,14 +156,14 @@ end
 
 mickey = Person.new('Mickey')
 p mickey
-=> #<Person:0x0000000129896528 @name="Mickey">
+# output: #<Person:0x0000000129896528 @name="Mickey">
 
 # setting the value
 mickey.set_name('Mickey Mouse')
 
 # getting the value
 p mickey.get_name
-=> 'Mickey Mouse'
+# output: 'Mickey Mouse'
 ```
 
 Calling `.new` without an argument will result in an error.
@@ -189,10 +189,10 @@ end
 
 mickey = Person.new('Mickey')
 p mickey
-=> #<Person:0x0000000129896528 @name="Mickey">
+# output: #<Person:0x0000000129896528 @name="Mickey">
 
 minnie = Person.new
-=> returns an error: wrong number of arguments (given 0, expected 1) (ArgumentError)
+# output: returns an error: wrong number of arguments (given 0, expected 1) (ArgumentError)
 ```
 
 ### Adding Additional Data
@@ -231,11 +231,11 @@ end
 
 mickey = Person.new('Mickey')
 p mickey
-=> #<Person:0x000000015998a238 @name="Mickey", @age=0>
+# output: #<Person:0x000000015998a238 @name="Mickey", @age=0>
 
 minnie = Person.new('Minnie')
 p minnie
-=> #<Person:0x000000015998a030 @name="Minnie", @age=0>
+# output: #<Person:0x000000015998a030 @name="Minnie", @age=0>
 ```
 
 We can now call the age setter method to increase the age value. Every time we call the `happy_birthday` method the age value increases by one. Calling the `get_age` method will return the current age.
@@ -272,22 +272,22 @@ end
 
 mickey = Person.new('Mickey')
 p mickey
-=> #<Person:0x000000015998a238 @name="Mickey", @age=0>
+# output: #<Person:0x000000015998a238 @name="Mickey", @age=0>
 
 mickey.happy_birthday
 mickey.happy_birthday
 
 p mickey.get_age
-=> 2
+# output: 2
 
 minnie = Person.new('Minnie')
 p minnie
-=> #<Person:0x000000015998a030 @name="Minnie", @age=0>
+# output: #<Person:0x000000015998a030 @name="Minnie", @age=0>
 
 minnie.happy_birthday
 
 p minnie.get_age
-=> 1
+# output: 1
 ```
 
 We can get all the information about the object through individual getter methods. However this isn't great user experience. By adding one more method, we can use string interpolation to get a nice clean output.
@@ -331,7 +331,7 @@ mickey.happy_birthday
 mickey.happy_birthday
 
 p mickey.get_info
-=> 'Mickey is 2 years old.'
+# output: 'Mickey is 2 years old.'
 ```
 
 ### attr_accessor
@@ -362,23 +362,23 @@ end
 
 mickey = Person.new('Mickey')
 p mickey.get_info
-=> 'Mickey is 0 years old.'
+# output: 'Mickey is 0 years old.'
 
 mickey.name = 'Micky Mouse'
 p mickey.get_info
-=> 'Micky Mouse is 0 years old.'
+# output: 'Micky Mouse is 0 years old.'
 
 p mickey.name
-=> 'Micky Mouse'
+# output: 'Micky Mouse'
 
 mickey.happy_birthday
 mickey.happy_birthday
 
 p mickey.age
-=> 2
+# output: 2
 
 p mickey.get_info
-=> 'Micky Mouse is 2 years old.'
+# output: 'Micky Mouse is 2 years old.'
 ```
 
 There are additional Ruby helper methods that can be used based on your needs as a developer.

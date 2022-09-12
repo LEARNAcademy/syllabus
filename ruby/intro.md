@@ -91,28 +91,28 @@ Integer operators and arithmetic in Ruby are very similar to numbers in JavaScri
 
 ```ruby
 # addition
-> 1 + 3
-=> 4
+1 + 3
+# output: 4
 
 # subtraction
-> 6 - 2
-=> 4
+6 - 2
+# output: 4
 
 # multiplication
-> 2 * 2
-=> 4
+2 * 2
+# output: 4
 
 # division
-> 3 / 2
-=> 1 # Note the lack of decimals
+3 / 2
+# output: 1 # Note the lack of decimals
 
 # exponents
-> 5 ** 2
-=> 25
+5 ** 2
+# output: 25
 
 # modulo
-> 5 % 3
-=> 2
+5 % 3
+# output: 2
 ```
 
 ### Floats
@@ -120,27 +120,27 @@ Integer operators and arithmetic in Ruby are very similar to numbers in JavaScri
 If you want to return a non-whole number in Ruby you must pass a float into the equation.
 
 ```ruby
-> 3.0 / 2
-=> 1.5
+3.0 / 2
+# output: 1.5
 
-> 0.15 + 0.30
-=> 0.44999999999999996
+0.15 + 0.30
+# output: 0.44999999999999996
 ```
 
 Ruby has NaN and Infinity, but only for floating point numbers. Integers generate exceptions in the same circumstances instead.
 
 ```ruby
-> 5 / 0
-=> ZeroDivisionError (divided by 0)
+5 / 0
+# output: ZeroDivisionError (divided by 0)
 
-> 0 / 0
-=> ZeroDivisionError (divided by 0)
+0 / 0
+# output: ZeroDivisionError (divided by 0)
 
-> 5.0 / 0
-=> Infinity
+5.0 / 0
+# output: Infinity
 
-> 0.0 / 0
-=> NaN
+0.0 / 0
+# output: NaN
 ```
 
 ### Boolean
@@ -150,49 +150,49 @@ Ruby will return a Boolean value for comparison operators. The comparison operat
 The equality operator is two equal signs. In Ruby there is no such thing as loose and strict equality. Data types that are not of the same class cannot be compared.
 
 ```ruby
-> 7 == 7
-=> true
+7 == 7
+# output: true
 
-> 4 == 2 + 2
-=> true
+4 == 2 + 2
+# output: true
 
-> 'hi' == 'hi'
-=> true
+'hi' == 'hi'
+# output: true
 
-> 7 == '7'
-=> false
+7 == '7'
+# output: false
 ```
 
 The relational operators are less than `<`, greater than `>`, less than or equal to `<=`, and greater than or equal to `>=`.
 
 ```ruby
-> 6 > 4
-=> true
+6 > 4
+# output: true
 
-> 8 < 9
-=> true
+8 < 9
+# output: true
 
-> 7 < 2
-=> false
+7 < 2
+# output: false
 
-> 15 <= 13
-=> false
+15 <= 13
+# output: false
 
-> 8 >= 2
-=> true
+8 >= 2
+# output: true
 ```
 
 Ruby also has logical AND, logical OR, and negations.
 
 ```ruby
-> 8 >= 2 && 15 <= 13
-=> false
+8 >= 2 && 15 <= 13
+# output: false
 
-> true && 'hi' == 'hi'
-=> true
+true && 'hi' == 'hi'
+# output: true
 
-> 8 <= 2 || 4 == 2 + 2
-=> true
+8 <= 2 || 4 == 2 + 2
+# output: true
 
 ```
 
@@ -201,9 +201,9 @@ Ruby also has logical AND, logical OR, and negations.
 Ruby style guides say to use single quotes whenever suitable. A notable exception is the need to portray punctuation.
 
 ```ruby
-> 'hello'
+'hello'
 
-> "It's my party!"
+"It's my party!"
 ```
 
 ### Calling Methods on Objects: The DOT!
@@ -213,24 +213,24 @@ In Ruby, methods are called on an objects (remember, in Ruby everything is an ob
 Examples:
 
 ```ruby
-> 'Hello'.upcase
-=> "HELLO"
+'Hello'.upcase
+# output: "HELLO"
 
-> 'hello'.capitalize
-=> "Hello"
+'hello'.capitalize
+# output: "Hello"
 
-> 'HELLO'.downcase
-=> "hello"
+'HELLO'.downcase
+# output: "hello"
 
-> 'hello'.reverse
-=> "olleh"
+'hello'.reverse
+# output: "olleh"
 
-> 'hello' * 3
-=> "hellohellohello"
+'hello' * 3
+# output: "hellohellohello"
 
 # Methods can be chained together
-> 'hello'.upcase.reverse
-=> "OLLEH"
+'hello'.upcase.reverse
+# output: "OLLEH"
 ```
 
 ### Other Datatypes
@@ -243,14 +243,14 @@ Examples:
 In Ruby variables do not require a declaration such as var, let, or const. In Ruby, variables are created with a single equal sign. The casing convention in Ruby is snake_case. The **snake_case** convention is all lowercase with each word separated by an underscore.
 
 ```ruby
-> my_num
-=> ERROR
+my_num
+# output: ERROR
 
-> my_num = 1
-=> 1
+my_num = 1
+# output: 1
 
-> my_num
-=> 1
+my_num
+# output: 1
 ```
 
 ### String Interpolation
@@ -258,14 +258,14 @@ In Ruby variables do not require a declaration such as var, let, or const. In Ru
 String interpolation is replacing variables within a string with the values they represent. In Ruby, string interpolation is done with double quotes around the entirety of the string and the variable being wrapped in `#{}`
 
 ```ruby
-> num1 = 1
-> num2 = 4
+num1 = 1
+num2 = 4
 
-> "The number #{num1} is less than #{num2}."
-=> "The number 1 is less than 4."
+"The number #{num1} is less than #{num2}."
+# output: "The number 1 is less than 4."
 
-> "The number #{num1} plus the number #{num2} equals #{num1 + num2}."
-=> "The number 1 plus the number 4 equals 5."
+"The number #{num1} plus the number #{num2} equals #{num1 + num2}."
+# output: "The number 1 plus the number 4 equals 5."
 ```
 
 ### Arrays
@@ -276,26 +276,26 @@ Arrays are ordered collections of objects. Arrays can hold objects of any data t
 nums = [8, 9, 10, 11, 12, 13]
 
 # Return the value from a specific index in an array
-> nums[2]
-=> 10
+nums[2]
+# output: 10
 
 # If the index doesn't exist in the array Ruby will return nil
-> nums[20]
-=> nil
+nums[20]
+# output: nil
 
 # Reassign the value at a particular index in an array
-> nums[2] = 100
-=> 100
+nums[2] = 100
+# output: 100
 
-> nums
-=> [8, 9, 100, 11, 12, 13]
+nums
+# output: [8, 9, 100, 11, 12, 13]
 
 # If the index doesn't exist, Ruby will assign the value and fill the in between indexes with nil
-> nums[20] = 23
-=> 23
+nums[20] = 23
+# output: 23
 
-> nums
-=> [8, 9, 100, 11, 12, 13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 23]
+nums
+# output: [8, 9, 100, 11, 12, 13, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 23]
 
 ```
 
@@ -304,23 +304,23 @@ nums = [8, 9, 10, 11, 12, 13]
 Just like strings you can call methods on arrays. By default, most Ruby methods are accessors that will not permanently modify the object they are being called on.
 
 ```ruby
-> nums = [8, 9, 10, 11, 12, 13]
+nums = [8, 9, 10, 11, 12, 13]
 
 # Return the length of the array
-> nums.length
-=> 6
+nums.length
+# output: 6
 
 # Return the first item in the array (index 0)
-> nums.first
-=> 8
+nums.first
+# output: 8
 
 # Return the last item in the array
-> nums.last
-=> 13
+nums.last
+# output: 13
 
 # Return the array in reversed order
-> nums.reverse
-=> [13, 12, 11, 10, 9, 8]
+nums.reverse
+# output: [13, 12, 11, 10, 9, 8]
 ```
 
 ### Accessors vs Mutators
@@ -329,24 +329,24 @@ For the most part, Ruby methods are all accessors, meaning they do not mutate th
 
 ```ruby
 # Declaring a variable in IRB
-> nums = [8, 9, 10, 11, 12, 13]
-=> [8, 9, 10, 11, 12, 13]
+nums = [8, 9, 10, 11, 12, 13]
+# output: [8, 9, 10, 11, 12, 13]
 
 # Calling the reverse method
-> nums.reverse
-=> [13, 12, 11, 10, 9, 8]
+nums.reverse
+# output: [13, 12, 11, 10, 9, 8]
 
 # Calling the original variable
-> nums
-=> [8, 9, 10, 11, 12, 13]
+nums
+# output: [8, 9, 10, 11, 12, 13]
 
 # Calling the reverse method with a bang operator
-> nums.reverse!
-=> [13, 12, 11, 10, 9, 8]
+nums.reverse!
+# output: [13, 12, 11, 10, 9, 8]
 
 # Calling the original variable
-> nums
-=> [13, 12, 11, 10, 9, 8]
+nums
+# output: [13, 12, 11, 10, 9, 8]
 ```
 
 ### Append Operator
@@ -354,8 +354,8 @@ For the most part, Ruby methods are all accessors, meaning they do not mutate th
 The append operator a.k.a. **shovel operator** is an array mutator that will add an new item at the end of the array using the syntax `<<`.
 
 ```ruby
-> nums << 99
-=> [8, 9, 10, 11, 12, 13, 99]
+nums << 99
+# output: [8, 9, 10, 11, 12, 13, 99]
 ```
 
 ## Running Ruby: Terminal
@@ -370,10 +370,10 @@ In the example you can see differences between the output of puts and the raw ou
 
 ```
 puts 'Hello World'
-=> Hello World
+# output: Hello World
 
 p 'Hello World'
-=> 'Hello World'
+# output: 'Hello World'
 ```
 
 ---
@@ -393,7 +393,7 @@ Remember that floats are fractional numbers whereas integers are whole numbers. 
 - Divide 0 by 0.
 - Create a variable and assign an integer.
 - Calculate the variable divided by 2.
-- Find the remainder of the variable when divided by 3. 
+- Find the remainder of the variable when divided by 3.
 - Create another variable and assign it the integer 13.
 - Use the relational operators on the two variables.
 - Reassign the value of one variable to be 7.

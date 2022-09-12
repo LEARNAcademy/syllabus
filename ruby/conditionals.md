@@ -55,7 +55,7 @@ def greeter
 end
 
 p greeter
-=> 'Hello World!'
+# output: 'Hello World!'
 
 # implicit return
 def greeter
@@ -63,7 +63,7 @@ def greeter
 end
 
 p greeter
-=> 'Hello World!'
+# output: 'Hello World!'
 ```
 
 ### Local Variables
@@ -77,10 +77,10 @@ def fun_message
 end
 
 fun_message
-=> 'This is so much fun'
+# output: 'This is so much fun'
 
 response
-=> NameError
+# output: NameError
 ```
 
 ### Method with Parameters
@@ -93,10 +93,10 @@ def greeter name
 end
 
 p greeter 'LEARN Student'
-=> 'Hello, LEARN Student!'
+# output: 'Hello, LEARN Student!'
 
 p greeter 'Coding Wizard'
-=> 'Hello, Coding Wizard!'
+# output: 'Hello, Coding Wizard!'
 ```
 
 While Ruby doesn't require parentheses around the arguments for a method, it is best practice to use parentheses if there is more than one argument.
@@ -107,10 +107,10 @@ def add_up(num1, num2)
 end
 
 p add_up(1, 3)
-=> 4
+# output: 4
 
 p add_up(3, 4)
-=> 7
+# output: 7
 ```
 
 ### Conditional Statements
@@ -125,7 +125,7 @@ else
   p 'Your number is not 10.'
 end
 
-=> 'Your number is 10!'
+# output: 'Your number is 10!'
 ```
 
 Conditional statements are often used inside methods to produce a decision in the code logic. This allows for different outcomes based on the input. Every `def` has a corresponding `end` and every conditional statement needs an `end`. Nesting a conditional statement inside a method requires two ends each defining their own executable block of code.
@@ -142,10 +142,10 @@ def is_ten num
 end
 
 p is_ten my_num
-=> 'Your number is 10!'
+# output: 'Your number is 10!'
 
 p is_ten 12
-=> 'Your number is not 10.'
+# output: 'Your number is not 10.'
 ```
 
 ### Additional Branches on the Decision Tree
@@ -166,10 +166,10 @@ def number_checker num
 end
 
 p number_checker 10
-=> 'Your number is 10!'
+# output: 'Your number is 10!'
 
 p number_checker 42
-=> '42 is greater than 10.'
+# output: '42 is greater than 10.'
 ```
 
 ### Unless
@@ -188,10 +188,10 @@ def greeter name
 end
 
 p greeter my_name
-=> 'Hello, LEARN!'
+# output: 'Hello, LEARN!'
 
 p greeter 'Rachael'
-=> 'Hello there!'
+# output: 'Hello there!'
 ```
 
 ### Input
@@ -204,7 +204,7 @@ name = gets
 
 # gets provides a blank line that accepts user input as a string:
 > LEARN Student
-=> 'LEARN Student\n'
+# output: 'LEARN Student\n'
 ```
 
 The string output from `gets` also includes the return character `\n` logged by the computer when you hit the return key. Typically this character is not useful in the code logic and should be removed. Ruby has a command called **chomp** that removes any additional line breaks and white space from the end of a string.
@@ -215,7 +215,7 @@ name = gets.chomp
 puts "Hello, #{name}. How are you today?"
 
 > LEARN Student
-=> 'Hello, LEARN Student. How are you today?'
+# output: 'Hello, LEARN Student. How are you today?'
 ```
 
 The data type of the user input from a `gets` action will ALWAYS be a string. If anther data type is required to execute the code logic, it is up to the developer to make that conversion.
@@ -230,7 +230,7 @@ user_age = gets.chomp.to_i
 p dog_years user_age
 
 > 7
-=> 49
+# output: 49
 ```
 
 ### ❤️ Challenges

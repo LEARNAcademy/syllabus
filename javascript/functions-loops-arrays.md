@@ -36,17 +36,18 @@ As we work to solve more complicated problems with code, we need to add more log
 **Example:** Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
 
 ```javascript
-var myArr1 = [1, 5, 7, 3, 10];
+const myArr1 = [1, 5, 7, 3, 10]
 
 const mult5 = (array) => {
-  let newArr = [];
+  let newArr = []
   for (let i = 0; i < array.length; i++) {
-    newArr.push(array[i] * 5);
+    newArr.push(array[i] * 5)
   }
-  return newArr;
-};
+  return newArr
+}
 
-console.log(mult5(myArr1));
+console.log(mult5(myArr1))
+// output: [5, 25, 35, 15, 50]
 ```
 
 Notice that we created an empty array inside our function and used the **.push()** method to populate our empty array. The function then returned the newly populated array.
@@ -56,46 +57,47 @@ In the following example, we can add a nested conditional statement to return on
 **Example:** Create a function that takes in an array and returns a new array with only the even numbers.
 
 ```javascript
-var myArr2 = [1, 2, 7, 4, 10, 8, 9];
+const myArr2 = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
-  let newArr = [];
+  let newArr = []
   for (let i = 0; i < array.length; i++) {
     if (array[i] % 2 === 0) {
-      newArr.push(array[i]);
+      newArr.push(array[i])
     }
   }
-  return newArr;
-};
+  return newArr
+}
 
-console.log(onlyEven(myArr2));
+console.log(onlyEven(myArr2))
+// output: [2, 4, 10, 8]
 ```
 
 ---
 
-### Challenges
+### 💻 Challenges
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.  
 **Don't forget to pseudo code.**
 
-1. Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
+- Write a function that takes in an array of numbers and returns an array with all numbers multiplied by 3.
 
 ```javascript
-var testArr1 = [3, 9, 15, 4, 10];
-// --> [9, 27, 45, 12, 30]
+const testArr1 = [3, 9, 15, 4, 10]
+// output: [9, 27, 45, 12, 30]
 ```
 
-2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+- Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 
 ```javascript
-var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13];
-// --> [-7, 3, 5, 13]
+const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// output: [-7, 3, 5, 13]
 ```
 
-3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the `typeof` method.
+- Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the `typeof` method.
 
 ```javascript
-var comboArr = [
+const comboArr = [
   7,
   "n",
   true,
@@ -110,66 +112,66 @@ var comboArr = [
   0,
   "r",
   false,
-  "k",
-];
-// --> "nicework"
+  "k"
+]
+// output: "nicework"
 ```
 
-4. Create a function that takes in an array of numbers and returns the sum.
+- Create a function that takes in an array of numbers and returns the sum.
 
 ```javascript
-var addThese1 = [1, 2, 3, 4];
-// --> 10
+const addThese1 = [1, 2, 3, 4]
+// output: 10
 
-var addThese2 = [];
-// --> 0
+const addThese2 = []
+// output: 0
 ```
 
-5. Create a function that takes in an array of numbers and returns the index of the largest number.
+- Create a function that takes in an array of numbers and returns the index of the largest number.
 
 ```javascript
-var indexHighestNumber = [1, 4, 2, 3];
-// --> 1
+const indexHighestNumber = [1, 4, 2, 3]
+// output: 1
 ```
 
-**STRETCH Challenges**
+### 🏔 Stretch Goals
 
-1. Create a function that takes in two arrays and returns one array with no duplicate values.
+- Create a function that takes in two arrays and returns one array with no duplicate values.
 
 ```javascript
-var arr1 = [3, 7, 10, 5, 4, 3, 3];
-var arr2 = [7, 8, 2, 3, 1, 5, 4];
-// --> [3, 7, 10, 5, 4, 8, 2, 1]
+const arr1 = [3, 7, 10, 5, 4, 3, 3]
+const arr2 = [7, 8, 2, 3, 1, 5, 4]
+// output: [3, 7, 10, 5, 4, 8, 2, 1]
 ```
 
-2. Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+- Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 
 ```javascript
-var arrayLength = 6;
-var arrayValue = 0;
-// --> [0, 0, 0, 0, 0, 0]
+const arrayLength = 6
+const arrayValue = 0
+// output: [0, 0, 0, 0, 0, 0]
 
-var arrayLength = 4;
-var arrayValue = 11;
-// --> [11, 11, 11, 11]
+const arrayLength = 4
+const arrayValue = 11
+// output: [11, 11, 11, 11]
 ```
 
-3. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
+- Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
 
 ```javascript
-var addUp1 = 4;
+const addUp1 = 4
 // 1 + 2 + 3 + 4 = 10
-// --> 10
+// output: 10
 
-var addUp2 = 10;
+const addUp2 = 10
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
-// --> 55
+// output: 55
 
-var addUp3 = 600;
-// --> 180300
+const addUp3 = 600
+// output: 180300
 ```
 
-**EPIC Challenges**
+### 🏔 Epic Goals
 
 - Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
 - Create an HTML page and link your JavaScript file. More info [here](../tools-and-resources/linking-html-javascript.md).

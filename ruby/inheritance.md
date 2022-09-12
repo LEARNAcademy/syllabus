@@ -19,8 +19,9 @@ Object-oriented programming is a philosophy with a focus on classes and their in
 
 - four pillars of object-oriented programming
 - superclass
-- Ruby inheritance
-- super()
+- subclass
+- inheritance
+- super
 
 #### Process
 
@@ -34,7 +35,7 @@ Object-oriented programming is a philosophy with a focus on classes and their in
 
 ### Object-oriented Programming
 
-The philosophy of object-oriented programming (OOP)is a human-constructed model that allows us to organize large code structures. OOP puts the primary focus on data and data structures. The tenets of the OOP philosophy are more thoroughly explained by the **four pillars of object-oriented programming**: Abstraction, Encapsulation, Polymorphism, and Inheritance.
+The philosophy of object-oriented programming (OOP) is a human-constructed model that allows us to organize large code structures. OOP puts the primary focus on data and data structures. The tenets of the OOP philosophy are more thoroughly explained by the **four pillars of object-oriented programming**: Abstraction, Encapsulation, Polymorphism, and Inheritance.
 
 Briefly, abstraction is keeping complex logic wrapped up inside the class and only exposing what is necessary to use the logic. An analogy of abstraction is that most of us wouldn't be able to build a television from scratch yet we can still use it to watch a show. We don't need to understand all the mechanical complexities since we are given access to what is needed to operate the TV.
 
@@ -47,23 +48,32 @@ The last pillar of OOP is inheritance. Inheritance allows classes to have relati
 ### Ruby Class Inheritance
 
 There are often situations where multiple classes have a need for very similar attributes. In this situation we can extract those common attributes so they can be shared among other classes. Putting common behaviors into a shared class is creating a **superclass**.
-To create an inheritance relationship, we use `<` between the child class name and the parent class name. This allows the new class to inherit the features of the superclass, but now you can add specific features. For example:
+
+A superclass can then pass information down to a **subclass** that will be able to access the data from the superclass. A superclass can have many subclasses. This relationship of passing data is called **inheritance**. Inheritance is defined with the syntax `<`.
+
+### Superclass
+
+We can create a superclass called `Dog` that will hold information shared between many kinds of dogs. The `Dog` class will have a name value defined on initialization.
 
 ```ruby
 class Dog
-  def initialize(breed)
-    @breed = breed
+  def initialize(name)
+    @name = name
   end
 end
 ```
 
-Now we will create a new class called Pointer and have it inherit from Dog.
+### Creating a Subclass
+
+Now we will create a subclass called `Pointer` that will have an relationship with the superclass `Dog`. `Pointer` will inherit from `Dog`. This allows the `Pointer` class to have more specific information while still having access to the content from `Dog`.
+
+The `Pointer` class will have its own data created on initialization. It will also note which data it will collect from the `Dog` class. The data we want from the `Dog` class will be passed into the `initialize` method as well as a method called `super`. The **super** method calls the `initialize` method in the superclass.
 
 ```ruby
 class Pointer < Dog
-  def initialize(breed, name)
-    super(breed)
-    @name = name
+  def initialize(name, breed)
+    super(name)
+    @breed = breed
   end
 
   def get_info
@@ -71,28 +81,48 @@ class Pointer < Dog
   end
 end
 
-my_dog = Pointer.new("Pointer", "Jax").get_info
+my_dog = Pointer.new('Jax', 'German Shorthaired Pointer')
+p my_dog.get_info
+# output: 'Jax is a German Shorthaired Pointer.'
 ```
 
-When you invoke a superclass with arguments, Ruby sends a message to the _parent_ (`Dog`) of the _current object_ (`Pointer`), asking it to invoke a method of the same name as the method invoking `super`.
+### How Super Works
 
-For example: above, our `initialize` method invokes `super` with an argument called `breed`. As soon as super is invoked, Ruby sends a message to our `Dog` class, looking for a method called `initialize`. Now, `Pointer` is essentially borrowing `Dog`'s initialize method to assign an instance variable of `@breed `to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
+The `initialize` method invokes `super` with an argument called `name`. As soon as the `super` method is invoked, Ruby sends a message to the `Dog` class looking for a method called `initialize`. Now, `Pointer` is essentially borrowing `Dog`'s initialize method to assign an instance variable of `@name` to `Pointer`. The argument/s you pass to the new instance of your subclass will be the exact same arguments passed to `super`.
 
-The get_info method in class Pointer references `@breed` from the superclass Dog. This code uses string interpolation to return a string of the dog's info:
+Because of the way this code behaves, you may be tempted to say that the instance variables are also inherited. But that is not how Ruby works. In the above code, `Pointer` defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable `@name` which makes those variables come into existence for a particular instance of `Pointer`.
+
+The `super` method is used in the subclass. After invoking `super` the subclass will have access to the instance variables within that method. Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super`, you are allowed to _borrow_ instance variables from the parent.
+
+### Additional Subclasses
+
+The superclass `Dog` can pass information to as many subclasses as needed. Each subclass can create unique instance variables. We can use the `attr_accessor` helper method to create getter and setter methods for the instance variables that the class `Dachshund` has access to.
 
 ```ruby
-my_dog = Pointer.new("Pointer", "Jax").get_info #(Pointer, Jax)
+class Dachshund < Dog
+  attr_accessor :tricks, :name
+  def initialize(name, tricks)
+    super(name)
+    @tricks = tricks
+  end
+end
+
+baby = Dachshund.new('Baby', 'playing fetch')
+p baby.tricks
+# output: 'playing fetch'
+
+baby.name = 'Baby Dog'
+p baby.name
+# output: 'Baby Dog'
 ```
 
-Because of the way this code behaves, you may be tempted to say that the instance variables are also inherited. But remember, that is not how Ruby works. In the above code, Pointer defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable `@breed`, which makes those variables come into existence for a particular instance of Pointer.
+### 🐟 Challenges: Animal Kingdom
 
-The `super()` method is used in the child class. It calls the method of the _same name_ in the parent class. After invoking `super()`, the child class will have access to the instance variables within that method. Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super()`, you are allowed to _borrow_ instance variables from the parent.
+Read all stories before starting the challenge.
 
-#### Animal Kingdom
-
-- As a developer, I can make an Animal (generic Animal class).
+- As a developer, I can make a generic Animal class.
 - As a developer, upon initialization, I can give my Animal a status of `alive`, which will be set to true.
-- As a developer, I can give my Animal an `age` of 0 upon creation.
+- As a developer, I can give my Animal an `age` of 0 upon initialization.
 - As a developer, I can age my Animal up one year at a time.
 - As a developer, I can return my Animal's `age`, as well as if they're `alive`.
   - **Hint**: Use `attr_accessor` as well as an `initialize` method.

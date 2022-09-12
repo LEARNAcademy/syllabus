@@ -69,11 +69,12 @@ Here is an example of iterating using a for loop:
 const myArray = [5, 3, 2, 9, 8]
 
 let newArray = []
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i < myArray.length; i++) {
   newArray.push(myArray[i] * 3)
 }
 
 console.log(newArray)
+// output: [15, 9, 6, 27, 24]
 ```
 
 Now let's look at this same objective with `.map()` method.
@@ -86,6 +87,7 @@ const multiplier = myArray.map((value) => {
 })
 
 console.log(multiplier)
+// output: [15, 9, 6, 27, 24]
 ```
 
 Because we are using an arrow function we can reduce the code even further. If there is only one line of code to be executed, we can remove the `return` keyword as the return is implied.
@@ -96,6 +98,7 @@ const myArray = [5, 3, 2, 9, 8]
 const multiplier = myArray.map((value) => value * 3)
 
 console.log(multiplier)
+// output: [15, 9, 6, 27, 24]
 ```
 
 And finally let's wrap the `.map()` logic in a function that can take in any array to make the function reusable. This allows us to call the `multiplier` function as many times as we deem useful.
@@ -107,7 +110,10 @@ const multiplier = (array) => {
   return array.map((value) => value * 3)
 }
 console.log(multiplier(myArray))
+// output: [15, 9, 6, 27, 24]
+
 console.log(multiplier([3, 4, 5, 6, 7]))
+// output:[9, 12, 15, 18, 21]
 ```
 
 Notice that `.map()` iterates through the specified array **AND** returns a new array with the updated values.
@@ -115,21 +121,20 @@ Notice that `.map()` iterates through the specified array **AND** returns a new 
 Here is another example with proper pseudo coding:
 
 ```javascript
-// create a function that takes in an array and returns each word capitalized
+// create a function that takes in an array of words and returns array with all the words capitalized
 const fruitArray = ["banana", "mango", "apple", "grape"]
 
 // declare a function that takes in an array
 const capitalizer = (array) => {
-  // create a local variable that maps through the array
-  let eachItem = array.map((value) => {
+  // return the array output from the map action
+  return array.map((value) => {
     // with each value access the first index and capitalize the letter then concatenate the remainder of the word
     return value[0].toUpperCase() + value.substring(1)
   })
-  // return the local variable joined into a string
-  return eachItem.join(" ")
 }
 // logging the function and pass in the array
 console.log(capitalizer(fruitArray))
+// output: ["Banana", "Mango", "Apple", "Grape"]
 ```
 
 **Note:** - This function has a return for the outer function **AND** a return for the higher-order function.
@@ -140,13 +145,13 @@ The JavaScript language supports type coercion. **Type coercion** is the evaluat
 
 ```javascript
 1 + "1"
-// --> "11"
+// output: "11"
 
 true + 1
-// --> 2
+// output: 2
 
 null + 4
-// --> 4
+// output: 4
 ```
 
 Truthy and falsy values are important to understand and can be used to the advantage of the JavaScript developer. However, this quirk of JavaScript should not be exploited at the cost of code quality.
@@ -158,7 +163,7 @@ The `.filter()` method iterates through an array and returns a new array with on
 Here is an example of iterating and returning a subset of an array using a for loop:
 
 ```javascript
-const numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
+const numbersArray = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
   let newArr = []
@@ -170,7 +175,8 @@ const onlyEven = (array) => {
   return newArr
 }
 
-console.log(onlyEven(numbersArray1))
+console.log(onlyEven(numbersArray))
+// output: [2, 4, 10, 8]
 ```
 
 In the above example, we have created a function that takes an array, loops through the array, and returns a new array containing only the even numbers.
@@ -178,13 +184,14 @@ In the above example, we have created a function that takes an array, loops thro
 Here is the same example using the filter method.
 
 ```javascript
-const numbersArray1 = [1, 2, 7, 4, 10, 8, 9]
+const numbersArray = [1, 2, 7, 4, 10, 8, 9]
 
 const onlyEven = (array) => {
   return array.filter((value) => value % 2 === 0)
 }
 
-console.log(onlyEven(numbersArray1))
+console.log(onlyEven(numbersArray))
+// output: [2, 4, 10, 8]
 ```
 
 Here is another example with proper pseudo coding:
@@ -203,6 +210,7 @@ const getOnlyOddIndex = (array) => {
 }
 // log the function and pass in the array
 console.log(getOnlyOddIndex(numbers))
+// output: [24, 9, 78]
 ```
 
 ### Map vs Filter
@@ -219,49 +227,49 @@ When deciding which higher-order function to use, remember these two differences
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. Use `.map()` or `.filter()` to complete all of the following exercises.  
 **Don't forget to pseudo code.**
 
-1. Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
+- Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
 
 ```javascript
 const arr1 = [3, 9, 15, 4, 10]
-// --> [30, 90, 150, 40, 100]
+// output: [30, 90, 150, 40, 100]
 ```
 
-2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+- Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 
 ```javascript
 const arr2 = [2, 7, 3, 5, 8, 10, 13]
-// --> [7, 3, 5, 13]
+// output: [7, 3, 5, 13]
 ```
 
-3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use the [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
+- Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use the [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
 
 ```javascript
 const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
-// --> "nicework"
+// output: "nicework"
 ```
 
-4. Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
+- Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 
 ```javascript
 const filterArrayValues = [58, "", "abcd", true, null, false, 0]
-// --> [58, "abcd", true]
+// output: [58, "abcd", true]
 ```
 
-**STRETCH Challenges**
+### 🏔 Stretch Goals
 
-1. Create a function that takes in a string and returns a new string with all the vowels removed.
+- Create a function that takes in a string and returns a new string with all the vowels removed.
 
 ```javascript
 const str = "javascript is awesome"
-// --> "jvscrpt s wsm"
+// output: "jvscrpt s wsm"
 ```
 
-2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+- Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
 ```javascript
 const arr1 = [3, 7, 10, 5, 4, 3]
 const arr2 = [7, 8, 2, 1, 5, 4]
-// --> [3, 7, 10, 5, 4, 8, 2, 1]
+// output: [3, 7, 10, 5, 4, 8, 2, 1]
 ```
 
 ---

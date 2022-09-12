@@ -2,7 +2,7 @@
 
 #### Overview
 
-Objects are a JavaScript data type that has collections of `key: value` pairs. Objects can contain static information as well as actions in the form of methods. This makes objects the intersection of data and behavior.
+Objects are a JavaScript data type that has collections of `key:value` pairs. Objects can contain static information as well as actions in the form of methods. This makes objects the intersection of data and behavior.
 
 #### Previous Lecture (1 hour, 6 min)
 
@@ -20,7 +20,7 @@ Objects are a JavaScript data type that has collections of `key: value` pairs. O
 
 #### Vocabulary
 
-- key: value pairs
+- key:value pairs
 - methods
 - dot notation
 - this
@@ -48,14 +48,14 @@ Objects consist of collections of **key:value pairs** stored in curly braces. Th
 Creating an object in JSON:
 
 ```javascript
-const person = { name: "Alex Keaton", phone: 123456789 };
+const person = { name: "Alex Keaton", phone: 123456789 }
 
 // OR written like:
 
 const person = {
   name: "Alex Keaton",
-  phone: "(123)456-7890",
-};
+  phone: "(123)456-7890"
+}
 ```
 
 In this example the keys are name and phone and the values are "Alex Keaton" and "(123)456-7890".
@@ -63,11 +63,11 @@ In this example the keys are name and phone and the values are "Alex Keaton" and
 Then we can access the value from the object with **dot notation** by calling the name of the object variable and referencing the key.
 
 ```javascript
-console.log(person.name);
-// Output: "Alex Keaton"
+console.log(person.name)
+// output: "Alex Keaton"
 
-console.log(person.phone);
-// Output: "(123)456-7890"
+console.log(person.phone)
+// output: "(123)456-7890"
 ```
 
 ### Object with Behavior: Method
@@ -79,12 +79,12 @@ const person = {
   name: "Alex Keaton",
   phone: "(123)456-7890",
   getData: function () {
-    return `${this.name}'s phone number is ${this.phone}`;
-  },
-};
+    return `${this.name}'s phone number is ${this.phone}`
+  }
+}
 
-console.log(person.getData());
-// Output: "Alex Keaton's phone number is (123)456-7890"
+console.log(person.getData())
+// output: "Alex Keaton's phone number is (123)456-7890"
 ```
 
 ### Iterating Over Arrays With Objects
@@ -100,11 +100,11 @@ const toons = [
   { name: "Goofy", animal: "dog" },
   { name: "Daffy", animal: "duck" },
   { name: "Pluto", animal: "dog" },
-  { name: "Tabby", animal: "cat" },
-];
-const animal = toons.filter((value) => value.animal === "dog");
-console.log(animal);
-// Output: [ { name: "Brian", animal: "dog" }, { name: "Goofy", animal: "dog" }, { name: "Pluto", animal: "dog" } ]
+  { name: "Tabby", animal: "cat" }
+]
+const animal = toons.filter((value) => value.animal === "dog")
+console.log(animal)
+// output: [ { name: "Brian", animal: "dog" }, { name: "Goofy", animal: "dog" }, { name: "Pluto", animal: "dog" } ]
 ```
 
 ### Object Destructuring
@@ -114,44 +114,44 @@ The **destructuring** assignment is really just a special way of assigning varia
 This is probably the most immediately useful type of destructuring. When destructuring an object you are essentially taking the properties of an object and breaking them out into individual, recallable variables.
 
 ```javascript
-// A person object
+// a person object
 const person = {
   firstName: "Bruce",
-  lastName: "Wayne",
-};
+  lastName: "Wayne"
+}
 
-// Printing property values
-console.log(person.firstName);
-// Output: "Bruce"
-console.log(person.lastName);
-// Output: "Wayne"
+// printing property values
+console.log(person.firstName)
+// output: "Bruce"
+console.log(person.lastName)
+// output: "Wayne"
 
-// Printing a full name
-console.log(`${person.firstName} ${person.lastName}`);
-// Output: "Bruce Wayne"
+// printing a full name
+console.log(`${person.firstName} ${person.lastName}`)
+// output: "Bruce Wayne"
 ```
 
 Here's what that code could like with object destructuring:
 
 ```javascript
-// A person object
+// a person object
 const person = {
   firstName: "Bruce",
-  lastName: "Wayne",
-};
+  lastName: "Wayne"
+}
 
-// Making variables for firstName and lastName using destructuring
-const { firstName, lastName } = person;
+// making variables for firstName and lastName using destructuring
+const { firstName, lastName } = person
 
-// Printing property values
-console.log(firstName);
-// Output: "Bruce"
-console.log(lastName);
-// Output: "Wayne"
+// printing property values
+console.log(firstName)
+// output: "Bruce"
+console.log(lastName)
+// output: "Wayne"
 
-// Printing a full name
-console.log(`${firstName} ${lastName}`);
-// Output: "Bruce Wayne"
+// printing a full name
+console.log(`${firstName} ${lastName}`)
+// output: "Bruce Wayne"
 ```
 
 Notice that an object destructuring assignment:
@@ -167,15 +167,15 @@ Being comfortable with object destructuring allows you to make quick work of ext
 
 ---
 
-### Challenges
+### 💻 Challenges
 
 **Consider this variable:**
 
 ```javascript
 const person = {
   firstName: "Arthur",
-  lastName: "Dent",
-};
+  lastName: "Dent"
+}
 ```
 
 - Write the code that accesses the first name of the person object.
@@ -188,8 +188,8 @@ const person = {
 ```javascript
 const product = {
   name: "chair",
-  price: 24.99,
-};
+  price: 24.99
+}
 ```
 
 - Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
@@ -201,8 +201,8 @@ const product = {
 const lunch = {
   name: "PB and Banana",
   type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"],
-};
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 ```
 
 - Write the code that accesses the ingredients property.
@@ -217,8 +217,8 @@ const animals = [
   { name: "Waffles", type: "dog", age: 7 },
   { name: "Fluffy", type: "cat", age: 14 },
   { name: "Spelunky", type: "dog", age: 4 },
-  { name: "Hank", type: "cat", age: 11 },
-];
+  { name: "Hank", type: "cat", age: 11 }
+]
 ```
 
 - Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
@@ -231,15 +231,15 @@ const animals = [
 ```javascript
 const author = {
   name: "H. G. Wells",
-  genre: "science fiction",
-};
+  genre: "science fiction"
+}
 ```
 
 - Write the code that destructures the author object so that the following code snippet will run successfully:
 
 ```javascript
-console.log(`${name} is a ${genre} author`);
-// Output: "H. G. Wells is a science fiction author"
+console.log(`${name} is a ${genre} author`)
+// output: "H. G. Wells is a science fiction author"
 ```
 
 **Consider this variable:**
@@ -247,22 +247,22 @@ console.log(`${name} is a ${genre} author`);
 ```javascript
 const pokeOne = {
   species: "Charmandar",
-  pokemon_type: "Fire",
-};
+  pokemon_type: "Fire"
+}
 
 const pokeTwo = {
   species: "Magikarp",
-  pokemon_type: "Water",
-};
+  pokemon_type: "Water"
+}
 ```
 
 - Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
 
 ```javascript
-console.log(describePokemon(pokeOne));
-// Output: "Charmandar is a Fire pokemon"
-console.log(describePokemon(pokeTwo));
-// Output: "Magikarp is a Water pokemon"
+console.log(describePokemon(pokeOne))
+// output: "Charmandar is a Fire pokemon"
+console.log(describePokemon(pokeTwo))
+// output: "Magikarp is a Water pokemon"
 ```
 
 **Consider this variable:**
@@ -270,12 +270,14 @@ console.log(describePokemon(pokeTwo));
 ```javascript
 const triangleDimensions = {
   base: 2,
-  height: 5,
-};
+  height: 5
+}
 ```
 
 - Modify the triangleDimensions object to have a method that returns the area of the triangle.
 - Write the code that will update the base to be the value of 6.
+
+### 🏔 Stretch Goals
 
 **Consider this variable:**
 
@@ -283,9 +285,9 @@ const triangleDimensions = {
 const learn = {
   cohorts: {
     2021: ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
-    2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"],
-  },
-};
+    2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf"]
+  }
+}
 ```
 
 - Write the code that logs the name of your cohort.
@@ -293,7 +295,7 @@ const learn = {
 - Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
 
 ```javascript
-// Output: ["2021 Alpha", "2021 Bravo", "2021 Charlie", "2021 Delta", "2021 Echo", "2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 Foxtrot"]
+// output: ["2021 Alpha", "2021 Bravo", "2021 Charlie", "2021 Delta", "2021 Echo", "2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 Foxtrot", "2022 Golf"]
 ```
 
 ---

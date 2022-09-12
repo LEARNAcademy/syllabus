@@ -2,8 +2,6 @@
 
 #### Overview
 
-## What is a Text-Based Game?
-
 Text-based games, or interactive fiction games, are one of the earliest styles of computer games. Text-based games create a narrative where the user is presented with a series of choices. Each decision the user makes moves the game forward in a unique way. Creating a text-based game requires a developer to create organized code that will trigger further code actions in response to the user's decision.
 
 #### Learning Objectives
@@ -15,7 +13,7 @@ Text-based games, or interactive fiction games, are one of the earliest styles o
 
 - Checkout [Playfic](http://playfic.com/explore/popular) for inspiration
 - [ASCII Art](https://www.asciiart.eu/) can add some flair to your text
-- [Output one character at a time](https://stackoverflow.com/questions/4515157/read-a-ruby-string-one-character-at-a-time-for-word-wrapping) for a
+- [Output one character at a time](https://stackoverflow.com/questions/4515157/read-a-ruby-string-one-character-at-a-time-for-word-wrapping)
 
 #### Process
 
@@ -48,7 +46,7 @@ Think about the difference between `p` and `puts`. Using `p` in development is h
 
 Keep your code simple. You have all the tools you need to effectively construct the game. This is an exercise in organization, planning, and creativity.
 
-Have fun! This medium is prime for easter eggs and inside jokes.
+Have fun! This medium is prime for easter eggs and (class appropriate) inside jokes.
 
 ---
 

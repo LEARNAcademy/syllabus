@@ -268,7 +268,7 @@ The menu UI will be in its own component as will the order UI. `App.js` controls
 - As a user, I can click a button to select an item I wish to order.
 - As a user, I can see the items I have selected to order displayed on the page.
 
-### 🏔 Stretch
+### 🏔 Stretch Goals
 
 - As a user, I can see the total cost of my current order.
 - As a user, I can see both the base total cost of my food selections and the total that includes sales tax.
