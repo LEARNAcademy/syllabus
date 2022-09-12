@@ -40,12 +40,13 @@ The `times` method is a very basic method that will repeat code a certain number
 
 ```ruby
 my_num = 5
-=> 5
+# output: 5
 
 my_num.times do
   p 'hello'
 end
 
+# output:
 'hello'
 'hello'
 'hello'
@@ -67,6 +68,7 @@ nums.each do |value|
   p value
 end
 
+# output:
 1
 2
 3
@@ -76,6 +78,7 @@ nums.each do |value|
   p value * 3
 end
 
+# output:
 3
 6
 9
@@ -86,6 +89,7 @@ Blocks typically are defined by the keyword `do` and `end` but can be wrapped in
 ```ruby
 nums.each { |value| p value * 3 }
 
+# output:
 3
 6
 9
@@ -102,6 +106,7 @@ while number < 5
   number += 1
 end
 
+# output:
 0
 1
 2
@@ -124,6 +129,8 @@ The range on its own doesn't do much but it can be used to create a list of all 
 (1..10).each do |value|
   p value
 end
+
+# output:
 1
 2
 3
@@ -140,10 +147,10 @@ Ruby ranges can also be converted to arrays. Ruby has a set of methods that will
 
 ```ruby
 (1..10).to_a
-=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 ('a'..'g').to_a
-=> ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# output: ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
 
 ### Map
@@ -158,17 +165,17 @@ my_array = [1, 2, 3, 4]
 my_array.map do |value|
   value * value
 end
-=> [1, 4, 9, 16]
+# output: [1, 4, 9, 16]
 
 my_array
-=> [1, 2, 3, 4]
+# output: [1, 2, 3, 4]
 
 # block with curly braces
 my_array.map { |value| value * value }
-=> [1, 4, 9, 16]
+# output: [1, 4, 9, 16]
 
 my_array
-=> [1, 2, 3, 16]
+# output: [1, 2, 3, 16]
 ```
 
 ### Mutators Methods
@@ -181,10 +188,10 @@ my_array = [1, 2, 3, 4]
 my_array.map! do |value|
   value * value
 end
-=> [1, 4, 9, 16]
+# output: [1, 4, 9, 16]
 
 my_array
-=> [1, 4, 9, 16]
+# output: [1, 4, 9, 16]
 ```
 
 ### ❤️ Challenges

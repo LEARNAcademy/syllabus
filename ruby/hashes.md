@@ -46,13 +46,13 @@ A hash is a collection of unique keys and their values. A hash is a bit like an 
 A **Ruby hash** is a dictionary-like container for unique keys and their corresponding values. As is common in programming, there are many ways to define the keys and values in a hash.
 
 ```ruby
-recipe = { flour: "2 1/4 cups", sugar: "1 cup", eggs: 2 }
+recipe = { flour: '2 1/4 cups', sugar: '1 cup', eggs: 2 }
 ```
 
 This structure looks very similar to an object in JavaScript. The JavaScript object pattern is widely popular in programming in general and Ruby 2.7 implemented this syntax for hashes. However, if we look at the output of the hash in the terminal we see a different syntax.
 
 ```ruby
-=> {:flour=>"2 1/4 cups", :sugar=>"1 cup", :eggs=>2}
+# output: {:flour=>"2 1/4 cups", :sugar=>"1 cup", :eggs=>2}
 ```
 
 This output illustrates an older syntax of hashes. While you won't necessarily see this version of hashes used in code there are some important things to note with this particular output.
@@ -72,7 +72,7 @@ There are two basic ways to create a new hash. The first way is to create a vari
 recipe = Hash.new
 
 p recipe
-=> {}
+# output: {}
 ```
 
 **Update**  
@@ -84,7 +84,7 @@ recipe[:sugar] = "1 cup"
 recipe[:eggs] = 1
 
 p recipe
-=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 1 }
+# output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 1 }
 ```
 
 This same syntax can be used to update the value in a hash.
@@ -93,7 +93,7 @@ This same syntax can be used to update the value in a hash.
 recipe[:eggs] = 2
 
 p recipe
-=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2 }
+# output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 2 }
 ```
 
 Now, what if we needed to update the name of a key? That requires a little bit more Ruby code.
@@ -108,7 +108,7 @@ Oops, we misspelled butter. Let's update that key to be the correct spelling usi
 recipe[:butter] = recipe.delete(:buter)
 
 p recipe
-=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2, :butter => '1 cup' }
+# output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 2, :butter => '1 cup' }
 ```
 
 **Read**  
@@ -116,24 +116,24 @@ Reading data can be done in a variety of ways. The read action returns existing 
 
 ```ruby
 p recipe
-=> { :flour => '2 1/4 cups', :sugar = >'1 cup', :eggs => 2, :butter => '1 cup' }
+# output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 2, :butter => '1 cup' }
 ```
 
 Or we can look at just a single value from the hash by logging the name of hash and the corresponding key.
 
 ```ruby
 p recipe[:sugar]
-=> '2 cups'
+# output: '2 cups'
 ```
 
 We can also look at just the keys or just the values in a given hash. Calling `.keys` will return an array with just the keys and calling `.values` will return an array with only the values
 
 ```ruby
 p recipe.keys
-=> [:flour, :sugar, :eggs, :butter]
+# output: [:flour, :sugar, :eggs, :butter]
 
 p recipe.values
- => ['2 1/4 cups', '1 cup', 2, '1 cup']
+# output: ['2 1/4 cups', '1 cup', 2, '1 cup']
 ```
 
 **Delete**  
@@ -141,10 +141,10 @@ To remove a key:value pair from the hash all together we can use the Ruby method
 
 ```ruby
 p recipe.delete(:butter)
-=> '1 cup'
+# output: '1 cup'
 
 p recipe
-=> { :flour => '2 1/4 cups', :sugar => '2 cups', :eggs => 2 }
+# output: { :flour => '2 1/4 cups', :sugar => '2 cups', :eggs => 2 }
 ```
 
 ### Enumerables and Duck Typing
@@ -160,34 +160,27 @@ Methods such as `.each` and `.map` can be applied to instance of class Hash. Sin
 When applied to a hash, `.each` can take two possible arguments: the key and the value, in that order. These arguments are simply placeholders used inside the block.
 
 ```ruby
-recipe = {flour: "2 1/4 cups", sugar: "2 cups", eggs: 2, butter: "1 cup"}
+recipe = {flour: '2 1/4 cups', sugar: '2 cups', eggs: 2, butter: '1 cup'}
 
 recipe.each do |key, value|
-  puts "Add #{value} #{key} to the bowl."
+  p "Add #{value} #{key} to the bowl."
 end
-```
 
-Output:
-
-```
-Add 2 1/4 cups flour to the bowl.
-Add 2 cups sugar to the bowl.
-Add 2 eggs to the bowl.
-Add 1 cup butter to the bowl.
+# output:
+'Add 2 1/4 cups flour to the bowl.'
+'Add 2 cups sugar to the bowl.'
+'Add 2 eggs to the bowl.'
+'Add 1 cup butter to the bowl.'
 ```
 
 `.map` also executes once for each key:value pair and returns an array of the same length.
 
 ```ruby
 recipe.map do |key, value|
-  "Add #{value} #{key} to the bowl."
+  p "Add #{value} #{key} to the bowl."
 end
-```
 
-Output:
-
-```ruby
-=> ["Add 2 1/4 cups flour to the bowl.", "Add 2 cups sugar to the bowl.", "Add 2 eggs to the bowl.", "Add 1 cup butter to the bowl."]
+# output: ['Add 2 1/4 cups flour to the bowl.', 'Add 2 cups sugar to the bowl.', 'Add 2 eggs to the bowl.', 'Add 1 cup butter to the bowl.']
 ```
 
 ---
