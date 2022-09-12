@@ -70,37 +70,41 @@ if(this thing is true) {
 All conditionals must have an `if` statement. If the set condition is true, the program will continue to run. If the condition is not true, nothing will happen.
 
 ```javascript
-var carOn = true;
+var carOn = true
 
 if (carOn === true) {
-  console.log("The engine is running.");
+  console.log("The engine is running.")
 }
+// output: "The engine is running."
 ```
 
 If we want our code to execute something if the `if` condition is not true, we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
 
 ```javascript
-var carOn = false;
+var carOn = false
 
 if (carOn === true) {
-  console.log("The engine is running.");
+  console.log("The engine is running.")
 } else {
-  console.log("The engine is off.");
+  console.log("The engine is off.")
 }
+
+// output: "The engine is off."
 ```
 
 If we want more options in our decision structure, we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is that you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
 
 ```javascript
-var carOn = true;
+var carOn = true
 
 if (carOn === true) {
-  console.log("The engine is running.");
+  console.log("The engine is running.")
 } else if (carOn === false) {
-  console.log("The engine is off.");
+  console.log("The engine is off.")
 } else {
-  console.log("The car is broken.");
+  console.log("The car is broken.")
 }
+// output: "The engine is running."
 ```
 
 ### String Interpolation
@@ -108,17 +112,19 @@ if (carOn === true) {
 When executing code logic, is it often necessary to return a detailed statement that can involve variables and additional text. Template literals, also known as **string interpolation** allows variables to be embedded into strings. Prior to this neat syntax the only way to use variables inside of strings was to use concatenation.
 
 ```javascript
-var number1 = 34;
-var number2 = 78;
-console.log(number1 + " is less than " + number2);
+var number1 = 34
+var number2 = 78
+console.log(number1 + " is less than " + number2)
+// output: "34 is less than 78"
 ```
 
 This expression can be modified using string interpolation.
 
 ```javascript
-var number1 = 34;
-var number2 = 78;
-console.log(`${number1} is less than ${number2}`);
+var number1 = 34
+var number2 = 78
+console.log(`${number1} is less than ${number2}`)
+// output: "34 is less than 78"
 ```
 
 ### Conditional Statement Examples
@@ -126,59 +132,61 @@ console.log(`${number1} is less than ${number2}`);
 **Example**: Write a statement that takes two variables and logs the one that has more letters.
 
 ```javascript
-var fruit1 = "orange";
-var fruit2 = "apple";
+var fruit1 = "orange"
+var fruit2 = "apple"
 
 if (fruit1.length > fruit2.length) {
-  console.log(`${fruit1} has more letters`);
+  console.log(`${fruit1} has more letters`)
 } else if (fruit1.length < fruit2.length) {
-  console.log(`${fruit2} has more letters`);
+  console.log(`${fruit2} has more letters`)
 } else {
-  console.log("They have the same letters");
+  console.log("They have the same letters")
 }
+// output: "orange has more letters"
 ```
 
 **Example**: Write a statement that takes a number from 0 to 100 and logs the number of digits.
 
 ```javascript
-var number = 9;
+var number = 9
 
 if (number === 100) {
-  console.log(`${number} is a triple digit number`);
+  console.log(`${number} is a triple digit number`)
 } else if (number > 9 && number < 100) {
-  console.log(`${number} is a double digit number`);
+  console.log(`${number} is a double digit number`)
 } else if (number >= 0 && number <= 9) {
-  console.log(`${number} is a single digit number`);
+  console.log(`${number} is a single digit number`)
 } else {
-  console.log("please enter a number from 0 to 100");
+  console.log("please enter a number from 0 to 100")
 }
+// output: "9 is a single digit number"
 ```
 
 ---
 
-### Challenges
+### 💻 Challenges
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 
 Make sure you try different options and change the variables to ensure properly working code.
 
-1. Write a statement that takes a variable of item and logs "in budget" if a price is $100 or less.
+- Write a statement that takes a variable of item and logs "in budget" if a price is $100 or less.
 
-2. Write a statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.
+- Write a statement that takes a variable of hungry and logs "eat food" if you are hungry and "keep coding" if you are not hungry.
 
-3. Write a statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.
+- Write a statement that takes a variable of trafficLight and logs "go" if the light is green, "slow down" if the light is yellow and "stop" if the light is red.
 
-4. Write a statement that takes two variables that are numbers and outputs the larger number. If the numbers are equal, output "the numbers are the same".
+- Write a statement that takes two variables that are numbers and outputs the larger number. If the numbers are equal, output "the numbers are the same".
 
-5. Write a statement that takes a variable of a number and logs whether the number is odd, even, or zero.
+- Write a statement that takes a variable of a number and logs whether the number is odd, even, or zero.
 
-### STRETCH Challenges
+### 🏔 Stretch Goals
 
-6. Write a statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available."
+- Write a statement that takes a variable of a grade percentage and logs the letter grade for that percentage, if the grade is 100% log "perfect score", if the grade is zero log "no grade available."
 
-7. Write a statement that takes a variable of a boolean, number, or string data type and logs the data type of the variable. **HINT**: Check out the [JavaScript typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
+- Write a statement that takes a variable of a boolean, number, or string data type and logs the data type of the variable. **HINT**: Check out the [JavaScript typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
-8. Create a password checker using a single conditional statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password!" If the user’s password is 8 or more characters OR includes `!`, then log "That password is strong enough." Log "That is not a valid password." for every other input.
+- Create a password checker using a single conditional statement. If a user inputs a password with 12 or more characters AND the password includes `!`, then log "That is a mighty strong password!" If the user’s password is 8 or more characters OR includes `!`, then log "That password is strong enough." Log "That is not a valid password." for every other input.
 
 ---
 
