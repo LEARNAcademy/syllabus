@@ -6,7 +6,7 @@ React is JavaScript library for creating user interfaces. Everything in React is
 
 #### Previous Lecture (58 min)
 
-[![YouTube](http://img.youtube.com/vi/N4bt2peqzrE/0.jpg)](https://www.youtube.com/watch?v=N4bt2peqzrE)
+[![YouTube](http://img.youtube.com/vi/t2Kf4smJnp8/0.jpg)](https://www.youtube.com/watch?v=t2Kf4smJnp8)
 
 #### Learning Objectives
 
@@ -91,7 +91,7 @@ To get started, we will focus on just the anatomy of one component. To make this
         return <h1>Hello World!</h1>
       }
 
-      const domContainer = document.querySelector('#react-container')
+      const domContainer = document.querySelector("#react-container")
       const root = ReactDOM.createRoot(domContainer)
       root.render(<App />)
     </script>
@@ -107,7 +107,7 @@ There's a lot there. But let's focus on the React portion. It's the section in `
     return <h1>Hello World!</h1>
   }
 
-  const domContainer = document.querySelector('#react-container')
+  const domContainer = document.querySelector("#react-container")
   const root = ReactDOM.createRoot(domContainer)
   root.render(<App />)
 </script>
@@ -157,7 +157,7 @@ First we will wrap the `h1` in React fragments. Then we will define another comp
         return <h3>Welcome to LEARN Academy!</h3>
       }
 
-      const domContainer = document.querySelector('#react-container')
+      const domContainer = document.querySelector("#react-container")
       const root = ReactDOM.createRoot(domContainer)
       root.render(<App />)
     </script>
@@ -200,7 +200,7 @@ Just like any other function, components must be called or invoked. A **componen
         return <h3>Welcome to LEARN Academy!</h3>
       }
 
-      const domContainer = document.querySelector('#react-container')
+      const domContainer = document.querySelector("#react-container")
       const root = ReactDOM.createRoot(domContainer)
       root.render(<App />)
     </script>
@@ -242,7 +242,7 @@ Create a new HTML file. Copy the following code into your file:
         return <></>
       }
 
-      const domContainer = document.querySelector('#react-container')
+      const domContainer = document.querySelector("#react-container")
       const root = ReactDOM.createRoot(domContainer)
       root.render(<App />)
     </script>

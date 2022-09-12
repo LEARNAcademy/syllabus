@@ -2,7 +2,7 @@
 
 #### Overview
 
-JavaScript components often need to store data and perform logic to create interactive user experiences. Data needs to be stored in a way that it can be accessed throughout the component and updated when necessary. In a React component the data is managed by a special function called a React hook. The React hook allows developers to create a variable with an initial value and a method to update the value as needed.
+React components often need to store data and perform logic to create interactive user experiences. Data needs to be stored in a way that it can be accessed throughout the component and updated when necessary. In a React component the data is managed by a special function called a React hook. The React hook allows developers to create a variable with an initial value and a method to update the value as needed.
 
 #### Previous Lecture (1 hour, 3 min)
 
@@ -37,7 +37,7 @@ JavaScript components often need to store data and perform logic to create inter
 
 #### Useful Commands
 
-- $ yarn start
+- $ `yarn start`
 - control + c (stops the server)
 - control + t (opens a new terminal tab)
 
@@ -63,7 +63,7 @@ Here is an example that creates a simple counter application in React. We start 
 **src/App.js**
 
 ```javascript
-import React from 'react'
+import React from "react"
 
 const App = () => {
   return (
@@ -84,7 +84,7 @@ Next we will add a state variable. The `useState` method is going to set an init
 **src/App.js**
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -107,7 +107,7 @@ We can reference the `count` variable by dropping it into the JSX tags to see th
 **src/App.js**
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -132,7 +132,7 @@ Now we have a working counter application!
 **src/App.js**
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -165,7 +165,7 @@ In this refactor we will add a directory inside the `src` directory named `compo
 **src/components/Counter.js**
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const Counter = () => {
   const [count, setCount] = useState(0)
@@ -193,8 +193,8 @@ export default Counter
 **src/App.js**
 
 ```javascript
-import React from 'react'
-import Counter from './components/Counter'
+import React from "react"
+import Counter from "./components/Counter"
 
 const App = () => {
   return (
@@ -225,7 +225,7 @@ As a developer, you are tasked with creating a color box application. The applic
 - As a user, every time I click the box instead of the color name, I see the background color in the box change to represent the color.
 - As a user, I can see many boxes on the page all acting independently of one another.
 
-### 🏔 Stretch
+### 🏔 Stretch Goals
 
 - As a user, I can start with no boxes on the screen
 - As a user, I can see a button to add a box
