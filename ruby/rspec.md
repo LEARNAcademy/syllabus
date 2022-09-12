@@ -1,38 +1,40 @@
 # Ruby Testing with RSpec
 
-## Overview
-- RSpec is the Ruby testing framework used for Test Driven Development which is best implemented using `red-green-refactor`
-- RSpec is a Domain Specific Language (a language specialized for a particular task) written in Ruby
-- RSpec is installed using Ruby's package manager called Rubygems
+#### Overview
+
+Testing is the process of creating automated quality assurance for code. RSpec is a unit test framework used to describe the behavior of objects in the Ruby programming language.
 
 #### Previous Lecture (1 hour 31 min)
+
 [![YouTube](http://img.youtube.com/vi/aYvliAENtA0/0.jpg)](https://youtu.be/aYvliAENtA0)
 
-## Learning Objectives
-- Exploring the syntax of RSpec
-- Practicing Test Driven Development
-- Exploring Ruby class inheritance
+#### Learning Objectives
 
-## Vocabulary
-- RSpec
-- TDD
-- BDD
-- red-green-refactor
+- can define behavior driven development
+- can define RSpec
+- can define gem
+- can explain the purpose of the describe, it, and expect statements in a test block
+- can write an RSpec test
+
+#### Vocabulary
+
+- behavior driven development (BDD)
 - gem
-- describe
-- expect
+- RubyGems
+- RSpec
+- specs
+- domaine specific language
 
-## Useful Commands
-- $ gem install rspec
+#### Additional Resources
 
-## Additional Resources
-- <a href="http://betterspecs.org" target="blank">Better Specs</a>, which shows tons of examples of what you should and shouldn't do with RSpec
-- <a href="http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/" target="blank">Ruby for Newbies</a>
-- <a href="https://cheatography.com/dwapi/cheat-sheets/rspec-examples-with-factory-girl/" target="blank">RSpec Cheat Sheet</a>
-- <a href="https://www.youtube.com/embed/fsSMuqIpu_c?ecver=2" target="blank">YouTube Video about TDD vs BDD</a>
-- Here is a discussion about <a href="https://www.youtube.com/embed/GvAzrC6-spQ?ecver=2" target="blank">TDD</a> lead by Robert Martin, also known as "Uncle Bob". He's a legend in the programming world who writes extensively about software design and architecture
+- [Better Specs](http://betterspecs.org)
+- [Ruby for Newbies](http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-with-rspec/)
+- [RSpec Cheat Sheet](https://cheatography.com/dwapi/cheat-sheets/rspec-examples-with-factory-girl)
+- [YouTube Video about TDD vs BDD](https://www.youtube.com/embed/fsSMuqIpu_c?ecver=2)
+- [Uncle Bob on TDS](https://www.youtube.com/embed/GvAzrC6-spQ?ecver=2)
 
 #### Process
+
 - `cd` into the `ruby-challenges` repository
 - Create a new branch: `rspec-initials1-initials2` (ex. rspec-aw-sp)
 - Create a new directory `mkdir` rspec-student1-student2 (ex. rspec-austin-sarah)
@@ -43,395 +45,555 @@
 - Open the RSpec folder in a text editor
 - Code!
 
-#### Fun Extra: Formatting RSpec in Terminal
-To produce a more readable RSpec printout in terminal follow these steps:
-- cd into your root directory (shortcut: $ `cd ~`)
-- Create a new file called .rspec ($ `touch .rspec`)
-- $ `open .rspec`
-- Put `--color --format documentation` in the file
-- Save
-- Voila! Beautiful RSpec code!
+#### Useful Commands
+
+- $ `gem install rspec`
+- $ `rspec rspec_spec.rb`
 
 ---
 
-## Test Driven Development
-As you begin to write more complicated applications, you'll quickly come to realize that bugs in your code can find their way into your code in very unexpected places.  You make a small change in one place, and something seemingly unrelated breaks because of it.  Without a good set of tests for your code, you may never know it, but users always find those bugs, and that causes stress, and a rush to fix the problem, which is never a good way to develop.
+### Testing Code
 
-The most important tool you have to assure that your code well written, and as free of bugs as possible is automated tests. Automated tests can be run over and over again, every single time you make a change, and every time they pass, you can rest assured that your code is solid, and users will have a great experience.
+As we begin to write more complicated applications, we'll quickly realize that bugs can find their way into code in very unexpected places. Often making a small change in one place can break something seemingly unrelated. Without a good set of tests these kinds of bugs can be hard for a developer to find.
 
-Over time, as you test every single piece of code that you write, you'll always have the confidence to ship your code.  If something does break, and it will, you'll know it right away and fix it before your code goes into production.
+The most important tool to assure that code well written and as free of bugs as possible, is automated tests. Automated tests can be run over and over again assuring the developer that the code is solid and users will have a great experience.
 
-## Overview of a TDD Process
+### Behavior Driven Development
 
-TDD stands for Test Driven Development
+**Behavior driven development** or BDD, is the methodology of creating automated tests that will assure the development team that the code created will function properly for the end user. In practice, test driven development and behavior driven development are very similar. The difference is the scope of focus. In test driven development, the goal is checking the input and output of the code. In behavior driven development, the tests assure the code will behave for the user as expected.
 
-1. Determine a feature or behavior to implement.
-2. Create the `describe` and `it` blocks pertaining to the that feature only.
-3. Put in `expects` in one `it` block to assert how the objects should behave.
-4. Run the tests and see that they fail (the `red` part of red-green refactor).
-5. Implement just enough of the software to make the tests pass (the `green` part of red-green refactor).
-6. Add more `expects` and repeat the process, until all tests pass and all features are implemented.
+Just like in test driven development, the process of behavior driven development follows the workflow of a developer creating a test, seeing the test fail, then creating the code that makes the test pass.
 
+### Ruby Gems
 
-## Ruby Gems
-A gem is library or snippet of code functionality. Gems package up Ruby code so it is easy to share with others. For this example, we ask Rubygems to install the RSpec gem using the command `gem install rspec`.
+A **gem** is library or snippet of code functionality. Gems are managed by the Ruby package manager called **RubyGems**. Gems package up Ruby code making it easier to implement commonly used functionality to an application. Gems also make it easier to share functionality with other developers.
 
-## Car Example
-So far, we have a directory called `car_challenge` and two files in that directory. One for `car` and one for the tests or `specs`. Inside the spec file put the following:
-- `require 'rspec'` which searches the gem file and brings in the appropriate RSpec code
-- `require_relative 'car'` which connects the spec file to the `car.rb` file
+### RSpec
 
-Make sure RSpec is working properly by running `rspec car_spec.rb` in the terminal.
+**RSpec** (request specification) is a domaine specific language used for testing the behavior of objects in the Ruby programming language. Developers can use RSpec to create specifications or **specs** that describe the desired output. A **domaine specific language** is a language that is used for one specific task as opposed to a general-purpose language like Ruby or JavaScript.
 
-Output in the terminal:
-```
-No examples found.
+### RSpec Files and Dependencies
 
-Finished in 0.00042 seconds (files took 0.09294 seconds to load)
-0 examples, 0 failures
-```
+To create a space for writing tests we need a Ruby file, a test file, and the appropriate RSpec dependencies. To keep the code organized it is best practice to create a new directory. Inside this directory we will create one file with the standard Ruby extension such as `rspec.rb`. Then we will create another file called `rspec_spec.rb` to hold the specs. To add RSpec to the project, we ask RubyGems to install the RSpec gem using the command $ `gem install rspec`.
 
-### 1. Car class exists
+### Anatomy of a RSpec Test
 
-**Test:**<br>
-Write the first test within the `car_spec.rb` file.
-Car has to be a thing, in other words, Car has to be a class that we can use.
+**rspec_spec.rb**
 
 ```ruby
 require 'rspec'
-require_relative 'car'
+require_relative 'rspec'
 
-describe 'Car' do
-
+describe Car do
   it 'has to be real' do
     expect{ Car.new }.to_not raise_error
   end
-
 end
 ```
 
-There are two blocks of code in the test. The first one is the `describe` block that specifies what we are testing. In this example, we are testing the class Car.
+RSpec tests consists of the following:
 
-The second one is the `it` block with a description of what will happen when a particular code snippet is run. In this example, we are expecting to be able to create a new instance of class Car.
+1. Import statements
+
+   - `require 'rspec'` will bring in the appropriate dependencies
+   - `require_relative 'rspec'` connects the spec file to the file where the code will live using the relative file path
+
+   ```ruby
+   require 'rspec'
+   require_relative 'rspec'
+   ```
+
+2. A `describe` statement
+
+   - RSpec offers us a method called `describe` that takes an argument of the class and a block
+
+   ```ruby
+   require 'rspec'
+   require_relative 'rspec'
+
+   describe Car do
+   end
+   ```
+
+3. An `it` statement
+
+   - The `it` statements is nested within the describe code block
+   - The `it` takes an argument of string, which is a statement that explains in _regular words_ what the test is doing and a block
+
+   ```ruby
+   require 'rspec'
+   require_relative 'rspec'
+
+   describe Car do
+     it 'has to be real' do
+     end
+   end
+   ```
+
+4. At least one `expect` statement
+
+   - The expect statement will execute the code
+
+   ```ruby
+   require 'rspec'
+   require_relative 'rspec'
+
+   describe Car do
+     it 'has to be real' do
+       expect{ Car.new }
+     end
+   end
+   ```
+
+5. Matcher
+
+   - A matcher is a method that contains the expected output of the code
+
+   ```ruby
+   require 'rspec'
+   require_relative 'rspec'
+
+   describe Car do
+     it 'has to be real' do
+       expect{ Car.new }.to_not raise_error
+     end
+   end
+   ```
+
+Every RSpec test requires a `describe` method, an `it` method nested within that describe block, and at least one `expect` method. In order for the `expect` to work, it needs to have a matcher method chained onto it which will compare the test output to the actual output.
+
+### Running the Test
+
+Now that we have a test we can run the test in the terminal. After ensuring we are in the correct directory, we can run the command $ `rspec rspec_spec.rb`. We can expect that the test will fail.
+
+```bash
+An error occurred while loading ./rspec_spec.rb.
+Failure/Error:
+  describe Car do
+
+    it 'has to be real' do
+      expect{ Car.new }.to_not raise_error
+    end
+
+  end
+
+NameError:
+  uninitialized constant Car
+# ./rspec_spec.rb:4:in `<top (required)>'
+No examples found.
 
 
-Run your test and we should see failure.
-
+Finished in 0.00002 seconds (files took 0.07393 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
 ```
-Finished in 0.04241 seconds (files took 0.23341 seconds to load)
-1 example, 1 failure
 
-Failed examples:
+Yay! A good failure! The output tells us exactly where the issue is in the code through an error message. The test is looking for something called `Car` and cannot find anything.
 
-rspec ./car_spec.rb:15 # Car has to be real
-```
+We can tell this is the case, because of the `NameError: uninitialized constant Car` part of the fail message. This tells us that our test is written correctly, but it failed because when our expect method tried to create an instance of the class `Car` it couldn't find it.
 
-**Code:**<br>
-Now implement a Car class in the `car.rb` file:
+### Creating the Code
+
+Now that we have a failing test, we can create the code that will make the test pass. This test is looking for a class called `Car` to exist. We can create just enough code to make the test pass.
+
+**rspec.rb**
 
 ```ruby
 class Car
 end
 ```
 
-And run the tests again. Do they pass? YES!
+**Notice:** There is no invocation of the class in this file. RSpec handles all of that in the expect method.
 
-**describe "Car" vs describe Car**<br>
-Now that we have a Car class we can change the test to use the class name `describe Car do` instead of the string `describe 'Car' do`.
+Back in the terminal we can run the same $ `rspec rspec_spec.rb` command and examine the outcome.
 
-Great. On to the next feature!
+```bash
+Finished in 0.00179 seconds (files took 0.0664 seconds to load)
+1 example, 0 failures
+```
 
-### 2. Cars have Models
+Excellent! Our test passes. Now we can move on to the next feature of the class.
 
-**Test:**<br>
-Inside the same `describe` block, we will add another `it` block. To test that Car can have a model we need to create an instance of the Car class inside the `it` block. The variable is local to that particular test.
+### Adding Class Data
 
-We will set up our test to look at two things:
-1. if Car can be assigned a model and return that assigned value. To accomplish this we can use the RSpec matcher `.to eq`
-2. if the model method returns a String. To accomplish this we can use the RSpec matcher `to be_a` and pass the class name String.
+Now that we have ensured the class exists, we can add instance variables that will hold data. Inside the same `describe` block, we will add another `it` block. To test that the class `Car` can have a model we need to create an instance of the `Car` class inside the `it` block. The variable is local to that particular test.
+
+The test will have two `expect` statements. The first one will ensure that the class can be assigned the data for a model. To accomplish this we can use the RSpec matcher `.to eq` which will look for equality. The second expect statement will ensure the model data is of class `String`. To accomplish this we can use the RSpec matcher `to be_a`.
+
+**rspec_spec.rb**
 
 ```ruby
 require 'rspec'
-require_relative 'car'
+require_relative 'rspec'
 
 describe Car do
-
   it 'has to be real' do
     expect{ Car.new }.to_not raise_error
   end
 
   it 'has a model' do
-    my_car = Car.new
-    my_car.model = 'Toyota'
-    expect(my_car.model).to be_a String
-    expect(my_car.model).to eq 'Toyota'
+    car = Car.new('Toyota')
+    expect(car.model).to eq('Toyota')
+    expect(car.model).to be_a(String)
   end
-
 end
 ```
 
-Notice there is a difference between the expect statements in our first and second test. The first one has curly braces and the second one has parentheses. Using parentheses is testing for a value. In this case, we are expecting our car's color to have a value that belongs to the class of String. In the first `it` block, we are passing a block of code `{ Car.new }` to test behavior. The behavior we expect is for the creation of a new object from the Car class.
+Ensuring we are in the correct directory, we can run the command $ `rspec rspec_spec.rb` in the terminal. We can expect that the test will fail.
 
-$ rspec car_spec.rb
-
-```
+```bash
 Failures:
 
   1) Car has a model
-     Failure/Error: my_car.model = 'Toyota'
+     Failure/Error: car = Car.new('Toyota')
 
-     NoMethodError:
-       undefined method `model=' for #<Car:0x00007fa0d891b038>
-     # ./car_spec.rb:21:in `block (2 levels) in <top (required)>'
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     # ./rspec_spec.rb:10:in `initialize'
+     # ./rspec_spec.rb:10:in `new'
+     # ./rspec_spec.rb:10:in `block (2 levels) in <top (required)>'
 
-Finished in 0.00597 seconds (files took 0.25876 seconds to load)
+Finished in 0.0016 seconds (files took 0.05854 seconds to load)
 2 examples, 1 failure
 
 Failed examples:
 
-rspec ./car_spec.rb:19 # Car has a model
+rspec ./rspec_spec.rb:9 # Car has a model
 ```
-Our test fails. Yay!
 
-**Code:**<br>
+Notice there are two tests in the test file. One test passes and one fails. The first test passes but the code for the second has not been written yet so that test fails.
 
-We will write just enough code to get our test to pass.
+**Notice:** We don't comment out the previous tests. The purpose of creating tests is to create an automated snapshot of the code base.
 
-```Ruby
+Now we can build the code to accommodate the model. It feels reasonable to have the model be assigned on initialization. By adding the `attr_accessor` helper method we can have access to getter and setter methods for model.
+
+**rspec.rb**
+
+```ruby
 class Car
-  def model=car_model
-    @model = car_model
-  end
-  def model
-    @model
+  attr_accessor :model
+
+  def initialize(model)
+    @model = model
   end
 end
 ```
 
-Now our Car class has a setter and a getter method for the Car model.
+But this introduces a new problem. The test we just wrote is passing but now the first test fails.
 
-$ rspec car_spec.rb
+```bash
+Failures:
 
+  1) Car has to be real
+     Failure/Error: expect{ Car.new }.to_not raise_error
+
+       expected no Exception, got #<ArgumentError: wrong number of arguments (given 0, expected 1)> with backtrace:
+         # ./rspec.rb:4:in `initialize'
+         # ./rspec_spec.rb:6:in `new'
+         # ./rspec_spec.rb:6:in `block (3 levels) in <top (required)>'
+         # ./rspec_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./rspec_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00709 seconds (files took 0.05835 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./rspec_spec.rb:5 # Car has to be real
 ```
-Finished in 0.01088 seconds (files took 0.2373 seconds to load)
+
+This is because we changed the code requirements to require a model on initialization. There are a few ways we can solve this problem. The one that makes the most sense here is to add a model to the first test.
+
+**rspec_spec.rb**
+
+```ruby
+require 'rspec'
+require_relative 'rspec'
+
+describe Car do
+  it 'has to be real' do
+    expect{ Car.new('Toyota') }.to_not raise_error
+  end
+
+  it 'has a model' do
+    car = Car.new('Toyota')
+    expect(car.model).to eq('Toyota')
+    expect(car.model).to be_a(String)
+  end
+end
+```
+
+Now both our tests pass.
+
+```bash
+Finished in 0.00176 seconds (files took 0.058 seconds to load)
 2 examples, 0 failures
 ```
 
-### 3. A Car's color
-Our Car can be assigned a color on initialization. If no color is given a Car should be 'unpainted' by default. The Car's color should always be a String.
+### Testing Data vs Behavior
 
-This challenge is going to require two different test cases. One if the car is given a color and another if it is not. We will create two different variables and test each outcome.
+Notice there is a difference between the expect statements in the first and second test. The `expect` statement in the first test is followed by curly braces and the second `expect` statement has parentheses. In the curly braces is a block of code `{ Car.new }` which is testing for a behavior. The behavior we are testing is the creation of a new object from the `Car` class. In the second test, we are looking for a static value. The expect statement is being passed `(car.model)` in parentheses. In this case, we are expecting our car's model to have a value and for that value to be a string.
 
-**Test:**<br>
+### Setting Default Values
+
+The next feature of the class `Car` is that it can have a color. The color can be assigned on initialization. If no color is given a new instance of class `Car` should be 'unpainted'.
+
+This feature is going to require two different `expect` statements. One will test that the car can be given a color and the other will test for the default value.
+
+**rspec_spec.rb**
+
 ```ruby
-  it 'can be given a color or be unpainted by default' do
-    my_car = Car.new
-    expect(my_car.color).to eq 'unpainted'
-    expect(my_car.color).to be_a String
-    my_red_car = Car.new 'Red'
-    expect(my_red_car.color).to eq 'Red'
+require 'rspec'
+require_relative 'rspec'
+
+describe Car do
+  it 'has to be real' do
+    expect{ Car.new('Toyota') }.to_not raise_error
   end
+
+  it 'has a model' do
+    car = Car.new('Toyota')
+    expect(car.model).to eq('Toyota')
+    expect(car.model).to be_a(String)
+  end
+
+  it 'can be given a color or be unpainted by default' do
+    car = Car.new('Toyota')
+    expect(car.color).to eq('unpainted')
+    expect(car.color).to be_a(String)
+    red_car = Car.new('Toyota', 'Red')
+    expect(red_car.color).to eq('Red')
+  end
+end
 ```
 
-$ rspec car_spec.rb
-```
+Running the test file we will see the test fail.
+
+```bash
 Failures:
 
   1) Car can be given a color or be unpainted by default
-     Failure/Error: expect(my_car.color).to eq 'unpainted'
+     Failure/Error: expect(car.color).to eq('unpainted')
 
      NoMethodError:
-       undefined method `color' for #<Car:0x00007fb86a224af0>
-     # ./car_spec.rb:28:in `block (2 levels) in <top (required)>'
+       undefined method `color' for #<Car:0x0000000127bf2728 @model="Toyota">
+     # ./rspec_spec.rb:17:in `block (2 levels) in <top (required)>'
 
-Finished in 0.0119 seconds (files took 0.38226 seconds to load)
+Finished in 0.00184 seconds (files took 0.0587 seconds to load)
 3 examples, 1 failure
 
 Failed examples:
 
-rspec ./car_spec.rb:26 # Car can be given a color or be unpainted by default
+rspec ./rspec_spec.rb:15 # Car can be given a color or be unpainted by default
 ```
 
-**Code:**<br>
+Now we can add the code to make the test pass.
+
+**rspec.rb**
+
 ```ruby
 class Car
+  attr_accessor :model, :color
 
-  def initialize color='unpainted'
+  def initialize(model, color='unpainted')
+    @model = model
     @color = color
   end
-
-  def color
-    @color
-  end
-
-  def model=car_model
-    @model = car_model
-  end
-
-  def model
-    @model
-  end
-
 end
+```
 
-```
-$ rspec car_spec.rb
-```
-Finished in 0.01098 seconds (files took 0.27763 seconds to load)
+The tests should pass. If no color is passed the value will be assigned to 'unpainted' and if there is a color passed in it will update accordingly.
+
+```bash
+Finished in 0.00185 seconds (files took 0.05706 seconds to load)
 3 examples, 0 failures
 ```
 
-And now our tests pass!
+### Testing Methods
 
-### 4. The need for Speed
-Our Car should be able to accelerate, decelerate, and tell us its current speed. Speed should be Numeric and start with a default value of 0. Ruby's Numeric class is a broad class that includes Fixnum ad Integer.
+Cars have a speed property. Speed can be measured at any given time and also change through the behavior of accelerating. The `Car` class should have a speed value that starts with a default value of the integer 0. The speed should be able to increase. This will require two different tests.
 
-Let's break this problem down into three parts: current speed starting at 0, acceleration, then deceleration.
+The first will be testing the speed property.
 
-#### Current Speed Starting at 0
+**rspec_spec.rb**
 
-**Test:**<br>
 ```ruby
-it "has a speed" do
-  my_car = Car.new
-  expect(my_car.speed).to be 0
-  expect(my_car.speed).to be_a Numeric
+require 'rspec'
+require_relative 'rspec'
+
+describe Car do
+  it 'has to be real' do
+    expect{ Car.new('Toyota') }.to_not raise_error
+  end
+
+  it 'has a model' do
+    car = Car.new('Toyota')
+    expect(car.model).to eq('Toyota')
+    expect(car.model).to be_a(String)
+  end
+
+  it 'can be given a color or be unpainted by default' do
+    car = Car.new('Toyota')
+    expect(car.color).to eq('unpainted')
+    expect(car.color).to be_a(String)
+    red_car = Car.new('Toyota', 'Red')
+    expect(red_car.color).to eq('Red')
+  end
+
+  it 'can have a speed property' do
+    car = Car.new('Toyota')
+    expect(car.speed).to eq(0)
+    expect(car.speed).to be_a(Integer)
+  end
 end
 ```
 
-$ rspec car_spec.rb
+All the other tests still pass but our new one fails as expected.
 
-```
-Finished in 0.00923 seconds (files took 0.31426 seconds to load)
+```bash
+Failures:
+
+  1) Car can have a speed property
+     Failure/Error: expect(car.speed).to eq(0)
+
+     NoMethodError:
+       undefined method `speed' for #<Car:0x00000001399490f0 @model="Toyota", @color="unpainted">
+     # ./rspec_spec.rb:25:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00193 seconds (files took 0.05765 seconds to load)
 4 examples, 1 failure
 
 Failed examples:
 
-rspec ./car_spec.rb:34 # Car has a speed
+rspec ./rspec_spec.rb:23 # Car can have a speed property
 ```
 
-**Code:**<br>
+Now we can add the speed property to the `Car` class.
+
+**rspec.rb**
+
 ```ruby
-def initialize color='unpainted', speed=0
-  @color = color
-  @speed = speed
-end
+class Car
+  attr_accessor :model, :color, :speed
 
-def speed
-  @speed
-end
-```
-
-#### Acceleration
-
-**Test:**<br>
-```ruby
-# One way to test using values:
-it "can accelerate by an amount" do
-  my_car = Car.new
-  my_car.accelerate 10
-  expect(my_car.speed).to be 10
-end
-
-# Alternative way to test using behavior:
-it "can accelerate by an amount" do
-  expect{ my_car.accelerate 10 }.to change{ my_car.speed }.from(0).to(10)
-  expect{ my_car.accelerate 20 }.to change{ my_car.speed }.from(10).to(30)
-end
-```
-
-**Code:**<br>
-```ruby
-def accelerate increase_by
-  @speed = @speed + increase_by
-end
-```
-
-#### Deceleration
-Decelerate is very similar to the accelerate test, but in order to decelerate we have to have a starting speed. The other thing to consider with decelerate is ensuring we don't get into negative speeds.
-
-**Test:**<br>
-```ruby
-it "can decelerate by an amount" do
-  my_car = Car.new
-  my_car.accelerate 20
-  expect{ my_car.decelerate 10 }.to change{ my_car.speed }.from(20).to(10)
-  expect{ my_car.decelerate 20 }.to change{ my_car.speed }.from(10).to(0)
-end
-```
-
-**Code:**<br>
-```ruby
-def decelerate decrease_by
-  if @speed >= decrease_by
-    @speed = @speed - decrease_by
-  else
+  def initialize(model, color='unpainted')
+    @model = model
+    @color = color
     @speed = 0
   end
 end
 ```
 
-### 5. The Garage
-Let's create another class called Garage to store all of our Cars. Since Garage is a new class it will get its own `describe` block.
+The next test is for the behavior of acceleration. Note the curly braces when testing the behavior.
 
-**Test:**<br>
+**rspec_spec.rb**
+
 ```ruby
-describe 'Garage' do
+require 'rspec'
+require_relative 'rspec'
 
+describe Car do
   it 'has to be real' do
-    expect{ Garage.new }.to_not raise_error
+    expect{ Car.new('Toyota') }.to_not raise_error
   end
 
+  it 'has a model' do
+    car = Car.new('Toyota')
+    expect(car.model).to eq('Toyota')
+    expect(car.model).to be_a(String)
+  end
+
+  it 'can be given a color or be unpainted by default' do
+    car = Car.new('Toyota')
+    expect(car.color).to eq('unpainted')
+    expect(car.color).to be_a(String)
+    red_car = Car.new('Toyota', 'Red')
+    expect(red_car.color).to eq('Red')
+  end
+
+  it 'can have a speed property' do
+    car = Car.new('Toyota')
+    expect(car.speed).to eq(0)
+    expect(car.speed).to be_a(Integer)
+  end
+
+  it 'can accelerate by a given amount' do
+    car = Car.new('Toyota')
+    expect{ car.accelerate(10) }.to change{ car.speed }.from(0).to(10)
+  end
 end
 ```
 
-**Code:**<br>
+We see our test fail.
+
+```bash
+Failures:
+
+  1) Car can accelerate by a given amount
+     Failure/Error: expect{ car.accelerate(10) }.to change{ car.speed }.from(0).to(10)
+
+     NoMethodError:
+       undefined method `accelerate' for #<Car:0x0000000145933d20 @model="Toyota", @color="unpainted", @speed=0>
+     # ./rspec_spec.rb:31:in `block (3 levels) in <top (required)>'
+     # ./rspec_spec.rb:31:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00377 seconds (files took 0.05818 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./rspec_spec.rb:29 # Car can accelerate by a given amount
+```
+
+Now we can add the code to make the test pass.
+
 ```ruby
-class Garage
+class Car
+  attr_accessor :model, :color, :speed
+
+  def initialize(model, color='unpainted')
+    @model = model
+    @color = color
+    @speed = 0
+  end
+
+  def accelerate mph
+    @speed += mph
+  end
 end
 ```
 
-**describe "Garage" vs describe Garage**<br>
-Now that we have a Garage class we can change the test to use the class name `describe Garage do` instead of the string `describe 'Garage' do`.
+And the tests pass.
 
-
-## Challenge: Tasklist with TDD
-
-#### For each story:
-
-- Copy the story into your RSpec file as a comment
-- Write the test(s) that class/method tests must pass
-- Then run the test(s) and see that they fail
-- Then implement the class/method, with comments, so that it passes the tests one at a time
-
-### User Stories
-
-**Story:** As a developer, I can create a Task.
-
-**Story:** As a developer, I can give a Task a title and retrieve it.
-
-**Story:** As a developer, I can give a Task a description and retrieve it.
-
-**Story:** As a developer, I can mark a Task done. Tasks should be initialized as 'in progress'.
-
-**Story:** As a developer, when I print a Task that is done, its status is shown.
-
-**Story:** As a developer, I can add all of my Tasks to a TaskList.
-
-**Story:** As a developer with a TaskList, I can print the completed items.
-
-**Story:** As a developer with a TaskList, I can print the incomplete items.
-
-### Stretch: Due Date
-
-**Story:** As a developer, I can give a Task a due date.
-**Hint:** Use the built-in Ruby Date class.
-
-**Story:** As a developer with a TaskList, I can list all the not completed items that are due today.
-
-**Story:** As a developer with a TaskList, I can list all the not completed items in order of due date.
-
-**Story:** As a developer with a TaskList with and without due dates, I can list all the not completed items in order of due date, and then the items without due dates.
+```bash
+Finished in 0.00249 seconds (files took 0.05649 seconds to load)
+5 examples, 0 failures
+```
 
 ---
+
+### ✅ Challenge: Tasks
+
+**Process**: Copy the story into your RSpec file. Write the test FIRST. Ensure the test fails correctly. Then write the code that will make the test pass.
+
+### 📚 User Stories
+
+- As a developer, I can create a Task.
+- As a developer, I can give a Task a title and retrieve it.
+- As a developer, I can give a Task a description and retrieve it.
+- As a developer, I can mark a Task done. Tasks should be initialized as 'in progress'.
+- As a developer, when I print a Task that is done, its status is shown.
+- As a developer, I can give a Task a due date.
+  **Hint:** Use the built-in Ruby `Date` class.
+
+### 🏔 Stretch Goals
+
+- As a developer, I can add all of my Tasks to a TaskList.
+- As a developer with a TaskList, I can print the completed items.
+- As a developer with a TaskList, I can print the incomplete items.
+- As a developer with a TaskList, I can list all the not completed items that are due today.
+- As a developer with a TaskList, I can list all the incomplete items in order of due date.
+- As a developer with a TaskList with and without due dates, I can list all the not completed items in order of due date, and then the items without due dates.
+
+---
+
 [Back to Syllabus](../README.md#unit-four-ruby)
