@@ -33,7 +33,6 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Attendance Policy](./tools-and-resources/attendance.md)
 - [Portfolio Resources](./tools-and-resources/portfolio.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
-- [How to Ask a Tech Question](./tools-and-resources/questions.md)
 - [Intro to Atom](./tools-and-resources/atom.md)
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [Pair Programming](./tools-and-resources/pair-programming.md)
@@ -189,6 +188,10 @@ Professional development is dedicated to preparation for internship and the upco
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
 Here we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concept we've covered so far.
+
+### Project-based Learning
+
+- [Reestablishing Expectations](./tools-and-resources/reestablishing-expectations.md)
 
 ### This Is So Fetch
 
