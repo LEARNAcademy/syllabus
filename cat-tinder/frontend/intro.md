@@ -1,4 +1,4 @@
-# Cat Tinder Introduction and Routing
+# Cat Tinder Introduction
 
 #### Overview
 
@@ -30,6 +30,7 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 
 - [Reactstrap](https://reactstrap.github.io/)
 - [React Router](https://reactrouter.com/en/main)
+- [Canva](https://www.canva.com/)
 
 #### Process
 
@@ -148,6 +149,7 @@ import CatNew from "./pages/CatNew"
 import CatShow from "./pages/CatShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import "./App.css"
 
 import mockCats from "./mockCats"
 
@@ -229,6 +231,8 @@ The `Route` component will define what url will be used to display a particular 
 1. Path: the url that will be appended to the end of the base url of the application. The base url in development is `localhost:3000`. The path gets defined by the developer. The name should be in lowercase and be descriptive of the page that will be displayed.
 2. Element: the component to be displayed when the url matches.
 
+**src/App.js.**
+
 ```javascript
 return (
   <>
@@ -239,14 +243,14 @@ return (
       <Route path="/catshow" element={<CatShow />} />
       <Route path="/catnew" element={<CatNew />} />
       <Route path="/catedit" element={<CatEdit />} />
-      <Route path="/*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
   </>
 )
 ```
 
-The last route in the list uses the `/*` syntax to direct our application to an error page. We can think of this as the `else` statement in our routes. If something happens in our application where a route is passed in that doesn't match any of the specified paths, we can direct our user to a custom error page.
+The last route in the list uses the `*` syntax to direct our application to an error page. We can think of this as the `else` statement in our routes. If something happens in our application where a route is passed in that doesn't match any of the specified paths, we can direct our user to a custom error page.
 
 ---
 
@@ -268,6 +272,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add a file to `src` called `mockCats.js` and add an array of cat objects that match the future backend data structure.
 - As a developer, I can add Reactstrap to my application.
 - As a developer, I can create header UI.
+  - HINT: Check out [Canva](https://www.canva.com/) to make fun logos.
 - As a developer, I can create footer UI.
 - As a developer, I can see the header and footer on every page.
 - As a developer, I can add some styling to the Home page.
