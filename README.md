@@ -10,43 +10,18 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ## Table of Contents
 
-- [Syllabus](#syllabus)
-  - [Table of Contents](#table-of-contents)
-  - [GitHub](#github)
-  - [Resources](#resources)
-  - [Interviews](#interviews)
-  - [First Day: Presentations](#first-day-presentations)
-  - [Unit One: Javascript Introduction](#unit-one-javascript-introduction)
-    - [Additional Topics:](#additional-topics)
-  - [Unit Two: Javascript Foundations](#unit-two-javascript-foundations)
-    - [Additional Topics:](#additional-topics-1)
-  - [Unit Three: React](#unit-three-react)
-    - [Additional Topics:](#additional-topics-2)
-  - [Unit Four: Ruby](#unit-four-ruby)
-  - [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
-    - [PostgreSQL](#postgresql)
-    - [Ruby on Rails](#ruby-on-rails)
-      - [Additional Topics:](#additional-topics-3)
-  - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
-    - [Additional Topics:](#additional-topics-4)
-  - [Unit Seven: Professional Development Week](#unit-seven-professional-development-week)
-    - [Journey to Becoming a Developer](#journey-to-becoming-a-developer)
-    - [The Job Search](#the-job-search)
-    - [The Interview](#the-interview)
-    - [Building Relationships](#building-relationships)
-    - [Wrap-up the Week](#wrap-up-the-week)
-  - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
-    - [Project-based Learning](#project-based-learning)
-    - [This Is So Fetch](#this-is-so-fetch)
-    - [Cat Tinder Frontend](#cat-tinder-frontend)
-    - [Cat Tinder Backend](#cat-tinder-backend)
-    - [Bringing it Together!](#bringing-it-together)
-    - [Cat Tinder Demos](#cat-tinder-demos)
-  - [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
-    - [Additional Topics:](#additional-topics-5)
-  - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
-  - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
-  - [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
+- [Unit One: Javascript Introduction](#unit-one-javascript-introduction)
+- [Unit Two: Javascript Foundations](#unit-two-javascript-foundations)
+- [Unit Three: React](#unit-three-react)
+- [Unit Four: Ruby](#unit-four-ruby)
+- [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
+- [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
+- [Unit Seven: Professional Development Week](#unit-seven-professional-development-week)
+- [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
+- [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
+- [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
+- [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
+- [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
 
 ## GitHub
 
@@ -63,7 +38,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [Pair Programming](./tools-and-resources/pair-programming.md)
 
-## Interviews
+## Technical Interview Resources
 
 - [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [Interview Questions](./tools-and-resources/interview-questions.md)
@@ -205,7 +180,7 @@ Professional development is dedicated to preparation for internship and the upco
 - Informational Interviews
 - Job Search & Mental Health
 
-### Wrap-up the Week
+### Wrapping Up the Week
 
 - Tech Recruiter Panel
 - One on ones with Career Services Manager
