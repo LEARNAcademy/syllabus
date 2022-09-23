@@ -1,18 +1,23 @@
 # Cat Tinder Fetch for Update Functionality
 
 #### Overview
+
 It is time to update a cat in our database! We will have two applications running on our machine at the same time. The Rails app will run on `localhost:3000` and the React app will run on `localhost:3001`.
 
 #### Learning Objectives
+
 - can make cross-origin requests from the UI to an API
 - can set state with the JSON data that is returned from our fetch request
 
 #### Process
+
 - The Rails app will run on `localhost:3000`
 - The React app will run on `localhost:3001`
 
 ---
-## Editing Cats
+
+### Editing Cats
+
 The frontend is going to send the Rails API information, then Rails will use Active Record to patch information in the database.
 
 We already have a method that logs the form data for our updated cat, so we can convert that method into a patch request.
@@ -24,8 +29,9 @@ Since our fetch needs to send data from the frontend to the backend we need to f
 Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `readCat` method to reload the cats array that will include the updated cat.
 
 **/src/App.js**
+
 ```javascript
-updateCat = (cat, id) => {
+const updateCat = (cat, id) => {
   fetch(`http://localhost:3000/cats/${id}`, {
     // converting an object to a string
     body: JSON.stringify(cat),
@@ -36,16 +42,16 @@ updateCat = (cat, id) => {
     // HTTP verb so the correct endpoint is invoked on the server
     method: "PATCH"
   })
-  .then(response => response.json())
-  .then(payload => this.readCat())
-  .catch(errors => console.log("Cat update errors:", errors))
+    .then((response) => response.json())
+    .then((payload) => this.readCat())
+    .catch((errors) => console.log("Cat update errors:", errors))
 }
 ```
 
 As long as we have set up the frontend scaffolding correctly, the cat update method should be working. But now we will see the information for the updated cat.
 
+### 🐱 Challenge: Cat Tinder Fetch Update Functionality
 
-## Challenge: Cat Tinder Fetch Update Functionality
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
 - As a developer, I can update the `updateCat` method to update information in the database.
@@ -53,4 +59,5 @@ As a developer, I have been commissioned to create an application where a user c
 - As a user, I can see the information for my updated cat.
 
 ---
+
 [Back to Syllabus](../../README.md#bringing-it-together)
