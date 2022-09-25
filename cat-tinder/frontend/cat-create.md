@@ -170,7 +170,7 @@ const CatNew = ({ createCat }) => {
 
 ---
 
-### 🐱 Challenge: Cat Create
+## Challenge: Cat Create
 
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
