@@ -57,11 +57,7 @@ Now we need to pass the `deleteCat` method through the show route.
 ```javascript
 <Route
   path="/catshow/:id"
-  render={(props) => {
-    let id = props.match.params.id
-    let cat = this.state.cats.find((cat) => cat.id === +id)
-    return <CatShow cat={cat} deleteCat={this.deleteCat} />
-  }}
+  element={<CatShow cat={cat} deleteCat={deleteCat} />}
 />
 ```
 
