@@ -7,7 +7,7 @@
 - User authentication with Devise (signup, login, logout)
 - Minimum of two database tables (one will be the Devise User table)
 - Testing - 60% code coverage
-- Deployed to Heroku
+- Deployed 
 - A [well written README](https://medium.com/chingu/keys-to-a-well-written-readme-55c53d34fe6d) with link to live application
 - "About Us" page
 - Live demo with the full team
