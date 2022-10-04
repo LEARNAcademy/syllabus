@@ -198,21 +198,21 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 
 1. [Consuming External APIs with Fetch](./external-api/fetch.md)
 
-### Cat Tinder Frontend
-
-1. [Cat Tinder Introduction](./cat-tinder/frontend/intro.md)
-2. [Cat Tinder Testing](./cat-tinder/frontend/cat-testing.md)
-3. [Cat Tinder Read Functionality](./cat-tinder/frontend/cat-read.md)
-4. [Cat Tinder Create Functionality](./cat-tinder/frontend/cat-create.md)
-5. [Cat Tinder Update Functionality](./cat-tinder/frontend/cat-update.md)
-
 ### Cat Tinder Backend
 
-6. [Cat Tinder API Introduction](./cat-tinder/backend/api-intro.md)
-7. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
-8. [Cat Tinder API CORS](./cat-tinder/backend/api-cors.md)
-9. [Cat Tinder API Endpoints](./cat-tinder/backend/api-endpoints.md)
-10. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
+1. [Cat Tinder API Introduction](./cat-tinder/backend/api-intro.md)
+2. [Cat Tinder API Seeds](./cat-tinder/backend/seeds.md)
+3. [Cat Tinder API CORS](./cat-tinder/backend/api-cors.md)
+4. [Cat Tinder API Endpoints](./cat-tinder/backend/api-endpoints.md)
+5. [Cat Tinder API Validations](./cat-tinder/backend/validations.md)
+
+### Cat Tinder Frontend
+
+6. [Cat Tinder Introduction](./cat-tinder/frontend/intro.md)
+7. [Cat Tinder Testing](./cat-tinder/frontend/cat-testing.md)
+8. [Cat Tinder Read Functionality](./cat-tinder/frontend/cat-read.md)
+9. [Cat Tinder Create Functionality](./cat-tinder/frontend/cat-create.md)
+10. [Cat Tinder Update Functionality](./cat-tinder/frontend/cat-update.md)
 
 ### Bringing it Together!
 
