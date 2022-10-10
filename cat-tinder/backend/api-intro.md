@@ -2,6 +2,8 @@
 
 #### Overview
 
+Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decoupled application that creates profiles for cats and allows a user to see other cat profiles. A decoupled application means we are actually creating two separate applications. A React application to create the views in the frontend and a Rails API that handles our data.
+
 We've looked at connecting React apps to an external API, and seen how to use JSON data to build compelling frontend applications. Now we're going to build our own API that will serve the data to our frontend.
 
 #### Previous Lecture (1 hour 2 min)
@@ -10,7 +12,7 @@ We've looked at connecting React apps to an external API, and seen how to use JS
 
 #### Learning Objectives
 
-- can create an API with data set to match frontend mockups
+- can create an API with a Cat model
 
 #### Process
 
@@ -38,11 +40,15 @@ Creating our own API opens up a new world of possibilities for building engaging
 
 The primary tool to collect input from users is an HTML form. The user fills in form fields with information that allows them to interact with the application. As a general rule, we always want to process, validate, and store user data on the server where we have more control and processing power to handle it. To accomplish this, we need to build an API.
 
-Once we have a functioning API, our React app can send the form data to the API and receive data back when requested. While there are many options for building backend APIs, Ruby on Rails is a fantastic platform.
+Once we have a functioning API, we can build a React app to send the form data to the API and receive data back when requested. While there are many options for building backend APIs, Ruby on Rails is a fantastic platform.
 
 In the architecture we are building, our front and backend will be two separate applications, giving us more freedom to choose the tools and technologies we want.
 
 Throughout your career as a developer, you'll interact with many other backend platforms. APIs can be built using Ruby, PHP, Python, Java, and even JavaScript, among many others. That might seem overwhelming, but remember that the concepts are generally the same no matter what technology is used. The server is where we process data sent by the frontend, clean and store that data, and serve updated data back to the frontend app to be consumed by the user.
+
+### Application Planning
+
+Planning is a crucial step in creating a successful application. First, it is important to have an understanding of a project as a whole. Once the overarching goals have been established, tasks must be broken down into individual actions. It is not possible to create the entire application at once and jumping between tasks is inefficient and can create code conflicts within the development team. It is necessary to outline an agreed upon task list that everyone on the team follows.
 
 #### RSpec
 
@@ -91,7 +97,6 @@ end
 ```ruby
 Rails.application.routes.draw do
   resources :cats
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 ```
 

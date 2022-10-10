@@ -49,9 +49,9 @@ Planning is a crucial step in creating a successful application. First, it is im
 
 ### Cat Tinder Frontend
 
-Right now we are focused on only the frontend of our application. To create the view of our application it is important to be thinking ahead to what the API will look like. The backend of our Cat Tinder app will have a model called `Cat`. Our cat model will have three attributes: a name, an age, what the cat enjoys doing, and an image.
+Right now we are focused on only the frontend of our application. To create the view of our application it is important to be aware of the API. The backend of our Cat Tinder app has a model called `Cat`. Our cat model will have three attributes: a name, an age, what the cat enjoys doing, and an image.
 
-In the Rails application that we will build during this project the schema will look like this:
+In the Rails application the schema looks like this:
 
 ![cat-schema](../assets/cat-schema.png)
 
@@ -182,7 +182,7 @@ By default, React is an SPA. Which means that unlike Rails, React doesn't come w
 
 First we need to add the necessary packages to our application using a `yarn` command. This adds the React Router dependencies to the `package.json` file.
 
-```
+```bash
 $ yarn add react-router-dom
 ```
 
