@@ -58,7 +58,7 @@ $ git commit -m "updated credentials"
  - 8a. Copy the value in `/config/master.key`, and use it in the following command:
 ```bash
 $ heroku config:set RAILS_MASTER_KEY=<your-master-key-here>
-
+```
 
 9. Now we need to configure the build packs that Heroku will utilize for creating the React on rails application
 ``` 
