@@ -10,16 +10,16 @@ $ brew tap heroku/brew && brew install heroku
 $ heroku --version
 ```
 
-3. Heroku has a cli browser authenticated login in   
+3. First we'll use Heroku's browser authenticated login in via the command line
   - 3a. Login to the Heroku website with your groups Heroku credentials.  
-  - 3b. Run the command 
+  - 3b. Run the following command 
 ```bash
 $ heroku login 
 ```
   - 3c. When the new chrome page opens click the button that says "log in"
 
-4. Once you are logged in "create a new app" on Heroku. 
-  - 4a. your app name will also be the name of your url
+4. Once you are logged in find the button that says "create a new app" on the Heroku dashboard. 
+  - 4a. Name your app something similar to your capstone project. your app name will also be the name of your url
   - 4b. The new app will have a a set of cli prompts. Run the prompts most similar to the following  
 ```
 $ heroku git:remote -a <your-app-name>
@@ -29,19 +29,19 @@ $ git commit -am "Making things better"
 
 ## Now we need to install some deployment tools and configurations
 
-5.  Run the following command to allow builds of your rails app to happen on intel chip based computers so the build can be sent to heroku. 
+5.  Run the following command to allow builds of your rails app to happen on intel chip based computers so the build can be sent to Heroku. 
 ```
 $ bundle lock --add-platform x86_64-linux
 $ git add .
 $ git commit -m "added x86_64 linux to platforms" 
 ```
 
-6. Update the bundle packages to support this platform
+6. Update the bundle packages to support this platform adjustment
 ```
 $ bundle update
 ```
 
-7. if you have the master.key for the project in your config file skip this step.
+7. If you have the master.key for the project in your config folder file skip this step.
   - 7a. To create a new master.key and credential.yml file run the command
 ```
 $ EDITOR="code --wait" bin/rails credentials:edit
