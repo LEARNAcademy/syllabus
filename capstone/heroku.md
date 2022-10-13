@@ -11,21 +11,21 @@ $ heroku --version
 ```
 
 3. First we'll use Heroku's browser authenticated login in via the command line
-  - 3a. Login to the Heroku website with your groups Heroku credentials.  
-  - 3b. Run the following command 
+  - a. Login to the Heroku website with your groups Heroku credentials.  
+  - b. Run the following command 
 ```bash
 $ heroku login 
 ```
-  - 3c. When the new chrome page opens click the button that says "log in"
+  - c. When the new chrome page opens click the button that says "log in"
 
 4. Once you are logged in find the button that says "create a new app" on the Heroku dashboard. 
-  - 4a. Name your app something similar to your capstone project. your app name will also be the name of your url
-  - 4b. The new app will have a a set of cli prompts. Run the prompts most similar to the following  
+  - a. Name your app something similar to your capstone project. your app name will also be the name of your url
+  - b. The new app will have a a set of cli prompts. Run the prompts most similar to the following  
 ```
 $ heroku git:remote -a <your-app-name>
 $ git commit -am "Making things better"
 ```
-  - 4c. Your project is now connected to heroku 
+  - c. Your project is now connected to heroku 
 
 ## Now we need to install some deployment tools and configurations
 
@@ -42,11 +42,11 @@ $ bundle update
 ```
 
 7. If you have the master.key for the project in your config folder file skip this step.
-  - 7a. To create a new master.key and credential.yml file run the command
+  - a. To create a new master.key and credential.yml file run the command
 ```
 $ EDITOR="code --wait" bin/rails credentials:edit
 ```
-  - 7b. this will create a new master.key and it's associated credentials.yml.enc file
+  - b. this will create a new master.key and it's associated credentials.yml.enc file
 
 ```
 $ git add .
@@ -55,7 +55,7 @@ $ git commit -m "updated credentials"
 
 
 8. We need to add the `master.key` that your app uses to decrypt your `credentials.yml.enc` file. 
- - 8a. Copy the value in `/config/master.key`, and use it in the following command:
+ - a. Copy the value in `/config/master.key`, and use it in the following command:
 ```bash
 $ heroku config:set RAILS_MASTER_KEY=<your-master-key-here>
 ```
