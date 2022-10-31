@@ -45,7 +45,7 @@ deleteCat = (id) => {
     method: "DELETE"
   })
     .then((response) => response.json())
-    .then((payload) => this.readCat())
+    .then((payload) => readCat())
     .catch((errors) => console.log("delete errors:", errors))
 }
 ```
