@@ -43,7 +43,7 @@ const createCat = (cat) => {
     method: "POST"
   })
     .then((response) => response.json())
-    .then((payload) => this.readCat())
+    .then((payload) => readCat())
     .catch((errors) => console.log("Cat create errors:", errors))
 }
 ```
