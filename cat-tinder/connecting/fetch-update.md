@@ -43,7 +43,7 @@ const updateCat = (cat, id) => {
     method: "PATCH"
   })
     .then((response) => response.json())
-    .then((payload) => this.readCat())
+    .then((payload) => readCat())
     .catch((errors) => console.log("Cat update errors:", errors))
 }
 ```
