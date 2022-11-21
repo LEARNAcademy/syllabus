@@ -92,7 +92,7 @@ The `initialize` method invokes `super` with an argument called `name`. As soon 
 
 Because of the way this code behaves, you may be tempted to say that the instance variables are also inherited. But that is not how Ruby works. In the above code, `Pointer` defines an initialize method that chains to the initialize method of its superclass. The chained method assigns values to the variable `@name` which makes those variables come into existence for a particular instance of `Pointer`.
 
-The `super` method is used in the subclass. After invoking `super` the subclass will have access to the instance variables within that method. Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super`, you are allowed to _borrow_ instance variables from the parent.
+The `super` method is used in the subclass. After invoking `super` the subclass will have access to the instance variables within that method. Instance variables are not inherited since instance variables are local to a specific instance of a class. Via `super`, you are allowed to _borrow_ instance variables from the parent. An interesting note about super is that even if you are not passing anthing through the super method, it will always require parentheses `super()`. 
 
 ### Additional Subclasses
 
