@@ -417,10 +417,10 @@ console.log(learnStudents)
 var learnStudents = "Debra Mary Jonas Joel"
 
 console.log(learnStudents.split())
-// output: ["Debra Jonas Joel"]
+// output: ["Debra Mary Jonas Joel"]
 
 console.log(learnStudents.split(""))
-// output: ["D", "e", "b", "r", "a", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
+// output: ["D", "e", "b", "r", "a", " ", "M", "a", "r", "y", " ", "J", "o", "n", "a", "s", " ", "J", "o", "e", "l"]
 
 console.log(learnStudents.split(" "))
 // output: ["Debra", "Mary", "Jonas", "Joel"]
