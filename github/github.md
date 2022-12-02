@@ -1,19 +1,18 @@
 # Git and GitHub Introduction and Configurations
 
-[Presentation](https://github.com/LEARNAcademy/git-intro/blob/master/GitAndGithub.pdf)
-
 ### Git Introduction
 
 Git is a free, open-sourced version control system widely used in the programming world. It is a very powerful tool used for sharing and working on code and allows for many people to contribute to the same code base. Git was created in 2005 by Linus Torvalds, the creator of Linux, to track changes in source code. Git is accessed primarily through the command line.
 
-History of the name git according to Linus is quite funny. 'Git' is British slang for pig headed or argumentative. This will feel very appropriate at moments when interacting with git. Torvolds says, while 'git' was a random three-letter combination that is pronounceable, and not actually used by any common UNIX command, it can change meaning, depending on your mood:  
+History of the name git according to Linus is quite funny. 'Git' is British slang for pig headed or argumentative. This will feel very appropriate at moments when interacting with git. Torvolds says, while 'git' was a random three-letter combination that is pronounceable, and not actually used by any common UNIX command, it can change meaning, depending on your mood:
 
 Global Information Tracker: if you're in a good mood, and it actually works for you. Angels sing and light suddenly fills the room  
-Goddamn Idiotic Truckload of sh*t: when it breaks.
+Godd\*\*n Idiotic Truckload of sh\*t: when it breaks.
 
 ### Git Configurations
 
 Instructions for Mac OSX
+
 - **Step 1**: Verify git version using: $ `git --version`
   - Version 2.31.1 is required for using Personal Access Tokens for GitHub Authentication
   - For more information about GitHub's Authentication migration from password credentials to tokens, visit: [Token Authentication Requirements](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
@@ -47,6 +46,7 @@ Instructions for Mac OSX
   - Change the expiration date to at least six months in the future
   - Select the following scopes:
     - `repo`
+    - `workflow`
     - `admin:org`
     - `notifications`
     - `user`
@@ -56,6 +56,7 @@ Instructions for Mac OSX
 - **Step 7**: Prompt GitHub authentication in the terminal
 
   - Make a new repo in your personal GitHub
+
     - Go to `Your repositories` located on the dropdown menu under your GitHub icon
     - Select the `New` button
     - Create a unique-repository-name
@@ -65,6 +66,7 @@ Instructions for Mac OSX
     - Copy the https url
 
   - Clone existing repo using HTTPS
+
     - $ `git clone <https for repo>`
     - $ `cd <repo-name>`
 
@@ -72,8 +74,8 @@ Instructions for Mac OSX
     - To see the branch you are currently using: $ `git branch`
     - To see the directory you are currently using: $ `pwd`
     - To see what files are located in the current directory/repo: $ `ls`
-    
   - Make a change in the repository and push a change
+
     - Create files
       - $ `touch <file-name.extension>`
     - Open text editor (the following is an example of vs code)
@@ -89,4 +91,5 @@ Instructions for Mac OSX
   - For more info, visit: [Updating Credentials](https://docs.github.com/en/github/getting-started-with-github/updating-credentials-from-the-macos-keychain)
 
 ---
+
 [Back to Syllabus](../README.md#github)
