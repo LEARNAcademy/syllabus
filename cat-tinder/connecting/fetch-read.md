@@ -25,6 +25,33 @@ It is time to connect our applications! We will switch gears back to the fronten
 
 ---
 
+### This Is So Fetch
+
+The tool that allows JavaScript developers to make asynchronous requests to an API is called **fetch**. Fetch is a method that takes an argument of the request url wrapped in a string.
+
+```javascript
+fetch("rails-api-endpoint")
+```
+
+The power of fetch is the asynchronicity. When the JavaScript program hits the fetch action it will run in the background allowing the program to continue running. What fetch provides as a placeholder is called a Promise. A **Promise** is a JavaScript class that is a proxy value for the eventual completion of an asynchronous action. A promise says, "Eventually this request will return a response. I promise."
+
+Every request will receive a response. The response could be a success in which we would get back the expected JSON payload, or it could be a failure in which we would get an error code. Since a promise is a proxy value it can be in one of three states:
+
+1. Pending - the action is currently happening
+2. Fulfilled - the action was a success and we received the expected payload
+3. Rejected - the action was a failure and we received an error
+
+The fetch method is followed by additional methods that handle the various states of a promise. The method `.then()` is a higher-order function that is chained to the end of a fetch action. A series of `.then()` methods will handle the response then the payload. If the promise returns an error the method `.catch()` will invoke error handling functionality.
+
+The most basic fetch request will follow this format:
+
+```javascript
+fetch("rails-api-endpoint")
+  .then((response) => response.json())
+  .then((payload) => console.log(payload))
+  .catch((error) => console.log(error))
+```
+
 ### Fetching Cat Data
 
 The frontend is going to ask the Rails API for information, then Rails will use Active Record to get that information out of the database and hand it back to the frontend as JSON.

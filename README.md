@@ -194,10 +194,6 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 
 - [Reestablishing Expectations](./tools-and-resources/reestablishing-expectations.md)
 
-### This Is So Fetch
-
-1. [Consuming External APIs with Fetch](./external-api/fetch.md)
-
 ### Cat Tinder Backend
 
 1. [Cat Tinder API Introduction](./cat-tinder/backend/api-intro.md)
@@ -248,6 +244,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 ## Unit Eleven: Capstone Project, Icebox
 
+- [Consuming External APIs with Fetch](./external-api/fetch.md)
 - [Rails JBuilder](./capstone/jbuilder.md)
 - [Heroku](./capstone/heroku.md)
 - [ActiveStorage](./capstone/active-storage/README.md)
