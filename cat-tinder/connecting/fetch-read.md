@@ -30,7 +30,7 @@ It is time to connect our applications! We will switch gears back to the fronten
 The tool that allows JavaScript developers to make asynchronous requests to an API is called **fetch**. Fetch is a method that takes an argument of the request url wrapped in a string.
 
 ```javascript
-fetch("https://api-url-here.com")
+fetch("rails-api-endpoint")
 ```
 
 The power of fetch is the asynchronicity. When the JavaScript program hits the fetch action it will run in the background allowing the program to continue running. What fetch provides as a placeholder is called a Promise. A **Promise** is a JavaScript class that is a proxy value for the eventual completion of an asynchronous action. A promise says, "Eventually this request will return a response. I promise."
