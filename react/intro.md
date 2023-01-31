@@ -51,7 +51,7 @@ React is JavaScript library for creating user interfaces. Everything in React is
 
 **React** is JavaScript library used to build webpages, mobile web pages, and even native mobile applications. It is component based, which means that we use it to build many small parts, and then join them together to form entire applications. This turns out to be extremely scalable. It was created from Facebook as that application grew and became more dynamic.
 
-React is a popular language because the it is structured in reusable pieces and it is designed to respond very efficiently to user interactions. When you look at a website in the browser you are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
+React is a popular language because it is structured in reusable pieces and it is designed to respond very efficiently to user interactions. When you look at a website in the browser you are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
 
 ### React Components
 
