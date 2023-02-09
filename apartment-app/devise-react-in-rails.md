@@ -208,7 +208,7 @@ App.js will only be in change of "big picture" logic. All the UI will be handled
 import React from "react"
 import Header from "./components/Header"
 
-const App = (props) {
+const App = (props) => {
   return (
     <>
       <Header {...props} />
