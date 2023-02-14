@@ -13,7 +13,6 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 - can name the six primitive data types
 - can produce boolean, string, and number data types
 - can recall the syntax of creating a variable
-- can recognize and distinguish equality, relational, logical operators
 - can recall the definition of type coercion
 - can successfully run JavaScript code directly in the node terminal
 
@@ -29,10 +28,6 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 - string
 - concatenation
 - Boolean
-- equality operator
-- relational operator
-- logical operator
-- bang operator
 - undefined
 - null
 - symbol
@@ -164,78 +159,6 @@ false
 // output: false
 ```
 
-Boolean values are very useful when making evaluations about data. **Equality operators** compare one value to the other and judge if the values equate to the same thing. If they do equate to the same a Boolean value of true is returned if not we get a Boolean value of false. There are two types of equality operators, the loose equality operator and the strict equality operator. The loose equality operator converts the two items to the same data type before making a comparison and the strict equality operator requires the two items being compared must be the same data type to return true.
-
-```javascript
-// loose equality operator
-true == false
-// output: false
-3 == "3"
-// output: true
-
-// strict equality operator
-true === false
-// output: false
-3 === "3"
-// output: false
-```
-
-**Relational operators** looks for a relationship between two values. A Boolean value is returned.
-
-```javascript
-// greater than
-2 > 0
-// output: true
-
-// less than
-4 < 8
-// output: true
-
-// greater than or equal to
-0 >= 2
-// output: false
-
-// less than or equal to
-4 <= 0.8
-// output: true
-```
-
-**Logical operators** are `and`, `or`, and `not`. The `and` and `or` operators take two complete statements and chain them together. The `logical and` is denoted by `&&` and states that both sides of the equation must be true. The `logical or` is denoted by `||` and states that at least one side of the equation must be true. The `logical not` is denoted by a **bang operator** that sets the logical opposite.
-
-```javascript
-// logical and
-true && false
-// output: false
-true && true
-// output: true
-6 > 5 && 7 > 4
-// output: true
-
-// logical or
-true || false
-// output: true
-true || true
-// output: true
-4 > 2 || 3 === "3"
-// output: true
-
-// negation
-!true
-// output: false
-!false
-// output: true
-true !== false
-// output: true
-true !== true
-// output: false
-5 !== 5
-// output: false
-!(true && false)
-// output: true
-!(true && true)
-// output: false
-```
-
 ### Undefined
 
 If a variable is created but not assigned a value, the variable is **undefined**.
@@ -255,10 +178,6 @@ JavaScript has an interesting behavior called **type coercion** that happens whe
 ```javascript
 "2" + 2
 // output: "22"
-!3
-// output: false
-!0
-// output: true
 true * 9
 // output: 9
 false * 9
@@ -276,22 +195,22 @@ $ node javascript-intro.js
 This will run the file, but there is one more thing to achieve an output. We need to wrap `console.log()` around to code we wish to view.
 
 ```javascript
-console.log(4 > 2 || 3 === "3")
-// output: true
+console.log(6 + 7)
+// output: 13
 ```
 
 ### Variables
 
-Making evaluations and comparisons about data is a key component of creating logic in programming. It is often necessary to store and label the information in a container called a **variable**. Just like in algebra, variables are placeholders for the values they are assigned. To create a variable in JavaScript we need four things:
+Manipulating data is a key component of creating logic in programming. It is often necessary to store and label the information in a container called a **variable**. Just like in algebra, variables are placeholders for the values they are assigned. To create a variable in JavaScript we need four things:
 
 1. Variable declaration
-   - In JavaScript, when creating a variable we need to announce to the program our intent. This announcement is called a **variable declaration**. There are several ways to declare variables depending on the use and placement in the program. For now we will use the variable declaration `var`.
+   - In JavaScript, when creating a variable we need to announce to the program our intent. This announcement of intent to create a variable is called a **variable declaration**. There are several ways to declare variables depending on the use and placement in the program. The declaration `var` is the most generic way to create a variable. If the variable is not going to be modified or updated it is best to use the declaration `const`.
 2. Variable name
    - Variables can be called (almost) whatever we, as developers, choose as long as we follow a couple of principles. Variable names in JavaScript should follow the naming convention of camelCase. The naming convention **camelCase** is a way to write multiple words without spaces and `itLooksLikeThis` where the first letter of the first word is lowercase and the first letter of each additional word is uppercase. Variable names should NOT start with a capital letter or have spaces. Variable names should always _communicate intent_.
-   - `var myCamelCasedVariableName`
+   - `const myCamelCasedVariableName`
 3. Assignment operator
    - Once we have declared and named a variable JavaScript will recognize its existence. At this point, the variable will have a value of `undefined`. To change that we can use a single equal sign `=` or **assignment operator** to give the variable a value.
-   - `var myCamelCasedVariableName =`
+   - `const myCamelCasedVariableName =`
 4. Data
    - The information that our variable holds can be anything as long as it is recognized by JavaScript, meaning it must be a JavaScript data type.
 
@@ -393,33 +312,25 @@ Copy the challenges into your JavaScript file. Comment out the instructions and 
 - Write the code that will log the character at the first index of the string.
 - Write the code that will log the string in all uppercase letters.
 
-Write the code that will log true or false for the following:
-
-- Is 34 divided by 3 greater than 67 divided by 2?
-- Does 5 evaluate to the same as "5"?
-- Does 5 strictly equal "5"?
-- Does !3 strictly equal 3?
-- Does `"LEARN".length` strictly equal 5 AND `"Student".length` strictly equal 7?
-- Does `"LEARN".length` strictly equal 5 OR `"Student".length` strictly equal 10?
-- Does "LEARN" contain the subset `"RN"`?
-- Does "LEARN" contain the subset `"rn"`?
-- Does "LEARN"[0] strictly equal `"l"`?
-- Modify the code from the previous question to return `true`.
-
 Consider the variables:
 
 ```javascript
-var theQuestion = "life, the universe, and everything"
-var theAnswer = 42
+const theQuestion = "life, the universe, and everything"
+const theAnswer = 42
 ```
 
 - Write the code that will log `theAnswer` divided by 2.
+- Write the code that will log the whole number remainder of `theAnswer` when divided by 3.
 - Write the code that will log the length of `theQuestion`.
+- Write the code that will log the length of `theQuestion` divided by 2.
+- Write the code that will log the length of `theQuestion` added to `theAnswer`.
 - Write the code that will log the index of the character `"f"` in the `theQuestion`.
+- Write the code that will log the index of the second comma in the `theQuestion`.
 - Write the code that will log the concatenation of the two variables.
-- Write the code that will log "the universe".
 - Write the code that will log the character `"l"` from `theQuestion`.
-- Write the code that will log whether `theQuestion.length` is greater than `theAnswer`.
+- Write the code that will extract `"the universe"` from `theQuestion`.
+- Write the code that will extract `"everything"` from `theQuestion`.
+- Write the code that will log the last character of `theQuestion` without manually counting the number of characters.
 
 ---
 

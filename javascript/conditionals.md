@@ -10,6 +10,7 @@ Decision structures, also called decision trees, conditional statements, or if/e
 
 #### Learning Objectives
 
+- can recognize and distinguish equality, relational, logical operators
 - can recall the syntax of an if/else block
 - can create a tree of if/else decisions in order to produce a solution to a given problem
 - can use console.log to see the appropriate output
@@ -17,6 +18,10 @@ Decision structures, also called decision trees, conditional statements, or if/e
 
 #### Vocabulary
 
+- equality operator
+- relational operator
+- logical operator
+- bang operator
 - conditional statement
 - if
 - else
@@ -41,6 +46,80 @@ Decision structures, also called decision trees, conditional statements, or if/e
 
 ---
 
+### JavaScript Operators
+
+Boolean is a primitive data type in JavaScript that evaluates to either `true` or `false`. Boolean values are very useful when making evaluations about data. **Equality operators** compare one value to the other and judge if the values equate to the same thing. If they do equate to the same a Boolean value of true is returned if not we get a Boolean value of false. There are two types of equality operators, the loose equality operator and the strict equality operator. The loose equality operator converts the two items to the same data type before making a comparison and the strict equality operator requires the two items being compared must be the same data type to return true.
+
+```javascript
+// loose equality operator
+true == false
+// output: false
+3 == "3"
+// output: true
+
+// strict equality operator
+true === false
+// output: false
+3 === "3"
+// output: false
+```
+
+**Relational operators** looks for a relationship between two values. A Boolean value is returned.
+
+```javascript
+// greater than
+2 > 0
+// output: true
+
+// less than
+4 < 8
+// output: true
+
+// greater than or equal to
+0 >= 2
+// output: false
+
+// less than or equal to
+4 <= 0.8
+// output: true
+```
+
+**Logical operators** are `and`, `or`, and `not`. The `and` and `or` operators take two complete statements and chain them together. The `logical and` is denoted by `&&` and states that both sides of the equation must be true. The `logical or` is denoted by `||` and states that at least one side of the equation must be true. The `logical not` is denoted by a **bang operator** that sets the logical opposite.
+
+```javascript
+// logical and
+true && false
+// output: false
+true && true
+// output: true
+6 > 5 && 7 > 4
+// output: true
+
+// logical or
+true || false
+// output: true
+true || true
+// output: true
+4 > 2 || 3 === "3"
+// output: true
+
+// negation
+!true
+// output: false
+!false
+// output: true
+true !== false
+// output: true
+true !== true
+// output: false
+5 !== 5
+// output: false
+!(true && false)
+// output: true
+!(true && true)
+// output: false
+```
+
 ### Javascript Decisions
 
 Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
@@ -49,7 +128,7 @@ In development, **conditionals statements** are commands for handling decisions.
 
 A conditional statement is defined by the JavaScript keyword **if**. The `if` function takes a statement to be evaluated. If the statement evaluates to the Boolean value of true, the corresponding code statement will be executed.
 
-```
+```javascript
 if(this thing is true) {
   console.log(do this)
 }
@@ -57,7 +136,7 @@ if(this thing is true) {
 
 A minimum need for a conditional statement is just a single `if` function. However, there is often more decisions that need to be made. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says, `if this thing is true, do this, otherwise, do this other thing.` To create an either-or statement we need to add an **else** statement will act as a catch all.
 
-```
+```javascript
 if(this thing is true) {
   console.log(do this)
 } else {
@@ -70,7 +149,7 @@ if(this thing is true) {
 All conditionals must have an `if` statement. If the set condition is true, the program will continue to run. If the condition is not true, nothing will happen.
 
 ```javascript
-var carOn = true
+const carOn = true
 
 if (carOn === true) {
   console.log("The engine is running.")
@@ -81,7 +160,7 @@ if (carOn === true) {
 If we want our code to execute something if the `if` condition is not true, we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
 
 ```javascript
-var carOn = false
+const carOn = false
 
 if (carOn === true) {
   console.log("The engine is running.")
@@ -95,7 +174,7 @@ if (carOn === true) {
 If we want more options in our decision structure, we can add an `else if` statement. This runs after the initial `if` and before the catch all `else`. The cool thing about `else if` statements is that you can use as many as you want. Once a condition is met, the program has finished running so the most specific condition should be prioritized.
 
 ```javascript
-var carOn = true
+const carOn = true
 
 if (carOn === true) {
   console.log("The engine is running.")
@@ -112,8 +191,8 @@ if (carOn === true) {
 When executing code logic, is it often necessary to return a detailed statement that can involve variables and additional text. Template literals, also known as **string interpolation** allows variables to be embedded into strings. Prior to this neat syntax the only way to use variables inside of strings was to use concatenation.
 
 ```javascript
-var number1 = 34
-var number2 = 78
+const number1 = 34
+const number2 = 78
 console.log(number1 + " is less than " + number2)
 // output: "34 is less than 78"
 ```
@@ -121,8 +200,8 @@ console.log(number1 + " is less than " + number2)
 This expression can be modified using string interpolation.
 
 ```javascript
-var number1 = 34
-var number2 = 78
+const number1 = 34
+const number2 = 78
 console.log(`${number1} is less than ${number2}`)
 // output: "34 is less than 78"
 ```
@@ -132,8 +211,8 @@ console.log(`${number1} is less than ${number2}`)
 **Example**: Write a statement that takes two variables and logs the one that has more letters.
 
 ```javascript
-var fruit1 = "orange"
-var fruit2 = "apple"
+const fruit1 = "orange"
+const fruit2 = "apple"
 
 if (fruit1.length > fruit2.length) {
   console.log(`${fruit1} has more letters`)
@@ -148,7 +227,7 @@ if (fruit1.length > fruit2.length) {
 **Example**: Write a statement that takes a number from 0 to 100 and logs the number of digits.
 
 ```javascript
-var number = 9
+const number = 9
 
 if (number === 100) {
   console.log(`${number} is a triple digit number`)
@@ -167,6 +246,19 @@ if (number === 100) {
 ### 💻 Challenges
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
+
+Write the code that will log true or false for the following:
+
+- Is 34 divided by 3 greater than 67 divided by 2?
+- Does 5 evaluate to the same as "5"?
+- Does 5 strictly equal "5"?
+- Does !3 strictly equal 3?
+- Does `"LEARN".length` strictly equal 5 AND `"Student".length` strictly equal 7?
+- Does `"LEARN".length` strictly equal 5 OR `"Student".length` strictly equal 10?
+- Does "LEARN" contain the subset `"RN"`?
+- Does "LEARN" contain the subset `"rn"`?
+- Does "LEARN"[0] strictly equal `"l"`?
+- Modify the code from the previous question to return `true`.
 
 Make sure you try different options and change the variables to ensure properly working code.
 
