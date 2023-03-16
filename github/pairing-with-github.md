@@ -70,5 +70,10 @@ Click `Create pull request`
 - Now main has been updated to include your code! Your branch did its job and can be deleted.
 <img src="assets/gh-4.png" width="650px">
 
+- Deleting the stale branch from your local machine:
+  - `git checkout main`
+  - `git pull origin main`
+  - `git branch -d <branch-name>`
+
 ---
 [Back to Syllabus](../README.md#github)
