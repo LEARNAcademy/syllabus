@@ -64,17 +64,17 @@ Class syntax conventions:
 
 ```javascript
 class Squirrel {
-  constructor() {
-    this.nutCount = 0
-  }
+	constructor() {
+		this.nutCount = 0
+	}
 
-  storeNut() {
-    this.nutCount += 1
-  }
+	storeNut() {
+		this.nutCount += 1
+	}
 
-  eatNut() {
-    this.nutCount -= 1
-  }
+	eatNut() {
+		this.nutCount -= 1
+	}
 }
 // creating the instance of the class, saved as a variable
 // rocky now has access to the class methods
@@ -100,17 +100,17 @@ Just like functions, classes are reusable. Each object created from the class is
 
 ```javascript
 class Squirrel {
-  constructor() {
-    this.nutCount = 0
-  }
+	constructor() {
+		this.nutCount = 0
+	}
 
-  storeNut() {
-    this.nutCount += 1
-  }
+	storeNut() {
+		this.nutCount += 1
+	}
 
-  eatNut() {
-    this.nutCount -= 1
-  }
+	eatNut() {
+		this.nutCount -= 1
+	}
 }
 
 const rocky = new Squirrel()
@@ -119,10 +119,10 @@ const alvin = new Squirrel()
 alvin.storeNut()
 alvin.storeNut()
 
-console.log("Rocky has ", rocky.nutCount)
+console.log('Rocky has ', rocky.nutCount)
 // output: "Rocky has 0"
 
-console.log("Alvin has ", alvin.nutCount)
+console.log('Alvin has ', alvin.nutCount)
 // output: "Alvin has 2"
 ```
 
@@ -130,17 +130,17 @@ Class instances can be used like any other 'thing' in JavaScript. We can rewrite
 
 ```javascript
 class Squirrel {
-  constructor() {
-    this.nutCount = 0
-  }
+	constructor() {
+		this.nutCount = 0
+	}
 
-  storeNut() {
-    this.nutCount += 1
-  }
+	storeNut() {
+		this.nutCount += 1
+	}
 
-  eatNut() {
-    this.nutCount -= 1
-  }
+	eatNut() {
+		this.nutCount -= 1
+	}
 }
 // create a new array
 const squirrels = []
@@ -154,7 +154,7 @@ squirrels[0].storeNut()
 
 // mapping over array to access the information from the squirrels array
 squirrels.map((value, index) => {
-  console.log(`The squirrel at index ${index} has ${value.nutCount} nuts.`)
+	console.log(`The squirrel at index ${index} has ${value.nutCount} nuts.`)
 })
 ```
 
@@ -162,34 +162,34 @@ Class instances can store any kind of data.
 
 ```javascript
 class DiceRoller {
-  constructor() {
-    this.rolls = []
-  }
+	constructor() {
+		this.rolls = []
+	}
 
-  roll() {
-    // generating a random number between 1 and 6 and pushing to the this.rolls array
-    this.rolls.push(Math.ceil(Math.random() * 6))
-  }
+	roll() {
+		// generating a random number between 1 and 6 and pushing to the this.rolls array
+		this.rolls.push(Math.ceil(Math.random() * 6))
+	}
 
-  lastRoll() {
-    //logging the last roll added to the array
-    return this.rolls[this.rolls.length - 1]
-  }
+	lastRoll() {
+		//logging the last roll added to the array
+		return this.rolls[this.rolls.length - 1]
+	}
 }
 
 const roller = new DiceRoller()
-console.log("Roll:", roller.lastRoll())
+console.log('Roll:', roller.lastRoll())
 // output: Roll: undefined
 
 roller.roll()
-console.log("Roll:", roller.lastRoll())
+console.log('Roll:', roller.lastRoll())
 // output: Roll: 6
 
 roller.roll()
-console.log("Roll:", roller.lastRoll())
+console.log('Roll:', roller.lastRoll())
 // output: Roll: 4
 
-console.log("All Rolls:", roller.rolls)
+console.log('All Rolls:', roller.rolls)
 // output: All Rolls: [ 6, 4 ]
 ```
 
@@ -197,17 +197,17 @@ The constructor method can take arguments. This creates objects with unique data
 
 ```javascript
 class Dog {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
+	constructor(name, age) {
+		this.name = name
+		this.age = age
+	}
 
-  description() {
-    return `${this.name} is a ${this.age} year old dog.`
-  }
+	description() {
+		return `${this.name} is a ${this.age} year old dog.`
+	}
 }
 // now when creating the new object, the constructor method is expecting two arguments: a name and an age
-const rover = new Dog("Rover", 4)
+const rover = new Dog('Rover', 4)
 console.log(rover.description())
 // output: "Rover is a 4 year old dog."
 ```
@@ -215,8 +215,8 @@ console.log(rover.description())
 We can use the Dog class to create many different dog objects with different properties.
 
 ```javascript
-const plato = new Dog("Plato", 8)
-const bella = new Dog("Bella", 11)
+const plato = new Dog('Plato', 8)
+const bella = new Dog('Bella', 11)
 
 console.log(plato.description())
 // output: "Plato is a 8 year old dog."
@@ -228,8 +228,8 @@ console.log(bella.description())
 Objects are still just variables that reference a class. Variables in JavaScript can be reassigned.
 
 ```javascript
-const plato = new Dog("Plato", 8)
-const bella = new Dog("Bella", 11)
+const plato = new Dog('Plato', 8)
+const bella = new Dog('Bella', 11)
 
 console.log(plato.description())
 // output: "Plato is a 8 year old dog."
@@ -254,31 +254,31 @@ console.log(bella.description())
 
 ```javascript
 class Coffee {
-  constructor(type, cream, sugar) {
-    this.type = type.toLowerCase()
-    this.cream = cream
-    this.sugar = sugar
-  }
+	constructor(type, cream, sugar) {
+		this.type = type.toLowerCase()
+		this.cream = cream
+		this.sugar = sugar
+	}
 
-  coffeeProfile() {
-    return `A ${this.type} coffee with ${this.creams()}, ${this.sugars()}`
-  }
+	coffeeProfile() {
+		return `A ${this.type} coffee with ${this.creams()}, ${this.sugars()}`
+	}
 
-  creams() {
-    if (this.cream > 1) {
-      return `${this.cream} creams`
-    } else {
-      return `${this.cream} cream`
-    }
-  }
+	creams() {
+		if (this.cream > 1) {
+			return `${this.cream} creams`
+		} else {
+			return `${this.cream} cream`
+		}
+	}
 
-  sugars() {
-    if (this.sugar > 1) {
-      return `${this.sugar} sugars`
-    } else {
-      return `${this.sugar} sugar`
-    }
-  }
+	sugars() {
+		if (this.sugar > 1) {
+			return `${this.sugar} sugars`
+		} else {
+			return `${this.sugar} sugar`
+		}
+	}
 }
 ```
 
@@ -290,7 +290,7 @@ class Coffee {
   - Write the code that makes a double shot, hazelnut latte with almond milk.
   - Log the double shot, hazelnut latte with almond milk's profile.
 - Volume of a Cylinder: create a class for `Cylinder`
-  - Write a class that calculates the volume of a Cylinder: v = πr<sup>2</sup>h (r is the radius and h is the height of the cylinder)
+  - Write a class that calculates the volume of a Cylinder: v = πr^2h (r is the radius and h is the height of the cylinder)
   - Write the code that rounds the volume of the cylinder to four decimal places
   - Write the code that creates three unique cylinder objects
 
