@@ -31,7 +31,7 @@ React is JavaScript library for creating user interfaces. Everything in React is
 
 #### Additional Resources
 
-- [React Documentation](https://reactjs.org/)
+- [React Documentation](https://react.dev/)
 
 #### Process
 

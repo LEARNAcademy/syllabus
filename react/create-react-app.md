@@ -6,7 +6,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 #### Previous Lecture (57 min)
 
-[![YouTube](http://img.youtube.com/vi/7QCs7nA6s7Y0.jpg)](https://www.youtube.com/watch?v=7QCs7nA6s7Y)
+[![YouTube](http://img.youtube.com/vi/cRAMwRFwA2g.jpg)](https://youtu.be/cRAMwRFwA2g)
 
 #### Learning Objectives
 
@@ -23,6 +23,10 @@ Until late 2016, the hardest part about working with React was just getting a ne
 - localhost:3000
 - PascalCase
 - export
+
+#### Additional Resources
+
+- [React Documentation](https://react.dev/)
 
 #### Process
 
