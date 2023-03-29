@@ -290,7 +290,7 @@ class Coffee {
   - Write the code that makes a double shot, hazelnut latte with almond milk.
   - Log the double shot, hazelnut latte with almond milk's profile.
 - Volume of a Cylinder: create a class for `Cylinder`
-  - Write a class that calculates the volume of a Cylinder: v = πr<sup>2</sup>h (r is the radius and h is the height of the cylinder)
+  - Write a class that calculates the volume of a Cylinder: v = πr^2h (r is the radius and h is the height of the cylinder)
   - Write the code that rounds the volume of the cylinder to four decimal places
   - Write the code that creates three unique cylinder objects
 
