@@ -34,7 +34,6 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Attendance Policy](./tools-and-resources/attendance.md)
 - [Portfolio Resources](./tools-and-resources/portfolio.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
-- [Intro to Atom](./tools-and-resources/atom.md)
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [Pair Programming](./tools-and-resources/pair-programming.md)
 
@@ -47,16 +46,16 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 Welcome to LEARN Academy! Here is the information covered during orientation.
 
-- [Zoom Etiquette](./orientation/zoom-etiquette.pdf)
-- [How We Work](./orientation/how-we-work.pdf)
-- [Code of Conduct](./orientation/code-of-conduct.pdf)
+- [Zoom Etiquette](./assets-first-day/zoom-etiquette.pdf)
+- [How We Work](./assets-first-day/how-we-work.pdf)
+- [Code of Conduct](./assets-first-day/code-of-conduct.pdf)
 - [Introduction to Terminal](./tools-and-resources/terminal.md)
-- [Requirements and Expectations](./orientation/requirements-and-expectations.pdf)
-- [Career Services Overview](./orientation/career-services-overview.pdf)
-- [Tech Stack](./orientation/tech-stack.pdf)
-- [Slack Overview](./orientation/slack-overview.pdf)
-- [Pair Programming](./orientation/pair-programming.pdf)
-- [HTML and CSS Fundamentals](./orientation/html-css-fundamentals.pdf)
+- [Requirements and Expectations](./assets-first-day/requirements-and-expectations.pdf)
+- [Career Services Overview](./assets-first-day/career-services-overview.pdf)
+- [Tech Stack](./assets-first-day/tech-stack.pdf)
+- [Slack Overview](./assets-first-day/slack-overview.pdf)
+- [Pair Programming](./assets-first-day/pair-programming.pdf)
+- [HTML and CSS Fundamentals](./assets-first-day/html-css-fundamentals.pdf)
 
 ## Unit One: Javascript Introduction
 
@@ -96,6 +95,9 @@ React is a powerful Javascript library used to build more complicated user inter
 4. [React Props](./react/props.md)
 5. [React Functional Props](./react/functional-props.md)
 6. [React Inputs and Events](./react/inputs.md)
+7. [Pig Latin Challenge](./react/pig-latin.md)
+8. [Treasure Hunt Challenge](./react/treasure-hunt.md)
+9. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
 
 #### Additional Topics:
 
@@ -112,7 +114,7 @@ Ruby is a backend, object-oriented programming language. Here we will cover the 
 1. [Ruby Objects and Classes](./ruby/classes-objects.md)
 1. [Ruby Class Inheritance](./ruby/inheritance.md)
 1. [Ruby Testing with RSpec](./ruby/rspec.md)
-1. [Text Based Game Challenge](./ruby/textbased-challenge.md)
+1. [Text Based Game Challenge](./ruby/textbased-game.md)
 
 ## Unit Five: Intro to Postgres and Ruby on Rails Models
 
@@ -153,38 +155,35 @@ Professional development is dedicated to preparation for internship and the upco
 
 ### Journey to Becoming a Developer
 
-- Life Map Activity
-- Elevator Pitch
-- Transferable Skills
-- Tech Industry Job Outlook
-- Remote Worker Panel
+- [Life Map Activity](./assets-pd/life-map-exercise.pdf)
+- [Transferable Skills](./assets-pd/transferable-skills.pdf)
+- [Elevator Pitch](./assets-pd/elevator-pitch.pdf)
+- [Tech Industry Job Outlook](./assets-pd/tech-industry-outlook.pdf)
 
 ### The Job Search
 
-- Building a Tech Resume
-- Crafting a Cover Letter
+- [Building a Tech Resume](./assets-pd/tech-resumes.pdf)
+- [Crafting a Cover Letter](./assets-pd/cover-letters.pdf)
 - Best Practices: Applying to Jobs
 
 ### The Interview
 
-- Salary Negotiations
-- Coding Interviews 101
-- Mock Interviews with ZEAL
+- [Coding Interviews 101](./assets-pd/tech-interviews-101.pdf)
+- [Ace the Interviews](./assets-pd/ace-the-tech-interview.pdf)
+- Mock Technical Interviews
 - Portfolio Demos
-- How to Prepare for Interviews
 
 ### Building Relationships
 
-- LinkedIn Building: An Interactive Session
-- Networking for the Introvert
-- Informational Interviews
-- Job Search & Mental Health
+- [Prentus](./assets-pd/prentus.pdf)
+- [Networking at Events](./assets-pd/networking.pdf)
+- Job Search and Mental Health
 
 ### Wrapping Up the Week
 
-- Tech Recruiter Panel
-- One on ones with Career Services Manager
-- Internship Process Overview
+- One on ones with Career Services team
+- Work-along sessions
+- Salary Negotiations
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
@@ -244,7 +243,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 ## Unit Eleven: Capstone Project, Icebox
 
-- [Consuming External APIs with Fetch](./external-api/fetch.md)
+- [Consuming External APIs with Fetch](./capstone/fetch.md)
 - [Rails JBuilder](./capstone/jbuilder.md)
 - [Heroku](./capstone/heroku.md)
 - [ActiveStorage](./capstone/active-storage/README.md)
