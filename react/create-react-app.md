@@ -43,7 +43,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 - $ `yarn create react-app`
 - $ `yarn start`
 - control + c (stops the server)
-- control + t (opens a new terminal tab)
+- command + t (opens a new terminal tab)
 
 #### Troubleshooting Tips
 

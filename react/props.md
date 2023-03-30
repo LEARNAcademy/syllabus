@@ -34,7 +34,7 @@ Props (properties) are specialized React objects used to pass information from o
 
 - $ `yarn start`
 - control + c (stops the server)
-- control + t (opens a new terminal tab)
+- command + t (opens a new terminal tab)
 
 #### Troubleshooting Tips
 

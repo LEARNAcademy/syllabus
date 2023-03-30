@@ -28,7 +28,7 @@ To create more engaging user experiences developers can add images their React a
 
 - $ yarn start
 - control + c (stops the server)
-- control + t (opens a new terminal tab)
+- command + t (opens a new terminal tab)
 
 #### Troubleshooting Tips
 
