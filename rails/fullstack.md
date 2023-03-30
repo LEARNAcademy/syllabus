@@ -285,9 +285,9 @@ At this point, we have successfully reached our MVP of allowing a user to see al
 
 As a developer, I have been commissioned to create a blog post application. As an MVP, I have been asked to create an application where a user can see all the blog post titles, see the content of any given blog post, and the ability to create blog posts.
 
-**Story 1: In order to interact with the blog post application, as a user of the application, I need to see a list of all blog posts.**
+**Story 1**: In order to interact with the blog post application, as a user of the application, I need to see a list of all blog posts.
 
-**Branch:** blog-index
+**Branch**: blog-index
 
 **Acceptance Criteria**
 
@@ -298,9 +298,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Has a view for index
 - Can see all the blog post titles on the landing page of the application
 
-**Story 2: In order to interact with the blog post application, as a user of the application, I need to see the details of one blog post.**
+**Story 2**: In order to interact with the blog post application, as a user of the application, I need to see the details of one blog post.
 
-**Branch:** blog-show
+**Branch**: blog-show
 
 **Acceptance Criteria**
 
@@ -311,9 +311,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Can see all the title and content for one blog post on a page
 - Can navigate back from the show page to the landing page
 
-**Story 3: In order to interact with the blog post application, as a user of the application, I need to see a form where I can fill out information for a new blog post.**
+**Story 3**: In order to interact with the blog post application, as a user of the application, I need to see a form where I can fill out information for a new blog post.
 
-**Branch:** blog-new
+**Branch**: blog-new
 
 **Acceptance Criteria**
 
@@ -325,9 +325,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Can see a submit button
 - Can navigate back from the new page to the landing page
 
-**Story 4: In order to interact with the blog post application, as a user of the application, I need to create a new blog post.**
+**Story 4**: In order to interact with the blog post application, as a user of the application, I need to create a new blog post.
 
-**Branch:** blog-create
+**Branch**: blog-create
 
 **Acceptance Criteria**
 
@@ -338,9 +338,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 
 ### 🏔 Stretch Goals
 
-**Story 5: In order to interact with the blog post application, as a user of the application, I need to delete a new blog post.**
+**Story 5**: In order to interact with the blog post application, as a user of the application, I need to delete a new blog post.
 
-**Branch:** blog-delete
+**Branch**: blog-delete
 
 **Acceptance Criteria**
 
@@ -350,9 +350,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Can click on the button to perform a delete action
 - Can be rerouted to the landing page when a blog post is deleted
 
-**Story 6: In order to interact with the blog post application, as a user of the application, I need to see a form where I can fill out information to edit an existing blog post.**
+**Story 6**: In order to interact with the blog post application, as a user of the application, I need to see a form where I can fill out information to edit an existing blog post.
 
-**Branch:** blog-edit
+**Branch**: blog-edit
 
 **Acceptance Criteria**
 
@@ -364,9 +364,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Can see a submit button
 - Can navigate back from the edit page to the blog post show page
 
-**Story 7: In order to interact with the blog post application, as a user of the application, I need to update an existing blog post.**
+**Story 7**: In order to interact with the blog post application, as a user of the application, I need to update an existing blog post.
 
-**Branch:** blog-update
+**Branch**: blog-update
 
 **Acceptance Criteria**
 
@@ -375,9 +375,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Can fill out a form to edit an existing blog post and click on a submit button that will trigger an update action
 - Can be rerouted to the landing page when a valid blog post is updated
 
-**Story 8: In order to create a secure blog post application, as a developer of the application, I need to ensure only valid data is entered into the database.**
+**Story 8**: In order to create a secure blog post application, as a developer of the application, I need to ensure only valid data is entered into the database.
 
-**Branch:** blog-validations
+**Branch**: blog-validations
 
 **Acceptance Criteria**
 
@@ -386,9 +386,9 @@ As a developer, I have been commissioned to create a blog post application. As a
 - Ensure that blog post titles are at least 4 characters
 - Ensure that blog post content is at least 10 characters
 
-**Story 9: In order to enjoy the blog post application, as a user of the application, I need to see pleasant styling.**
+**Story 9**: In order to enjoy the blog post application, as a user of the application, I need to see pleasant styling.
 
-**Branch:** blog-styles
+**Branch**: blog-styles
 
 **Acceptance Criteria**
 
