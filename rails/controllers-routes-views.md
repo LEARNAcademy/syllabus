@@ -187,7 +187,7 @@ class MainController < ApplicationController
 
   def question
     @our_question = 'Why did the chicken cross the road?'
-    render 'question.html.erb'
+    render 'question'
   end
 end
 ```
@@ -293,7 +293,7 @@ class MainController < ApplicationController
     else
       @result_string = "Odd"
     end
-    render "answer.html.erb"
+    render "answer"
   end
 
 end
