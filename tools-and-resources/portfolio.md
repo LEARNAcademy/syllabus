@@ -17,6 +17,26 @@ A portfolio is a website where as a developer, you can showcase your work and re
 - [LEARN's portfolio resources](https://docs.google.com/document/d/1_2BvaU30PKbmA1KIYHxGtY_VWUOH9-kuU8ra7keZ3Y8/edit)
 - [How to Build an Impressive Portfolio Sites](https://docs.google.com/document/d/1G2r9gFyyHHsTjN-d4iDT1z_Sdx2V4bN8QwFVJbMbUlo/edit#heading=h.xhmwww301747)
 - [How to Craft a Standout Web Developer Portfolio](https://docs.google.com/document/d/1A_8u1EsxaBQtL11TRmC4nGGECDlJJapVW7pdbYWRRVE/edit#heading=h.98zk7tzdwvrj) will provide some great tips on making your portfolio site and how to stand out.
+- [Medium: Top 6 Web Developer Portfolio Templates to Step Out of the Comfort Zone](https://medium.com/javarevisited/top-6-web-developer-portfolio-templates-to-step-out-of-the-comfort-zone-b2d26de9cad4)
+- Create designs with [Canva](https://www.canva.com/)
+
+### Portfolio Tech Options
+
+There are many tech options to consider when creating your portfolio. The LEARN tech stack is a great option, but you are not limited to the technology we covered in class. A great portfolio can be created using just regular HTML and CSS, or explore one of the options below for low-code, no-code, or template portfolios.
+
+- Quick one-page sites with [Carrd](https://carrd.co/)
+- No-code sites with [Webflow](https://webflow.com/)
+- [Gatsby](https://www.gatsbyjs.com/) React framework
+- [HTML5 Up](https://html5up.net/) template sites
+- [Bootstrap](https://startbootstrap.com/themes) templates and themes
+
+### Inspiration: Portfolios from LEARN Alumni
+
+- [Stephen Bilham](https://stephenbilham.github.io/Portfolio/)
+- [James Caddick](https://jamescaddick-dev.netlify.app/)
+- [Jenny Pletner](http://teampletner.com/)
+- [Ari Brashear](http://www.aribrashear.com/)
+- [Stephen OMarrah](https://somarrah.github.io/Portfolio/)
 
 ---
 
