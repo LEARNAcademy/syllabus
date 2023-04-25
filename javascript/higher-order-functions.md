@@ -224,24 +224,38 @@ When deciding which higher-order function to use, remember these two differences
 
 ### 💻 Challenges
 
-Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. Use `.map()` or `.filter()` to complete all of the following exercises.  
-**Don't forget to pseudo code.**
+Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 
-- Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
+- Create a function that takes in an array of numbers and returns an array with all numbers multiplied by 10.
 
 ```javascript
 const arr1 = [3, 9, 15, 4, 10]
 // output: [30, 90, 150, 40, 100]
 ```
 
-- Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+- Create a function that takes in an array of numbers and returns an array with all numbers divided by two.
 
 ```javascript
-const arr2 = [2, 7, 3, 5, 8, 10, 13]
-// output: [7, 3, 5, 13]
+const arr1 = [3, 9, 15, 4, 10]
+// output: [1.5, 4.5, 7.5, 2, 5]
 ```
 
-- Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use the [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
+- Create a function that takes in an array of numbers and returns an array with only odd numbers.
+
+```javascript
+const arr2 = [2, 7, 3, 5, 8, 10, 13, -9]
+// output: [7, 3, 5, 13, -9]
+```
+
+- Create a function that takes in a string of multiple words and returns an array with only the words that have an odd number of characters.
+
+```javascript
+const pumbaa =
+  "Hakuna Matata what a wonderful phrase Hakuna Matata ain't no passing craze"
+// output: ["a", "wonderful", "ain't", "passing", "craze"]
+```
+
+- Create a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use the [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator.
 
 ```javascript
 const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
@@ -255,7 +269,12 @@ const filterArrayValues = [58, "", "abcd", true, null, false, 0]
 // output: [58, "abcd", true]
 ```
 
-### 🏔 Stretch Goals
+- Create a function that takes in an array of strings and returns an array of strings with every other letter capitalized.
+
+```javascript
+const makesWackyWords = ["simba", "nala", "zazu", "rafiki"]
+// output: ["sImBa", "nAlA", "zAzU", "rAfIkI"]
+```
 
 - Create a function that takes in a string and returns a new string with all the vowels removed.
 
@@ -264,12 +283,28 @@ const str = "javascript is awesome"
 // output: "jvscrpt s wsm"
 ```
 
+- Create a function that takes in a string containing numbers and returns an array with each number at its own index and converted to the data type of number.
+
+```javascript
+const stringOfNumbers = "4574328"
+// output: [7, 8, 2, 1, 5, 4]
+```
+
+### 🏔 Stretch Goals
+
 - Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
 ```javascript
 const arr1 = [3, 7, 10, 5, 4, 3]
 const arr2 = [7, 8, 2, 1, 5, 4]
 // output: [3, 7, 10, 5, 4, 8, 2, 1]
+```
+
+- Create a function that takes in an array of mixed data types and returns the first value that is a string. **HINT:** look into the JavaScript `.find()` method.
+
+```javascript
+const allTheData = [7, null, true, 2, "yo!", false, 4, "hello!"]
+// output: "yo!"
 ```
 
 ---
