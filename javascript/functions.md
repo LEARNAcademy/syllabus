@@ -301,7 +301,7 @@ Copy the challenges into your JavaScript file. Comment out the instructions and 
 
 - Write a function named `greaterNum` that takes two numbers as arguments and returns whichever number is the greater (higher) number.
 
--. Write a function named `yelling` that takes a string as an argument and return the string in all uppercase case letters.
+- Write a function named `yelling` that takes a string as an argument and return the string in all uppercase case letters.
 
 ### 🏔 Stretch Goals
 
