@@ -1,5 +1,8 @@
 # Collaborative Coding with GitHub
 
+#### Helpful Resources
+[Git Workflow Cheatsheet](assets/git-workflow.jpg)
+
 ### What is a branch?
 A branch serves as an abstraction for the edit/stage/commit process. New commits are recorded in the history for the current branch rather than main.
 
