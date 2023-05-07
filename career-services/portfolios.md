@@ -4,11 +4,11 @@
 
 A portfolio is a website where as a developer, you can showcase your work and represent your individual brand. Portfolios are especially important for career transitioners as it functions as a stand in for professional experience. It is an opportunity to showoff your skills, talents, and interests in development. Portfolios provide more personalization than your resume and gives you an opportunity to share your story with future employees.
 
-#### Previous Lecture: Portfolio UX/UI with Lisa Panke (35 min)
+#### Portfolio UX/UI with Lisa Panke (35 min)
 
 [![YouTube](http://img.youtube.com/vi/oR6ImBFu_-A/0.jpg)](https://www.youtube.com/watch?v=oR6ImBFu_-A)
 
-#### Previous Lecture: Portfolio Talk with Paul (41 min)
+#### Portfolio Talk with Paul (41 min)
 
 [![YouTube](http://img.youtube.com/vi/rtJg3VKBvVo/0.jpg)](https://www.youtube.com/watch?v=rtJg3VKBvVo)
 
@@ -85,7 +85,7 @@ This option is great for HTML and CSS portfolios. GitHub offers every member one
 Follow the instructions **exactly!**
 
 - You must have a file named `index.html`
-- The name of your repository must be `yourusername.github.io`
+- The name of your repository must be `your-username.github.io`
 - Put your code in this repository - no nested files!
 
 ### Deploy Via Render
@@ -94,4 +94,4 @@ This option is great for static React applications. [Render.com](https://render.
 
 ---
 
-[Back to Syllabus](../README.md#resources)
+[Back to Syllabus](../README.md#unit-seven-professional-development)
