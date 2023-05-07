@@ -8,42 +8,20 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ---
 
-## Quick Links
-- [Syllabus](#syllabus)
-  - [Quick Links](#quick-links)
-  - [GitHub](#github)
-  - [Resources](#resources)
-  - [Career Services Resources](#career-services-resources)
-  - [First Day: Presentations](#first-day-presentations)
-  - [Unit One: Javascript Introduction](#unit-one-javascript-introduction)
-      - [Additional Topics:](#additional-topics)
-  - [Unit Two: Javascript Foundations](#unit-two-javascript-foundations)
-      - [Additional Topics:](#additional-topics-1)
-  - [Unit Three: React](#unit-three-react)
-      - [Additional Topics:](#additional-topics-2)
-  - [Unit Four: Ruby](#unit-four-ruby)
-  - [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
-    - [PostgreSQL](#postgresql)
-    - [Ruby on Rails](#ruby-on-rails)
-      - [Additional Topics:](#additional-topics-3)
-  - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
-      - [Additional Topics:](#additional-topics-4)
-  - [Unit Seven: Professional Development](#unit-seven-professional-development)
-    - [Journey to Becoming a Developer](#journey-to-becoming-a-developer)
-    - [The Job Search](#the-job-search)
-    - [The Interview](#the-interview)
-    - [Building Relationships](#building-relationships)
-  - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
-    - [Project-based Learning](#project-based-learning)
-    - [Cat Tinder Backend](#cat-tinder-backend)
-    - [Cat Tinder Frontend](#cat-tinder-frontend)
-    - [Bringing it Together!](#bringing-it-together)
-    - [Cat Tinder Demos](#cat-tinder-demos)
-  - [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
-      - [Additional Topics:](#additional-topics-5)
-  - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
-  - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
-  - [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
+## Table of Contents
+
+- [Unit One: Javascript Introduction](#unit-one-javascript-introduction)
+- [Unit Two: Javascript Foundations](#unit-two-javascript-foundations)
+- [Unit Three: React](#unit-three-react)
+- [Unit Four: Ruby](#unit-four-ruby)
+- [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
+- [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
+- [Unit Seven: Professional Development](#unit-seven-professional-development)
+- [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
+- [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
+- [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
+- [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
+- [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
 
 ## GitHub
 
@@ -62,16 +40,17 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ## Career Services Resources
 
-- [LinkedIn: A Guided Tour Presentation](./career-services/assets/linkedin-guided-tour.pfd)
-- [LinkedIn: All Star Status Presentation](./career-services/assets/linkedin-all-star-status.pfd)
-- [LinkedIn: Extending Your Network Presentation](./career-services/assets/linkedin-extending-network.pfd)
-- [LinkedIn: Creating Content](./career-services/assets/linkedin-creating-content.pfd)
+- [LinkedIn: A Guided Tour Presentation](./career-services/assets/linkedin-guided-tour.pdf)
+- [LinkedIn: All Star Status Presentation](./career-services/assets/linkedin-all-star-status.pdf)
+- [LinkedIn: Extending Your Network Presentation](./career-services/assets/linkedin-extending-network.pdf)
+- [LinkedIn: Creating Content](./career-services/assets/linkedin-creating-content.pdf)
 - [LinkedIn Premium and LinkedIn Learning for Veterans](https://socialimpact.linkedin.com/programs/veterans/premiumform)
 - [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
 - [Portfolio Presentation](./career-services/assets/technical-portfolios.pdf)
 - [Technical Portfolios](./career-services/portfolio.md)
+- [Networking at Events Presentation](./career-services/assets/networking.pdf)
 - [Job Listing Sites](./career-services/job-listings.md)
-- [State of Tech Resources](./career-services/)
+- [State of Tech Resources](./career-services/state-of-tech.md)
 
 ## First Day: Presentations
 
@@ -196,16 +175,13 @@ Professional development is dedicated to preparation for internship and the upco
 - [Building a Tech Resume Presentation](./career-services/assets/tech-resumes.pdf)
 - [Crafting a Cover Letter Presentation](./career-services/assets/cover-letters.pdf)
 - [Cover Letter Resources](./career-services/cover-letters.md)
+- [Prentus Presentation](./career-services/assets/prentus.pdf)
+-
 
 ### The Interview
 
 - [Coding Interviews 101 Presentation](./career-services/assets/tech-interviews-101.pdf)
 - [Ace the Interviews Presentation](./career-services/assets/ace-the-tech-interview.pdf)
-
-### Building Relationships
-
-- [Prentus Presentation](./career-services/assets/prentus.pdf)
-- [Networking at Events Presentation](./career-services/assets/networking.pdf)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
