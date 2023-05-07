@@ -2,7 +2,7 @@
 
 Welcome to the LEARN Syllabus!
 
-LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is an internship in a development role. The instructors and the career services manager support the students during internship.
+LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is an internship in a development role. The instructors and the career services team support the students during internship.
 
 This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. If you are interested in contributing to our syllabus to fix any errors, expand definitions, or further explain concepts, etc. please see our [Style Guidelines](./github/style-guidelines.md) for process details.
 
@@ -16,7 +16,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Four: Ruby](#unit-four-ruby)
 - [Unit Five: Intro to Postgres and Ruby on Rails Models](#unit-five-intro-to-postgres-and-ruby-on-rails-models)
 - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
-- [Unit Seven: Professional Development Week](#unit-seven-professional-development-week)
+- [Unit Seven: Professional Development](#unit-seven-professional-development)
 - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
 - [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
 - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
@@ -32,15 +32,25 @@ This repository is a reflection of the current status of the curriculum at LEARN
 ## Resources
 
 - [Attendance Policy](./tools-and-resources/attendance.md)
-- [Portfolio Resources](./tools-and-resources/portfolio.md)
+- [Pair Programming](./tools-and-resources/pair-programming.md)
 - [Debugging Tools](./tools-and-resources/debugging-tools.md)
 - [Wireframes](./tools-and-resources/wireframes.md)
-- [Pair Programming](./tools-and-resources/pair-programming.md)
-
-## Technical Interview Resources
-
 - [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [Interview Questions](./tools-and-resources/interview-questions.md)
+
+## Career Services Resources
+
+- [LinkedIn: A Guided Tour Presentation](./career-services/assets/linkedin-guided-tour.pdf)
+- [LinkedIn: All Star Status Presentation](./career-services/assets/linkedin-all-star-status.pdf)
+- [LinkedIn: Extending Your Network Presentation](./career-services/assets/linkedin-extending-network.pdf)
+- [LinkedIn: Creating Content](./career-services/assets/linkedin-creating-content.pdf)
+- [LinkedIn Premium and LinkedIn Learning for Veterans](https://socialimpact.linkedin.com/programs/veterans/premiumform)
+- [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
+- [Portfolio Presentation](./career-services/assets/technical-portfolios.pdf)
+- [Technical Portfolios](./career-services/portfolio.md)
+- [Networking at Events Presentation](./career-services/assets/networking.pdf)
+- [Job Listing Sites](./career-services/job-listings.md)
+- [State of Tech Resources](./career-services/state-of-tech.md)
 
 ## First Day: Presentations
 
@@ -149,41 +159,29 @@ In this section we explore all the Ruby on Rails MVC architecture has to offer. 
 
 - [Rails RESTful Routes and CRUD Actions](./rails/restful-routes-crud.md)
 
-## Unit Seven: Professional Development Week
+## Unit Seven: Professional Development
 
-Professional development is dedicated to preparation for internship and the upcoming career transition. Here we leverage LEARN's career services manager to curate tech resumes, share each student's portfolio, improve online professional presence, develop networking techniques for every personality, practice technical interview skills, and learn about salary negotiations. All resources are available in the cohort Google drive.
+Professional development is dedicated to preparation for internship and the upcoming career transition. Here we leverage LEARN's career services team to curate tech resumes, share each student's portfolio, create cover letters, develop networking techniques for every personality, and practice technical interview skills.
 
 ### Journey to Becoming a Developer
 
-- [Life Map Activity](./assets-pd/life-map-exercise.pdf)
-- [Transferable Skills](./assets-pd/transferable-skills.pdf)
-- [Elevator Pitch](./assets-pd/elevator-pitch.pdf)
-- [Tech Industry Job Outlook](./assets-pd/tech-industry-outlook.pdf)
+- [Life Map Activity Presentation](./career-services/assets/life-map-exercise.pdf)
+- [Transferable Skills Presentation](./career-services/assets/transferable-skills.pdf)
+- [Elevator Pitch Presentation](./career-services/assets/elevator-pitch.pdf)
+- [Tech Industry Job Outlook Presentation](./career-services/assets/tech-industry-outlook.pdf)
 
 ### The Job Search
 
-- [Building a Tech Resume](./assets-pd/tech-resumes.pdf)
-- [Crafting a Cover Letter](./assets-pd/cover-letters.pdf)
-- Best Practices: Applying to Jobs
+- [Building a Tech Resume Presentation](./career-services/assets/tech-resumes.pdf)
+- [Crafting a Cover Letter Presentation](./career-services/assets/cover-letters.pdf)
+- [Cover Letter Resources](./career-services/cover-letters.md)
+- [Prentus Presentation](./career-services/assets/prentus.pdf)
+-
 
 ### The Interview
 
-- [Coding Interviews 101](./assets-pd/tech-interviews-101.pdf)
-- [Ace the Interviews](./assets-pd/ace-the-tech-interview.pdf)
-- Mock Technical Interviews
-- Portfolio Demos
-
-### Building Relationships
-
-- [Prentus](./assets-pd/prentus.pdf)
-- [Networking at Events](./assets-pd/networking.pdf)
-- Job Search and Mental Health
-
-### Wrapping Up the Week
-
-- One on ones with Career Services team
-- Work-along sessions
-- Salary Negotiations
+- [Coding Interviews 101 Presentation](./career-services/assets/tech-interviews-101.pdf)
+- [Ace the Interviews Presentation](./career-services/assets/ace-the-tech-interview.pdf)
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
