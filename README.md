@@ -47,7 +47,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [LinkedIn Premium and LinkedIn Learning for Veterans](https://socialimpact.linkedin.com/programs/veterans/premiumform)
 - [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
 - [Portfolio Presentation](./career-services/assets/technical-portfolios.pdf)
-- [Technical Portfolios](./career-services/portfolio.md)
+- [Technical Portfolios](./career-services/portfolios.md)
 - [Networking at Events Presentation](./career-services/assets/networking.pdf)
 - [Job Listing Sites](./career-services/job-listings.md)
 - [State of Tech Resources](./career-services/state-of-tech.md)
