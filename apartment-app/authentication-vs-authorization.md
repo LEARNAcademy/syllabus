@@ -6,8 +6,6 @@ User authentication requires the frontend, directly controlled by the user and t
 
 ### How Authentication Works
 
-![auth workflow](https://s3.amazonaws.com/learn-site/curriculum/React/Authentication.jpg)
-
 The backend app has the primary responsibility for maintaining security in an application. It is the only place where we as developers can be certain that we have absolute control over our data. The backend uses secrets and hashing algorithms for its secure data that it sends out to browsers and other clients. The server then demands that the client sends a secure token that only the server could have generated with every request that requires authentication.
 
 ### Authentication
