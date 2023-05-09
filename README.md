@@ -176,7 +176,6 @@ Professional development is dedicated to preparation for internship and the upco
 - [Crafting a Cover Letter Presentation](./career-services/assets/cover-letters.pdf)
 - [Cover Letter Resources](./career-services/cover-letters.md)
 - [Prentus Presentation](./career-services/assets/prentus.pdf)
--
 
 ### The Interview
 
@@ -218,13 +217,21 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 
 15. [Cat Tinder Demos](./cat-tinder/demos.md)
 
-## Unit Nine: React in Rails and Authentication
+## Unit Nine: React and Rails with Authentication
 
-There are many ways to create a full-stack application. In this section we use Ruby on Rails to host React components in a monolithic application. We also introduce Devise, a Ruby gem that gives us the ability to create user login.
+In this section we further explore full-stack development in React and Ruby on Rails. We introduce Devise, a Ruby gem that gives us the ability to create user authentication and authorization.
 
-1. [React IN Rails Introduction](./apartment-app/react-in-rails.md)
-2. [React IN Rails with Devise](./apartment-app/devise-react-in-rails.md)
-3. [Apartment App Challenge](./apartment-app/apartment-app.md)
+### Apartment App Backend
+
+1. [Apartment App with Devise](./apartment-app/backend/devise.md)
+
+### Apartment App Frontend
+
+### Bringing it Together!
+
+### Apartment App Demos
+
+2. [Apartment App Demos](./apartment-app/demos.md)
 
 #### Additional Topics:
 
