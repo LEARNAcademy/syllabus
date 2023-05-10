@@ -11,7 +11,6 @@ The Apartment App API needs appropriate endpoints and validations to ensure the 
 #### Additional Resources
 
 - [Active Record Validations](https://guides.rubyonrails.org/active_record_validations.html#presence)
--
 
 #### Troubleshooting Tips
 

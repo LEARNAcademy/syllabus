@@ -228,11 +228,13 @@ In this section we further explore full-stack development in React and Ruby on R
 
 ### Apartment App Frontend
 
+3. [Apartment App React Configurations](./apartment-app/frontend/intro.md)
+
 ### Bringing it Together!
 
 ### Apartment App Demos
 
-3. [Apartment App Demos](./apartment-app/demos.md)
+4. [Apartment App Demos](./apartment-app/demos.md)
 
 ### Additional Topics
 
