@@ -18,7 +18,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
 - [Unit Seven: Professional Development](#unit-seven-professional-development)
 - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
-- [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
+- [Unit Nine: React and Rails with Authentication](#unit-nine-react-and-rails-with-authentication)
 - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
 - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
 - [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
