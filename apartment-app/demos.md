@@ -34,4 +34,4 @@ Each demo should be a total of 10 minutes. This is not a long time and will requ
 
 ---
 
-[Back to Syllabus](../../README.md#unit-nine-react-and-rails-with-authentication)
+[Back to Syllabus](../README.md#unit-nine-react-and-rails-with-authentication)

@@ -38,4 +38,4 @@ When a user logs into our website, the response will contain a cookie containing
 
 ---
 
-[Back to Syllabus](../README.md#unit-nine-react-in-rails-and-authentication)
+[Back to Syllabus](../README.md#unit-nine-react-and-rails-with-authentication)

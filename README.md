@@ -18,7 +18,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Six: Ruby on Rails](#unit-six-ruby-on-rails)
 - [Unit Seven: Professional Development](#unit-seven-professional-development)
 - [Unit Eight: Cat Tinder! Combining React and Rails](#unit-eight-cat-tinder-combining-react-and-rails)
-- [Unit Nine: React in Rails and Authentication](#unit-nine-react-in-rails-and-authentication)
+- [Unit Nine: React and Rails with Authentication](#unit-nine-react-and-rails-with-authentication)
 - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
 - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
 - [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
@@ -77,7 +77,7 @@ This is our introduction to coding through the Javascript programming language. 
 4. [JavaScript Loops](./javascript/loops.md)
 5. [JavaScript Functions](./javascript/functions.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [JavaScript Ternary Operator](./javascript/ternary.md)
 
@@ -91,7 +91,7 @@ This is our opportunity to dig a bit deeper into the Javascript programming lang
 1. [JavaScript Objects](./javascript/objects.md)
 1. [JavaScript Classes](./javascript/classes.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [JavaScript Spread Operator](./javascript/spread-operator.md)
 
@@ -109,7 +109,7 @@ React is a powerful Javascript library used to build more complicated user inter
 8. [Treasure Hunt Challenge](./react/treasure-hunt.md)
 9. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [React State with Images](./react/state-with-images.md)
 
@@ -143,7 +143,7 @@ Rails is full-stack framework built into the Ruby programming language. Here we 
 1. [Active Record Associations](./rails/associations.md)
 1. [Active Record Validations and Models Specs](./rails/validations.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [Rails Database Seeds](./rails/seeds.md)
 
@@ -155,7 +155,7 @@ In this section we explore all the Ruby on Rails MVC architecture has to offer. 
 1. [Full-stack Rails](./rails/fullstack.md)
 1. [Rails API with Postman](./rails/rails-api.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [Rails RESTful Routes and CRUD Actions](./rails/restful-routes-crud.md)
 
@@ -224,6 +224,7 @@ In this section we further explore full-stack development in React and Ruby on R
 ### Apartment App Backend
 
 1. [Apartment App with Devise](./apartment-app/backend/devise.md)
+2. [Apartment App API Endpoints and Validations](./apartment-app/backend/api.md)
 
 ### Apartment App Frontend
 
@@ -231,9 +232,9 @@ In this section we further explore full-stack development in React and Ruby on R
 
 ### Apartment App Demos
 
-2. [Apartment App Demos](./apartment-app/demos.md)
+3. [Apartment App Demos](./apartment-app/demos.md)
 
-#### Additional Topics:
+### Additional Topics
 
 - [Authorization and Authentication](./apartment-app/authentication-vs-authorization.md)
 
