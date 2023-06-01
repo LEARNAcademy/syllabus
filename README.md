@@ -46,6 +46,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [LinkedIn: Creating Content](./career-services/assets/linkedin-creating-content.pdf)
 - [LinkedIn Premium and LinkedIn Learning for Veterans](https://socialimpact.linkedin.com/programs/veterans/premiumform)
 - [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
+- [Your Why](./career-services/assets/your-why.pdf)
 - [Portfolio Presentation](./career-services/assets/technical-portfolios.pdf)
 - [Technical Portfolios](./career-services/portfolios.md)
 - [Networking at Events Presentation](./career-services/assets/networking.pdf)
