@@ -50,7 +50,7 @@ import { Form, FormGroup, Input, Label } from "reactstrap"
 
 ### Cats in State
 
-When we create new cats we want to collect the user input and transmit the data as a set. We can accomplish this by switching our inputs to be “controlled components,” meaning watched by state. Or, in other words, add a `value`, and an `onChange` attribute to the inputs. Then we can manage the value of the inputs in the components’ internal state until the form is submitted.
+When we create new cats we want to collect the user input and transmit the data as a set. We can accomplish this by switching our inputs to be "controlled components," meaning watched by state. Or, in other words, add a `value`, and an `onChange` attribute to the inputs. Then we can manage the value of the inputs in the components' internal state until the form is submitted.
 
 By adding a form object to the initial state we can have a complete cat object that can be passed to `App.js` as a single unit rather than as individual values.
 

@@ -4,8 +4,6 @@
 
 Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decoupled application that creates profiles for cats and allows a user to see other cat profiles. A decoupled application means we are actually creating two separate applications. A React application to create the views in the frontend and a Rails API that handles our data.
 
-We've looked at connecting React apps to an external API, and seen how to use JSON data to build compelling frontend applications. Now we're going to build our own API that will serve the data to our frontend.
-
 #### Previous Lecture (1 hour 2 min)
 
 [![YouTube](http://img.youtube.com/vi/CSzqYFrRAtw/0.jpg)](https://www.youtube.com/watch?v=CSzqYFrRAtw)
@@ -24,6 +22,7 @@ We've looked at connecting React apps to an external API, and seen how to use JS
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
+- Ask your instructors for branch protection
 - $ `rails server`
 
 #### Troubleshooting Tips

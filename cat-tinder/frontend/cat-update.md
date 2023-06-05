@@ -11,13 +11,14 @@ There are four general actions a developer will consider when building an applic
 
 #### Additional Resources
 
-- [Reactstrap Form Components](https://reactstrap.github.io/components/form/)
+- [Reactstrap Form Components](https://reactstrap.github.io/?path=/docs/components-forms--input)
+- [React Router Navlink](https://reactrouter.com/en/main/components/nav-link)
 
 ---
 
 ### Cat Edit Form
 
-The initial setup for the CatEdit component will look a lot like the form we created in the [CatNew](./cat-create.md) component. **Remember**, we are just using mock data so we won't actually see an update taking place.
+The initial setup for the CatEdit component will look a lot like the form we created in the CatNew component. **Remember**, we are just using mock data so we won't actually see an update taking place.
 
 **src/pages/CatEdit.js**
 
@@ -118,7 +119,7 @@ Now, if we navigate to `localhost:3000/catedit/1` we should see a form. When the
 
 ### Navigating to Cat Edit
 
-How we arrive at the edit page is important, since we need to have the id of our cat as a param. A logical approach is to allow our user to move from the show page (where we already have an id param) to the edit page. We can use the [React Router NavLink](https://reactrouter.com/web/api/NavLink) to call our `"/catedit/:id"` route and pass the param of the cat we are currently viewing.
+How we arrive at the edit page is important, since we need to have the id of our cat as a param. A logical approach is to allow our user to move from the show page (where we already have an id param) to the edit page. We can use the React Router `<NavLink>` to call our `"/catedit/:id"` route and pass the param of the cat we are currently viewing.
 
 **src/pages/CatShow.js**
 

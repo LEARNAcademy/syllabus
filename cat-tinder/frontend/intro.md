@@ -39,6 +39,7 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
+- Ask your instructors for branch protection
 - $ `yarn start`
 
 ---
@@ -118,7 +119,7 @@ const cats = [
   {
     id: 2,
     name: "Raisins",
-    age: 6,
+    age: 7,
     enjoys: "being queen of the dogs",
     image:
       "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"
@@ -126,7 +127,7 @@ const cats = [
   {
     id: 3,
     name: "Toast",
-    age: 3,
+    age: 4,
     enjoys: "getting all the attention",
     image:
       "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"

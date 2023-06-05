@@ -218,7 +218,7 @@ We have seen this error many times before. It is saying that when the test rende
 
 But why is `cats` undefined? Our test revealed a very important bug in our code. The array of cats is coming from state in `App.js` and being passed to `CatIndex`. This is all happening very quickly but it does require a little bit of time. And furthermore, the cat data will eventually be handled by a `fetch` request which could take even longer. If the `CatIndex` component renders before the data has arrived the entire component breaks. Not ideal.
 
-To fix this bug we want all the functionality handled by `.map` to run only if there is an array of cats. Otherwise, that code should be ignored and the rest of the page should render. By adding a `?` after `cats` we create conditional rendering. No cats? No map.
+To fix this bug we want all the functionality handled by `.map` to run only if there is an array of cats. Otherwise, that code should be ignored and the rest of the page should render. By adding a `?` after `cats` we create conditional rendering. No cats? No map. No map, no error.
 
 **src/pages/CatIndex.js**
 

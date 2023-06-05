@@ -37,7 +37,7 @@ If something goes wrong with your seeds file, just start fresh. Seeds files give
 
 ### Seeds
 
-One of the files that gets created in a new rails application is the `seeds.rb` file. It is located in the db directory. Seeds is a place to store mock data during development. Adding seeds allows us to populate our database with one command rather than manually importing cats one by one through the Rails console.
+One of the files that gets created in a new rails application is the `seeds.rb` file. It is located in the db directory. The seed file is a place to store mock data during development. Adding **seeds** allows us to populate our database with one command rather than manually importing cats one by one through the Rails console. It also allows everyone on the development team to have identical data on their individual computers.
 
 **db/seeds.rb**
 
@@ -85,7 +85,7 @@ From there you can drop into the Rails console $ `rails c` and look for the cats
 
 One thing to keep in mind is that every time you run $ `rails db:seed` the code will execute and add data to your database.
 
-Creating a task that updates instead of creates new records every time after the first time is called [idempotent](http://whatis.techtarget.com/definition/idempotence) and it is an interesting concept in programming and mathematics.
+Creating a task that updates instead of creates new records every time after the first time is called **idempotent** and it is an interesting concept in programming and mathematics.
 
 ---
 
