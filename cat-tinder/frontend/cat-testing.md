@@ -78,7 +78,9 @@ Watch Usage
 
 ### Organizing the Tests
 
-Notice that there is already a test file in the React application. It is called `App.test.js` and it lives in the same directory as `App.js`. Each component in the Cat Tinder application needs a corresponding test file. We can follow the pattern established by React and name each test file the same as the component file with a `.test.js` file extension.
+React Testing Library works in conjunction with Jest. When the Jest commands are run in the terminal Jest looks for files with certain naming conventions. In a React application, the test files should all be inside a directory named `__tests__` (two underscores on each side). It must be named EXACTLY in this manner. The test directory will live in the `src` directory at the same level as the `components`, `pages`, and `assets` directories.
+
+Notice that there is already a test file in the React application. It is called `App.test.js` and it lives in the same directory as `App.js`. Each component in the Cat Tinder application needs a corresponding test file. We can follow the pattern established by React and name each test file the same name as the component file with a `.test.js` file extension.
 
 We can create tests for the components that have content so far: `Header` component, `Footer` component, `Home` page, and `NotFound` page.
 
@@ -277,7 +279,8 @@ There are a lot of complexities to testing. It can also be time consuming and, a
 
 ### 🐱 Challenge: Cat Tinder Tests
 
-- Add a test file for the `Home`, `Header`, `Footer`, and `NotFound` components with a `.test.js` extension.
+- Create a folder called `__tests__` to store all the test files.
+- Add test files for the `Home`, `Header`, `Footer`, and `NotFound` components with a `.test.js` extension.
 - Create a test for the `Home` page that ensures the component will render to the browser.
 - Create a test for the `NotFound` page that ensures the component will render to the browser.
 - Update the `App.test.js` test to ensure the component renders to the browser.

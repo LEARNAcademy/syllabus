@@ -14,6 +14,10 @@ Endpoints are the location from which APIs can access the resources they need to
 - can validate API endpoints
 - can create endpoints for appropriate RESTful actions
 
+#### Vocabulary
+
+- API endpoints
+
 #### Troubleshooting Tips
 
 - Did you create your database?
@@ -26,7 +30,9 @@ Endpoints are the location from which APIs can access the resources they need to
 
 ![routes](../assets/rails-routes.png)
 
-We need to create endpoints for the actions in our React application. For the time being we can stub these routes.
+We need to create endpoints for the actions in our React application. **API endpoints** are the touch point of communication within the API when an external request is made. In this application, the endpoints will allow external requests for the CRUD actions to be performed on the Cat model.
+
+For the time being we can stub these routes by defining controller methods with no internal logic.
 
 **app/controllers/cats_controller.rb**
 
@@ -140,7 +146,7 @@ And once again, this fails because we have no code in the controller to make it 
   end
 ```
 
-And we're Green! This isn't quite production ready code, but its enough to get our first test of the endpoint to pass, which is what we're after, so we're happy.
+And we're green! This isn't quite production ready code, but its enough to get our first test of the endpoint to pass, which is what we're after, so we're happy.
 
 ---
 

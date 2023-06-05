@@ -9,6 +9,10 @@ CORS stands for Cross-Origin Resource Sharing. CORS manages requests that occur 
 - can define CORS
 - can enable cross-origin resource sharing in an API
 
+#### Vocabulary
+
+- CORS
+
 #### Additional Resources
 
 - [MDN on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
@@ -36,7 +40,7 @@ end
 
 ### Enable CORS
 
-CORS which stands for Cross-Origin Resource Sharing. Our React frontend and Rails backend applications are running on two different servers. We have to tell the Rails app that (while in development) it is okay to accept requests from any outside domain.
+**CORS** which stands for Cross-Origin Resource Sharing defines what external request can be made to our Rails API. Our React frontend and Rails backend applications are running on two different servers. We have to tell the Rails API that (while in development) it is okay to accept requests from any outside domain.
 
 CORS can be added to our application by doing three things:
 
