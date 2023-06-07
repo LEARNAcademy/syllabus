@@ -6,7 +6,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 #### Previous Lecture (47 min)
 
-[![YouTube](http://img.youtube.com/vi/rg9b_x9KY28.jpg)](https://youtu.be/rg9b_x9KY28)
+[![YouTube](http://img.youtube.com/vi/rg9b_x9KY28/0.jpg)](https://www.youtube.com/watch?v=rg9b_x9KY28)
 
 #### Learning Objectives
 
