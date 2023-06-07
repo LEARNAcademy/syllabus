@@ -4,7 +4,7 @@
 
 React consists of collections of components. Props are used for the communication of data and behavior from a parent component down to a nested component via the component invocation. Props are limited to a unidirectional flow of information. In order to create a flow of information that goes from the nested component back up to its parent another workflow is needed. While props are unidirectional, functions have the fundamental ability to be defined in one place and invoked in another. Functions are great transporters of information and can be used communicate between React components.
 
-#### Previous Lecture (58 min)
+#### Previous Lecture (1 hour)
 
 [![YouTube](http://img.youtube.com/vi/XgJq3MowcOM/0.jpg)](https://youtu.be/XgJq3MowcOM)
 

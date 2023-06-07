@@ -4,7 +4,7 @@
 
 There are four general actions a developer will consider when building an application. They are summed up in a delightful acronym: CRUD. This section will focus on the "create" functionality of Cat Tinder adding the ability to navigate to a page that holds a form for adding a new cat. Because we are still working with mock data the goal will be to put the cat information in the correct data structure and ensure it can be logged in the correct component.
 
-#### Previous Lecture (1 hour 1 min)
+#### Previous Lecture (1 hour 13 min)
 
 [![YouTube](http://img.youtube.com/vi/JIO4odyznjo/0.jpg)](https://www.youtube.com/watch?v=JIO4odyznjo)
 

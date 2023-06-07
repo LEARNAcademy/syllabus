@@ -4,7 +4,7 @@
 
 Props (properties) are specialized React objects used to pass information from one component to another. Props create a unidirectional flow of data and behavior from a parent component down to a nested component via the component invocation. While state values are constantly updated through user interactions, props cannot be changed. They are a "read only" value.
 
-#### Previous Lecture (50 min)
+#### Previous Lecture (1 hour 32 min)
 
 [![YouTube](http://img.youtube.com/vi/UtMsjt2mSOA/0.jpg)](https://www.youtube.com/watch?v=UtMsjt2mSOA)
 

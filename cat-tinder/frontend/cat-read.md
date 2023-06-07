@@ -4,7 +4,7 @@
 
 There are four general actions a developer will consider when building an application. They are summed up in a delightful acronym: CRUD. This section will focus on the "read" functionality of Cat Tinder adding the ability to navigate between the home page, index page, and show page.
 
-#### Previous Lecture (59 min)
+#### Previous Lecture (1 hour 22 min)
 
 [![YouTube](http://img.youtube.com/vi/nZJBccseFQ0/0.jpg)](https://www.youtube.com/watch?v=nZJBccseFQ0)
 
