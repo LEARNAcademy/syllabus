@@ -4,9 +4,9 @@
 
 React components often need to store data and perform logic to create interactive user experiences. Data needs to be stored in a way that it can be accessed throughout the component and updated when necessary. In a React component the data is managed by a special function called a React hook. The React hook allows developers to create a variable with an initial value and a method to update the value as needed.
 
-#### Previous Lecture (1 hour, 3 min)
+#### Previous Lecture (1 hour, 12 min)
 
-[![YouTube](http://img.youtube.com/vi/n1UHz9dD9Ds/0.jpg)](https://www.youtube.com/watch?v=n1UHz9dD9Ds)
+[![YouTube](http://img.youtube.com/vi/ArJvvE576ro/0.jpg)](https://www.youtube.com/watch?v=ArJvvE576ro)
 
 #### Learning Objectives
 

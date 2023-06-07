@@ -6,7 +6,7 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 
 #### Previous Lecture (55 min)
 
-[![YouTube](http://img.youtube.com/vi/gA9Z9_B3cPI/0.jpg)](https://www.youtube.com/watch?v=gA9Z9_B3cPI)
+[![YouTube](http://img.youtube.com/vi/AIInMJ3896Y/0.jpg)](https://www.youtube.com/watch?v=AIInMJ3896Y)
 
 #### Learning Objectives
 

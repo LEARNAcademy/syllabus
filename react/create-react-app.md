@@ -4,9 +4,9 @@
 
 Until late 2016, the hardest part about working with React was just getting a new app set up with the appropriate dependencies. Facebook, the creators of React, recognized this problem and released some tools to help developers get started more easily using terminal commands. A command in the terminal can create the file base file structure for creating a new React application.
 
-#### Previous Lecture (57 min)
+#### Previous Lecture (47 min)
 
-[![YouTube](http://img.youtube.com/vi/cRAMwRFwA2g.jpg)](https://youtu.be/cRAMwRFwA2g)
+[![YouTube](http://img.youtube.com/vi/rg9b_x9KY28/0.jpg)](https://www.youtube.com/watch?v=rg9b_x9KY28)
 
 #### Learning Objectives
 

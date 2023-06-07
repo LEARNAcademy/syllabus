@@ -4,9 +4,9 @@
 
 Testing is the process of writing code that will ensure the application we are creating works and behaves as expected. Testing gives developers confidence. Every React application has test functionality that can be used out of the box: Jest and React Testing Library. These two work together to give developers the tools to create tests that ensure the app works for properly for the end user.
 
-#### Previous Lecture (1 hour 18 min)
+#### Previous Lecture (1 hour 2 min)
 
-[![YouTube](http://img.youtube.com/vi/J7VADNiI8Pk/0.jpg)](https://www.youtube.com/watch?v=J7VADNiI8Pk)
+[![YouTube](http://img.youtube.com/vi/EsyDztWgsE8/0.jpg)](https://www.youtube.com/watch?v=EsyDztWgsE8)
 
 #### Learning Objectives
 

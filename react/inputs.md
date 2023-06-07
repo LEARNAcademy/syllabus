@@ -4,9 +4,9 @@
 
 React applications are designed to handle user interactions quickly and efficiently. Button click are one example of user interactions. Buttons can trigger code logic execution that changes what the user sees in the application. Another common way users interact with an application is through text input fields. Inputs allow a user to add unique content to an application. Developers can track each keystroke made my the user and save the information for use in the code logic.
 
-#### Previous Lecture (48 min)
+#### Previous Lecture (57 min)
 
-[![YouTube](http://img.youtube.com/vi/hdjjEmRIW7A/0.jpg)](https://youtu.be/hdjjEmRIW7A)
+[![YouTube](http://img.youtube.com/vi/3tegw9GTk5Y/0.jpg)](https://youtu.be/3tegw9GTk5Y)
 
 #### Learning Objectives
 

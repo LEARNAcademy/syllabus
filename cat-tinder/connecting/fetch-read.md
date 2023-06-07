@@ -4,9 +4,9 @@
 
 It is time to connect our applications! We will switch gears back to the frontend to load our cats. We will have two applications running on our machine at the same time. The Rails app will run on `localhost:3000` and the React app will run on `localhost:3001`.
 
-#### Previous Lecture (58 min)
+#### Previous Lecture (1 hour 13 min)
 
-[![YouTube](http://img.youtube.com/vi/i2B5QnOPexE/0.jpg)](https://www.youtube.com/watch?v=i2B5QnOPexE)
+[![YouTube](http://img.youtube.com/vi/b4XhdUReNJ4/0.jpg)](https://www.youtube.com/watch?v=b4XhdUReNJ4)
 
 #### Learning Objectives
 

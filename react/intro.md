@@ -4,9 +4,9 @@
 
 React is JavaScript library for creating user interfaces. Everything in React is a component. React components are independent and reusable pieces of code. Each component contains its own functionality and returns markup.
 
-#### Previous Lecture (58 min)
+#### Previous Lecture (1 hour 5 min)
 
-[![YouTube](http://img.youtube.com/vi/t2Kf4smJnp8/0.jpg)](https://www.youtube.com/watch?v=t2Kf4smJnp8)
+[![YouTube](http://img.youtube.com/vi/gItB1fEQDyU/0.jpg)](https://www.youtube.com/watch?v=gItB1fEQDyU)
 
 #### Learning Objectives
 
