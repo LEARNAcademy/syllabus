@@ -151,7 +151,7 @@ First, we will go to [render.com](https://render.com/). Using our team's email a
 
 Once we are logged in, we will create a new PostgreSQL Database
 
-![ new_postgres ](./assets/new_postgres.png)
+![ new_postgres ](./assets/new-postgres.png)
 
 - Let's make sure that we have selected the Free Plan
 - Once the database is created we will need to copy the Database URL to be used later 
@@ -161,18 +161,18 @@ Once we are logged in, we will create a new PostgreSQL Database
 
 Our next step is to create a new Web Service, pointing it to your application repository (make sure Render has access to it). 
 
-![ connect_repo ](./assets/connect_repo.png)
+![ connect_repo ](./assets/connect-repo.png)
 
 The language we will select for our environment will be `Ruby` and then we will set the following propertires: 
 
 - Build command: `./bin/render-build.sh`
 - Start command: `bundle exec puma -C config/puma.rb`
 
-![ web_service ](./assets/web_service.png)
+![ web_service ](./assets/web-service.png)
 
 Now, we need to add the following environment variables under the **Advanced** section: 
 
-![ web_service ](./assets/environment_variables.png)
+![ web_service ](./assets/environment-variables.png)
 
 That's it! We can now finalize the backend service deployment. It will be live on our `.onrender.com` URL as soon as the build finishes. Copy and save this URL. We will need it for the front end. 
 
@@ -186,7 +186,7 @@ That's it! We can now finalize the backend service deployment. It will be live o
 
 - Use the following values in the creation process: 
 
-![ web_service ](./assets/creation_commands.png)
+![ web_service ](./assets/creation-commands.png)
 
 - Click on 'Create Static Site'
 
@@ -196,7 +196,7 @@ That's it! We can now finalize the backend service deployment. It will be live o
 
 We can do this by defining a **Rewrite Rule** for our site. Go to the **Redirects/Rewrites** tab for your service and add a rule with the following values and then Save: 
 
-![ web_service ](./assets/redirects_rewrites.png)
+![ web_service ](./assets/redirects-rewrites.png)
 
 Just like that, the frontend is complete!
 
