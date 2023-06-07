@@ -6,7 +6,7 @@ React components often need to store data and perform logic to create interactiv
 
 #### Previous Lecture (1 hour, 3 min)
 
-[![YouTube](http://img.youtube.com/vi/n1UHz9dD9Ds/0.jpg)](https://www.youtube.com/watch?v=n1UHz9dD9Ds)
+[![YouTube](http://img.youtube.com/vi/ArJvvE576ro/0.jpg)](https://www.youtube.com/watch?v=ArJvvE576ro)
 
 #### Learning Objectives
 

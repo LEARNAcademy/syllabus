@@ -6,7 +6,7 @@ It is time to connect our applications! We will switch gears back to the fronten
 
 #### Previous Lecture (58 min)
 
-[![YouTube](http://img.youtube.com/vi/i2B5QnOPexE/0.jpg)](https://www.youtube.com/watch?v=i2B5QnOPexE)
+[![YouTube](http://img.youtube.com/vi/b4XhdUReNJ4/0.jpg)](https://www.youtube.com/watch?v=b4XhdUReNJ4)
 
 #### Learning Objectives
 

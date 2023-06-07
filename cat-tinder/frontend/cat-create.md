@@ -6,7 +6,7 @@ There are four general actions a developer will consider when building an applic
 
 #### Previous Lecture (1 hour 1 min)
 
-[![YouTube](http://img.youtube.com/vi/1A4QBu636VA/0.jpg)](https://www.youtube.com/watch?v=1A4QBu636VA)
+[![YouTube](http://img.youtube.com/vi/JIO4odyznjo/0.jpg)](https://www.youtube.com/watch?v=JIO4odyznjo)
 
 #### Learning Objectives
 

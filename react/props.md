@@ -6,7 +6,7 @@ Props (properties) are specialized React objects used to pass information from o
 
 #### Previous Lecture (50 min)
 
-[![YouTube](http://img.youtube.com/vi/5H0WAUVLXjA/0.jpg)](https://www.youtube.com/watch?v=5H0WAUVLXjA)
+[![YouTube](http://img.youtube.com/vi/UtMsjt2mSOA/0.jpg)](https://www.youtube.com/watch?v=UtMsjt2mSOA)
 
 #### Learning Objectives
 

@@ -6,7 +6,7 @@ React applications are designed to handle user interactions quickly and efficien
 
 #### Previous Lecture (48 min)
 
-[![YouTube](http://img.youtube.com/vi/hdjjEmRIW7A/0.jpg)](https://youtu.be/hdjjEmRIW7A)
+[![YouTube](http://img.youtube.com/vi/3tegw9GTk5Y/0.jpg)](https://youtu.be/3tegw9GTk5Y)
 
 #### Learning Objectives
 

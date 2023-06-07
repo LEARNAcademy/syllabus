@@ -6,7 +6,7 @@ React consists of collections of components. Props are used for the communicatio
 
 #### Previous Lecture (58 min)
 
-[![YouTube](http://img.youtube.com/vi/cYKXvyJq1zw/0.jpg)](https://youtu.be/cYKXvyJq1zw)
+[![YouTube](http://img.youtube.com/vi/XgJq3MowcOM/0.jpg)](https://youtu.be/XgJq3MowcOM)
 
 #### Learning Objectives
 

@@ -6,7 +6,7 @@ Testing is the process of writing code that will ensure the application we are c
 
 #### Previous Lecture (1 hour 18 min)
 
-[![YouTube](http://img.youtube.com/vi/J7VADNiI8Pk/0.jpg)](https://www.youtube.com/watch?v=J7VADNiI8Pk)
+[![YouTube](http://img.youtube.com/vi/EsyDztWgsE8/0.jpg)](https://www.youtube.com/watch?v=EsyDztWgsE8)
 
 #### Learning Objectives
 

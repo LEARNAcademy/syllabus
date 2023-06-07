@@ -9,6 +9,10 @@ It is time to create new cats in our database! We will have two applications run
 - can make cross-origin requests from the UI to an API
 - can set state with the JSON data that is returned from our fetch request
 
+#### Previous Lecture (58 min)
+
+[![YouTube](http://img.youtube.com/vi/b4XhdUReNJ4/0.jpg)](https://www.youtube.com/watch?v=b4XhdUReNJ4)
+
 #### Process
 
 - The Rails app will run on `localhost:3000`
