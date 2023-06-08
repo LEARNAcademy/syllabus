@@ -1,6 +1,11 @@
 # Deploying on Render
 
-Deployment is a very exciting step in the development process. Deployment is the process of employing a service to store your source code and data on their servers and providing a pathway in the form of the url. Render is platform used to host web applications. Render's services support many languages and it offers 3 month free deployments for small projects.
+### Additional Docs:
+- [Deploy React Front End](https://render.com/docs/deploy-create-react-app)
+- [Deploy PostgreSQL Database Server](https://render.com/docs/databases)
+- [Deploy Ruby on Rails Backend](https://render.com/docs/deploy-rails)
+
+Deployment is a very exciting step in the development process. Deployment is the process of employing a service to store your source code and data on their servers and providing a pathway in the form of the url. Render is a platform used to host web applications. Render's service supports many programming languages. Render offers three months of free deployment for small projects.
 
 It is perfectly normal to deploy an application that is not "finished." Projects are always evolving and require regular deployment updates. The beauty of using a deployment service like Render is that you can connect the deployment to your GitHub repository. By default, Render will automatically build and deploy your services with every code push to your remote repository.
 
@@ -10,7 +15,7 @@ As a team, decide who will run the commands for deploying the application. Typic
 
 Prior to deployment we need to ensure the main branch is up to date and the project runs without errors.
 
-Next, if we have not already, we will create a Render acount using the team's email. Once created, need access to the email and password to log into the team's Render account.
+Next, ensure the team email was used to create a Render account.
 
 And finally, the person in charge of deploying the application will need access to the `master.key` credential that lives in the `config` folder. The key is used to encrypt and decrypt your credentials. The `master.key` is not checked in to version control and so will not exist on Github. If the project was cloned from GitHub there will not be a `master.key` file in the `config` folder. If the person deploying the application has a `master.key` file, great! You are ready to go. If not, continue with the following steps in terminal.
 
@@ -39,7 +44,7 @@ Next, in our `puma.rb` file also found in our `config` directory, we are going t
 ```ruby
 workers EVN.fetch("WEB_CONCURRENCY") {4}
 ```
-changing the `{2}` to `{4}`
+changing the {2} to {4}
 
 ```ruby
 preload_app!
@@ -113,7 +118,9 @@ bundle exec rake assets:clean
 bundle exec rake db:migrate
 bundle exec rake db:seed
 ```
-**Note**: Leaving the seed command here will cause our application to reseed on every push and redeploy. After we complete our initial deployment remove the `bundle exec rake db:seed`
+**Note**: Leaving the seed command here will cause the database to reseed on every push and redeploy. After the initial deployment is complete remove the `bundle exec rake db:seed` from this set of commands.
+
+
 
 Next, we will make sure the script is executable by running the following terminal command
 
@@ -151,7 +158,7 @@ First, we will go to [render.com](https://render.com/). Using our team's email a
 
 Once we are logged in, we will create a new PostgreSQL Database
 
-![ new_postgres ](./assets/new-postgres.png)
+![new_postgres](./assets/new-postgres.png)
 
 - Let's make sure that we have selected the Free Plan
 - Once the database is created we will need to copy the Database URL to be used later 
@@ -161,48 +168,49 @@ Once we are logged in, we will create a new PostgreSQL Database
 
 Our next step is to create a new Web Service, pointing it to your application repository (make sure Render has access to it). 
 
-![ connect_repo ](./assets/connect-repo.png)
+![connect_repo](./assets/connect-repo.png)
 
 The language we will select for our environment will be `Ruby` and then we will set the following propertires: 
 
 - Build command: `./bin/render-build.sh`
 - Start command: `bundle exec puma -C config/puma.rb`
 
-![ web_service ](./assets/web-service.png)
+![web_service](./assets/web-service.png)
 
 Now, we need to add the following environment variables under the **Advanced** section: 
 
-![ web_service ](./assets/environment-variables.png)
+![environment-variables](./assets/environment-variables.png)
 
 That's it! We can now finalize the backend service deployment. It will be live on our `.onrender.com` URL as soon as the build finishes. Copy and save this URL. We will need it for the front end. 
 
 ### Frontend
 
-- Now that we have our URL from the backend service we just deployed, we need to change the URL in our fetch requests 
+Now that we have our URL from the backend service we just deployed, we need to change the URL in our fetch requests 
 
-- From the Render Dashboard, we will click the 'New' button and select 'Static Site'
+From the Render Dashboard, we will click the 'New' button and select 'Static Site'
 
-- Using our existing frontend repo, we will give Render permission to access it 
+Using our existing frontend repo, we will give Render permission to access it 
 
-- Use the following values in the creation process: 
+Use the following values in the creation process: 
 
-![ web_service ](./assets/creation-commands.png)
+![creaation-commands](./assets/creation-commands.png)
 
-- Click on 'Create Static Site'
+ Click on 'Create Static Site'
 
-- Once our static site is deployed, we need to copy the site URL and save it for a later step. 
+Once our static site is deployed, we need to copy the site URL and save it for a later step. 
 
-- Because we are using React Router, we will need to direct all routing request to `index.html` so they can be handled by your routing library. 
+Because we are using React Router, we will need to direct all routing request to `index.html` so they can be handled by your routing library. 
 
 We can do this by defining a **Rewrite Rule** for our site. Go to the **Redirects/Rewrites** tab for your service and add a rule with the following values and then Save: 
 
-![ web_service ](./assets/redirects-rewrites.png)
+![redirects-rewrites](./assets/redirects-rewrites.png)
 
 Just like that, the frontend is complete!
 
-### Final Step - allowing backend to handle frontend requests:
+###  Handling Frontend Requests
 
-In the `cors.rb` file in our backend, we will need to change the origins to be the url to your frontend app **MINUS** the `https://` 
+
+The final step is to modify the `cors.rb` file in the Rails app. We will need to change the origins to be the React app **MINUS** the `https://` on the beginning of the url.
 
 ```ruby
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
@@ -217,10 +225,10 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-git add, commit, and push. Redeploy!
+Go through thegit workflow to update the main branch and redeploy!
 
 ### Troubleshooting
-During deployment, our build might encounter some errors. 
+It is very common during deployment for the build to encounter errors. Small syntax errors that work in development can cause a build to fail. Listed below are a few common errors we see along with the next steps for troubleshooting.
 
 - `error Command "webpack" not found`
 
@@ -228,16 +236,11 @@ This means we forgot to add the `yarn.rake` task to our code. We can look at the
 
 - `Your bundle only supports platforms ["x86_64-darwin-19"] but your local platform is x86_64-linux. Add the current platform to the lockfile with bundle lock --add-platform x86_64-linux and try again.`
 
-run command: 
+Run the following command: 
 
 ```bash
 $ bundle lock --add-platform x86_64-linux
 ```
-
-### Additional Docs:
-- [Deploy React Front End](https://render.com/docs/deploy-create-react-app)
-- [Deploy PostgreSQL Database Server](https://render.com/docs/databases)
-- [Deploy Ruby on Rails Backend](https://render.com/docs/deploy-rails)
 
 ---
 
