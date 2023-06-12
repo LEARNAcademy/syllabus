@@ -24,7 +24,39 @@ When a user is signed in to the apartment application, they have access to a pag
 
 ### Protected Links
 
-WIP
+Authentication is a key component in the Apartment App project. This means that we need to create a clean and clear experience that will allow new users to sign up and existing users to log in. We also want to provide a way for logged in users to sign out.
+
+It would not be a great experience for the user to see all three of these options at the same time. Depending on the current status of the user, we can tailor our application to offer the appropriate link(s). To accomplish this we can use conditional rendering in our `Navigation.js`. Conditional rendering will allow us to display the options to signup or login only when `currentUser` does not exist and display the logout button only once a user has successfully logged in.
+
+**app/src/components/Navigation.js**
+
+```javascript
+<Nav className="nav">
+  {current_user && (
+    <NavItem>
+      <input type="button" value='Logout' />
+    </NavItem>
+  )}
+  {!current_user && (
+    <>
+      <NavItem>
+        <NavLink to="/login" className="nav-link">
+          Log In
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink to="/signup" className="nav-link">
+          Sign Up
+        </NavLink>
+      </NavItem>
+    </>
+  )}
+</Nav>
+```
+
+Along with the authentication links, we want to allow signed in users to visit their protected pages. We can add links to `ApartmentProtectedIndex` and `ApartmentNew` to our navigation and include them in our conditional rendering ONLY when `currentUser` exists.
+
+Remember there are some pages that all users can view regardless of their status.
 
 ### Protected Routes
 
@@ -33,19 +65,17 @@ Conditionally rendering links is the first step to creating and restricting acce
 The JavaScript logical AND can be used to create a toggle. When `currentUser` exists, the route to `ApartmentProtectedIndex` will exist. If the `currentUser` value is null, meaning no user is currently signed in, the route will not exist. Manually navigating to the route in the browser url while `currentUser` is null will land the user on the `NotFound` page.
 
 ```javascript
-{
-  currentUser && (
-    <Route
-      path="/myapartments"
-      element={
-        <ApartmentProtectedIndex
-          currentUser={currentUser}
-          apartments={apartments}
-        />
-      }
-    />
-  )
-}
+{currentUser && (
+  <Route
+    path="/myapartments"
+    element={
+      <ApartmentProtectedIndex
+        currentUser={currentUser}
+        apartments={apartments}
+      />
+    }
+  />
+)}
 ```
 
 ---
