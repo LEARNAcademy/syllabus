@@ -24,7 +24,35 @@ When a user is signed in to the apartment application, they have access to a pag
 
 ### Protected Links
 
-WIP
+The apartment application introduces us to authentication, so we want to allow new users to sign up or existing users to log in. We also want to provide a way for logged in users to sign out. To improve the user experience, this means we need to provide different links to users based on their status.  To accomplish this we can use conditional rendering in our `Navigation.js`. Conditional rendering will allow us to display the options to signup or login only when `currentUser` does not exist and display the logout button only once a user has successfully logged in. 
+
+```javascript
+    <Nav className="nav">
+      {current_user && (
+          <NavItem>
+            <input type="button" value='Logout' />
+          </NavItem>
+      )}
+      {!current_user && (
+        <>
+          <NavItem>
+            <NavLink to="/login" className="nav-link">
+              Log In
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="/signup" className="nav-link">
+              Sign Up
+            </NavLink>
+          </NavItem>
+        </>
+      )}
+    </Nav>
+  ```
+
+Along with the authentication links, we want to allow signed in users to visit their protected pages. We can add links to `ApartmentProtectedIndex` and `New Apartment` to our navigation and include them in our conditional rendering for when a `currentUser` exists.
+
+Remember there are some pages that all users can view regardless of their status. 
 
 ### Protected Routes
 
