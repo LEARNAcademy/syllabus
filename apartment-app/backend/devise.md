@@ -1,4 +1,4 @@
-# Rails API with Devise
+# Rails API with Devise and JWT
 
 #### Overview
 
@@ -15,6 +15,7 @@ The Apartment Application is a decoupled React and Rails application that allows
 - can define user session
 - can create a User model
 - can create a relationship between User and another model
+- can create and store a jwt_secret_key
 
 #### Vocabulary
 
@@ -22,6 +23,8 @@ The Apartment Application is a decoupled React and Rails application that allows
 - authorization
 - authentication
 - user session
+- JSON Web Token
+- localStorage
 
 #### Additional Resources
 
@@ -53,7 +56,7 @@ The Apartment Application is a decoupled React and Rails application that allows
 
 ---
 
-### Devise
+#### Devise
 
 A key component of web applications is the ability for a user to log in. This requires a developer to consider both authentication and authorization. **Authentication** is the ability to provide valid credentials, such as a username and password. **Authorization** defines what data a user is authenticated to access. When working in a Rails application we can use a gem called Devise. **Devise** gives developers a collection of methods that create authorization and authentication.
 
@@ -66,15 +69,47 @@ Using Devise, we can create a special model called User that gets Devise code in
 
 And with those simple commands, we now have the ability to create users in the database.
 
-### User Sessions
+#### User Sessions
 
 Once a user exists in the database, we want to allow the user to sign in. When the user signs in, Devise creates a user session. A **user session** means that a user has been authenticated by submitting valid credentials. During a user session, a token is added to every new request the user makes. This token is used to authorize which pages are available to this particular user.
 
-### Apartment Resource
+#### JSON Web Token (JWT)
+
+**JWT** is a standard that provides secure transmission of information between a client and a server as a JSON object. We mainly use JWT for authorization. When a user logs in to an application, the backend creates a JWT and sends it to the frontend. We can store the token in the browser using **localStorage**, a JavaScript property that allows our frontend to save key-value pairs in the browser. The localStorage methods allow us to access and use the token for authorization in subsequent API calls. To use JWT in our application, we need to add the following to our `Gemfile`:
+
+- `gem 'devise-jwt'`
+- `gem 'rack-cors'`
+
+Once the gems are added, run $ `bundle` in the terminal to bring in the dependencies.
+
+#### CORS Setup
+
+Since we are making cross-origin requests from the React frontend to the Rails API, we need to tell the Rails app that (while in development) it is okay to accept request from any outside domain. We will also be passing the JWT through the headers so we need to add `"Authorization"` to the list of request headers that are allowed as well as exposed response headers.
+
+First, we have to create a new file in `config/initializers` named `cors.rb` and add the following content:
+
+**config/initializers/cors.rb**
+
+```ruby
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://localhost:3001'
+    resource '*',
+    headers: ["Authorization"],
+    expose: ["Authorization"],
+    methods: [:get, :post, :put, :patch, :delete, :options, :head],
+    max_age: 600
+  end
+end
+```
+
+#### Apartment Resource
 
 For this application, Apartments will have the following fields: a street, a unit number, a city, a state, the square footage, a price, number of bedrooms, number of bathrooms, whether pets are allowed, and an image.
 
-We need to ensure there is a relationship between users and apartments. Apartments should only be created by valid, signed in users. A user can add as many apartments as they would like. This means the relationship between users and apartments is the User has_many Apartments, Apartment belongs_to a User. This relationship is defined in the code first by adding the foreign key of `user_id` to the belongs_to table. Secondly, the relationship will need to be defined in both the Apartment and the User model classes.
+We need to ensure there is a relationship between users and apartments. Apartments should only be created by valid, signed in users. A user can add as many apartments as they would like. This means the relationship between users and apartments is the User has_many Apartments, Apartment belongs_to a User. This relationship is defined in the code first by adding the foreign key of `user_id` to the belongs_to table.
+
+Secondly, the relationship will need to be defined in both the Apartment and the User model classes.
 
 ```bash
 rails generate resource Apartment street:string unit:string city:string state:string square_footage:integer price:string bedrooms:integer bathrooms:float pets:string image:text user_id:integer
@@ -82,7 +117,7 @@ rails generate resource Apartment street:string unit:string city:string state:st
 
 Don't forget to migrate!
 
-### Seeds
+#### Seeds
 
 In order to create a User instance in the database, we need a unique username, password, and password confirmation. When this information is successfully submitted to the database, a new instance of User will be created.
 
@@ -97,9 +132,9 @@ user2 = User.where(email: "test2@example.com").first_or_create(password: "passwo
 
 Once we have user seeds, apartments can be added to the seed file that get created belonging to our users.
 
-### Additional Devise Configurations
+#### Additional Devise Configurations
 
-There are a couple more configurations we will need to make our app work properly with Devise. The first one is to set up the default url options for the Devise mailer in our development environment. Add the following code near the other mailer options:
+There are a few more configurations we will need to make our app work properly with Devise. The first one is to set up the default url options for the Devise mailer in our development environment. Add the following code near the other mailer options:
 
 **config/environments/development.rb**
 
@@ -107,7 +142,7 @@ There are a couple more configurations we will need to make our app work properl
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-Secondly, we need to instruct Devise to listen for logout requests via a `get` request instead of the default `delete`. We do that in Devise's config file:
+Secondly, we need to instruct Devise to listen for logout requests via a `get` request instead of the default `delete`. We also want to prevent Devise from using flash messages which are not presented in Rails API mode. We can do both these things in the Devise configuration file:
 
 **config/initializers/devise.rb**
 
@@ -116,6 +151,151 @@ Secondly, we need to instruct Devise to listen for logout requests via a `get` r
 config.sign_out_via = :delete
 # And replace it with this:
 config.sign_out_via = :get
+
+# Uncomment the config.navigational_formats line and remove the contents of the array:
+config.navigational_formats = []
+```
+
+Next we want to create registrations and sessions controllers to handle signups and logins.
+
+```bash
+$ rails g devise:controllers users -c registrations sessions
+```
+
+Then replace the contents of these controllers with the following code:
+
+**app/controllers/users/registrations_controller.rb**
+
+```ruby
+class Users::RegistrationsController < Devise::RegistrationsController
+  respond_to :json
+  def create
+    build_resource(sign_up_params)
+    resource.save
+    sign_in(resource_name, resource)
+    render json: resource
+  end
+end
+```
+
+**app/controllers/users/sessions_controller.rb**
+
+```ruby
+class Users::SessionsController < Devise::SessionsController
+  respond_to :json
+  private
+  def respond_with(resource, _opts = {})
+    render json: resource
+  end
+  def respond_to_on_destroy
+    render json: { message: "Logged out." }
+  end
+end
+```
+
+Lastly, we need to update the devise routes:
+**config/routes.rb**
+
+```ruby
+Rails.application.routes.draw do
+  resources :apartments
+  devise_for :users,
+    path: '',
+    path_names: {
+      sign_in: 'login',
+      sign_out: 'logout',
+      registration: 'signup'
+    },
+    controllers: {
+      sessions: 'users/sessions',
+      registrations: 'users/registrations'
+    }
+end
+```
+
+### JWT Secret Key Configuration
+
+We need a secret key to create a JWT token. We can generate one with this command:
+
+```bash
+$ bundle exec rake secret
+```
+
+Be sure to copy the newly-generated key. It is very important that we hide this key. Rails stores secrets in `config/credentials.yml.enc` and uses the `config/master.key` to encrypt the credentials file. To add our secret key to these credentials, we can edit the credentials file through the terminal:
+
+```bash
+$ EDITOR="code --wait" bin/rails credentials:edit
+```
+
+We should see a new file in our VS Code that resembles the file below. (The secret_key_base will be different.)
+
+```ruby
+# aws:
+#   access_key_id: 123
+#   secret_access_key: 345
+
+# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+secret_key_base: 3fd528aca03e14342dd41c3a5b03d26c76a71b036a021a3f1e294d6461fd44c9313aafa0850b012bbcea730f3cf1232024c8076ad520dbc91d42878bc0218fb2
+```
+
+Now we can add our new secret at the bottom of this file by assigning it to a key `jwt_secret_key`:
+
+```ruby
+jwt_secret_key: <newly-created secret key>
+```
+
+Use `control + c` to encrypt and save the file.
+
+### Configure Devise and JWT
+
+Next we need to add the following code to the Devise configurations file. This will configure the JWT to work with Devise. It defines the types of requests that will be using JWT.
+
+**config/initializers/devise.rb**
+
+```ruby
+config.jwt do |jwt|
+  jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+  jwt.dispatch_requests = [
+    ['POST', %r{^/login$}],
+  ]
+  jwt.revocation_requests = [
+    ['DELETE', %r{^/logout$}]
+  ]
+  jwt.expiration_time = 5.minutes.to_i
+end
+```
+
+### Revocation with JWT
+
+Having the ability for the application to revoke a JWT is important to keeping the application secure. For example, when a user logs out the JWT should no longer be valid. If the user deletes their account or the account is compromised revoking the JWT will protect the content in the database from being accessed.
+
+We are going to use a DenyList to revoke the JWT. To create a DenyList, we need to generate a new model.
+
+```bash
+$ rails generate model jwt_denylist
+```
+
+Inside the migration that is created from this generate command, add the following code to the `change` method.
+
+```ruby
+def change
+  create_table :jwt_denylist do |t|
+    t.string :jti, null: false
+    t.datetime :exp, null: false
+  end
+  add_index :jwt_denylist, :jti
+end
+```
+
+And migrate!
+
+Lastly, we need to update the User model to include the revocation strategy.
+
+**app/models/user.rb**
+
+```ruby
+devise  :database_authenticatable, :registerable,
+        :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 ```
 
 ---
