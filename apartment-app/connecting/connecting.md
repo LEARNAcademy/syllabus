@@ -2,15 +2,17 @@
 
 #### Overview
 
-At this point we should be fetching the apartments from the database and no longer using mock data. Now we need to look at creating fetch requests that provide the authentication and authorization processes for the user to sign up, log in, or log out. 
+At this point we should be fetching the apartments from the database and no longer using mock data. Now we need to look at creating fetch requests that provide the authentication processes for the user to sign up, log in, or log out. 
 
 #### Vocabulary
 - useRef Hook
 - FormData
+- localStorage
 
 
 #### Additional Resources
 - [useRef Hook](https://react.dev/reference/react/useRef)
+- [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData)
 - [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 
@@ -90,6 +92,8 @@ Now that we have a way to access the user inputs, we need to package the data in
     }
 }
 ```
+
+
 ### Login and Signup Functions
 
 When writing our fetch calls for authenticating users, we need to store the token created by JWT.  `localStorage` and its methods will allow us to store, retrieve, and remove the token locally in the user's browser. 
@@ -109,6 +113,8 @@ When writing our fetch calls for authenticating users, we need to store the toke
 **Note**: Data must be stored as strings. If you need to store objects or arrays, you need to convert them to strings using JSON.stringify() before storing, and then parse them back to their original format using JSON.parse() when retrieving from localStorage.
 
 We can now use these methods to access our JWT token in our fetch requests for signup, login, and logout.
+
+**App.js**
 
  ```javascript
   // authentication methods
@@ -157,9 +163,7 @@ We can now use these methods to access our JWT token in our fetch requests for s
   })
   .catch(error => console.log("login errors: ", error))
   }
-  ```
-
-  ```javascript
+  
   const logout = () => {
     fetch(`${url}/logout`, {
       headers: {
@@ -176,8 +180,36 @@ We can now use these methods to access our JWT token in our fetch requests for s
   }
   ```
 
-  
+Now we can pass these functions into the appropriate components and call them in the eventHandler functions we have established.
 
+**App.js**
+
+```javascript
+      <Header current_user={currentUser} logout={logout} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login login={login} />} />
+        <Route path="/signup" element={<Signup signup={signup}/>} />
+        {/* other routes... */}
+```
+**Signup.js**
+```javascript
+const handleSubmit = (e) => {
+  {/* ... */}
+
+  signup(userInfo)
+  navigate("/")
+  e.target.reset()  // resets the input field
+}
+```
+
+**Navigation.js**
+```javascript
+const handleClick = () => {
+    logout()
+    navigate("/")
+  }
+```
 ---
 
 [Back to Syllabus](../../README.md#unit-nine-react-and-rails-with-authentication)
