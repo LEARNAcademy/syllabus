@@ -233,7 +233,7 @@ In this section we further explore full-stack development in React and Ruby on R
 4. [Apartment App Protected Pages](./apartment-app/frontend/protected.md)
 
 ### Bringing it Together!
-5. [Apartment App Connect the Authentication Process](./apartment-app/connecting/connecting.md)
+5. [Apartment App Connect Authentication with JWT](./apartment-app/connecting/connecting.md)
 ### Apartment App Demos
 
 6. [Apartment App Demos](./apartment-app/demos.md)
