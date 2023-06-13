@@ -6,7 +6,7 @@
 - A foreign key is a column in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
 
 #### Previous Lecture (55 min)
-[![YouTube](http://img.youtube.com/vi/XAxPg-8dn1g/0.jpg)](https://youtu.be/XAxPg-8dn1g)
+[![YouTube](http://img.youtube.com/vi/wjmzwO71Mp0/0.jpg)](https://youtu.be/wjmzwO71Mp0)
 
 ### Learning Objectives
 - Exploring associations between models
@@ -70,7 +70,7 @@ $ rails generate model Person name:string phone:string
 $ rails db:migrate
 ```
 
-*db/migrations/*
+**db/migrations/**
 ```ruby
 class CreatePeople < ActiveRecord::Migration[6.0]
   def change
@@ -105,7 +105,7 @@ $ rails db:migrate
 
 This will provide another file in *app/model*, another migration, and update the schema of our application.
 
-*db/migrations/*
+**db/migrations/**
 ```ruby
 class CreateEmails < ActiveRecord::Migration[6.0]
   def change
@@ -118,7 +118,7 @@ class CreateEmails < ActiveRecord::Migration[6.0]
   end
 end
 ```
-*db/schema.rb*
+**db/schema.rb**
 ```ruby
 create_table "emails", force: :cascade do |t|
   t.string "address"
@@ -142,32 +142,32 @@ So far, we have two models in our application. But how do we create the associat
 
 We need to describe the relationship to each of the model classes.
 
-*app/models/person.rb*
+**app/models/person.rb**
 ```ruby
 class Person < ApplicationRecord
   has_many :emails
 end
 ```
-Note: emails is plural
+Note: `emails` is plural
 
-*app/models/email.rb*
+**app/models/email.rb**
 ```ruby
 class Email < ApplicationRecord
   belongs_to :person
 end
 ```
-Note: person is singular
+Note: `person` is singular
 
 **Using the Foreign Key**
 
-To create a new entry of an email, we have to assign it to a person entry. An email entry cannot exist unless it is attached to a person. To give our first contact an email address, create a variable to store the entry of one person.
+To create a new entry of an email, we have to assign it to a person entry. An email entry cannot exist unless it is attached to a person. To give our first contact an email address, we need to create a variable to store the entry of one person.
 
 ```
 $ rails c
 > joe = Person.first
 ```
 
-Now we can give Joe an email address.
+Now, we can give Joe an email address.
 ```
 > joe.emails.create address: "joe@email.com"
 => #<Email id: 1, address: "joe@email.com", person_id: 1, created_at: "2020-03-04 19:01:15", updated_at: "2020-03-04 19:01:15">
@@ -193,20 +193,20 @@ It is an easy mistake to forget a foreign key. It is also a common beginner mist
 ## Banking Challenge
 
 ### Setup
-- Create a new rails application and database
-- Create a model for owner
-- An owner has a name and address, and can have multiple credit cards
-- Create a model for credit card
-- A credit card has a number, an expiration date, and an owner
+- Create a new rails application and database.
+- Create a model for owner.
+- An owner has a name and address, and can have multiple credit cards.
+- Create a model for credit card.
+- A credit card has a number, an expiration date, and an owner.
 
 ### Challenges
-- Create three owners and save them in the database
-- Create a credit card in the database for each owner
-- Add two more credit cards to one of the owners
+- Create three owners and save them in the database.
+- Create a credit card in the database for each owner.
+- Add two more credit cards to one of the owners.
 
 ### Stretch Challenge
-- Add a credit limit to each card
-- Find the total credit extended to the owner with multiple credit cards
+- Add a credit limit to each card.
+- Find the total credit extended to the owner with multiple credit cards.
 
 ---
 [Back to Syllabus](../README.md#unit-five-intro-to-postgres-and-ruby-on-rails-models)
