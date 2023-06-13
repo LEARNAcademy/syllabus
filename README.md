@@ -224,7 +224,7 @@ In this section we further explore full-stack development in React and Ruby on R
 
 ### Apartment App Backend
 
-1. [Apartment App with Devise](./apartment-app/backend/devise.md)
+1. [Apartment App with Devise and JWT](./apartment-app/backend/devise.md)
 2. [Apartment App API Endpoints and Validations](./apartment-app/backend/api.md)
 
 ### Apartment App Frontend
@@ -233,10 +233,10 @@ In this section we further explore full-stack development in React and Ruby on R
 4. [Apartment App Protected Pages](./apartment-app/frontend/protected.md)
 
 ### Bringing it Together!
-
+5. [Apartment App Connect the Authentication Process](./apartment-app/connecting/connecting.md)
 ### Apartment App Demos
 
-5. [Apartment App Demos](./apartment-app/demos.md)
+6. [Apartment App Demos](./apartment-app/demos.md)
 
 ### Additional Topics
 
