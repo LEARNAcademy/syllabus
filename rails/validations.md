@@ -1,10 +1,10 @@
 # Active Record Validations and Model Specs
 
 #### Overview
-The power of creating a full-stack application is that we can store and retrieve data from a database. But data needs to be useful and meaningful. Validations are used to ensure that only clean and valid data is saved into the database. While there are lots of ways to validate data, this section is looking at model validations. When creating model validations, we need to ensure they are working as designed. This can be done with model specs. Implementing a TDD workflow when validating a database will ensure only useful and meaningful data is stored. It also sets up a form of documentation in our app that will tell us a great deal about how the model is intended to function.
+The power of creating a full-stack application is that we can store and retrieve data from a database. The data we store, however, needs to be useful and meaningful. Validations are used to ensure that only clean and valid data is saved into the database. While there are lots of ways to validate data, in this section we will be looking at model validations. When creating model validations, we need to ensure they are working as designed. This can be done with model specs. Implementing a TDD workflow when validating a database will ensure only useful and meaningful data is stored. It also sets up a form of documentation in our app that will tell us a great deal about how the model is intended to function.
 
-#### Previous Lecture (1 hour 19 min)
-[![YouTube](http://img.youtube.com/vi/Aq0vSPxvDE4/0.jpg)](https://www.youtube.com/watch?v=Aq0vSPxvDE4)
+#### Previous Lecture (1 hour 11 min)
+[![YouTube](http://img.youtube.com/vi/eBkJ2i1lsRQ/0.jpg)](https://www.youtube.com/watch?v=eBkJ2i1lsRQ)
 
 #### Learning Objectives
 - can explain the purpose of model validations
@@ -55,14 +55,14 @@ One of the most basic validations is ensuring the column contains data. The vali
 The length validation can be used to create a minimum number of characters, a maximum number of characters, a range of characters, or a specific number of characters.
 
 ##### Validates Uniqueness
-Often there is data in a database that should be unique. For example login information, credit card numbers, or email address. To ensure data is not duplicated a uniqueness validation can be added to the column.
+Often, there is data in a database that should be unique, such as login information, credit card numbers, or email addresses. To ensure that data is not duplicated, a uniqueness validation can be added to the column.
 
 ### TDD and Validations
 Let's look at how to implement a TDD workflow with model validations. TDD, or **test driven development**, is the process of creating a test, seeing the test fail, then implementing the code that will allow the test to pass.
 
 For this example we will create a model called Contact that will have a column for name, email, phone_number, and a bio. All of these columns will require different types of validations.
 
-##### Creating the Model and Spec Files
+#### Creating the Model and Spec Files
 Before creating a model, we need to ensure the dependencies for RSpec are installed.
 
 ```
@@ -83,7 +83,7 @@ Because we installed the RSpec dependencies prior to making the model, we got a 
 
 Inside this file is some boilerplate code.
 
-*spec/models/contact_spec.rb*
+**spec/models/contact_spec.rb**
 ```ruby
 require 'rails_helper'
 
@@ -92,10 +92,10 @@ RSpec.describe Contact, type: :model do
 end
 ```
 
-##### Spec for Validating Presence
+#### Spec for Validating Presence
 Now we can replace the boilerplate code with a spec that will ensure our database will not accept an entry without a name attribute.
 
-*spec/models/contact_spec.rb*
+**spec/models/contact_spec.rb**
 
 ```ruby
 RSpec.describe Contact, type: :model do
@@ -128,9 +128,9 @@ Failed examples:
 rspec ./spec/models/contact_spec.rb:4 # Contact is not valid without a name
 ```
 
-Now we can add a validation to check for the presence of the name attribute by adding code to the model class for Contact. And our test will pass.
+Now, we can add a validation to check for the presence of the name attribute by adding code to the model class for Contact. And our test will pass.
 
-*app/models/contact.rb*
+**app/models/contact.rb**
 ```ruby
 class Contact < ApplicationRecord
   validates :name, presence: true
@@ -139,7 +139,7 @@ end
 
 We can repeat this process to ensure no fields are allowed to be empty.
 
-*spec/models/contact_spec.rb*
+**spec/models/contact_spec.rb**
 
 ```ruby
 RSpec.describe Contact, type: :model do
@@ -160,9 +160,9 @@ If we run this file we can see that the second test will fail.
 $ rspec spec/models/contact_spec.rb
 ```
 
-Now we can add a validation to check for the presence of the email attribute by adding code to the model class for Contact. And our test will pass.
+Now, we can add a validation to check for the presence of the email attribute by adding code to the model class for Contact. And our test will pass.
 
-*app/models/contact.rb*
+**app/models/contact.rb**
 ```ruby
 class Contact < ApplicationRecord
   validates :name, :email, presence: true
@@ -172,7 +172,7 @@ end
 ##### Spec for Validating Length
 Next we can create a spec that will ensure our database will not accept an entry if the email attribute is less than 10 characters.
 
-*spec/models/contact_spec.rb*
+**spec/models/contact_spec.rb**
 ```ruby
 it 'is not valid if email is less than 10 characters' do
   scully = Contact.create name: 'Dana Scully', email: 'd@f.gov', phone_number: '(202) 123-4567', bio: 'Doctor and FBI agent.'
@@ -186,9 +186,9 @@ If we run this file we can see that the test will fail.
 $ rspec spec/models/contact_spec.rb
 ```
 
-Now we can add a validation to check for the length of the email attribute by adding code to the model class for Contact. And our test will pass.
+Now, we can add a validation to check for the length of the email attribute by adding code to the model class for Contact. And our test will pass.
 
-*app/models/contact.rb*
+**app/models/contact.rb**
 ```ruby
 class Contact < ApplicationRecord
   validates :name, :email, presence: true
@@ -205,9 +205,9 @@ validates :phone_number, length: { is: 10 }
 ```
 
 ##### Spec for Validating Uniqueness
-Next we can create a spec that will ensure our database will not accept an entry if the email attribute has already been entered in the database. We can create two contacts with the same information.
+Next, we can create a spec that will ensure our database will not accept an entry if the email attribute has already been entered in the database. To do this, We can create two contacts with the same information.
 
-*spec/models/contact_spec.rb*
+**spec/models/contact_spec.rb**
 ```ruby
 it 'does not allow duplicate emails' do
   Contact.create(name: 'Dana Scully', email: 'dscully@fbi.gov', phone_number: '(202) 123-4567', bio: 'Doctor and FBI agent.')
@@ -222,9 +222,9 @@ If we run this file we can see that the test will fail.
 $ rspec spec/models/contact_spec.rb
 ```
 
-Now we can add a validation to check for the uniqueness of the email attribute by adding code to the model class for Contact. And our test will pass.
+Now, we can add a validation to check for the uniqueness of the email attribute by adding code to the model class for Contact. And our test will pass.
 
-*app/models/contact.rb*
+**app/models/contact.rb**
 ```ruby
 class Contact < ApplicationRecord
   validates :name, :email, presence: true
@@ -242,9 +242,9 @@ end
 ```
 
 ##### Validates Belong To
-Rails will default adds validations to the belongs to relationship in a database. If you want an optional `belongs_to` relationship, you can set it up like this:
+Rails by default adds validations to the `belongs_to` relationship in a database. If you want an optional `belongs_to` relationship, you can set it up like this:
 
-*app/models/phone.rb*
+**app/models/phone.rb**
 ```ruby
 class Phone < ApplicationRecord
   belongs_to :contact, optional: true
@@ -262,7 +262,7 @@ update
 update!
 ```
 
-The bang versions (e.g. save!) raise an exception if the record is invalid. `save` and `update` will return `false`, `create` just returns the object the method was called on if it is invalid.
+The bang versions (e.g. `save!`) raise an exception when the record is invalid. The methods `save` and `update` will return `false`, while `create` simply returns the object on which the method was called if it is invalid.
 
 ##### Valid?
 To verify whether or not an object is valid, Rails uses the `.valid?` method. You can also use this method on your own. `valid?` triggers your validations and returns true if no errors were found in the object, and false otherwise.
@@ -270,7 +270,7 @@ To verify whether or not an object is valid, Rails uses the `.valid?` method. Yo
 ##### To Access Errors
 To verify whether or not a particular attribute of an object is valid, you can use `errors[:attribute]`. It returns an array of all the errors for `:attribute`. If there are no errors on the specified attribute, an empty array is returned.
 
-*app/models/contact.rb*
+**app/models/contact.rb**
 ```ruby
 class Contact < ApplicationRecord
   validates :name, presence: true
