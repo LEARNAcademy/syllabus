@@ -210,6 +210,24 @@ const handleClick = () => {
     navigate("/")
   }
 ```
+
+### Persist Current User
+
+Having the initial state of `currentUser` set to `null` will cause the user to be logged out if the user manually refreshes the browser.  To solve this problem we can create a function that checks if a JWT token exists, and set the state to the logged in user if it does. This function will live in the useEffect Hook.
+
+**App.js**
+
+```javascript
+useEffect(() => {
+  const loggedInUser = localStorage.getItem("token")
+  if (loggedInUser) {
+    setCurrentUser(loggedInUser)
+  }
+  readApartments()
+}, [])
+```
+
+
 ---
 
 [Back to Syllabus](../../README.md#unit-nine-react-and-rails-with-authentication)
