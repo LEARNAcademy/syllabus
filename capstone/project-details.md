@@ -13,7 +13,7 @@
   - [ ] Add Slack integrations for your repository `/github subscribe <repo-url>`
 - [ ] Create a team Trello Board
   - [ ] Add the instructors
-- [ ] Create a team Heroku account
+- [ ] Create a team [Render](https://render.com/) account
   - [ ] Be sure to keep track of the username and password as we will need it for deployment
 - [ ] Decide on Developer Roles
 
