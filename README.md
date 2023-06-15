@@ -257,7 +257,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Handling API Keys](./capstone/api-keys.md)
 - [Rails JBuilder](./capstone/jbuilder.md)
 - [ActiveStorage](./capstone/active-storage/README.md)
-- [Render](https://render.com/)
+- [Render](./capstone/render.md)
 
 
 ## Unit Twelve: Internship Preparation
