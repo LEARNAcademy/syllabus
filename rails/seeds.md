@@ -1,20 +1,18 @@
 # Rails Database Seeds
 
-## Overview
+#### Overview
 - During development, database information only lives on the computer where it was created.
 - Seed files allow developers to share database information during the development phase of an application.
 
-## Learning Objectives
+#### Learning Objectives
 - Can explain the difference between code in a Rails file structure and code in the database
 - Can use the terminal commands to populate a database with seed data
 
-## Vocabulary
+#### Vocabulary
 - Seed data
 
-## Useful Commands
+#### Useful Commands
 - $ rails db:seed
-
-## Set Up
 
 #### Creating a new Rails app:
 ```
@@ -24,18 +22,19 @@ $ rails db:create
 $ rails server
 ```
 
-### Troubleshooting Tips
+#### Troubleshooting Tips
 - Did you create your database?
 - Did you migrate?
 - Errors? Always look at the first error in the list.
+___
 
 ### Seeds in Rails
 During development, databases are created on local machines. All the code added to the database is only available in that database. This means we cannot share database content via GitHub. Luckily, rails offers us a cool tool to help with this problem.
 
-There is a file in the `db` directory in our Rails app called `seeds.rb` where we can store Ruby code that will  populate the database with a terminal command called **seed data**. This gives us a baseline of database code. It also ensures developers working on different machines have access to the same database information.
+In our Rails app, there is a file called `seeds.rb` located in the `db` directory. This file is used to store Ruby code that can be executed via a terminal command to populate the database. The code within this file is referred to as **seed data**, and it provides a basline of database code. Additionally, it guarantees that developers working on different machines have access to the same database information.
 
 ### Creating a Model
-In order to have seeds, we have to first have a database structure. These next steps assume we have already created a Rails application and created a database.
+In order to have seeds, we have to first have a database structure. With these next steps, assume we have already created a Rails application and created a database.
 
 ```
 $ rails generate model HardwareStore item:string price:string
