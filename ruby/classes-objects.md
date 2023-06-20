@@ -4,9 +4,9 @@
 
 Ruby is an object-oriented programming language in which everything is defined by a class. We can use the classes that Ruby defines to create objects that can be manipulated to perform logic. We can also create custom classes that hold data and behavior. These custom classes allow for the creation of customized reusable code.
 
-#### Previous Lecture (1 hour 23 min)
+#### Previous Lecture (1 hour 4 min)
 
-[![YouTube](http://img.youtube.com/vi/GbjwKLHCZ9M/0.jpg)](https://youtu.be/GbjwKLHCZ9M)
+[![YouTube](http://img.youtube.com/vi/3A-K9lYW_OA/0.jpg)](https://www.youtube.com/watch?v=3A-K9lYW_OA)
 
 #### Learning Objectives
 
