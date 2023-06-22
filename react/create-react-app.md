@@ -55,19 +55,19 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 ### Creating a New React Application
 
-A React application is made up of thousands of code snippet dependencies called **node modules**. To create a React application all of these node modules must be organized correctly. This would be an improbable action to do each time a new React app is needed so the responsibility of managing node modules is given over to a JavaScript package manager called **yarn**. Yarn is given a command that will create the file structure of a React app.
+A React application is made up of thousands of code snippet dependencies called **node modules**. To create a React application all of these node modules must be organized correctly. This would be an improbable action to do each time a new React app is needed; therefore, a JavaScript package manager called **yarn** has the responsibility of managing node modules. 
 
-The command `yarn create react-app` is followed with the name of the application. The application name will be given to a directory that holds all the content of the React app. This command will only accept application names that are lower case. If a multiple word application name is desired use the kebob casing convention. The **kebob-case** naming convention is words in all lowercase letters with each work separated by a dash.
+Yarn uses a terminal command that will create the file structure of a React app: `yarn create react-app`. This command is followed with the name of the application. The application name will be given to a directory that holds all the content of the React app. This command will only accept application names that are lower case. If a multiple word application name is desired use the kebob casing convention. The **kebob-case** naming convention is words in all lowercase letters with each work separated by a dash.
 
 ```
 yarn create react-app recipe-application
 ```
 
-This creates a directory called `recipe-application` and yarn creates all the files and installs all the node module dependencies to get a base application in React.
+This creates a directory called `recipe-application`, and yarn creates all the files and installs all the node module dependencies to get a base application in React.
 
 ### Starting the Server
 
-React application must be rendered in the browser. To do this, we need our computer to ask act as a local server. A **local server** is a computer used during development to process and rendering code in the browser. To start the server navigate into the new directory and use yarn to run the application.
+React application must be rendered in the browser. To do this, we need our computer to ask act as a local server. A **local server** is a computer used during development to process and rendering code in the browser. To start the server, we will navigate into the new directory and use yarn to run the application.
 
 ```
 cd recipe-application
@@ -82,13 +82,13 @@ The command `yarn start` will automatically open a browser to the address **loca
   width="300px"
 />
 
-After you type `yarn start` you will notice your terminal is busy running React. If you want to interact with your terminal you can open a new tab using `command + t`. To stop the React server from running use the command `control + c`
+After you type `yarn start`, you will notice your terminal is busy running React. If you want to interact with your terminal, you can open a new tab using `command + t`. To stop the React server from running, you can use the command `control + c`.
 
 ### Modifying The App Component
 
-Inside the directory called `recipe-application` is two additional directories. One is called _public_ that contains the _index.html_ file. We will mostly be working in the directory called _src_ where there is a file called _App.js_ where we will spend most of our time.
+Inside the directory called `recipe-application` are two additional directories. One is called _public_ that contains the _index.html_ file. The other directory is called _src_ that contains a file called _App.js_ where we will spend most of our time.
 
-When initially opening the file we will see the boilerplate code that creates the view in the browser. As of React version 18 this is the code that appears in the file.
+When initially opening the file, we will see the boilerplate code that creates the view in the browser. As of React version 18, this is the code that appears in the file.
 
 **src/App.js**
 
@@ -122,9 +122,9 @@ export default App
 
 ### Working in App.js
 
-The boilerplate code is great for a quick check to make sure the app is working but not what we will ultimately use. We can start by deleting the code and replacing it with a basic functional component. Functional components in React look very similar to the functions we write in regular JavaScript. The difference is the name of the components will be in PascalCase. **PascalCase** is a naming convention for classes and components that is similar to camelCase but the first letter is uppercase.
+The boilerplate code is great for a quick check to make sure the app is working but not what we will ultimately use. Delete the code and replace it with a basic functional component. Functional components in React look very similar to the functions we write in regular JavaScript. The difference is the name of the components will be in PascalCase. **PascalCase** is a naming convention for classes and components that is similar to camelCase but the first letter is uppercase.
 
-The component has a function declaration and a return. Within the return we have some JSX. Since we will be returning more than one line of JSX we can wrap the tag in a React fragment.
+The component has a function declaration and a return. Within the return we have some JSX. Since we will be returning more than one line of JSX, we can wrap the tag in a React fragment.
 
 Using React fragments requires an input from React dependencies at the top of the file. All components need to have an **export** to expose the component to the rest of the application.
 
@@ -146,7 +146,7 @@ export default App
 
 ### Nesting Components
 
-It is normal to have many different components working together to create a React app. To keep the components organized we will create another directory inside of _src_ called _components_.
+It is normal to have many different components working together to create a React app. To keep the components organized, we will create another directory inside of _src_ called _components_.
 
 In this example, we will create an application that has a Header component, a Recipe component, and a Footer component.
 
@@ -168,13 +168,14 @@ const Header = () => {
 export default Header
 ```
 
-For each new component there are three necessary steps:
+For each new component there are four necessary steps:
 
-1. Create the component function expression
-2. Return JSX
-3. Export the component
+1. Importing necessary dependencies
+2. Create the component function expression
+3. Return JSX
+4. Export the component
 
-Back in _App.js_ we will need to call the Header component. Now that all the components are in separate directories we need to tell _App.js_ where the Header component can be found.
+We will need to call the Header component in _App.js_. Because all the components are in separate directories, we need to tell _App.js_ where the Header component can be found.
 
 **src/App.js**
 
@@ -197,7 +198,7 @@ export default App
 
 Next we will add the Recipe component. We create the Recipe component in the `components` folder.
 
-**src/components/Recipes.js**
+**src/components/Recipe.js**
 
 ```javascript
 import React from "react"
@@ -286,14 +287,14 @@ export default App
 
 ### ⭐️ Challenge: Favorites
 
-As a developer, you are tasked with creating an application to share your favorite things. Decide which favorite things you would like to showcase. When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code into individual components.
+As a developer, you are tasked with creating an application to share your favorite things. Decide which favorite things you would like to showcase. When creating a project, it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code into individual components.
 
 ### 📚 User Stories
 
 - As a user, I can see a Header component with the title of your app.
 - As a user, I can see a Profile component with information about you and your partner.
 - As a user, I can see a Footer component with the name of your cohort.
-- As a user, I can see a Favorites component with a list of top five favorites (i.e. top five favorite TV shows, top five favorite songs, top five favorite taco shops).
+- As a user, I can see a Favorite component with a list of top five favorites (i.e. top five favorite TV shows, top five favorite songs, top five favorite taco shops).
 
 ### 🏔 Stretch Goals
 
