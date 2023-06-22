@@ -4,9 +4,9 @@
 
 Object-oriented programming is a philosophy with a focus on classes and their instantiated objects. To make class data structures more efficient, developers can define relationships between classes. This allows for commonly used behavior to be shared between classes.
 
-#### Previous Lecture (23 min)
+#### Previous Lecture (58 min)
 
-[![YouTube](http://img.youtube.com/vi/IUlDH1M5VTk/0.jpg)](https://youtu.be/IUlDH1M5VTk)
+[![YouTube](http://img.youtube.com/vi/g2fUoD1e274/0.jpg)](https://www.youtube.com/watch?v=g2fUoD1e274)
 
 #### Learning Objectives
 

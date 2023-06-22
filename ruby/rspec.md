@@ -4,9 +4,9 @@
 
 Testing is the process of creating automated quality assurance for code. RSpec is a unit test framework used to describe the behavior of objects in the Ruby programming language.
 
-#### Previous Lecture (1 hour 31 min)
+#### Previous Lecture (1 hour 18 min)
 
-[![YouTube](http://img.youtube.com/vi/aYvliAENtA0/0.jpg)](https://youtu.be/aYvliAENtA0)
+[![YouTube](http://img.youtube.com/vi/rkAziyxCCQs/0.jpg)](https://www.youtube.com/watch?v=rkAziyxCCQs)
 
 #### Learning Objectives
 
@@ -70,7 +70,7 @@ A **gem** is library or snippet of code functionality. Gems are managed by the R
 
 ### RSpec
 
-**RSpec** (request specification) is a domaine specific language used for testing the behavior of objects in the Ruby programming language. Developers can use RSpec to create specifications or **specs** that describe the desired output. A **domaine specific language** is a language that is used for one specific task as opposed to a general-purpose language like Ruby or JavaScript.
+**RSpec** (Ruby specification) is a domaine specific language used for testing the behavior of objects in the Ruby programming language. Developers can use RSpec to create specifications or **specs** that describe the desired output. A **domaine specific language** is a language that is used for one specific task as opposed to a general-purpose language like Ruby or JavaScript.
 
 ### RSpec Files and Dependencies
 
