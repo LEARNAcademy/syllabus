@@ -4,9 +4,9 @@
 
 Higher-order functions are built in methods in JavaScript. They are a specific subset of built in methods that take a function as an argument.
 
-#### Previous Lecture (1 hour 35 min)
+#### Previous Lecture (1 hour 40 min)
 
-[![YouTube](http://img.youtube.com/vi/gvbLBhc20w4/0.jpg)](https://www.youtube.com/watch?v=gvbLBhc20w4)
+[![YouTube](http://img.youtube.com/vi/9R4Y3B3e1tk/0.jpg)](https://www.youtube.com/watch?v=9R4Y3B3e1tk)
 
 #### Learning Objectives
 
@@ -287,7 +287,7 @@ const str = "javascript is awesome"
 
 ```javascript
 const stringOfNumbers = "4574328"
-// output: [7, 8, 2, 1, 5, 4]
+// output: [4, 5, 7, 4, 3, 2, 8]
 ```
 
 ### 🏔 Stretch Goals
