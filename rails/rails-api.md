@@ -2,7 +2,7 @@
 
 #### Overview
 
-Rails is full-stack framework that handles the business logic (model) as well as the UI (views) and the controllers that get all the information to the correct place. But often full-stack applications are built with different languages, frameworks, and technologies working together. It is all about finding the right tool for the job. At LEARN, our stack is using React in the frontend handling the views and Rails handling the model and controller. When an application is only controllers and models it is called an API. In this section, we will create just the backend of an application and explore what it looks like to be a backend developer.
+Rails is a full-stack framework that handles the business logic (model) as well as the UI (views) and the controllers that get all the information to the correct place. But often full-stack applications are built with different languages, frameworks, and technologies working together. It is all about finding the right tool for the job. At LEARN, our stack is using React in the frontend handling the views and Rails handling the model and controller. When an application is only controllers and models it is called an API. In this section, we will create just the backend of an application and explore what it looks like to be a backend developer.
 
 #### Previous Lecture (43 min)
 
@@ -76,7 +76,7 @@ We have covered several Rails generator commands such as model, controller, and 
 
 For this example, we are going to generate a resource for a Guitar model.
 
-```
+```bash
 $ rails generate resource Guitar strings:integer manufacturer:string model:string color:string
 ```
 
@@ -86,13 +86,13 @@ With that one command, Rails creates just about everything needed to start worki
 
 At this point we ought to run our migrations to build the schema.
 
-```
+```bash
 $ rails db:migrate
 ```
 
 I can use this handy command to see what that `resources :guitars` line does:
 
-```
+```bash
 $ rails routes
 ```
 
@@ -104,7 +104,7 @@ What we see is that Rails generated all the routes required for us to build out 
 
 Since the guitar model is set up we can hop into the `rails console` and add a couple guitars.
 
-```
+```bash
 > Guitar.create(strings: 7, manufacturer: 'Ibanez', model: 'RG Premium', color: 'Twilight Black')
 > Guitar.create(strings: 6, manufacturer: 'Fender', model: 'Stratocaster', color: 'Sunburst')
 ```
@@ -146,7 +146,7 @@ We can ask Postman to make a request to our API and return the JSON. In Postman 
 
 In the body we will see the result of our request. It should contain an array with the guitar database instances.
 
-```
+```json
 [
   {
     "id": 1,
@@ -315,7 +315,7 @@ class GuitarsController < ApplicationController
 end
 ```
 
-The update action is mapped to `/guitars/:id`. We will select a patch request and create a JSON object with updated values the body of the request.
+The update action is mapped to `/guitars/:id`. We will select a patch request and create a JSON object with updated values in the body of the request.
 
 ![Update request in Postman](./assets/postman-update.png)
 
@@ -362,7 +362,7 @@ The Forest Service is considering a proposal to place in conservancy a forest of
 
 - Can see one animal with all its associated sightings
   - Hint: Checkout [this example](https://github.com/learn-co-students/js-rails-as-api-rendering-related-object-data-in-json-v-000#using-include) on how to include associated records
-- Can see all the all sightings during a given time period
+- Can see all the sightings during a given time period
   - Hint: Your controller can use a range to look like this:
 
 ```ruby
@@ -380,7 +380,7 @@ end
 
 ### Stretch Challenges
 
-**Story 4**: In order to see the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.
+**Story 4**: In order to ensure that the wildlife sightings contain valid data, as a user of the API, I need to include proper specs.
 
 **Branch**: animal-sightings-specs
 
@@ -403,6 +403,5 @@ Validations will require specs in `spec/models` and the controller methods will 
 - Can create new animal along with sighting data in a single API request
   - Hint: Look into `accepts_nested_attributes_for`
 
----
-
+---                                                                                               
 [Back to Syllabus](../README.md#unit-six-ruby-on-rails)

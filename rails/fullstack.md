@@ -141,7 +141,7 @@ To create the view for `show`, we will add a new file to the exercise directory 
 
 ### New
 
-As developers, we want our users to be able add information to our web application that is then stored in the database.
+As developers, we want our users to be able to add information to our web application that is then stored in the database.
 
 `New` is a RESTful route that displays a form for the user.
 
@@ -189,11 +189,11 @@ Now we have the form, but we have not added the action of submitting data to the
 
 ### Strong Params
 
-Along with validation, strong params provide control over over what information is being allowed into a database. Strong params can dictate what attributes can be created and updated by setting restrictions on the controller methods.
+Along with validations, strong params provide control over what information is being allowed into a database. Strong params can dictate what attributes can be created and updated by setting restrictions on the controller methods.
 
 To implement strong params, we will create a new method in the controller that will be passed as an argument to the create and update methods.
 
-Strong params have two methods: require and permit. The **require** method does exactly what you think in requiring the attributes passed in to be present in the create or update methods. The **permit** method allows certain items to be present but if they are not present, that is still okay. But attributes that are not listed in the strong params will not be allowed to proceed.
+Strong params have two methods: `require` and `permit`. The **require** method does exactly what you think in requiring the attributes passed in to be present in the create or update methods. The **permit** method allows certain items to be present but if they are not present, that is still okay. However, attributes that are not listed in the strong params will not be allowed to proceed.
 
 ### Private
 
@@ -226,7 +226,7 @@ Next, we will make a route that will call the create method. Since we are submit
 post 'exercises' => 'exercise#create'
 ```
 
-There is no view associated with the create method. It is only a submit action triggered by the button on the form. Instead of thinking about a view, we should think about what kind of user experience we want for our user when creating a new item. One option is to trigger a redirect to a new page after the successful creation of a new item.
+The create method itself does not have an associated view. It serves as a submit action triggered by the button on the form. Instead of focusing on a specific view, let's consider the user experience we want to provide when creating a new item. One possibility is to redirect the user to a new page after successfully creating the item.
 
 ### Route Aliases
 
@@ -243,7 +243,7 @@ get 'exercises/:id' => 'exercise#show', as: 'exercise'
 
 These route aliases can be used in links for the view as well as redirects in the controller methods. When referencing the route alias, `_path` is appended to the end of the alias.
 
-If a route requires a param the alias will also require a param gets passed.
+If a route requires a param the alias will also require that a param gets passed.
 
 We can create a conditional statement in the create method that will trigger a redirect if the new entry to the database is made successfully.
 

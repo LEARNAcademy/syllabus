@@ -3,11 +3,11 @@
 #### Overview
 Rails uses the MVC architectural pattern. MVC defines how an application handles different kinds of information. MVC separates an application into models for handling data and business logic, controllers to handle requests and retrieve the data from the model, and views for handling graphical user interface objects and presentation. URL parameters, also known as params or query strings, are a way to pass in additional information into a controller method to query the database or dynamically modify the view. This section will take a deep dive into the controller and view aspects of MVC.
 
-#### Previous Controllers, Routes, and Views Lecture (1hr 7min)
-[![YouTube](http://img.youtube.com/vi/dprfcJq2xX4/0.jpg)](https://www.youtube.com/watch?v=dprfcJq2xX4)
+#### Previous Controllers, Routes, and Views Lecture (53min)
+[![YouTube](http://img.youtube.com/vi/dprfcJq2xX4/0.jpg)](https://www.youtube.com/watch?v=9DyQZcoVVrQ)
 
-#### Previous Params Lecture (1hr 19min)
-[![YouTube](http://img.youtube.com/vi/Ag5FCQCiXz0/0.jpg)](https://www.youtube.com/watch?v=Ag5FCQCiXz0)
+#### Previous Params Lecture (50min)
+[![YouTube](http://img.youtube.com/vi/Ag5FCQCiXz0/0.jpg)](https://www.youtube.com/watch?v=VbIiuhdLmHI)
 
 #### Learning Objectives
 - can conceptualize the flow of data from route to controller to view
@@ -100,11 +100,11 @@ class MainController < ApplicationController
 end
 ```
 
-We access the method in the controller through our url request. This is done by appending a slash `/` and the name of your method to `localhost:3000`. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches '/answer'
+We access the method in the controller through our url request. This is done by appending a slash `/` and the name of our method to `localhost:3000`. Try navigating to `localhost:3000/answer`. At this point, we will see an error that says no route matches '/answer'
 
 ### The Route
 
-In order for our Rails server to respond to a request to this url, it needs a particular path and an http verb. A `routes.rb` file in the `config` folder is created when you run `rails new`. This file is intended to house all valid urls in your application.
+In order for our Rails server to respond to a request to this url, it needs a particular path and an http verb. When we ran the `rails new` command a `routes.rb` file was created in the `config` folder. This file is intended to house all valid urls in your application. 
 
 <img src="https://i.ibb.co/7r7kVM9/config-routes.png" alt="config-routes" border="0" />
 
@@ -149,7 +149,7 @@ Now, our Rails app has all the information to display a response to the `/questi
 
 ### Landing Page
 
-A landing page is what the user sees when they first visit your site. By default, Rails gives us a landing page at `localhost:3000` with the Rails boilerplate code. We can instruct our application to use another view as the landing page by using a helper method called **root**. The root route at the top because it is the most popular route and should be matched first. The root route can only have a `GET` action.
+A landing page is what the user sees when they first visit your site. By default, Rails gives us a landing page at `localhost:3000` with the Rails boilerplate code. We can instruct our application to use another view as the landing page by using a helper method called **root**. We put the root route at the top because it is the most popular route and should be matched first. The root route can only have a `GET` action.
 
 ```ruby
 Rails.application.routes.draw do
@@ -273,7 +273,7 @@ The page will display `Hello, Friends!`
 
 ### Controller Arguments
 
-Often we do some logic in the controller and send on the results to the view with instance variables.
+Often we do some logic in the controller and then send on the results to the view with instance variables.
 
 Let's create a new route and controller for example:
 
