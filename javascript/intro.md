@@ -2,7 +2,7 @@
 
 #### Overview
 
-JavaScript is a versatile and powerful programming language. JavaScript is a scripting language, meaning it is used to create logic that will make a webpage react to the interactions from a user. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+JavaScript is a versatile and powerful programming language. JavaScript is also as a scripting language, meaning it is used to create logic that will make a webpage react to the interactions from a user. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
 
 #### Previous Lecture (41 min)
 
@@ -55,7 +55,7 @@ JavaScript is a versatile and powerful programming language. JavaScript is a scr
 
 #### Troubleshooting Tips
 
-- Is the file path is correct?
+- Is the file path correct?
 
 ---
 
