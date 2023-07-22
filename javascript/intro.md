@@ -74,7 +74,7 @@ In JavaScript there are six primitive data types:
 
 ### Number
 
-**Numbers** are a data type that is made up of whole number integers (positive, negative, or zero) as well as fractions of a whole number written as a decimal called a **float**.
+**Numbers** are a data type that is made up of whole number integers (positive, negative, or zero) as well as fractions of a whole number that are written as a decimal called a **float**.
 
 ```javascript
 // whole number
@@ -84,7 +84,7 @@ In JavaScript there are six primitive data types:
 8.7
 ```
 
-Numbers are used to perform mathematical calculations and make evaluations. The calculations are the usual addition, subtraction, multiplication, and division as well as exponents, and the **modulo operator** which returns the whole number remainder of a division problem.
+Numbers are used to perform mathematical calculations and make evaluations. The calculations are the usual addition, subtraction, multiplication, and division. As well as exponents and the **modulo operator**, which returns the whole number remainder of a division problem.
 
 ```javascript
 // addition
@@ -140,7 +140,7 @@ There are many properties and operations that can be applied to strings. One of 
 "hello " + "world"
 // output: "hello world"
 
-// "3 + 4"
+"3 + 4"
 // output: "3 + 4"
 
 "3 + 4" + "5"
@@ -162,6 +162,11 @@ false
 ### Undefined
 
 If a variable is created but not assigned a value, the variable is **undefined**.
+
+```javascript
+var example
+// output: undefined
+```
 
 ### Null
 
@@ -186,13 +191,13 @@ false * 9
 
 ### Running JavaScript Code
 
-There are many ways we can run a JavaScript file and see the outcome of our logic. For our pair programming JavaScript challenges we will use the terminal. To run a JavaScript file in the terminal, we must ensure we are in the directory containing the file. By using `cd` we can navigate into the correct directory. Then we can use the command `$ node` that will execute a JavaScript run time followed by the file name. The notation of `$` indicates a terminal command and is not included in the command itself.
+There are many ways we can run a JavaScript file and see the outcome of our logic. For our pair programming JavaScript challenges we will use the terminal. To run a JavaScript file in the terminal, we must ensure we are in the directory containing the file. By using `cd` we can navigate into the correct directory. Then we can use the command `node` that will execute a JavaScript run time followed by the file name. The notation of `$` indicates a terminal command and is not included in the command itself.
 
 ```
 $ node javascript-intro.js
 ```
 
-This will run the file, but there is one more thing to achieve an output. We need to wrap `console.log()` around to code we wish to view.
+This will run the file, but there is one more step to achieve an output. We need to wrap `console.log()` around the code we wish to view.
 
 ```javascript
 console.log(6 + 7)
@@ -209,7 +214,7 @@ Manipulating data is a key component of creating logic in programming. It is oft
    - Variables can be called (almost) whatever we, as developers, choose as long as we follow a couple of principles. Variable names in JavaScript should follow the naming convention of camelCase. The naming convention **camelCase** is a way to write multiple words without spaces and `itLooksLikeThis` where the first letter of the first word is lowercase and the first letter of each additional word is uppercase. Variable names should NOT start with a capital letter or have spaces. Variable names should always _communicate intent_.
    - `const myCamelCasedVariableName`
 3. Assignment operator
-   - Once we have declared and named a variable JavaScript will recognize its existence. At this point, the variable will have a value of `undefined`. To change that we can use a single equal sign `=` or **assignment operator** to give the variable a value.
+   - Once we have declared and named a variable then JavaScript will recognize its existence. At this point, the variable will have a value of `undefined`. To change that we can use a single equal sign `=` or **assignment operator** to give the variable a value.
    - `const myCamelCasedVariableName =`
 4. Data
    - The information that our variable holds can be anything as long as it is recognized by JavaScript, meaning it must be a JavaScript data type.
@@ -225,16 +230,13 @@ var myNum = 2
 console.log(myNum)
 // output: 2
 
-myNum + 5
-console.log(myNum)
+console.log(myNum + 5)
 // output: 7
 
-myNum * 7
-console.log(myNum)
+console.log(myNum * 7)
 // output: 14
 
-myNum + myNum
-console.log(myNum)
+console.log(myNum + myNum)
 // output: 4
 
 // variable reassigned
@@ -269,7 +271,7 @@ console.log("hello"[2])
 // output: "l"
 ```
 
-There are many common actions that developers want to preform. To keep us from reinventing the wheel, the JavaScript language has a bunch of pre-made functionality that can be used on the data type string. These are called **built-in methods**. The built-in methods often rely on properties that are innate to the data type of string. Often the methods require additional information called an **argument** that gets passed into a set of parentheses after the method name.
+There are many common actions that developers want to preform. To keep us from reinventing the wheel, the JavaScript language has a bunch of pre-made functionality that can be used on Strings. These are called **built-in methods**. The built-in methods often rely on properties that are innate to the data type of string. Often the methods require additional information called an **argument** that gets passed into a set of parentheses after the method name.
 
 ```javascript
 var greeting = "hello"
@@ -301,11 +303,11 @@ console.log(greeting.slice(1, 3))
 
 Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 
-- Write the code that will log the outcome of 34 added to 71.
-- Write the code that will log the outcome of 67 subtracted from 123.
-- Write the code that will log the outcome of 56 multiplied by 23.
-- Write the code that will log the outcome of 45 divided by 5.
-- Write the code that will log the outcome of 5 to the power of 7.
+- Write the code that will log the output of 34 added to 71.
+- Write the code that will log the output of 67 subtracted from 123.
+- Write the code that will log the output of 56 multiplied by 23.
+- Write the code that will log the output of 45 divided by 5.
+- Write the code that will log the output of 5 to the power of 7.
 - Write the code that will log the whole number remainder of 33 divided by 6.
 - Write the code that will log the length of a string containing your name.
 - Write the code that will log whether your string includes the letter "e"?
