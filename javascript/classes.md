@@ -30,10 +30,10 @@ Classes are the blueprint or templates for objects. Classes are reusable and cus
 #### Additional Resources
 
 - [Javascript Enlightenment](http://www.javascriptenlightenment.com/)
-- [You Don't Know JS: Up & Going - Chapter 2: Into JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects)
+- [You Don't Know JS: Up & Going - Chapter 2: Into JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20%26%20going/ch2.md)
 - [MDN: Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Objects)
-- [You Don't Know JS: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md#chapter-3-function-vs-block-scope)
-- [You Don't Know JS: Scope Closure](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch5.md#chapter-5-scope-closure)(Caution: not for the faint of heart)
+- [You Don't Know JS: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [You Don't Know JS: Scope Closure](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch5.md)(Caution: not for the faint of heart)
 - [Airbnb JavaScript Style Guidelines](https://github.com/airbnb/javascript)
 
 #### Process
@@ -246,7 +246,7 @@ console.log(bella.description())
 
 ### 💻 Challenges
 
-- Coffee marker: copy the given `Coffee` class into a text editor
+- Coffee Maker: copy the given `Coffee` class into a text editor
   - Write the code that makes a black coffee object
   - Write the code that outputs the black coffee's profile
   - Write the code that makes a coffee object with 1 cream and 2 sugars

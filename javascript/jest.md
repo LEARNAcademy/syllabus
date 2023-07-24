@@ -4,9 +4,9 @@
 
 Testing is the process of creating automated quality assurance for code. Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase. Jest was created by Facebook and used by Twitter, Spotify, and Airbnb.
 
-#### Previous Lecture (1 hour 14 min)
+#### Previous Lecture (1 hour 15 min)
 
-[![YouTube](http://img.youtube.com/vi/XqvSIbZcpo8/0.jpg)](https://www.youtube.com/watch?v=XqvSIbZcpo8)
+[![YouTube](http://img.youtube.com/vi/_21rFhm4p7g/0.jpg)](https://www.youtube.com/watch?v=_21rFhm4p7g)
 
 ## Learning Objectives
 
