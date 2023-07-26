@@ -54,11 +54,11 @@ React components often need to store data and perform logic to create interactiv
 
 Everything in React is a component. **State** is a special variable that stores data that determines how the component renders and behaves. Components can be broken down into two basic categories: components that hold state and components that do not hold state. If a component is holding data in a state variable it is referred to as a **logic component**. If a component does not hold state it is considered a **display component**. It is important to make the distinction as we want to streamline the data flow in our apps, ensure a clear separation of concerns, and be able to fix any issues quickly.
 
-To make a component dynamic, the value of state must often change as the user interacts with the application. To change the value of a state variable we use a method called useState. **useState()** is special method that allows us to define state variables with initial values and provides a method to update that value. Special methods such as `useState` are called React hooks. **React hooks** are a set of built-in method for functional components allowing developers to "hook" into reusable features in React.
+To make a component dynamic, the value of state must change as the user interacts with the application. To change the value of a state variable, we use a method called useState. **useState()** is special method that allows us to define state variables with initial values and provides a method to update that value. Special methods such as `useState` are called React hooks. **React hooks** are a set of built-in method for functional components allowing developers to "hook" into reusable features in React.
 
 ### Counter Example
 
-Here is an example that creates a simple counter application in React. We start with `App.js` displaying a heading tag and a tag for our where the counter will live.
+Here is an example that creates a simple counter application in React. We start with _App.js_ displaying a heading tag and a tag designated for our counter.
 
 **src/App.js**
 
@@ -79,7 +79,7 @@ export default App
 
 ### Adding State Values
 
-Next we will add a state variable. The `useState` method is going to set an initial value and provide a method that can be used to update the value. To have access to the `useState` method we will need to import it to the component from the React dependencies. We can name the state variable whatever we want as long as it communicates intent. In this case it makes sense to name the variable `count`. Following the `count` variable is the name of the method that will be used to update `count`. It is convention to use the same name but add the prefix `set`. Inside the parentheses of the `useState` method we can set the initial value of `count`. Our counter will have an initial value of 0. Our component now has data that is available to be referenced and modified as needed.
+Next we will add a state variable. The `useState` method is going to set an initial value and provide a method that can be used to update the value. To have access to the `useState` method, we will import it to the component from the React dependencies. We can name the state variable whatever we want as long as it communicates intent. In this case it makes sense to name the variable `count`. Following the `count` variable is the name of the method that will be used to update `count`. It is convention to use the same name but add the prefix `set`. Inside the parentheses of the `useState` method we can set the initial value of `count`. Our counter will have an initial value of 0. Our component now has data that is available to be referenced and modified as needed.
 
 **src/App.js**
 
@@ -154,13 +154,13 @@ export default App
 
 ### Refactor to Advance Functionality
 
-Our counter application is working beautifully. But one of the great things about React is that components are designed to be reusable. Right now if we wanted more than one counter in our application we would be stuck duplicating code. And that is a red flag! A quick refactor will allow our counter functionality to be used as many times as needed.
+Our counter application is working beautifully. One of the great things about React is that components are designed to be reusable. If we wanted more than one counter in our application, right now we would be stuck duplicating code. That is a red flag! A quick refactor will allow our counter functionality to be used as many times as needed.
 
-`App.js` is the only component that is predefined when using the command `create react-app`. It is the boss component in a React application and typically is in charge of data flow, managing other component, and other tasks we will discover later in the syllabus. Often this means `App.js` will be a logic component. But that is only true as long as it makes sense in the structure of the application. In this case moving the state values and logic to another component will allow more functionality without code duplication.
+_App.js_ is the only component that is predefined when using the command `create react-app`. It is the boss component in a React application and typically is in charge of data flow, managing other component, and other tasks we will discover later in the syllabus. Often this means _App.js_ will be a logic component. However, that is only true if it makes sense in the structure of the application. For this example, moving the state values and logic to another component will allow more functionality without code duplication.
 
 ### Counter Component
 
-In this refactor we will add a directory inside the `src` directory named `components`. Inside `components` we will add a new file called `Counter.js` that will be a React component. We can move the logic from `App.js` over to the new `Counter.js` file by copying and pasting and updating the name and export of the component.
+In this refactor we will add a directory inside the _src_ directory named _components_. Inside the _components_ directory, we will add a new file called _Counter.js_ that will be a React component. We can move the logic from _App.js_ over to the new _Counter.js_ file by copying and pasting and updating the name and export of the component.
 
 **src/components/Counter.js**
 
@@ -188,7 +188,7 @@ export default Counter
 
 ### Multiple Counters
 
-`App.js` no longer has counter logic. Instead it will be in charge of rendering the component that does have the counter logic. We will import the counter component and invoke the component inside the return. And this is where the power of React shines. We can invoke the counter component as many times as we please without duplicating any logic. And each counter component is a unique instance so will act independently of all other counters. Very cool!
+_App.js_ no longer has counter logic. Instead it will be in charge of rendering the component that has the counter logic. We will import the _Counter_ component and invoke the component inside the return. This is where the power of React shines. We can invoke the _Counter_ component as many times as we please without duplicating any logic. Each _Counter_ component is a unique instance that will act independently of all other counters. Very cool!
 
 **src/App.js**
 
@@ -218,20 +218,20 @@ As a developer, you are tasked with creating a color box application. The applic
 
 ### 📚 User Stories
 
-- As a user, I can see a square box on the screen with a black border and a white background
-- As a user, I can see the default color name "white" inside the box
-- As a user, every time I click on the box the name of a different color appears
+- As a user, I can see a square box on the screen with a black border and a white background.
+- As a user, I can see the default color name "white" inside the box.
+- As a user, every time I click on the box the name of a different color appears.
   - Possible color names: red, orange, yellow, green, blue, purple, pink
 - As a user, every time I click the box instead of the color name, I see the background color in the box change to represent the color.
 - As a user, I can see many boxes on the page all acting independently of one another.
 
 ### 🏔 Stretch Goals
 
-- As a user, I can start with no boxes on the screen
-- As a user, I can see a button to add a box
-- As a user, I can see a button to remove a box
-- As a user, every time I click the add button, I can add an additional box that acts independently of the other boxes
-- As a user, every time I click the remove button, I can remove the last box in the series
+- As a user, I can start with no boxes on the screen.
+- As a user, I can see a button to add a box.
+- As a user, I can see a button to remove a box.
+- As a user, every time I click the add button, I can add an additional box that acts independently of the other boxes.
+- As a user, every time I click the remove button, I can remove the last box in the series.
 
 ---
 
