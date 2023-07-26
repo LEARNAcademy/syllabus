@@ -21,7 +21,7 @@ Developers can add images their React applications to create more engaging user 
 - Create a new React application with no spaces: `yarn create react-app images-student1-student2` (ex. yarn create react-app images-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called `components`
 - Code!
 
 #### Useful Commands
@@ -41,11 +41,13 @@ Developers can add images their React applications to create more engaging user 
 
 ### React State with Images
 
-Storing images in a React application gives us more control over the functionality of the application. To keep the images organized, it is convention to store all the images in a directory called the **assets directory**. The _assets_ directory lives inside the _src_ directory at the same level as _App.js_.
+Storing images in a React application gives us more control over the functionality of the application. To keep the images organized, it is convention to store all the images in a directory called the **assets directory**. The `assets` directory lives inside the `src` directory at the same level as `App.js`.
 
 ### Flashcard Application
 
-Here is an example that uses images to display randomized flashcards. We will start in _App.js_ with a heading tag.
+Here is an example that uses images to display randomized flashcards. We will start in `App.js` with a heading tag.
+
+**src/App.js**
 
 ```javascript
 import React from "react"
@@ -62,7 +64,9 @@ export default App
 
 ### Adding Images
 
-Next we will add the images to the application. To keep our application organized, it is convention to create a new directory in the _src_ directory called _assets_. The _assets_ directory will hold all the images for our flashcards. Next we will import the images to _App.js_. Once the images are imported, they can be stored in an array.
+Next we will add the images to the application. To keep our application organized, it is convention to create a new directory in the `src` directory called `assets`. The `assets` directory will hold all the images for our flashcards. Next we will import the images to `App.js`. Once the images are imported, they can be stored in an array.
+
+**src/App.js**
 
 ```javascript
 import React from "react"
@@ -93,7 +97,9 @@ export default App
 
 ### Adding State Values
 
-Now that the images are imported to _App.js_ we can create the logic of the application. First, we will add a state variable that will hold the flashcard actively being displayed to the user as well as the method that will update the flashcard as the user selects the next option. This will be achieved with the `useState` React hook. The state variable can be named `currentCard`. It is convention to use the same name but add the prefix `set` to the updater method. We can set the first flashcard image as the initial value of `currentCard`. To see the card displayed in the browser the `currentCard` value is passed to the `src` attribute of an `img` tag in JSX.
+Now that the images are imported to `App.js` we can create the logic of the application. First, we will add a state variable that will hold the flashcard actively being displayed to the user as well as the method that will update the flashcard as the user selects the next option. This will be achieved with the `useState` React hook. The state variable can be named `currentCard`. It is convention to use the same name but add the prefix `set` to the updater method. We can set the first flashcard image as the initial value of `currentCard`. To see the card displayed in the browser the `currentCard` value is passed to the `src` attribute of an `img` tag in JSX.
+
+**src/App.js**
 
 ```javascript
 import React, { useState } from "react"
@@ -128,6 +134,8 @@ export default App
 ### Updating State Values
 
 The next step is creating the logic that will allow the user to click through different flashcards. We will create a method that will pull a random image from the array. This method can be name `handleCardSelection` to communicate its intent. The method will hold the code that creates a random number and uses that random number to select a flashcard from the array of images. The `handleCardSelection` method is now ready to be called. We can add a button in JSX with an `onClick` attribute that will trigger the `handleCardSelection` method.
+
+**src/App.js**
 
 ```javascript
 import React, { useState } from "react"
