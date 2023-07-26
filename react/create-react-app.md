@@ -35,7 +35,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 - Create a new React application with no spaces: `yarn create react-app intro-student1-student2` (ex. yarn create react-app intro-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called _components_
 - Code!
 
 #### Useful Commands
@@ -86,7 +86,7 @@ After you type `yarn start`, you will notice your terminal is busy running React
 
 ### Modifying The App Component
 
-Inside the directory called `recipe-application` are two additional directories. One is called _public_ that contains the _index.html_ file. The other directory is called _src_ that contains a file called _App.js_ where we will spend most of our time.
+Inside the directory called `recipe-application` are two additional directories. One is called `public` that contains the `index.html` file. The other directory is called `src` that contains a file called `App.js` where we will spend most of our time.
 
 When initially opening the file, we will see the boilerplate code that creates the view in the browser. As of React version 18, this is the code that appears in the file.
 
@@ -146,11 +146,11 @@ export default App
 
 ### Nesting Components
 
-It is normal to have many different components working together to create a React app. To keep the components organized, we will create another directory inside of _src_ called _components_.
+It is normal to have many different components working together to create a React app. To keep the components organized, we will create another directory inside of `src` called _components_.
 
 In this example, we will create an application that has a Header component, a Recipe component, and a Footer component.
 
-Inside the components folder, create a new file called `Header.js`. It is convention to name the file the same name as the component in that file.
+Inside the components directory, create a new file called `Header.js`. It is convention to name the file the same name as the component in that file.
 
 **src/components/Header.js**
 
@@ -175,7 +175,7 @@ For each new component there are four necessary steps:
 3. Return JSX
 4. Export the component
 
-We will need to call the Header component in _App.js_. Because all the components are in separate directories, we need to tell _App.js_ where the Header component can be found.
+We will need to call the Header component in `App.js`. Because all the components are in separate directories, we need to tell `App.js` where the Header component can be found.
 
 **src/App.js**
 
@@ -196,7 +196,7 @@ export default App
 
 ### Adding the Recipe Component
 
-Next we will add the Recipe component. We create the Recipe component in the _components_ folder.
+Next we will add the Recipe component. We create the Recipe component in the _components_ directory.
 
 **src/components/Recipe.js**
 
@@ -242,7 +242,7 @@ export default App
 
 ### Adding the Footer Component
 
-Next we will add a footer component. We create the Footer component in the _components_ folder.
+Next we will add a footer component. We create the Footer component in the _components_ directory.
 
 **src/components/Footer.js**
 
