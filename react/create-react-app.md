@@ -181,7 +181,7 @@ We will need to call the Header component in _App.js_. Because all the component
 
 ```javascript
 import React from "react"
-import Header from "./component/Header"
+import Header from "./components/Header"
 
 const App = () => {
   return (
