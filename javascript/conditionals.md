@@ -30,7 +30,6 @@ Decision structures, also called decision trees, conditional statements, or if/e
 #### Additional Resources
 
 - [Conditionals from MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [String Interpolation](./template-literals.md)
 
 #### Process
 
@@ -42,13 +41,13 @@ Decision structures, also called decision trees, conditional statements, or if/e
 
 #### Troubleshooting Tips
 
-- Is the file path is correct?
+- Is the file path correct?
 
 ---
 
 ### JavaScript Operators
 
-Boolean is a primitive data type in JavaScript that evaluates to either `true` or `false`. Boolean values are very useful when making evaluations about data. **Equality operators** compare one value to the other and judge if the values equate to the same thing. If they do equate to the same a Boolean value of true is returned if not we get a Boolean value of false. There are two types of equality operators, the loose equality operator and the strict equality operator. The loose equality operator converts the two items to the same data type before making a comparison and the strict equality operator requires the two items being compared must be the same data type to return true.
+Boolean is a primitive data type in JavaScript that evaluates to either `true` or `false`. Boolean values are very useful when making evaluations about data. **Equality operators** compare one value to the other and judge if the values equate to the same thing. If they do equate to the same, a Boolean value of true is returned. If it does not we get a Boolean value of false. There are two types of equality operators, the loose equality operator and the strict equality operator. The loose equality operator converts the two items to the same data type before making a comparison and the strict equality operator requires the two items being compared must be the same data type to return true.
 
 ```javascript
 // loose equality operator
@@ -64,7 +63,7 @@ true === false
 // output: false
 ```
 
-**Relational operators** looks for a relationship between two values. A Boolean value is returned.
+**Relational operators** look for a relationship between two values and Boolean value is returned.
 
 ```javascript
 // greater than
@@ -122,9 +121,9 @@ true !== true
 
 ### Javascript Decisions
 
-Programming is the art of solving very complex problems or processes by breaking each problem into tiny, solvable pieces.
+Programming is the art of solving very complex problems or processes by breaking each one into tiny, solvable pieces.
 
-In development, **conditionals statements** are commands for handling decisions. Specifically, conditionals perform different actions depending on whether the outcome of a Boolean condition evaluates to true or false.
+In development, **conditional statements** are commands for handling decisions. Specifically, conditionals perform different actions depending on whether the outcome of a Boolean condition evaluates to true or false.
 
 A conditional statement is defined by the JavaScript keyword **if**. The `if` function takes a statement to be evaluated. If the statement evaluates to the Boolean value of true, the corresponding code statement will be executed.
 
@@ -134,7 +133,7 @@ if(this thing is true) {
 }
 ```
 
-A minimum need for a conditional statement is just a single `if` function. However, there is often more decisions that need to be made. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says, `if this thing is true, do this, otherwise, do this other thing.` To create an either-or statement we need to add an **else** statement will act as a catch all.
+The minimum requirement for a conditional statement is a single `if` function. However, there is often more decisions that need to be made. Think of the logic behind a simple switch that is either on or off. In code we can create logic that says, `if this thing is true, do this, otherwise, do this other thing`. To create an either-or statement we need to add an **else** statement will act as a catch all.
 
 ```javascript
 if(this thing is true) {
@@ -157,7 +156,7 @@ if (carOn === true) {
 // output: "The engine is running."
 ```
 
-If we want our code to execute something if the `if` condition is not true, we add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run if the `if` condition is not met.
+If we want our code to execute something different when the `if` condition is not true, we will add an `else` to our program. `Else` is the catch all so we don't give it its own statement. It will automatically run when the `if` condition is not met.
 
 ```javascript
 const carOn = false
@@ -188,7 +187,7 @@ if (carOn === true) {
 
 ### String Interpolation
 
-When executing code logic, is it often necessary to return a detailed statement that can involve variables and additional text. Template literals, also known as **string interpolation** allows variables to be embedded into strings. Prior to this neat syntax the only way to use variables inside of strings was to use concatenation.
+When executing code logic, it is often necessary to return a detailed statement that can involve variables and additional text. Template literals, also known as **string interpolation** allows variables to be embedded into strings. Prior to this neat syntax the only way to use variables inside of strings was to use concatenation.
 
 ```javascript
 const number1 = 34
