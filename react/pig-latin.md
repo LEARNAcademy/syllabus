@@ -18,10 +18,12 @@ In this activity we're going to create an application that translates regular En
 
 #### Process
 
-- clone the appropriate repository from GitHub classroom
+- Create a team name
+- Add additional team members by using github handle
+- Clone the appropriate repository from GitHub classroom
 - `cd` into the repository
-- run $ `yarn` to install the React dependencies
-- Create a new branch for each feature you implement
+- Run $ `yarn` to install the React dependencies
+- Create a new branch for each feature (user story) you implement
 - Open the folder in a text editor
 - Code!
 
