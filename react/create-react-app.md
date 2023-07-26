@@ -196,7 +196,7 @@ export default App
 
 ### Adding the Recipe Component
 
-Next we will add the Recipe component. We create the Recipe component in the `components` folder.
+Next we will add the Recipe component. We create the Recipe component in the _components_ folder.
 
 **src/components/Recipe.js**
 
@@ -242,7 +242,7 @@ export default App
 
 ### Adding the Footer Component
 
-Next we will add a footer component. We create the Footer component in the `components` folder.
+Next we will add a footer component. We create the Footer component in the _components_ folder.
 
 **src/components/Footer.js**
 
