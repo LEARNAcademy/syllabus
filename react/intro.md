@@ -38,7 +38,7 @@ React is JavaScript library for creating user interfaces. Everything in React is
 - `cd` into the `react-challenges` repository
 - Create a new branch: `intro-initials` (ex. intro-sp)
 - `touch` a file with no spaces and `.html` extension: `intro-student.html` (ex. intro-sarah.html)
-- Open the folder in a text editor
+- Open the file in a text editor
 - Code!
 
 #### Troubleshooting Tips
