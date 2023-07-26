@@ -2,7 +2,7 @@
 
 #### Overview
 
-React applications are designed to handle user interactions quickly and efficiently. Button click are one example of user interactions. Buttons can trigger code logic execution that changes what the user sees in the application. Another common way users interact with an application is through text input fields. Inputs allow a user to add unique content to an application. Developers can track each keystroke made my the user and save the information for use in the code logic.
+React applications are designed to handle user interactions quickly and efficiently. Button clicks are one example of user interactions. Buttons can trigger code logic that changes what the user sees in the application. Another common way users interact with an application is through text input fields. Inputs allow a user to add unique content to an application. Developers can track each keystroke made my the user and save the information for use in the code logic.
 
 #### Previous Lecture (57 min)
 
@@ -56,9 +56,9 @@ React applications are designed to handle user interactions quickly and efficien
 
 ### DOM Events and Listeners
 
-Web applications like React are built to handle interaction with a user. These interactions can happen in a variety of ways. The user can click with their mouse, hover over elements, or use their keyboard to type. All of these interactions are considered **DOM events**. The DOM (Document Object Model) is always listening for changes. As a user moves their mouse across the screen the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly.
+Web applications like React are built to handle interaction with a user. These interactions can happen in a variety of ways. The user can click with their mouse, hover over elements, or use their keyboard to type. All of these interactions are considered **DOM events**. The DOM (Document Object Model) is always listening for changes. As a user moves their mouse across the screen, the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly.
 
-To create recognition of various events we can add event listeners to HTML (and JSX) tags. **Event listeners** are methods that will wait for specific DOM events to occur and trigger appropriate actions. One example is adding an `onClick` attribute to a button. The DOM is listening for a click event on that particular node and will execute the action described by the developer.
+We can add event listeners to HTML (and JSX) tags to recognize these various events . **Event listeners** are methods that will wait for specific DOM events to occur and trigger appropriate actions. One example is adding an `onClick` attribute to a button. The DOM is listening for a click event on that particular node and will execute the action described by the developer.
 
 Another event listener is **onChange** which listens for any changes made to a particular node and executes a corresponding action. This type of listener is very handy when the user is typing in a text field. We can listen for the changes and capture the value of what the user is typing.
 
@@ -108,7 +108,7 @@ export default App
 
 ### Handle Change Methods
 
-In JavaScript, event listeners create a new instance of the JavaScript class Event. The Event class is a blueprint for all instances of an event object. As many classes do, the Event class has both data (properties) and behavior (methods). The event object can be accessed in the `handleChange` method by passing the argument of `event` which is often shortened to `e` by convention. Once we can access the event object we can use dot notation to extract the user's input.
+In JavaScript, event listeners create a new instance of the JavaScript class Event. The Event class is a blueprint for all instances of an event object. As many classes do, the Event class has both data (properties) and behavior (methods). The event object can be accessed in the `handleChange` method by passing the argument of `event` which is often shortened to `e` by convention. By logging `e` we can look at the many properties and methods that are available on this particular event object. 
 
 **src/App.js**
 
@@ -131,7 +131,7 @@ const App = () => {
 export default App
 ```
 
-By logging `e` we can look at the many properties and methods that are available on this particular event object. To capture the characters the user is typing we can use the property `target` which, as the name suggests, targets the input field.
+Once we access the event object, we can use dot notation to extract the user's input. To capture the characters that the user is typing, we can use the property `target` which, as the name suggests, targets the input field.
 
 **src/App.js**
 
@@ -179,13 +179,13 @@ const App = () => {
 export default App
 ```
 
-Once we have the data from the input stored into the state value, the world is our oyster. We can pass the data to wherever it is needed. Often it will be useful to pass the state data to one or more nested components.
+Once we have the data from the input stored into the state value, the world is our oyster. We can pass the data to wherever it is needed. It will be useful to pass the state data to one or more nested components.
 
 ### 🤖 Challenge: Listening Robot
 
 As a developer, you are tasked with creating an application where three "robots" are listening to the text that a user types. As the user types, each robot responds in real time with a different modification to the input.
 
-When creating a project it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, `App.js` will handle the state values, inputs, and event listener method. Each robot will be in its own display component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
+When creating a project, it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, _App.js_ will handle the state values, inputs, and event listener method. Each robot will be in its own display component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
 
 ![Active Listening Robot Challenge](./assets/robot_active_listening.png)
 
@@ -194,7 +194,7 @@ When creating a project it is important to think about organizing your code so t
 - As a user, I can see a landing page with heading and a text input.
 - As a user, I see titles of three robots waiting for my text.
 - As a user, I see my "Good Robot" repeating exactly what I type in real time.
-- As a user, I see my "Bad Robot" saying "BLABLA....." One character for every character I type in real time.
+- As a user, I see my "Bad Robot" saying "BLABLA....." One character for every character I type in real time. For example, a user input of "robot" would be "BLABL".
 - As a user, I see a third robot that modifies the input as per the developer's choice in real time.
 
 ### 🏔 Stretch Goals
