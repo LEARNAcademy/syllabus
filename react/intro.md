@@ -208,7 +208,7 @@ Just like any other function, components must be called or invoked. A **componen
 </html>
 ```
 
-This patterns will allow us to create as many components as needed.
+This pattern will allow us to create as many components as needed.
 
 ---
 
