@@ -51,7 +51,7 @@ React is JavaScript library for creating user interfaces. Everything in React is
 
 **React** is a JavaScript library used to build webpages, mobile web pages, and even native mobile applications. It was created by Facebook as that application grew and became more dynamic. It is component based, which means that we use it to build many small parts that are joined together to form an entire application. This feature turns out to be extremely scalable. 
 
-React is a popular language not only because of its reusable structure but also because of its efficient response to user interactions. When you look at a website in the browser, you are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
+React is a popular language not only because of its reusable structure but also because of its efficient response to user interactions. When we look at a website in the browser, we are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
 
 ### React Components
 
@@ -61,7 +61,7 @@ As developers, we want to write as few lines of code as possible. When we repeat
 
 ### What is JSX?
 
-JavaScript is what you all have been learning up to this point. In React, we use a markdown syntax extension to JavaScript known as JSX. **JSX** is JavaScript flavored markdown that behaves very similarly to HTML. There are a couple small difference between HTML and JSX. JSX uses the syntax `className` rather than HTML's `class` to modify the look and behavior of a JSX element. This is because `class` is already a protected word in JavaScript. JSX is a building block of React components and what allows React to create user interfaces.
+JavaScript is what we have been learning up to this point. In React, we use a markdown syntax extension to JavaScript known as JSX. **JSX** is JavaScript flavored markdown that behaves very similarly to HTML. There are a couple small difference between HTML and JSX. JSX uses the syntax `className` rather than HTML's `class` to modify the look and behavior of a JSX element. This is because `class` is already a protected word in JavaScript. JSX is a building block of React components and what allows React to create user interfaces.
 
 ### Getting Started
 
@@ -214,7 +214,7 @@ This patterns will allow us to create as many components as needed.
 
 ### 💻 Challenge: React Components
 
-The goal of the following challenge is for you to practice nesting components and getting familiar with the component syntax.
+The goal of the following challenge is for us to practice nesting components and getting familiar with the component syntax.
 
 Create a new HTML file. Copy the following code into your file:
 
