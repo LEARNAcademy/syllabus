@@ -2,7 +2,7 @@
 
 #### Overview
 
-To create more engaging user experiences developers can add images their React applications. Images in a React app can be referenced from an image that exists on the internet via a URL. But that can be risky as the developer has no control over the reliability of the image. Instead, developers often add images to the file structure of a React application and import the image to a component where it is rendered to the browser in an image JSX tag.
+Developers can add images their React applications to create more engaging user experiences. Images in a React app can be referenced from an image that exists on the internet via a URL. However, that can be risky as the developer has no control over the reliability of the image. Instead, developers often add images to the file structure of a React application and import the image to a component where it is rendered to the browser in an image JSX tag.
 
 #### Learning Objectives
 
@@ -41,11 +41,11 @@ To create more engaging user experiences developers can add images their React a
 
 ### React State with Images
 
-Storing images in a React application gives us more control over the functionality of the application. To keep the images organized it is convention to store all the images in a directory called the **assets directory**. The assets directory lives inside the `src` directory at the same level as `App.js`.
+Storing images in a React application gives us more control over the functionality of the application. To keep the images organized, it is convention to store all the images in a directory called the **assets directory**. The _assets_ directory lives inside the _src_ directory at the same level as _App.js_.
 
 ### Flashcard Application
 
-Here is an example that uses images to display randomized flashcards. We will start in `App.js` with a heading tag.
+Here is an example that uses images to display randomized flashcards. We will start in _App.js_ with a heading tag.
 
 ```javascript
 import React from "react"
@@ -62,7 +62,7 @@ export default App
 
 ### Adding Images
 
-Next we will add the images to the application. To keep our application organized it is convention to create a new directory in the `src` directory called `assets`. The assets directory will hold all the images for our flashcards. Then we will import the images to `App.js`. Once the images are imported they can be stored in an array.
+Next we will add the images to the application. To keep our application organized, it is convention to create a new directory in the _src_ directory called _assets_. The _assets_ directory will hold all the images for our flashcards. Next we will import the images to _App.js_. Once the images are imported, they can be stored in an array.
 
 ```javascript
 import React from "react"
@@ -93,7 +93,7 @@ export default App
 
 ### Adding State Values
 
-Now that the images are imported to `App.js` we can create the logic of the application. First we will add a state variable that will hold the flashcard actively being displayed to the user as well as the method that will update the flashcard as the user selects the next option. This will be achieved with the `useState` React hook. The state variable can be named `currentCard`. It is convention to use the same name but add the prefix `set` to the updater method. We can set the first flashcard image as the initial value of `currentCard`. To see the card displayed in the browser the `currentCard` value is passed to the `src` attribute of an `img` tag in JSX.
+Now that the images are imported to _App.js_ we can create the logic of the application. First, we will add a state variable that will hold the flashcard actively being displayed to the user as well as the method that will update the flashcard as the user selects the next option. This will be achieved with the `useState` React hook. The state variable can be named `currentCard`. It is convention to use the same name but add the prefix `set` to the updater method. We can set the first flashcard image as the initial value of `currentCard`. To see the card displayed in the browser the `currentCard` value is passed to the `src` attribute of an `img` tag in JSX.
 
 ```javascript
 import React, { useState } from "react"
@@ -175,14 +175,14 @@ As a developer, you are tasked with creating a light switch application. The app
 
 - As a user, I can see a square box on the screen with a black border and a white background.
 - As a user, I can see the word "off" inside the box.
-- As a user, every time I click on the box the word toggles between the word "off" and the word "on."
-- As a user, when I see the word "off" the background color of the box is white.
-- As a user, when I see the word "on" the background color of the box is yellow.
-- As a user, I can see many boxes on the page all acting independently of one another.
-- As a user, instead of seeing a box I can see a picture of a light switch in the "off" position.
-- As a user, when I click on the light switch it turns "on".
-- As a user, when the light switch is "off" I see a white light bulb.
-- As a user, when I turn the switch "on" I see a yellow light bulb.
+- As a user, every time I click on the box, the word toggles between the word "off" and the word "on."
+- As a user, when I see the word "off", the background color of the box is white.
+- As a user, when I see the word "on", the background color of the box is yellow.
+- As a user, I can see many boxes on the page that are acting independently of one another.
+- As a user, I can see a picture of a light switch in the "off" position instead of seeing a box.
+- As a user, when I click on the light switch, I can see a picture of a light switch in the "on" position.
+- As a user, when the light switch is "off", I see a white light bulb.
+- As a user, when the light switch is "on", I see a yellow light bulb.
 
 ### 🏔 Stretch Goals
 
