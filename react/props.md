@@ -53,7 +53,7 @@ Props can be either static data or methods. The data typically comes from a valu
 
 ### Greeter Example
 
-Here is an example that creates a greeter application in React. We start with `App.js` displaying a heading tag and a nested component with a smaller heading tag.
+Here is an example that creates a greeter application in React. We start with _App.js_ displaying a heading tag and a nested component with a smaller heading tag.
 
 **src/App.js**
 
@@ -91,7 +91,7 @@ export default Greeter
 
 ### Passing Data as Props
 
-Now we will pass data from `App.js` down to the greeter component. Within the `Greeter` component call we will pass a variable `name` that contains the string "Hamilton". The variable is now available to the greeter component as props. To reference the variable `name` in the greeter component we need to do two things. First we need to pass props as an argument to the component. Then we can reference the variable through props as `props.name`.
+Now we will pass data from _App.js_ down to the _Greeter_ component. Within the _Greeter_ component call we will pass a variable `name` that contains the string "Hamilton". The variable is now available to the _Greeter_ component as props. To reference the variable `name` in the _Greeter_ component we need to do two things. First, we pass props as an argument to the _Greeter_ component call on _App.js_. Second, we reference the variable through props as `props.name` on the _Greeter_ component .
 
 **src/App.js**
 
@@ -151,15 +151,15 @@ const App = () => {
 export default App
 ```
 
-The variable `name` is assigned information from the value in state. This makes `name` available to `Greeter` as props. Since `Greeter` is a display component there are no updates that need to happen in order to handle our refactor in `App.js`.
+The variable `name` is assigned information from the value in state. This makes `name` available to the _Greeter_ component as props. Since the _Greeter_ component is a display component, no updates are needed for our refactor in _App.js_.
 
 ### Mapping a Component Call
 
-Our greeter application is working just great. But what if we have multiple people to greet? To expand the functionality of the application we can set an array in state. Then rather than a single `Greeter` component invocation we want to have one component per person. To manage this dynamically we can map over the array in state and return a component invocation. Now, no matter how many people we need to greet our code can manage the job effectively.
+Our greeter application is working just great. But what if we have multiple people to greet? To expand the functionality of the application we can set an array in state. Instead of a single _Greeter_ component invocation, we will have one component per person. To manage this dynamically, we will map over the array in state and return a component invocation. No matter how many people we need to greet now our code can manage the job effectively.
 
-React is iterating over the array in state and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. In this example we can use the index of the array since we have access to the index as the second parameter in the map method and we know each item in the array will always have a unique index.
+React is iterating over the array in state and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is an unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. Since we have access to the index as the second parameter in the map method, in this example we will use the index of the array to ensure each item in the array always has a unique identifier.
 
-As long as the `name` variable stays the same there are no changes that need to be made to `Greeter`.
+As long as the `name` variable stays the same, no changes need to be made to the _Greeter_ component.
 
 **src/App.js**
 
@@ -185,9 +185,9 @@ export default App
 
 ### Passing Methods as Props
 
-We have explored passing information as props but we can pass behavior as well. The process is very similar. In this example, we can create a button that when clicked will trigger a prompt that we can use to add new people to our array. The button will be its own component named `AddPerson`. The logic will be held in `App.js` and the appropriate behavior can be distributed as needed.
+We have explored passing information as props. We can pass behavior as well. The process is very similar to passing props. In this example, we will create a button that will trigger a prompt which will add new people to our array. The button will be its own component named _AddPerson_. The logic will be held in _App.js_, and the appropriate behavior can be distributed as needed.
 
-We can add a method in `App.js` that will use the state setter method named `setPeople` to trigger a `prompt()` method. If we save the prompt to a variable we can capture the result of what our user types. Then it can be added to the array in state.
+We will add a method in _App.js_ that will use the state setter method named `setPeople` to trigger a `prompt()` method. Saving the prompt to a variable captures the result of what our user types. Whatever the variable captures will be added to the array in state.
 
 **src/App.js**
 
@@ -218,7 +218,7 @@ const App = () => {
 export default App
 ```
 
-The method we wrote will update the array in state. There are no updates that need to happen to `Greeter` as the code we wrote is dynamic. But the method is not yet being called. We need to create a button with an `onClick` event.
+The method we wrote will update the array in state. There are no updates for the _Greeter_ component as the code we wrote is dynamic. However, the method is not yet being called. We need to create a button with an `onClick` event.
 
 The button's `onClick` will call the method `addPerson` that is being passed as props down into the component.
 
@@ -236,9 +236,9 @@ Now we have created a beautifully dynamic application that has great organizatio
 
 ### 🎲 Challenge: Dice Roller
 
-As a developer, you are tasked with creating a dice application. The application will allow the user to role a standard six-sided dice and see the result of each roll. As the user rolls the dice, each roll gets logged creating a list of all the previous rolls.
+As a developer, you are tasked with creating a dice application. The application will allow the user to role a standard six-sided dice and see the result of each roll. As the user rolls the dice, each roll gets logged which creates a list of all the previous rolls.
 
-When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The dice UI will be in its own component as will the roll log UI. `App.js` controls of all the data in state, renders the other components, and passes data to the dice and roll component.
+When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The dice UI will be in its own component as will the roll log UI. _App.js_ controls of all the data in state, renders the other components, and passes data to the dice and roll component.
 
 ![dice game](./assets/dice-game.png)
 
