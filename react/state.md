@@ -32,7 +32,7 @@ React components often need to store data and perform logic to create interactiv
 - Create a new React application with no spaces: `yarn create react-app state-student1-student2` (ex. yarn create react-app state-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called `components`
 - Code!
 
 #### Useful Commands
@@ -58,7 +58,7 @@ To make a component dynamic, the value of state must change as the user interact
 
 ### Counter Example
 
-Here is an example that creates a simple counter application in React. We start with _App.js_ displaying a heading tag and a tag designated for our counter.
+Here is an example that creates a simple counter application in React. We start with `App.js` displaying a heading tag and a tag designated for our counter.
 
 **src/App.js**
 
@@ -156,11 +156,11 @@ export default App
 
 Our counter application is working beautifully. One of the great things about React is that components are designed to be reusable. If we wanted more than one counter in our application, right now we would be stuck duplicating code. That is a red flag! A quick refactor will allow our counter functionality to be used as many times as needed.
 
-_App.js_ is the only component that is predefined when using the command `create react-app`. It is the boss component in a React application and typically is in charge of data flow, managing other component, and other tasks we will discover later in the syllabus. Often this means _App.js_ will be a logic component. However, that is only true if it makes sense in the structure of the application. For this example, moving the state values and logic to another component will allow more functionality without code duplication.
+`App.js` is the only component that is predefined when using the command `create react-app`. It is the boss component in a React application and typically is in charge of data flow, managing other component, and other tasks we will discover later in the syllabus. Often this means `App.js` will be a logic component. However, that is only true if it makes sense in the structure of the application. For this example, moving the state values and logic to another component will allow more functionality without code duplication.
 
 ### Counter Component
 
-In this refactor we will add a directory inside the _src_ directory named _components_. Inside the _components_ directory, we will add a new file called _Counter.js_ that will be a React component. We can move the logic from _App.js_ over to the new _Counter.js_ file by copying and pasting and updating the name and export of the component.
+In this refactor we will add a directory inside the `src` directory named `components`. Inside the `components` directory, we will add a new file called `Counter.js` that will be a React component. We can move the logic from `App.js` over to the new `Counter.js` file by copying and pasting and updating the name and export of the component.
 
 **src/components/Counter.js**
 
@@ -188,7 +188,7 @@ export default Counter
 
 ### Multiple Counters
 
-_App.js_ no longer has counter logic. Instead it will be in charge of rendering the component that has the counter logic. We will import the _Counter_ component and invoke the component inside the return. This is where the power of React shines. We can invoke the _Counter_ component as many times as we please without duplicating any logic. Each _Counter_ component is a unique instance that will act independently of all other counters. Very cool!
+`App.js` no longer has counter logic. Instead it will be in charge of rendering the component that has the counter logic. We will import the Counter component and invoke the component inside the return. This is where the power of React shines. We can invoke the Counter component as many times as we please without duplicating any logic. Each Counter component is a unique instance that will act independently of all other counters. Very cool!
 
 **src/App.js**
 
