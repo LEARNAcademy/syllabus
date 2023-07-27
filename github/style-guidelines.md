@@ -34,7 +34,7 @@ If you would like to contribute to our syllabus, please review the following:
 - All Ruby strings are in single quotes unless necessary for punctuation.
 - Semicolons are not used in JavaScript code unless necessary.
 - Code is formatted into its own distinct block with triple back ticks and styled with the name of the language in all lowercase.
-- File paths appear above code blocks in italics.
+- File paths appear above code blocks in bold.
 
 ### Need Help?
 If you need help, you can ask questions on our LEARN community slack channel or at `contact@learnacademy.org`.
