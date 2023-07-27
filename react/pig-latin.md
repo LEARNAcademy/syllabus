@@ -24,7 +24,7 @@ In this activity we're going to create an application that translates regular En
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
 - Create a new branch for each feature (user story) you implement
-- Open the folder in a text editor
+- Open the repository in a text editor
 - Code!
 
 #### Useful Commands
