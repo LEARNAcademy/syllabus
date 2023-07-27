@@ -20,7 +20,7 @@ Treasure Hunt is the first project that students create at LEARN. During Jumpsta
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
 - Create a new branch for each feature (user story) you implement
-- Open the folder in a text editor
+- Open the repository in a text editor
 - Code!
 
 #### Useful Commands
