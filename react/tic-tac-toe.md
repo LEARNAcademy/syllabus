@@ -24,7 +24,7 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
 - Create a new branch for each feature (user story) you implement
-- Open the folder in a text editor
+- Open the repository in a text editor
 - Code!
 
 #### Useful Commands
@@ -46,7 +46,7 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 
 This is a web game for two players who are taking turns on one device. You will have to use the component state to keep track of whose turn it is and which squares have been marked by each player. This project will challenge your knowledge of React as well as be an exercise in creating good user experiences.
 
-When creating a project, it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. App.js controls of all the data in state, renders the other components, and performs the game logic.
+When creating a project, it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. `App.js` controls of all the data in state, renders the other components, and performs the game logic.
 
 ### 📚 User Stories
 
