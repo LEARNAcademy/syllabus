@@ -36,7 +36,7 @@ React applications are designed to handle user interactions quickly and efficien
 - Create a new React application with no spaces: `yarn create react-app inputs-student1-student2` (ex. yarn create react-app inputs-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called `components`
 - Code!
 
 #### Useful Commands
@@ -185,7 +185,7 @@ Once we have the data from the input stored into the state value, the world is o
 
 As a developer, you are tasked with creating an application where three "robots" are listening to the text that a user types. As the user types, each robot responds in real time with a different modification to the input.
 
-When creating a project, it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, _App.js_ will handle the state values, inputs, and event listener method. Each robot will be in its own display component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
+When creating a project, it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, `App.js` will handle the state values, inputs, and event listener method. Each robot will be in its own display component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
 
 ![Active Listening Robot Challenge](./assets/robot_active_listening.png)
 
