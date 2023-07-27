@@ -30,7 +30,7 @@ React consists of collections of components. Props are used for the communicatio
 - Create a new React application with no spaces: `yarn create react-app functional-props-student1-student2` (ex. yarn create react-app functional-props-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called `components`
 - Code!
 
 #### Useful Commands
@@ -62,7 +62,7 @@ As we know, functions are pretty handy. Functions can be created in one place an
 
 To explore functional props we are going to create an application that will show a list of movies. Each movie will have a corresponding button that the user can click once they watch the movie. Clicking the button will create a note indicating the movie was watched.
 
-To get started, we need to create the movie data in _App.js_ in state. We will establish an array of objects to hold sets of data. Next we need to create a nested component that can display each movie. By mapping over the array of objects, we can pass each movie object to the nested _MovieDisplay_ component. Anytime we are mapping UI content in React, we will need to include a `key` with a unique identifier.
+To get started, we need to create the movie data in `App.js` in state. We will establish an array of objects to hold sets of data. Next we need to create a nested component that can display each movie. By mapping over the array of objects, we can pass each movie object to the nested `MovieDisplay` component. Anytime we are mapping UI content in React, we will need to include a `key` with a unique identifier.
 
 **src/App.js**
 
@@ -115,9 +115,9 @@ export default MovieDisplay
 
 Now we have the base structure of the application ready to go. The app is rendering the name of all the movies with a corresponding button. If the movie `watched` value is true, a message is displayed. If the value is false, the message will not be displayed.
 
-The next task is to add the functionality that will update the `watched` value. The challenges we are facing are that the state data is managed by _App.js_ while the button and its click action are handled by the _MovieDisplay_ component. This requires that we send the information of what movie is being watched "up the river" to _App.js_ where the state data lives.
+The next task is to add the functionality that will update the `watched` value. The challenges we are facing are that the state data is managed by `App.js` while the button and its click action are handled by the `MovieDisplay` component. This requires that we send the information of what movie is being watched "up the river" to `App.js` where the state data lives.
 
-To get this information we will use functional props. This means creating a function with an argument in _App.js_ that can be passed down to the _MovieDisplay_ component to be called when the button is clicked. We will also need to be able to know which movie item in the array needs to be updated. Therefore, we will pass the index to the _MovieDisplay_ as well as the function.
+To get this information we will use functional props. This means creating a function with an argument in `App.js` that can be passed down to the `MovieDisplay` component to be called when the button is clicked. We will also need to be able to know which movie item in the array needs to be updated. Therefore, we will pass the index to the `MovieDisplay` as well as the function.
 
 **src/App.js**
 
@@ -157,7 +157,7 @@ const App = () => {
 export default App
 ```
 
-There are now three pieces of data that are available to the _MovieDisplay_ component:
+There are now three pieces of data that are available to the `MovieDisplay` component:
 - the movie object that is creating the display for the name 
 - whether the movie has been watched
 - the `watchedMovie` method that can be called with an `onClick` in the button tag.
@@ -180,7 +180,7 @@ const MovieDisplay = (props) => {
 export default MovieDisplay
 ```
 
-When we defined `watchedMovie` we added a parameter called `selectedMovie`. This means we need to pass an argument. The data we need in the argument is which movie from the array we are intending to update. Luckily, this is where the fourth piece of information from _App.js_ comes into play: the index. The index is available as `props.index` and can be passed to `props.watchedMovie`.
+When we defined `watchedMovie` we added a parameter called `selectedMovie`. This means we need to pass an argument. The data we need in the argument is which movie from the array we are intending to update. Luckily, this is where the fourth piece of information from `App.js` comes into play: the index. The index is available as `props.index` and can be passed to `props.watchedMovie`.
 
 When a function is called `onClick`, the button is in control of firing off the invocation. However, we will need to add parentheses to the function call to add an argument.
 
@@ -212,7 +212,7 @@ export default MovieDisplay
 
 ### Accessing Functional Props
 
-Now that the `watchedMovie` method is being called in the nested _MovieDisplay_ component, we can access the index "up the river" in _App.js_. Once we have the index, we can use fundamental JavaScript logic to access the `watched` value of the selected movie object and reassign the value to `true`. Once the value is reassigned, `setMovies` will update the values in the state array.
+Now that the `watchedMovie` method is being called in the nested `MovieDisplay` component, we can access the index "up the river" in `App.js`. Once we have the index, we can use fundamental JavaScript logic to access the `watched` value of the selected movie object and reassign the value to `true`. Once the value is reassigned, `setMovies` will update the values in the state array.
 
 **src/App.js**
 
@@ -256,13 +256,13 @@ const App = () => {
 export default App
 ```
 
-Now we have a complete data flow using functional props to access information in a nested component and bring it back "up the river" to _App.js_. Functional props uses the JavaScript principle that functions can be defined in one place and invoked in another.
+Now we have a complete data flow using functional props to access information in a nested component and bring it back "up the river" to `App.js`. Functional props uses the JavaScript principle that functions can be defined in one place and invoked in another.
 
 ### 🌮 Challenge: Food Ordering App
 
 As a developer, you are tasked with creating a food ordering application in React. This is the first iteration of an application that is going to be much larger in the future so it is important to create a solid foundation from which the code base can grow.
 
-The menu UI will be in its own component as will the order UI. _App.js_ controls of all the data in state, renders the other components, and passes data to the menu and the order component.
+The menu UI will be in its own component as will the order UI. `App.js` controls of all the data in state, renders the other components, and passes data to the menu and the order component.
 
 ### 📚 User Stories
 
