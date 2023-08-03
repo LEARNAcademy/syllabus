@@ -250,7 +250,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Capstone Requirements](./capstone/requirements.md)
 - [Rails has_many_through](./capstone/has_many_through.md)
 - [Modifying Devise](./capstone/modifying-devise.md)
-- [Test coverage](./capstone/test-coverage.md)
+- [Code coverage](./capstone/code-coverage.md)
 
 ## Unit Eleven: Capstone Project, Icebox
 

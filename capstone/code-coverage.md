@@ -1,4 +1,4 @@
-# Test and Code Coverage  
+# Code Coverage  
 
 ## Overview  
 - Code coverage in Test Driven Development (TDD) safeguards the requirements of the code within our web applications. Reports associated with test coverage help us determine not only how much of the code our tests are evaluating but also if we need to consider more edge cases to increase confidence in the expected outcome of our web application.
@@ -6,7 +6,6 @@
 
 ## Additional Resources  
 - [Code Coverage](https://www.baeldung.com/cs/code-coverage)
-- [Improving React Testing Library Tests](https://claritydev.net/blog/improving-react-testing-library-tests)
 - [SimpleCov](https://www.rubydoc.info/gems/simplecov/0.22.0)
 
 ## Learning Objectives
