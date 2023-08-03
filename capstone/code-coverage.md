@@ -1,7 +1,7 @@
 # Code Coverage  
 
 ## Overview  
-- Code coverage in Test Driven Development (TDD) safeguards the requirements of the code within our web applications. Reports associated with test coverage help us determine not only how much of the code our tests are evaluating but also if we need to consider more edge cases to increase confidence in the expected outcome of our web application.
+- Code coverage in Test Driven Development (TDD) safeguards the requirements of the code within our web applications. Reports associated with code coverage help us determine not only how much of the code our tests are evaluating but also if we need to consider more edge cases to increase confidence in the expected outcome of our web application.
 - This overview assumes the developer has created a full-stack decoupled application using React with the frontend structure and Rails with the backend structure. It is also assumed that Ruby gem `rspec` and its dependencies have been installed on the Rails application.
 
 ## Additional Resources  
@@ -9,26 +9,26 @@
 - [SimpleCov](https://www.rubydoc.info/gems/simplecov/0.22.0)
 
 ## Learning Objectives
-- Create an acceptable percentage of test coverage for React frontend application
+- Create an acceptable percentage of code coverage for React frontend application
 - Create an acceptable percentage of code coverage for Rails backend application
 
 ## Vocabulary
-- test coverage
 - code coverage
+- test coverage
 
 ## Useful commands
 - $ `rspec`
 - $ `yarn test --coverage --watchAll`  
 
 The command `rspec` displays testing suite results associated with the Rails application.  
-The command `yarn test --coverage --watchAll` displays test coverage report concerning the React application.
+The command `yarn test --coverage --watchAll` displays code coverage report concerning the React application.
 
-## Application Test Coverage 
+## Application Code Coverage 
 **Code coverage** is an useful evaluation of how code within a web application is being tested before it is released to a consumer. Code coverage is a quantitative measurement of the number of lines of code covered by the testing suite. It helps web developers identify defects or bugs earlier in the production process. Less bugs helps us obtain more customer satisfaction with the end product. Code coverage also exposes areas of the web application that have not been tested. The more of the web application that is being tested, the more confidence that a developer can have that the web application will deliver the expected output to the consumer. 
 
 Code coverage is a very popular testing tool and can often be confused with another evaluation called **test coverage**, which is a qualitative measurement of each test within the web application. Test coverage evaluates how many features of a web application is being tested before it is released to a consumer. For this decoupled application, we will use the code coverage evaluation from two tools: built-in analysis from the React application and `SimpleCov` for the Rails application. 
 
-## React Test Coverage Metric
+## React Code Coverage Metric
 After creating a React project with `$ yarn create app`, you are automatically given access to the code coverage metric. Running the terminal command `yarn test --coverage --watchAll` outputs a static analysis of the files in the frontend application. The summary includes analysis of the following:
 1. Statement coverage, which is each line of code executed during the testing.
 2. Branch coverage, which is each branch within a conditional statement executed during testing.
@@ -52,7 +52,7 @@ Because this is a html file, we can open it in the browser to see a visual prese
 
 We do not want to save this code coverage report in our remote repo, so we need to ensure our .gitignore file is ignoring the coverage directory.
 
-## Rails Test Coverage Metric
+## Rails Code Coverage Metric
 `SimpleCov` is a Ruby gem that can be installed as a code coverage analysis tool. The `SimpleCov` gem will deliver a quick report of the percentage of Lines of Code (LOC) covered by the rspec testing in the terminal output. This report is displayed after the results of the testing suite.
 
 ![SimpleCov Terminal Output](./assets/rspec-simplecov-term.png)
