@@ -50,7 +50,7 @@ Because this is a html file, we can open it in the browser to see a visual prese
 
 ![Header Code Coverage Report](./assets/yarn-coverage-browser.png)
 
-We do not want to save this code coverage report in our remote repo, so we need to ensure our .gitignore file is ignoring the coverage directory.
+We do not want to save this code coverage report in our remote repo, so we need to ensure our ``.gitignore` file is ignoring the coverage directory.
 
 ## Rails Code Coverage Metric
 `SimpleCov` is a Ruby gem that can be installed as a code coverage analysis tool. The `SimpleCov` gem will deliver a quick report of the percentage of Lines of Code (LOC) covered by the rspec testing in the terminal output. This report is displayed after the results of the testing suite.
@@ -69,7 +69,7 @@ Selecting any of the ruby files will show the individual breakdown for the code 
 
 ![SimpleCov Controller File](./assets/simplecov-controller.png)
 
-We do not want to save this code coverage report in our remote repo, so we need to ensure our .gitignore file is ignoring the coverage directory.
+We do not want to save this code coverage report in our remote repo, so we need to ensure our `.gitignore` file is ignoring the coverage directory.
 
 ### SimpleCov Installation Process 
 - Add SimpleCov to the ***Gemfile***:
