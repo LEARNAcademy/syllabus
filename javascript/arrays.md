@@ -44,7 +44,7 @@ Arrays are variables that store collections of data in an ordered list. Having a
 
 #### Troubleshooting Tips
 
-- Is the file path is correct?
+- Is the file path correct?
 
 ---
 
@@ -174,12 +174,12 @@ Built-in methods for arrays fall into one of two categories: mutators and access
 
 ### Mutators
 
-Mutator methods modify the array the method is called on. When working with mutators it is important to remember the output of the method action will not always be the array. To see the effect of the mutator method we can call the variable containing the array.
+Mutator methods modify the array that the method is called on. When working with mutators it is important to remember the output of the method action will not always be the array. To see the effect of the mutator method we can call the variable containing the array.
 
 **.push(value)**
 
 - Adds a value onto the end of an array
-- Takes an argument of what is to be added
+- Takes an argument of the value to be added
 - The argument must be a data type recognized by JavaScript
 - The output of the method itself is the length of the new array
 
@@ -376,7 +376,7 @@ console.log(learnStudents1)
 
 ### Strings to Arrays and Back Again
 
-In JavaScript, arrays and strings have a lot of similar properties. They both are a collection of items, both have a length property, both are zero-indexed. But strings and arrays have many differences. It is often convenient to convert string into arrays and vice-versa.
+In JavaScript, arrays and strings have a lot of similar properties. They both are a collection of items, both have a length property, both are zero-indexed. But strings and arrays have many differences. It is often convenient to convert strings into arrays and vice-versa.
 
 **.join("")**
 
@@ -466,7 +466,7 @@ var groceryList = ["chips", "dip", "cookies"]
 
 - Write the code that will add "soda" to the end of the original array.
 
-- Write the code that will add "granola" to the end of array without altering the original array.
+- Write the code that will add "granola" to the end of the array without altering the original array.
 
 - Write the code that will return a subset of the array containing only "chips" and "dip".
 
@@ -512,7 +512,7 @@ var characters = ["y", "a", "r", "r", "a"]
 
 - Write the code that brings all the letters in the charsReversed array together into a string without separators.
 
-Create two arrays consisting of three first names of your cohort members in each.
+Create two arrays consisting of three first names of your cohort members in each array.
 
 - Write the code that sorts the names in alphabetical order.
 
