@@ -4,9 +4,9 @@
 
 As developers we have to think about what happens when things don't go as we expect. What if data is submitted to our API that isn't complete, or has something else that causes it to be invalid? This could cause harm to our database or affect the user experience.
 
-#### Previous Lecture (20 min)
+#### Previous Lecture (46 min)
 
-[![YouTube](http://img.youtube.com/vi/1iZzGLm9LmE/0.jpg)](https://www.youtube.com/watch?v=1iZzGLm9LmE)
+[![YouTube](http://img.youtube.com/vi/r6dWvvc6P5k/0.jpg)](https://www.youtube.com/watch?v=r6dWvvc6P5k)
 
 #### Learning Objectives
 
@@ -46,7 +46,7 @@ We can create a test that will look for an error if a cat is created without any
 ```ruby
 RSpec.describe Cat, type: :model do
   it "should validate name" do
-    cat = Cat.create
+    cat = Cat.create(age: 2, enjoys: 'Walks in the park', image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80')
     expect(cat.errors[:name]).to_not be_empty
   end
 end
@@ -127,7 +127,7 @@ Failures:
      # ./spec/requests/cats_request_spec.rb:40:in `block (2 levels) in <main>'
 ```
 
-And the results from running the full test suite give us a failure. Great! We expected a 422 response which is the server letting us know that we submitted an "Unprocessable Entity", but that's not what we got back. So how do we make that test pass? Let's add a validation.
+And the results from running the full test suite give us a failure. Great! We expected a 422 response which is the server letting us know that we submitted an "Unprocessable Entity", but that's not what we got back. So how do we make that test pass? Let's add a conditional statement to our create method in the controller to throw a 422 error if the cat is not valid.
 
 **app/controllers/cats_controller.rb**
 
@@ -159,7 +159,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can add the appropriate model specs that will ensure an incomplete cat throws an error.
 - As a developer, I can add the appropriate model validations to ensure the user submits a name, an age, what the cat enjoys, and an image.
 - As a developer, I can add the appropriate model specs that will ensure a cat enjoys entry is at least 10 characters long.
-- As a developer, I can add a validation to assure that will ensure a cat enjoys entry is at least 10 characters long.
+- As a developer, I can add a validation that will ensure a cat enjoys entry is at least 10 characters long.
 - As a developer, I can add the appropriate request validations to ensure the API is sending useful information to the frontend developer if a new cat is not valid.
 - As a developer, I can add the appropriate request spec that will look for a 422 error if the create validations are not met.
 - STRETCH: As a developer, I can add the appropriate request validations to ensure the API is sending useful information to the frontend developer if an updated cat is not valid.
