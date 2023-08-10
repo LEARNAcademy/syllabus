@@ -24,13 +24,13 @@ It is time to create new cats in our database! We will have two applications run
 
 The frontend is going to send the Rails API information, then Rails will use Active Record to post that information to the database.
 
-We already have a method that logs the form data for our new cat, so we can convert that method into a post request.
+We already have a function that logs the form data for our new cat, so we can convert that function into a post request.
 
 The fetch request will be made to the URL that is running the Rails API. In this case, our Rails app is running on `localhost:3000`. We are making a request to the post route of our Rails app. Remembering our RESTful routes, we know that we need to make a **POST** request to a route called `"/cats" `to create a new cat.
 
 Since our fetch needs to send data from the frontend to the backend we need to format our request. We need to send the information in the body of the request, and specify the header to accept JSON, and specify our HTTP method.
 
-Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `readCat` method to reload the cats array that will include the new cat.
+Our fetch call will return a Promise. If the Promise is resolved successfully we can call the `readCat` function to reload the cats array that will include the new cat.
 
 **/src/App.js**
 
@@ -47,7 +47,7 @@ const createCat = (cat) => {
     method: "POST"
   })
     .then((response) => response.json())
-    .then((payload) => readCat())
+    .then(() => readCat())
     .catch((errors) => console.log("Cat create errors:", errors))
 }
 ```
@@ -58,7 +58,7 @@ As long as we have set up the frontend scaffolding correctly, the cat create met
 
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can update the `createCat` method to post information to the database.
+- As a developer, I can update the `createCat` function to post information to the database.
 - As a user, I can create a new cat.
 - As a user, I can see my new cat in the cat list.
 
