@@ -8,8 +8,9 @@ External APIs are data sets created by other developers and made available for p
 
 - can define API key
 - can define environment variable
-- can create the code structure to protect API keys in a React in Rails application
+- can create the code structure to protect API keys in a React application
 - can use an API key to create an effective fetch request
+- can create the code structure to protect API keys in a React application
 
 #### Additional Resources
 
@@ -29,11 +30,10 @@ External APIs are data sets created by other developers and made available for p
 - create a file in the root of the project called `.env`
 - add `/.env` to the `.gitignore` file
 - create a variable in the `.env` file that follows this format: `SECRET_KEY_HERE =`
-- run the command $ `bundle add dotenv-rails` in the terminal
 
 #### Troubleshooting Tips
 
-- Is there error on the request or on the response?
+- Is there an error on the request or on the response?
 - Stop and restart the server.
 
 ---
@@ -46,9 +46,9 @@ External APIs can provide a lot of value to an application. However, developers 
 
 To enforce the rate limit and protect data from malicious actors each request for data needs to be tracked and regulated. Consumers of the external API will be required to sign up or register their application. In turn the consumer of the external API will receive an API key. The **API key** is an authentication token that gets added to the request url. API keys must be protected just like passwords. API keys should NOT be checked into version control (git).
 
-### Adding ENV to Rails
-
 In order to hide the API key we will use an environment variable. An **environment variable** is a variable whose value is set outside the program. It is a variable that rarely changes so it is like creating a `const` variable for the whole application.
+
+### API Keys in React
 
 Environment variables are often stored in a file in the root directory of the application called `.env`. The file is then added to the `.gitignore` file so that `.env` doesn't get added to version control.
 
@@ -66,16 +66,6 @@ The secret token will live inside the `.env` file. The casing convention for thi
 MY_SECRET_API_KEY = secret_token_here
 ```
 
-Finally, we need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
-
-In the terminal we will add the `dotenv-rails` gem to the gemfile.
-
-```bash
-bundle add dotenv-rails
-```
-
-### API Keys in React
-
 The environment variable is now available to the application. Inside of `App.js` the variable can be referenced using the syntax `process.env.MY_SECRET_API_KEY`.
 
 **app/javascript/components/App.js**
@@ -90,11 +80,21 @@ console.log(apiKey)
 
 Now that React has access to the API key we can create a fetch request for data from the external API.
 
+
+### Adding ENV to Rails
+API keys are often used on backend applications as well.  An environment variable will once again be needed to hide our API key.  To do this, we can create a .env file in the root directory.  We will need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
+
+In the terminal we will add the `dotenv-rails` gem to the gemfile.
+
+```bash
+bundle add dotenv-rails
+```
+
 ---
 
 ### 💻 Challenge: Nasa
 
-Create a React in Rails application that returns interesting information of the developer's choice using the NASA API.
+Create a React application that returns interesting information of the developer's choice using the NASA API.
 
 Reminder that API keys and `.env` files should NOT be added to version control.
 

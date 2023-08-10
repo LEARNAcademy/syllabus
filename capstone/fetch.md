@@ -6,7 +6,7 @@ In modern web applications, communication between the frontend application and t
 
 #### Previous Lecture (1 hour 35 min)
 
-[![YouTube](http://img.youtube.com/vi/4KqQ7fg30wk/0.jpg)](https://www.youtube.com/watch?v=4KqQ7fg30wk)
+[![YouTube](http://img.youtube.com/vi/jAZio1Juxo0/0.jpg)](https://www.youtube.com/watch?v=jAZio1Juxo0)
 
 #### Learning Objectives
 
@@ -35,7 +35,7 @@ In modern web applications, communication between the frontend application and t
 
 #### Troubleshooting Tips
 
-- Is there error on the request or on the response?
+- Is there an error on the request or on the response?
 
 ---
 
@@ -186,7 +186,7 @@ const App = () => {
 export default App
 ```
 
-The last step is to display the data that is returned from the API. Since we are using an external API, we don't have control over the structure of the data that is returned. We have parse into the data structure to get to the content we want.
+The last step is to display the data that is returned from the API. Since we are using an external API, we don't have control over the structure of the data that is returned. We have to parse into the data structure to get to the content we want.
 
 We only want the tags used to display cat facts to be visible once there are cat facts to show. Since the default value of the state variable `catFacts` is null we can use conditional rendering in the tags. If the value is null all the code inside the curly braces will be ignored. When the fetch request returns data and updates the state variable the tags will render to the page.
 
