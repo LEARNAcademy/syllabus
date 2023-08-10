@@ -36,17 +36,17 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 
 - $ `yarn create react-app cat-tinder-frontend`
 - $ `cd cat-tinder-frontend`
+- $ `yarn start`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
 - Ask your instructors for branch protection
-- $ `yarn start`
 
 ---
 
 ### Application Planning
 
-Planning is a crucial step in creating a successful application. First, it is important to have an understanding of a project as a whole. Once the overarching goals have been established, tasks must be broken down into individual actions. It is not possible to create the entire application at once and jumping between tasks is inefficient and can create code conflicts within the development team. It is necessary to outline an agreed upon task list that everyone on the team follows.
+Planning is a crucial step in creating a successful application. First, it is important to have an understanding of a project as a whole. Once the overarching goals have been established, tasks must be broken down into individual actions. It is not possible to create the entire application at once and jumping between tasks is inefficient which can create code conflicts within the development team. It is necessary to outline an agreed upon task list that everyone on the team follows.
 
 ### Cat Tinder Frontend
 
@@ -77,7 +77,7 @@ The **components directory** is for helper components that can be reused on many
 
 #### Pages
 
-The **pages directory** is for full views. The full view can consist of items from the assets and components directory as well code unique to a page.
+The **pages directory** is for full views. The full view can consist of items from the assets and components directory as well as code unique to a page.
 
 - Home.js
 - CatIndex.js

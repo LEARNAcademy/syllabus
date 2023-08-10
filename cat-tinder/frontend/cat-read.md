@@ -6,7 +6,7 @@ There are four general actions a developer will consider when building an applic
 
 #### Previous Lecture (1 hour 22 min)
 
-[![YouTube](http://img.youtube.com/vi/nZJBccseFQ0/0.jpg)](https://www.youtube.com/watch?v=nZJBccseFQ0)
+[![YouTube](http://img.youtube.com/vi/_sD-GPMKGSg/0.jpg)](https://www.youtube.com/watch?v=_sD-GPMKGSg)
 
 #### Learning Objectives
 
@@ -198,7 +198,7 @@ In the pages directory, we need to create a new file called `CatIndex.test.js` t
 
 ```javascript
 import { render } from "@testing-library/react"
-import CatIndex from "./CatIndex"
+import CatIndex from "../pages/CatIndex"
 
 describe("<CatIndex />", () => {
   it("renders without crashing", () => {})
@@ -234,8 +234,11 @@ We want to check that every cat name that is being passed to the component can b
 
 ```javascript
 it("renders cat cards", () => {
-  const div = document.createElement("div")
-  render(<CatIndex cats={mockCats} />, div)
+  render(
+    <BrowserRouter>
+      <CatIndex cats={mockCats} />
+    </BrowserRouter>
+  )
   mockCats.forEach((cat) => {
     const catName = screen.getByText(cat.name)
     expect(catName).toBeInTheDocument()
@@ -325,7 +328,7 @@ In the pages directory, we need to create a new file called `CatShow.test.js` th
 
 ```javascript
 import { render } from "@testing-library/react"
-import CatShow from "./CatShow"
+import CatShow from "../pages/CatShow"
 
 describe("<CatShow />", () => {
   it("renders without crashing", () => {})
