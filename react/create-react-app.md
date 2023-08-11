@@ -2,7 +2,7 @@
 
 #### Overview
 
-Until late 2016, the hardest part about working with React was just getting a new app set up with the appropriate dependencies. Facebook, the creators of React, recognized this problem and released some tools to help developers get started more easily using terminal commands. A command in the terminal can create the file base file structure for creating a new React application.
+Until late 2016, the hardest part about working with React was getting a new application set up with the appropriate dependencies. Facebook, the creators of React, released a set of command line tools to help developers easily spin up the basic structure of a new React application. Once the base structure has been created, we can add additional files for components that will work together to create an application.
 
 #### Previous Lecture (47 min)
 
@@ -35,7 +35,7 @@ Until late 2016, the hardest part about working with React was just getting a ne
 - Create a new React application with no spaces: `yarn create react-app intro-student1-student2` (ex. yarn create react-app intro-austin-sarah)
 - `cd` into the project
 - Open the project in a text editor
-- Create a directory in _src_ called _components_
+- Create a directory in `src` called `components`
 - Code!
 
 #### Useful Commands
@@ -49,32 +49,34 @@ Until late 2016, the hardest part about working with React was just getting a ne
 
 - Is your server running?
 - Are your components imported and exported?
+- Look in the Chrome developer tools console tab for errors.
+- Always look at the first error in the list.
 - What is your error message telling you?
 
 ---
 
 ### Creating a New React Application
 
-A React application is made up of thousands of code snippet dependencies called **node modules**. To create a React application all of these node modules must be organized correctly. This would be an improbable action to do each time a new React app is needed; therefore, a JavaScript package manager called **yarn** has the responsibility of managing node modules. 
+A React application is made up of thousands of code snippet dependencies called **node modules**. To create a React application all of these node modules must be organized correctly. This would be an improbable action to do each time a new React app is needed; therefore, a JavaScript package manager called **yarn** has the responsibility of managing node modules.
 
 Yarn uses a terminal command that will create the file structure of a React app: `yarn create react-app`. This command is followed with the name of the application. The application name will be given to a directory that holds all the content of the React app. This command will only accept application names that are lower case. If a multiple word application name is desired use the kebob casing convention. The **kebob-case** naming convention is words in all lowercase letters with each work separated by a dash.
 
-```
+```bash
 yarn create react-app recipe-application
 ```
 
-This creates a directory called `recipe-application`, and yarn creates all the files and installs all the node module dependencies to get a base application in React.
+This creates a directory called `recipe-application` that is a boilerplate React application. Inside the application directory are all the additional directories, files, and correctly installed node module dependencies.
 
 ### Starting the Server
 
-React application must be rendered in the browser. To do this, we need our computer to ask act as a local server. A **local server** is a computer used during development to process and rendering code in the browser. To start the server, we will navigate into the new directory and use yarn to run the application.
+The React application must be rendered in the browser. To do this, we need our computer to ask act as a local server. A **local server** is a computer used during development to process and render code in the browser. To start the server, we will navigate into the React application directory and use yarn to run the application.
 
-```
+```bash
 cd recipe-application
 yarn start
 ```
 
-The command `yarn start` will automatically open a browser to the address **localhost:3000** which is the url address of your home server. The command `yarn start` will render the boilerplate React application.
+The command `yarn start` will automatically open a new browser tab. The new tab will open at **localhost:3000** which is the url address of your home server. The command `yarn start` will render the boilerplate React application.
 
 <img 
   src="./assets/react-boilerplate.png" 
@@ -82,11 +84,11 @@ The command `yarn start` will automatically open a browser to the address **loca
   width="300px"
 />
 
-After you type `yarn start`, you will notice your terminal is busy running React. If you want to interact with your terminal, you can open a new tab using `command + t`. To stop the React server from running, you can use the command `control + c`.
+After we type `yarn start` the terminal will be busy running the React application. In order to interact with the terminal, we can open a new tab using `command + t`. To stop the React server from running, use the command `control + c`.
 
 ### Modifying The App Component
 
-Inside the directory called `recipe-application` are two additional directories. One is called _public_ that contains the _index.html_ file. The other directory is called _src_ that contains a file called _App.js_ where we will spend most of our time.
+Inside the directory called `recipe-application` are two additional directories. One is called `public` that contains the `index.html` file. The other directory is called `src` that contains a file called `App.js` where we will spend most of our time.
 
 When initially opening the file, we will see the boilerplate code that creates the view in the browser. As of React version 18, this is the code that appears in the file.
 
@@ -122,7 +124,7 @@ export default App
 
 ### Working in App.js
 
-The boilerplate code is great for a quick check to make sure the app is working but not what we will ultimately use. Delete the code and replace it with a basic functional component. Functional components in React look very similar to the functions we write in regular JavaScript. The difference is the name of the components will be in PascalCase. **PascalCase** is a naming convention for classes and components that is similar to camelCase but the first letter is uppercase.
+The boilerplate code is great for a quick check to make sure the app is working but not what we will ultimately use. We will start with deleting all the code and replacing it with a basic functional component. Functional components in React look very similar to the functions we write in regular JavaScript. The difference is the name of the components will be in PascalCase. **PascalCase** is a naming convention for classes and components that is similar to camelCase but the first letter is uppercase.
 
 The component has a function declaration and a return. Within the return we have some JSX. Since we will be returning more than one line of JSX, we can wrap the tag in a React fragment.
 
@@ -146,11 +148,11 @@ export default App
 
 ### Nesting Components
 
-It is normal to have many different components working together to create a React app. To keep the components organized, we will create another directory inside of _src_ called _components_.
+It is normal to have many different components working together to create a React app. To keep the components organized, we will create another directory inside of `src` called `components`.
 
 In this example, we will create an application that has a Header component, a Recipe component, and a Footer component.
 
-Inside the components folder, create a new file called `Header.js`. It is convention to name the file the same name as the component in that file.
+Inside the components directory, create a new file called `Header.js`. It is convention to name the file the same name as the component in that file.
 
 **src/components/Header.js**
 
@@ -175,7 +177,7 @@ For each new component there are four necessary steps:
 3. Return JSX
 4. Export the component
 
-We will need to call the Header component in _App.js_. Because all the components are in separate directories, we need to tell _App.js_ where the Header component can be found.
+We will need to call the Header component in `App.js`. Because all the components are in separate directories, we need to tell `App.js` where the Header component can be found.
 
 **src/App.js**
 
@@ -196,7 +198,7 @@ export default App
 
 ### Adding the Recipe Component
 
-Next we will add the Recipe component. We create the Recipe component in the `components` folder.
+Next we will add the Recipe component. We create the Recipe component in the `components` directory.
 
 **src/components/Recipe.js**
 
@@ -219,7 +221,7 @@ const Recipe = () => {
 export default Recipe
 ```
 
-Now we will import Recipe in App.js.
+Now we will import Recipe in `App.js.`
 
 **src/App.js**
 
@@ -242,7 +244,7 @@ export default App
 
 ### Adding the Footer Component
 
-Next we will add a footer component. We create the Footer component in the `components` folder.
+Next we will add a footer component. We create the Footer component in the `components` directory.
 
 **src/components/Footer.js**
 
@@ -252,7 +254,7 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <footer>LEARN Academy | Instruction Team &copy; 2022</footer>
+      <footer>LEARN Academy | Instruction Team &copy; 2023</footer>
     </>
   )
 }
@@ -260,7 +262,7 @@ const Footer = () => {
 export default Footer
 ```
 
-Import Footer in App.js.
+Import Footer in `App.js`.
 
 **src/App.js**
 
