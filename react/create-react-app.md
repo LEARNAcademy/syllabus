@@ -89,6 +89,7 @@ After we type `yarn start` the terminal will be busy running the React applicati
 ### Modifying The App Component
 
 Inside the directory called `recipe-application` are two additional directories. One is called `public` that contains the `index.html` file. The other directory is called `src` that contains a file called `App.js` where we will spend most of our time.
+Inside the directory called `recipe-application` are two additional directories. One is called `public` that contains the `index.html` file. The other directory is called `src` that contains a file called `App.js` where we will spend most of our time.
 
 When initially opening the file, we will see the boilerplate code that creates the view in the browser. As of React version 18, this is the code that appears in the file.
 
@@ -178,12 +179,13 @@ For each new component there are four necessary steps:
 4. Export the component
 
 We will need to call the Header component in `App.js`. Because all the components are in separate directories, we need to tell `App.js` where the Header component can be found.
+We will need to call the Header component in `App.js`. Because all the components are in separate directories, we need to tell `App.js` where the Header component can be found.
 
 **src/App.js**
 
 ```javascript
 import React from "react"
-import Header from "./component/Header"
+import Header from "./components/Header"
 
 const App = () => {
   return (
