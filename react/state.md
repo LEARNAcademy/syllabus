@@ -74,7 +74,7 @@ While each component is in charge of its own functionality, components still nee
 
 ### Counter Example
 
-Here is an example that creates a counter application in React. The counter application allow the user to click on the application and increment a count. The count will start at 0 and increase one time for every click.
+Here is an example that creates a counter application in React. The counter application allows the user to click on the application and increment a count. The count will start at 0 and increase one time for every click.
 
 We'll get started in `App.js` by displaying a heading tag and a div tag designated for our counter. At this point we should spin up our app by running $ `yarn start` in the terminal and ensure our application is displaying the content as expected.
 
@@ -99,7 +99,7 @@ export default App
 
 Next we need to display our initial count of 0. The count will start at 0 but since the value of the count will change with each click, we must be able to update the count value. This is a very common problem to have in React so there are some tools available that handle this kind of situation. We need to make our count a state variable.
 
-The `useState` method is how we create state variables. `useState` will
+The `useState` hook method is how we create state variables. `useState` will
 
 1. create the variable,
 2. create a method that can be used to update the value,
@@ -107,9 +107,9 @@ The `useState` method is how we create state variables. `useState` will
 
 We can name the state variable whatever we want as long as it communicates intent. In this case it makes sense to name the state variable `count`. Following the `count` variable is the name of the method that will be used to update `count`. It is convention to use the same name but add the prefix `set`.
 
-Inside the parentheses of the `useState` method we can set the initial value of `count`. The count variable will have an initial value of 0. Our component now has data that is available to be referenced and modified as needed.
+Inside the parentheses of the `useState` hook method we can set the initial value of `count`. The count variable will have an initial value of 0. Our component now has data that is available to be referenced and modified as needed.
 
-To have access to the `useState` method, we will import it to the component from the React dependencies.
+To have access to the `useState` hook method, we will import it to the component from the React dependencies.
 
 **src/App.js**
 
@@ -160,9 +160,9 @@ export default App
 
 ### Updating State Values
 
-Next we need a way to allow the user to increment the counter's value. So we will add a method to our component. The method will be called `handleClick` to reflect the type of user interaction with our application. Inside `handleClick` the `setCount` method will be called and passed the current value of `count` plus one.
+Next we need a way to allow the user to increment the counter's value. So we will add a function to our component. The function will be called `handleClick` to reflect the type of user interaction with our application. Inside `handleClick` the `setCount` method will be called and passed the current value of `count` plus one.
 
-The `handleClick` method is now ready to be called. We can add an `onClick` attribute to the `div` that will trigger the `handleClick` method.
+The `handleClick` function is now ready to be called. We can add an `onClick` attribute to the `div` that will trigger the `handleClick` function.
 
 Now we have a working counter application!
 
@@ -174,7 +174,7 @@ import React, { useState } from "react"
 const App = () => {
   const [count, setCount] = useState(0)
 
-  // the handleClick method is invoked when the div is clicked
+  // the handleClick function is invoked when the div is clicked
   const handleClick = () => {
     setCount(count + 1)
   }
@@ -202,7 +202,7 @@ Now that the basic counter functionality is working we can add some styling. To 
 </div>
 ```
 
-All the stylings for our React application is going to live in the `App.css` file. If we look in the file there is content already there. This is from the boilerplate code that created the React page with the black background and blue React icon. Since we deleted all that boilerplate code from `App.js` we can delete the boilerplate code from `App.css` too.
+All the stylings for our React application are going to live in the `App.css` file. If we look in the file there is already content. This is from the boilerplate code that created the React page with the black background and blue React icon. Since we deleted all that boilerplate code from `App.js` we can delete the boilerplate code from `App.css` too.
 
 By targeting the `className` we can add a height, a width, and a border property. It is a good practice to alphabetize your CSS properties in order to keep your styles organized.
 
