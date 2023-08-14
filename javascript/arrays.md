@@ -44,7 +44,8 @@ Arrays are variables that store collections of data in an ordered list. Having a
 
 #### Troubleshooting Tips
 
-- Is the file path is correct?
+- Is the file path correct?
+- Did you log the expected outcome?
 
 ---
 
@@ -179,7 +180,7 @@ Mutator methods modify the array the method is called on. When working with muta
 **.push(value)**
 
 - Adds a value onto the end of an array
-- Takes an argument of what is to be added
+- Takes an argument of the value to be added
 - The argument must be a data type recognized by JavaScript
 - The output of the method itself is the length of the new array
 
@@ -271,7 +272,7 @@ console.log(learnStudents.sort())
 console.log(learnStudents)
 // output: ["Debra", "Joel", "Jonas"]
 
-let numbers = [4, 2, 5, 1, 3]
+var numbers = [4, 2, 5, 1, 3]
 numbers.sort((a, b) => a - b)
 console.log(numbers)
 
@@ -376,7 +377,7 @@ console.log(learnStudents1)
 
 ### Strings to Arrays and Back Again
 
-In JavaScript, arrays and strings have a lot of similar properties. They both are a collection of items, both have a length property, both are zero-indexed. But strings and arrays have many differences. It is often convenient to convert string into arrays and vice-versa.
+In JavaScript, arrays and strings have a lot of similar properties. They both are a collection of items, both have a length property, both are zero-indexed. But strings and arrays have many differences. It is often convenient to convert strings into arrays and vice-versa.
 
 **.join("")**
 
@@ -465,11 +466,8 @@ var groceryList = ["chips", "dip", "cookies"]
 ```
 
 - Write the code that will add "soda" to the end of the original array.
-
-- Write the code that will add "granola" to the end of array without altering the original array.
-
+- Write the code that will add "granola" to the end of the array without altering the original array.
 - Write the code that will return a subset of the array containing only "chips" and "dip".
-
 - Write the code that will add "beans" to the "chips" and "dip" array.
 
 Consider the variable:
@@ -479,11 +477,8 @@ var numbers = [2, 4, 6, 8, 10]
 ```
 
 - Write the code that will add the number 0 to the beginning of the array.
-
 - Write the code that will add the number 12 to the end of the array.
-
 - Write the code that will remove the first number from the array.
-
 - Write the code that will add the number 0 to the beginning of the array without altering the original array. **HINT**: it's not `.unshift` You'll have to get creative! ;)
 
 Consider the variable:
@@ -493,9 +488,7 @@ var numSet = [2, 13, 6, 8, 4, 2]
 ```
 
 - Write the code that finds the index of the first appearance of the number 2.
-
 - Write the code that finds the index of the last appearance of the number 2.
-
 - Write the code that returns the number at the third index.
 
 Consider the variable:
@@ -505,19 +498,14 @@ var characters = ["y", "a", "r", "r", "a"]
 ```
 
 - Write the code that brings all the letters in the characters array together into a string.
-
 - Write the code that reverses the order of the letters in the characters array and saves it into a variable called charsReversed.
-
-14. Write the code that brings all the letters in the charsReversed array together into a string with an asterisk between each letter.
-
+- Write the code that brings all the letters in the charsReversed array together into a string with an asterisk between each letter.
 - Write the code that brings all the letters in the charsReversed array together into a string without separators.
 
-Create two arrays consisting of three first names of your cohort members in each.
+Create two arrays consisting of three first names of your cohort members in each array.
 
 - Write the code that sorts the names in alphabetical order.
-
 - Write the code that sorts the names in reverse alphabetical order.
-
 - Write the code that sorts all the names in alphabetical order in a single array.
 
 Consider the variables:
@@ -528,7 +516,6 @@ var oddIndexes = []
 ```
 
 - Write the code that logs the values from the numbers array that are at odd indexes.
-
 - Write the code that adds the values from odd indexes into the oddIndexes array.
 
 ---
