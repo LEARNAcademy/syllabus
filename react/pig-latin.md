@@ -2,7 +2,7 @@
 
 #### Overview
 
-In this activity we're going to create an application that translates regular English words into Pig Latin.
+In this activity, we're going to create an application that translates regular English words into Pig Latin.
 
 #### Learning Objectives
 
@@ -18,11 +18,14 @@ In this activity we're going to create an application that translates regular En
 
 #### Process
 
-- clone the appropriate repository from GitHub classroom
+- One person on the team accepts the group assignment from GitHub classroom
+- Create a team name
+- Add additional team members via GitHub handle
+- Clone the newly created repository
 - `cd` into the repository
-- run $ `yarn` to install the React dependencies
-- Create a new branch for each feature you implement
-- Open the folder in a text editor
+- Run $ `yarn` to install the React dependencies
+- Create a new branch following the naming instructions described below
+- Open the repository in a text editor
 - Code!
 
 #### Useful Commands
@@ -34,9 +37,10 @@ In this activity we're going to create an application that translates regular En
 #### Troubleshooting Tips
 
 - Is your server running?
-- Are your components exported?
+- Label your console logs!
 - Inspect the page and look for errors in the console tab.
 - Always look at the first error message in the list.
+- What is the error telling you?
 
 ---
 
@@ -59,7 +63,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 ### 🐽 Pig Latin Challenge
 
-**Story 1**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words beginning with a vowel translated to add "way" the end.
+**Story 1**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words beginning with a vowel translated to add "way" to the end.
 
 **Branch:** vowel-functionality
 
@@ -69,7 +73,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 - Can hit the submit button
 - Can see the words that begin with a vowel translated to Pig Latin and rendered to the page (e.g. appleway)
 
-**Story 2**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have "qu" in the first syllable translated by moving all the consonant and the "u" to the end and add "ay".
+**Story 2**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have "qu" in the first syllable translated by moving all the consonants and the "u" to the end and adding "ay".
 
 **Branch:** qu-functionality
 
@@ -79,7 +83,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 - Can hit the submit button
 - Can see the words that have a "qu" in the first syllable translated to Pig Latin and rendered to the page (e.g. ealsquay)
 
-**Story 3**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have no vowels other than "y" translated by moving all the consonant to the end and add "ay".
+**Story 3**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have no vowels other than "y" translated by moving all the consonants to the end and adding "ay".
 
 **Branch:** y-functionality
 
@@ -89,7 +93,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 - Can hit the submit button
 - Can see the words that have no vowels other than "y" translated to Pig Latin and rendered to the page (e.g. yfray)
 
-**Story 4**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have one or more consonants translated by moving all the consonant to the end and add "ay".
+**Story 4**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have one or more consonants translated by moving all the consonants to the end and adding "ay".
 
 **Branch:** consonant-functionality
 
@@ -108,7 +112,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 ### 👩‍💻 Developer Stretch Challenges
 
-- As a developer, I have a well commented application.
+- As a developer, I have a well-commented application.
 - As a developer, I have well written README file with instructions on how to access my repository.
 - As a developer, my variables are all named semantically.
 - As a developer, I have refactored and efficient code.
@@ -116,11 +120,11 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 ### 🎙 Project Demos
 
-Each team will give a brief (3 minute) presentation of their application. Presenting your project will allow you to practice communication and coding vocabulary. Presentations are not a judgement of your work or ability as each team will have different weaknesses and strengths. Presentations allow other members of the cohort to appreciate a different approach to solving a complex problem.
+Each team will give a brief (three minute) presentation of their application. Presenting your project will allow you to practice communication and coding vocabulary. Presentations are not a judgement of your work or ability as each team will have different weaknesses and strengths. Presentations allow other members of the cohort to appreciate a different approach to solving a complex problem.
 
 - Full team: show off your application's user interface (UI)
 - First team member: What was your team's approach to solving this problem? Did the initial approach work out in the end?
-- Second team member: What was the hardest thing about this project? What is your biggest take away?
+- Second team member: What was the hardest thing about this project? What is your biggest takeaway?
 - Third team member (if applicable): How did you manage the workflow in a group of three?
 
 ---
