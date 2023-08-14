@@ -114,7 +114,7 @@ We can create a static test in the file `Home.test.js` that will test that the c
 
 ```javascript
 import { render } from "@testing-library/react"
-import Home from "./Home"
+import Home from "../pages/Home"
 
 describe("<Home />", () => {
   it("renders without crashing", () => {})
@@ -127,7 +127,7 @@ When rendering a component, React will create a `div` and attach the application
 
 ```javascript
 import { render } from "@testing-library/react"
-import Home from "./Home"
+import Home from "../pages/Home"
 
 describe("<Home />", () => {
   it("renders without crashing", () => {
@@ -191,7 +191,7 @@ const Header = () => {
 export default Header
 ```
 
-The `Header` component uses routing components from `react-router-dom` so that will need to be included in the test. We also need to access another tool from React Testing Library called `userEvent` that will simulation browser interactions such as click events.
+The `Header` component uses routing components from `react-router-dom` so that will need to be included in the test. We also need to access another tool from React Testing Library called `userEvent` that will simulate browser interactions such as click events.
 
 We can start by stubbing out the tests.
 
@@ -201,25 +201,21 @@ We can start by stubbing out the tests.
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import userEvent from "@testing-library/user-event"
-import Header from "./Header"
+import Header from "../components/Header"
 
 describe("<Header />", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div")
     render(
       <BrowserRouter>
         <Header />
-      </BrowserRouter>,
-      div
+      </BrowserRouter>
     )
   })
   it("renders a logo with a src and alt", () => {
-    const div = document.createElement("div")
     render(
       <BrowserRouter>
         <Header />
-      </BrowserRouter>,
-      div
+      </BrowserRouter>
     )
   })
   it("has clickable links", () => {
@@ -238,12 +234,10 @@ The logo is an image and will have a `src` attribute and an `alt` attribute. We 
 
 ```javascript
 it("renders a logo with a src and alt", () => {
-  const div = document.createElement("div")
   render(
     <BrowserRouter>
       <Header />
-    </BrowserRouter>,
-    div
+    </BrowserRouter>
   )
   const logo = screen.getByRole("img")
   expect(logo).toHaveAttribute("src", "cat-logo.png")
@@ -273,7 +267,7 @@ The `Footer` component is very similar to `Header` so the same structure of inte
 
 ### Testing Philosophy
 
-There are a lot of complexities to testing. It can also be time consuming and, at times, frustrating. Focusing on writing tests that will prevent bugs and ensure consistent user experience will make you a better developer and your application more functional.
+There are a lot of complexities to testing. It can also be time consuming and, at times, frustrating. Focusing on writing tests that will prevent bugs and ensure consistent user experience. Doing this will make you a better developer and your application more functional.
 
 ---
 

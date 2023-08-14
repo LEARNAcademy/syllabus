@@ -7,7 +7,7 @@ There are four general actions a developer will consider when building an applic
 #### Learning Objectives
 
 - can display a form with multiple inputs with pre-populated data
-- can package data into appropriate the appropriate format for an update action
+- can package data into the appropriate format for an update action
 
 #### Additional Resources
 
@@ -131,7 +131,7 @@ How we arrive at the edit page is important, since we need to have the id of our
 
 ### Finishing Touches
 
-Here is a good opportunity to think about user flow. Once a cat is updated, it would be nice to be redirect to see the updated information. We can use the same approach we used when submitting the new cat form.
+Here is a good opportunity to think about user flow. Once a cat is updated, it would be nice to be redirected to see the updated information. We can use the same approach we used when submitting the new cat form.
 
 **src/pages/CatEdit.js**
 

@@ -46,11 +46,11 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 
 ### Application Planning
 
-Planning is a crucial step in creating a successful application. First, it is important to have an understanding of a project as a whole. Once the overarching goals have been established, tasks must be broken down into individual actions. It is not possible to create the entire application at once and jumping between tasks is inefficient and can create code conflicts within the development team. It is necessary to outline an agreed upon task list that everyone on the team follows.
+Planning is a crucial step in creating a successful application. First, it is important to have an understanding of a project as a whole. Once the overarching goals have been established, tasks must be broken down into individual actions. It is not possible to create the entire application at once and jumping between tasks is inefficient which can create code conflicts within the development team. It is necessary to outline an agreed upon task list that everyone on the team follows.
 
 ### Cat Tinder Frontend
 
-Right now we are focused on only the frontend of our application. To create the view of our application it is important to be aware of the API. The backend of our Cat Tinder app has a model called `Cat`. Our cat model will have three attributes: a name, an age, what the cat enjoys doing, and an image.
+Right now we are focused on only the frontend of our application. To create the view of our application it is important to be aware of the API. The backend of our Cat Tinder app has a model called `Cat`. Our cat model will have four attributes: a name, an age, what the cat enjoys doing, and an image.
 
 In the Rails application the schema looks like this:
 
@@ -77,7 +77,7 @@ The **components directory** is for helper components that can be reused on many
 
 #### Pages
 
-The **pages directory** is for full views. The full view can consist of items from the assets and components directory as well code unique to a page.
+The **pages directory** is for full views. The full view can consist of items from the assets and components directory as well as code unique to a page.
 
 - Home.js
 - CatIndex.js

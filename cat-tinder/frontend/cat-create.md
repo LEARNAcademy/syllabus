@@ -11,13 +11,13 @@ There are four general actions a developer will consider when building an applic
 #### Learning Objectives
 
 - can display a form with multiple inputs
-- can package data into appropriate the format for a create action
+- can package data into the appropriate format for a create action
 - can use functional props to pass data to a React component higher in the state tree
 
 #### Additional Resources
 
-- [Reactstrap Form Components](https://reactstrap.github.io/components/form/)
-- [React-router Redirect](https://reactrouter.com/web/api/Redirect)
+- [Reactstrap Form Components](https://reactstrap.github.io/?path=/docs/components-forms)
+- [React-router Use Navigate](https://reactrouter.com/en/6.15.0/hooks/use-navigate)
 
 ---
 
@@ -100,7 +100,7 @@ const createCat = (cat) => {
 }
 ```
 
-This method needs to be passed to our CatNew component. This will require a refactor of the basic "/catnew" route into a dynamic route that accepts props.
+This method needs to be passed to our CatNew component. This will require a refactor of the basic `"/catnew"` route into a dynamic route that accepts props.
 
 **src/App.js**
 
