@@ -36,11 +36,11 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 
 - $ `yarn create react-app cat-tinder-frontend`
 - $ `cd cat-tinder-frontend`
-- $ `yarn start`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
 - Ask your instructors for branch protection
+- $ `yarn start`
 
 ---
 
@@ -50,7 +50,7 @@ Planning is a crucial step in creating a successful application. First, it is im
 
 ### Cat Tinder Frontend
 
-Right now we are focused on only the frontend of our application. To create the view of our application it is important to be aware of the API. The backend of our Cat Tinder app has a model called `Cat`. Our cat model will have three attributes: a name, an age, what the cat enjoys doing, and an image.
+Right now we are focused on only the frontend of our application. To create the view of our application it is important to be aware of the API. The backend of our Cat Tinder app has a model called `Cat`. Our cat model will have four attributes: a name, an age, what the cat enjoys doing, and an image.
 
 In the Rails application the schema looks like this:
 

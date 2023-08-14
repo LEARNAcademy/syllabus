@@ -100,7 +100,7 @@ const createCat = (cat) => {
 }
 ```
 
-This method needs to be passed to our CatNew component. This will require a refactor of the basic "/catnew" route into a dynamic route that accepts props.
+This method needs to be passed to our CatNew component. This will require a refactor of the basic `"/catnew"` route into a dynamic route that accepts props.
 
 **src/App.js**
 

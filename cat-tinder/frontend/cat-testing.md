@@ -267,7 +267,7 @@ The `Footer` component is very similar to `Header` so the same structure of inte
 
 ### Testing Philosophy
 
-There are a lot of complexities to testing. It can also be time consuming and, at times, frustrating. Focusing on writing tests that will prevent bugs and ensure consistent user experience.  Doing this will make you a better developer and your application more functional.
+There are a lot of complexities to testing. It can also be time consuming and, at times, frustrating. Focusing on writing tests that will prevent bugs and ensure consistent user experience. Doing this will make you a better developer and your application more functional.
 
 ---
 
