@@ -18,7 +18,7 @@ It is time to remove a cat in our database. We will have two applications runnin
 
 ### Deleting Cats
 
-Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` method to an onClick event somewhere else in the application.
+Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` function to an `onClick` event somewhere else in the application.
 
 Just like update, delete requires the id of the cat that will be deleted. Since we are using the cat show page to host the update functionality we can use the same approach to handle the delete functionality.
 
@@ -32,12 +32,12 @@ The button to delete a cat can look a lot like the button that will navigate to 
 </NavLink>
 ```
 
-The next step is to create a method in `App.js` that will send a request to the database that will route to the destroy method in Rails. We know from our RESTful routes that removing an item from the database requires a param. So our method will take the param of id.
+The next step is to create a function in `App.js` that will send a request to the database that will route to the destroy method in Rails. We know from our RESTful routes that removing an item from the database requires a param. So our function will take the param of id.
 
 **/src/App.js**
 
 ```javascript
-deleteCat = (id) => {
+const deleteCat = (id) => {
   fetch(`http://localhost:3000/cats/${id}`, {
     headers: {
       "Content-Type": "application/json"
@@ -45,12 +45,12 @@ deleteCat = (id) => {
     method: "DELETE"
   })
     .then((response) => response.json())
-    .then((payload) => readCat())
+    .then(() => readCat())
     .catch((errors) => console.log("delete errors:", errors))
 }
 ```
 
-Now we need to pass the `deleteCat` method through the show route.
+Now we need to pass the `deleteCat` function through the show route.
 
 **src/App.js**
 
@@ -61,7 +61,7 @@ Now we need to pass the `deleteCat` method through the show route.
 />
 ```
 
-Now that the CatShow component has access to the `deleteCat` method, we can call the method when the button runs and pass in the id of the cat to be deleted.
+Now that the CatShow component has access to the `deleteCat` function, we can call the function when the button runs and pass in the id of the cat to be deleted.
 
 ---
 
@@ -69,8 +69,8 @@ Now that the CatShow component has access to the `deleteCat` method, we can call
 
 As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
 
-- As a developer, I can create a `deleteCat` method that will remove a cat from the database.
-- As a developer, I can pass the method to the CatShow component.
+- As a developer, I can create a `deleteCat` function that will remove a cat from the database.
+- As a developer, I can pass the function to the CatShow component.
 - As a user, I can navigate to the page of one specific cat and see a delete button.
 - As a user, I can click the button remove the cat.
 - As a user, I can be rerouted to the CatIndex page after the cat is removed.
