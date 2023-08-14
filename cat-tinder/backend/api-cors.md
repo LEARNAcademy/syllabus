@@ -71,7 +71,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-3. Run the command `$ bundle` from the command line to update the dependencies.
+3. Run the command $ `bundle` from the command line to update the dependencies.
 
 That's it! We can now accept POST, PUT, and DELETE requests in our server side application.
 

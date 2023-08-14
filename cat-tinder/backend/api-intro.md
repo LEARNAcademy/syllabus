@@ -19,11 +19,11 @@ Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decouple
 - $ `rails db:create`
 - $ `bundle add rspec-rails`
 - $ `rails generate rspec:install`
-- $ `rails server`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
 - Ask your instructors for branch protection
+- $ `rails server`
 
 #### Troubleshooting Tips
 
@@ -98,6 +98,8 @@ Rails.application.routes.draw do
   resources :cats
 end
 ```
+
+---
 
 ### 🐱 Challenge: Cat Tinder API Setup
 
