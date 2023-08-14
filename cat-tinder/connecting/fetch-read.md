@@ -58,7 +58,14 @@ The frontend is going to ask the Rails API for information, then Rails will use 
 
 We want to make that process as simple and re-useable as possible, because we can be pretty sure our Cat Tinder app will get bigger and more complex in the future (because everyone will be using this app!).
 
-There will be a series of fetch requests to match the functionality required in our application. To start, we are going to load up all the cats from the database and save them into state. This will take the place of our mockCats. Since we want to make this fetch call right away, we can use a React hook called `useEffect()` that will handle fetching all the cats. The hook will run automatically when the component loads to the browser. There are two parts to the `useEffect()` hook: the action to be executed and the dependency value. In our case the action is a fetch to the endpoint that hold all the cats and the dependency value is an empty array.
+There will be a series of fetch requests to match the functionality required in our application. To start, we are going to load up all the cats from the database and save them into state. This will take the place of our mockCats. Since we want to make this fetch call right away, we can use a React hook called `useEffect()` that will handle fetching all the cats. The hook will run automatically when the component loads to the browser.
+
+There are two parts to the `useEffect()` hook method:
+
+1. the action to be executed and
+2. the dependency value.
+
+In our case the action is a fetch to the endpoint that hold all the cats and the dependency value is an empty array.
 
 The fetch request will be made to the URL that is running the Rails API. In this case, our Rails app is running on `localhost:3000`. We are making a request to the index route of our Rails app. Remembering our RESTful routes, we know that we need to make a request to a route called `'/cats'` to get all the cats.
 
@@ -78,14 +85,14 @@ const App = () => {
   const readCat = () => {
     fetch("http://localhost:3000/cats")
       .then((response) => response.json())
-      .then((payload) => {
-        setCats(payload)
-      })
+      .then((payload) => setCats(payload))
       .catch((error) => console.log(error))
   }
 ```
 
 As long as we have set up the frontend scaffolding correctly, the cat index and the cat show page should be working. But now we are pulling information from the database rather than mock data.
+
+---
 
 ### 🐱 Challenge: Cat Tinder Fetch Read Functionality
 

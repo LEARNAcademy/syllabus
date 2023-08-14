@@ -43,12 +43,14 @@ const updateCat = (cat, id) => {
     method: "PATCH"
   })
     .then((response) => response.json())
-    .then((payload) => readCat())
+    .then(() => readCat())
     .catch((errors) => console.log("Cat update errors:", errors))
 }
 ```
 
 As long as we have set up the frontend scaffolding correctly, the cat update method should be working. But now we will see the information for the updated cat.
+
+---
 
 ### 🐱 Challenge: Cat Tinder Fetch Update Functionality
 

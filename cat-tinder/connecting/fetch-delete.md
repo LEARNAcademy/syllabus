@@ -18,7 +18,7 @@ It is time to remove a cat in our database. We will have two applications runnin
 
 ### Deleting Cats
 
-Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` function to an onClick event somewhere else in the application.
+Deleting cats from the database looks a little bit different than the other CRUD actions. This is because delete doesn't need have its own page. Since it doesn't have its own page it also doesn't have it's own route. So we need to connect the `deleteCat` function to an `onClick` event somewhere else in the application.
 
 Just like update, delete requires the id of the cat that will be deleted. Since we are using the cat show page to host the update functionality we can use the same approach to handle the delete functionality.
 
@@ -45,7 +45,7 @@ const deleteCat = (id) => {
     method: "DELETE"
   })
     .then((response) => response.json())
-    .then((payload) => readCat())
+    .then(() => readCat())
     .catch((errors) => console.log("delete errors:", errors))
 }
 ```
