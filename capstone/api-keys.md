@@ -80,9 +80,9 @@ console.log(apiKey)
 
 Now that React has access to the API key we can create a fetch request for data from the external API.
 
+### API Keys in Rails
 
-### Adding ENV to Rails
-API keys are often used on backend applications as well.  An environment variable will once again be needed to hide our API key.  To do this, we can create a .env file in the root directory.  We will need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
+API keys are often used on backend applications as well. An environment variable will needed to hide our API key. To do this, we can create a `.env` file in the root directory. We will need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
 
 In the terminal we will add the `dotenv-rails` gem to the gemfile.
 
@@ -92,7 +92,7 @@ bundle add dotenv-rails
 
 ---
 
-### 💻 Challenge: Nasa
+### 💻 Challenge: NASA
 
 Create a React application that returns interesting information of the developer's choice using the NASA API.
 
