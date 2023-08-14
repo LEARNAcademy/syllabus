@@ -4,9 +4,9 @@
 
 Endpoints are the location from which APIs can access the resources they need to perform CRUD actions. Endpoints can be tested through request specs and model specs.
 
-#### Previous Lecture (1 hour 7 min)
+#### Previous Lecture (37 min)
 
-[![YouTube](http://img.youtube.com/vi/7nHJ2G-FHl0/0.jpg)](https://www.youtube.com/watch?v=7nHJ2G-FHl0)
+[![YouTube](http://img.youtube.com/vi/nRdeWc5VyI8/0.jpg)](https://www.youtube.com/watch?v=nRdeWc5VyI8)
 
 #### Learning Objectives
 

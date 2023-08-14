@@ -4,9 +4,9 @@
 
 Cat Tinder. It's like Tinder, but for cats. Cat Tinder is a full-stack, decoupled application that creates profiles for cats and allows a user to see other cat profiles. A decoupled application means we are actually creating two separate applications. A React application to create the views in the frontend and a Rails API that handles our data.
 
-#### Previous Lecture (1 hour 2 min)
+#### Previous Lecture (50 min)
 
-[![YouTube](http://img.youtube.com/vi/CSzqYFrRAtw/0.jpg)](https://www.youtube.com/watch?v=CSzqYFrRAtw)
+[![YouTube](http://img.youtube.com/vi/RTUWQ_AIEZ8/0.jpg)](https://www.youtube.com/watch?v=RTUWQ_AIEZ8)
 
 #### Learning Objectives
 
@@ -41,9 +41,9 @@ The primary tool to collect input from users is an HTML form. The user fills in 
 
 Once we have a functioning API, we can build a React app to send the form data to the API and receive data back when requested. While there are many options for building backend APIs, Ruby on Rails is a fantastic platform.
 
-In the architecture we are building, our front and backend will be two separate applications, giving us more freedom to choose the tools and technologies we want.
+In the architecture we are building, our frontend and backend will be two separate applications, giving us more freedom to choose the tools and technologies we want.
 
-Throughout your career as a developer, you'll interact with many other backend platforms. APIs can be built using Ruby, PHP, Python, Java, and even JavaScript, among many others. That might seem overwhelming, but remember that the concepts are generally the same no matter what technology is used. The server is where we process data sent by the frontend, clean and store that data, and serve updated data back to the frontend app to be consumed by the user.
+Throughout your career as a developer, you'll interact with many other backend platforms. APIs can be built using Ruby, PHP, Python, Java, and even JavaScript, among many others. That might seem overwhelming, but remember that the concepts are generally the same no matter what technology is used. The server is where we process data sent from the frontend, clean and store that data, and serve updated data back to the frontend app to be consumed by the user.
 
 ### Application Planning
 
@@ -66,7 +66,7 @@ $ rails db:migrate
 
 Let's take a look around the application and verify that everything is setup correctly. The first thing we can do is see that our test suite is running.
 
-```
+```bash
 $ rspec spec
 ```
 
@@ -98,6 +98,8 @@ Rails.application.routes.draw do
   resources :cats
 end
 ```
+
+---
 
 ### 🐱 Challenge: Cat Tinder API Setup
 
