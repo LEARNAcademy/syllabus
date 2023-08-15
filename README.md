@@ -101,14 +101,14 @@ This is our opportunity to dig a bit deeper into the Javascript programming lang
 React is a powerful Javascript library used to build more complicated user interfaces.
 
 1. [React Introduction](./react/intro.md)
-2. [Creating a New React Application](./react/create-react-app.md)
-3. [React State](./react/state.md)
-4. [React Props](./react/props.md)
-5. [React Functional Props](./react/functional-props.md)
-6. [React Inputs and Events](./react/inputs.md)
-7. [Pig Latin Challenge](./react/pig-latin.md)
-8. [Treasure Hunt Challenge](./react/treasure-hunt.md)
-9. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
+1. [Creating a New React Application](./react/create-react-app.md)
+1. [React State](./react/state.md)
+1. [Pig Latin Challenge](./react/pig-latin.md)
+1. [React Props](./react/props.md)
+1. [React Functional Props](./react/functional-props.md)
+1. [React Inputs and Events](./react/inputs.md)
+1. [Treasure Hunt Challenge](./react/treasure-hunt.md)
+1. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
 
 ### Additional Topics
 
@@ -233,7 +233,9 @@ In this section we further explore full-stack development in React and Ruby on R
 4. [Apartment App Protected Pages](./apartment-app/frontend/protected.md)
 
 ### Bringing it Together!
+
 5. [Apartment App Connect Authentication with JWT](./apartment-app/connecting/connecting.md)
+
 ### Apartment App Demos
 
 6. [Apartment App Demos](./apartment-app/demos.md)
@@ -258,6 +260,5 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Rails JBuilder](./capstone/jbuilder.md)
 - [Render](./capstone/render.md)
 - [ActiveStorage](./capstone/active-storage/README.md)
-
 
 ## Unit Twelve: Internship Preparation
