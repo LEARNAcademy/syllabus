@@ -2,7 +2,7 @@
 
 #### Overview
 
-React consists of collections of components. Props are used for the communication of data and behavior from a parent component down to a nested component via the component invocation. Props are limited to a unidirectional flow of information. In order to create a flow of information that goes from the nested component back up to its parent another workflow is needed. While props are unidirectional, functions have the fundamental ability to be defined in one place and invoked in another. Functions are great transporters of information and can be used for communication between React components.
+React consists of collections of components. Props are used for the communication of data and behavior from the main component down to a nested component via the component invocation. Props are limited to a unidirectional flow of information. In order to create a flow of information that goes from the nested component back up to the main component a different workflow is necessary. While props are unidirectional, functions have the fundamental ability to be defined in one place and invoked in another. Functions are great transporters of information and can be used for communication between React components.
 
 #### Previous Lecture (1 hour)
 
@@ -10,11 +10,11 @@ React consists of collections of components. Props are used for the communicatio
 
 #### Learning Objectives
 
-- can recognize the difference between a logic component and a display component
-- can construct parent and nested components
-- can pass data and behavior from a parent component to a nested component with props
+- can recognize the difference between a container component and a presentational component
+- can construct a nested component
+- can pass data and behavior from the main component to a nested component with props
 - can demonstrate proper use of state values and state setter methods
-- can execute a flow of information from a nested component back to parent component
+- can execute a flow of information from a nested component back to the main component
 
 #### Vocabulary
 
@@ -50,13 +50,13 @@ React consists of collections of components. Props are used for the communicatio
 
 ### Passing Information "Up the River"
 
-In React, each component should only be responsible for its own data and behavior. However, often a component's data and behaviors rely on information from other components.
+In React, the principle of separation of concerns says that each component should only be responsible for its own functionality. However, some components rely on information from other components in order to function properly. In order to create a complex application, components must be able to communicate.
 
-We can pass information in the form of data and behavior to another components which then gets referenced as props. Props are great, but they are limited in their functionality. Props can only be passed in one direction. This is analogous to a river. Rivers only flow from higher elevation to lower elevation, and props can only be passed "down the river" to nested components.
+We already know we can pass information (both data and behavior) from one component to another through the props pipeline. Props are great, but they are limited in their functionality. Props can only be passed in one direction. This is analogous to a river. Rivers only flow from higher elevation to lower elevation, and props can only be passed "down the river" from the main component to a nested component.
 
-React has a one way flow of information through the component invocation. So what happens when the component receiving props needs to send information back to the parent component? Since props only get passed in one direction, there is no direct way in React to send information back "up the river." Fortunately, there is a programmatic solution!
+React has a one way flow of information through the component invocation. So what happens when the component receiving props needs to send information back to the main component? Since props only get passed in one direction, there is no direct way in React to send information back "up the river." Fortunately, there is a programmatic solution!
 
-As we know, functions are pretty handy. Functions can be created in one place and called in another place. Functions can also take in information in the form of an argument. Knowing this, we can utilize the power of functions as **functional props** to pass information "up the river" from a nested component to a parent component.
+As we know, functions are pretty handy. Functions can be created in one place and called in another place. Functions can also take in information in the form of an argument. Knowing this, we can utilize the power of functions as **functional props** to pass information "up the river" from a nested component back to the main component.
 
 ### Movie Tracker Example
 
@@ -101,9 +101,9 @@ import React from "react"
 const MovieDisplay = (props) => {
   return (
     <>
-      <p>Movie name: {props.movie.name}</p>
-      {props.movie.watched && <p>Seen It!</p>}
-      <button>Watch Movie</button>
+      <p>Movie name: {props.movie.name}</p> // --> Display of the movie name
+      {props.movie.watched && <p>Seen It!</p>} // --> Conditional rendering
+      <button>Watch Movie</button> // -->  Button with no functionality (yet!)
     </>
   )
 }
@@ -158,9 +158,10 @@ export default App
 ```
 
 There are now three pieces of data that are available to the `MovieDisplay` component:
-- the movie object that is creating the display for the name 
-- whether the movie has been watched
-- the `watchedMovie` method that can be called with an `onClick` in the button tag.
+
+1. the movie object that is creating the display for the name,
+2. whether the movie has been watched,
+3. and the `watchedMovie` method that can be called with an `onClick` in the button tag.
 
 **src/components/MovieDisplay.js**
 
@@ -256,7 +257,9 @@ const App = () => {
 export default App
 ```
 
-Now we have a complete data flow using functional props to access information in a nested component and bring it back "up the river" to `App.js`. Functional props uses the JavaScript principle that functions can be defined in one place and invoked in another.
+Now we have a complete data flow using functional props to access information in a nested component and bring it back "up the river" to `App.js`. Functional props use the JavaScript principle that functions can be defined in one place and invoked in another.
+
+---
 
 ### 🌮 Challenge: Food Ordering App
 
