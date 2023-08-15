@@ -13,17 +13,17 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 #### Additional Resources
 
 - [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
-- [Tic Tac Toe win condition in React](https://forum.freecodecamp.org/t/need-help-understanding-react-tic-tac-toe-winner-function/137840)
 - [Render](https://render.com/docs/deploy-create-react-app)
 
 #### Process
 
+- One person on the team accepts the group assignment from GitHub classroom
 - Create a team name
-- Add additional team members by using github handle
-- Clone the appropriate repository from GitHub classroom
+- Add additional team members via GitHub handle
+- Clone the newly created repository
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
-- Create a new branch for each feature (user story) you implement
+- Create a new branch following the naming instructions described below
 - Open the repository in a text editor
 - Code!
 
@@ -47,6 +47,14 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 This is a web game for two players who are taking turns on one device. You will have to use the component state to keep track of whose turn it is and which squares have been marked by each player. This project will challenge your knowledge of React as well as be an exercise in creating good user experiences.
 
 When creating a project, it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. `App.js` controls of all the data in state, renders the other components, and performs the game logic.
+
+### Win Condition
+
+The win condition is one of the most challenging aspects of coding Tic Tac Toe. Take some time with your team to discuss the different possibilities. It can be helpful to define the logic by writing it out in regular English words.
+
+There is an interesting approach to the [Tic Tac Toe win condition in React](https://forum.freecodecamp.org/t/need-help-understanding-react-tic-tac-toe-winner-function/137840) here. However, this code should NOT be used as is. It must be refactored. The tools used in this example are not current best practices in React. It is provided here as inspiration.
+
+---
 
 ### 📚 User Stories
 
