@@ -16,10 +16,13 @@ Treasure Hunt is the first project that students create at LEARN. During Jumpsta
 
 #### Process
 
-- Clone the appropriate repository from GitHub classroom
+- One person on the team accepts the group assignment from GitHub classroom
+- Create a team name
+- Add additional team members via GitHub handle
+- Clone the newly created repository
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
-- Create a new branch for each feature (user story) you implement
+- Create a new branch following the naming instructions described below
 - Open the repository in a text editor
 - Code!
 
