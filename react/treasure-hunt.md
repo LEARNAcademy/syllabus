@@ -2,11 +2,13 @@
 
 #### Overview
 
-Treasure Hunt is the first project that students create at LEARN. During Jumpstart, treasure hunt is done with HTML, CSS, and JavaScript. While this is a perfectly acceptable tech stack, using React can allows for more advanced and dynamic code structures.
+Treasure Hunt is the first project that students create at LEARN. During Jumpstart, treasure hunt is done with HTML, CSS, and JavaScript. While this is a perfectly acceptable tech stack, using React allows for more advanced and dynamic code structures.
+
+As a developer, you are tasked with creating a treasure hunt game. The user will see a game board on the page and be able to select various squares on the board. Hidden behind one square is a treasure that will win the game and hidden behind another square is a bomb that will lose the game. All other squares will reveal a neutral image. The user will be given a particular number of clicks to find the treasure that will win the game.
 
 #### Learning Objectives
 
-- can create a logic component to handle the game play
+- can create a logic component to handle the gameplay
 - can pass data and behavior from a parent component to a nested component with props
 - can break down a complex problem to create a desired outcome
 
