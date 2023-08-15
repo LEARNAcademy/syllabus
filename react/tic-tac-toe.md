@@ -13,16 +13,18 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 #### Additional Resources
 
 - [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
-- [Tic Tac Toe win condition in React](https://forum.freecodecamp.org/t/need-help-understanding-react-tic-tac-toe-winner-function/137840)
 - [Render](https://render.com/docs/deploy-create-react-app)
 
 #### Process
 
-- clone the appropriate repository from GitHub classroom
+- One person on the team accepts the group assignment from GitHub classroom
+- Create a team name
+- Add additional team members via GitHub handle
+- Clone the newly created repository
 - `cd` into the repository
-- run $ `yarn` to install the React dependencies
-- Create a new branch for each feature you implement
-- Open the folder in a text editor
+- Run $ `yarn` to install the React dependencies
+- Create a new branch following the naming instructions described below
+- Open the repository in a text editor
 - Code!
 
 #### Useful Commands
@@ -42,9 +44,17 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 
 ### Tic Tac Toe
 
-This is a web game for two players on one device, taking turns. You will have to use component state to keep track of whose turn it is and which squares have been marked by each player. This project will challenge your knowledge of React but should also be an exercise in creating good user experiences.
+This is a web game for two players who are taking turns on one device. You will have to use the component state to keep track of whose turn it is and which squares have been marked by each player. This project will challenge your knowledge of React as well as be an exercise in creating good user experiences.
 
-When creating a project it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. App.js controls of all the data in state, renders the other components, and performs the game logic.
+When creating a project, it is important to think about organization of your code. It is best practice to separate and compartmentalize all the actions in your code. The square UI will be in its own component. `App.js` controls of all the data in state, renders the other components, and performs the game logic.
+
+### Win Condition
+
+The win condition is one of the most challenging aspects of coding Tic Tac Toe. Take some time with your team to discuss the different possibilities. It can be helpful to define the logic by writing it out in regular English words.
+
+There is an interesting approach to the [Tic Tac Toe win condition in React](https://forum.freecodecamp.org/t/need-help-understanding-react-tic-tac-toe-winner-function/137840) here. However, this code should NOT be used as is. It must be refactored. The tools used in this example are not current best practices in React. It is provided here as inspiration.
+
+---
 
 ### 📚 User Stories
 
@@ -52,14 +62,14 @@ When creating a project it is important to think about organization of your code
 - As a user, I can click on a square to mark it.
 - As a user, my partner can click on a square after me and see their mark.
 - As a user, I can't click on a square that has already been marked.
-- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
-- As a user, I can't continue playing the game after the game has been won.
+- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
+- As a user, I can't play the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals
 
-- As a user, I can see a pleasant stylings on the application.
+- As a user, I can see pleasant stylings on the application.
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 

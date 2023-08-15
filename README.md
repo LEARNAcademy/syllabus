@@ -101,14 +101,14 @@ This is our opportunity to dig a bit deeper into the Javascript programming lang
 React is a powerful Javascript library used to build more complicated user interfaces.
 
 1. [React Introduction](./react/intro.md)
-2. [Creating a New React Application](./react/create-react-app.md)
-3. [React State](./react/state.md)
-4. [React Props](./react/props.md)
-5. [React Functional Props](./react/functional-props.md)
-6. [React Inputs and Events](./react/inputs.md)
-7. [Pig Latin Challenge](./react/pig-latin.md)
-8. [Treasure Hunt Challenge](./react/treasure-hunt.md)
-9. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
+1. [Creating a New React Application](./react/create-react-app.md)
+1. [React State](./react/state.md)
+1. [Pig Latin Challenge](./react/pig-latin.md)
+1. [React Props](./react/props.md)
+1. [React Functional Props](./react/functional-props.md)
+1. [React Inputs and Events](./react/inputs.md)
+1. [Treasure Hunt Challenge](./react/treasure-hunt.md)
+1. [Tic Tac Toe Challenge](./react/tic-tac-toe.md)
 
 ### Additional Topics
 
