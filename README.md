@@ -87,10 +87,10 @@ This is our introduction to coding through the Javascript programming language. 
 This is our opportunity to dig a bit deeper into the Javascript programming language. Here we will use the introductory topics in combination for more advanced logic performance and data manipulation.
 
 1. [JavaScript Functions, Loops, and Arrays](./javascript/functions-loops-arrays.md)
-1. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
-1. [JavaScript Testing with Jest](./javascript/jest.md)
-1. [JavaScript Objects](./javascript/objects.md)
-1. [JavaScript Classes](./javascript/classes.md)
+2. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
+3. [JavaScript Testing with Jest](./javascript/jest.md)
+4. [JavaScript Objects](./javascript/objects.md)
+5. [JavaScript Classes](./javascript/classes.md)
 
 ### Additional Topics
 
@@ -233,7 +233,9 @@ In this section we further explore full-stack development in React and Ruby on R
 4. [Apartment App Protected Pages](./apartment-app/frontend/protected.md)
 
 ### Bringing it Together!
+
 5. [Apartment App Connect Authentication with JWT](./apartment-app/connecting/connecting.md)
+
 ### Apartment App Demos
 
 6. [Apartment App Demos](./apartment-app/demos.md)
@@ -250,7 +252,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Capstone Requirements](./capstone/requirements.md)
 - [Rails has_many_through](./capstone/has_many_through.md)
 - [Modifying Devise](./capstone/modifying-devise.md)
-- [Code coverage](./capstone/code-coverage.md)
+- [Code Coverage](./capstone/code-coverage.md)
 
 ## Unit Eleven: Capstone Project, Icebox
 
@@ -259,6 +261,5 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Rails JBuilder](./capstone/jbuilder.md)
 - [Render](./capstone/render.md)
 - [ActiveStorage](./capstone/active-storage/README.md)
-
 
 ## Unit Twelve: Internship Preparation
