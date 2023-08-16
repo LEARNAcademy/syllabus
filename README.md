@@ -37,6 +37,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [Interview Questions](./tools-and-resources/interview-questions.md)
+- [Jumpstart Student Notes](https://github.com/LEARNAcademy/jumpstart-student-notes)
 
 ## Career Services Resources
 
