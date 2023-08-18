@@ -47,15 +47,15 @@ Props (properties) are specialized React objects used to pass information from o
 
 ### Communication Between Components
 
-React give us the ability to build modular interfaces where each component is in charge of its own functionality. Since the structure of React is component based, communication between components is very important in order to create complex applications. **Props**, short for properties, is a specialized tool in React for the communication of data and behavior between components.
+React gives us the ability to build modular interfaces where each component is in charge of its own functionality. Since the structure of React is component based, communication between components is very important in order to create complex applications. **Props**, short for properties, is a specialized tool in React for the communication of data and behavior between components.
 
-Props is a pipeline where data and behavior can be passed from one component to a nested component. Prop information is passed to a component through the component invocation. This means that prop information can only travel in one direction. It is very similar to how a function get passed information through an argument.
+Props is a pipeline where data and behavior can be passed from one component to a nested component. Props are passed to a component through the component invocation. This means that props can only travel in one direction. It is very similar to how we pass information to a function through an argument.
 
 The data structure of the props pipeline is an object. Since an object can contain many key value pairs, the props pipeline can pass as much information as necessary between components.
 
 ### Prop Data From State
 
-Both data and behavior (methods) can be communicated between components via props. The data typically comes from values stored in state. In a very practical sense, prop data is a snapshot of the state values that get passed down to components tasked with managing that information. State values are designed to update and change. Props don't update. Props are "read only." As the state values update and change, the new data will make its way through the props pipeline.
+Both data and behavior can be communicated between components via props. The data typically comes from values stored in state. In a very practical sense, prop data is a snapshot of the state values that get passed down to components tasked with managing that information. State values are designed to update and change. Props don't update. Props are "read only." As the state values update and change, the new data will make its way through the props pipeline.
 
 ### Greeter Example
 
@@ -171,7 +171,7 @@ export default Greeter
 
 ### Passing Values From State as Props
 
-Now that we are using props in our greeter application, we can being to refactor. Our refactor can improve the code in our application. Rather than hardcoding the string "Hamilton" directly in the component call we can use a state value to pass props to the Greeter component. This will make our application more dynamic as state values can be updated.
+Now that we are using props in our greeter application, we can begin to refactor. Our refactor can improve the code in our application. Rather than hardcoding the string "Hamilton" directly in the component call we can use a state value to pass props to the Greeter component. This will make our application more dynamic as state values can be updated.
 
 **src/App.js**
 
@@ -197,9 +197,9 @@ The variable `name` is now assigned information from state rather than hardcoded
 
 ### Mapping a Component Call
 
-Our greeter application is working just great. But what if we have multiple people to greet? To expand the functionality of the application we can set an array in state. Instead of a single Greeter component invocation, we will have one component per person. To manage this dynamically, we will map over the array in state and return a component invocation. No matter how many people we need to greet now our code can manage the job effectively.
+Our greeter application is working just great. But what if we have multiple people to greet? To expand the functionality of the application we can set an array in state. Instead of a single Greeter component invocation, we will have one component per person. To manage this dynamically, we will map over the array in state and return a component invocation. No matter how many people we need to greet, our code can manage the job effectively.
 
-React is iterating over the array in state and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is an unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. Since we have access to the index as the second parameter in the map method, in this example we will use the index of the array to ensure each item in the array always has a unique identifier.
+React is iterating over the array in state and producing a series of component calls as a result. Each component call acts independently from the others. To keep these similar code outputs organized, React likes to have a key for each iteration. A **key** is a unique identifier that gets passed to the JSX tag returned from an iteration. A key can be any unique identifier. Since we have access to the index as the second parameter in the map method, in this example we will use the index of the array to ensure each item in the array always has a unique identifier.
 
 As long as the `name` variable stays the same, no changes need to be made to the Greeter component.
 
@@ -225,11 +225,11 @@ const App = () => {
 export default App
 ```
 
-### Passing Methods as Props
+### Passing Behavior as Props
 
 We have explored passing data as props. We can pass behavior as well. The process is very similar to passing data as props. In this example, we will create a button that will trigger a prompt which will add new people to our array. The button will be its own component named `AddPerson`. The logic will be held in `App.js`, and the appropriate behavior can be distributed as needed.
 
-We will add a method in `App.js` that will use the state setter method named `setPeople` to trigger a `prompt()` method. Saving the prompt to a variable captures the result of what our user types. Whatever the variable captures will be added to the array in state.
+We will add a function in `App.js` that will use the state setter method named `setPeople` to trigger a `prompt()` method. Saving the prompt to a variable captures the result of what our user types. Whatever the variable captures will be added to the array in state.
 
 **src/App.js**
 
@@ -260,9 +260,9 @@ const App = () => {
 export default App
 ```
 
-The method we wrote will update the array in state. There are no updates for the Greeter component as the code we wrote is dynamic. However, the method is not yet being called. We need to create a button with an `onClick` event.
+The function we wrote will update the array in state. There are no updates for the Greeter component as the code we wrote is dynamic. However, the method is not yet being called. We need to create a button with an `onClick` event.
 
-The button's `onClick` will call the method `addPerson` that is being passed as props down into the component.
+The button's `onClick` will call the `addPerson` function that is being passed as props down into the component.
 
 **src/components/AddPerson.js**
 
