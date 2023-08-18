@@ -37,8 +37,8 @@ How does the code we write in Rails (or any other language or framework) interac
 ```
 First Name:     Korben
 Last Name:      Dallas
-Date of Birth:  6/1/12097
-Address:        Apt 3497 1 Main St CityVille, Earth
+Date of Birth:  6/1/2097
+Address:        Apt 3497 1 Main St, CityVille, Earth
 Email:          korben_dallas@gmail.com
 ```
 
@@ -50,8 +50,8 @@ Data like this contact information with key:value pairs is formatted like a Ruby
 person1 = {
   "fname" => "Korben",
   "lname" => "Dallas",
-  "birthday" => "6/1/1209",
-  "address" => "Apt 3497 1 Main St CityVille, Earth",
+  "birthday" => "6/1/2097",
+  "address" => "Apt 3497 1 Main St, CityVille, Earth",
   "email" => "korben_dallas@gmail.com"
 }
 ```
@@ -71,7 +71,7 @@ class Person
   end
 end
 
-Person.new("Korben", "Dallas", "6/1/1209", "Apt 3497 1 Main St CityVille, Earth", "korben_dallas@gmail.com")
+Person.new("Korben", "Dallas", "6/1/2097", "Apt 3497 1 Main St, CityVille, Earth", "korben_dallas@gmail.com")
 ```
 Now we have a reproducible way to create people in our application. The next task is to store each new instance of class `Person` into a database. (Remember in Ruby, an instance of a class is an object.) How do we do that?
 
@@ -101,8 +101,8 @@ We've added in a primary key for this instance of Person:
 id:             1
 First Name:     Korben
 Last Name:      Dallas
-Date of Birth:  6/1/12097
-Address:        Apt 3497 1 Main St CityVille, Earth
+Date of Birth:  6/1/2097
+Address:        Apt 3497 1 Main St, CityVille, Earth
 Email:          korben_dallas@gmail.com
 ```
 
