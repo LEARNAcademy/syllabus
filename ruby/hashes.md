@@ -76,7 +76,7 @@ p recipe
 ```
 
 **Update**  
-We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be names whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
+We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be named whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
 
 ```ruby
 recipe[:flour] = "2 1/4 cups"

@@ -123,7 +123,7 @@ Arrays are a commonly way to store data. Arrays are also a very convenient way t
 'a'..'z'
 ```
 
-The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the range full range and not just the ending character we need to wrap the range in parentheses.
+The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the full range and not just the ending character we need to wrap the range in parentheses.
 
 ```ruby
 (1..10).each do |value|
