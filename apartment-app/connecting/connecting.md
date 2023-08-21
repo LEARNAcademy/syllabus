@@ -4,6 +4,10 @@
 
 Development will always occur in stages. During the initial development of the Apartment App each side of the application used mock data to support the development process. Now it is time to connect the frontend and backend of the Apartment App project. This means removing the reliance on mock data and considering the mechanics of authentication so the users will have the ability to sign up, log in, and log out.
 
+#### Previous Lecture (1 hour 12 min)
+
+[![YouTube](http://img.youtube.com/vi/bLtp2MKzi7o/0.jpg)](https://www.youtube.com/watch?v=bLtp2MKzi7o)
+
 #### Vocabulary
 
 - useRef React hook
@@ -20,7 +24,7 @@ Development will always occur in stages. During the initial development of the A
 
 ### Connecting React and Rails API
 
-Connecting the frontend and backend of Apartment App requires making fetch requests from the React frontend to the Rails API. For the apartment CRUD actions this processes looks very similar to the fetch actions performed in Cat Tinder. However, when we are dealing with user credentials we need to be thoughtful about how that data is passed between applications. When a user first signs up, we need to send their username and password to the Rails API where it will be stored as a new instance in the database. To authenticate an existing user (log in) we need to send the user's email and password to the Rails API and perform a check against existing users in the database. If the credentials match, a token will be created and passed back to the React application. This token remains valid during the current user session and will authorize the user to see certain protected pages. Once the user logs out the session token is invalidated.
+Connecting the frontend and backend of Apartment App requires making fetch requests from the React frontend to the Rails API. For the apartment CRUD actions this processes looks very similar to the fetch actions performed in Cat Tinder. However, when we are dealing with user credentials we need to be thoughtful about how that data is passed between applications. When a user first signs up, we need to send their username and password to the Rails API where it will be stored as a new instance in the database. To authenticate an existing user (log in) we need to send the user's email and password to the Rails API and perform a check against existing users in the database. If the credentials match, a token will be created and passed back to the React application. This token remains valid during the current user session and will authorize the user to see certain protected pages. Once the user logs out, the session token is invalidated.
 
 ### Initial State Variables
 
@@ -62,7 +66,7 @@ const Signup = () => {
   return (
     <div>
       {/* Next, use the property `ref` to attach the variable to the form you want to target. */}
-     <form ref={formRef} onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         Email: <input type="email" name="email" placeholder="email" />
         <br/>
         Password: <input type="password" name="password" placeholder="password" />
@@ -70,9 +74,9 @@ const Signup = () => {
         Confirm Password: <input type="password" name="password_confirmation" placeholder="confirm password" />
         <br/>
         <input type="submit" value="Submit" />
-    </form>
-    <br />
-    <div>Already registered, <a href="/login">Login</a> here.</div>
+      </form>
+      <br />
+      <div>Already registered, <a href="/login">Login</a> here.</div>
     </div>
   )
 }
@@ -104,7 +108,7 @@ const handleSubmit = (e) => {
 
 ### Login and Signup Functions
 
-When writing fetch calls for authenticating users, we need to store the token created by JWT. **localStorage** allows us to store key-value pairs in the form of strings and provides methods to store, retrieve, and remove the token locally in the user's browser. The data stored remains available even after the user closes the browser or navigates away from the website.
+When writing fetch calls for authenticating users, we need to store the token created by JWT. **localStorage** allows us to store key-value pairs in the form of strings and provides methods to store, retrieve, and remove the token locally in the user's browser. The data stored remains available until the user clears the browser cache or the website clears the storage.
 
 The localStorage property comes with four basic methods:
 
@@ -154,12 +158,12 @@ const signup = (userInfo) => {
     method: "POST"
   })
   .then(response => {
-      if (!response.ok) {
+    if (!response.ok) {
       throw Error(response.statusText)
     }
     // store the token
-  localStorage.setItem("token", response.headers.get("Authorization"))
-  return response.json()
+    localStorage.setItem("token", response.headers.get("Authorization"))
+    return response.json()
   })
   .then(payload => {
     setCurrentUser(payload)

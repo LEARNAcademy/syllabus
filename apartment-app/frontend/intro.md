@@ -4,6 +4,10 @@
 
 The frontend of Apartment App is a React application with multiple pages. While in development, the frontend will require mock data for both users and apartments. The mock data will allow us to build the React file structure and create pleasant styling for our future full-stack application.
 
+#### Previous Lecture (37 min)
+
+[![YouTube](http://img.youtube.com/vi/U5cfVXmxMuY/0.jpg)](https://www.youtube.com/watch?v=U5cfVXmxMuY)
+
 #### Additional Resources
 
 - [Reactstrap](https://reactstrap.github.io/)
@@ -18,11 +22,11 @@ The frontend of Apartment App is a React application with multiple pages. While 
 - $ `yarn add bootstrap`
 - $ `yarn add reactstrap`
 - Add to `src/index.js`: `import 'bootstrap/dist/css/bootstrap.min.css'`
+- $ `yarn start`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
 - Ask your instructors for branch protection
-- $ `yarn start`
 
 #### Troubleshooting Tips
 
@@ -166,7 +170,7 @@ const App = () => {
 
 ### React File Structure
 
-It is a good practice to organized all our React components into three directories within `src`: assets, components, and pages. We will also need a directory for our test files.
+It is a good practice to organize all our React components into three directories within `src`: assets, components, and pages. We will also need a directory for our test files.
 
 **Assets**
 The assets directory is used to store image files.
