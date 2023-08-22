@@ -40,11 +40,11 @@ External APIs are data sets created by other developers and made available for p
 
 ### Rate Limits
 
-External APIs can provide a lot of value to an application. However, developers that create external APIs have a right to protect their data and manage the traffic of requests coming into their servers. This is often done by putting rate limits on their APIs. A **rate limit** is how many requests are allowed in a given time period. Examples of common rate limits are 1,000 requests an hours or 10,000 requests a day. However, each API will have different requirements. It is up to the consumer of the external API to read the documentation.
+External APIs can provide a lot of value to an application. However, developers that create external APIs have a right to protect their data and manage the traffic of requests coming into their servers. This is often done by putting rate limits on their APIs. A **rate limit** is how many requests are allowed in a given time period. Examples of common rate limits are 1,000 requests an hour or 10,000 requests a day. However, each API will have different requirements. It is up to the consumer of the external API to read the documentation.
 
 ### API Keys
 
-To enforce the rate limit and protect data from malicious actors each request for data needs to be tracked and regulated. Consumers of the external API will be required to sign up or register their application. In turn the consumer of the external API will receive an API key. The **API key** is an authentication token that gets added to the request url. API keys must be protected just like passwords. API keys should NOT be checked into version control (git).
+To enforce the rate limit and protect data from malicious actors, each request for data needs to be tracked and regulated. Consumers of the external API will be required to sign up or register their application. In turn the consumer of the external API will receive an API key. The **API key** is an authentication token that gets added to the request url. API keys must be protected just like passwords. API keys should NOT be checked into version control (git).
 
 In order to hide the API key we will use an environment variable. An **environment variable** is a variable whose value is set outside the program. It is a variable that rarely changes so it is like creating a `const` variable for the whole application.
 
@@ -82,7 +82,7 @@ Now that React has access to the API key we can create a fetch request for data 
 
 ### API Keys in Rails
 
-API keys are often used on backend applications as well. An environment variable will needed to hide our API key. To do this, we can create a `.env` file in the root directory. We will need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
+API keys are often used on backend applications as well. An environment variable will be needed to hide our API key. To do this, we can create a `.env` file in the root directory. We will need to tell our Rails application that we have a new `.env` file in our application. Luckily since this is a very common practice, there is a Ruby gem that will do the heavy lifting.
 
 In the terminal we will add the `dotenv-rails` gem to the gemfile.
 

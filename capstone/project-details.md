@@ -8,9 +8,8 @@
   - [ ] Add the instructors
 - [ ] Create a team email address
 - [ ] Create a team GitHub Organization
-  - [ ] Add all team members, instructors, and mentors in the role of "owner"
+  - [ ] Add all team members and instructors in the role of "owner"
   - [ ] Add an image to your organization
-  - [ ] Add Slack integrations for your repository `/github subscribe <repo-url>`
 - [ ] Create a team Trello Board
   - [ ] Add the instructors
 - [ ] Create a team [Render](https://render.com/) account
@@ -32,6 +31,9 @@
   - [ ] Code review
   - [ ] Done
 
+### Slack
+- [ ] Add Slack integrations for your repository `/github subscribe <repo-url>`
+
 ### Team Name
 Your team name will not be the same as your app name, so get creative!
 
@@ -47,7 +49,7 @@ Wireframes are drawings or basic outlines of what each page of your application 
 Setting up your database will be one of the first steps in your project. The database schema should be drawn out with the name of each column and the data type of each column. Relationships between each table should be defined.
 
 ### User Stories
-A user story describes how a user interacts with an app. Stories take your wireframes and DB schema and turn them into actionable items. Stories are a detailed "to do" list for every part of your application. Stories keep the team focused on the overall goal of the application as well as keeping the individual developers on task. There should be a clear understanding of when a story is "done".
+A user story describes how a user interacts with an app. Stories take your wireframes and DB schema and turns them into actionable items. Stories are a detailed "to do" list for every part of your application. Stories should be prioritized to keep the team focused on the overall goal of the application as well as keeping the individual developers on task. There should be a clear understanding of when a story is "done".
 
 ### Schedules
 The capstone project is two weeks long and can be divided into two one-week (5 day) sprints. The first sprint is getting the basic functionality of your application, or your **Minimum Viable Product**. The second sprint is for adding additional styling and **Icebox** functionality.
@@ -58,12 +60,12 @@ A typical day:
 
 9:15 - Morning standup with the class
 - Project: What tasks did you complete yesterday? What task are you working on today?
-- Tech: What are your blockers? What is your plan for your mentorship session today?
+- Tech: What are your blockers?
 
 9:30 - Check in with your group and discuss the plan for the day
-- What story is each person working on?
+- What story / branch is each person working on?
 - What is the goal for the day?
-- What story / branch are you currently working on?
+- Assign tasks if needed
 
 9:30 - Pair up and start coding, remember to take breaks regularly and take breaks at the same time
 
@@ -106,7 +108,6 @@ Everyone on the team is a developer on the application. To help divide responsib
 - Must have a strong understanding of the technical needs of the project.
 - Guardian of GitHub.
 - Merges code when appropriate.
-- Leads mentorship sessions for the team.
 - Surfaces blockers to the class at the beginning of the day.
 
 **Design Lead** - Takes ownership over the look, color scheme, and branding of the project.
@@ -120,7 +121,7 @@ Everyone on the team is a developer on the application. To help divide responsib
 ### Developer Roles (3 Person Team)
 Everyone on the team is a developer on the project. To help divide responsibilities each member of the team will take ownership over one of the following areas.
 
-**Product and Project Manager** - Takes ownership on the big-picture vision of the product. Ensures the product mets all requirements. Takes ownership on internal team communication. Oversees the project management board.
+**Product and Project Manager** - Takes ownership on the big-picture vision of the product. Ensures the product meets all requirements. Takes ownership on internal team communication. Oversees the project management board.
 - Must have strong management skills to provide support to the team and keep team unblocked.
 - Manages the conversation around large changes to the app.
 - Ensures the README contains appropriate information.
@@ -137,7 +138,6 @@ Everyone on the team is a developer on the project. To help divide responsibilit
 - Must have a strong understanding of the technical needs of the project.
 - Guardian of GitHub.
 - Merges code when appropriate.
-- Leads mentorship sessions for the team.
 - Surfaces blockers to the class at the beginning of the day.
 
 **Design Lead** - Takes ownership over the look, color scheme, and branding of the project.

@@ -6,7 +6,7 @@
 - Full CRUD functionality
 - User authentication with Devise (signup, login, logout)
 - Minimum of two database tables (one will be the Devise User table)
-- Testing - 60% code coverage
+- Testing - 60% [code coverage](capstone/code-coverage.md)
 - Deployed to Render
 - A [well written README](https://medium.com/chingu/keys-to-a-well-written-readme-55c53d34fe6d) with link to live application
 - "About Us" page
@@ -23,6 +23,7 @@
 
 - Everything will take longer than you expect
 - A simple project idea will allow you to add more features and styling
+  - Look at [previous capstone projects](https://github.com/LEARNAcademy/capstone-projects) for inspiration
 - Step out of your comfort zone
 - Work with everyone in your group
 - Work on a feature or part of the app you’re not completely comfortable with
