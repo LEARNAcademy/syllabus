@@ -1,12 +1,13 @@
 # PostgreSQL Queries
 
 ## Video
-[ Database Queries ](https://player.vimeo.com/video/137862865)
+[![YouTube](http://img.youtube.com/vi/H5JOXnkHfls/0.jpg)](https://www.youtube.com/watch?v=H5JOXnkHfls)  
+***Note: This recording contains both lectures `Intro to Database and PostgreSQL`. Discussion for `PostgreSQL` begins at 17:45 of this recording.***
 
 ## Overview
-- PostgreSQL is a object-relational database management system
-- A query is code that requests particular information from a database
-- Creating efficient queries will improve the speed and performance of your application
+- PostgreSQL is a object-relational database management system.
+- A query is code that requests particular information from a database.
+- Creating efficient queries improves the speed and performance of your application. 
 
 ## Learning Objectives
 - Familiarization with the syntax of a query statement
@@ -15,9 +16,9 @@
 
 ## Vocabulary
 - query
+- database table
 - subquery
 - aggregate function
-- database table
 
 ## Additional Resources
 - [ Here ](http://www.stat.fi/worldinfigures) is the country database source
@@ -25,50 +26,71 @@
 
 ## PGAdmin Setup
 - Open PGAdmin (command + spacebar for spotlight search)
-- Object >> Create >> Server
+- On the lefthand sidebar click the Servers icon
+- Close the prompt for a password 
+- Make sure that the localhost icon is selected
+- Go to horizontal menu bar for pgAdmin4 near the apple icon: Object >> Register >> Server
 - General >> name: localhost
 - Click on connection tab
 - Host name/address: `127.0.0.1` or `localhost`
 - Change username from postgres to `learnacademy`
 - Password: SDlearn123
+- Select to save password
 - Click save
 
-To run a query follow these steps...
+## Connect to Server
+- On the lefthand sidebar click the Servers icon
+- Prompt to unlock saved passwords will require master password: SDlearn123
+- If error statement, select to reset master password
+- Master Password: SDlearn123
+- Click OK
+- Prompt to connect to server wil require a re-entry of password
+- Click OK
+
+## Running a Query
 - Select the correct database:
   - On the lefthand side select: Servers >> localhost >> Databases
   - Click on countries
 - Tools >> Query Tool
-- Type your query in the Query Editor
+- Type a query in the Query Editor
 - Click on play button to run query
 
 ### Database Queries
-In this section you'll find a bunch of keywords and other syntax you can use to create what are generically called `database queries`. The word query just means question, so essentially, this is the syntax we will use to ask questions from the database to hopefully get the data we want.
+In this section we'll create some generic `database queries` using common keywords and SQL-based syntax. The word **query** simply means a question. Therefore, this syntax is  used to ask questions from the database to hopefully get the data we want.
 
-The trick to working with databases is asking the right questions. Look through this syntax to see what kinds of questions you can ask the database.
+***NOTE: The key to working with databases is asking the right questions. Take time to examine Look this syntax to discover different types of questions you can ask the database.***
 
-Queries look a bit more like regular English words than some other programming languages, but it's still important to follow the specific syntax required by each keyword.
+Though queries appear somewhat closer to regular English words than certain other programming languages, it's still important to follow the specific syntax required by each keyword.
 
-NOTE: It is best practice to write the Postgres keywords in uppercase, but the Postgres program is not case sensitive. It is also convention to allow each section of the query its own line.
+***NOTE: The Postgres program is not case sensitive. However, it is best practice to write the Postgres keywords in uppercase. It is also convention to allow each section of the query its own line.***
 
-### SELECT
-The most basic query you can perform is to select all the information from a particular table. Every query will have a `SELECT` statement to describe which columns will be included in the query. The `*` is a shorthand for "all items."
+### SELECT and FROM
+Every query will have a `SELECT` statement that specifies at a minimum:
+- the **database table**, which is a structured collection of data organized into rows and columns 
+- the specified columns to use from that database table.
+
+The `SELECT` clause indicates which columns will be included in the query. 
+
+The `FROM` clause indicates the database table from which information will be extracted.
+***
+
+The simplest query we can execute is to retrieve all the information from a specific table. We will use the `*` symbol as shorthand for "all items" within our SELECT statement.
 ```sql
 SELECT *       <-- means all columns
 FROM country;
 ```
 ![simple select](./assets/querying/simple-select.png)
 
-To select particular columns, pass in the column name separated by commas. Any column needed in the query should be used in the select statement.
+To choose specific columns, enter the column names separated by commas. Any column required in the query should be used in the SELECT statement.
 ```sql
 SELECT name, population, surfacearea
 FROM country;
 ```
 
 **What's up with that order?**
-You'll notice the order of the items seems pretty random. Databases are not ordered by the content. They are ordered by primary key. So it is up to the developer to order the contents of the query.
+At first glance, the order of the items may seem pretty random. Databases are not ordered by the content. They are ordered by the primary key. Hence, arranging the order of the contents within the query is the developer's responsibility.
 
 ### WHERE
-
 A `WHERE` clause is a comparison operator and accepts the following:
 
 `=`, `!=`, `>`, `<`, `>=`, `<=`,
@@ -89,17 +111,22 @@ FROM country
 WHERE surfacearea < 100000;
 ```
 
-Use of operators can be grouped with parenthesis.
+More complex conditions can be incorporated by using special SQL-based keywords called operators. These operators can be combined with parentheses to make a group of values.
 
 The `IN` operator refers to a set of values.
 ```sql
 SELECT name, population, governmentform
 FROM country
 WHERE governmentform
-IN ('Republic', 'Monarchy');
+IN('Republic', 'Monarchy');
 ```
 
-For the `LIKE` operator the `%` is a wildcard, meaning it can stand for any number of any characters rather than matching the characters exactly.
+The `LIKE` operator refers to a pattern within the given characters. This operator also accepts the `%` symbol as a wildcard, enabling it to represent any placement of the pattern rather than requiring an exact characters match. For example:
+- `%onarchy`: matches any value that ends with "onarchy".
+- `Monar%`: matches any value that begins with "Monar".
+- `%onarchy%`: matches any value that contains "onarchy".
+
+
 ```sql
 SELECT name, population, governmentform
 FROM country
@@ -138,7 +165,7 @@ AND 500000;
 ````
 
 ### ORDER BY
-You can order the result set of a query by adding an `ORDER BY` clause after the `WHERE` clause.
+We can order the result set of a query by adding an `ORDER BY` clause after the `WHERE` clause.
 
 ```sql
 SELECT name, population, governmentform
@@ -146,7 +173,7 @@ FROM country
 WHERE governmentform IN ('Republic', 'Monarchy')
 ORDER BY population;
 ```
-You can append `ASC` or `DESC` to make the order ascending or descending.
+We can append `ASC` or `DESC` to make the order ascending or descending.
 ```sql
 SELECT name, population, governmentform
 FROM country
@@ -155,9 +182,9 @@ ORDER BY population DESC;
 ```
 
 ### LIMIT
-A `SELECT` will always return all the items that meet a particular condition. To reduce the number of items that are returned you can pass the `LIMIT` clause after the `WHERE` clause.
+A `SELECT` clause always return all the items that meet a particular condition. To reduce the number of items returned, we can pass the `LIMIT` clause after the `WHERE` clause.
 
-The following examples limits the number of rows in the result set to ten:
+The following example reduces the number of items returned to ten rows:
 ```sql
 SELECT name, population, governmentform
 FROM country
@@ -166,19 +193,16 @@ LIMIT 10;
 ```
 
 ### Working with NULL
-`NULL` is a special value that used to denote "no value", similar to `nil` in Ruby, and `null` or `undefined` in Javascript.
+`NULL` is a special value used to denote the absence of a value, similar to `nil` in Ruby and `null` or `undefined` in Javascript.
 
-The strange thing about `NULL` is that is not equal to anything, *including itself*.
-So to specify `NULL` in a `WHERE` clause we have to use `IS NULL` or `IS NOT NULL`.
-
-- Most functions and expressions yield `NULL` if `NULL` is an argument
-- You can account for `NULL` with
-- `IS NULL`,
-- `IS NOT NULL` or
-- `COALESCE` which returns first non-`NULL` value
+The strange thing about `NULL` is that it is not equal to anything, *including itself*.
+Therefore, when accounting for `NULL` in a `WHERE` clause, we can use any of the following operators:
+- `IS NULL`
+- `IS NOT NULL`
+- `COALESCE` which returns first non-`NULL` value.
 
 ### AS
-The `AS` clause will create an additional column for the query. The `AS` clause requires a name for the alias of the column.  
+The `AS` clause will create an additional column for the query. The `AS` clause requires a custom name for the alias of the column.  
 
 ````sql
 SELECT name, population,
@@ -188,9 +212,9 @@ WHERE population > 1e+8;
 ````
 
 ### WITH
-The `WITH` clause allows a developer to create subqueries. `WITH` allows us to define a `SELECT` statement and give it an alias. Then we can make a query from that alias.
+The `WITH` clause allows a developer to create a **subquery**, which is a query embedded within another query. The subquery is created by defining a `SELECT` statement with an alias. The results of a subquery are used by referencing the alias in the main query. 
 
-Here we create a subquery called `populated_countries` that eliminates any countries that have a population of 0 and a gnp of 0. Then, we can use the alias `populated_countries` to look for the 10 countries that have the lowest gnp.
+In this example, we create an alias called `populated_countries` for the subquery that eliminates any countries that have a population of 0 and a gnp of 0. Next, we query the alias `populated_countries` to extract 10 countries that have the lowest gnp.
 ``` sql
 WITH populated_countries AS (
 	SELECT name, population, gnp
@@ -205,15 +229,9 @@ LIMIT 10;
 ```
 
 ## Aggregate Functions
-So far, we've stored items into tables and selected lists of items from them. But what if we wanted to do more than print lists? In PostgreSQL, we can also perform operations on a list like addition or computing the average. Clauses like `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX` perform an action on a particular set of data that is passed in.
+So far, we've stored items into tables and extracted a list of items from them. What if we wanted to do more than generate a list of items? In PostgreSQL, we can also perform calculations like addition or computing the average. **Aggregated functions** like `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX` perform an action on a particular set of data and returns a calculated value.
 
-Using `SUM` we can return the total population for every entry in the database.
-```SQL
-SELECT SUM(population)
-FROM country;
-```
-
-Using `COUNT` we can see the most common form of government and how many rows meet that criteria.
+In this example, `COUNT` allows us to see the most common form of government and how many rows meet that criteria.
 ```sql
 SELECT governmentform, COUNT(*)
 FROM country
@@ -222,12 +240,18 @@ ORDER BY count DESC
 LIMIT 1;
 ```
 
+In this example, `SUM` returns the total population for every entry in the database.
+```SQL
+SELECT SUM(population)
+FROM country;
+```
+
 ### GROUP BY
-The `GROUP BY` clause is used together with the `SELECT` statement to group together rows that have the same data.
+The `GROUP BY` clause is used to arrange rows with matching values in specified columns into condensed summaries.
 
-You can also use the aggregate functions like `COUNT` or `AVG` that can be used with `GROUP BY`.
+Aggregate functions like `COUNT` or `AVG` can also be used with `GROUP BY`.
 
-`AVG` performs a calculation on the row data that is being passed then returns the data grouped by the region.
+The following example uses `AVG` performs a calculation on the specified column and then returns the summarized data grouped into rows based on the region.
 ```sql
 SELECT region, AVG(lifeexpectancy)
 FROM country
@@ -243,7 +267,7 @@ GROUP BY region
 ```
 
 ## Challenges: SQL Country Database
-Save your queries in a file if you want to keep them for posterity.
+Save your queries in a file if you want to keep them for posterity (future reference).
 
 #### WHERE
 - What is the population of the US? (HINT: 278357000)
