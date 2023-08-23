@@ -291,7 +291,7 @@ Save your queries in a file if you want to keep them for posterity (future refer
 
 #### Subqueries: WITH
 - Of the countries with the top 10 gnp, which has the smallest population? (HINT: Canada)
-- Of the 10 least populated countries with permament residents (a non-zero population), which has the largest surfacearea? (HINT: Svalbard and Jan Mayen)
+- Of the 10 least populated countries with permanent residents (a non-zero population), which has the largest surfacearea? (HINT: Svalbard and Jan Mayen)
 
 #### Aggregate Functions: GROUP BY
 - Which region has the highest average gnp? (HINT: North America)
