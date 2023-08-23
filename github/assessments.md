@@ -1,13 +1,13 @@
 # Weekly Assessments
 
-## TL;DR
+## Process
 - Accept assignment via Slack
 - Clone repository
 - Create branch with the week and your name, e.g `week-1-sarah-proctor`
-- Code and pseudo code
+- Complete all assessment problems
 - Git add, commit, push
 - Create pull request and leave open for review!
-- Merge code after review
+- Merge code after review is **approved**
 
 #### Overview
 - Procedure for obtaining and submitting weekly assessments
@@ -56,9 +56,9 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 
 #### Code!
 - COMPLETE all the files in your assessment
-- This is a chance for you to learn as well as for the instructors to see your code
+- This is a chance for you to learn as well as for the instructors to see your code and understanding of the concepts
 - Leave comments or questions about your code if you want specific feedback
-- Pseudo coding is required
+- Pseudo coding (process notes) is required for code challenges
 
 #### Ready to Submit
 - cd into the correct folder
@@ -67,6 +67,7 @@ An assessment is not complete until the assessment is reviewed by an instructor,
 - $ `git push origin <branch-name>`
 - On GitHub refresh the page and find the green `Compare & pull request` button
 - Leave any note you feel will be prudent for the instructors and click the green `Create pull request` button
+- Resist the urge to merge
 
 **You have successfully submitted your assessment!**
 

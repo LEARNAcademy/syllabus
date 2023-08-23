@@ -1,7 +1,10 @@
 # Collaborative Coding with GitHub
 
+#### Previous Lecture (56 min)
+[![YouTube](http://img.youtube.com/vi/JrhB42_r6z0/0.jpg)](https://www.youtube.com/watch?v=JrhB42_r6z0)
+
 #### Helpful Resources
-[Git Workflow Cheatsheet](assets/git-workflow.jpg)
+[Git Workflow Cheatsheet](assets/git-workflow.png)
 
 ### What is a branch?
 A branch serves as an abstraction for the edit/stage/commit process. New commits are recorded in the history for the current branch rather than main.
@@ -11,9 +14,11 @@ In the example above, we can visualize our main branch on the left. It is our "p
 
 ### Creating a New Branch
 
-Let's look at the process of creating a new version of the project (a branch). Then we are free to make changes locally on our computer — while the original version of the project, the main branch, remains safely on GitHub. We give the new branch a descriptive name to remind us what we intend to do while working in it. You should use the following naming convention for your branch while you are in the classroom: `topic-initials1-initials2` (ex. arrays-aw-sp)
+Let's look at the process of creating a new version of the project (a branch). We are able to make changes locally on our computer — while the original version of the project, the main branch, remains safely on GitHub. We give the new branch a descriptive name to remind us what we intend to do while working in it. You should use the following naming convention for your branch while you are in the classroom: `topic-initials1-initials2` (ex. arrays-aw-sp)
 
-- Before we get started we will want to double check that we are currently on the 'main' branch. Type `git status` to see a readout of the current branch and other git info. If the branch is not 'main', type and run `git checkout main` to switch over to the main branch. From here you will be safe to create a new branch. 
+- Before we get started we will want to double check that we are currently on the 'main' branch. Type `git status` to see a readout of the current branch and other git info. 
+<img src="assets/git-status.png" width="650px">
+If the branch is not 'main', type and run `git checkout main` to switch over to the main branch. From here you will be safe to create a new branch. 
 
 - To get the latest changes from main it may be a good idea to run the command `git pull origin main`.
 
@@ -77,6 +82,7 @@ Click `Create pull request`
   - `git checkout main`
   - `git pull origin main`
   - `git branch -d <branch-name>`
+<img src="assets/git-6.png" width="650px">
 
 ---
 [Back to Syllabus](../README.md#github)

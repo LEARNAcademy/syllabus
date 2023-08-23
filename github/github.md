@@ -6,8 +6,8 @@ Git is a free, open-sourced version control system widely used in the programmin
 
 History of the name git according to Linus is quite funny. 'Git' is British slang for pig headed or argumentative. This will feel very appropriate at moments when interacting with git. Torvolds says, while 'git' was a random three-letter combination that is pronounceable, and not actually used by any common UNIX command, it can change meaning, depending on your mood:
 
-Global Information Tracker: if you're in a good mood, and it actually works for you. Angels sing and light suddenly fills the room  
-Godd\*\*n Idiotic Truckload of sh\*t: when it breaks.
+- Global Information Tracker: if you're in a good mood, and it actually works for you. Angels sing and light suddenly fills the room
+- Godd\*\*n Idiotic Truckload of sh\*t: when it breaks 
 
 ### Git Configurations
 
