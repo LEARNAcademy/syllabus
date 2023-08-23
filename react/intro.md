@@ -24,10 +24,10 @@ React is JavaScript library for creating user interfaces. Everything in React is
 - React
 - DOM
 - component
-- Functional components
+- functional components
 - JSX
 - React fragments
-- component call (component invocation)
+- component invocation (component call)
 
 #### Additional Resources
 
@@ -49,15 +49,15 @@ React is JavaScript library for creating user interfaces. Everything in React is
 
 ### What is React?
 
-**React** is a JavaScript library used to build webpages, mobile web pages, and even native mobile applications. It was created by Facebook as that application grew and became more dynamic. It is component based, which means that we use it to build many small parts that are joined together to form an entire application. This feature turns out to be extremely scalable. 
+**React** is a JavaScript library used to build webpages, mobile web pages, and even native mobile applications. It was created by Facebook as that application grew and became more dynamic. It is component based, which means that we use it to build many small parts that are joined together to form an entire application. This feature turns out to be extremely scalable.
 
-React is a popular language not only because of its reusable structure but also because of its efficient response to user interactions. When we look at a website in the browser, we are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
+React is a popular tool not only because of its reusable structure but also because of its efficient response to user interactions. When we look at a website in the browser, we are looking at the DOM. The **DOM** which stands for Document Object Model is the visual representation of code. React makes very efficient user interactions by identifying the specific element where the change occurred and only updating that particular element.
 
 ### React Components
 
 As developers, we want to write as few lines of code as possible. When we repeat code, it makes the developer gods cry. We put code that we want to reuse in a function and then call that function when we want to use that code!
 
-**Components** are a specific type of function that can contain JavaScript logic and return markup that gets rendered to the browser. Everything in React is a component. There are different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with functional components. **Functional components** are React components that are composed of JavaScript functions.
+**Components** are a specific type of function that can contain JavaScript logic and return markup that gets rendered to the browser. Everything in React is a component. There are different ways of creating React components, but in this lesson, and throughout the course, we will work primarily with functional components. **Functional components** are React components with the base structure modeled from a JavaScript function.
 
 ### What is JSX?
 
@@ -121,7 +121,7 @@ This is the barest React application. It is composed of a single component. As o
 
 ### Nested Components
 
-Nesting components allows us to call a component within the return of another component. This is the convention for making more complicated React applications with reusable code. Most React components will need to return more than one JSX element. If that is the case, the elements need to be wrapped in a single container tag. While often an element such as a `div` can be used, there is a special JSX tag that is even more neutral than a `div` called a React fragment. **React fragments** are empty JSX tags that can wrap other elements without adding any additional styling.
+Nesting components allows us to call a component within the return of another component. This is the convention for making more complicated React applications with reusable code. Most React components will need to return more than one JSX element. If that is the case, the elements need to be wrapped in a single container tag. While often an element such as a `div` can be used, there is a special JSX tag that is even more neutral than a `div` called a React fragment. **React fragments** are empty JSX tags that can wrap other elements without adding any additional tag structure rendered in the DOM.
 
 First we will wrap the `h1` in React fragments. Then we will define another component.
 
@@ -165,7 +165,7 @@ First we will wrap the `h1` in React fragments. Then we will define another comp
 </html>
 ```
 
-Just like any other function, components must be called or invoked. A **component call (component invocation)** looks like a self closing HTML tag. This will render the component.
+Just like any other function, components must be called or invoked. A **component invocation (component call)** looks like a self closing HTML tag. This will render the component.
 
 ```html
 <!DOCTYPE html>
