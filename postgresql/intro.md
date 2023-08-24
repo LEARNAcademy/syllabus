@@ -12,12 +12,12 @@ Databases are an organized collection of information stored in a computer or on 
 
 - SQL
 - PostgreSQL
+- relational database
+- database columns
+- database rows
+- database instance
+- database table
 - schema
-- rows
-- columns
-- tables
-- relational databases
-- database tables
 - primary key
 
 ---
@@ -28,7 +28,9 @@ Databases are an organized collection of information stored in a computer or on 
 
 ### Relational Databases
 
-A relational database is structured similar to an Excel spreadsheet or Google Sheets document with its information displayed in **rows** and **columns**. A **table** is one set of rows and columns. A database can have many tables that have relationships with each other. The description of the layout of all the tables in a database, along with the name and data type of each column within each table, is called a **schema**.
+A **relational database** is structured similar to a spreadsheet with its information displayed in rows and columns. The **database columns** describe the structure of the database. The **database rows** are each entries the database. Another way of referencing database rows is to say **database instance**. A **database table** is one set of rows and columns.
+
+A database can have many tables that have relationships with each other. The description of the layout of all the tables in a database, along with the name and data type of each column within each table, is called a **schema**.
 
 ### How Programs Use Databases
 
@@ -92,9 +94,9 @@ That is essentially what will happen in our code. A class will be connected to a
 
 ### The Primary Key
 
-Each row must have a unique way of identifying itself to other parts of the program.
+Each row of the database is a unique entry. However, it is possible that multiple entries could have the same data. In order to ensure each row is unique, every database entry will have a primary key. The **primary key** is a column in the database that will contain a unique identifier.
 
-In Rails, every row of a table has a primary key named "id", and that id is guaranteed to be unique. This prevents problems like two `Person` instances being confused for each other because they have the same name. We can always tell them apart by their id.
+In Rails, every row of a table has a primary key named "id", and that id is a number that is guaranteed to be unique. This prevents problems like two `Person` instances being confused for each other because they have the same name. We can always tell them apart by their id.
 
 We've added in a primary key for this instance of Person:
 
@@ -109,7 +111,7 @@ Email:          korben_dallas@gmail.com
 
 ### Summary
 
-In this lesson, we learned about organizing a program's data into a relational database structure. We were introduced to the database concept of a row, which represents an instance of a class. Rows are grouped together into tables. Relational databases define the name and data type of each column using a schema. One very important attribute of every row in every table in a Rails application is the ID. Primary keys are guaranteed to be unique and are how we identify individual rows.
+In this lesson, we learned about organizing a program's data into a relational database structure. We were introduced to the database concept of a row, which represents an instance of a class. Rows are grouped together into tables. Relational databases define the name and data type of each column using a schema. One very important attribute of every row in every table in a Rails application is the id. Primary keys are guaranteed to be unique and are how we identify individual rows (or instances).
 
 ![table](./assets/table.png)
 
