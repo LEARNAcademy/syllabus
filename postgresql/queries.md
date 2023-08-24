@@ -58,7 +58,7 @@
 ### Database Queries
 In this section we'll create some generic `database queries` using common keywords and SQL-based syntax. The word **query** simply means a question. Therefore, this syntax is  used to ask questions from the database to hopefully get the data we want.
 
-***NOTE: The key to working with databases is asking the right questions. Take time to examine Look this syntax to discover different types of questions you can ask the database.***
+***NOTE: The key to working with databases is asking the right questions. Take time to examine this syntax to discover different types of questions you can ask the database.***
 
 Though queries appear somewhat closer to regular English words than certain other programming languages, it's still important to follow the specific syntax required by each keyword.
 
