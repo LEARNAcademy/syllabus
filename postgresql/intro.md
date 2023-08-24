@@ -1,7 +1,8 @@
 # Introduction to Databases
 
-## Video: Introduction to Databases (2 min)
-https://player.vimeo.com/video/137862860
+## Video
+[![YouTube](http://img.youtube.com/vi/H5JOXnkHfls/0.jpg)](https://www.youtube.com/watch?v=H5JOXnkHfls)  
+***Note: This recording contains both lectures `Intro to Databases and PostgreSQL`. The recording begins with `Intro to Databases`, and that discussion stops at 17:45 of this recording.***
 
 ## Overview
 - Databases store information in an organized way.
@@ -17,10 +18,11 @@ https://player.vimeo.com/video/137862860
 ## Vocabulary
 - SQL
 - PostgreSQL
+- relational database
+- rows
+- columns
+- database table
 - schema
-- tables, rows, columns
-- relational databases
-- database tables
 - primary key
 
 
@@ -28,7 +30,7 @@ https://player.vimeo.com/video/137862860
 **SQL**, short for Structured Query Language, is a domain-specific language used for communicating with relational databases. **PostgreSQL**, also called **Postgres**, is one type of SQL. Postgres is an open source object-relational database management system, which means Postgres looks at databases through an object-oriented programming (OOP) lens.
 
 ### Relational Databases
-A relational database is structured similar to an Excel spreadsheet or Google Sheets document with its information displayed in **rows** and **columns**. A **table** is one set of rows and columns. A database can have many tables that have relationships with each other.  The description of the layout of all the tables in a database, along with the name and data type of each column within each table, is called a **schema**.
+A **relational database** is structured similar to an Excel spreadsheet or Google Sheets document with its information displayed in **rows** and **columns**. A **database table** is one set of rows and columns. A database can have many tables that have relationships with each other.  The description of the layout of all the tables in a database, along with the name and data type of each column within each table, is called a **schema**.
 
 ### How Programs Use Databases
 How does the code we write in Rails (or any other language or framework) interact with a database? Let's explore how contact information can be stored in a relational database.
@@ -94,20 +96,13 @@ A single row entry in a database is an instance of a class within our code. A co
 ### The Primary Key
 Each row must have a unique way of identifying itself to other parts of the program.
 
-In Rails, every row of a table has a primary key named "id", and that ID is guaranteed to be unique. This prevents problems like two `Person` instances being confused for each other because they have the same name. We can always tell them apart by their ID.
+In Rails, every row of a table has a primary key named "id", which is guaranteed to be unique. Its uniqueness prevents problems like confusing two `Person` instances due to identical names. We can always tell them apart by their primary keys.
 
-We've added in a primary key for this instance of Person:
-```
-id:             1
-First Name:     Korben
-Last Name:      Dallas
-Date of Birth:  6/1/2097
-Address:        Apt 3497 1 Main St, CityVille, Earth
-Email:          korben_dallas@gmail.com
-```
+**Primary keys with instances of class Person**
+![table](./assets/intro-to-databases/primary-keys.png)
 
 ### Summary
-In this lesson, we learned about organizing a program's data into a relational database structure. We were introduced to the database concept of a row, which represents an instance of a class. Rows are grouped together into tables. Relational databases define the name and data type of each column using a schema. One very important attribute of every row in every table in a Rails application is the ID.  Primary keys are guaranteed to be unique and are how we identify individual rows.
+In this lesson, we learned about organizing a program's data into a relational database structure. We were introduced to the database concept of a row, which represents an instance of a class. Rows are grouped together into tables. Relational databases define the name and data type of each column using a schema. One very important attribute of every row in every table in a Rails application is the ID. Primary keys are guaranteed to be unique and are how we identify individual rows.
 
 Relational databases were in existence prior to the introduction of Rails and will continue to endure even as new technologies emerge. Rails, as well as other web frameworks, can be conceptualized as tools that effectively and securely connect web pages with data stored in relational databases.
 
