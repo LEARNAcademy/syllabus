@@ -25,9 +25,10 @@ This repository is a reflection of the current status of the curriculum at LEARN
 
 ## GitHub
 
+- [Git and GitHub Introduction](./github/git-and-github.md)
+- [Git and GitHub Configurations](./github/github-configurations.md)
+- [Collaborative Coding with GitHub](./github/collaborative-coding.md)
 - [Accessing and Submitting Assessments](./github/assessments.md)
-- [Git and GitHub Intro and Configurations](./github/github.md)
-- [Collaborative Coding with GitHub](./github/pairing-with-github.md)
 
 ## Resources
 
