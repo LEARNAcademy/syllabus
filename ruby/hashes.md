@@ -55,7 +55,7 @@ This structure looks very similar to an object in JavaScript. The JavaScript obj
 # output: {:flour=>"2 1/4 cups", :sugar=>"1 cup", :eggs=>2}
 ```
 
-This output illustrates an older syntax of hashes. While you won't necessarily see this version of hashes used in code there are some important things to note with this particular output.
+This output illustrates an older syntax of hashes. While we won't necessarily see this version of hashes used in code there are some important things to note with this particular output.
 
 The first is the data type of the key which is a Ruby symbol. A **symbol** is a unique identifier in a key:value pair that is expressed with the colon on the left side of the variable such as `:flour`.
 
@@ -65,20 +65,33 @@ The second is the hash rocket. A **hash rocket** separates the key and the value
 
 In programming, there are four general actions that can be performed on data. We can create new data, see data that currently exists, update existing data, and delete or remove data. These four actions have a delightful acronym: CRUD. **CRUD** (create, read, update, delete) is a programmer's checklist describing the complete list of data manipulation. With this in mind, let's look at how we can perform these four actions on hashes.
 
-**Create**  
+### Operations on a Hash: Create
+
 There are two basic ways to create a new hash. The first way is to create a variable and list out the desired key:value pairs. Another way is to use some fundamental Ruby principles. As we know, everything in Ruby is a class. So we can call the `.new` method on the class `Hash` to instantiate a new instance of class Hash.
 
 ```ruby
+# variable with key:value pairs
+recipe = { flour: '2 1/4 cups', sugar: '1 cup', eggs: 2 }
+
+p recipe
+# output: {:flour=>"2 1/4 cups", :sugar=>"1 cup", :eggs=>2}
+
+# instantiating a new instance of class Hash
 recipe = Hash.new
 
 p recipe
 # output: {}
 ```
 
-**Update**  
-We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be names whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
+### Operations on a Hash: Update
+
+We can add values to the hash by providing a key in square braces and assigning that key a value. The key can be named whatever best describes the data it holds and will be a Ruby symbol. The data must be a valid Ruby data type such as strings and integers. This action modifies the existing hash by adding content.
 
 ```ruby
+# instantiating a new instance of class Hash
+recipe = Hash.new
+
+# updating the hash with key:value pairs
 recipe[:flour] = "2 1/4 cups"
 recipe[:sugar] = "1 cup"
 recipe[:eggs] = 1
@@ -87,7 +100,7 @@ p recipe
 # output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 1 }
 ```
 
-This same syntax can be used to update the value in a hash.
+This same syntax can be used to update the existing value in a hash.
 
 ```ruby
 recipe[:eggs] = 2
@@ -111,7 +124,8 @@ p recipe
 # output: { :flour => '2 1/4 cups', :sugar =>'1 cup', :eggs => 2, :butter => '1 cup' }
 ```
 
-**Read**  
+### Operations on a Hash: Read
+
 Reading data can be done in a variety of ways. The read action returns existing data. We can return the hash as a whole or just individual values. When we log `recipe` we can see the entire hash.
 
 ```ruby
@@ -136,7 +150,8 @@ p recipe.values
 # output: ['2 1/4 cups', '1 cup', 2, '1 cup']
 ```
 
-**Delete**  
+### Operations on a Hash: Delete
+
 To remove a key:value pair from the hash all together we can use the Ruby method `.delete` and pass in the key as an argument. Ruby will return the value from the deleted key as an output of that method. And when calling the variable `recipe` we see the key:value pair has been removed.
 
 ```ruby
@@ -188,7 +203,7 @@ end
 ### ❤️ Challenges
 
 - As a developer, I can create a hash called my_phone using the Ruby method `.new`.
-- As a developer, I can add five key:value pairs of app names and their descriptions to my hash.
+- As a developer, I can add five key:value pairs of phone application names and their descriptions to my hash.
 - As a developer, I can return a value from my_phone by passing in the name of a key.
 - As a developer, I can update two keys in my_phone.
 - As a developer, I can update two values in my_phone.
@@ -197,8 +212,8 @@ end
 
 ### 🏔 Stretch Goals
 
-- As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
-- As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each app.
+- As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
+- As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each application.
 
 ---
 

@@ -56,14 +56,14 @@ end
 
 ### Each
 
-The `each` method acts on a list-style data type. The `each` method will execute once for every item in an object or array. The block that is passed to the `each` method will determine what action is to be performed on each iteration. To determine what is happening to each value, a parameter is passed to the block. The parameter is defined inside of pipes.
+The `each` method acts on any list-style data types. The `each` method will execute once for every item in an object or array. The block that is passed to the `each` method will determine what action is performed on each iteration. To determine what is happening to each value, a parameter is passed to the block. The parameter is defined inside of pipes `||`.
 
 Like most Ruby methods, the `each` method is an accessor and will not change the original array.
 
 ```ruby
 nums = [1, 2, 3]
 
-# each takes a block and the parameter of value
+# each takes a do-end block and the parameter of value
 nums.each do |value|
   p value
 end
@@ -97,7 +97,7 @@ nums.each { |value| p value * 3 }
 
 ### While
 
-The while method is a little bit different in that it doesn't take a block as an argument. A while loop requires a starting value and runs until a particular condition is met.
+The `while` method is an iterable. It is a little bit different than the previous examples in that it doesn't take a block as an argument. A `while` loop requires a starting value and runs until a particular condition is met.
 
 ```ruby
 number = 0
@@ -116,14 +116,15 @@ end
 
 ### Ranges
 
-Arrays are a commonly way to store data. Arrays are also a very convenient way to store data as they are well organized, predictable, and allow for iterative actions. Arrays are not the only iterable data types in Ruby. Another way to store iterable data is in a range. A **range** is a Ruby class that represents an interval of consecutive data defined with a starting value and runs through an ending value.
+Arrays are a common way to store data. This is because arrays are well organized, predictable, and allow for iterative actions. Arrays are not the only iterable data type in Ruby. Another way to store iterable data is in a range. A **range** is a Ruby class that represents an interval of consecutive data defined with a starting value and an ending value.
 
 ```ruby
+# inclusive range
 1..10
 'a'..'z'
 ```
 
-The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the range full range and not just the ending character we need to wrap the range in parentheses.
+The range on its own doesn't do much but it can be used to create a list of all the values from the first to the last. To access the full list we can apply an `each` block. In order to indicate to Ruby that the each method is being applied to the full range and not just the ending character we need to wrap the range in parentheses.
 
 ```ruby
 (1..10).each do |value|
@@ -178,9 +179,31 @@ my_array
 # output: [1, 2, 3, 16]
 ```
 
+### Select
+
+The `select` method in Ruby is similar to the filter method in JavaScript. Like map, the `select` method acts on an array and will return an array. The `select` method also takes a block that defines the execution of each iteration. Within the block, we must provide logic that allows `select` to make a decision about each item in the array. If the decision returns true the item will be included in the output. If the decision returns false the item will be excluded.
+
+The `select` method is an accessor and will not modify the array it is called on.
+
+```ruby
+my_array = [5, 6, 7, 8, 9]
+
+my_array.select do |number|
+  number.even?
+end
+# output: [6, 8]
+
+# block with curly braces
+my_array.select { |number| number.even? }
+# output: [6, 8]
+
+my_array
+# output: [5, 6, 7, 8, 9]
+```
+
 ### Mutators Methods
 
-Ruby methods are accessors by default. To modify the original array apply the bang operator to the end of the method.
+Ruby methods are accessors by default. To modify the original array we need to apply the bang operator to the end of the method.
 
 ```ruby
 my_array = [1, 2, 3, 4]
@@ -193,6 +216,8 @@ end
 my_array
 # output: [1, 4, 9, 16]
 ```
+
+---
 
 ### ❤️ Challenges
 
