@@ -4,9 +4,9 @@
 
 The Apartment Application is a decoupled React and Rails application that allows users to see apartments that are available for rent. Users are able to add new apartments to the application. However, we want to be protective of our database and not allow just anyone on our site the ability to post data. In this project, Apartments can only be created by a valid, logged in user.
 
-#### Previous Lecture (45 min)
+#### Previous Lecture (1 hour 22 min)
 
-[![YouTube](http://img.youtube.com/vi/ZomvJEIpKxY/0.jpg)](https://youtu.be/ZomvJEIpKxY)
+[![YouTube](http://img.youtube.com/vi/Ca4u-eM7j-I/0.jpg)](https://www.youtube.com/watch?v=Ca4u-eM7j-I)
 
 #### Learning Objectives
 
@@ -40,11 +40,11 @@ The Apartment Application is a decoupled React and Rails application that allows
 - $ `rails db:create`
 - $ `bundle add rspec-rails`
 - $ `rails generate rspec:install`
+- $ `rails server`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
 - Ask your instructors for branch protection
-- $ `rails server`
 
 #### Troubleshooting Tips
 
@@ -56,9 +56,37 @@ The Apartment Application is a decoupled React and Rails application that allows
 
 ---
 
+### Front to Back Communication
+
+User authentication requires the frontend, directly controlled by the user and the backend, controlled by the developer to agree that the user is who he/she claims to be, and that there has been no interference, malicious or otherwise, between the two sides of the system. This is the fundamentals of web application security, we need to make sure we know who is communicating, and that the communication is real. There are many strategies developers use to ensure security in their applications, and just as many opinions on the benefits of each. Some developers opt to construct their own authentication strategy, while others depend on tried and true standard methods supported and maintained by the community as a whole. Best practice is to use standardized and open authentication tools for web apps. Open source tools such as those we'll be using in class, have many, many smart people driving their development, protecting their apps against bugs and security vulnerabilities. Just as important, these tools are well maintained, assuring that when new security risks are discovered, the tools are patched quickly. It is our responsibility as users of these tools to make sure that we stay current with the latest versions, keeping our own apps as safe as possible.
+
+### How Authentication Works
+
+The backend app has the primary responsibility for maintaining security in an application. It is the only place where we as developers can be certain that we have absolute control over our data. The backend uses secrets and hashing algorithms for its secure data that it sends out to browsers and other clients. The server then demands that the client sends a secure token that only the server could have generated with every request that requires authentication.
+
+### Authentication
+
+Authentication is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password; this process is called signing in or logging in.
+
+[Authentication](https://en.wikipedia.org/wiki/Authentication)
+
+### Authorization
+
+Authorization is process of giving permission to an entity to access a resource. This is often done after an entity has been authenticated.
+
+For instance:
+
+- Logging into a mail server, gives you access to your email but not others' emails.
+- Logging into Google Drive gives me permission to read some files and permission to edit other files.
+- When I am on the internet in the US, I can watch certain movies on Netflix, but not when I am outside the US.
+
+The last instance shows an authorization scheme that is not dependent on au**then**tication.
+
+[Authorization](https://en.wikipedia.org/wiki/Authorization)
+
 #### Devise
 
-A key component of web applications is the ability for a user to log in. This requires a developer to consider both authentication and authorization. **Authentication** is the ability to provide valid credentials, such as a username and password. **Authorization** defines what data a user is authenticated to access. When working in a Rails application we can use a gem called Devise. **Devise** gives developers a collection of methods that create authorization and authentication.
+A key component of web applications is the ability for a user to log in. This requires a developer to consider both authentication and authorization. When working in a Rails application we can use a gem called Devise. **Devise** gives developers a collection of methods that create authorization and authentication.
 
 Using Devise, we can create a special model called User that gets Devise code injected into each new model instance. Just by running the setup commands we get basic Devise functionality.
 
@@ -109,13 +137,30 @@ For this application, Apartments will have the following fields: a street, a uni
 
 We need to ensure there is a relationship between users and apartments. Apartments should only be created by valid, signed in users. A user can add as many apartments as they would like. This means the relationship between users and apartments is the User has_many Apartments, Apartment belongs_to a User. This relationship is defined in the code first by adding the foreign key of `user_id` to the belongs_to table.
 
-Secondly, the relationship will need to be defined in both the Apartment and the User model classes.
-
 ```bash
 rails generate resource Apartment street:string unit:string city:string state:string square_footage:integer price:string bedrooms:integer bathrooms:float pets:string image:text user_id:integer
 ```
 
 Don't forget to migrate!
+
+We will also need to define the relationship in both the Apartment and the User model classes.
+
+**app/models/user.rb**
+```ruby
+class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  has_many :apartments
+end
+```
+
+**app/models/apartment.rb**
+```ruby
+class Apartment < ApplicationRecord
+  belongs_to :user
+end
+```
+
 
 #### Seeds
 
@@ -123,7 +168,7 @@ In order to create a User instance in the database, we need a unique username, p
 
 Seed data has to align with the relationship of our User and Apartment models. Before we have apartments, we must have users.
 
-Devise provides us with some built-in validations. For example, every user in the database must have a unique email. To ensure our seeded user data is made correctly, we can use the `.first_or_create` Active Record method. Using the `.where` method, we first query for all emails that match a particular user in the database. The `.where` method will return an array of all matches. The `.first_or_create` method checks whether first instance in the array is nil or not. If the value is nil, then no user exists. A nil value will trigger the `.create` method which requires password and password confirmation keys with matching password values.
+Devise provides us with some built-in validations. For example, every user in the database must have a unique email. To ensure our seeded user data is made correctly, we can use the `.first_or_create` Active Record method. Using the `.where` method, we first query for all emails that match a particular user in the database. The `.where` method will return an array of all matches. The `.first_or_create` method checks whether the first instance in the array is nil or not. If the value is nil, then no user exists. A nil value will trigger the `.create` method which requires password and password confirmation keys with matching password values.
 
 ```ruby
 user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
@@ -214,6 +259,8 @@ end
 ```
 
 ### JWT Secret Key Configuration
+
+Note:  The following step is more streamlined if the process is done on the machine that the Rails app was created on.  When creating a Rails app, a `config/master.key` file is made that automatically is hidden from git.  This file will be needed for our next steps.
 
 We need a secret key to create a JWT token. We can generate one with this command:
 
@@ -308,7 +355,7 @@ As a developer, I have been commissioned to create an application where a user c
 - As a developer, I can create a RSpec testing suite in my Rails application.
 - As a developer, I can add a User model with Devise.
 - As a developer, I can add a resource for Apartment that has a street, a unit number, a city, a state, the square footage, a price, number of bedrooms, number of bathrooms, whether pets are allowed, and an image.
-- As a developer, I can create seed the database with users and apartments.
+- As a developer, I can seed the database with users and apartments.
 
 ---
 

@@ -4,9 +4,9 @@
 
 The Apartment App API needs appropriate endpoints and validations to ensure the data is protected and able to be accessed by the React app when the time comes.
 
-#### Previous Lecture (1 hour 7 min)
+#### Previous Lecture (1 hour 2 min)
 
-[![YouTube](http://img.youtube.com/vi/7nHJ2G-FHl0/0.jpg)](https://www.youtube.com/watch?v=7nHJ2G-FHl0)
+[![YouTube](http://img.youtube.com/vi/iBFUlbWblpA/0.jpg)](https://www.youtube.com/watch?v=iBFUlbWblpA)
 
 #### Additional Resources
 
@@ -76,7 +76,7 @@ Since we are practicing TDD, the test should fail.
 
 ### Controller Methods
 
-We need to add the controller methods for index and create as well as the strong params method that helps to protect our data. Once the controller methods are properly defined, the request specs should pass.
+We need to add the controller methods for index and create, as well as the strong params method that helps to protect our data. Once the controller methods are properly defined, the request specs should pass.
 
 **app/controllers/apartments_controller.rb**
 
@@ -105,7 +105,7 @@ end
 
 ### API Validations
 
-Validations are checks that run every time data is created or updated. If the validations are not met the `.create` or `.update` method will fail and the data will be rejected. When the method fails a validation error is returned. Validation errors can be used as assertions in the test expect statement.
+Validations are checks that run every time data is created or updated. If the validations are not met the `.create` or `.update` method will fail and the data will be rejected. When the method fails, a validation error is returned. Validation errors can be used as assertions in the test expect statement.
 
 Just like the request specs, all validation specs will require the creation of an apartment. Since apartments cannot be created without a valid user, we will need a mock user in the test.
 

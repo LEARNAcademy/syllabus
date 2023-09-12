@@ -4,6 +4,10 @@
 
 An application will typically have a combination of pages that are available to all users and pages that are only available to users who have created an account. When creating pages that are not visible to all users we must consider how we allow access and restrict access in the application.
 
+#### Previous Lecture (44 min)
+
+[![YouTube](http://img.youtube.com/vi/QTwUkCEFXh8/0.jpg)](https://www.youtube.com/watch?v=QTwUkCEFXh8)
+
 #### Vocabulary
 
 - protected pages
