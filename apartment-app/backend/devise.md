@@ -254,7 +254,7 @@ Next we need to add the following code to the Devise configurations file. This w
 
 ```ruby
 config.jwt do |jwt|
-  jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+  jwt.secret = Rails.application.credentials.jwt_special_key
   jwt.dispatch_requests = [
     ['POST', %r{^/login$}],
   ]
