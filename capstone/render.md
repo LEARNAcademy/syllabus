@@ -121,9 +121,9 @@ The next step is to enable the public file server when the `RENDER` environment 
 **config/environments/production.rb**
 
 ```ruby
-  # Disable serving static files from the `/public` folder by default since
-  # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present?
+# Disable serving static files from the `/public` folder by default since
+# Apache or NGINX already handles this.
+config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present?
 ```
 
 ### Create a Build Script
@@ -169,7 +169,7 @@ $ bundle lock --add-platform x86_64-linux
 
 We will commit all changes made in this configuration process and push them to GitHub. Now the application is ready to be deployed on Render!
 
-## Deploy on Render
+### Deploy on Render
 
 First, we will go to [render.com](https://render.com/). Using the team's email and password, log into the account.
 

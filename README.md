@@ -251,7 +251,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 - [Capstone Project Details](./capstone/project-details.md)
 - [Capstone Requirements](./capstone/requirements.md)
-- [Rails has_many_through](./capstone/has_many_through.md)
+- [Rails has_many_through](./capstone/has-many-through.md)
 - [Modifying Devise](./capstone/modifying-devise.md)
 - [Code Coverage](./capstone/code-coverage.md)
 
