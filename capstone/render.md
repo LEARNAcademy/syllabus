@@ -121,14 +121,14 @@ The next step is to enable the public file server when the `RENDER` environment 
 **config/environments/production.rb**
 
 ```ruby
-  # Disable serving static files from the `/public` folder by default since
-  # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present?
+# Disable serving static files from the `/public` folder by default since
+# Apache or NGINX already handles this.
+config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present?
 ```
 
 ### Create a Build Script
 
-We will need to run a series of commands to build our application. This can be done using a build script. First, we need create a file named `render-build.sh` that will live in our `bin` directory at the root of the repository. We can copy and paste the following commands:
+We will need to run a series of commands to build our application. This can be done using a build script. First, we need to create a file named `render-build.sh` that will live in our `bin` directory at the root of the repository. We can copy and paste the following commands:
 
 ```bash
 set -o errexit
@@ -140,7 +140,7 @@ bundle exec rake db:migrate
 bundle exec rake db:seed
 ```
 
-**Note**: Leaving the seed command here will cause the database to reseed on every push and redeploy. After the initial deployment is complete remove the `bundle exec rake db:seed` from this set of commands.
+**Note**: Leaving the seed command here will cause the database to reseed on every push and redeploy. After the initial deployment is complete, remove the `bundle exec rake db:seed` from this set of commands.
 
 Next, we will make sure the script is executable by running the following terminal command:
 
@@ -169,7 +169,7 @@ $ bundle lock --add-platform x86_64-linux
 
 We will commit all changes made in this configuration process and push them to GitHub. Now the application is ready to be deployed on Render!
 
-## Deploy on Render
+### Deploy on Render
 
 First, we will go to [render.com](https://render.com/). Using the team's email and password, log into the account.
 
@@ -204,7 +204,7 @@ We can now finalize the backend service deployment. It will be live on the `.onr
 
 Now that we have our url from the backend deployment, we need to change the url in the fetch requests.
 
-Next, from the Render Dashboard, select the `New` and select `Static Site`. Using the existing frontend GitHub repository, we will give Render permission to access it.
+Next, from the Render Dashboard, select `New` then select `Static Site`. Using the existing frontend GitHub repository, we will give Render permission to access it.
 
 Use the following values in the creation process:
 

@@ -25,6 +25,22 @@ It is time to connect our applications! We will switch gears back to the fronten
 
 ---
 
+### API Request-Response
+
+APIs are websites that provide data to other websites. Just like user-facing websites, APIs are accessed via the request-response cycle. The request requires an action and a location. The action is one of the HTTP verbs: get, post, put, patch, delete. The location is the url. The url specifies the request and sets in motion the routing of the website. When this is done on a user-facing website typically the url is specifying a particular view. In APIs the url is specifying an endpoint. An **endpoint** is the touch point of the particular set of data being requested. Just like websites can have many different pages to view, APIs can have many endpoints that provide data sets.
+
+After a request has hit the appropriate API endpoint, we get a corresponding response. The response consists of a status code and the payload. In a user-facing website the payload is HTML that creates a view. The payload of an API is JSON. **JSON** (JavaScript Object Notation) is a widely accepted data format used to send information across the internet. The JSON structure was adopted from the JavaScript programming language in the late 1990s. The JavaScript language has made changes to its object structure over the years while JSON's ubiquitousness and popularity has kept the structure unchanged.
+
+### Asynchronous Requests
+
+While request-response cycles happen very quickly they are not instantaneous.  When calling on an API from our React application, it is important to consider that the speed in which the data is accessed can take an unknown amount of time.
+
+JavaScript is **single threaded** which means the programs run top to bottom and executes one thing at a time. If a given action takes an unexpectedly long time to execute the next thing in the queue is delayed until the previous action finishes. This can cause an application to appear to be broken.
+
+While JavaScript is single threaded, there are tools that can manage actions with unknown timelines without disrupting the user experience on the rest of the application. These tools allow JavaScript developers to make **asynchronous requests** which is an action that steps outside the queue of JavaScript executions allowing the program to continue while waiting for the action to complete.
+
+Asynchronous actions allow developers to use images or animations to communicate to the user that more content is coming. As users we recognize these spinning circles or progress bars as indications that the page is loading and we should be patient. This communication would not be possible in a single threaded environment since these actions require code executions.
+
 ### This Is So Fetch
 
 The tool that allows JavaScript developers to make asynchronous requests to an API is called **fetch**. Fetch is a method that takes an argument of the request url wrapped in a string.

@@ -44,11 +44,11 @@ Code coverage is a very popular testing tool and can often be confused with anot
 
 After creating a React application with `yarn create react-app`, we are automatically given access to code coverage metrics within the Jest testing ecosystem. Running the terminal command `yarn test --coverage --watchAll` outputs a static analysis of the files in the React application. The summary includes analysis of the following:
 
-- Statement coverage, which is each line of code executed during the testing.
-- Branch coverage, which is each branch within a conditional statement executed during testing.
-- Function coverage, which is each function or method executed during testing.
-- Line coverage, which is every line including statements and non-executable code like comments.
-- Uncovered lines, which displays the line number(s) for any statement that is not covered.
+- Statement coverage: Each line of code executed during the testing.
+- Branch coverage: Each branch within a conditional statement executed during testing.
+- Function coverage: Each function or method executed during testing.
+- Line coverage: Every line including statements and non-executable code like comments.
+- Uncovered lines: Displays the line number(s) for any statement that is not covered.
 
 The total code coverage will be displayed on the statement coverage for the `All files` entry.
 

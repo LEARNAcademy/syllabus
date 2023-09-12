@@ -252,7 +252,7 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 - [Capstone Project Details](./capstone/project-details.md)
 - [Capstone Requirements](./capstone/requirements.md)
-- [Rails has_many_through](./capstone/has_many_through.md)
+- [Rails has_many_through](./capstone/has-many-through.md)
 - [Modifying Devise](./capstone/modifying-devise.md)
 - [Code Coverage](./capstone/code-coverage.md)
 
@@ -260,8 +260,6 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 
 - [Consuming External APIs with Fetch](./capstone/fetch.md)
 - [Handling API Keys](./capstone/api-keys.md)
-- [Rails JBuilder](./capstone/jbuilder.md)
 - [Render](./capstone/render.md)
-- [ActiveStorage](./capstone/active-storage/README.md)
 
 ## Unit Twelve: Internship Preparation
