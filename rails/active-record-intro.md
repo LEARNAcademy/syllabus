@@ -97,7 +97,7 @@ As we know, Rails is very opinionated. "Convention over configuration." To ensur
 We will generate a model class for our Dog. Within the generate command we will include all the column names as well as the data types of each column. Like all terminal commands, the Rails generate commands require precision and attention to detail. Note the spacing, or lack of spacing, between the column name and data type in the command.
 
 ```bash
-rails generate model Dog name:string breed:string age:integer
+$ rails generate model Dog name:string breed:string age:integer
 ```
 
 Let's break this down and talk about each piece.
@@ -217,14 +217,15 @@ Now that our dog table exists we can start to add entries. Adding dog entries wi
 To access the Rails console in the terminal, we must first ensure we are in the directory of the Rails application. The Rails console can be accessed by typing `rails console`, or `rails c` for short.
 
 ```bash
-rails console
-rails c
+$ rails console
+--OR--
+$ rails c
 ```
 
 Returning to the regular terminal can be done by typing exit in the Rails console.
 
 ```bash
-exit
+> exit
 ```
 
 Just like IRB, while we are in the Rails console, we do not have access to the file structure of the Rails application. We CANNOT run any regular terminal commands or Rails generate commands inside the Rails console.
@@ -538,29 +539,26 @@ Naming conventions are a noteworthy aspect of the Rails principle "convention ov
 
 ### 📇 Challenge: Rolodex
 
-Note: A rolodex is a collection cards that contain people's names and contact information. They were a common household and office item in the pre-digital age.
+Note: A rolodex is a collection of paper cards that contain people's names and contact information. They were a common household and office item in the pre-digital age.
 
-As a developer, I have been tasked with creating a database model that will be used in a rolodex application. I want to ensure that the database behaves as expected and the necessary actions can be performed on the database instances.
+As a developer, I have been tasked with creating a database model to store friends and family contact information. I want to ensure the database behaves as expected and the necessary information can be retrieved, added, updated, and deleted.
 
-**Set Up**
+All tasks should be performed in order as listed below.
 
-- Create a new Rails application.
-- Create the database.
-- Generate a model called Person with first_name, last_name, and phone attributes. **All data types should be strings.**
-- Run a migration to instantiate the database.
-- Open the Rails console.
+### ✔️ Acceptance Criteria
 
-**Actions**
-
-Perform the follow actions in order.
-
-- Add five family members into the Person table using the Rails console.
-- Retrieve all the items in the database.
-- Remove the last item in the database.
-- Add yourself to the Person table.
-- Retrieve all the entries that have the same last name as you.
-- Update the phone number of the last entry in the database.
-- Retrieve the first name of the third Person in the database.
+- The rolodex application data should be managed by a PostgreSQL database in a Rails application.
+- The model should be called Person with first_name, last_name, and phone attributes. **All data types should be strings.**
+- Add five friends and family members to the people table using the Rails console.
+- Retrieve all the people in the database.
+- Retrieve the third person in the database.
+- Retrieve only the first name of the first person in the database.
+- Remove the last person from the database.
+- Add yourself to the people table.
+- Retrieve all the people that have the same last name as you.
+- Retrieve only the first person from the list of people that have the same last name as you.
+- Update the phone number of the second person in the database.
+- Retrieve the last name of the third person in the database.
 
 ### 🏔 Stretch Goals
 
