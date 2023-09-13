@@ -1,48 +1,85 @@
 # Active Record Associations
 
 ### Overview
-- In Rails, an association (or relationship) is a connection between two Active Record models.
-- Creating associations is a useful way to keep our code DRY and our databases clean and organized.
-- A foreign key is a column in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
+
+Active Record models describe the structure of the database. A single model can have as many columns as necessary. However, there are natural limitations on how data can be organized within a single model. Creating multiple database models allows for the option of relationships between datasets. These relationships are called associations. Associations keep our databases well organized by creating a cross-reference between tables using the primary key of one entry to connect one or more entries on another table.
 
 #### Previous Lecture (55 min)
+
 [![YouTube](http://img.youtube.com/vi/wjmzwO71Mp0/0.jpg)](https://youtu.be/wjmzwO71Mp0)
 
-### Learning Objectives
-- Exploring associations between models
-- Understanding the purpose of a foreign key
+#### Learning Objectives
 
-### Vocabulary
-- has_many
-- belongs_to
+- can define associations
+- can describe the purpose of associations
+- can describe the purpose of a has_many belongs_to relationship
+- can define foreign key
+- can apply the correct naming conventions for generating Rails belongs_to models
+- can apply the correct syntax to add content to associated databases in the Rails console
+
+#### Vocabulary
+
+- associations
 - foreign key
 
-### Useful Commands
-- rails db:migrate
+#### Additional Resources
 
-### Additional Resources
-- <a href="https://guides.rubyonrails.org/association_basics.html" target="blank">Active Record Association Docs</a>
+- [Active Record Association Docs](https://guides.rubyonrails.org/association_basics.html)
 
-### Set Up
+#### Process
 
-#### Creating a new Rails app:
-```
-$ rails new my_app -d postgresql -T
-$ cd my_app
-$ rails db:create
-$ rails server
-```
+- `cd` to your Desktop
+- $ `rails new associations -d postgresql -T`
+- `cd` into the project
+- $ `rails db:create`
+- Open the project in a text editor
+- Open a new terminal tab (command + t)
+- `cd` into the `database-challenges` repository
+- Create a new branch: `associations-initials1-initials2` (ex. associations-em-sp)
+- Create a new markdown file: `associations-student1-student2.md` (ex. associations-elyse-sarah.md)
+- Use the markdown file to document the code commands and process
+- Code!
+- Begin the rails server: `$ rails server`
+- In a browser navigate to: `http://localhost:3000`
 
-In a browser navigate to:
-`http://localhost:3000`
+#### Useful Commands
+
+- `rails db:migrate`
 
 ### Troubleshooting Tips
+
 - Did you create your database?
 - Did you migrate?
+- Did you define your associations in the model class files?
 - Errors? Always look at the first error in the list.
+- Did you forget your foreign key? Migrations are your friend!
+
+---
+
+### Database Relationships
+
+Data is the foundation of all full-stack applications. Thinking through the organization of the data is an important first step in the development process. When thinking about the optimal structure of data, we must first consider what information the user will need and how the user will interact with that information. Then we have to translate that into the structure of a relational database consisting of columns and rows. Applications often require real-world data that doesn't fit neatly into a single row of a table. To address this problem it is common to create multiple models and assign relationship between them. Relationships between two or more database models are called **associations.**
+
+### A Case For Multiple Models
+
+Think about a situation where we are tracking contact information for people. Perhaps for some kind of HR software or a personal communication management tool. We would want a model for Person that has a column for a name, a column for a phone number, and a column for an email address. This seems straight forward so far and could be handled in a single database Person model.
+
+However, what if many of our people have two email addresses? We could add a second column to store an additional email address. But what if one of our people had three email addresses? Or four? Does it make sense to just keep adding columns? If we have four columns for emails and someone only has one email address, we are left with three empty attributes in that particular database entry. Now our single table doesn't seem to be very effective at solving this problem.
+
+### Has Many Belongs To
+
+In the situation above we can solve the problem by taking the email off the Person model and giving email its own model. Each instance of the Person model would have as many corresponding emails as they need. When creating email addresses, we would want to ensure that every email was attached to a person. Email addresses shouldn't exist independently. We would describe this relationship as a has_many belongs_to association. A person has_many emails. Every email belongs_to a person.
 
 ### Types of Relationships
-Rails supports six types of associations:
+
+There are three general categories of database relationships:
+
+- one-to-many
+- one-to-one
+- many-to-many
+
+Within the context of a Rails application, Active Record defines specific types of associations that can be assigned to a given model:
+
 - belongs_to
 - has_one
 - has_many
@@ -50,163 +87,296 @@ Rails supports six types of associations:
 - has_one :through
 - has_and_belongs_to_many
 
-The combination of relationships are described as:
-- one-to-many
-- one-to-one
-- many-to-many
+For this section we will primarily focus on the has_many belongs_to Active Record associations which falls under the one-to-many category.
 
+### Person and Email Relationship
 
-### Creating Person and Email Relationship
-In this example, we want to create a Person model that stores contact information for all our people. However, it is likely that most people have multiple email addresses. Rather than creating lots of columns for all the possible email addresses our people may have, we can create a new model called Email that has an association with our Person model.
+In the example above, we defined an association between the models for Person and Email. A person has_many emails and email belongs_to a person.
 
-A Person `has_many` Email addresses. An Email address `belongs_to` a Person.
+Let's explore how to build this database association in our Rail application.
 
+### Person Model
 
-#### Person model
-We'll start by creating the Person model. Our person will have a name and phone number.
+We'll start by creating the Person model. Our person will have a name and phone number. Naturally the name attribute will be a data type of string. The phone number will also be a string. The reasoning behind this decision comes down to how we interact with the data. While phone numbers are, of course, made up of integers, they aren't used in mathematical operations. Often phone numbers contain non-integer characters such as parentheses and dashes. And when you think about a phone number, it isn't one number. We don't say our phone numbers as 16,194,400,830. Phone numbers are really a collection of individual characters, which happens to sound a lot more like a string.
 
-```
+```bash
 $ rails generate model Person name:string phone:string
 $ rails db:migrate
 ```
 
-**db/migrations/**
-```ruby
-class CreatePeople < ActiveRecord::Migration[6.0]
-  def change
-    create_table :people do |t|
-      t.string :name
-      t.string :phone
+After running a migration we can look at our schema and see our people table.
 
-      t.timestamps
-    end
+**db/schema.rb**
+
+```ruby
+ActiveRecord::Schema[7.0].define(version: 2023_09_13_001632) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
 ```
 
-Add a couple of entries to the database:
+Now, we can add some people to the database in the Rails console.
 
 ```
 $ rails c
-> Person.create name: "Joe", phone: "555-3456"
-> Person.create name: "Jane", phone: "555-7890"
+> Person.create(name: "John", phone: "(619)555-3456")
+> Person.create(name: "Jane", phone: "(619)555-7890")
 > Person.all
-=> #<ActiveRecord::Relation [#<Person id: 1, name: "Joe", phone: "555-3456", created_at: "2020-03-04 18:52:19", updated_at: "2020-03-04 18:52:19">, #<Person id: 2, name: "Jane", phone: "555-7890", created_at: "2020-03-04 18:52:27", updated_at: "2020-03-04 18:52:27">]>
 ```
-Remember that rails automatically adds a primary key id to each entry in our database.
 
-#### Email model
-Now we will create our Email model:
+The output in the Rails console:
 
 ```
+Person Load (0.9ms)  SELECT "people".* FROM "people"
+ =>
+[#<Person:0x0000000111f639b8
+  id: 1,
+  name: "John",
+  phone: "(619)555-3456",
+  created_at: Wed, 13 Sep 2023 00:21:34.836131000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 00:21:34.836131000 UTC +00:00>,
+ #<Person:0x0000000111f63878
+  id: 2,
+  name: "Jane",
+  phone: "(619)555-7890",
+  created_at: Wed, 13 Sep 2023 00:21:39.907732000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 00:21:39.907732000 UTC +00:00>]
+```
+
+### Foreign Key
+
+Remember that whenever we add a new entry to the database, Rails will automatically add a primary key. The primary key column is called id. Every id is assigned an integer that increments with each entry. The primary key is a unique identifier. Since we know that every database entry has a unique id, we can use the primary key to connect an email to its person.
+
+In order to connect a primary key to another database entry we need a column in the model. The column that holds the primary key from another model in order to establish an association is called a **foreign key**. Since we have one person that can have many emails, it makes sense to have the primary key of a person serve as the foreign key on all of the person's emails. This is true of all has*many belongs_to associations. \_The foreign key will ALWAYS live on the belongs_to side.*
+
+### Email Model
+
+Knowing the foreign key must be on the Email model, we can now generate the model for Email. The Email model will have an attribute for address and another one for the foreign key. The name of the foreign key column will ALWAYS be the name of the has_many model appended by underscore id `_id`. Since our model is named Person the foreign key column will be `person_id`. The data type will be an integer as the primary key of all Rails database entries is an integer.
+
+```bash
 $ rails generate model Email address:string person_id:integer
 $ rails db:migrate
 ```
 
-This will provide another file in *app/model*, another migration, and update the schema of our application.
+After we run the migration we can see the updated schema.
 
-**db/migrations/**
-```ruby
-class CreateEmails < ActiveRecord::Migration[6.0]
-  def change
-    create_table :emails do |t|
-      t.string :address
-      t.integer :person_id
-
-      t.timestamps
-    end
-  end
-end
-```
 **db/schema.rb**
-```ruby
-create_table "emails", force: :cascade do |t|
-  t.string "address"
-  t.integer "person_id"
-  t.datetime "created_at", precision: 6, null: false
-  t.datetime "updated_at", precision: 6, null: false
-end
 
-create_table "people", force: :cascade do |t|
-  t.string "name"
-  t.string "phone"
-  t.datetime "created_at", precision: 6, null: false
-  t.datetime "updated_at", precision: 6, null: false
+```ruby
+ActiveRecord::Schema[7.0].define(version: 2023_09_13_025129) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "emails", force: :cascade do |t|
+    t.string "address"
+    t.integer "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
 ```
 
-### Creating the Association
-So far, we have two models in our application. But how do we create the association between them?
+### Model Association Definitions
 
-**Updating the Class**
-
-We need to describe the relationship to each of the model classes.
+We now have two models in our application. The Email model has space for a foreign key but there is nothing in the models that describe their relationship. We need to define the associations in the Person model class and the Email model class.
 
 **app/models/person.rb**
+
 ```ruby
 class Person < ApplicationRecord
   has_many :emails
 end
 ```
-Note: `emails` is plural
+
+Notice that `emails` is plural. This is a Rails convention that is based off the type of association we are creating. A person can have many emails.
 
 **app/models/email.rb**
+
 ```ruby
 class Email < ApplicationRecord
   belongs_to :person
 end
 ```
-Note: `person` is singular
 
-**Using the Foreign Key**
+Notice that `person` is singular. This is a Rails convention to communicate that every email belongs to one person.
 
-To create a new entry of an email, we have to assign it to a person entry. An email entry cannot exist unless it is attached to a person. To give our first contact an email address, we need to create a variable to store the entry of one person.
+### Creating Emails
+
+Now it is time to create emails in the Rails console. There are two important things to remember:
+
+1. Rails creates all primary keys and developers should never manipulate primary keys, and
+2. emails cannot exist without being attached to a person.
+
+Since all emails must be attached to a person, we will start by creating a variable to hold one instance of Person. We have lots of different Active Record methods that allow us to select one Person. For this example, we will use the `.first` method.
 
 ```
 $ rails c
-> joe = Person.first
+> john = Person.first
 ```
 
-Now, we can give Joe an email address.
-```
-> joe.emails.create address: "joe@email.com"
-=> #<Email id: 1, address: "joe@email.com", person_id: 1, created_at: "2020-03-04 19:01:15", updated_at: "2020-03-04 19:01:15">
-```
+We can name the variable whatever we want as long as it communicates intent and follows the Ruby variable casing convention. Since we are working in the Rails console, the variable will only exist while we are in this session. When we exit the Rails console the variable will not persist.
 
-Notice that the `person_id` is the same as Joe's primary id. Rails did this for us because we assigned this email to the entry for Joe.
+Since we defined the association between Person and Email in the model class files, email is now an attribute on each person.
 
-Now Joe can have lots of emails.
+We can see this by calling `emails` on our `john` variable.
 
 ```
-> joe.emails.create address: "joejoe@email.com"
-> joe.emails.create address: "joeswork@email.com"
-> joe.emails
-=> #<ActiveRecord::Associations::CollectionProxy [#<Email id: 1, address: "joe@email.com", person_id: 1, created_at: "2020-03-04 19:01:15", updated_at: "2020-03-04 19:01:15">, #<Email id: 2, address: "joejoe@email.com", person_id: 1, created_at: "2020-03-04 19:03:48", updated_at: "2020-03-04 19:03:48">, #<Email id: 3, address: "joeswork@email.com", person_id: 1, created_at: "2020-03-04 19:03:56", updated_at: "2020-03-04 19:03:56">]>
+> john.emails
 ```
 
-### Foreign Keys
-To create the association between the Person and the Email table we had to assign a foreign key to Email. **The foreign key always goes on the `belongs_to` side.** By convention the foreign key should always be the `modelname_id` and the data type should be integer. The `has_many` model is singular, the `belongs_to` model is plural. A Person (singular) has_many emails (plural).
+The output in the Rails console:
+
+```
+Email Load (0.7ms)  SELECT "emails".* FROM "emails" WHERE "emails"."person_id" = $1  [["person_id", 1]]
+=> []
+```
+
+Currently there are no emails connected to John, but the empty array proves that the email connection exist.
+
+Now we can create a new email. We are creating a new email directly on the John person instance. This allows Rails to make the connection between primary key and foreign key. Having Rails in charge of this connection removes all possibility of developer error when it comes to unique identifiers.
+
+```
+> john.emails.create(address: "john@exmple.com")
+```
+
+The output in the Rails console:
+
+```
+TRANSACTION (0.2ms)  BEGIN
+Email Create (2.0ms)  INSERT INTO "emails" ("address", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["address", "john@exmple.com"], ["person_id", 1], ["created_at", "2023-09-13 03:10:26.359049"], ["updated_at", "2023-09-13 03:10:26.359049"]]
+TRANSACTION (0.9ms)  COMMIT
+ =>
+#<Email:0x000000014a0570a8
+ id: 1,
+ address: "john@exmple.com",
+ person_id: 1,
+ created_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00,
+ updated_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00>
+```
+
+Notice this command adds John's email to the emails database table. Each instance in this emails table has its own primary key. The column `person_id` has an integer value that is the same as John's primary id. We can examine this further by adding more emails for John.
+
+```
+> john.emails.create(address: "john-personal@exmple.com")
+> john.emails.create(address: "john-work@exmple.com")
+```
+
+Each time we add an email for John, the email entry gets a primary id. All emails will connect to John through the `person_id` that will hold John's primary key.
+
+```
+> john.emails
+```
+
+```
+ =>
+[#<Email:0x000000014a0570a8
+  id: 1,
+  address: "john@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00>,
+ #<Email:0x0000000139f4ba98
+  id: 2,
+  address: "john-personal@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:20:59.182446000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:20:59.182446000 UTC +00:00>,
+ #<Email:0x0000000129a5d028
+  id: 3,
+  address: "john-work@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:21:21.831060000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:21:21.831060000 UTC +00:00>]
+```
+
+### Adding More Emails
+
+We can add additional emails for the other person in our database.
+
+```
+> jane = Person.second
+> jane.emails.create(address: "jane@example.com")
+```
+
+Now as we look at all the emails in the database we can see that each email has a primary key. The foreign key column `person_id` holds the corresponding primary key of the person.
+
+```
+> Email.all
+```
+
+The output in the Rails console:
+
+```
+Email Load (1.0ms)  SELECT "emails".* FROM "emails"
+ =>
+[#<Email:0x0000000149cdff10
+  id: 1,
+  address: "john@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:10:26.359049000 UTC +00:00>,
+ #<Email:0x0000000149cdfda8
+  id: 2,
+  address: "john-personal@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:20:59.182446000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:20:59.182446000 UTC +00:00>,
+ #<Email:0x0000000149cdfbf0
+  id: 3,
+  address: "john-work@exmple.com",
+  person_id: 1,
+  created_at: Wed, 13 Sep 2023 03:21:21.831060000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:21:21.831060000 UTC +00:00>,
+ #<Email:0x0000000149cdfa38
+  id: 4,
+  address: "jane@example.com",
+  person_id: 2,
+  created_at: Wed, 13 Sep 2023 03:30:46.711836000 UTC +00:00,
+  updated_at: Wed, 13 Sep 2023 03:30:46.711836000 UTC +00:00>]
+```
 
 ### Troubleshooting Tip
-It is an easy mistake to forget a foreign key. It is also a common beginner mistake to mislabel the column or to make a mistake when assigning the data type. If this happens, [ migrations ](./migrations.md) are your friend! Create a migration to update your database.
 
-## Banking Challenge
-
-### Setup
-- Create a new rails application and database.
-- Create a model for owner.
-- An owner has a name and address, and can have multiple credit cards.
-- Create a model for credit card.
-- A credit card has a number, an expiration date, and an owner.
-
-### Challenges
-- Create three owners and save them in the database.
-- Create a credit card in the database for each owner.
-- Add two more credit cards to one of the owners.
-
-### Stretch Challenge
-- Add a credit limit to each card.
-- Find the total credit extended to the owner with multiple credit cards.
+It is an easy mistake to forget a foreign key when generating a belongs_to model. It is also a common mistake to mislabel the column or to make a mistake when assigning the data type. If this happens, migrations are our friend! Create a migration to update the database.
 
 ---
+
+### 💳 Challenge: Banking Application
+
+As a developer, I have been tasked with creating a database to store information for a bank that issues credit cards. The account owner must fill out a bank application that includes their name and address. Then account owners can be issued one or more credit cards. Credit cards must belong to an account owner.
+
+### ✔️ Acceptance Criteria
+
+- The banking application data should be managed by a PostgreSQL database in a Rails application.
+- An account owner should have a name and an address.
+- There should be at least three owners in the database.
+- A credit card has a number and an expiration date.
+  - Remember! Credit cards CANNOT exist without an account owner.
+  - Think about the purpose of each data type and what characters are necessary in each column. (Example: 02/2023 vs 02-02-2023)
+- Each account owner should have at least one credit card.
+- At least one account owner should have three credit cards.
+
+### 🏔 Stretch Goals
+
+- Add a credit limit to each card.
+- Find the total credit extended to an owner who has multiple credit cards.
+
+---
+
 [Back to Syllabus](../README.md#unit-five-intro-to-postgres-and-ruby-on-rails-models)
