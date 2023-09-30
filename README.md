@@ -2,7 +2,7 @@
 
 Welcome to the LEARN Syllabus!
 
-LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is an internship in a development role. The instructors and the career services team support the students during internship.
+LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is a practicum in a development role. 
 
 This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. If you are interested in contributing to our syllabus to fix any errors, expand definitions, or further explain concepts, etc. please see our [Style Guidelines](./github/style-guidelines.md) for process details.
 
@@ -21,7 +21,6 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Nine: React and Rails with Authentication](#unit-nine-react-and-rails-with-authentication)
 - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
 - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
-- [Unit Twelve: Internship Preparation](#unit-twelve-internship-preparation)
 
 ## GitHub
 
@@ -63,8 +62,8 @@ Welcome to LEARN Academy! Here is the information covered during orientation.
 - [How We Work](./assets-first-day/how-we-work.pdf)
 - [Code of Conduct](./assets-first-day/code-of-conduct.pdf)
 - [Introduction to Terminal](./tools-and-resources/terminal.md)
-- [Requirements and Expectations](./assets-first-day/requirements-and-expectations.pdf)
-- [Career Services Overview](./assets-first-day/career-services-overview.pdf)
+- [Requirements and Expectations](./assets-first-day/16-week-requirements-and-expectations.pdf)
+- [Career Services Overview](./assets-first-day/16-week-career-services-overview.pdf)
 - [Tech Stack](./assets-first-day/tech-stack.pdf)
 - [Slack Overview](./assets-first-day/slack-overview.pdf)
 - [Pair Programming](./assets-first-day/pair-programming.pdf)
@@ -262,4 +261,3 @@ The capstone project is the peak experience at LEARN Academy. Students work in a
 - [Handling API Keys](./capstone/api-keys.md)
 - [Render](./capstone/render.md)
 
-## Unit Twelve: Internship Preparation
