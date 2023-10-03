@@ -27,20 +27,34 @@ The power of creating a full-stack application is that we can store and retrieve
 
 - [ Active Record Validations ](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
 
-#### Process
+### Processes
 
-- `cd` into the `rails-challenges` repository
-- Create a new branch: `validations-initials1-initials2` (ex. validations-em-sp)
-- Create a new Rails application: $ `rails new validations-student1-student2 -d postgresql -T` (ex. rails new validations-elyse-sarah -d postgresql -T)
-- `cd` into the project
-- Create a database: $ `rails db:create`
-- Add the dependencies for RSpec:
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
-- Generate the model with appropriate columns and data types
-- $ `rails db:migrate`
+#### Introductory Phase Documentation:  
+During the introductory phase of Ruby on Rails, we will create documentation to keep track of the actions taken to build the Rails application and interactions with the database. This documentation will be saved in a markdown file, which will be uploaded to GitHub. This allows other team members to contribute and access the team's code.
+
+#### Process for GitHub Repository:
+- cd into the database-challenges repository
+- Create a new branch: $ `git checkout -b validations-initials1-initials2` (ex. validations-sp-ts)
+- Create a new markdown file: $ `touch validations-student1-student2.md` (ex. validations-sarah-trish.md)
+- Use the markdown file to document the code commands and process
+- Code!  
+
+However, please note that the Rails application itself will not be uploaded to GitHub. Consequently, other team members will not have access to the application or the database through the repository. The application and database will only be available on your local machine. For the duration of the challenges, all team members should create their own Rails applications on their respective local machines. After the challenges are completed, it is important to drop and delete the Rails application from your local machine.  
+
+#### Process for Rails Application on Local Machine:
+- cd to your Desktop
+- $ `rails new validations -d postgresql -T`
+- cd into the project
+- $ `rails db:create`
 - Open the project in a text editor
-- Code!
+- Open a new terminal tab (command + t)
+- Begin the rails server: $ `rails server`
+- In a browser navigate to: http://localhost:3000
+
+#### Dropping/Deleting a Rails Application
+- Drop the database: $ `rails db:drop`
+- cd to your Desktop
+- Permanently delete the rails app: $ `rm -rf <app-name>`
 
 #### Troubleshooting Tips
 
