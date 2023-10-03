@@ -50,7 +50,7 @@ During the introductory phase of Ruby on Rails, we will create documentation to 
 
 However, please note that the Rails application itself will not be uploaded to GitHub. Consequently, other team members will not have access to the application or the database through the repository. The application and database will only be available on your local machine. For the duration of the challenges, all team members should create their own Rails applications on their respective local machines. After the challenges are completed, it is important to drop and delete the Rails application from your local machine.  
 
-### Process for Rails Application on Local Machine:
+#### Process for Rails Application on Local Machine:
 - cd to your Desktop
 - $ `rails new active-record -d postgresql -T`
 - cd into the project
@@ -60,7 +60,7 @@ However, please note that the Rails application itself will not be uploaded to G
 - Begin the rails server: $ `rails server`
 - In a browser navigate to: http://localhost:3000
 
-### Dropping/Deleting a Rails Application
+#### Dropping/Deleting a Rails Application
 - Drop the database: $ `rails db:drop`
 - cd to your Desktop
 - Permanently delete the rails app: $ `rm -rf <app-name>`
