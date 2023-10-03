@@ -26,21 +26,34 @@ Active Record models describe the structure of the database. A single model can 
 
 - [Active Record Association Docs](https://guides.rubyonrails.org/association_basics.html)
 
-#### Process
+### Processes
 
-- `cd` to your Desktop
+#### Introductory Phase Documentation:  
+During the introductory phase of Ruby on Rails, we will create documentation to keep track of the actions taken to build the Rails application and interactions with the database. This documentation will be saved in a markdown file, which will be uploaded to GitHub. This allows other team members to contribute and access the team's code.
+
+#### Process for GitHub Repository:
+- cd into the database-challenges repository
+- Create a new branch: $ `git checkout -b associations-initials1-initials2` (ex. associations-sp-cb)
+- Create a new markdown file: $ `touch associations-student1-student2.md` (ex. associations-sarah-charlean.md)
+- Use the markdown file to document the code commands and process
+- Code!  
+
+However, please note that the Rails application itself will not be uploaded to GitHub. Consequently, other team members will not have access to the application or the database through the repository. The application and database will only be available on your local machine. For the duration of the challenges, all team members should create their own Rails applications on their respective local machines. After the challenges are completed, it is important to drop and delete the Rails application from your local machine.  
+
+#### Process for Rails Application on Local Machine:
+- cd to your Desktop
 - $ `rails new associations -d postgresql -T`
-- `cd` into the project
+- cd into the project
 - $ `rails db:create`
 - Open the project in a text editor
 - Open a new terminal tab (command + t)
-- `cd` into the `database-challenges` repository
-- Create a new branch: `associations-initials1-initials2` (ex. associations-em-sp)
-- Create a new markdown file: `associations-student1-student2.md` (ex. associations-elyse-sarah.md)
-- Use the markdown file to document the code commands and process
-- Code!
-- Begin the rails server: `$ rails server`
-- In a browser navigate to: `http://localhost:3000`
+- Begin the rails server: $ `rails server`
+- In a browser navigate to: http://localhost:3000
+
+#### Dropping/Deleting a Rails Application
+- Drop the database: $ `rails db:drop`
+- cd to your Desktop
+- Permanently delete the rails app: $ `rm -rf <app-name>`
 
 #### Useful Commands
 
