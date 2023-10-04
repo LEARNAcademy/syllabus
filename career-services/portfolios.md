@@ -2,7 +2,7 @@
 
 #### Overview
 
-A portfolio is a website where as a developer, you can showcase your work and represent your individual brand. Portfolios are especially important for career transitioners as it functions as a stand in for professional experience. It is an opportunity to showoff your skills, talents, and interests in development. Portfolios provide more personalization than your resume and gives you an opportunity to share your story with future employees.
+A portfolio is a website where, as a developer, you can showcase your work and represent your individual brand. Portfolios are especially important for career transitioners as they function as a stand-in for professional experience. It is an opportunity to show off your skills, talents, and interests in development. Portfolios provide more personalization than your resume and give you an opportunity to share your story with future employees.
 
 #### Portfolio UX/UI with Lisa Panke (35 min)
 
@@ -20,15 +20,7 @@ A portfolio is a website where as a developer, you can showcase your work and re
 - [Medium: Top 6 Web Developer Portfolio Templates to Step Out of the Comfort Zone](https://medium.com/javarevisited/top-6-web-developer-portfolio-templates-to-step-out-of-the-comfort-zone-b2d26de9cad4)
 - Create designs with [Canva](https://www.canva.com/)
 
-### Portfolio Tech Options
-
-There are many tech options to consider when creating your portfolio. The LEARN tech stack is a great option, but you are not limited to the technology we covered in class. A great portfolio can be created using just regular HTML and CSS, or explore one of the options below for low-code, no-code, or template portfolios.
-
-- Quick one-page sites with [Carrd](https://carrd.co/)
-- No-code sites with [Webflow](https://webflow.com/)
-- [Gatsby](https://www.gatsbyjs.com/) React framework
-- [HTML5 Up](https://html5up.net/) template sites
-- [Bootstrap](https://startbootstrap.com/themes) templates and themes
+---
 
 ### Inspiration: Portfolios from LEARN Alumni
 
@@ -38,47 +30,21 @@ There are many tech options to consider when creating your portfolio. The LEARN 
 - [Ari Brashear](http://www.aribrashear.com/)
 - [Stephen OMarrah](https://somarrah.github.io/Portfolio/)
 
----
+### Portfolio Options
 
-### Portfolios
+There are many tech options to consider when creating your portfolio. Portfolios are a great opportunity to explore new tech stacks. Listed below are some options for low-code, no-code, or template portfolios.
 
-During professional development week, you will present what you have completed so far to your classmates. Your portfolio doesn't need to be completed but it does need to be in a presentable form. Below are a few resources to get started.
+- Quick one-page sites with [Carrd](https://carrd.co/)
+- No-code sites with [Webflow](https://webflow.com/)
+- [Gatsby](https://www.gatsbyjs.com/) React framework
+- [HTML5 Up](https://html5up.net/) template sites
+- [Bootstrap](https://startbootstrap.com/themes) templates and themes
 
-Portfolios can be a project that grows with you over time. It can become a perpetual side project that allows you to explore new technologies as you are ready for them.
+It can feel overwhelming for new developers to learn another technology in addition to your coursework at LEARN. There is nothing wrong with a simple approach. Don't let the complications of coding get in the way of you telling your story and displaying your work.
 
-Start off simple! HTML and CSS are all you need to create a great portfolio website. Don't let the complications of coding get in the way of you telling your story and displaying your work.
+To help streamline the process, we recommend choosing either HTML and CSS or React.
 
-### Portfolio Timeline and Checklist
-
-**Week 4**
-
-- Create a wireframe for your portfolio.
-  - [Figma](https://www.figma.com) is a great platform to create wireframes.
-  - Check out the LEARN syllabus section on wireframes.
-- Decide on which technologies to use.
-- Code the basic layout with filler text and projects (UI without functionality).
-  - [Lorem Ipsum](https://loremipsum.io/) can be used to fill in content that you will create during professional development week.
-
-**Week 5**
-
-- Create project cards with placeholder information.
-- Create languages/frameworks/tech section with placeholder information.
-- Consider a color/font scheme and branding.
-
-**Week 6**
-
-- Create page navigation functionality.
-- Fill in project placeholder text with all projects so far.
-- Activate links to projects. Links can direct users to a deployed site or your GitHub repo.
-- Add any screenshots or gifs to project cards to show snippets of project functionality. This is great for projects like the text-based game.
-- Deploy!
-
-**Week 7**
-
-- Activate links to GitHub, LinkedIn, and resume PDF.
-- Fill in your elevator pitch copy.
-
-### Deploying Via GitHub Pages
+### Deploying HTML and CSS GitHub Pages
 
 This option is great for HTML and CSS portfolios. GitHub offers every member one special repository that can be hosted for free by GitHub. This is a great place to host your portfolio site. If you ever want to use GitHub's special repository to host something else, you can move your portfolio to a different repository. Read all about GitHub Pages [here](https://pages.github.com).
 
@@ -90,7 +56,7 @@ Follow the instructions **exactly!**
 
 ### Deploy Via Render
 
-This option is great for static React applications. [Render.com](https://render.com/docs/deploy-create-react-app) will connect to your GitHub repository and build your application with just a couple commands. Follow the instructions in the documentation.
+This option is great for static React applications. [Render.com](https://render.com/docs/deploy-create-react-app) will connect to your GitHub repository and build your application with just a couple of commands. Follow the instructions in the documentation.
 
 ---
 
