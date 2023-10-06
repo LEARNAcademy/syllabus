@@ -12,7 +12,7 @@ React applications are designed to handle user interactions quickly and efficien
 
 - can define DOM events
 - can define event listeners
-- can distinguish between an event handlers and a state method
+- can distinguish between event handlers and a state method
 - can recall the JSX attributes needed to collect user inputs
 
 #### Vocabulary
@@ -22,7 +22,7 @@ React applications are designed to handle user interactions quickly and efficien
 - onChange
 - type attributes
 - value attribute
-- even handlers
+- event handlers
 
 #### Additional Resources
 
