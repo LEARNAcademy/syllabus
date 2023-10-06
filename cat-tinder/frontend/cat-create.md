@@ -65,7 +65,7 @@ const [newCat, setNewCat] = useState({
 })
 ```
 
-To set the inputs to state we need a `handleChange` method to be called on every input.
+To set the inputs to state we need a `handleChange` function to be called on every input.
 
 **src/pages/CatNew.js**
 
@@ -75,7 +75,7 @@ const handleChange = (e) => {
 }
 ```
 
-Now we can update each input with an `onChange` attribute that calls the `handleChange` method and a `value` attribute that reflects the current status of state.
+Now we can update each input with an `onChange` attribute that calls the `handleChange` function and a `value` attribute that reflects the current status of state.
 
 **src/pages/CatNew.js**
 
@@ -88,9 +88,9 @@ Now we can update each input with an `onChange` attribute that calls the `handle
 
 ### Passing Cats to App.js
 
-Now that we have all the content from the form updated into state, we need to get the information back to `App.js`. This means we need to pass information "up the river" from child component to parent. To accomplish this we need to create a method in `App.js` that gets called when we submit the form.
+Now that we have all the content from the form updated into state, we need to get the information back to `App.js`. This means we need to pass information from our nested component to the main component. To accomplish this we need to create a function in `App.js` that gets called when we submit the form.
 
-During our scaffolding phase, the goal here is to see the new cat logged in `App.js`. Eventually this method will be refactored to include an interaction with the database.
+During our scaffolding phase, the goal here is to see the new cat logged in `App.js`. Eventually this function will be refactored to include an interaction with the database.
 
 **src/App.js**
 
@@ -100,7 +100,7 @@ const createCat = (cat) => {
 }
 ```
 
-This method needs to be passed to our CatNew component. This will require a refactor of the basic `"/catnew"` route into a dynamic route that accepts props.
+This function needs to be passed to our CatNew component. This will require a refactor of the basic `"/catnew"` route into a dynamic route that accepts props.
 
 **src/App.js**
 
@@ -108,7 +108,7 @@ This method needs to be passed to our CatNew component. This will require a refa
 <Route path="/catnew" element={<CatNew createCat={createCat} />} />
 ```
 
-Once the method is passed down to the CatNew component, we can wrap it in a method that will pass our form object.
+Once the function is passed down to the CatNew component, we can wrap it in a `handleSubmit` function that will pass our form object.
 
 **src/pages/CatNew.js**
 
@@ -128,7 +128,7 @@ const CatNew = ({ createCat }) => {
   }
 ```
 
-We need to call the method `onSubmit`. To accomplish this, we can add a button from Reactstrap. (Don't forget to add the Reactstrap import!)
+We need to call the function `onSubmit`. To accomplish this, we can add a button from Reactstrap. (Don't forget to add the Reactstrap import!)
 
 **src/pages/CatNew.js**
 

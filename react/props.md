@@ -260,7 +260,7 @@ const App = () => {
 export default App
 ```
 
-The function we wrote will update the array in state. There are no updates for the Greeter component as the code we wrote is dynamic. However, the method is not yet being called. We need to create a button with an `onClick` event.
+The function we wrote will update the array in state. There are no updates for the Greeter component as the code we wrote is dynamic. However, the function is not yet being called. We need to create a button with an `onClick` event.
 
 The button's `onClick` will call the `addPerson` function that is being passed as props down into the component.
 
