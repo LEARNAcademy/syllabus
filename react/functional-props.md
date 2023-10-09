@@ -161,7 +161,7 @@ There are now three pieces of data that are available to the `MovieDisplay` comp
 
 1. the movie object that is creating the display for the name,
 2. whether the movie has been watched,
-3. and the `watchedMovie` method that can be called with an `onClick` in the button tag.
+3. and the `watchedMovie` function that can be called with an `onClick` in the button tag.
 
 **src/components/MovieDisplay.js**
 
@@ -213,7 +213,7 @@ export default MovieDisplay
 
 ### Accessing Functional Props
 
-Now that the `watchedMovie` method is being called in the nested `MovieDisplay` component, we can access the index "up the river" in `App.js`. Once we have the index, we can use fundamental JavaScript logic to access the `watched` value of the selected movie object and reassign the value to `true`. Once the value is reassigned, `setMovies` will update the values in the state array.
+Now that the `watchedMovie` function is being called in the nested `MovieDisplay` component, we can access the index "up the river" in `App.js`. Once we have the index, we can use fundamental JavaScript logic to access the `watched` value of the selected movie object and reassign the value to `true`. Once the value is reassigned, `setMovies` will update the values in the state array.
 
 **src/App.js**
 

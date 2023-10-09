@@ -12,7 +12,7 @@ React applications are designed to handle user interactions quickly and efficien
 
 - can define DOM events
 - can define event listeners
-- can distinguish between an event handler method and a state method
+- can distinguish between event handlers and a state method
 - can recall the JSX attributes needed to collect user inputs
 
 #### Vocabulary
@@ -22,7 +22,7 @@ React applications are designed to handle user interactions quickly and efficien
 - onChange
 - type attributes
 - value attribute
-- handler method
+- event handlers
 
 #### Additional Resources
 
@@ -83,7 +83,7 @@ The **value attribute** establishes a default value in a text input. In React, t
 <input type="text" value={userInput} />
 ```
 
-All inputs are automatically listening for events. In React, the `onChange` attribute can call a corresponding method that will update the state value and reflect back in the current value. It is customary to have an `onChange` listener associate with a handler method. **Handler methods** are a conventional naming technique that describes the method associated with the action of a particular event. By convention, a developer would know that a method called `handleChange` would be associated with an `onChange` event and a method called `handleClick` would be associated with an `onClick` event.
+All inputs are automatically listening for events. In React, the `onChange` attribute can call a corresponding function that will update the state value and reflect back in the current value. It is customary to have an `onChange` listener associate with an event handler. **Event handlers** are a conventional naming technique that describes the function associated with the action of a particular event. By convention, a developer would know that a function called `handleChange` would be associated with an `onChange` event and a function called `handleClick` would be associated with an `onClick` event.
 
 **src/App.js**
 
@@ -108,7 +108,7 @@ export default App
 
 ### Handle Change Methods
 
-In JavaScript, event listeners create a new instance of the JavaScript class Event. The Event class is a blueprint for all instances of an event object. As many classes do, the Event class has both data (properties) and behavior (methods). The event object can be accessed in the `handleChange` method by passing the argument of `event` which is often shortened to `e` by convention. By logging `e` we can look at the many properties and methods that are available on this particular event object.
+In React, event listeners create a new instance of the SyntheticEvent class. The SyntheticEvent class is a blueprint for all instances of an event object. As many classes do, the SyntheticEvent class has both data (properties) and behavior (methods). The event object can be accessed in the `handleChange` function by passing the argument of `event` which is often shortened to `e` by convention. By logging `e` we can look at the many properties and methods that are available on this particular event object.
 
 **src/App.js**
 
@@ -185,7 +185,7 @@ Once we have the data from the input stored into the state value, the world is o
 
 As a developer, you are tasked with creating an application where three "robots" are listening to the text that a user types. As the user types, each robot responds in real time with a different modification to the input.
 
-When creating a project, it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, `App.js` will handle the state values, inputs, and event listener method. Each robot will be in its own presentational component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
+When creating a project, it is important to think about organizing your code so that you are not repeating yourself unnecessarily. It is a best practice to separate and compartmentalize all the actions in your code. In this application, `App.js` will handle the state values, inputs, and event listener functions. Each robot will be in its own presentational component. The state value can be passed to the nested components where the individualized manipulation of words can be handled by each robot.
 
 ![Active Listening Robot Challenge](./assets/robot_active_listening.png)
 

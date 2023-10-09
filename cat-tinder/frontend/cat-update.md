@@ -67,11 +67,11 @@ const CatEdit = ({ cats, updateCat }) => {
 
 ### Passing Cats to App.js
 
-Now that we have all the content from the edit form updated into state, we need to get the information back to `App.js`. This means we need to pass information "up the river" from child component to parent. To accomplish this we need to create a method in `App.js` that gets called when we submit the edit form.
+Now that we have all the content from the edit form updated into state, we need to get the information back to `App.js`. This means we need to pass information "up the river" from child component to parent. To accomplish this we need to create a function in `App.js` that gets called when we submit the edit form.
 
-During our scaffolding phase, the goal here is to see the updated cat logged in `App.js`. Eventually this method will be refactored to include an interaction with the database.
+During our scaffolding phase, the goal here is to see the updated cat logged in `App.js`. Eventually this function will be refactored to include an interaction with the database.
 
-Here is where we see the first big difference between the action that creates a new cat and the action that updates a cat. The update route requires a params of an id. To ensure we are updating the correct cat, we need to pass the id of the current cat to the method in `App.js`.
+Here is where we see the first big difference between the action that creates a new cat and the action that updates a cat. The update route requires a params of an id. To ensure we are updating the correct cat, we need to pass the id of the current cat to the function in `App.js`.
 
 **src/App.js**
 
@@ -82,9 +82,9 @@ const updateCat = (cat, id) => {
 }
 ```
 
-This method needs to be passed to our `CatEdit` component. This will require a refactor of the static `"/catedit/:id"` route into a dynamic route that accepts props.
+This function needs to be passed to our `CatEdit` component. This will require a refactor of the static `"/catedit/:id"` route into a dynamic route that accepts props.
 
-The route for `CatEdit` will look a little bit like `CatShow` and `CatNew` all mixed into one. We have to determine which cat is going to get updated as well as passing the `updateCat` method.
+The route for `CatEdit` will look a little bit like `CatShow` and `CatNew` all mixed into one. We have to determine which cat is going to get updated as well as passing the `updateCat` function.
 
 **src/App.js**
 
@@ -95,7 +95,7 @@ The route for `CatEdit` will look a little bit like `CatShow` and `CatNew` all m
 />
 ```
 
-Once the `updateCat` method is passed down to the CatEdit component, we can wrap it in a method that will pass our form object and the cat id.
+Once the `updateCat` function is passed down to the CatEdit component, we can wrap it in a `handleSubmit` function that will pass our form object and the cat id.
 
 **src/pages/CatEdit.js**
 
@@ -105,7 +105,7 @@ const handleSubmit = () => {
 }
 ```
 
-We need to call the method `onSubmit`. To accomplish this, we can add a button from Reactstrap. (Don't forget to add the Reactstrap import!)
+We need to call the `handleSubmit` function. To accomplish this, we can add a button from Reactstrap. (Don't forget to add the Reactstrap import!)
 
 **src/pages/CatEdit.js**
 
