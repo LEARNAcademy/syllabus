@@ -70,6 +70,14 @@ console.log(person.phone)
 // output: "(123)456-7890"
 ```
 
+We can also add additional properties to the object by calling on the variable assigned to the object, use dot notation to create the new key and then assign it the value.
+
+```javascript
+person.address = "1234 Object Drive"
+console.log(person.address)
+// output: "1234 Object Drive"
+```
+
 ### Object with Behavior: Method
 
 Objects can also contain functions. When a function belongs to an object it is called a method. **this** is a JavaScript keyword that references the object. **this** can be used to create a variable accessing the value within the object.
@@ -78,6 +86,7 @@ Objects can also contain functions. When a function belongs to an object it is c
 const person = {
   name: "Alex Keaton",
   phone: "(123)456-7890",
+  address: "1234 Object Drive",
   getData: function () {
     return `${this.name}'s phone number is ${this.phone}`
   }
