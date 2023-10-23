@@ -241,10 +241,6 @@ In this section we further explore full-stack development in React and Ruby on R
 
 6. [Apartment App Demos](./apartment-app/demos.md)
 
-### Additional Topics
-
-- [Authorization and Authentication](./apartment-app/authentication-vs-authorization.md)
-
 ## Unit Ten: Capstone Project, MVP
 
 The capstone project is the peak experience at LEARN Academy. Students work in a small group to create a full-stack web application. Acting as a development team, the students use agile and scrum project management techniques to plan, wireframe, code, and deploy an application.
