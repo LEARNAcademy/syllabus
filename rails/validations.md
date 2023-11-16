@@ -28,12 +28,12 @@ The power of creating a full-stack application is that we can store and retrieve
 - [ Active Record Validations ](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
 
 #### Process
-
-- `cd` into the `rails-challenges` repository
-- Create a new branch: `validations-initials1-initials2` (ex. validations-em-sp)
-- Create a new Rails application: $ `rails new validations-student1-student2 -d postgresql -T` (ex. rails new validations-elyse-sarah -d postgresql -T)
-- `cd` into the project
+- Create a new Rails application: $ `rails new validations-student1-student2 -d postgresql -T`
+- $ `cd` into the project
 - Create a database: $ `rails db:create`
+- Add the git remote from GitHub Classroom
+- Ensure a main branch exists
+- Make an initial commit to the main branch
 - Add the dependencies for RSpec:
 - $ `bundle add rspec-rails`
 - $ `rails generate rspec:install`
