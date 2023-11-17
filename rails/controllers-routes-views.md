@@ -37,6 +37,16 @@ Rails uses the MVC architectural pattern. MVC defines how an application handles
 - Create a new Rails app in the appropriate folder: $ `rails new routes_controllers_views_params -d postgresql -T`
 - $ `cd routes_controllers_views_params`
 - Create a database: $ `rails db:create`
+- Add the git remote from GitHub Classroom
+- Ensure a main branch exists 
+- Make an initial commit to the main branch
+- Add the dependencies for RSpec:
+- $ bundle add rspec-rails
+- $ rails generate rspec:install
+- Generate the model with appropriate columns and data types
+- $ rails db:migrate
+- Open the project in a text editor
+- Code!
 - Begin the rails server: $ `rails server`
 - In a browser navigate to: `http://localhost:3000`
 
