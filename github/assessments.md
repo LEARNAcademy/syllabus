@@ -2,17 +2,17 @@
 
 #### Process Overview
 
-- Accept assignment via GitHub Classroom link shared in Slack
+- Accept assignments via GitHub Classroom link shared in Slack
 - Clone repository to your local machine
-- Create branch with the week and your name, e.g `week-1-sarah-proctor`
+- Create a branch with the week and your name, e.g `week-1-sarah-proctor`
 - Complete all assessment problems
 - Git add, commit, push
-- Create pull request and leave branch open for review!
+- Create a pull request and leave the branch open for review!
 - Merge code after review is **approved**
 
 #### Requirements and Expectations
 
-Completing all assessments on time is required to be eligible for internship. A student must make reasonable effort on every question in the assessment. If any questions are left blank, the assessment will not be reviewed.
+Completing all assessments on time is required to continue in the LEARN program. A student must make reasonable effort on every question in the assessment. If any questions are left blank, the assessment will not be reviewed.
 
 An assessment is not complete until the assessment is reviewed by an instructor and the working branch is merged into the main branch.
 
