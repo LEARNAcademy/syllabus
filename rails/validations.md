@@ -27,20 +27,21 @@ The power of creating a full-stack application is that we can store and retrieve
 
 - [ Active Record Validations ](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
 
-#### Process
-- Create a new Rails application: $ `rails new validations-student1-student2 -d postgresql -T`
-- $ `cd` into the project
+### Processes
+
+- Create a new Rails app on the desktop: $ `rails new rails-validations -d postgresql -T`
+- $ `cd rails-validations`
 - Create a database: $ `rails db:create`
 - Add the git remote from GitHub Classroom
 - Ensure a main branch exists
 - Make an initial commit to the main branch
 - Add the dependencies for RSpec:
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
+  - $ `bundle add rspec-rails`
+  - $ `rails generate rspec:install`
 - Generate the model with appropriate columns and data types
 - $ `rails db:migrate`
-- Open the project in a text editor
-- Code!
+- Begin the rails server: `$ rails server`
+- In a browser navigate to: `http://localhost:3000`
 
 #### Troubleshooting Tips
 
@@ -368,13 +369,13 @@ All tasks should have accompanying model specs.
 ### 🏔 Stretch Goals
 
 - Every account password should have at least one number.
-- HINT: Read about [custom validations](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations) in the Active Record validation docs.
+  - HINT: Read about [custom validations](https://guides.rubyonrails.org/active_record_validations.html#performing-custom-validations) in the Active Record validation docs.
 - Every street_number, street_name, and zip on the address model should be unique within an account.
-- HINT: Read about [:scope](https://guides.rubyonrails.org/active_record_validations.html#uniqueness) in the Active Record validation docs.
+  - HINT: Read about [:scope](https://guides.rubyonrails.org/active_record_validations.html#uniqueness) in the Active Record validation docs.
 - Every street_number and zip should be integers.
-- HINT: Read about [numericality](https://edgeguides.rubyonrails.org/active_record_validations.html#numericality) in the Active Record validation docs.
+  - HINT: Read about [numericality](https://edgeguides.rubyonrails.org/active_record_validations.html#numericality) in the Active Record validation docs.
 - If the street_number or zip code are not numbers there should be a custom error message that says "Please input numbers only."
-- HINT: Read about [message](https://edgeguides.rubyonrails.org/active_record_validations.html#message) in the validation docs.
+  - HINT: Read about [message](https://edgeguides.rubyonrails.org/active_record_validations.html#message) in the validation docs.
 
 ---
 

@@ -28,6 +28,8 @@ Active Record models describe the structure of the database. A single model can 
 
 #### Process
 
+This topic concerns Rails models, the database layer of MVC. Databases live on our local machine and cannot be pushed to GitHub. To create documentation of the code in this challenge we will make a markdown file that will be pushed to the `database-challenges` repository.
+
 - `cd` to your Desktop
 - $ `rails new associations -d postgresql -T`
 - `cd` into the project
