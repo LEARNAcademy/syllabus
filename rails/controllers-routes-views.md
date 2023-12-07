@@ -2,7 +2,7 @@
 
 #### Overview
 
-Rails uses the MVC architectural pattern. MVC defines how an application handles different kinds of information. MVC separates an application into models for handling data and business logic, controllers to handle requests and retrieve the data from the model, and views for handling graphical user interface objects and presentation. URL parameters, also known as params or query strings, are a way to pass in additional information into a controller method to query the database or dynamically modify the view. This section will take a deep dive into the controller and view aspects of MVC.
+Rails uses the MVC architectural pattern. MVC defines how an application handles different kinds of information. MVC separates an application into models for handling data and business logic, controllers to handle requests and retrieve the data from the model, and views for handling graphical user interface objects and presentations. URL parameters, also known as params or query strings, are a way to pass in additional information into a controller method to query the database or dynamically modify the view. This section will take a deep dive into the controller and view aspects of MVC.
 
 #### Previous Controllers, Routes, and Views Lecture (1hr 7min)
 
@@ -41,8 +41,8 @@ Rails uses the MVC architectural pattern. MVC defines how an application handles
 
 #### Process
 
-- Create a new Rails app on the desktop: $ `rails new rails-routes-params -d postgresql -T`
-- $ `cd rails-routes-params`
+- Create a new Rails app on the desktop: $ `rails new rails-routes-controllers-views-params -d postgresql -T`
+- $ `cd rails-routes-controllers-views-params`
 - Create a database: $ `rails db:create`
 - Add the git remote from GitHub Classroom
 - Ensure a main branch exists
@@ -77,7 +77,7 @@ The controller:
 
 Let's see the controller in action!
 
-From the command line, we can add a new Rails controller with a rails command:
+From the command line, we can add a new Rails controller with a Rails command:
 
 ```
 $ rails generate controller Main
@@ -97,13 +97,13 @@ create  app/controllers/main_controller.rb
     create      app/assets/stylesheets/main.scss
 ```
 
-From this generate command we are going to use the controller file and the view folder.
+We will use the controller file and the view folder that was generated from this command.
 
 <img src="./assets/generate-controller.png" />
 
-Now we can add methods to the controller file that was created in the generate command.
+Now, we can add methods to the controller file that was created in the generate command.
 
-Inside the controller, we define what we want to happen when a method is reached. In this case, when the `answer` method is triggered, it will render some html that reads "This is the answer".
+When a method is invoked, we define what we want to happen in the application. In this case, when the `answer` method is triggered, it will render some HTML that reads "This is the answer".
 
 **app/controllers/main_controller.rb**:
 
@@ -126,7 +126,7 @@ In order for our Rails server to respond to a request to this url, it needs a pa
 **config/routes.rb**
 <img src="https://i.ibb.co/L8tf1xt/routes-explained.png" alt="routes-explained" border="0" />
 
-The route here is essentially adding an address to the application. Now when we navigate to `localhost:3000/answer` Rails will determine that we have requested the `/answer` route. The route will find the `main` controller and call the `answer` method.
+The route here is essentially adding an address to the application. Now, when we navigate to `localhost:3000/answer` Rails will determine that we have requested the `/answer` route. The route will find the `main` controller and call the `answer` method.
 
 This completes the Rails response to the `/answer` request. When we visit `localhost:3000/answer` we should see a white page with the text 'This is the answer'.
 
@@ -193,7 +193,7 @@ Let's add some text to the new file:
 <p>Hello?</p>
 ```
 
-Now, when we navigate to `localhost:3000/question` we should see simple text saying "Hello?"
+Now, when we navigate to `localhost:3000/question` we should see text saying "Hello?"
 
 Going back to our controller, we can create an instance variable (since we are inside the class MainController) that we will render in our view:
 
@@ -212,7 +212,7 @@ class MainController < ApplicationController
 end
 ```
 
-Back in our view, we will refer back to the instance variable we set within the `question` method in the controller.
+In our view, we will refer to the instance variable we set within the `question` method in the controller.
 
 **views/main/question.html.erb**:
 
@@ -224,7 +224,7 @@ The symbols `<%= %>` allow us to escape the HTML and embed Ruby syntax and logic
 
 ### Navigating Between Views
 
-So far we have created controllers that manages our routes and views through directly manipulating the url. To make this process more dynamic we can add code to our view so the user can click a link to move between pages.
+So far we have created controllers that manage our routes and views by directly manipulating the url. To make this process more dynamic we can add code to our view so the user can click a link to move between pages.
 
 **views/main/home.html.erb**:
 
@@ -233,9 +233,9 @@ So far we have created controllers that manages our routes and views through dir
 <%= link_to 'Tell Me!', '/question' %>
 ```
 
-**link_to** is a helper method that lives inside embedded Ruby tags and creates navigation in our Rails app. It takes two attributes: the first is the hyperlink, or anchor and second is the route that will be appended to the end of `localhost:3000`.
+**link_to** is a helper method that lives inside embedded Ruby tags and creates navigation in our Rails app. It takes two attributes: the first is the hyperlink, or anchor and the second is the route that will be appended to the end of `localhost:3000`.
 
-Earlier in our code we created our own landing page so our user won't see the Rails boilerplate UI. To create a link that will navigate back to the landing page we pass a `'/'` as the route.
+Earlier in our code, we created a landing page so our users won't see the Rails boilerplate UI. To create a link that will navigate back to the landing page we pass a `'/'` as the route.
 
 **views/main/question.html.erb**:
 
@@ -253,7 +253,7 @@ class MainController < ApplicationController
 
   def greeting
     @name = params[:name]
-    # the instance variable is storing the information that will be passed as a param
+    # the instance variable stores the information that will be passed as a param
   end
 
 end
@@ -297,7 +297,7 @@ The page will display `Hello, Friends!`
 
 ### Controller Arguments
 
-Often we do some logic in the controller and send on the results to the view with instance variables.
+Often, we do some logic in the controller and send the results to the view with instance variables.
 
 Let's create a new route and controller for example:
 
@@ -338,6 +338,8 @@ Number is: <%= @result_string %>
 - The controller method will ultimately do the work you require and send the appropriate view response.
 - `params` is a method returning a `ActionController::Parameters` which is a hash of parameters submitted in the request.
 
+---
+
 ### 💻 Challenges
 
 Routes, Views, Controllers
@@ -351,7 +353,7 @@ Params
 - As a user, I can visit a page called cubed that takes a number as a param and displays that number cubed.
 - As a user, I can visit a page called evenly that takes two numbers as params and displays whether or not the first number is evenly divisible by the second.
 - As a user, I can visit a page called palindrome that takes a string as a param and displays whether it is a palindrome (the same word forward and backward).
-- As a user, I can visit a page called Madlib that takes params of a noun, verb, adjective, adverb, and displays a short silly story.
+- As a user, I can visit a page called Madlib that takes params of a noun, verb, adjective, or adverb, and displays a short silly story.
 
 ---
 
