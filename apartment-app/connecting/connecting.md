@@ -56,7 +56,7 @@ In order to sign up or log in to our Apartment App, a user must provide credenti
 import { useRef } from "react"
 
 const Signup = () => {
-// First, create a variable using useRef. We want to get the input values from the signup form so we'll name the variable 'formRef'
+  // First, create a variable using useRef. We want to get the input values from the signup form so we'll name the variable 'formRef'
   const formRef = useRef()
 
   const handleSubmit = () => {
@@ -68,15 +68,23 @@ const Signup = () => {
       {/* Next, use the property `ref` to attach the variable to the form you want to target. */}
       <form ref={formRef} onSubmit={handleSubmit}>
         Email: <input type="email" name="email" placeholder="email" />
-        <br/>
-        Password: <input type="password" name="password" placeholder="password" />
-        <br/>
-        Confirm Password: <input type="password" name="password_confirmation" placeholder="confirm password" />
-        <br/>
+        <br />
+        Password:{" "}
+        <input type="password" name="password" placeholder="password" />
+        <br />
+        Confirm Password:{" "}
+        <input
+          type="password"
+          name="password_confirmation"
+          placeholder="confirm password"
+        />
+        <br />
         <input type="submit" value="Submit" />
       </form>
       <br />
-      <div>Already registered, <a href="/login">Login</a> here.</div>
+      <div>
+        Already registered, <a href="/login">Login</a> here.
+      </div>
     </div>
   )
 }
@@ -101,7 +109,7 @@ const handleSubmit = (e) => {
   const data = Object.fromEntries(formData)
   // store user's info in format that can be used with JWT
   const userInfo = {
-    "user":{ email: data.email, password: data.password }
+    user: { email: data.email, password: data.password },
   }
 }
 ```
@@ -130,22 +138,22 @@ const login = (userInfo) => {
     body: JSON.stringify(userInfo),
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json"
+      Accept: "application/json",
     },
-    method: "POST"
+    method: "POST",
   })
-  .then(response => {
-    if (!response.ok) {
-      throw Error(response.statusText)
-    }
-    // store the token
-    localStorage.setItem("token", response.headers.get("Authorization"))
-    return response.json()
-  })
-  .then(payload => {
-    setCurrentUser(payload)
-  })
-  .catch(error => console.log("login errors: ", error))
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText)
+      }
+      // store the token
+      localStorage.setItem("token", response.headers.get("Authorization"))
+      return response.json()
+    })
+    .then((payload) => {
+      setCurrentUser(payload)
+    })
+    .catch((error) => console.log("login errors: ", error))
 }
 
 const signup = (userInfo) => {
@@ -153,37 +161,37 @@ const signup = (userInfo) => {
     body: JSON.stringify(userInfo),
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json"
+      Accept: "application/json",
     },
-    method: "POST"
+    method: "POST",
   })
-  .then(response => {
-    if (!response.ok) {
-      throw Error(response.statusText)
-    }
-    // store the token
-    localStorage.setItem("token", response.headers.get("Authorization"))
-    return response.json()
-  })
-  .then(payload => {
-    setCurrentUser(payload)
-  })
-  .catch(error => console.log("login errors: ", error))
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText)
+      }
+      // store the token
+      localStorage.setItem("token", response.headers.get("Authorization"))
+      return response.json()
+    })
+    .then((payload) => {
+      setCurrentUser(payload)
+    })
+    .catch((error) => console.log("login errors: ", error))
 }
 
 const logout = () => {
   fetch(`${url}/logout`, {
     headers: {
       "Content-Type": "application/json",
-      "Authorization": localStorage.getItem("token") //retrieve the token
+      Authorization: localStorage.getItem("token"), //retrieve the token
     },
-    method: "DELETE"
+    method: "DELETE",
   })
-  .then(payload => {
-    localStorage.removeItem("token")  // remove the token
-    setCurrentUser(null)
-  })
-  .catch(error => console.log("log out errors: ", error))
+    .then((payload) => {
+      localStorage.removeItem("token") // remove the token
+      setCurrentUser(null)
+    })
+    .catch((error) => console.log("log out errors: ", error))
 }
 ```
 
@@ -204,11 +212,13 @@ Now we can pass these functions into the appropriate components and call them in
 
 ```javascript
 const handleSubmit = (e) => {
-  {/* ... */}
+  {
+    /* ... */
+  }
 
   signup(userInfo)
   navigate("/")
-  e.target.reset()  // resets the input field
+  e.target.reset() // resets the input field
 }
 ```
 
@@ -223,15 +233,53 @@ const handleClick = () => {
 
 ### Persist Current User
 
-Having the initial state of `currentUser` set to `null` will cause the user to be logged out if the user manually refreshes the browser. To solve this problem we can create a function that checks if a JWT exists and set the state to the logged in user if it does. This function will live in the `useEffect` hook.
+Having the initial state of `currentUser` set to `null` will cause the user to be logged out if the user manually refreshes the browser. To solve this problem we can add the user information to `localStorage` after it is retreived at signup and login. We will also want to remove the user when they sign out.
+
+**src/App.js**
+
+```javascript
+const login = (userInfo) => {
+  // existing fetch method ...
+
+.then((payload) => {
+  //add the following line
+  localStorage.setItem("user", JSON.stringify(payload))
+  setCurrentUser(payload)
+})
+  // ...
+
+const signup = (userInfo) => {
+  // existing fetch method ...
+
+.then((payload) => {
+  //add the following line
+  localStorage.setItem("user", JSON.stringify(payload))
+  setCurrentUser(payload)
+})
+  // ...
+
+const signout = (id) => {
+  // existing fetch method ...
+
+.then((payload) => {
+  localStorage.removeItem("token")
+  //add the following line
+  localStorage.removeItem("user")
+  setCurrentUser(null)
+  })
+  // ...
+
+```
+
+Then we can create a function that checks if a user exists and set the state to the logged in user if it does. This function will live in the `useEffect` hook.
 
 **src/App.js**
 
 ```javascript
 useEffect(() => {
-  const loggedInUser = localStorage.getItem("token")
+  const loggedInUser = localStorage.getItem("user")
   if (loggedInUser) {
-    setCurrentUser(loggedInUser)
+    setCurrentUser(JSON.parse(loggedInUser))
   }
   readApartments()
 }, [])

@@ -133,7 +133,7 @@ export default App
 
 ### Updating State Values
 
-The next step is creating the logic that will allow the user to click through different flashcards. We will create a method that will pull a random image from the array. This method can be name `handleCardSelection` to communicate its intent. The method will hold the code that creates a random number and uses that random number to select a flashcard from the array of images. The `handleCardSelection` method is now ready to be called. We can add a button in JSX with an `onClick` attribute that will trigger the `handleCardSelection` method.
+The next step is creating the logic that will allow the user to click through different flashcards. We will create a function that will pull a random image from the array. This function can be name `handleCardSelection` to communicate its intent. The method will hold the code that creates a random number and uses that random number to select a flashcard from the array of images. The `handleCardSelection` function is now ready to be called. We can add a button in JSX with an `onClick` attribute that will trigger the `handleCardSelection` function.
 
 **src/App.js**
 

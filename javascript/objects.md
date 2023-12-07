@@ -43,9 +43,9 @@ Objects are a JavaScript data type that has collections of `key:value` pairs. Ob
 
 ### Object with Data
 
-Objects consist of collections of **key:value pairs** stored in curly braces. The key is a data type of symbol and the value is any valid data type in JavaScript.
+Objects consist of collections of **key:value pairs** stored in curly braces. The key is a data type of symbol and the value is any valid JavaScript data type.
 
-Creating an object in JSON:
+Creating an object:
 
 ```javascript
 const person = { name: "Alex Keaton", phone: 123456789 }
@@ -70,6 +70,14 @@ console.log(person.phone)
 // output: "(123)456-7890"
 ```
 
+We can also add additional properties to the object. This can be done by calling on the variable assigned to the object then using dot notation to create a new key and assign it a value.
+
+```javascript
+person.address = "Columbus, Ohio"
+console.log(person.address)
+// output: "Columbus, Ohio"
+```
+
 ### Object with Behavior: Method
 
 Objects can also contain functions. When a function belongs to an object it is called a method. **this** is a JavaScript keyword that references the object. **this** can be used to create a variable accessing the value within the object.
@@ -78,13 +86,14 @@ Objects can also contain functions. When a function belongs to an object it is c
 const person = {
   name: "Alex Keaton",
   phone: "(123)456-7890",
+  address: "Columbus, Ohio",
   getData: function () {
-    return `${this.name}'s phone number is ${this.phone}`
+    return `${this.name}'s lives in ${this.address}, and can be reached at ${this.phone}`
   }
 }
 
 console.log(person.getData())
-// output: "Alex Keaton's phone number is (123)456-7890"
+// output: "Alex Keaton's lives in Columbus, Ohio, and can be reached at (123)456-7890"
 ```
 
 ### Iterating Over Arrays With Objects
@@ -284,8 +293,28 @@ const triangleDimensions = {
 ```javascript
 const learn = {
   cohorts: {
-    2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel"],
-    2023: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet"]
+    2022: [
+      "Alpha",
+      "Bravo",
+      "Charlie",
+      "Delta",
+      "Echo",
+      "Foxtrot",
+      "Golf",
+      "Hotel"
+    ],
+    2023: [
+      "Alpha",
+      "Bravo",
+      "Charlie",
+      "Delta",
+      "Echo",
+      "Foxtrot",
+      "Golf",
+      "Hotel",
+      "India",
+      "Juliet"
+    ]
   }
 }
 ```
