@@ -38,6 +38,8 @@ The fundamental purpose of a full-stack application is to allow users to store, 
 
 #### Process
 
+This topic concerns Rails models, the database layer of MVC. Databases live on our local machine and cannot be pushed to GitHub. To create documentation of the code in this challenge we will make a markdown file that will be pushed to the `database-challenges` repository.
+
 - `cd` to your Desktop
 - $ `rails new active-record -d postgresql -T`
 - `cd` into the project
