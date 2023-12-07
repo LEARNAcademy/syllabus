@@ -2,9 +2,9 @@
 
 Welcome to the LEARN Syllabus!
 
-LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real-time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program is a practicum in a development role. 
+LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program are a practicum in a development role. 
 
-This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. If you are interested in contributing to our syllabus to fix any errors, expand definitions, or further explain concepts, etc. please see our [Style Guidelines](./github/style-guidelines.md) for process details.
+This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever-evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. If you want to contribute to our syllabus to fix errors, expand definitions, or further explain concepts, etc. please see our [Style Guidelines](./github/style-guidelines.md) for process details.
 
 ---
 
@@ -22,8 +22,9 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Unit Ten: Capstone Project, MVP](#unit-ten-capstone-project-mvp)
 - [Unit Eleven: Capstone Project, Icebox](#unit-eleven-capstone-project-icebox)
 
-## GitHub
+## GitHub and Terminal
 
+- [Terminal](./tools-and-resources/terminal.md)
 - [Git and GitHub Introduction](./github/git-and-github.md)
 - [Git and GitHub Configurations](./github/github-configurations.md)
 - [Collaborative Coding with GitHub](./github/collaborative-coding.md)
@@ -61,7 +62,6 @@ Welcome to LEARN Academy! Here is the information covered during orientation.
 - [Zoom Etiquette](./assets-first-day/zoom-etiquette.pdf)
 - [How We Work](./assets-first-day/how-we-work.pdf)
 - [Code of Conduct](./assets-first-day/code-of-conduct.pdf)
-- [Introduction to Terminal](./tools-and-resources/terminal.md)
 - [Requirements and Expectations](./assets-first-day/16-week-requirements-and-expectations.pdf)
 - [Career Services Overview](./assets-first-day/16-week-career-services-overview.pdf)
 - [Tech Stack](./assets-first-day/tech-stack.pdf)
@@ -71,7 +71,7 @@ Welcome to LEARN Academy! Here is the information covered during orientation.
 
 ## Unit One: Javascript Introduction
 
-This is our introduction to coding through the Javascript programming language. Here we will cover foundational concepts and data structures that will get us thinking in code.
+This is our introduction to coding through the Javascript programming language. Here, we will cover foundational concepts and data structures that will get us thinking in code.
 
 1. [JavaScript Introduction](./javascript/intro.md)
 2. [JavaScript Conditionals](./javascript/conditionals.md)
@@ -85,7 +85,7 @@ This is our introduction to coding through the Javascript programming language. 
 
 ## Unit Two: Javascript Foundations
 
-This is our opportunity to dig a bit deeper into the Javascript programming language. Here we will use the introductory topics in combination for more advanced logic performance and data manipulation.
+This is our opportunity to dig a bit deeper into the Javascript programming language. Here, we will use the introductory topics in combination with more advanced logic performance and data manipulation.
 
 1. [JavaScript Functions, Loops, and Arrays](./javascript/functions-loops-arrays.md)
 2. [JavaScript Higher-Order Functions](./javascript/higher-order-functions.md)
@@ -117,7 +117,7 @@ React is a powerful Javascript library used to build more complicated user inter
 
 ## Unit Four: Ruby
 
-Ruby is a backend, object-oriented programming language. Here we will cover the fundamentals of the Ruby language and revisit the fundamental concepts shared by many programming languages.
+Ruby is a backend, object-oriented programming language. Here, we will cover the fundamentals of the Ruby language and revisit the fundamental concepts shared by many programming languages.
 
 1. [Ruby Introduction](./ruby/intro.md)
 1. [Ruby Conditionals and Methods](./ruby/conditionals.md)
@@ -130,7 +130,7 @@ Ruby is a backend, object-oriented programming language. Here we will cover the 
 
 ## Unit Five: Intro to Postgres and Ruby on Rails Models
 
-Rails is full-stack framework built into the Ruby programming language. Here we will focus on the model layer of the MVC architecture pattern through a deep-dive into Active Record and persistence storage with Postgres.
+Rails is a full-stack framework built into the Ruby programming language. Here, we will focus on the model layer of the MVC architecture pattern through a deep dive into Active Record and persistence storage with Postgres.
 
 ### PostgreSQL
 
@@ -186,7 +186,7 @@ Professional development is dedicated to preparation for internship and the upco
 
 ## Unit Eight: Cat Tinder! Combining React and Rails
 
-Here we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concept we've covered so far.
+Here, we explore our first decoupled, full-stack application. We build a React frontend and a Ruby on Rails backend leveraging all the concepts we've covered so far.
 
 ### Project-based Learning
 
@@ -221,7 +221,7 @@ Here we explore our first decoupled, full-stack application. We build a React fr
 
 ## Unit Nine: React and Rails with Authentication
 
-In this section we further explore full-stack development in React and Ruby on Rails. We introduce Devise, a Ruby gem that gives us the ability to create user authentication and authorization.
+In this section, we further explore full-stack development in React and Ruby on Rails. We introduce Devise, a Ruby gem that gives us the ability to create user authentication and authorization.
 
 ### Apartment App Backend
 
@@ -247,7 +247,7 @@ In this section we further explore full-stack development in React and Ruby on R
 
 ## Unit Ten: Capstone Project, MVP
 
-The capstone project is the peak experience at LEARN Academy. Students work in a small group to create a full-stack web application. Acting as a development team, the students use agile and scrum project management techniques to plan, wireframe, code, and deploy an application.
+The capstone project is the peak experience at LEARN Academy. Students work in small groups to create a full-stack web application. Acting as a development team, the students use agile and scrum project management techniques to plan, wireframe, code, and deploy an application.
 
 - [Capstone Project Details](./capstone/project-details.md)
 - [Capstone Requirements](./capstone/requirements.md)
