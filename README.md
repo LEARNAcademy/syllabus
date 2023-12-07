@@ -2,7 +2,7 @@
 
 Welcome to the LEARN Syllabus!
 
-LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program are a practicum in a development role. 
+LEARN is a 16-week, full-time program consisting of 640 practical learning hours. Students are in class Monday through Friday 9am to 5pm in the Pacific Time Zone. Each unit below represents approximately one week of instruction. The instruction is conducted remotely but in real time. Instructors are available to students during classroom hours listed above and after hours by appointment. The final four weeks of the program are a practicum in a development role.
 
 This repository is a reflection of the current status of the curriculum at LEARN Academy. Just like the technology we teach, the syllabus is ever-evolving and adapting to suit the needs of the user. That's you! The instructors at LEARN Academy are continuously pushing the syllabus forward; working to give our students the best experience possible. If you want to contribute to our syllabus to fix errors, expand definitions, or further explain concepts, etc. please see our [Style Guidelines](./github/style-guidelines.md) for process details.
 
@@ -145,10 +145,6 @@ Rails is a full-stack framework built into the Ruby programming language. Here, 
 1. [Active Record Associations](./rails/associations.md)
 1. [Active Record Validations and Models Specs](./rails/validations.md)
 
-### Additional Topics
-
-- [Rails Database Seeds](./rails/seeds.md)
-
 ## Unit Six: Ruby on Rails
 
 In this section we explore all the Ruby on Rails MVC architecture has to offer. We built our first full-stack application as well as look at how to create a backend-only Rails application.
@@ -256,4 +252,3 @@ The capstone project is the peak experience at LEARN Academy. Students work in s
 - [Consuming External APIs with Fetch](./capstone/fetch.md)
 - [Handling API Keys](./capstone/api-keys.md)
 - [Render](./capstone/render.md)
-

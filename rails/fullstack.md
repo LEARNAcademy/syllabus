@@ -32,15 +32,15 @@ Being a full-stack developer also includes managing the inherit risk that comes 
 
 #### Process
 
-- Create a new Rails app on the desktop: $ `rails new blog-challenge -d postgresql -T`
-- $ `cd blog-challenge`
+- Create a new Rails app on the desktop: $ `rails new rails-full-stack -d postgresql -T`
+- $ `cd rails-full-stack`
 - Create a database: $ `rails db:create`
 - Add the git remote from GitHub Classroom
 - Ensure a main branch exists
 - Make an initial commit to the main branch
 - Add the dependencies for RSpec:
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
+  - $ `bundle add rspec-rails`
+  - $ `rails generate rspec:install`
 - Generate the model with appropriate columns and data types
 - $ `rails db:migrate`
 - Generate the controller

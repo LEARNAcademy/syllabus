@@ -39,18 +39,19 @@ Rails is full-stack framework that handles the business logic (model) as well as
 
 #### Process
 
-- `cd` to your Desktop
-- $ `rails new rails-api -d postgresql -T`
+- Create a new Rails app on the desktop: $ `rails new rails-api -d postgresql -T`
 - $ `cd rails-api`
-- $ `rails db:create`
-- Add the remote from GitHub
-- Create the main branch
-- Make an initial commit
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
-- $ `rails s`
-- Open the folder in a text editor
-- Code!
+- Create a database: $ `rails db:create`
+- Add the git remote from GitHub Classroom
+- Ensure a main branch exists
+- Make an initial commit to the main branch
+- Add the dependencies for RSpec:
+  - $ `bundle add rspec-rails`
+  - $ `rails generate rspec:install`
+- Generate the resource with appropriate columns and data types
+- $ `rails db:migrate`
+- Begin the rails server: `$ rails server`
+- In a browser navigate to: `http://localhost:3000`
 
 #### Troubleshooting Tips
 

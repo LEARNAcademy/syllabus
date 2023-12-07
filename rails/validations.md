@@ -27,7 +27,7 @@ The power of creating a full-stack application is that we can store and retrieve
 
 - [ Active Record Validations ](https://guides.rubyonrails.org/active_record_validations.html#acceptance)
 
-### Processes
+### Process
 
 - Create a new Rails app on the desktop: $ `rails new rails-validations -d postgresql -T`
 - $ `cd rails-validations`
