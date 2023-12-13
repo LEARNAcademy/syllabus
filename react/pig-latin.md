@@ -19,8 +19,7 @@ In this activity, we're going to create an application that translates regular E
 #### Process
 
 - One person on the team accepts the group assignment from GitHub classroom
-- Create a team name
-- Add additional team members via GitHub handle
+- Create a team name (team name can be whatever you would like as long as it is work-appropriate)
 - Clone the newly created repository
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
@@ -55,9 +54,9 @@ In this activity, we're going to create an application that translates regular E
 
 This is a very difficult problem to solve. Take the time to plan your approach and brainstorm with your team.
 
-This project is going to utilize React for the UI and the JavaScript logic. There is already some code inside the React application that will provide a UI for the Pig Latin project. Your job is to create the logic. All the code you'll need to write for this app is going to be inside one function in the `/src/App.js` file.
+This project is going to utilize React for the UI and the JavaScript logic. Existing code inside the React application will provide a UI for the Pig Latin project. Your job is to create the logic. All the code you'll need to write for this app is going to be inside one function in the `/src/App.js` file.
 
-To get started, find the `myPigLatinCodeHere` function, and write your code. Every time you save your updated file, the browser window displaying your app will reload.
+To get started, find the `myPigLatinCodeHere` function and write your code. Every time you save your updated file, the browser window displaying your app will reload.
 
 ---
 
@@ -65,7 +64,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 **Story 1**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words beginning with a vowel translated to add "way" to the end.
 
-**Branch:** vowel-functionality
+**Branch**: vowel-functionality
 
 **Acceptance Criteria**
 
@@ -75,7 +74,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 **Story 2**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have "qu" in the first syllable translated by moving all the consonants and the "u" to the end and adding "ay".
 
-**Branch:** qu-functionality
+**Branch**: qu-functionality
 
 **Acceptance Criteria**
 
@@ -85,7 +84,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 **Story 3**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have no vowels other than "y" translated by moving all the consonants to the end and adding "ay".
 
-**Branch:** y-functionality
+**Branch**: y-functionality
 
 **Acceptance Criteria**
 
@@ -95,7 +94,7 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 
 **Story 4**: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have one or more consonants translated by moving all the consonants to the end and adding "ay".
 
-**Branch:** consonant-functionality
+**Branch**: consonant-functionality
 
 **Acceptance Criteria**
 
@@ -113,14 +112,14 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 ### 👩‍💻 Developer Stretch Challenges
 
 - As a developer, I have a well-commented application.
-- As a developer, I have well written README file with instructions on how to access my repository.
+- As a developer, I have a well-written README file with instructions on accessing my repository.
 - As a developer, my variables are all named semantically.
 - As a developer, I have refactored and efficient code.
 - As a developer, I have my application [deployed as a live website](https://render.com/docs/deploy-create-react-app).
 
 ### 🎙 Project Demos
 
-Each team will give a brief (three minute) presentation of their application. Presenting your project will allow you to practice communication and coding vocabulary. Presentations are not a judgement of your work or ability as each team will have different weaknesses and strengths. Presentations allow other members of the cohort to appreciate a different approach to solving a complex problem.
+Each team will give a brief (three-minute) presentation of their application. Presenting your project will allow you to practice communication and coding vocabulary. Presentations are not meant to be a judgment of your work or ability as each team will have different weaknesses and strengths. Presentations allow other members of the cohort to appreciate a different approach to solving a complex problem.
 
 - Full team: show off your application's user interface (UI)
 - First team member: What was your team's approach to solving this problem? Did the initial approach work out in the end?
