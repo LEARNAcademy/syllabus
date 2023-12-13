@@ -2,7 +2,7 @@
 
 #### Overview
 
-Tic Tac Toe is a classic children's game involving two players alternatively marking squares on a three-by-three grid. While the game play can be considered relatively simple for humans, creating the logic in code is considerably more challenging.
+Tic Tac Toe is a classic children's game involving two players alternatively marking squares on a three-by-three grid. While the game is be considered relatively simple for humans, creating the logic in code is considerably more challenging.
 
 #### Learning Objectives
 
@@ -18,8 +18,7 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 #### Process
 
 - One person on the team accepts the group assignment from GitHub classroom
-- Create a team name
-- Add additional team members via their GitHub handle
+- Create a team name (team name can be whatever you would like as long as it is work-appropriate)
 - Clone the newly created repository
 - `cd` into the repository
 - Run $ `yarn` to install the React dependencies
@@ -58,14 +57,35 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
 
 ### 📚 User Stories
 
-- As a user, I can see a three by three grid game board on the page.
-- As a user, I can click on a square to mark it.
-- As a user, my partner can click on a square after me and see their mark.
-- As a user, I can't click on a square that has already been marked.
-- As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally), I can see a notice telling me which player won.
-- As a user, I can't play the game after the game has been won.
-- As a user, if no more squares are available, I can see a notice telling me that the game has ended.
-- As a user, I can click on a restart button that will clear the game board.
+**Story 1**: In order to play tic tac toe, as the user of the application, I should see a three-by-three grid board game with squares that can be clicked alternatively by two players: player X and player O. Once a square is marked it cannot be marked again.
+
+**Branch**: game-structure
+
+**Acceptance Criteria**
+
+- Can see a three-by-three grid game board
+- Player one can click on a square to mark it with an X
+- Player two can click on a square to mark it with an O
+- Players cannot click on a square that has already been marked
+
+**Story 2**: In order to play tic tac toe, as the user of the application, I should be able to win the game by marking three squares with the same mark in a horizontal, vertical, or diagonal row. I can restart the game at any time.
+
+**Branch**: win-lose
+
+**Acceptance Criteria**
+
+- Can see a notice displaying which player won
+- Game play cannot continue after the game has been won
+- Can click on a restart button that will clear the game board
+
+**Story 3**: In order to play tic tac toe, as the user of the application, I should not be able to continue playing the game if all the squares are marked. If neither player wins and all the squares are marked, I should see a notification for a "cats game."
+
+**Branch**: cats-game
+
+**Acceptance Criteria**
+
+- Game play cannot continue after all squares have been marked
+- Can see a notice displaying that this is a "cats game"
 
 ### 🏔 Stretch Goals
 
@@ -89,7 +109,3 @@ Each team will give a brief (three minute) presentation of their application. Pr
 - First team member: What was the biggest learning moment for your team?
 - Second team member: What was the most challenging thing about this project?
 - Third team member (if applicable): How did you manage the workflow in a group of three?
-
----
-
-[Back to Syllabus](../README.md#unit-three-react)
