@@ -57,7 +57,7 @@ This structure looks very similar to an object in JavaScript. The JavaScript obj
 
 This output illustrates an older syntax of hashes. While we won't necessarily see this version of hashes used in code there are some important things to note with this particular output.
 
-The first is the data type of the key which is a Ruby symbol. A **symbol** is a unique identifier in a key:value pair that is expressed with the colon on the left side of the variable such as `:flour`.
+The first is the data type of the key which is a Ruby symbol. A **symbol** is a unique identifier in a key-value pair that is expressed with the colon on the left side of the variable such as `:flour`.
 
 The second is the hash rocket. A **hash rocket** separates the key and the value using the syntax `=>`. Hash rockets were once the only way to define a value in a hash. With the adoption of the JavaScript-like syntax, that is no longer the case but hash rockets are still valid Ruby code and are used in many situations so it is important to recognize the syntax.
 
@@ -67,10 +67,10 @@ In programming, there are four general actions that can be performed on data. We
 
 ### Operations on a Hash: Create
 
-There are two basic ways to create a new hash. The first way is to create a variable and list out the desired key:value pairs. Another way is to use some fundamental Ruby principles. As we know, everything in Ruby is a class. So we can call the `.new` method on the class `Hash` to instantiate a new instance of class Hash.
+There are two basic ways to create a new hash. The first way is to create a variable and list out the desired key-value pairs. Another way is to use some fundamental Ruby principles. As we know, everything in Ruby is a class. So we can call the `.new` method on the class `Hash` to instantiate a new instance of class Hash.
 
 ```ruby
-# variable with key:value pairs
+# variable with key-value pairs
 recipe = { flour: '2 1/4 cups', sugar: '1 cup', eggs: 2 }
 
 p recipe
@@ -91,7 +91,7 @@ We can add values to the hash by providing a key in square braces and assigning 
 # instantiating a new instance of class Hash
 recipe = Hash.new
 
-# updating the hash with key:value pairs
+# updating the hash with key-value pairs
 recipe[:flour] = "2 1/4 cups"
 recipe[:sugar] = "1 cup"
 recipe[:eggs] = 1
@@ -152,7 +152,7 @@ p recipe.values
 
 ### Operations on a Hash: Delete
 
-To remove a key:value pair from the hash all together we can use the Ruby method `.delete` and pass in the key as an argument. Ruby will return the value from the deleted key as an output of that method. And when calling the variable `recipe` we see the key:value pair has been removed.
+To remove a key-value pair from the hash all together we can use the Ruby method `.delete` and pass in the key as an argument. Ruby will return the value from the deleted key as an output of that method. And when calling the variable `recipe` we see the key-value pair has been removed.
 
 ```ruby
 p recipe.delete(:butter)
@@ -188,7 +188,7 @@ end
 'Add 1 cup butter to the bowl.'
 ```
 
-`.map` also executes once for each key:value pair and returns an array of the same length.
+`.map` also executes once for each key-value pair and returns an array of the same length.
 
 ```ruby
 recipe.map do |key, value|
@@ -202,18 +202,34 @@ end
 
 ### ❤️ Challenges
 
-- As a developer, I can create a hash called my_phone using the Ruby method `.new`.
-- As a developer, I can add five key:value pairs of phone application names and their descriptions to my hash.
-- As a developer, I can return a value from my_phone by passing in the name of a key.
-- As a developer, I can update two keys in my_phone.
-- As a developer, I can update two values in my_phone.
-- As a developer, I can delete two key:value pairs from my_phone.
-- As a developer, I can use an enumerable method to return information about all of my_phone's applications.
+**Personal Data**
 
-### 🏔 Stretch Goals
+- Create a variable called `my_info` and assign it to an empty hash using the `.new` method. (Expected output: {})
+- Add the following key-value pairs one at a time to the `my_info` variable: `name: "John", age: 30, city: "San Diego"`.
+- Log the value associated with the `name` key from the `my_info` variable.
+- Log the value associated with the `city` key from the `my_info` variable.
+- Update the value associated with the `age` key in the `my_info` variable to 35.
+- Create the code that will calculate and log the number of key-value pairs in the `my_info` variable. (Expected output: 3)
+- Create a custom method called `exists` that takes the `my_info` variable and a key as arguments. Return true if the key exists in the hash, otherwise, return false. Use the following method calls to test the functionality.
+  - `p exists(my_info, 'name')`
+  - `p exists(my_info, 'enjoys')`
+  - `p exists(my_info, 'city')`
+- Create a custom method called `numeric` that takes the `my_info` variable and returns a hash with only the key-value pairs where the value is numeric.
+- Remove the key `age` and its associated value from the `my_info` variable.
 
-- As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
-- As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each application.
+**Cohort Student Numbers**
+
+- Create a variable called `learn` and assign it to an empty hash using the `.new` method. (Expected output: {})
+- Add the following key-value pairs one at a time to the `learn` variable: `alpha: 20, bravo: 21, charlie: 18, delta: 12, echo: 9, foxtrot: 10`
+- Create the code that will iterate through the `learn` variable and log each key and its corresponding value.
+- Create the code that will iterate through the `learn` variable and return a hash with only the values that are greater than or equal to 20.
+- Create the code that will iterate through the `learn` variable and return the sum of all the values. (Expected output: 90)
+- Create a custom method that takes the `learn` variable as an argument and returns an array containing just the values from the hash.
+- Create a custom method that takes the `learn` variable as an argument and returns an array containing just the keys from the hash.
+- Create a custom method that takes the `learn` variable as an argument and returns only the largest value from the hash. (Expected output: 21)
+- Create a custom method that takes the `learn` variable as an argument and returns only the smallest value from the hash. (Expected output: 9)
+- Create a custom method that takes the `learn` variable as an argument and returns an array of the values sorted from smallest to largest. (Expected output: [21, 20, 18, 12, 10, 9])
+- Create a custom method that takes the `learn` variable as an argument and returns a hash of only the key-value pairs where the key starts with a vowel.
 
 ---
 
