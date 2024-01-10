@@ -14,6 +14,10 @@ There are four general actions a developer will consider when building an applic
 - can display a single entry of mock JSON data by id
 - can route between appropriate pages
 
+#### Vocabulary
+
+- MemoryRouter
+
 #### Additional Resources
 
 - [Reactstrap Docs](https://reactstrap.github.io/)
@@ -335,8 +339,6 @@ describe("<CatShow />", () => {
 })
 ```
 
-The test will follow the same format as all previous tests for ensuring components render correctly to the browser. Just like with index we can see that the test is failing.
-
 Note the error:
 
 ```bash
@@ -366,6 +368,32 @@ return (
   </main>
 )
 ```
+
+Unlike in our previous tests where we use BrowserRouter to render the component, our show page requires additional information in the url to navigate and display content.  For this reason, we can use **MemoryRouter** which allows us to simulate navigation by storing it's navigation internally instead of relying on external sources.  MemoryRouter takes an attribute of initialEntries that allows us to provide a starting route.  Since we are simulating a specified route, we will also need to define the route as it is written in App.js.
+
+**src/pages/CatShow.test.js**
+
+```javascript
+import { render } from '@testing-library/react'
+import { MemoryRouter, Routes, Route } from "react-router-dom";
+import CatShow from './CatShow'
+import mockCats from '../mockCats'
+
+describe("<CatShow />", () => {
+  it("renders without crashing", () => {})
+  it("renders cat cards", () => {
+    render(
+      <MemoryRouter initialEntries={["/catshow/1"]}>
+        <Routes>
+          <Route path="catshow/:id" element={<CatShow cats={mockCats}/>} />
+        </Routes>
+      </MemoryRouter>
+      )
+  })
+})
+```
+
+From here, we can assert that the content of a single instance in mockCats is rendering in the document.
 
 ### Connecting Cat Index and Show
 
