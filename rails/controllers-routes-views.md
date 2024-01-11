@@ -101,7 +101,7 @@ We will be focusing our attention on the controller file and the view folder. We
 
 ### Controller Methods
 
-The controller is a class that will have one or more methods. Each method will handle a particular request (URL and HTTP action) with a response. In this example, each method will load one of the static page for the user to see. Since there are three possible pages on our restaurant website, we will eventually have three methods in our Page controller.
+The controller is a class that will have one or more methods. Each method will handle a particular request (URL and HTTP action) with a response. In this example, each method will load one of the static pages for the user to see. Since there are three possible pages on our restaurant website, we will eventually have three methods in our Page controller.
 
 We will start by building the landing page. We will construct this one small step at a time so we can explore the process. To start we will create a method with the name of the action it will perform. The return of our method will render some HTML text.
 
