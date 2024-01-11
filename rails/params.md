@@ -183,7 +183,7 @@ Routing Error
 No route matches [GET] "/greeter"
 ```
 
-Since our route now requires a param, the page will not work without one. Going into the URL we can pass a param. However, this time it will look a little different. Since we assigned the key `user_name` in the route, we don't have to pass that information into the URL. We can simple enter: `http://localhost:3000/greeter/learn` and the page will render correctly!
+Since our route now requires a param, the page will not work without one. Going into the URL we can pass a param. However, this time it will look a little different. Since we assigned the key `user_name` in the route, we don't have to pass that information into the URL. We can simply enter: `http://localhost:3000/greeter/learn` and the page will render correctly!
 
 ### Passing Multiple Params
 
