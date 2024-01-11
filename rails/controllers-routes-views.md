@@ -2,7 +2,7 @@
 
 #### Overview
 
-Rails uses the MVC architectural pattern. MVC separates an application into the model for handling data and business logic, the controllers for handling requests and retrieve the data from the model, and the views for handling graphical user interface objects and presentations. This section will take a deep dive into the controller and view aspects of MVC.
+Rails uses the MVC architectural pattern. MVC separates an application into the model for handling data and business logic, the controllers for handling requests and retrieving data from the model, and the views for handling graphical user interface objects and presentations. This section will take a deep dive into the controller and view aspects of MVC.
 
 #### Previous Lecture (1hr 7min)
 
@@ -12,7 +12,7 @@ Rails uses the MVC architectural pattern. MVC separates an application into the 
 
 - can conceptualize the flow of data from route to controller to view
 - can describe the anatomy of a route
-- can define ERB
+- can define `erb`
 - can use correct Ruby syntax to create navigation
 
 #### Vocabulary
@@ -21,8 +21,12 @@ Rails uses the MVC architectural pattern. MVC separates an application into the 
 - routes
 - view
 - erb
-- route aliases
+- route alias
 - root
+
+### Useful Commands
+
+- `rails generate controller <ControllerName>`
 
 #### Additional Resources
 
@@ -30,13 +34,13 @@ Rails uses the MVC architectural pattern. MVC separates an application into the 
 
 #### Process
 
-- Create a new Rails app on the desktop: $ `rails new rails-routes-controllers-views -d postgresql -T`
-- $ `cd rails-routes-controllers-views`
+- Create a new Rails app on the desktop: $ `rails new rails-controllers-routes-views -d postgresql -T`
+- $ `cd rails-controllers-routes-views`
 - Create a database: $ `rails db:create`
 - Add the git remote from GitHub Classroom
 - Ensure a main branch exists
 - Make an initial commit to the main branch
-- Begin the rails server: `$ rails server`
+- Begin the rails server: $ `rails server`
 - In a browser navigate to: `http://localhost:3000`
 
 #### Troubleshooting Tips
@@ -45,15 +49,15 @@ Rails uses the MVC architectural pattern. MVC separates an application into the 
 - Is your server running?
 - Are your view files in the correct folder?
 - Errors? Always look at the first error in the list.
-- Check your terminal for errors.
+- Blank screen? Check your terminal for errors.
 
 ---
 
 ### Requests and Responses
 
-When a user interacts with a full-stack web application, it typically starts with a request. A request can be something like loading the page, clicking on a navigation link, or submitting a form. Every request consists of an HTTP action and a location. In a Rails application, the request is processed by the `routes.rb` file. The Rails application looks at the request and finds a route that matches. The matching route will, in turn, find the appropriate controller and invoke a method. The controller method will trigger the appropriate action to handle the response.
+When a user interacts with a full-stack web application, it typically starts with a request. A request can be something like loading a page, clicking on a navigation link, or submitting a form. Every external request consists of an HTTP action and a location (URL). In a Rails application, the request is processed by the `routes.rb` file. The Rails application looks at the request and finds a route that matches. The matching route will, in turn, find the appropriate controller and invoke a method. The controller method will trigger the appropriate action to handle the response.
 
-In short, the external request from the user hits the routes file and finds the route that matches the location (URL) and the HTTP action of request. That route invokes a controller method. The controller method handles the response.
+In short, the request hits the routes file and finds the route that matches the URL and the HTTP action. That route invokes a controller method which handles the response.
 
 ### The Controller
 
@@ -63,7 +67,7 @@ The **controller** is the component of the MVC architectural pattern that manage
 
 In order to work with a controller in a Rails application, we have to run a generate command. Controllers are classes so their names will follow the PascalCase naming convention. Like all things in code, controller names should communicate intent.
 
-For this example we are going to create a simple website for a restaurant that will have three different pages our users can see.
+For this example, we are going to create a simple website for a restaurant that will have three different pages our users can see.
 
 1. Landing page, which is the first page the user sees when they arrive at a website
 2. Menu
@@ -97,11 +101,11 @@ We will be focusing our attention on the controller file and the view folder. We
 
 ### Controller Methods
 
-The controller is a class that will have one or more methods. Each method will handle a particular request (URL and HTTP action) with a response. In this example, all responses will load one static page for the user to see. Since there are three possible pages on our restaurant website, we will eventually have three methods in our Page controller.
+The controller is a class that will have one or more methods. Each method will handle a particular request (URL and HTTP action) with a response. In this example, each method will load one of the static page for the user to see. Since there are three possible pages on our restaurant website, we will eventually have three methods in our Page controller.
 
 We will start by building the landing page. We will construct this one small step at a time so we can explore the process. To start we will create a method with the name of the action it will perform. The return of our method will render some HTML text.
 
-**app/controllers/page_controller.rb**:
+**app/controllers/page_controller.rb**
 
 ```ruby
 class PageController < ApplicationController
@@ -113,7 +117,7 @@ end
 
 ### The Route
 
-The controller method is ready to go, but we know that methods do absolutely nothing until they are invoked. Controller methods are invoked by a route. Rails **routes** provide a means to determine which controller and action should receive the request, based on the URL and the HTTP action specified by the request.
+The controller method is ready to go, but we know that methods do absolutely nothing until they are invoked. Controller methods are invoked by a route. Rails **routes** provide a means to determine which controller and controller method should be invoked based on the URL and the HTTP action specified by the request.
 
 The `routes.rb` file lives in the config directory.
 
@@ -126,7 +130,7 @@ A route consists of the following:
    - The possible HTTP actions are get, post, put, patch, and delete.
    - `get`
 2. URL
-   - Each route will have a specific URL. By convention it will be named the same as the controller method.
+   - Each route will have a specific URL. In this case we will name it the same as the controller method.
    - `get '/landing'`
 3. Controller
    - If the HTTP action and the URL match the route will specify what controller is handling the response.
@@ -147,7 +151,7 @@ end
 
 During development, it is common for the base URL of all Rails applications to be `localhost:3000`. If we fire up the application and navigate to `localhost:3000` in the browser we see that the boilerplate Rails landing page will display.
 
-In order to trigger our landing page HTML we have to hit the appropriate route. This is done by appending `/landing` to `localhost:3000` in the URL.
+In order to render the HTML text for our landing page, we have to hit the appropriate route. This is done by appending `/landing` to `localhost:3000` in the URL.
 
 When we visit `localhost:3000/landing` we should see a white page with the text `Welcome to the all nachos restaurant!`.
 
@@ -155,9 +159,9 @@ When we visit `localhost:3000/landing` we should see a white page with the text 
 
 At this point our application is working. Our users can make a request that will trigger a route to invoke a controller method and the controller method will display text on the screen. However, we are very limited in what we can display and how it will look. Typically, header text is displayed in a large bold font like an `h1` tag. In the current version of our application there is not a way to do that.
 
-We need a to add a view file that is dedicated to creating more interesting views. Rails **views** handle the presentation and formatting of HTML. If we look back at the generate command we ran in the terminal, in addition to the controller file, we got a folder inside the views directory called `page`. It was created to hold all the views that are rendered by the page controller. Right now the `page` folder is empty. We need to make a file inside the folder.
+We need to add a file that is dedicated to creating more interesting views. Rails **views** handle the presentation and formatting of HTML. If we look back at the generate command we ran in the terminal, in addition to the controller file, we got a folder inside the views directory called `page`. It was created to hold all the views that are rendered by the page controller. Right now the `page` folder is empty. We need to make a file inside the folder.
 
-Rails is very particular about its naming conventions. The file inside the pages folder must be named exactly the same name as the controller method followed by the file extension `.html.erb`. The **erb** extension stands for embedded Ruby. Embedded Ruby or Templated Ruby is a file structure that allows us to code in HTML and drop Ruby code into the view file.
+Rails is very particular about its naming conventions. The file inside the pages folder must be named exactly the same name as the controller method followed by the file extension `.html.erb`. The **erb** extension stands for embedded Ruby. Embedded Ruby or Templated Ruby is a file structure that allows us to code HTML and drop Ruby code into the view file.
 
 Once we make a file inside the pages folder named exactly `landing.html.erb`, we can move over the text from the controller method and drop it into the HTML tag of our choosing.
 
@@ -182,7 +186,7 @@ If we refresh the page, the application still works and now our header is nice a
 
 ### Adding Another Page
 
-Our landing page is working so it is time to add another page for the menu. We will go through the same process. First adding a controller method, then a route, and then a view.
+Our landing page is working so it is time to add another page to display the menu. We will go through the same process as we did for the previous page - first adding a controller method, then a route, and then a view.
 
 The new controller method will be called menu and that name will carry all the way through the routes and views.
 
@@ -198,7 +202,7 @@ class PageController < ApplicationController
 end
 ```
 
-Next, add the route. Since the goal is to render text on the screen, the HTTP action is get. The controller also stays the same. The only differences between the two routes are the URL and the controller method name.
+Next, add the route. Since the goal is to render text on the screen, the HTTP action is `get`. The controller also stays the same. The only differences between the two routes are the URL and the controller method name.
 
 **config/routes.rb**
 
@@ -218,17 +222,17 @@ Now, we will add another file inside the page folder in the view directory. It w
 <ul>
   <li>Guac 'n' Roll Nachos</li>
   <li>Nachosaurus Rex</li>
-  <li>Cho Checking</li>
+  <li>Cho Cho Checking</li>
 </ul>
 ```
 
-With our two pages in place we can manually change the URL to see our different pages appear.
+With our two pages in place we can manually change the URL to see the different pages appear.
 
 One more to go!
 
 ### Adding a Third Page
 
-This process is exactly the same as adding the second page and we will follow the same workflow. First we will add the controller method for our hours page.
+Adding the third page follows the same process as the first and second. First we will add the controller method for our hours page.
 
 **app/controllers/page_controller.rb**
 
@@ -276,9 +280,9 @@ All three pages can be displayed as long as we manually type the correct route i
 
 ### Navigation
 
-Our application is working properly with three possible pages for our users. But it is a bit awkward to manually type the URL. As users of the internet, that is not something you typically come across. Let's add some clickable links that will allow our users to navigate easily between pages.
+Our application is working properly with three possible pages for our users. But, it is a bit awkward to manually type the URL. As users of the internet, that is not something we typically come across. Let's add some clickable links that will allow our users to navigate easily between pages.
 
-We can start by adding links to the landing page that will navigate to the menu and hours pages. The links will trigger the user's request which will in turn find the right route. To follow Rails conventions we will start by adding route aliases to each route. A **route alias** is like a variable that points to a particular route.
+We will add our links to the landing page that will navigate to the menu and hours pages. The links will trigger the user's request which will in turn find the right route. To follow Rails conventions we will start by adding route aliases to each route. A **route alias** is like a variable that points to a particular route.
 
 **config/routes.rb**
 
@@ -302,7 +306,7 @@ In order to put this Ruby code into the landing page we need to escape out of th
 <%= link_to 'See the Menu', menu_path %>
 ```
 
-At this point we are free to put this in the HTML as is, or we can wrap HTML tags around it for some additional styling.
+At this point we are free to put this in the HTML as is, or, we can wrap HTML tags around the erb for some additional styling.
 
 **app/views/page/landing.html.erb**
 
@@ -327,7 +331,7 @@ We will follow this same structure to add the path to the hours page.
 
 ### Root
 
-Our application now has visible pages and much better functionality. But there is one final task to improve the user experience. We created a landing page for our website but if we make a request to `localhost:3000` we still see the Rails boilerplate landing page. We can instruct our application to render our landing page at the base URL, or **root** rather than the Rails page.
+Our application now has visible pages and much better functionality. There is one final task to improve the user experience. We created a landing page for our website but if we make a request to `localhost:3000` we still see the Rails boilerplate landing page. We can instruct our application to render our landing page at the base URL, or **root** rather than the Rails page.
 
 This is done in the routes file using a helper method called root that takes an argument of the controller and controller method that we want to handle our landing page request. The root route can only have a `get` HTTP action.
 

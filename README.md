@@ -38,6 +38,7 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [Wireframes](./tools-and-resources/wireframes.md)
 - [White Boarding Steps](./tools-and-resources/whiteboarding-steps.md)
 - [Interview Questions](./tools-and-resources/interview-questions.md)
+- [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
 - [Jumpstart Student Notes](https://github.com/LEARNAcademy/jumpstart-student-notes)
 
 ## Career Services Resources
@@ -47,7 +48,6 @@ This repository is a reflection of the current status of the curriculum at LEARN
 - [LinkedIn: Extending Your Network Presentation](./career-services/assets/linkedin-extending-network.pdf)
 - [LinkedIn: Creating Content](./career-services/assets/linkedin-creating-content.pdf)
 - [LinkedIn Premium and LinkedIn Learning for Veterans](https://socialimpact.linkedin.com/programs/veterans/premiumform)
-- [Customize Your LinkedIn URL](https://www.linkedin.com/help/linkedin/answer/a542685/manage-your-public-profile-url?lang=en)
 - [Your Why](./career-services/assets/your-why.pdf)
 - [Portfolio Presentation](./career-services/assets/technical-portfolios.pdf)
 - [Technical Portfolios](./career-services/portfolios.md)
@@ -149,7 +149,8 @@ Rails is a full-stack framework built into the Ruby programming language. Here, 
 
 In this section we explore all the Ruby on Rails MVC architecture has to offer. We built our first full-stack application as well as look at how to create a backend-only Rails application.
 
-1. [Rails Controllers, Routes, Views, and Params](./rails/controllers-routes-views.md)
+1. [Rails Controllers, Routes, and Views](./rails/controllers-routes-views.md)
+1. [Rails Params](./rails/params.md)
 1. [Full-stack Rails](./rails/fullstack.md)
 1. [Rails API with Postman](./rails/rails-api.md)
 
