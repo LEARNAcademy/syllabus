@@ -294,7 +294,7 @@ Rails.application.routes.draw do
 end
 ```
 
-Now that we have our aliases we can create the links in the landing page view. There is a wonderful Ruby helper method called `linked_to` that takes two arguments. The first argument is the text of the hyperlink and the second argument is the navigation. In this example, we will use a string for the text of the hyperlink. The navigation will be our route alias. In Rails, route aliases are referenced by appending `_path` to the name of the route alias. Since our route is called `menu` our navigation will be `menu_path`. The code for the link will look like this:
+Now that we have our aliases we can create the links in the landing page view. There is a wonderful Ruby helper method called `linked_to` that takes two arguments. The first argument is the text of the hyperlink and the second argument is the navigation. In this example, we will use a string for the text of the hyperlink. The navigation will be our route alias. In Rails, route aliases are referenced by appending `_path` to the name of the route alias. Since our route for the menu page is called `menu` our navigation will be `menu_path`. The code for the link will look like this:
 
 ```ruby
 link_to 'See the Menu', menu_path
