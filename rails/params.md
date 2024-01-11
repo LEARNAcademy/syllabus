@@ -106,7 +106,7 @@ At this point our greeter page is working but it will always render the exact sa
 
 ### Params Hash
 
-Following the workflow we have established, we will start with the controller. The name of the person we want to greet is dynamic, which means it is going to change, which means we can't hard code a name. Instead we will make a variable in the controller method. The variable is one that is going to be passed around the Rails app from the controller over to the view. We will use an instance variable to achieve this movement of information. An **instance variable** is accessible to both the controller class, the controller methods and the associated views.
+Following the workflow we have established, we will start with the controller. The name of the person we want to greet is dynamic, meaning it is going to change, so we can't hard code a name. Instead we will make a variable in the controller method. The variable is one that is going to be passed around the Rails app from the controller over to the view. We will use an instance variable to achieve this movement of information. An **instance variable** is accessible to both the controller class, the controller methods and the associated views.
 
 Params are a Ruby hash that comes from the URL. They are similar to React props in that it is a specialized data structure for communication in our application. In React, `props` is the name of the object that contains key-value pairs of data. In Rails, `params` is the name of the hash that contains key-value pairs.
 
