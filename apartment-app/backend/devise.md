@@ -66,13 +66,13 @@ The backend app has the primary responsibility for maintaining security in an ap
 
 ### Authentication
 
-Authentication is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password; this process is called signing in or logging in.
+**Authentication** is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password; this process is called signing in or logging in.
 
 [Authentication](https://en.wikipedia.org/wiki/Authentication)
 
 ### Authorization
 
-Authorization is process of giving permission to an entity to access a resource. This is often done after an entity has been authenticated.
+**Authorization** is process of giving permission to an entity to access a resource. This is often done after an entity has been authenticated.
 
 For instance:
 
@@ -80,7 +80,7 @@ For instance:
 - Logging into Google Drive gives me permission to read some files and permission to edit other files.
 - When I am on the internet in the US, I can watch certain movies on Netflix, but not when I am outside the US.
 
-The last instance shows an authorization scheme that is not dependent on au**then**tication.
+The last instance shows an authorization scheme that is not dependent on authentication.
 
 [Authorization](https://en.wikipedia.org/wiki/Authorization)
 
@@ -130,52 +130,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 ```
-
-#### Apartment Resource
-
-For this application, Apartments will have the following fields: a street, a unit number, a city, a state, the square footage, a price, number of bedrooms, number of bathrooms, whether pets are allowed, and an image.
-
-We need to ensure there is a relationship between users and apartments. Apartments should only be created by valid, signed in users. A user can add as many apartments as they would like. This means the relationship between users and apartments is the User has_many Apartments, Apartment belongs_to a User. This relationship is defined in the code first by adding the foreign key of `user_id` to the belongs_to table.
-
-```bash
-rails generate resource Apartment street:string unit:string city:string state:string square_footage:integer price:string bedrooms:integer bathrooms:float pets:string image:text user_id:integer
-```
-
-Don't forget to migrate!
-
-We will also need to define the relationship in both the Apartment and the User model classes.
-
-**app/models/user.rb**
-```ruby
-class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  has_many :apartments
-end
-```
-
-**app/models/apartment.rb**
-```ruby
-class Apartment < ApplicationRecord
-  belongs_to :user
-end
-```
-
-
-#### Seeds
-
-In order to create a User instance in the database, we need a unique username, password, and password confirmation. When this information is successfully submitted to the database, a new instance of User will be created.
-
-Seed data has to align with the relationship of our User and Apartment models. Before we have apartments, we must have users.
-
-Devise provides us with some built-in validations. For example, every user in the database must have a unique email. To ensure our seeded user data is made correctly, we can use the `.first_or_create` Active Record method. Using the `.where` method, we first query for all emails that match a particular user in the database. The `.where` method will return an array of all matches. The `.first_or_create` method checks whether the first instance in the array is nil or not. If the value is nil, then no user exists. A nil value will trigger the `.create` method which requires password and password confirmation keys with matching password values.
-
-```ruby
-user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
-user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
-```
-
-Once we have user seeds, apartments can be added to the seed file that get created belonging to our users.
 
 #### Additional Devise Configurations
 
@@ -344,6 +298,52 @@ Lastly, we need to update the User model to include the revocation strategy.
 devise  :database_authenticatable, :registerable,
         :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 ```
+
+#### Apartment Resource
+
+For this application, Apartments will have the following fields: a street, a unit number, a city, a state, the square footage, a price, number of bedrooms, number of bathrooms, whether pets are allowed, and an image.
+
+We need to ensure there is a relationship between users and apartments. Apartments should only be created by valid, signed in users. A user can add as many apartments as they would like. This means the relationship between users and apartments is the User has_many Apartments, Apartment belongs_to a User. This relationship is defined in the code first by adding the foreign key of `user_id` to the belongs_to table.
+
+```bash
+rails generate resource Apartment street:string unit:string city:string state:string square_footage:integer price:string bedrooms:integer bathrooms:float pets:string image:text user_id:integer
+```
+
+Don't forget to migrate!
+
+We will also need to define the relationship in both the Apartment and the User model classes.
+
+**app/models/user.rb**
+```ruby
+class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  has_many :apartments
+end
+```
+
+**app/models/apartment.rb**
+```ruby
+class Apartment < ApplicationRecord
+  belongs_to :user
+end
+```
+
+
+#### Seeds
+
+In order to create a User instance in the database, we need a unique username, password, and password confirmation. When this information is successfully submitted to the database, a new instance of User will be created.
+
+Seed data has to align with the relationship of our User and Apartment models. Before we have apartments, we must have users.
+
+Devise provides us with some built-in validations. For example, every user in the database must have a unique email. To ensure our seeded user data is made correctly, we can use the `.first_or_create` Active Record method. Using the `.where` method, we first query for all emails that match a particular user in the database. The `.where` method will return an array of all matches. The `.first_or_create` method checks whether the first instance in the array is nil or not. If the value is nil, then no user exists. A nil value will trigger the `.create` method which requires password and password confirmation keys with matching password values.
+
+```ruby
+user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
+user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
+```
+
+Once we have user seeds, apartments can be added to the seed file that get created belonging to our users.
 
 ---
 
