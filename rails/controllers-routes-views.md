@@ -32,7 +32,16 @@ Rails uses the MVC architectural pattern. MVC separates an application into the 
 
 - [Rails Routing from the Outside In](https://guides.rubyonrails.org/routing.html)
 
-#### Process
+### Process
+
+#### Process for github empty repo
+
+- Click the github classroom link
+- Create team name
+- Accept the assignment and refresh screen to allow github to create an empty repo.
+- ***STOP! Just need the repo to stay empty.***  
+
+#### Process for local repo
 
 - Create a new Rails app on the desktop: $ `rails new rails-controllers-routes-views -d postgresql -T`
 - $ `cd rails-controllers-routes-views`
