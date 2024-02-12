@@ -447,7 +447,7 @@ Tests:       3 passed, 3 total
 
 ### Focus Your Tests
 
-Troubleshooting is a bit part of creating tests and practicing test driven development. The goal is to create an automated test file where all the tests run together as a snapshot. However, sometimes it can be helpful to focus on particular aspects of a test during troubleshooting. Rather than commented out code, there is a tool that will focus in on one `describe` block or one `it` block and ignore everything else.
+Troubleshooting is a big part of creating tests and practicing test driven development. The goal is to create an automated test file where all the tests run together as a snapshot. However, sometimes it can be helpful to focus on particular aspects of a test during troubleshooting. Rather than commented out code, there is a tool that will focus in on one `describe` block or one `it` block and ignore everything else.
 
 Replacing the `describe` method with `fdescribe()` or focus-describe will tell Jest to skip all other describe blocks.
 
