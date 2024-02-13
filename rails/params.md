@@ -172,7 +172,7 @@ Our routes file has been neglected since we set up the initial route. Now it is 
 
 ```ruby
 Rails.application.routes.draw do
-  get '/greeting/:user_name', to: 'main#greeting'
+  get '/greeter/:user_name', to: 'main#greeter'
 end
 ```
 
