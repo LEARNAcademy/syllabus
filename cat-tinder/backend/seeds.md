@@ -89,13 +89,4 @@ Creating a task that updates instead of creates new records every time after the
 
 ---
 
-### 🐱 Challenge: Cat Tinder API Seeds
-
-As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
-
-- As a developer, I can add cat seeds to the `seeds.rb` file.
-- As a developer, I can run the rails command to add cats to database.
-
----
-
 [Back to Syllabus](../../README.md#cat-tinder-backend)

@@ -369,15 +369,15 @@ return (
 )
 ```
 
-Unlike in our previous tests where we use BrowserRouter to render the component, our show page requires additional information in the url to navigate and display content.  For this reason, we can use **MemoryRouter** which allows us to simulate navigation by storing it's navigation internally instead of relying on external sources.  MemoryRouter takes an attribute of initialEntries that allows us to provide a starting route.  Since we are simulating a specified route, we will also need to define the route as it is written in App.js.
+Unlike in our previous tests where we use BrowserRouter to render the component, our show page requires additional information in the url to navigate and display content. For this reason, we can use **MemoryRouter** which allows us to simulate navigation by storing it's navigation internally instead of relying on external sources. MemoryRouter takes an attribute of initialEntries that allows us to provide a starting route. Since we are simulating a specified route, we will also need to define the route as it is written in App.js.
 
 **src/pages/CatShow.test.js**
 
 ```javascript
-import { render } from '@testing-library/react'
-import { MemoryRouter, Routes, Route } from "react-router-dom";
-import CatShow from './CatShow'
-import mockCats from '../mockCats'
+import { render } from "@testing-library/react"
+import { MemoryRouter, Routes, Route } from "react-router-dom"
+import CatShow from "./CatShow"
+import mockCats from "../mockCats"
 
 describe("<CatShow />", () => {
   it("renders without crashing", () => {})
@@ -385,10 +385,10 @@ describe("<CatShow />", () => {
     render(
       <MemoryRouter initialEntries={["/catshow/1"]}>
         <Routes>
-          <Route path="catshow/:id" element={<CatShow cats={mockCats}/>} />
+          <Route path="catshow/:id" element={<CatShow cats={mockCats} />} />
         </Routes>
       </MemoryRouter>
-      )
+    )
   })
 })
 ```
@@ -414,20 +414,6 @@ Since `NavLink` is used for React routing, it must be imported from `react-route
 ```javascript
 import { NavLink } from "react-router-dom"
 ```
-
----
-
-### 🐱 Challenge: Cat Index and Show
-
-As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
-
-- As a developer, I can pass the cat mock data in state to my index component.
-- As a user, I can see a page that lists of all the cat names.
-- As a developer, I have test coverage on my index component.
-- As a developer, I can refactor the show route to require an id param to show one cat.
-- As a user, I can see a page featuring all the information for one cat.
-- As a user, I can click on a cat name and be taken to a page that shows me all the information about that cat.
-- As a developer, I have test coverage on my show component.
 
 ---
 

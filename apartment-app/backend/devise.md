@@ -214,7 +214,7 @@ end
 
 ### JWT Secret Key Configuration
 
-Note:  The following step is more streamlined if the process is done on the machine that the Rails app was created on.  When creating a Rails app, a `config/master.key` file is made that automatically is hidden from git.  This file will be needed for our next steps.
+Note: The following step is more streamlined if the process is done on the machine that the Rails app was created on. When creating a Rails app, a `config/master.key` file is made that automatically is hidden from git. This file will be needed for our next steps.
 
 We need a secret key to create a JWT token. We can generate one with this command:
 
@@ -314,6 +314,7 @@ Don't forget to migrate!
 We will also need to define the relationship in both the Apartment and the User model classes.
 
 **app/models/user.rb**
+
 ```ruby
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
@@ -323,12 +324,12 @@ end
 ```
 
 **app/models/apartment.rb**
+
 ```ruby
 class Apartment < ApplicationRecord
   belongs_to :user
 end
 ```
-
 
 #### Seeds
 
@@ -344,18 +345,6 @@ user2 = User.where(email: "test2@example.com").first_or_create(password: "passwo
 ```
 
 Once we have user seeds, apartments can be added to the seed file that get created belonging to our users.
-
----
-
-### 🏠 Challenge: Apartment App API Setup
-
-As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
-
-- As a developer, I can create a new Rails application with a Postgresql database.
-- As a developer, I can create a RSpec testing suite in my Rails application.
-- As a developer, I can add a User model with Devise.
-- As a developer, I can add a resource for Apartment that has a street, a unit number, a city, a state, the square footage, a price, number of bedrooms, number of bathrooms, whether pets are allowed, and an image.
-- As a developer, I can seed the database with users and apartments.
 
 ---
 

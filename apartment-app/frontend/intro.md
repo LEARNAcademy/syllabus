@@ -186,25 +186,4 @@ The test folder will hold all the React Testing Library tests for the applicatio
 
 ---
 
-### 🏠 Challenge: Apartment App React Configurations
-
-As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
-
-- As a developer, I can create a new React application.
-- As a developer, I can add React Router dependencies and configurations.
-- As a developer, I can add Reactstrap dependencies.
-- As a developer, I can create mock data for users and apartments and set the data to state in the App.js component.
-- As a developer, I can create the Header and Footer components with enough code to ensure the components render.
-- As a developer, I can create the Home and NotFound pages with enough code to ensure the components render.
-- As a developer, I can create the SignIn and SignUp pages with enough code to ensure the components render.
-- As a developer, I can create the ApartmentIndex and ApartmentProtectedIndex pages with enough code to ensure the components render.
-- As a developer, I can create the ApartmentShow and ApartmentNew pages with enough code to ensure the components render.
-- As a developer, I can define routes to all the pages in my application.
-
-### 🏔 Stretch Goals
-
-- As a developer, I can create the ApartmentEdit page with enough code to ensure the component render.
-
----
-
 [Back to Syllabus](../../README.md#unit-nine-react-and-rails-with-authentication)
