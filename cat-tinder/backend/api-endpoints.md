@@ -150,22 +150,4 @@ And we're green! This isn't quite production ready code, but its enough to get o
 
 ---
 
-### 🐱 Challenge: Cat Tinder API Endpoints
-
-As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
-
-- As a developer, I can add an index request spec to my application.
-- As a developer, I can add an index endpoint to my application.
-- As a developer, I can add a create request spec to my application.
-- As a developer, I can add a create endpoint to my application.
-
-### Stretch Goals
-
-- As a developer, I can add an update request spec to my application.
-- As a developer, I can add an update endpoint to my application.
-- As a developer, I can add a destroy request spec to my application.
-- As a developer, I can add a destroy endpoint to my application.
-
----
-
 [Back to Syllabus](../../README.md#cat-tinder-backend)

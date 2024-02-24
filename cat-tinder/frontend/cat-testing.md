@@ -271,16 +271,4 @@ There are a lot of complexities to testing. It can also be time consuming and, a
 
 ---
 
-### 🐱 Challenge: Cat Tinder Tests
-
-- Create a folder called `__tests__` to store all the test files.
-- Add test files for the `Home`, `Header`, `Footer`, and `NotFound` components with a `.test.js` extension.
-- Create a test for the `Home` page that ensures the component will render to the browser.
-- Create a test for the `NotFound` page that ensures the component will render to the browser.
-- Update the `App.test.js` test to ensure the component renders to the browser.
-- Create tests for the `Header` component that ensures the component will render to the browser, any images render to the browser, links are clickable.
-- Create tests for the `Footer` component that ensures the component will render to the browser and links are clickable.
-
----
-
 [Back to Syllabus](../../README.md#cat-tinder-frontend)

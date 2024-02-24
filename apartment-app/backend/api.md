@@ -150,24 +150,4 @@ end
 
 ---
 
-### 🏠 Challenge: Apartment App Endpoints and Validations
-
-As a developer, I have been commissioned to create an application where a user can see apartments that are available for rent. As a user, I can see a list of apartments. I can click on an apartment listing and see more information about that apartment. As a user, I can create an account and log in to the application. If I am logged in, I can add an apartment to the list. As a logged in user, I can see a list of all the apartments as well as just the apartments I added. If my work is acceptable to my client, I may also be asked to add the ability to remove an apartment from the list as well as edit the apartment information.
-
-- As a developer, I can add an index request spec to my application.
-- As a developer, I can add an index endpoint to my application.
-- As a developer, I can add a create request spec to my application.
-- As a developer, I can add a create endpoint to my application.
-- As a developer, I can add the appropriate model specs that will ensure an incomplete apartment throws an error.
-- As a developer, I can add the appropriate model validations to ensure the user submits a street, unit, city, state, square footage, price, number of bedrooms, number of bathrooms, whether the apartment allows pets, and an image.
-
-### 🏔 Stretch Goals
-
-- As a developer, I can add an update request spec to my application.
-- As a developer, I can add an update endpoint to my application.
-- As a developer, I can add a destroy request spec to my application.
-- As a developer, I can add a destroy endpoint to my application.
-
----
-
 [Back to Syllabus](../../README.md#unit-nine-react-and-rails-with-authentication)

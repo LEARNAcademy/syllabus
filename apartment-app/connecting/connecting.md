@@ -109,7 +109,7 @@ const handleSubmit = (e) => {
   const data = Object.fromEntries(formData)
   // store user's info in format that can be used with JWT
   const userInfo = {
-    user: { email: data.email, password: data.password },
+    user: { email: data.email, password: data.password }
   }
 }
 ```
@@ -138,9 +138,9 @@ const login = (userInfo) => {
     body: JSON.stringify(userInfo),
     headers: {
       "Content-Type": "application/json",
-      Accept: "application/json",
+      Accept: "application/json"
     },
-    method: "POST",
+    method: "POST"
   })
     .then((response) => {
       if (!response.ok) {
@@ -161,9 +161,9 @@ const signup = (userInfo) => {
     body: JSON.stringify(userInfo),
     headers: {
       "Content-Type": "application/json",
-      Accept: "application/json",
+      Accept: "application/json"
     },
-    method: "POST",
+    method: "POST"
   })
     .then((response) => {
       if (!response.ok) {
@@ -183,9 +183,9 @@ const logout = () => {
   fetch(`${url}/logout`, {
     headers: {
       "Content-Type": "application/json",
-      Authorization: localStorage.getItem("token"), //retrieve the token
+      Authorization: localStorage.getItem("token") //retrieve the token
     },
-    method: "DELETE",
+    method: "DELETE"
   })
     .then((payload) => {
       localStorage.removeItem("token") // remove the token

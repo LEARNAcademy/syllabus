@@ -33,7 +33,7 @@ After a request has hit the appropriate API endpoint, we get a corresponding res
 
 ### Asynchronous Requests
 
-While request-response cycles happen very quickly they are not instantaneous.  When calling on an API from our React application, it is important to consider that the speed in which the data is accessed can take an unknown amount of time.
+While request-response cycles happen very quickly they are not instantaneous. When calling on an API from our React application, it is important to consider that the speed in which the data is accessed can take an unknown amount of time.
 
 JavaScript is **single threaded** which means the programs run top to bottom and executes one thing at a time. If a given action takes an unexpectedly long time to execute the next thing in the queue is delayed until the previous action finishes. This can cause an application to appear to be broken.
 
@@ -107,16 +107,6 @@ const App = () => {
 ```
 
 As long as we have set up the frontend scaffolding correctly, the cat index and the cat show page should be working. But now we are pulling information from the database rather than mock data.
-
----
-
-### 🐱 Challenge: Cat Tinder Fetch Read Functionality
-
-As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
-
-- As a developer, I can get the cats from the database and set the array in state.
-- As a user, I can see all the cats.
-- As a user, I can see the information for just one cat.
 
 ---
 

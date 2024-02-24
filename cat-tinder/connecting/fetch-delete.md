@@ -65,16 +65,4 @@ Now that the CatShow component has access to the `deleteCat` function, we can ca
 
 ---
 
-### 🐱 Challenge: Cat Tinder Fetch Delete Functionality
-
-As a developer, I have been commissioned to create an application where a user can see cute cats looking for friends. As a user, I can see a list of cats. I can click on a cat and see more information about that cat. I can also add cats to the list of cats looking for friends. If my work is acceptable to my client, I may also be asked to add the ability to remove a cat from the list as well as edit cat information.
-
-- As a developer, I can create a `deleteCat` function that will remove a cat from the database.
-- As a developer, I can pass the function to the CatShow component.
-- As a user, I can navigate to the page of one specific cat and see a delete button.
-- As a user, I can click the button remove the cat.
-- As a user, I can be rerouted to the CatIndex page after the cat is removed.
-
----
-
 [Back to Syllabus](../../README.md#bringing-it-together)
