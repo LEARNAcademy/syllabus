@@ -85,7 +85,7 @@ RSpec.describe Apartment, type: :model do
       square_footage: 1000,
       price: '$1000',
       bedrooms: 1,
-      bathrooms: 1,
+      bathrooms: 1.0,
       pets: 'Test Pets',
       image: 'https://c8.alamy.com/comp/B0RJGE/small-bungalow-home-with-pathway-in-addlestone-surrey-uk-B0RJGE.jpg',
     )
@@ -100,7 +100,7 @@ RSpec.describe Apartment, type: :model do
       square_footage: 1000,
       price: '$1000',
       bedrooms: 1,
-      bathrooms: 1,
+      bathrooms: 1.0,
       pets: 'Test Pets',
       image: 'https://c8.alamy.com/comp/B0RJGE/small-bungalow-home-with-pathway-in-addlestone-surrey-uk-B0RJGE.jpg',
     )
@@ -150,7 +150,7 @@ RSpec.describe "Apartments", type: :request do
         square_footage: 1000,
         price: '$1000',
         bedrooms: 1,
-        bathrooms: 1,
+        bathrooms: 1.0,
         pets: 'Test Pets',
         image: 'https://c8.alamy.com/comp/B0RJGE/small-bungalow-home-with-pathway-in-addlestone-surrey-uk-B0RJGE.jpg'
       )
@@ -170,7 +170,7 @@ RSpec.describe "Apartments", type: :request do
           square_footage: 1000,
           price: '$1000',
           bedrooms: 1,
-          bathrooms: 1,
+          bathrooms: 1.0,
           pets: 'Test Pets',
           image: 'https://c8.alamy.com/comp/B0RJGE/small-bungalow-home-with-pathway-in-addlestone-surrey-uk-B0RJGE.jpg',
           user_id: user.id
@@ -262,8 +262,8 @@ apartments = [
     square_footage: '1000',
     price: '2000',
     bedrooms: 1,
-    bathrooms: 1,
-    pets: 'none',
+    bathrooms: 1.0,
+    pets: 'no pets allowed',
     image: 'https://www.hollywoodreporter.com/wp-content/uploads/2015/06/seinfeld_apt.jpg'
   }
 ]

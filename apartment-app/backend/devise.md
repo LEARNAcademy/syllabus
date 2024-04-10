@@ -39,12 +39,9 @@ This section will cover the configuration and setup process that will be necessa
 - $ `rails new apartment-app-backend --api -d postgresql -T`
 - $ `cd apartment-app-backend`
 - $ `rails db:create`
-- $ `bundle add rspec-rails`
-- $ `rails generate rspec:install`
 - Add the remote from your GitHub classroom repository
 - Create a default branch (main)
 - Make an initial commit to the repository
-- Ask your instructors for branch protection
 
 #### Troubleshooting Tips
 
