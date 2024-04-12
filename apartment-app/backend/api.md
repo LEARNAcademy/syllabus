@@ -253,7 +253,7 @@ Devise provides us with some built-in validations. For example, every user in th
 user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
 user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
 
-apartments = [
+user1_apartments = [
   {
     street: '129 West 81st Street',
     unit: '5A',
@@ -268,7 +268,7 @@ apartments = [
   }
 ]
 
-apartments.each do |apartment|
+user1_apartments.each do |apartment|
   user1.apartments.create(apartment)
   puts "Creating: #{apartment}"
 end
