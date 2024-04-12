@@ -63,7 +63,7 @@ The backend app has the primary responsibility for maintaining security in an ap
 
 ### Authentication
 
-**Authentication** is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password; this process is called signing in or logging in.
+**Authentication** is the process of establishing that an entity is what/who it claims to be. In our industry the entity is often a user. Authentication is often done by providing credentials that are not publicly available, or secret, such as a password. This process is called signing in or logging in.
 
 [Authentication](https://en.wikipedia.org/wiki/Authentication)
 
@@ -100,7 +100,7 @@ And with those commands, we now have the ability to create users in the database
 
 Once a user exists in the database, we want to allow the user to sign in. When the user signs in, Devise creates a user session. A **user session** means that a user has been authenticated by submitting valid credentials. During a user session, a token is added to every new request the user makes. This token is used to authorize which pages are available to this particular user.
 
-### Additional Devise Configurations
+### Devise Mailer Configuration
 
 There are a few more configurations we will need to make our app work properly with Devise. The first one is to set up the default url options for the Devise mailer in our development environment. Add the following code near the other mailer options:
 
@@ -110,18 +110,34 @@ There are a few more configurations we will need to make our app work properly w
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-Secondly, we need to instruct Devise to listen for logout requests via a `get` request instead of the default `delete`. This can be found in the Devise configuration file:
+### Devise Session Management
 
-**config/initializers/devise.rb**
+A session is a way to store information on a server from a request. By default, Rails API-only applications have sessions disabled. However, Devise uses sessions by default. Luckily, these two opposing issues can be configured by creating a fake session hash for Devise. We will create a new file into the directory `app/controllers/concerns` called `rack_session.rb` and add the following code:
+
+**app/controllers/concerns/rack_session.rb**
 
 ```ruby
-# Find this line:
-config.sign_out_via = :delete
-# And replace it with this:
-config.sign_out_via = :get
+module RackSession
+  extend ActiveSupport::Concern
+  class FakeRackSession < Hash
+    def enabled?
+      false
+    end
+    def destroy; end
+  end
+  included do
+    before_action :set_fake_session
+    private
+    def set_fake_session
+      request.env['rack.session'] ||= FakeRackSession.new
+    end
+  end
+end
 ```
 
-Next we want to create registrations and sessions controllers to handle sign ups and logins.
+### Devise Registration and Session Controllers
+
+We need to create Devise registrations and sessions controllers to handle sign ups, logins, and logouts.
 
 ```bash
 rails generate devise:controllers users -c registrations sessions
@@ -134,14 +150,17 @@ Then replace the contents of these controllers with the following code:
 ```ruby
 class Users::RegistrationsController < Devise::RegistrationsController
   respond_to :json
+  include RackSession
   def create
     build_resource(sign_up_params)
     resource.save
     sign_in(resource_name, resource)
-    render json: resource
+    render json: resource, status: :ok
   end
 end
 ```
+
+The registration controller will handle new user signups that will create a new user in the database.
 
 **app/controllers/users/sessions_controller.rb**
 
@@ -149,8 +168,8 @@ end
 class Users::SessionsController < Devise::SessionsController
   respond_to :json
   private
-  def respond_with(resource, _opts = {})
-    render json: resource
+  def respond_with(current_user, _opts = {})
+    render json: current_user, status: :ok
   end
   def respond_to_on_destroy
     render json: { message: "Logged out." }
@@ -158,7 +177,12 @@ class Users::SessionsController < Devise::SessionsController
 end
 ```
 
-Lastly, we need to update the devise routes:
+The session controller will handle user sessions. A session is created when a user logs in and destroyed when a user logs out.
+
+### Devise Routes
+
+We need to create routes that give us the ability to make requests from the React frontend to the Devise endpoints. Adding this code to the routes defines `localhost:3000/login` as the URL for existing users to sign in, `localhost:3000/signup` as the URL for new users to create an account, and `localhost:3000/logout` for users to sign out of their account. It also specifies the newly created custom registration controller to handle user signups and the session controller to handle login in and logout.
+
 **config/routes.rb**
 
 ```ruby
@@ -232,7 +256,7 @@ Be sure to copy the newly-generated key. It is very important that we hide this 
 EDITOR="code --wait" bin/rails credentials:edit
 ```
 
-This command will open a new window in VS Code. It may ask for your permission to open file. This is normal and full permission can be granted.
+This command will open a new window in VS Code and pause the terminal operations. It may ask for your permission to open file. This is normal and full permission can be granted.
 
 The new file in VS Code will resemble the file below. (The secret_key_base will be different.)
 
@@ -259,11 +283,20 @@ The file will look something like this:
 #   secret_access_key: 345
 
 # Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
-secret_key_base: secret_key_base: 0d3c46237fc570e64ae474c1b9d7c184db3cba9ec7509fc0d67fe774150d8f642c9f4e68c6ac4378d9bba4946d5a4dd717909711dc245b7c6d2473d9741683ad
+secret_key_base: 0d3c46237fc570e64ae474c1b9d7c184db3cba9ec7509fc0d67fe774150d8f642c9f4e68c6ac4378d9bba4946d5a4dd717909711dc245b7c6d2473d9741683ad
 jwt_secret_key: d7ce900c4c385b7459ef3a1aba1996e9495ea96d41c6ff8c3ecfc9b8dda3692332de4e123cc14404d5031d4e64d25cf79f139ea5845fe790248d2c6ec3ec7127
 ```
 
-In the terminal run the command `control + c` to encrypt and save the file.
+Save and close out the credentials file. The terminal will say `File encrypted and saved.`
+
+We can check the Rails console to ensure the secret key was added to our application.
+
+```bash
+rails c
+> Rails.application.credentials.jwt_secret_key
+```
+
+The output will be a string of the secret code that was generated by Rails and saved into the credentials file.
 
 ### Configure Devise and JWT
 
@@ -273,7 +306,7 @@ Next we need to add the following code to the Devise configurations file. This w
 
 ```ruby
 config.jwt do |jwt|
-  jwt.secret = Rails.application.credentials.jwt_special_key
+  jwt.secret = Rails.application.credentials.jwt_secret_key
   jwt.dispatch_requests = [
     ['POST', %r{^/login$}],
   ]
@@ -288,11 +321,13 @@ end
 
 Having the ability for the application to revoke a JWT is important to keeping the application secure. For example, when a user logs out the JWT should no longer be valid. If the user deletes their account or the account is compromised, revoking the JWT will protect the content in the database from being accessed.
 
-We are going to use a DenyList to revoke the JWT. To create a DenyList, we need to generate a new model.
+We are going to use a DenyList to revoke the JWT. A DenyList is a database table that stores invalid tokens. To create a DenyList, we need to generate a new model.
 
 ```bash
 rails generate model jwt_denylist
 ```
+
+This migration creates a table for the DenyList with a column to store the token and a column for when the token expired. The datetime column will allow stale tokens to be cleaned up.
 
 Inside the migration that is created from this generate command, modify the `change` method to include the following:
 
@@ -310,13 +345,25 @@ end
 
 And migrate!
 
-Lastly, we need to update the User model to include the revocation strategy. Modify the existing code to include the following:
+Now, we need to update the User model to include the revocation strategy. Modify the existing code to include the modules for JWT.
 
 **app/models/user.rb**
 
 ```ruby
 devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable, :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
+```
+
+The generate command also gave us a model called `JwtDenylist`. In this model we need to include the revocation strategy.
+
+**app/models/jwt_denylist.rb**
+
+```ruby
+class JwtDenylist < ApplicationRecord
+  include Devise::JWT::RevocationStrategies::Denylist
+
+  self.table_name = 'jwt_denylist'
+end
 ```
 
 ---
